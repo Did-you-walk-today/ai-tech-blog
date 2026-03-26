@@ -1,0 +1,79 @@
+{
+  "discovery_date": "2026-03-26",
+  "topics": [
+    {
+      "id": "topic_001",
+      "title": "GPT-5.4 vs Claude Opus 4.6: 2026 Coding Benchmark Showdown",
+      "score": 10.0,
+      "format_type": "F",
+      "category_id": "CAT1",
+      "primary_keyword": "claude vs gpt 2026",
+      "source_urls": [
+        "https://www.nxcode.io/resources/news/gpt-5-4-vs-claude-opus-4-6-coding-comparison-2026",
+        "https://help.apiyi.com/en/claude-opus-4-6-vs-gpt-5-4-comparison-12-benchmarks-guide-en.html",
+        "https://artificialanalysis.ai/models/comparisons/gpt-5-4-vs-claude-opus-4-6",
+        "https://www.datacamp.com/blog/gpt-5-4-vs-claude-opus-4-6",
+        "https://www.mindstudio.ai/blog/gpt-54-vs-claude-opus-46-vs-gemini-31-pro-benchmarks"
+      ],
+      "reason": "GPT-5.4 (released Mar 5 2026) and Claude Opus 4.6 are both brand-new flagship releases, creating a head-to-head battle that perfectly matches 'claude vs gpt' and 'best ai model for coding 2026' high-traffic keywords. 12+ benchmarks available with structured data.",
+      "key_data_points": [
+        "Claude Opus 4.6 SWE-bench Verified: 80.8% (single attempt)",
+        "GPT-5.4 SWE-Bench Pro: 57.7% vs Opus 45% on novel engineering problems",
+        "GPT-5.4 OSWorld: 75%; Claude Opus 4.6 OSWorld: 72.7%",
+        "Claude Opus 4.6 ARC-AGI-2: 68.8% — leads GPT-5.4 by 16 percentage points",
+        "GPT-5.4 pricing: $2.50/$15 per 1M tokens; Claude Opus 4.6: $5/$25 per 1M tokens",
+        "GPT-5.4 released March 5, 2026; Claude Opus 4.6 & Sonnet 4.6 released March 2026 with 1M context window"
+      ]
+    },
+    {
+      "id": "topic_002",
+      "title": "LLM API Pricing Comparison 2026: 60+ Models, One Table",
+      "score": 10.0,
+      "format_type": "D",
+      "category_id": "CAT5",
+      "primary_keyword": "llm pricing comparison 2026",
+      "source_urls": [
+        "https://www.tldl.io/resources/llm-api-pricing-2026",
+        "https://www.cloudidr.com/blog/llm-pricing-comparison-2026",
+        "https://pricepertoken.com/",
+        "https://platform.claude.com/docs/en/about-claude/pricing",
+        "https://developers.openai.com/api/docs/pricing",
+        "https://costgoat.com/compare/llm-api"
+      ],
+      "reason": "Three major new pricing structures dropped simultaneously in March 2026 (GPT-5.4, Claude Opus/Sonnet 4.6, Gemini updates). Matches 'llm pricing comparison 2026' and 'claude api pricing' high-traffic keywords. Evergreen structured data resource.",
+      "key_data_points": [
+        "GPT-5.4: $2.50 input / $15.00 output per 1M tokens",
+        "Claude Opus 4.6: $5.00 input / $25.00 output per 1M tokens",
+        "Claude Sonnet 4.6: $3.00 input / $15.00 output per 1M tokens",
+        "Gemini 2.5 Pro: $1.25 input / $10.00 output per 1M tokens",
+        "DeepSeek V3.2: $0.14 input / $0.28 output — cheapest high-quality option",
+        "Gemini 2.0 Flash-Lite: $0.075 input / $0.30 output — cheapest overall",
+        "GPT-5.4 Batch API discount: 50% ($1.25 input / $7.50 output)"
+      ]
+    },
+    {
+      "id": "topic_003",
+      "title": "Best AI Coding Tools 2026: Claude Code vs Cursor vs Copilot",
+      "score": 10.0,
+      "format_type": "A",
+      "category_id": "CAT2",
+      "primary_keyword": "best ai coding tools 2026",
+      "source_urls": [
+        "https://dev.to/alexcloudstar/claude-code-vs-cursor-vs-github-copilot-the-2026-ai-coding-tool-showdown-53n4",
+        "https://www.cosmicjs.com/blog/claude-code-vs-github-copilot-vs-cursor-which-ai-coding-agent-should-you-use-2026",
+        "https://www.nxcode.io/resources/news/best-ai-for-coding-2026-complete-ranking",
+        "https://www.adventureppc.com/blog/claude-code-vs-cursor-vs-github-copilot-the-definitive-ai-coding-tool-comparison-for-2026"
+      ],
+      "reason": "Claude Code hitting #1 in 8 months is a major industry shift. Survey data, pricing tables, and SWE-bench data make this a strong Format A (tool comparison with JSON data block). Developer community is actively debating this.",
+      "key_data_points": [
+        "Claude Code: 46% 'most loved' developer rating vs Cursor 19% vs GitHub Copilot 9%",
+        "Claude Code Opus 4.6 backend: 80.8% SWE-bench Verified",
+        "Claude Code Max plan: $100/month flat-rate",
+        "Cursor Pro: $20/month; Cursor Ultra: $200/month",
+        "GitHub Copilot: $10/month (free tier: 2,000 completions + 50 premium requests/month)",
+        "Claude Code launched May 2025, reached #1 within 8 months"
+      ]
+    }
+  ],
+  "selected_topics": ["topic_001", "topic_002", "topic_003"]
+}
