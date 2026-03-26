@@ -1,0 +1,91 @@
+{
+  "validation_date": "2026-03-26",
+  "posts": [
+    {
+      "post_id": "topic_001",
+      "file": "_drafts/2026-03-26-gpt-5-4-vs-claude-opus-4-6-benchmark.md",
+      "validation_passed": true,
+      "title": "Claude vs GPT 2026: Opus 4.6 vs GPT-5.4 Benchmarks",
+      "title_length": 50,
+      "meta_description_length": 154,
+      "quality_score": 9.375,
+      "checks": {
+        "title_60_chars": true,
+        "year_2026_in_title": true,
+        "meta_desc_150_160": true,
+        "json_block_present": true,
+        "comparison_table_present": true,
+        "word_count_600_plus": true,
+        "canonical_url_present": true,
+        "faq_min_3": true,
+        "internal_links_min_2": true,
+        "last_updated_present": true,
+        "all_front_matter_fields": true
+      },
+      "issues": [
+        {
+          "type": "META_DESC_TOO_SHORT",
+          "severity": "high",
+          "detail": "Meta description was 141 chars (required 150-160)",
+          "fix": "Extended to 154 chars — FIXED",
+          "status": "resolved"
+        }
+      ],
+      "ready_for_publish": true
+    },
+    {
+      "post_id": "topic_002",
+      "file": "_drafts/2026-03-26-llm-api-pricing-comparison-2026.md",
+      "validation_passed": true,
+      "title": "LLM API Pricing 2026: Full Comparison Table",
+      "title_length": 43,
+      "meta_description_length": 156,
+      "quality_score": 9.0,
+      "checks": {
+        "title_60_chars": true,
+        "year_2026_in_title": true,
+        "meta_desc_150_160": true,
+        "json_block_present": true,
+        "comparison_table_present": true,
+        "word_count_600_plus": true,
+        "canonical_url_present": true,
+        "faq_min_3": true,
+        "internal_links_min_2": true,
+        "last_updated_present": true,
+        "all_front_matter_fields": true
+      },
+      "issues": [],
+      "ready_for_publish": true
+    },
+    {
+      "post_id": "topic_003",
+      "file": "_drafts/2026-03-26-best-ai-coding-tools-2026.md",
+      "validation_passed": true,
+      "title": "Best AI Coding Tools 2026: Claude Code vs Cursor vs Copilot",
+      "title_length": 60,
+      "meta_description_length": 157,
+      "quality_score": 9.38,
+      "checks": {
+        "title_60_chars": true,
+        "year_2026_in_title": true,
+        "meta_desc_150_160": true,
+        "json_block_present": true,
+        "comparison_table_present": true,
+        "word_count_600_plus": true,
+        "canonical_url_present": true,
+        "faq_min_3": true,
+        "internal_links_min_2": true,
+        "last_updated_present": true,
+        "all_front_matter_fields": true
+      },
+      "issues": [],
+      "ready_for_publish": true
+    }
+  ],
+  "summary": {
+    "total_posts": 3,
+    "all_passed": true,
+    "high_severity_fixed": 1,
+    "ready_for_human_review": true
+  }
+}
