@@ -1,0 +1,53 @@
+title: "AI Tech Resource Blog"
+description: "Structured AI/LLM data resource for developers and power users."
+url: "https://aitechresource.dev"  # placeholder, update when domain is purchased
+baseurl: ""
+lang: "en"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /posts/:year-:month-:day-:title/
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Collections
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# SEO defaults
+twitter:
+  username: ""
+author:
+  name: "AI Tech Resource Blog"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - PIPELINE_PROMPT.md
+  - PROJECT_CONTEXT.md
+  - CLAUDE.md
+  - SEO_GUIDE.md
+  - SOURCES.md
+  - "*.docx"
+  - node_modules
+  - vendor
+
+# Feed
+feed:
+  categories:
+    - ai-models
+    - ai-developer-tools
+    - prompt-engineering
+    - ai-productivity
+    - ai-data
+    - ai-safety

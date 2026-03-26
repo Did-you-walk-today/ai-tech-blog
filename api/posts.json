@@ -1,0 +1,17 @@
+---
+layout: null
+---
+[{% for post in site.posts %}{% unless forloop.first %},{% endunless %}
+{
+  "title": {{ post.title | jsonify }},
+  "url": "{{ post.url }}",
+  "date": "{{ post.date | date: '%Y-%m-%d' }}",
+  "data_updated": "{{ post.data_updated | default: post.date | date: '%Y-%m-%d' }}",
+  "category": {{ post.category_id | default: "" | jsonify }},
+  "categories": {{ post.categories | jsonify }},
+  "tags": {{ post.tags | jsonify }},
+  "schema_type": {{ post.schema_type | default: "Article" | jsonify }},
+  "format_type": {{ post.format_type | default: "" | jsonify }},
+  "description": {{ post.description | default: "" | jsonify }}
+}{% endfor %}
+]

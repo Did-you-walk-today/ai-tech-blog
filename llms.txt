@@ -1,0 +1,40 @@
+# AI Tech Resource Blog
+> Structured AI/LLM data resource for developers and power users.
+
+## About
+This blog publishes structured, data-driven posts about AI models, developer tools, prompt engineering, and AI productivity. All posts include JSON-LD schema and machine-readable data blocks.
+
+## Data
+- [All posts JSON](/api/posts.json): Full structured post index with metadata
+- [LLM Pricing DB](/api/pricing.json): Updated weekly from official sources
+- [Benchmark Data](/api/benchmarks.json): Tested results only, methodology transparent
+
+## Categories
+- AI Models & Intelligence: /category/ai-models/ — LLM comparisons, benchmarks, releases
+- AI Developer Tools: /category/ai-developer-tools/ — APIs, coding tools, Claude Code, Cursor
+- Prompt Engineering: /category/prompt-engineering/ — Libraries, templates, system prompts
+- AI Productivity: /category/ai-productivity/ — Workflow automation, templates
+- AI Data & Statistics: /category/ai-data/ — Adoption data, market research
+- AI Safety & Ethics: /category/ai-safety/ — Hallucination prevention, practical safety
+
+## Topic Clusters
+- CLUSTER_LLM: Best LLM comparisons, pricing, coding benchmarks
+- CLUSTER_DEVTOOLS: Best AI coding tools, Claude Code, Cursor vs Copilot, MCP
+- CLUSTER_PROMPTS: Ultimate prompt libraries by job role, system prompts
+
+## Update Frequency
+- Posts: 3x/week (Monday, Tuesday/Wednesday/Thursday/Friday)
+- Pricing data: weekly (every Monday)
+- Benchmarks: monthly
+
+## Post Formats
+- FORMAT_A: Tool comparison (JSON data block)
+- FORMAT_B: Prompt library (copy-ready prompts)
+- FORMAT_C: Technical guide (step-by-step with code)
+- FORMAT_D: Structured data resource (tables + JSON)
+- FORMAT_E: Workflow/template (downloadable)
+- FORMAT_F: Benchmark report (tested data)
+- FORMAT_G: Weekly AI digest (automated)
+
+## API Access
+Posts are indexable via /api/posts.json — each entry includes title, url, date, data_updated, category, tags, schema_type.

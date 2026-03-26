@@ -1,0 +1,58 @@
+name: Daily Content Pipeline
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: 'Phase to run (1-8)'
+        required: false
+        default: '1'
+
+jobs:
+  content_pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run Phase 1 and 2 (Discovery + Data Collection)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          claude --print "Read CLAUDE.md, SEO_GUIDE.md, and SOURCES.md. Then run Phase 1 of PIPELINE_PROMPT.md. Today is ${TODAY}. Find top 3 topics. Then immediately run Phase 2 for each selected topic. Save output to pipeline_output/${TODAY}-discovery.json"
+
+      - name: Run Phase 3 and 4 (Draft + Validation)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          claude --print "Read CLAUDE.md and SEO_GUIDE.md. Read pipeline_output/${TODAY}-discovery.json. Run Phase 3 (draft generation) and Phase 4 (validation) for each topic. Save drafts to _drafts/ directory."
+
+      - name: Create Pull Request for Human Review
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "draft/${TODAY}"
+          git add _drafts/ pipeline_output/
+          git commit -m "Draft: content pipeline ${TODAY}" || echo "No changes to commit"
+          git push origin "draft/${TODAY}" || echo "Nothing to push"
+          gh pr create \
+            --title "Content Review: ${TODAY}" \
+            --body "Automated content pipeline output for ${TODAY}. Please review drafts in _drafts/ directory." \
+            --base main \
+            --head "draft/${TODAY}" || echo "PR already exists or no changes"
