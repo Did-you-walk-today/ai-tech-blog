@@ -1,0 +1,93 @@
+{
+  "benchmark_report": {
+    "generated": "2026-03-26",
+    "methodology": "Published vendor benchmarks cross-referenced against independent evaluations. All scores use pass@1 unless otherwise noted.",
+    "models": {
+      "gpt_5_4": {
+        "name": "GPT-5.4",
+        "developer": "OpenAI",
+        "release_date": "2026-03-05",
+        "context_window": 1050000,
+        "pricing": {
+          "input_per_1m": 2.5,
+          "output_per_1m": 15.0
+        }
+      },
+      "claude_opus_4_6": {
+        "name": "Claude Opus 4.6",
+        "developer": "Anthropic",
+        "release_date": "2026-02-05",
+        "context_window": 1000000,
+        "pricing": {
+          "input_per_1m": 5.0,
+          "output_per_1m": 25.0
+        }
+      }
+    },
+    "results": [
+      {
+        "benchmark": "SWE-bench Verified",
+        "category": "coding",
+        "gpt_5_4": "~80%",
+        "claude_opus_4_6": "80.8%",
+        "winner": "Claude Opus 4.6"
+      },
+      {
+        "benchmark": "SWE-bench Pro",
+        "category": "coding",
+        "gpt_5_4": "57.7%",
+        "claude_opus_4_6": "~45%",
+        "winner": "GPT-5.4"
+      },
+      {
+        "benchmark": "HumanEval",
+        "category": "coding",
+        "gpt_5_4": "93.1%",
+        "claude_opus_4_6": "97.8%",
+        "winner": "Claude Opus 4.6"
+      },
+      {
+        "benchmark": "ARC-AGI-2",
+        "category": "reasoning",
+        "gpt_5_4": "73.3%",
+        "claude_opus_4_6": "68.8%",
+        "winner": "GPT-5.4"
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "category": "science_qa",
+        "gpt_5_4": "92.8%",
+        "claude_opus_4_6": "88.5–91%",
+        "winner": "GPT-5.4"
+      },
+      {
+        "benchmark": "AIME 2025",
+        "category": "math",
+        "gpt_5_4": "100%",
+        "claude_opus_4_6": "100%",
+        "winner": "Tie"
+      },
+      {
+        "benchmark": "OSWorld",
+        "category": "agentic_os",
+        "gpt_5_4": "75.0%",
+        "claude_opus_4_6": "72.7%",
+        "winner": "GPT-5.4"
+      },
+      {
+        "benchmark": "Terminal-Bench 2.0",
+        "category": "agentic_terminal",
+        "gpt_5_4": "75.1%",
+        "claude_opus_4_6": "65.4%",
+        "winner": "GPT-5.4"
+      },
+      {
+        "benchmark": "MRCR v2 at 1M tokens",
+        "category": "long_context_recall",
+        "gpt_5_4": "18.5%",
+        "claude_opus_4_6": "76%",
+        "winner": "Claude Opus 4.6"
+      }
+    ]
+  }
+}

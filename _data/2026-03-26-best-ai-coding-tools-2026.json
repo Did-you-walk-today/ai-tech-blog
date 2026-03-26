@@ -1,0 +1,154 @@
+{
+  "comparison_date": "2026-03-26",
+  "market_size_usd_billions": 12.8,
+  "daily_developer_usage_pct": 73,
+  "ai_assisted_github_commits_pct_range": "41-51",
+  "tools": [
+    {
+      "name": "Claude Code",
+      "vendor": "Anthropic",
+      "launched": "2025-05",
+      "rank": 1,
+      "developer_love_pct": 46,
+      "swe_bench_verified_pct": 80.8,
+      "model": "Claude Opus 4.6",
+      "interface": "CLI / Terminal",
+      "ide_support": [
+        "VS Code (via terminal)",
+        "Zed",
+        "Neovim",
+        "Any editor"
+      ],
+      "context_window_tokens": 1000000,
+      "agentic": true,
+      "agent_teams": "preview",
+      "free_tier": false,
+      "pricing": {
+        "free": null,
+        "pro": "$20/mo (Claude Pro)",
+        "max": "$100/mo (Claude Max)",
+        "enterprise": "Custom"
+      },
+      "key_features": [
+        "Terminal-native agentic CLI",
+        "No IDE lock-in",
+        "1M token context window",
+        "Agent teams (preview)",
+        "Autonomous file/git/shell operations"
+      ],
+      "best_for": "Complex agentic tasks, large codebases, startup teams",
+      "startup_adoption_pct": 75
+    },
+    {
+      "name": "Cursor",
+      "vendor": "Anysphere",
+      "rank": 2,
+      "developer_love_pct": 19,
+      "swe_bench_verified_pct": 51.7,
+      "interface": "IDE (VS Code fork)",
+      "ide_support": [
+        "VS Code (fork)"
+      ],
+      "agentic": true,
+      "free_tier": true,
+      "pricing": {
+        "free": "Limited",
+        "pro": "$20/mo",
+        "ultra": "$200/mo"
+      },
+      "key_features": [
+        "Composer multi-file agent",
+        "Tab completion model",
+        "VS Code-compatible extensions",
+        "Integrated chat panel"
+      ],
+      "best_for": "VS Code power users, interactive editing workflows"
+    },
+    {
+      "name": "GitHub Copilot",
+      "vendor": "GitHub (Microsoft)",
+      "rank": 3,
+      "developer_love_pct": 9,
+      "swe_bench_verified_pct": 56.0,
+      "interface": "IDE Plugin",
+      "ide_support": [
+        "VS Code",
+        "JetBrains",
+        "Visual Studio",
+        "Neovim",
+        "Eclipse",
+        "Xcode"
+      ],
+      "agentic": true,
+      "free_tier": true,
+      "pricing": {
+        "free": "2000 completions/mo",
+        "pro": "$10/mo",
+        "business": "$19/mo"
+      },
+      "key_features": [
+        "Widest IDE coverage",
+        "Copilot Workspace (PR-level agent)",
+        "Inline suggestions",
+        "GitHub-native integration"
+      ],
+      "best_for": "Enterprise mixed-stack teams, GitHub-centric workflows"
+    },
+    {
+      "name": "Windsurf",
+      "vendor": "Codeium",
+      "rank": 4,
+      "interface": "IDE",
+      "agentic": true,
+      "free_tier": true,
+      "pricing": {
+        "free": "25 Cascade credits/mo",
+        "pro": "$15/mo",
+        "teams": "$60/mo"
+      },
+      "key_features": [
+        "Cascade agent",
+        "Flow-state editing",
+        "Strong free tier"
+      ],
+      "best_for": "Developers wanting agentic editing on a budget"
+    },
+    {
+      "name": "Tabnine",
+      "vendor": "Tabnine",
+      "rank": 5,
+      "interface": "IDE Plugin",
+      "agentic": false,
+      "free_tier": false,
+      "pricing": {
+        "pro": "$39/mo",
+        "enterprise": "Custom (on-premise)"
+      },
+      "key_features": [
+        "On-premise deployment",
+        "SOC 2 / GDPR compliance",
+        "Privacy-first architecture"
+      ],
+      "best_for": "Regulated industries requiring on-premise code processing"
+    },
+    {
+      "name": "Continue",
+      "vendor": "Continue.dev (open-source)",
+      "rank": 6,
+      "interface": "IDE Plugin",
+      "agentic": false,
+      "free_tier": true,
+      "pricing": {
+        "free": "$0 (open-source)",
+        "self_hosted": "$0"
+      },
+      "key_features": [
+        "Open-source (Apache 2.0)",
+        "Bring-your-own model",
+        "VS Code and JetBrains support",
+        "Self-hostable"
+      ],
+      "best_for": "Developers wanting full control over model and data"
+    }
+  ]
+}
