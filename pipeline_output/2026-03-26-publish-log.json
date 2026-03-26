@@ -1,0 +1,43 @@
+{
+  "publish_date": "2026-03-27",
+  "pipeline_run_date": "2026-03-26",
+  "commit_hash": "b54f40d",
+  "posts_published": [
+    {
+      "post_id": "topic_001",
+      "slug": "2026-03-26-gpt-5-4-vs-claude-opus-4-6-benchmark",
+      "title": "Claude vs GPT 2026: Opus 4.6 vs GPT-5.4 Benchmarks",
+      "live_url": "https://did-you-walk-today.github.io/ai-tech-blog/posts/2026-03-26-gpt-5-4-vs-claude-opus-4-6-benchmark/",
+      "category": "CAT1",
+      "format": "F",
+      "quality_score": 9.375,
+      "data_file": "_data/2026-03-26-gpt-5-4-vs-claude-opus-4-6-benchmark.json"
+    },
+    {
+      "post_id": "topic_002",
+      "slug": "2026-03-26-llm-api-pricing-comparison-2026",
+      "title": "LLM API Pricing 2026: Full Comparison Table",
+      "live_url": "https://did-you-walk-today.github.io/ai-tech-blog/posts/2026-03-26-llm-api-pricing-comparison-2026/",
+      "category": "CAT5",
+      "format": "D",
+      "quality_score": 9.0,
+      "data_file": "_data/2026-03-26-llm-api-pricing-comparison-2026.json"
+    },
+    {
+      "post_id": "topic_003",
+      "slug": "2026-03-26-best-ai-coding-tools-2026",
+      "title": "Best AI Coding Tools 2026: Claude Code vs Cursor vs Copilot",
+      "live_url": "https://did-you-walk-today.github.io/ai-tech-blog/posts/2026-03-26-best-ai-coding-tools-2026/",
+      "category": "CAT2",
+      "format": "A",
+      "quality_score": 9.38,
+      "data_file": "_data/2026-03-26-best-ai-coding-tools-2026.json"
+    }
+  ],
+  "next_actions": [
+    "GitHub Pages 활성화: Settings > Pages > Branch: master 설정",
+    "Google Search Console 등록 및 sitemap.xml 제출",
+    "Phase 7 (Data Freshness): 다음 월요일 2026-03-30 자동 실행",
+    "Phase 8 (SEO Tracking): 다음 월요일 2026-03-30 자동 실행"
+  ]
+}
