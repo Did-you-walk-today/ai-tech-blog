@@ -1,6 +1,6 @@
 title: "AI Tech Resource Blog"
 description: "Structured AI/LLM data resource for developers and power users."
-url: "https://aitechresource.dev"  # placeholder, update when domain is purchased
+url: "https://did-you-walk-today.github.io/ai-tech-blog"
 baseurl: ""
 lang: "en"
 
@@ -41,6 +41,7 @@ exclude:
   - "*.docx"
   - node_modules
   - vendor
+  - pipeline_output
 
 # Feed
 feed:

@@ -50,9 +50,9 @@ jobs:
           git checkout -b "draft/${TODAY}"
           git add _drafts/ pipeline_output/
           git commit -m "Draft: content pipeline ${TODAY}" || echo "No changes to commit"
-          git push origin "draft/${TODAY}" || echo "Nothing to push"
+          git push -u origin "draft/${TODAY}" || echo "Nothing to push"
           gh pr create \
             --title "Content Review: ${TODAY}" \
             --body "Automated content pipeline output for ${TODAY}. Please review drafts in _drafts/ directory." \
-            --base main \
+            --base master \
             --head "draft/${TODAY}" || echo "PR already exists or no changes"

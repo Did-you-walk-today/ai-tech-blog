@@ -1,0 +1,6 @@
+# ads.txt — Google AdSense
+# Format: google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# Replace pub-XXXXXXXXXXXXXXXXX with your actual AdSense publisher ID
+# Found at: AdSense dashboard → Account → Account information
+
+google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

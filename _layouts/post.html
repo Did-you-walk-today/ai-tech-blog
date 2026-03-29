@@ -9,7 +9,7 @@ layout: default
   "headline": "{{ page.title | escape }}",
   "description": "{{ page.description | escape }}",
   "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.data_updated }}T00:00:00Z",
+  "dateModified": "{{ page.data_updated | default: page.date | date: '%Y-%m-%d' }}T00:00:00Z",
   "author": {
     "@type": "Organization",
     "name": "AI Tech Resource Blog"

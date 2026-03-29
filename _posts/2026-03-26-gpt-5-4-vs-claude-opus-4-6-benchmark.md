@@ -242,23 +242,23 @@ At current list prices, Claude Opus 4.6 is roughly 1.88x more expensive per equi
 
 ## FAQ
 
-### H3: Which model is better for coding in 2026, GPT-5.4 or Claude Opus 4.6?
+###Which model is better for coding in 2026, GPT-5.4 or Claude Opus 4.6?
 
 For standard code generation and automated fixes on well-defined tasks, Claude Opus 4.6 leads (HumanEval: 97.8%, SWE-bench Verified: 80.8%). For complex, agentic coding agents handling underspecified issues, GPT-5.4 leads (SWE-bench Pro: 57.7% vs ~45%). The best choice depends on your task type.
 
-### H3: Is Claude Opus 4.6 worth the higher price compared to GPT-5.4?
+###Is Claude Opus 4.6 worth the higher price compared to GPT-5.4?
 
 At approximately 88% higher cost per token, Claude Opus 4.6 is worth the premium only in specific scenarios: long-context retrieval pipelines (MRCR v2: 76% vs 18.5%), standard coding tasks, and HumanEval-class code generation. For reasoning, agentic tasks, and science QA, GPT-5.4 offers better performance at lower cost.
 
-### H3: How do GPT-5.4 and Claude Opus 4.6 compare on long-context tasks?
+###How do GPT-5.4 and Claude Opus 4.6 compare on long-context tasks?
 
 This is the sharpest performance difference between the two models. Claude Opus 4.6 scores 76% on MRCR v2 at 1M tokens; GPT-5.4 scores 18.5%. While GPT-5.4 has a marginally larger context window (1.05M vs 1M tokens), Claude's ability to accurately retrieve and cross-reference information at that scale is far superior.
 
-### H3: Which model wins on math benchmarks?
+###Which model wins on math benchmarks?
 
 Both models score 100% on AIME 2025, making math performance a tie at the competition level. GPT-5.4 leads on GPQA Diamond (graduate science that includes physics and chemistry alongside math), suggesting stronger performance on multi-domain reasoning, not just pure mathematics.
 
-### H3: When did GPT-5.4 and Claude Opus 4.6 release?
+###When did GPT-5.4 and Claude Opus 4.6 release?
 
 Claude Opus 4.6 was released on February 5, 2026. GPT-5.4 was released on March 5, 2026 — one month later.
 

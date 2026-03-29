@@ -6,8 +6,6 @@ This blog publishes structured, data-driven posts about AI models, developer too
 
 ## Data
 - [All posts JSON](/api/posts.json): Full structured post index with metadata
-- [LLM Pricing DB](/api/pricing.json): Updated weekly from official sources
-- [Benchmark Data](/api/benchmarks.json): Tested results only, methodology transparent
 
 ## Categories
 - AI Models & Intelligence: /category/ai-models/ — LLM comparisons, benchmarks, releases
