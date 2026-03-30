@@ -8,6 +8,8 @@ description: "LLM API pricing comparison 2026: 30+ models from OpenAI, Anthropic
 canonical_url: https://www.jsonhouse.com/posts/llm-api-pricing-comparison-2026
 permalink: /posts/llm-api-pricing-comparison-2026/
 data_updated: 2026-03-26
+toc: true
+author: ai_tech_blog
 schema_type: Dataset
 format_type: D
 category_id: CAT5

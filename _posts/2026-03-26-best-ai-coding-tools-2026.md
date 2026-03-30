@@ -8,6 +8,8 @@ description: "The best AI coding tools in 2026 ranked: Claude Code leads with 80
 canonical_url: https://www.jsonhouse.com/posts/best-ai-coding-tools-2026
 permalink: /posts/best-ai-coding-tools-2026/
 data_updated: 2026-03-26
+toc: true
+author: ai_tech_blog
 schema_type: Article
 format_type: A
 category_id: CAT2

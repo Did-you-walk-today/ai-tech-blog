@@ -8,6 +8,8 @@ description: "GPT-5.4 vs Claude Opus 4.6 in 2026: head-to-head benchmark results
 canonical_url: https://www.jsonhouse.com/posts/gpt-5-4-vs-claude-opus-4-6-benchmark-2026
 permalink: /posts/gpt-5-4-vs-claude-opus-4-6-benchmark-2026/
 data_updated: 2026-03-26
+toc: true
+author: ai_tech_blog
 schema_type: Article
 format_type: F
 category_id: CAT1

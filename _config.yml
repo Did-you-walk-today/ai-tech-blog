@@ -3,6 +3,9 @@ description: "Structured AI/LLM data resource for developers and power users."
 url: "https://www.jsonhouse.com"
 baseurl: ""
 lang: "en"
+timezone: Asia/Seoul
+
+theme: jekyll-theme-chirpy
 
 # Build settings
 markdown: kramdown
@@ -15,6 +18,23 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
 
+toc: true
+comments: false
+math: false
+mermaid: false
+
+social:
+  name: "AI Tech Resource Blog"
+  links: []
+
+paginate: 10
+
+twitter:
+  username: ""
+
+author:
+  name: "AI Tech Resource Blog"
+
 # Collections
 defaults:
   - scope:
@@ -22,12 +42,19 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      toc: true
+      author: ai_tech_blog
 
 # SEO defaults
-twitter:
-  username: ""
-author:
-  name: "AI Tech Resource Blog"
+# Feed
+feed:
+  categories:
+    - ai-models
+    - ai-developer-tools
+    - prompt-engineering
+    - ai-productivity
+    - ai-data
+    - ai-safety
 
 # Exclude from build
 exclude:
@@ -42,13 +69,4 @@ exclude:
   - node_modules
   - vendor
   - pipeline_output
-
-# Feed
-feed:
-  categories:
-    - ai-models
-    - ai-developer-tools
-    - prompt-engineering
-    - ai-productivity
-    - ai-data
-    - ai-safety
+  - chirpy_migration_prompt.md
