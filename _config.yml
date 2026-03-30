@@ -23,6 +23,9 @@ comments: false
 math: false
 mermaid: false
 
+# Google AdSense
+google_adsense: ca-pub-4708234819958995
+
 social:
   name: "AI Tech Resource Blog"
   links: []

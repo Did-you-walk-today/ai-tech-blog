@@ -1,1 +1,4 @@
-[]
+- type: email
+  icon: "fas fa-envelope"
+  url: "mailto:hello@jsonhouse.com"
+  noblank: true
