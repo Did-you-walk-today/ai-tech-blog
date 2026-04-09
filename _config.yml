@@ -16,11 +16,18 @@ permalink: /posts/:title/
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-archives
 
 toc: true
 comments: false
 math: false
 mermaid: false
+
+# Chirpy required: tabs collection
+collections:
+  tabs:
+    output: true
+    sort_by: order
 
 # Google AdSense
 google_adsense: ca-pub-4708234819958995
@@ -37,17 +44,48 @@ twitter:
 author:
   name: "AI Tech Resource Blog"
 
-# Collections
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: "post"
+      layout: post
       toc: true
+      comments: false
+      permalink: /posts/:title/
       author: ai_tech_blog
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
 
-# Exclude from build
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+
 exclude:
   - Gemfile
   - PIPELINE_PROMPT.md

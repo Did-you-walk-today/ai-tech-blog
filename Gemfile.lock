@@ -175,6 +175,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.3)
+  jekyll-archives
   jekyll-seo-tag
   jekyll-sitemap
   jekyll-theme-chirpy (~> 7.0)
