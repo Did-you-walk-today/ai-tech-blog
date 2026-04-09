@@ -6,7 +6,12 @@
       "name": "Filesystem",
       "package": "@modelcontextprotocol/server-filesystem",
       "category": "File System",
-      "tools": ["read_file", "write_file", "list_directory", "search_files"],
+      "tools": [
+        "read_file",
+        "write_file",
+        "list_directory",
+        "search_files"
+      ],
       "use_case": "Read and write files in specified directories",
       "install": "claude mcp add @modelcontextprotocol/server-filesystem /path/to/dir",
       "local_only": true,
@@ -16,7 +21,11 @@
       "name": "PostgreSQL",
       "package": "@modelcontextprotocol/server-postgres",
       "category": "Database",
-      "tools": ["query", "list_tables", "describe_table"],
+      "tools": [
+        "query",
+        "list_tables",
+        "describe_table"
+      ],
       "use_case": "Read-only SQL queries against your Postgres database",
       "install": "claude mcp add @modelcontextprotocol/server-postgres --env DATABASE_URL=...",
       "local_only": true,
@@ -26,7 +35,13 @@
       "name": "GitHub",
       "package": "@modelcontextprotocol/server-github",
       "category": "Code Repository",
-      "tools": ["list_repos", "get_issue", "create_issue", "search_code", "get_pr"],
+      "tools": [
+        "list_repos",
+        "get_issue",
+        "create_issue",
+        "search_code",
+        "get_pr"
+      ],
       "use_case": "Read/write GitHub issues, PRs, and code search",
       "install": "claude mcp add @modelcontextprotocol/server-github --env GITHUB_TOKEN=...",
       "local_only": false,
@@ -36,7 +51,10 @@
       "name": "Brave Search",
       "package": "@modelcontextprotocol/server-brave-search",
       "category": "Web Search",
-      "tools": ["web_search", "local_search"],
+      "tools": [
+        "web_search",
+        "local_search"
+      ],
       "use_case": "Real-time web search without leaving Claude Code",
       "install": "claude mcp add @modelcontextprotocol/server-brave-search --env BRAVE_API_KEY=...",
       "local_only": false,
@@ -46,7 +64,13 @@
       "name": "Puppeteer",
       "package": "@modelcontextprotocol/server-puppeteer",
       "category": "Browser Automation",
-      "tools": ["navigate", "screenshot", "click", "fill_form", "extract_content"],
+      "tools": [
+        "navigate",
+        "screenshot",
+        "click",
+        "fill_form",
+        "extract_content"
+      ],
       "use_case": "Headless browser control for scraping and E2E testing",
       "install": "claude mcp add @modelcontextprotocol/server-puppeteer",
       "local_only": true,
@@ -56,7 +80,12 @@
       "name": "SQLite",
       "package": "@modelcontextprotocol/server-sqlite",
       "category": "Database",
-      "tools": ["query", "list_tables", "create_table", "insert"],
+      "tools": [
+        "query",
+        "list_tables",
+        "create_table",
+        "insert"
+      ],
       "use_case": "Full read/write access to local SQLite databases",
       "install": "claude mcp add @modelcontextprotocol/server-sqlite /path/to/db.sqlite",
       "local_only": true,
@@ -66,7 +95,12 @@
       "name": "Slack",
       "package": "@modelcontextprotocol/server-slack",
       "category": "Communication",
-      "tools": ["list_channels", "post_message", "get_thread", "search_messages"],
+      "tools": [
+        "list_channels",
+        "post_message",
+        "get_thread",
+        "search_messages"
+      ],
       "use_case": "Read Slack channels and post messages from Claude",
       "install": "claude mcp add @modelcontextprotocol/server-slack --env SLACK_TOKEN=...",
       "local_only": false,
@@ -76,7 +110,12 @@
       "name": "Google Maps",
       "package": "@modelcontextprotocol/server-google-maps",
       "category": "Location",
-      "tools": ["geocode", "reverse_geocode", "search_places", "get_directions"],
+      "tools": [
+        "geocode",
+        "reverse_geocode",
+        "search_places",
+        "get_directions"
+      ],
       "use_case": "Location data and directions for apps with geo features",
       "install": "claude mcp add @modelcontextprotocol/server-google-maps --env MAPS_API_KEY=...",
       "local_only": false,
@@ -86,7 +125,12 @@
       "name": "Sentry",
       "package": "@modelcontextprotocol/server-sentry",
       "category": "Observability",
-      "tools": ["get_issues", "get_event", "list_projects", "resolve_issue"],
+      "tools": [
+        "get_issues",
+        "get_event",
+        "list_projects",
+        "resolve_issue"
+      ],
       "use_case": "Query Sentry errors directly from your coding session",
       "install": "claude mcp add @modelcontextprotocol/server-sentry --env SENTRY_TOKEN=...",
       "local_only": false,
@@ -96,7 +140,12 @@
       "name": "Memory",
       "package": "@modelcontextprotocol/server-memory",
       "category": "Persistence",
-      "tools": ["store", "retrieve", "list", "delete"],
+      "tools": [
+        "store",
+        "retrieve",
+        "list",
+        "delete"
+      ],
       "use_case": "Persistent key-value memory across Claude sessions",
       "install": "claude mcp add @modelcontextprotocol/server-memory",
       "local_only": true,

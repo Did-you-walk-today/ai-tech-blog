@@ -16,17 +16,7 @@
       "multimodal": true,
       "function_calling": true,
       "extended_thinking": true,
-      "training_cutoff": "early 2025",
-      "task_results": {
-        "python_codegen": "tie",
-        "typescript_refactor": "win",
-        "bug_detection_go": "loss",
-        "sql_query": "tie",
-        "function_calling": "loss",
-        "long_context_review": "win",
-        "system_design": "win"
-      },
-      "overall_verdict": "3W-2L-2T"
+      "training_cutoff": "early 2025"
     },
     {
       "name": "GPT-4.1",
@@ -43,17 +33,7 @@
       "multimodal": true,
       "function_calling": true,
       "extended_thinking": false,
-      "training_cutoff": "early 2025",
-      "task_results": {
-        "python_codegen": "tie",
-        "typescript_refactor": "loss",
-        "bug_detection_go": "win",
-        "sql_query": "tie",
-        "function_calling": "win",
-        "long_context_review": "loss",
-        "system_design": "loss"
-      },
-      "overall_verdict": "2W-3L-2T"
+      "training_cutoff": "early 2025"
     }
   ]
 }

@@ -3,10 +3,24 @@
   "total_workflows": 10,
   "total_estimated_weekly_hours_saved": 21.5,
   "workflows_by_category": {
-    "Code Quality": ["WF-01", "WF-02", "WF-03"],
-    "Content Generation": ["WF-04", "WF-05", "WF-06"],
-    "Data Analysis": ["WF-07", "WF-08"],
-    "Communication": ["WF-09", "WF-10"]
+    "Code Quality": [
+      "WF-01",
+      "WF-02",
+      "WF-03"
+    ],
+    "Content Generation": [
+      "WF-04",
+      "WF-05",
+      "WF-06"
+    ],
+    "Data Analysis": [
+      "WF-07",
+      "WF-08"
+    ],
+    "Communication": [
+      "WF-09",
+      "WF-10"
+    ]
   },
   "recommended_starting_point": "WF-01",
   "highest_roi_workflow": "WF-04",
@@ -14,94 +28,188 @@
   "best_model_for_high_frequency": "claude-haiku-4-5",
   "workflows": [
     {
-      "id": "WF-01",
+      "workflow_id": "WF-01",
       "name": "Automated PR Code Review",
-      "category": "Code Quality",
-      "trigger": "GitHub PR webhook",
-      "model": "claude-sonnet-4-6",
-      "estimated_weekly_hours_saved": 3.0,
-      "stack": ["GitHub Actions", "Anthropic API", "GitHub REST API"]
+      "trigger": "GitHub webhook — pull_request event (opened or synchronize)",
+      "ai_step": {
+        "model": "claude-sonnet-4-6",
+        "system_prompt": "You are a code reviewer. Categorize issues as CRITICAL / HIGH / MEDIUM / LOW. For CRITICAL and HIGH, provide the corrected code. End with: APPROVE or REQUEST CHANGES.",
+        "input": "git diff from PR",
+        "max_tokens": 4096
+      },
+      "output": {
+        "destination": "GitHub PR comment via API",
+        "format": "Markdown — issue list by severity + final verdict"
+      },
+      "stack": [
+        "GitHub Actions",
+        "Anthropic API",
+        "GitHub REST API"
+      ],
+      "estimated_weekly_hours_saved": 3.0
     },
     {
-      "id": "WF-02",
+      "workflow_id": "WF-02",
       "name": "Test Generation on Save",
-      "category": "Code Quality",
-      "trigger": "Claude Code PostToolUse hook",
-      "model": "claude-sonnet-4-6",
-      "estimated_weekly_hours_saved": 2.0,
-      "stack": ["Claude Code", "hooks"]
+      "trigger": "PostToolUse hook in Claude Code — fires after Write tool on *.py or *.ts files",
+      "ai_step": {
+        "model": "claude-sonnet-4-6",
+        "prompt": "Generate pytest/Jest tests for the function(s) added or modified in this file. Cover: happy path, edge cases, error conditions. Do not test implementation details.",
+        "input": "changed file content"
+      },
+      "output": {
+        "destination": "tests/ directory — mirrored path",
+        "format": "Full test file, runnable immediately"
+      },
+      "stack": [
+        "Claude Code",
+        "hooks (PostToolUse)"
+      ],
+      "estimated_weekly_hours_saved": 2.0
     },
     {
-      "id": "WF-03",
+      "workflow_id": "WF-03",
       "name": "Daily Security Scan",
-      "category": "Code Quality",
-      "trigger": "Cron daily 08:00 UTC",
-      "model": "claude-sonnet-4-6",
-      "estimated_weekly_hours_saved": 1.5,
-      "stack": ["GitHub Actions", "Anthropic API", "Slack Webhook"]
+      "trigger": "Cron — daily at 08:00 UTC",
+      "ai_step": {
+        "model": "claude-sonnet-4-6",
+        "system_prompt": "You are a security auditor. Check for OWASP Top 10 vulnerabilities. Report CRITICAL and HIGH issues only. Include file path and line number for each finding.",
+        "input": "git diff HEAD~24h (last 24 hours of commits)"
+      },
+      "output": {
+        "destination": "Slack #security-alerts channel",
+        "format": "Bulleted list of findings, color-coded by severity"
+      },
+      "stack": [
+        "GitHub Actions (cron)",
+        "Anthropic API",
+        "Slack Webhook"
+      ],
+      "estimated_weekly_hours_saved": 1.5
     },
     {
-      "id": "WF-04",
+      "workflow_id": "WF-04",
       "name": "Blog Post Draft from Outline",
-      "category": "Content Generation",
-      "trigger": "File drop in /inbox folder",
-      "model": "claude-sonnet-4-6",
-      "estimated_weekly_hours_saved": 4.0,
-      "stack": ["Claude Code", "Anthropic API"]
+      "trigger": "Manual — drop a .md outline file into /inbox folder",
+      "ai_step": {
+        "model": "claude-sonnet-4-6",
+        "system_prompt": "You are a technical writer. Expand this outline into a full blog post. Requirements: 800+ words, include one JSON data block or comparison table, include 3 FAQ questions, lead with the key insight in the first paragraph.",
+        "input": "outline .md file content"
+      },
+      "output": {
+        "destination": "_drafts/ directory as Jekyll-formatted .md",
+        "format": "Full post with front matter, ready for human review"
+      },
+      "stack": [
+        "Claude Code (file watcher via hook)",
+        "Anthropic API"
+      ],
+      "estimated_weekly_hours_saved": 4.0
     },
     {
-      "id": "WF-05",
+      "workflow_id": "WF-05",
       "name": "Social Media Thread from Article",
-      "category": "Content Generation",
-      "trigger": "RSS feed change (new post published)",
-      "model": "claude-haiku-4-5",
-      "estimated_weekly_hours_saved": 1.0,
-      "stack": ["n8n", "RSS reader", "Anthropic API", "Notion API"]
+      "trigger": "n8n webhook — fires when a new post is published in Jekyll (RSS feed change)",
+      "ai_step": {
+        "model": "claude-haiku-4-5",
+        "prompt": "Convert this blog post into a Twitter/X thread. Rules: first tweet = hook (max 240 chars, no hashtags), 5-8 tweets of insight, final tweet = link + 3 relevant hashtags. Number each tweet [1/N].",
+        "input": "article text (first 2000 words)"
+      },
+      "output": {
+        "destination": "Notion database 'Social Queue' — status: Draft",
+        "format": "Numbered tweet thread"
+      },
+      "stack": [
+        "n8n",
+        "RSS reader",
+        "Anthropic API",
+        "Notion API"
+      ],
+      "estimated_weekly_hours_saved": 1.0
     },
     {
-      "id": "WF-06",
+      "workflow_id": "WF-06",
       "name": "Weekly AI News Digest",
-      "category": "Content Generation",
-      "trigger": "Cron Monday 07:00 UTC",
-      "model": "claude-sonnet-4-6",
-      "estimated_weekly_hours_saved": 2.0,
-      "stack": ["n8n", "RSS reader", "Anthropic API", "GitHub API"]
+      "trigger": "Cron — every Monday at 07:00 UTC",
+      "ai_step": {
+        "model": "claude-sonnet-4-6",
+        "prompt": "Summarize the 5 most important AI developments from the past 7 days. For each: one-line headline, two-sentence summary, and why it matters for developers. Format as a newsletter section.",
+        "input": "RSS feeds from: Anthropic blog, OpenAI blog, Google DeepMind blog, HuggingFace blog, Hacker News AI posts"
+      },
+      "output": {
+        "destination": "_posts/ as a Jekyll post (FORMAT G — Weekly Digest)",
+        "format": "Structured markdown with 5 items, auto-published"
+      },
+      "stack": [
+        "n8n",
+        "RSS reader nodes",
+        "Anthropic API",
+        "GitHub API (commit)"
+      ],
+      "estimated_weekly_hours_saved": 2.0
     },
     {
-      "id": "WF-07",
+      "workflow_id": "WF-07",
       "name": "Automated Analytics Report",
-      "category": "Data Analysis",
-      "trigger": "Cron Monday 09:00 UTC",
-      "model": "claude-sonnet-4-6",
-      "estimated_weekly_hours_saved": 2.0,
-      "stack": ["n8n", "Analytics API", "Anthropic API", "SMTP"]
+      "trigger": "Cron — every Monday at 09:00 UTC",
+      "ai_step": {
+        "model": "claude-sonnet-4-6",
+        "system_prompt": "You are a data analyst. Interpret this week's metrics. Lead with the most important insight. Identify anomalies. End with 3 recommended actions ranked by impact.",
+        "input": "JSON export from analytics platform (pageviews, sessions, top pages, traffic sources)"
+      },
+      "output": {
+        "destination": "Email to owner via SMTP",
+        "format": "Plain text report — insight first, data second"
+      },
+      "stack": [
+        "n8n",
+        "Google Analytics API / Cloudflare Analytics API",
+        "Anthropic API",
+        "SMTP"
+      ],
+      "estimated_weekly_hours_saved": 2.0
     },
     {
-      "id": "WF-08",
+      "workflow_id": "WF-08",
       "name": "Database Anomaly Detection",
-      "category": "Data Analysis",
-      "trigger": "Cron hourly",
-      "model": "claude-haiku-4-5",
-      "estimated_weekly_hours_saved": 1.5,
-      "stack": ["Cron", "Postgres MCP", "Anthropic API", "Slack Webhook"]
+      "trigger": "Cron — hourly",
+      "ai_step": {
+        "model": "claude-haiku-4-5",
+        "prompt": "Analyze these database metrics for anomalies: query latency, row counts, error rates. Flag anything more than 2 standard deviations from the 7-day average. Output: NORMAL or ALERT with one-line explanation.",
+        "input": "JSON metrics snapshot from Postgres pg_stat_statements"
+      },
+      "output": {
+        "destination": "Slack #db-alerts — only if ALERT",
+        "format": "One-line alert with metric name and deviation"
+      },
+      "stack": [
+        "Cron job",
+        "Postgres MCP or direct query",
+        "Anthropic API",
+        "Slack Webhook"
+      ],
+      "estimated_weekly_hours_saved": 1.5
     },
     {
-      "id": "WF-09",
+      "workflow_id": "WF-09",
       "name": "Support Ticket Triage",
-      "category": "Communication",
-      "trigger": "New email to support@ inbox",
-      "model": "claude-haiku-4-5",
-      "estimated_weekly_hours_saved": 3.0,
-      "stack": ["n8n", "Gmail API", "Anthropic API", "Linear API"]
-    },
-    {
-      "id": "WF-10",
-      "name": "Meeting Notes to Action Items",
-      "category": "Communication",
-      "trigger": "New Otter.ai / Zoom transcript",
-      "model": "claude-sonnet-4-6",
-      "estimated_weekly_hours_saved": 1.5,
-      "stack": ["Zapier", "Otter.ai API", "Anthropic API", "Notion API", "Slack Webhook"]
+      "trigger": "New email to support@ inbox (via Gmail webhook in n8n)",
+      "ai_step": {
+        "model": "claude-haiku-4-5",
+        "system_prompt": "Classify this support request. Output JSON: { priority: CRITICAL|HIGH|MEDIUM|LOW, category: BUG|FEATURE|BILLING|QUESTION, sentiment: FRUSTRATED|NEUTRAL|POSITIVE, suggested_response: string (max 150 words) }",
+        "input": "email subject + body"
+      },
+      "output": {
+        "destination": "Linear issue (via API) with labels set from classification + draft reply in Gmail",
+        "format": "Structured JSON → Linear fields"
+      },
+      "stack": [
+        "n8n",
+        "Gmail API",
+        "Anthropic API",
+        "Linear API"
+      ],
+      "estimated_weekly_hours_saved": 3.0
     }
   ]
 }
