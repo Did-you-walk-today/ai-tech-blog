@@ -3,7 +3,7 @@ layout: post
 title: "LLM API Pricing 2026: Full Comparison Table"
 date: 2026-03-26 09:00:00 +0000
 categories: [ai-data]
-tags: [llm-pricing, api-cost, gpt-4o, claude, gemini, 2026]
+tags: [llm-pricing, api-cost, gpt-4o, claude, gemini, "2026"]
 description: "LLM API pricing comparison 2026: 30+ models from OpenAI, Anthropic, Google, xAI, DeepSeek and more. Updated monthly with input/output costs per 1M tokens."
 canonical_url: https://www.jsonhouse.com/posts/llm-api-pricing-comparison-2026
 permalink: /posts/llm-api-pricing-comparison-2026/

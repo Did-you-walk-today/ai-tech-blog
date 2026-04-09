@@ -3,7 +3,7 @@ layout: post
 title: "Claude vs GPT 2026: Opus 4.6 vs GPT-5.4 Benchmarks"
 date: 2026-03-26 09:00:00 +0000
 categories: [ai-models]
-tags: [gpt-5-4, claude-opus-4-6, llm-benchmark, coding-ai, 2026]
+tags: [gpt-5-4, claude-opus-4-6, llm-benchmark, coding-ai, "2026"]
 description: "GPT-5.4 vs Claude Opus 4.6 in 2026: head-to-head benchmark results across SWE-bench, HumanEval, ARC-AGI-2, OSWorld, pricing, and use case recommendations."
 canonical_url: https://www.jsonhouse.com/posts/gpt-5-4-vs-claude-opus-4-6-benchmark-2026
 permalink: /posts/gpt-5-4-vs-claude-opus-4-6-benchmark-2026/
