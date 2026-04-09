@@ -3,7 +3,7 @@ layout: post
 title: "Best LLMs for Coding 2026: Benchmark Results"
 date: 2026-04-11 09:00:00 +0000
 categories: [ai-models]
-tags: [llm, coding, benchmark, claude, gpt-4-1, gemini, swe-bench, 2026]
+tags: [llm, coding, benchmark, claude, gpt-4-1, gemini, swe-bench, "2026"]
 description: "We tested 6 LLMs on HumanEval, SWE-bench, and real coding tasks. Claude Sonnet 4.6 leads price-performance. Full benchmark data and per-task scores inside."
 canonical_url: https://www.jsonhouse.com/posts/best-llms-for-coding-2026-benchmark-results
 permalink: /posts/best-llms-for-coding-2026-benchmark-results/

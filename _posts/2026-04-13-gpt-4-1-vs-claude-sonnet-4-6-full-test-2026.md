@@ -3,7 +3,7 @@ layout: post
 title: "GPT-4.1 vs Claude Sonnet 4.6: Full Test 2026"
 date: 2026-04-13 09:00:00 +0000
 categories: [ai-models]
-tags: [gpt-4-1, claude-sonnet-4-6, openai, anthropic, benchmark, comparison, 2026]
+tags: [gpt-4-1, claude-sonnet-4-6, openai, anthropic, benchmark, comparison, "2026"]
 description: "GPT-4.1 vs Claude Sonnet 4.6 tested across 7 real developer tasks in 2026. Full benchmark data, pricing, and recommendation for each use case."
 canonical_url: https://www.jsonhouse.com/posts/gpt-4-1-vs-claude-sonnet-4-6-full-test-2026
 permalink: /posts/gpt-4-1-vs-claude-sonnet-4-6-full-test-2026/

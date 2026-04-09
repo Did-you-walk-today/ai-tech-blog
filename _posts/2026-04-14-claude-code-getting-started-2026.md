@@ -3,7 +3,7 @@ layout: post
 title: "Claude Code Getting Started 2026: Install to Agent"
 date: 2026-04-14 09:00:00 +0000
 categories: [ai-developer-tools]
-tags: [claude-code, anthropic, ai-coding, getting-started, cli, agent, 2026]
+tags: [claude-code, anthropic, ai-coding, getting-started, cli, agent, "2026"]
 description: "Install Claude Code and run your first autonomous agent task in under 10 minutes. Step-by-step 2026 guide covering setup, key commands, CLAUDE.md, and real workflows."
 canonical_url: https://www.jsonhouse.com/posts/claude-code-getting-started-2026
 permalink: /posts/claude-code-getting-started-2026/

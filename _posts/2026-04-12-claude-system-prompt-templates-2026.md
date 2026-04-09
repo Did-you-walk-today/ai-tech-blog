@@ -3,7 +3,7 @@ layout: post
 title: "Claude System Prompt Templates 2026: 25+ Ready"
 date: 2026-04-12 09:00:00 +0000
 categories: [prompt-engineering]
-tags: [claude, system-prompts, prompt-engineering, templates, anthropic, 2026]
+tags: [claude, system-prompts, prompt-engineering, templates, anthropic, "2026"]
 description: "25 tested Claude system prompt templates for developers, writers, and analysts in 2026. Copy-paste ready with quality scores and use case notes for each."
 canonical_url: https://www.jsonhouse.com/posts/claude-system-prompt-templates-2026
 permalink: /posts/claude-system-prompt-templates-2026/

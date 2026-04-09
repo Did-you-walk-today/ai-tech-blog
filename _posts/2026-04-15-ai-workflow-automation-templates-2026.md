@@ -3,7 +3,7 @@ layout: post
 title: "AI Workflow Automation Templates 2026: 10 Setups"
 date: 2026-04-15 09:00:00 +0000
 categories: [ai-productivity-workflows]
-tags: [ai-workflow, automation, productivity, claude, templates, n8n, zapier, 2026]
+tags: [ai-workflow, automation, productivity, claude, templates, n8n, zapier, "2026"]
 description: "10 tested AI workflow automation templates for developers in 2026. Copy-paste setups for code review, content pipelines, data analysis, and more."
 canonical_url: https://www.jsonhouse.com/posts/ai-workflow-automation-templates-2026
 permalink: /posts/ai-workflow-automation-templates-2026/

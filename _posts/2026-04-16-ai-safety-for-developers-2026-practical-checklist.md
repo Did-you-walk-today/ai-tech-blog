@@ -3,7 +3,7 @@ layout: post
 title: "AI Safety for Developers 2026: Practical Checklist"
 date: 2026-04-16 09:00:00 +0000
 categories: [ai-safety-ethics]
-tags: [ai-safety, prompt-injection, llm-security, responsible-ai, ethics, checklist, 2026]
+tags: [ai-safety, prompt-injection, llm-security, responsible-ai, ethics, checklist, "2026"]
 description: "Practical AI safety checklist for developers in 2026. Covers prompt injection, data leakage, bias, output validation, and responsible LLM deployment patterns."
 canonical_url: https://www.jsonhouse.com/posts/ai-safety-for-developers-2026-practical-checklist
 permalink: /posts/ai-safety-for-developers-2026-practical-checklist/

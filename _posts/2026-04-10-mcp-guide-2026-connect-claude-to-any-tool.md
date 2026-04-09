@@ -3,7 +3,7 @@ layout: post
 title: "MCP Guide 2026: Connect Claude to Any Tool"
 date: 2026-04-10 09:00:00 +0000
 categories: [ai-developer-tools]
-tags: [mcp, model-context-protocol, claude, anthropic, ai-tools, 2026]
+tags: [mcp, model-context-protocol, claude, anthropic, ai-tools, "2026"]
 description: "Model Context Protocol (MCP) lets Claude connect to databases, APIs, and tools in 2026. Complete setup guide with 10 server examples and code."
 canonical_url: https://www.jsonhouse.com/posts/mcp-guide-2026-connect-claude-to-any-tool
 permalink: /posts/mcp-guide-2026-connect-claude-to-any-tool/
