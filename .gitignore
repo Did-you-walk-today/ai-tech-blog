@@ -4,7 +4,7 @@ _site/
 .jekyll-metadata
 vendor/
 .bundle/
-Gemfile.lock
+# Gemfile.lock is tracked to ensure consistent CI builds
 pipeline_output/*.tmp
 .env
 *.log
