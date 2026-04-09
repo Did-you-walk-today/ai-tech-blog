@@ -16,7 +16,6 @@ permalink: /posts/:title/
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-feed
 
 toc: true
 comments: false
