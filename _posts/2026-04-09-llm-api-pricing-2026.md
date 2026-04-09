@@ -5,7 +5,7 @@ date: 2026-04-09
 last_modified_at: 2026-04-09
 data_updated: 2026-04-09
 categories: [ai-models]
-tags: [llm-pricing, api-cost, gpt-5, claude, gemini, deepseek, 2026]
+tags: [llm-pricing, api-cost, gpt-5, claude, gemini, deepseek, "2026"]
 description: "LLM API prices dropped 80% in 12 months. Compare GPT-5.4, Claude Opus 4.6, Gemini 3.1, DeepSeek V3.2. Input/output per 1M tokens, value scores. Updated April 2026."
 schema_type: Article
 canonical_url: https://www.jsonhouse.com/posts/llm-api-pricing-2026
