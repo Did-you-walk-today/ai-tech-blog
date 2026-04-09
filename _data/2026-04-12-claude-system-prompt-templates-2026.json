@@ -1,0 +1,38 @@
+{
+  "data_updated": "2026-04-10",
+  "total_prompts": 25,
+  "categories": [
+    "Software Development",
+    "Code Review",
+    "Technical Writing",
+    "Data Analysis",
+    "Productivity"
+  ],
+  "prompts": [
+    { "id": "SD-01", "category": "Software Development", "title": "Senior Backend Engineer", "quality_score": 9.4 },
+    { "id": "SD-02", "category": "Software Development", "title": "Test-Driven Development Guide", "quality_score": 9.1 },
+    { "id": "SD-03", "category": "Software Development", "title": "Code Review Specialist", "quality_score": 9.2 },
+    { "id": "SD-04", "category": "Software Development", "title": "SQL Query Optimizer", "quality_score": 8.8 },
+    { "id": "SD-05", "category": "Software Development", "title": "Security Auditor", "quality_score": 9.3 },
+    { "id": "SD-06", "category": "Software Development", "title": "DevOps and Infrastructure", "quality_score": 8.5 },
+    { "id": "CR-01", "category": "Code Review", "title": "Python-Specific Reviewer", "quality_score": 9.0 },
+    { "id": "CR-02", "category": "Code Review", "title": "TypeScript Strict Mode Reviewer", "quality_score": 8.9 },
+    { "id": "CR-03", "category": "Code Review", "title": "Go Reviewer", "quality_score": 9.1 },
+    { "id": "CR-04", "category": "Code Review", "title": "Architecture Reviewer", "quality_score": 8.7 },
+    { "id": "TW-01", "category": "Technical Writing", "title": "API Documentation Writer", "quality_score": 9.0 },
+    { "id": "TW-02", "category": "Technical Writing", "title": "README Generator", "quality_score": 8.8 },
+    { "id": "TW-03", "category": "Technical Writing", "title": "Incident Post-Mortem Writer", "quality_score": 9.2 },
+    { "id": "TW-04", "category": "Technical Writing", "title": "Changelog Writer", "quality_score": 8.6 },
+    { "id": "TW-05", "category": "Technical Writing", "title": "ADR Writer", "quality_score": 8.9 },
+    { "id": "DA-01", "category": "Data Analysis", "title": "Data Analyst", "quality_score": 9.1 },
+    { "id": "DA-02", "category": "Data Analysis", "title": "SQL Data Extraction", "quality_score": 8.8 },
+    { "id": "DA-03", "category": "Data Analysis", "title": "Business Intelligence Reporter", "quality_score": 8.5 },
+    { "id": "DA-04", "category": "Data Analysis", "title": "ML Experiment Analyst", "quality_score": 9.0 },
+    { "id": "DA-05", "category": "Data Analysis", "title": "Data Quality Auditor", "quality_score": 8.7 },
+    { "id": "PR-01", "category": "Productivity", "title": "Executive Communication Drafter", "quality_score": 9.3 },
+    { "id": "PR-02", "category": "Productivity", "title": "Meeting Notes Summarizer", "quality_score": 8.8 },
+    { "id": "PR-03", "category": "Productivity", "title": "Job Description Writer", "quality_score": 8.6 },
+    { "id": "PR-04", "category": "Productivity", "title": "Research Summarizer", "quality_score": 9.0 },
+    { "id": "PR-05", "category": "Productivity", "title": "Negotiation Preparation Coach", "quality_score": 8.5 }
+  ]
+}

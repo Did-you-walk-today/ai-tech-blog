@@ -1,0 +1,107 @@
+{
+  "data_updated": "2026-04-10",
+  "total_workflows": 10,
+  "total_estimated_weekly_hours_saved": 21.5,
+  "workflows_by_category": {
+    "Code Quality": ["WF-01", "WF-02", "WF-03"],
+    "Content Generation": ["WF-04", "WF-05", "WF-06"],
+    "Data Analysis": ["WF-07", "WF-08"],
+    "Communication": ["WF-09", "WF-10"]
+  },
+  "recommended_starting_point": "WF-01",
+  "highest_roi_workflow": "WF-04",
+  "best_model_for_pipelines": "claude-sonnet-4-6",
+  "best_model_for_high_frequency": "claude-haiku-4-5",
+  "workflows": [
+    {
+      "id": "WF-01",
+      "name": "Automated PR Code Review",
+      "category": "Code Quality",
+      "trigger": "GitHub PR webhook",
+      "model": "claude-sonnet-4-6",
+      "estimated_weekly_hours_saved": 3.0,
+      "stack": ["GitHub Actions", "Anthropic API", "GitHub REST API"]
+    },
+    {
+      "id": "WF-02",
+      "name": "Test Generation on Save",
+      "category": "Code Quality",
+      "trigger": "Claude Code PostToolUse hook",
+      "model": "claude-sonnet-4-6",
+      "estimated_weekly_hours_saved": 2.0,
+      "stack": ["Claude Code", "hooks"]
+    },
+    {
+      "id": "WF-03",
+      "name": "Daily Security Scan",
+      "category": "Code Quality",
+      "trigger": "Cron daily 08:00 UTC",
+      "model": "claude-sonnet-4-6",
+      "estimated_weekly_hours_saved": 1.5,
+      "stack": ["GitHub Actions", "Anthropic API", "Slack Webhook"]
+    },
+    {
+      "id": "WF-04",
+      "name": "Blog Post Draft from Outline",
+      "category": "Content Generation",
+      "trigger": "File drop in /inbox folder",
+      "model": "claude-sonnet-4-6",
+      "estimated_weekly_hours_saved": 4.0,
+      "stack": ["Claude Code", "Anthropic API"]
+    },
+    {
+      "id": "WF-05",
+      "name": "Social Media Thread from Article",
+      "category": "Content Generation",
+      "trigger": "RSS feed change (new post published)",
+      "model": "claude-haiku-4-5",
+      "estimated_weekly_hours_saved": 1.0,
+      "stack": ["n8n", "RSS reader", "Anthropic API", "Notion API"]
+    },
+    {
+      "id": "WF-06",
+      "name": "Weekly AI News Digest",
+      "category": "Content Generation",
+      "trigger": "Cron Monday 07:00 UTC",
+      "model": "claude-sonnet-4-6",
+      "estimated_weekly_hours_saved": 2.0,
+      "stack": ["n8n", "RSS reader", "Anthropic API", "GitHub API"]
+    },
+    {
+      "id": "WF-07",
+      "name": "Automated Analytics Report",
+      "category": "Data Analysis",
+      "trigger": "Cron Monday 09:00 UTC",
+      "model": "claude-sonnet-4-6",
+      "estimated_weekly_hours_saved": 2.0,
+      "stack": ["n8n", "Analytics API", "Anthropic API", "SMTP"]
+    },
+    {
+      "id": "WF-08",
+      "name": "Database Anomaly Detection",
+      "category": "Data Analysis",
+      "trigger": "Cron hourly",
+      "model": "claude-haiku-4-5",
+      "estimated_weekly_hours_saved": 1.5,
+      "stack": ["Cron", "Postgres MCP", "Anthropic API", "Slack Webhook"]
+    },
+    {
+      "id": "WF-09",
+      "name": "Support Ticket Triage",
+      "category": "Communication",
+      "trigger": "New email to support@ inbox",
+      "model": "claude-haiku-4-5",
+      "estimated_weekly_hours_saved": 3.0,
+      "stack": ["n8n", "Gmail API", "Anthropic API", "Linear API"]
+    },
+    {
+      "id": "WF-10",
+      "name": "Meeting Notes to Action Items",
+      "category": "Communication",
+      "trigger": "New Otter.ai / Zoom transcript",
+      "model": "claude-sonnet-4-6",
+      "estimated_weekly_hours_saved": 1.5,
+      "stack": ["Zapier", "Otter.ai API", "Anthropic API", "Notion API", "Slack Webhook"]
+    }
+  ]
+}
