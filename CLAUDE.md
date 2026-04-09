@@ -85,6 +85,24 @@ This file is automatically loaded by Claude Code. It contains all context needed
 - API: `api/posts.json`
 - LLMs: `llms.txt`
 
+## Post Creation Rule — MANDATORY
+
+Every post MUST produce TWO separate files:
+
+1. `_posts/YYYY-MM-DD-slug.md` — human-readable blog post (SEO content, narrative, analysis)
+2. `_data/YYYY-MM-DD-slug.json` — machine-readable structured data (extracted from the JSON block inside the MD)
+
+**Why separate files:**
+- `_data/` JSON can be updated independently on a schedule (Phase 7 Data Freshness) without regenerating the full post
+- Jekyll templates can reference `site.data` directly for dynamic rendering
+- `api/posts.json` endpoint exposes the data programmatically to external consumers
+- Pricing/benchmark data stays fresh by updating only the JSON — the post content remains stable
+
+**Workflow:**
+- Generate MD first, embed JSON block inside post body (for inline display)
+- Extract that same JSON block → save as standalone `_data/YYYY-MM-DD-slug.json`
+- Both files committed and pushed together
+
 ## Quality Score Formula
 
 Weighted score (required >= 7.0 to publish):
