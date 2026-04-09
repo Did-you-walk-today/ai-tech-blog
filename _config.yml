@@ -47,21 +47,9 @@ defaults:
       toc: true
       author: ai_tech_blog
 
-# SEO defaults
-# Feed
-feed:
-  categories:
-    - ai-models
-    - ai-developer-tools
-    - prompt-engineering
-    - ai-productivity
-    - ai-data
-    - ai-safety
-
 # Exclude from build
 exclude:
   - Gemfile
-  - Gemfile.lock
   - PIPELINE_PROMPT.md
   - PROJECT_CONTEXT.md
   - CLAUDE.md
