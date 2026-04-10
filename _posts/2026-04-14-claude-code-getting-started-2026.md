@@ -41,7 +41,7 @@ This guide gets you installed, configured, and past that first-hour friction as 
 
 ---
 
-![Claude Code running in terminal](/assets/img/posts/claude-code-terminal.jpg)
+![Claude Code running in terminal](/assets/img/posts/claude-conde-terminal.png)
 _Screenshot: Claude Code session in terminal — provide this from your own setup_{: .shadow }
 
 ## Prerequisites
