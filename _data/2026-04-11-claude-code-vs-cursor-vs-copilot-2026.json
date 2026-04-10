@@ -1,0 +1,71 @@
+{
+  "data_updated": "2026-04-11",
+  "comparison_title": "Claude Code vs Cursor vs GitHub Copilot 2026",
+  "tools": [
+    {
+      "name": "Claude Code",
+      "vendor": "Anthropic",
+      "interface": "Terminal CLI",
+      "swe_bench_verified_pct": 80.8,
+      "context_window_tokens": 1000000,
+      "agentic": true,
+      "free_tier": false,
+      "pricing": {
+        "pro": "$20/mo",
+        "max": "$100/mo"
+      },
+      "ide_support": ["Any (terminal-native)"],
+      "best_for": "Complex multi-file tasks, large codebases",
+      "developer_love_pct": 46
+    },
+    {
+      "name": "Cursor",
+      "vendor": "Anysphere",
+      "interface": "IDE (VS Code fork)",
+      "swe_bench_verified_pct": 51.7,
+      "context_window_tokens": null,
+      "agentic": true,
+      "free_tier": true,
+      "pricing": {
+        "free": "Limited",
+        "pro": "$20/mo",
+        "ultra": "$200/mo"
+      },
+      "ide_support": ["VS Code (fork)"],
+      "best_for": "Daily coding, inline editing, VS Code users",
+      "autocomplete_acceptance_rate_pct": 72
+    },
+    {
+      "name": "GitHub Copilot",
+      "vendor": "GitHub (Microsoft)",
+      "interface": "IDE Extension",
+      "swe_bench_verified_pct": 56.0,
+      "context_window_tokens": null,
+      "agentic": true,
+      "free_tier": true,
+      "pricing": {
+        "free": "2000 completions/mo",
+        "pro": "$10/mo",
+        "business": "$19/mo"
+      },
+      "ide_support": ["VS Code", "JetBrains", "Visual Studio", "Neovim", "Eclipse", "Xcode"],
+      "best_for": "Teams, enterprise, multi-IDE environments",
+      "developer_love_pct": 9
+    },
+    {
+      "name": "Windsurf",
+      "vendor": "Codeium",
+      "interface": "IDE",
+      "swe_bench_verified_pct": null,
+      "agentic": true,
+      "free_tier": true,
+      "pricing": {
+        "free": "25 agent credits/mo",
+        "pro": "$15/mo",
+        "teams": "$60/mo"
+      },
+      "ide_support": ["VS Code (fork)"],
+      "best_for": "Budget-conscious developers wanting agentic editing"
+    }
+  ]
+}
