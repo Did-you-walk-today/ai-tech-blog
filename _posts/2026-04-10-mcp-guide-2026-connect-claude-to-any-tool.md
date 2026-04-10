@@ -14,13 +14,20 @@ schema_type: Article
 format_type: C
 category_id: CAT2
 quality_score: auto
+image:
+  path: https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80
+  alt: Model Context Protocol MCP guide 2026
 sources:
   - https://modelcontextprotocol.io
   - https://github.com/modelcontextprotocol/servers
   - https://docs.anthropic.com/en/docs/claude-code/mcp
 ---
 
-Model Context Protocol (MCP) is the open standard that lets Claude connect to any external tool — databases, APIs, file systems, code repositories — without custom integration work. Released by Anthropic in November 2024 and now adopted across the AI ecosystem, MCP turned Claude from a standalone chat interface into a programmable agent that operates inside your actual infrastructure. This guide covers how MCP works, how to set it up in Claude Code in under ten minutes, and which of the 200+ available MCP servers are worth installing first.
+Before MCP, every AI-to-tool integration was custom glue code. You'd write a tool definition for your database, a different one for your GitHub API, another for your Slack. Each model had a different format. New tool = new integration project.
+
+MCP ended that in November 2024. Anthropic's open protocol is now running 97 million monthly downloads and every major AI provider has adopted it. It works like USB-C — any MCP server plugs into any MCP client without custom adapters. One integration standard for the entire AI ecosystem.
+
+This guide gets you from zero to Claude querying your database and reading your GitHub issues in under 10 minutes.
 
 ---
 
@@ -34,13 +41,14 @@ Model Context Protocol (MCP) is the open standard that lets Claude connect to an
 
 ---
 
-## What Is MCP and Why It Matters
+## What MCP Actually Does
 
-Before MCP, connecting an AI assistant to a database or API required writing custom tool definitions for every integration. Each model had its own format. Every new tool meant new glue code. MCP solves this with a single, standardized protocol that any model and any tool can speak.
+![MCP architecture: Claude connecting to external tools](https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80)
+_Photo: [Unsplash](https://unsplash.com)_
 
-Think of MCP like USB-C for AI tools. Instead of a different cable for every device, you have one standard port. Any MCP-compatible server (the "device") plugs into any MCP-compatible client (the "port") without custom adapters.
+The practical result: Claude can query your Postgres database, read your GitHub issues, search your Notion docs, and run browser automation — all in a single conversation, with no custom integration code on your end.
 
-The practical result: Claude can query your Postgres database, read your GitHub issues, search your Notion docs, and run browser automation — all in a single conversation, with no code you wrote to connect them.
+> **Tip:** The fastest way to understand MCP value: add the filesystem server, point it at your project, and ask Claude to explain a function by reading the actual code. No copy-pasting. No context window filling. Claude just reads it.
 
 ---
 
@@ -71,6 +79,9 @@ Communication uses JSON-RPC 2.0 over stdio (local) or HTTP with Server-Sent Even
 - Claude Code installed (`npm install -g @anthropic-ai/claude-code`)
 - Node.js 18+ or Python 3.10+ depending on the server
 - A Claude Pro or Max subscription
+
+![MCP setup in Claude Code terminal](/assets/img/posts/mcp-connected.jpg)
+_Screenshot: Claude Code after connecting MCP servers — provide this from your own setup_{: .shadow }
 
 ### Method 1: CLI (Recommended)
 

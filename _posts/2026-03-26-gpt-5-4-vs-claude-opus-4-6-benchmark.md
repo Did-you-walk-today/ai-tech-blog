@@ -14,6 +14,9 @@ schema_type: Article
 format_type: F
 category_id: CAT1
 quality_score: auto
+image:
+  path: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80
+  alt: GPT-5.4 vs Claude Opus 4.6 benchmark comparison 2026
 sources:
   - https://openai.com/index/introducing-gpt-5-4/
   - https://www.anthropic.com/news/claude-opus-4-6
@@ -21,7 +24,11 @@ sources:
   - https://openai.com/api/pricing/
 ---
 
-Claude Opus 4.6 leads GPT-5.4 in coding (HumanEval: 97.8% vs 93.1%, SWE-bench Verified: 80.8% vs ~80%) and long-context recall (MRCR v2 at 1M tokens: 76% vs 18.5%), while GPT-5.4 wins on reasoning (ARC-AGI-2: 73.3% vs 68.8%), graduate-level science (GPQA Diamond: 92.8% vs 88.5–91%), and agentic OS tasks (OSWorld: 75.0% vs 72.7%). Neither model is a universal winner — the right choice depends on your workload.
+GPT-5.4 costs $2.50/1M input. Claude Opus 4.6 costs $5.00/1M input. That 2× price difference only matters if the models are actually comparable in capability — and in 2026, they largely are, with each model holding a clear lead in specific areas.
+
+Claude Opus 4.6 leads on coding (HumanEval: 97.8% vs 93.1%) and dominates long-context recall at 1M tokens (76% vs GPT-5.4's 18.5%). GPT-5.4 wins on reasoning benchmarks (ARC-AGI-2: 73.3% vs 68.8%) and agentic OS tasks (OSWorld: 75.0% vs 72.7%). Both score 100% on AIME 2025 — math is a tie.
+
+The right choice isn't which model is "better" — it's which model fits your actual workload at your actual budget.
 
 ---
 

@@ -14,13 +14,20 @@ schema_type: Article
 format_type: C
 category_id: CAT2
 quality_score: auto
+image:
+  path: https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80
+  alt: Claude Code terminal AI coding agent 2026
 sources:
   - https://docs.anthropic.com/en/docs/claude-code/overview
   - https://docs.anthropic.com/en/docs/claude-code/quickstart
   - https://claude.com/pricing
 ---
 
-Claude Code is a terminal-native AI coding agent that can read files, write code, run tests, use git, and execute shell commands — all from a single `claude` prompt. It reached an 80.8% SWE-bench Verified score (using Opus 4.6), the highest of any AI coding tool in 2026. This guide gets you from zero to your first autonomous agent task in under ten minutes, then covers the key workflows that experienced users rely on daily.
+Claude Code doesn't work like an IDE plugin. You don't get autocomplete suggestions while you type. Instead, you describe what needs to happen, and it reads your codebase, edits files, runs tests, uses git, and executes shell commands — autonomously. Then you review the result.
+
+That's a different mental model. Most developers either click with it immediately or bounce off in the first hour. The ones who bounce off usually gave up before they hit the real value: handing Claude a 200K-token codebase and a complex task, then watching it do in 3 minutes what would take you 45.
+
+This guide gets you installed, configured, and past that first-hour friction as fast as possible.
 
 ---
 
@@ -34,16 +41,19 @@ Claude Code is a terminal-native AI coding agent that can read files, write code
 
 ---
 
+![Claude Code running in terminal](/assets/img/posts/claude-code-terminal.jpg)
+_Screenshot: Claude Code session in terminal — provide this from your own setup_{: .shadow }
+
 ## Prerequisites
 
-| Requirement | Minimum Version | Check |
-|-------------|----------------|-------|
+| Requirement | Minimum | Check command |
+|-------------|---------|--------------|
 | Node.js | 18.0.0 | `node --version` |
 | npm | 9.0.0 | `npm --version` |
 | Claude subscription | Pro ($20/mo) or Max ($100/mo) | claude.com/settings |
 | OS | macOS 12+, Ubuntu 20.04+, Windows 11 (WSL2) | — |
 
-A Claude API key also works in place of a subscription for teams that prefer API billing. Set it via `ANTHROPIC_API_KEY` environment variable.
+> **Note:** An API key (`ANTHROPIC_API_KEY`) also works if your team prefers usage-based billing over a flat subscription. Pro/Max subscriptions include the conversational Claude interface too — you're not paying twice.
 
 ---
 

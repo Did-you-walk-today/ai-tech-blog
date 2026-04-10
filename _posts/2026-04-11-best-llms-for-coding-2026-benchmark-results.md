@@ -14,6 +14,9 @@ schema_type: Article
 format_type: F
 category_id: CAT1
 quality_score: auto
+image:
+  path: https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80
+  alt: Best LLMs for coding benchmark results 2026
 sources:
   - https://evalplus.github.io/leaderboard.html
   - https://swe-bench.github.io
@@ -21,7 +24,9 @@ sources:
   - https://scale.com/leaderboard
 ---
 
-Claude Sonnet 4.6 delivers the best price-performance ratio for coding tasks in 2026, scoring 88.7% on HumanEval+ and handling complex multi-file refactoring tasks that stump smaller models — at $3 per million output tokens. Claude Opus 4.6 achieves the highest absolute scores across all benchmarks but costs 15x more. GPT-4.1 closes the gap on code generation while Gemini 2.5 Pro excels at long-context analysis. This report covers benchmark methodology, task-by-task scores for six leading models, and concrete recommendations by use case.
+If you're paying for a premium LLM to write code, you should know exactly what you're paying for. Claude Opus 4.6 costs $25/1M output tokens. Claude Sonnet 4.6 costs $15/1M. GPT-4.1 costs $8/1M. On HumanEval+, the gap between Opus (94.1%) and Sonnet (88.7%) is 5.4 points. On SWE-bench, it's wider. For most production workloads, Sonnet is the right call.
+
+Here's the full benchmark breakdown across 6 models with task-by-task scores and a clear recommendation by use case.
 
 ---
 

@@ -14,12 +14,19 @@ schema_type: Article
 format_type: B
 category_id: CAT3
 quality_score: auto
+image:
+  path: https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80
+  alt: Claude system prompt templates 2026
 sources:
   - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering
   - https://docs.anthropic.com/en/docs/about-claude/models
 ---
 
-A well-written system prompt is the single highest-leverage improvement you can make to a Claude deployment. It sets the model's role, constraints, output format, and reasoning style before the first user message — turning a general assistant into a precise, reliable tool for a specific job. This library contains 25 tested system prompts across five categories: Software Development, Code Review, Technical Writing, Data Analysis, and Productivity. Every prompt includes a quality score (scale: 1–10), a use case note, and the key design decisions behind it.
+A system prompt is the difference between Claude acting like a helpful but vague assistant and Claude acting like a precise, reliable tool for a specific job. The right system prompt tells Claude its role, the constraints it operates under, the output format you expect, and what "done" looks like.
+
+The 2026 shift in prompt engineering is moving from instructions ("do X, then Y, then Z") to contracts ("here's your role, success criteria, and what not to do"). Claude responds better to specifications than to step-by-step instructions.
+
+25 battle-tested templates below, all scoring 8.0 or above in real-task evaluation. Copy, paste, and tune from there.
 
 ---
 

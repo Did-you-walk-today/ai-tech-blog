@@ -14,13 +14,23 @@ schema_type: Article
 format_type: C
 category_id: CAT6
 quality_score: auto
+image:
+  path: https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80
+  alt: AI safety checklist for developers 2026
 sources:
   - https://owasp.org/www-project-top-10-for-large-language-model-applications
   - https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/reduce-hallucinations
   - https://www.nist.gov/artificial-intelligence/ai-risk-management-framework
 ---
 
-Every developer shipping an LLM-powered feature in 2026 is also shipping a new attack surface. Prompt injection, data leakage through model context, hallucinated outputs presented as facts, and unintended bias at scale — these are not theoretical risks. They are documented incidents affecting production systems today. This guide is a practical checklist: the specific checks you need to run before an AI feature goes live, organized by risk category with concrete mitigations for each.
+Every LLM feature you ship is also a new attack surface. Prompt injection is the #1 LLM security risk in 2026 — it's not theoretical, it's hitting production systems today. Data leakage through system prompt context, hallucinated outputs presented as facts, unintended bias at scale — these are documented incidents, not edge cases.
+
+The OWASP Top 10 for LLM Applications (updated 2025) gives developers a structured framework for thinking about these risks. This checklist turns that framework into concrete pre-launch checks, organized by risk category with specific mitigations for each.
+
+> **Important:** Run through this checklist before any AI feature goes live. Adding it post-launch means your users were the first security testers.
+
+![AI security shield concept](https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80)
+_Photo: [Unsplash](https://unsplash.com)_
 
 ---
 

@@ -14,6 +14,9 @@ schema_type: Article
 format_type: F
 category_id: CAT1
 quality_score: auto
+image:
+  path: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80
+  alt: GPT-4.1 vs Claude Sonnet 4.6 comparison 2026
 sources:
   - https://artificialanalysis.ai
   - https://evalplus.github.io/leaderboard.html
@@ -21,7 +24,9 @@ sources:
   - https://docs.anthropic.com/en/docs/about-claude/models
 ---
 
-Claude Sonnet 4.6 outperforms GPT-4.1 on code generation quality and instruction following, while GPT-4.1 leads on speed and function calling reliability. The choice between them is not about which model is "better" — it depends on your workflow. Claude Sonnet 4.6 costs $3/$15 per million tokens (input/output). GPT-4.1 costs $2/$8. Both are production-grade. This report breaks down 7 real developer tasks with scores, timing, and a clear verdict on each.
+GPT-4.1 costs $2/$8 per million tokens. Claude Sonnet 4.6 costs $3/$15. Sonnet is 50% more expensive on input, 87.5% more expensive on output. For that premium, you get: SWE-bench Verified 79.6% vs GPT-4.1's 54.6%, GPQA 89.9% vs 66.3%, and a 200K vs 1M context window comparison that flips depending on which benchmark you're reading.
+
+This is not "which model is better." Both are production-grade. The real question is: for your specific workload, does Sonnet's capability gap justify the price gap? Here's the task-by-task data to answer that.
 
 ---
 
