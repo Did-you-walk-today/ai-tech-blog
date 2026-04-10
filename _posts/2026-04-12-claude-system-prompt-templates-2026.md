@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "Claude System Prompt Templates 2026: 25+ Ready"
 date: 2026-04-12 09:00:00 +0000
 categories: [prompt-engineering]

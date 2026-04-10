@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "MCP Guide 2026: Connect Claude to Any Tool"
 date: 2026-04-10 09:00:00 +0000
 categories: [ai-developer-tools]

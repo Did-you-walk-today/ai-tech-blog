@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "AI Workflow Automation Templates 2026: 10 Setups"
 date: 2026-04-15 09:00:00 +0000
 categories: [ai-productivity-workflows]
