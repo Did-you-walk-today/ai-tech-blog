@@ -38,6 +38,8 @@ social:
   name: "AI Tech Resource Blog"
   links: []
 
+social_preview_image: /assets/img/og-default.png
+
 paginate: 10
 paginate_path: "/page:num/"
 
