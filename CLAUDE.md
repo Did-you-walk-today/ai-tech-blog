@@ -5,11 +5,18 @@ This file is automatically loaded by Claude Code. It contains all context needed
 ## Blog Identity
 
 - **Name**: AI Tech Resource Blog
-- **Platform**: GitHub Pages (Jekyll)
-- **Audience**: AI power users, developers, engineers
-- **Language**: English (global)
+- **Platform**: GitHub Pages (Jekyll + Chirpy)
+- **Domain**: https://www.jsonhouse.com
+- **Audience**: AI power users, developers, engineers (global)
 - **Core value**: "Structured data you can actually USE"
 - **Stage**: Phase 1 (months 1-3) — launch and first 20+ posts
+
+## Language Policy
+
+- **Posts**: English only (global audience, English SEO/AEO)
+- **Reports / Previews / Phase 5 Review materials**: Korean (for 기웅's review efficiency)
+- **Claude Code communication**: Korean
+- Every Phase 5 review MUST include a Korean summary report alongside the English post draft
 
 ## Pipeline Overview
 
@@ -26,6 +33,24 @@ This file is automatically loaded by Claude Code. It contains all context needed
 | 7 | Data Freshness | Weekly Monday |
 | 8 | SEO Tracking | Weekly Monday |
 
+## Style Guide (MANDATORY READ before writing)
+
+Before writing ANY post, you MUST read STYLE_GUIDE.md.
+
+All posts are in English. The 박종훈/메르/jsonhouse DNA distinction refers
+to STRUCTURE and ANALYSIS METHODOLOGY, not language register.
+
+- 박종훈 style → macro context + flow analysis (5-step structure)
+- 메르 style → accessible explanation + practical connection (5-step structure)
+- jsonhouse DNA → hybrid: context + data + practical (5-step structure)
+
+Style selection by category:
+- CAT1~CAT6 → jsonhouse DNA (default)
+- CAT7 Deep Dive → 박종훈 structure
+- CAT7 Weekly Digest → 메르 structure
+
+Wrong style application is a HARD REJECT condition.
+
 ## SEO Rules (MANDATORY — every post)
 
 1. Title: max 60 chars, include "2026", primary keyword in first 5 words
@@ -34,7 +59,7 @@ This file is automatically loaded by Claude Code. It contains all context needed
 4. TL;DR: 3–5 bullets (Featured Snippet targeting)
 5. Structured data: comparison table required — HARD REQUIREMENT (JSON code blocks forbidden)
 6. FAQ section: min 3 questions (People Also Ask)
-7. Internal links: 2–3 within same topic cluster
+7. Internal links: 2–3 within same topic cluster (verified to exist)
 8. Word count: min 600 words (excluding code/data blocks)
 9. data_updated field: always present
 
@@ -48,6 +73,35 @@ This file is automatically loaded by Claude Code. It contains all context needed
 - Pricing data > 7 days old
 - Code syntax errors
 - Any quality score < 7.0
+- No "이면 분석" / deep analysis (just news summary, no "why")
+- Wrong style applied (e.g., 메르 structure used for CAT1 deep technical post)
+- Broken internal links (linking to non-existent slug)
+- canonical_url field hardcoded in frontmatter (must be auto-generated)
+
+## Frontmatter Required Fields
+
+Every post MUST have:
+- `title`, `description`, `date`, `last_modified_at`
+- `categories`, `tags`
+- `format` (A~G)
+- `cluster` (CLUSTER_LLM | CLUSTER_DEVTOOLS | CLUSTER_PROMPTS)
+- `image` (path: `/assets/img/posts/{slug}-cover.png`, alt text required)
+- `faq` (array of `{q, a}` — minimum 3 entries, used for FAQPage schema auto-generation)
+- `data_updated` (YYYY-MM-DD)
+- `author`
+
+Do NOT include:
+- `canonical_url` field — let jekyll-seo-tag auto-generate based on permalink
+  (hardcoding caused trailing slash mismatch in previous posts)
+
+## Slug Rules
+
+- Format: lowercase, hyphens, year suffix (e.g., `llm-api-pricing-2026`)
+- Once a slug is decided in draft phase, NEVER change it
+  (previous slug changes caused 9 broken internal links)
+- Before linking to another post, verify slug exists in `_posts/`
+- Do NOT link to unpublished/planned posts
+- Internal link verification is part of Phase 4 Technical Validation
 
 ## Post Formats
 
@@ -71,6 +125,7 @@ This file is automatically loaded by Claude Code. It contains all context needed
 | CAT4 | AI Productivity & Workflows | Medium |
 | CAT5 | AI Data & Statistics | Medium |
 | CAT6 | AI Safety & Ethics | Medium |
+| CAT7 | Industry Analysis & Weekly Digest | Medium |
 
 ## Topic Clusters (build these first)
 
@@ -78,12 +133,35 @@ This file is automatically loaded by Claude Code. It contains all context needed
 2. **CLUSTER_DEVTOOLS**: Pillar "Best AI Coding Tools 2026" + Claude Code, Cursor vs Copilot, MCP
 3. **CLUSTER_PROMPTS**: Pillar "Ultimate AI Prompt Library 2026" + by job role, system prompts
 
+## Phase 5: Human Review (기웅) — Korean report required
+
+Auto-validation passed. Claude Code MUST generate a Korean review report
+alongside the English post draft so 기웅 can review efficiently.
+
+Korean report format (required sections):
+- 핵심 주장 요약 (3줄)
+- 인용된 수치/벤치마크 출처 목록
+- 적용된 스타일 (박종훈 / 메르 / jsonhouse DNA) + 적용 근거
+- 이면 분석 핵심 (2~3문장 한국어 요약)
+- 의심스러운 사실 관계 항목 (있으면)
+- 내부 링크 목록 + 검증 결과 (존재 여부)
+
+Human reviews:
+- 핵심 주장이 의도와 일치하는가
+- 수치/가격/벤치마크 사실 관계
+- 이면 분석이 일반론에 그치지 않는가
+- 톤앤매너가 카테고리에 맞는가
+- 영어 표현의 자연스러움 (전문 분석가 톤 유지)
+
+Reject → PR comment with reason → Phase 3 regenerate
+
 ## File Paths
 
 - Posts: `_posts/YYYY-MM-DD-slug.md`
 - Data: `_data/YYYY-MM-DD-slug.json`
 - API: `api/posts.json`
 - LLMs: `llms.txt`
+- Phase 5 Korean reports: `_reviews/YYYY-MM-DD-slug.ko.md`
 
 ## Quality Score Formula
 
@@ -92,6 +170,8 @@ Weighted score (required >= 7.0 to publish):
 - structural_quality × 0.25
 - practical_value × 0.25
 - data_completeness × 0.20
+
+---
 
 See PIPELINE_PROMPT.md for full phase instructions.
 See SEO_GUIDE.md for detailed SEO enforcement rules.
@@ -158,3 +238,5 @@ Post validation runs automatically on every `Write` or `Edit` to `_posts/*.md` a
 - **ERROR**: Shown prominently after file save — must fix before publishing
 - **WARN**: Advisory — shown after save, fix before Phase 6 (Publishing)
 - Hook only activates for `_posts/*.md` and `_drafts/*.md` files
+
+See STYLE_GUIDE.md for tone, voice, and post structure rules (박종훈 / 메르 / jsonhouse DNA).

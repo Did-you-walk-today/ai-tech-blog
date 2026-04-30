@@ -4,7 +4,7 @@ description: "Google doesn't ban AI content—it penalizes ranking manipulation.
 date: 2026-04-27 12:00:00 +0900
 last_modified_at: 2026-04-27 12:00:00 +0900
 categories: [AI Safety, Content Policy]
-tags: [google-seo, ai-content, youtube-policy, e-e-a-t, content-moderation, 2026]
+tags: [google-seo, ai-content, youtube-policy, e-e-a-t, content-moderation, "2026"]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY
 image:

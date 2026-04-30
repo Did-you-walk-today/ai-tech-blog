@@ -11,7 +11,19 @@
       "Bash(bundle exec:*)",
       "Bash(git stash:*)",
       "WebFetch(domain:jjikin.com)",
-      "Bash(gh api:*)"
+      "Bash(gh api:*)",
+      "Bash(host www.jsonhouse.com)",
+      "Bash(nslookup www.jsonhouse.com)",
+      "Bash(curl -I --max-time 10 https://www.jsonhouse.com)",
+      "Bash(gh issue:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:github-production-user-asset-6210df.s3.amazonaws.com)",
+      "Bash(git fetch:*)",
+      "Bash(gh pr:*)",
+      "Bash(gh codespace:*)",
+      "Bash(python3:*)",
+      "Bash(git show:*)",
+      "Bash(git checkout:*)"
     ]
   }
 }
