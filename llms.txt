@@ -1,4 +1,4 @@
-# AI Tech Resource Blog
+# Json House
 > Structured AI/LLM data resource for developers and power users.
 
 ## About

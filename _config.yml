@@ -1,4 +1,4 @@
-title: "AI Tech Resource Blog"
+title: "Json House"
 description: "Structured AI/LLM data resource for developers and power users."
 url: "https://www.jsonhouse.com"
 baseurl: ""
@@ -35,7 +35,7 @@ collections:
 google_adsense: ca-pub-4708234819958995
 
 social:
-  name: "AI Tech Resource Blog"
+  name: "Json House"
   links: []
 
 social_preview_image: /assets/img/og-default.png
@@ -47,7 +47,7 @@ twitter:
   username: ""
 
 author:
-  name: "AI Tech Resource Blog"
+  name: "Json House"
 
 defaults:
   - scope:

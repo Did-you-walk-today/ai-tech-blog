@@ -2,12 +2,12 @@
 layout: page
 title: Privacy Policy
 permalink: /privacy/
-description: "Privacy Policy for AI Tech Resource Blog (jsonhouse.com) — how we handle your data, cookies, and third-party advertising."
+description: "Privacy Policy for Json House (jsonhouse.com) — how we handle your data, cookies, and third-party advertising."
 ---
 
 *Last updated: March 31, 2026*
 
-AI Tech Resource Blog ("we", "us", or "our") operates the website at [jsonhouse.com](https://www.jsonhouse.com). This Privacy Policy explains what information we collect, how we use it, and your choices.
+Json House ("we", "us", or "our") operates the website at [jsonhouse.com](https://www.jsonhouse.com). This Privacy Policy explains what information we collect, how we use it, and your choices.
 
 ---
 
