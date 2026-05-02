@@ -1,0 +1,84 @@
+{
+  "data_updated": "2026-04-27",
+  "post_slug": "youtube-ai-monetization-2026",
+  "cluster": "CLUSTER_AI_CONTENT_POLICY",
+  "policy_timeline": [
+    { "date": "2023-11", "action": "AI content disclosure policy announced", "source": "YouTube Blog" },
+    { "date": "2024-03", "action": "Altered or Synthetic Content toggle launched in YouTube Studio", "source": "YouTube Help" },
+    { "date": "2025-03-10", "action": "Human review added to ad suitability decisions (up to 24h)", "source": "YouTube Help" },
+    { "date": "2025-05-21", "action": "AI disclosure mandatory enforcement — no grace period", "source": "YouTube Help" },
+    { "date": "2025-07-15", "action": "Repetitious content renamed to inauthentic content — definition expanded", "source": "YouTube Help" }
+  ],
+  "policy_comparison": [
+    {
+      "policy": "AI Disclosure",
+      "trigger": "Realistic synthetic content that could mislead viewers",
+      "penalty_scope": "Video-level (label or removal)",
+      "mandatory_since": "2025-05"
+    },
+    {
+      "policy": "Inauthentic Content",
+      "trigger": "Mass-produced, templated content with minimal variation",
+      "penalty_scope": "Channel-level (full demonetization)",
+      "mandatory_since": "Ongoing — expanded 2025-07"
+    },
+    {
+      "policy": "Reused Content",
+      "trigger": "Third-party content without transformation",
+      "penalty_scope": "Channel-level (full demonetization)",
+      "mandatory_since": "Pre-existing, unchanged"
+    }
+  ],
+  "violation_patterns": {
+    "disclosure_required": [
+      "realistic_synthetic_person_actions",
+      "fabricated_realistic_events",
+      "synthetic_medical_procedures",
+      "deceased_person_voice_synthesis"
+    ],
+    "inauthentic_patterns": [
+      "single_template_repeated_at_scale",
+      "static_image_with_ai_voice_only",
+      "minimal_variation_across_videos",
+      "scrolling_text_without_narrative"
+    ],
+    "auto_terminate_violations": [
+      "non_consensual_deepfake_sexual",
+      "election_deception",
+      "deceased_minor_voice_synthesis",
+      "real_individual_scam_facilitation"
+    ]
+  },
+  "enforcement_tiers": [
+    { "tier": 1, "action": "Automatic label added", "trigger": "Suspected disclosure omission" },
+    { "tier": 2, "action": "Reduced distribution (excluded from recommendations)", "trigger": "Repeated violations" },
+    { "tier": 3, "action": "Monetization restricted", "trigger": "Inauthentic pattern detected" },
+    { "tier": 4, "action": "Video removal", "trigger": "Clearly misleading harmful content" },
+    { "tier": 5, "action": "Community Guidelines Strike", "trigger": "Public figure, political, health, harassment violations" },
+    { "tier": 6, "action": "YPP permanent suspension or channel termination", "trigger": "3 strikes or critical violation" }
+  ],
+  "survival_patterns": [
+    {
+      "channel_type": "Consistent human narrator",
+      "example": "Bruno Sartori",
+      "key_factor": "Clear satirical perspective + explicit parody framing + source disclosure"
+    },
+    {
+      "channel_type": "AI-assisted with human commentary",
+      "example": "Matt Par",
+      "key_factor": "AI-generated scripts reviewed and expanded with personal insights"
+    },
+    {
+      "channel_type": "Deep narrative",
+      "example": "Motiversity-style",
+      "key_factor": "Strong scripting + information density + viewer retention"
+    }
+  ],
+  "ypp_base_requirements": {
+    "subscribers": 1000,
+    "watch_hours_12mo": 4000,
+    "shorts_views_alternative": 10000000,
+    "review_decision_time_hours": 24,
+    "source": "support.google.com/youtube/answer/72851"
+  }
+}
