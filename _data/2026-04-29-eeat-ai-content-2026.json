@@ -1,0 +1,80 @@
+{
+  "data_updated": "2026-04-27",
+  "post_slug": "eeat-ai-content-2026",
+  "cluster": "CLUSTER_AI_CONTENT_POLICY",
+  "eeat_pillars": [
+    {
+      "pillar": "Experience",
+      "definition": "Firsthand, lived involvement with the topic",
+      "ai_era_implication": "Hardest for AI to replicate",
+      "added": "2022-12",
+      "key_signals": ["original photos", "test duration", "failure cases", "specific versions and dates"]
+    },
+    {
+      "pillar": "Expertise",
+      "definition": "Depth, accuracy, and clarity of knowledge",
+      "ai_era_implication": "Easiest for AI to simulate — highest risk gap",
+      "added": "Original E-A-T",
+      "key_signals": ["correct terminology", "primary source citations", "edge case coverage"]
+    },
+    {
+      "pillar": "Authoritativeness",
+      "definition": "Recognition and reputation within the field",
+      "ai_era_implication": "Built over time across digital footprint",
+      "added": "Original E-A-T",
+      "key_signals": ["quality backlinks", "byline citations elsewhere", "consistent publishing history"]
+    },
+    {
+      "pillar": "Trustworthiness",
+      "definition": "Accuracy, transparency, and user safety",
+      "ai_era_implication": "The foundation — low Trust overrides all other signals",
+      "added": "Original E-A-T",
+      "key_signals": ["HTTPS", "sourced claims", "clear author info", "publication dates", "affiliate disclosure"]
+    }
+  ],
+  "signal_categories": {
+    "strong_experience": [
+      "first_person_testing_with_duration",
+      "original_screenshots_or_photos",
+      "specific_dates_versions_environments",
+      "documented_failure_cases",
+      "explicit_opinions_with_pros_cons",
+      "raw_unprocessed_data",
+      "unexpected_behavior_discovered"
+    ],
+    "weak_or_negative": [
+      "spec_sheet_restating",
+      "unsourced_expert_quotes",
+      "uniformly_balanced_pros_cons",
+      "homogeneous_paragraph_lengths",
+      "generic_conclusions"
+    ],
+    "trust_killers": [
+      "fake_case_studies",
+      "fabricated_statistics",
+      "ai_byline_without_human_review",
+      "undisclosed_affiliate_links",
+      "outdated_data_presented_as_current"
+    ]
+  },
+  "guidelines_versions": [
+    { "date": "2022-12-15", "change": "Experience added to E-A-T, creating E-E-A-T", "source": "developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t" },
+    { "date": "2025-01-23", "change": "Quality Rater technical requirements updated, new spam specifications", "source": "Google Search Quality Rater Guidelines" },
+    { "date": "2025-09-11", "change": "AI Overviews evaluation criteria added; YMYL expanded to include elections, civic institutions, government trust", "source": "Google Search Quality Rater Guidelines v2025-09" }
+  ],
+  "topic_experience_weighting": [
+    { "topic": "Travel / restaurants", "experience_weight": "Strong", "expertise_weight": "Weak" },
+    { "topic": "Software reviews", "experience_weight": "Strong", "expertise_weight": "Medium" },
+    { "topic": "Product reviews", "experience_weight": "Strong", "expertise_weight": "Medium" },
+    { "topic": "Investment advice", "experience_weight": "Medium", "expertise_weight": "Strong (license)" },
+    { "topic": "Tax / legal", "experience_weight": "Medium", "expertise_weight": "Strong (license)" },
+    { "topic": "Medical content", "experience_weight": "Medium", "expertise_weight": "Strong (credentials)" },
+    { "topic": "News reporting", "experience_weight": "Strong", "expertise_weight": "Strong" }
+  ],
+  "checklist_count": {
+    "experience_techniques": 7,
+    "expertise_techniques": 5,
+    "trust_signals": 6,
+    "total": 18
+  }
+}
