@@ -163,6 +163,10 @@ Reject → PR comment with reason → Phase 3 regenerate
 - LLMs: `llms.txt`
 - Phase 5 Korean reports: `_reviews/YYYY-MM-DD-slug.ko.md`
 
+**MANDATORY**: Every post Write MUST be accompanied by a `_data/YYYY-MM-DD-slug.json` file.
+Extract the post's structured data (timelines, comparison tables, case studies) into JSON.
+Commit both files together. Never publish a post without its data file.
+
 ## Quality Score Formula
 
 Weighted score (required >= 7.0 to publish):
