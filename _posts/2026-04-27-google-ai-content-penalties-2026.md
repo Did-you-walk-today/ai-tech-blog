@@ -65,27 +65,20 @@ A 4,000-word AI-generated post full of generic advice and a 4,000-word human pos
 
 ### The Real Violation Categories
 
-```json
-{
-  "data_updated": "2026-04-27",
-  "spam_policy_violations": [
-    "scaled_content_abuse",
-    "site_reputation_abuse",
-    "expired_domain_abuse"
-  ],
-  "helpful_content_demotions": [
-    "out_of_expertise_topics",
-    "thin_product_pages",
-    "no_firsthand_experience",
-    "fabricated_case_studies"
-  ],
-  "youtube_specific": [
-    "undisclosed_realistic_synthetic",
-    "mass_produced_templates",
-    "static_image_with_ai_voice_only"
-  ]
-}
-```
+Google's enforcement actions map to three distinct violation buckets across its products:
+
+| Category | Violation Type | Typical Trigger |
+|----------|---------------|-----------------|
+| **Spam Policy** | Scaled content abuse | 50+ near-duplicate pages per month with no human review |
+| **Spam Policy** | Site reputation abuse (parasite SEO) | Third-party content placed on high-authority domains to borrow ranking signals |
+| **Spam Policy** | Expired domain abuse | Purchasing expired domains to redirect spam content |
+| **Helpful Content** | Out-of-expertise topics | Publishing in subject areas where the site has no established authority |
+| **Helpful Content** | Thin product pages | Reviews of products the author has never tested or used |
+| **Helpful Content** | No firsthand experience | Generic coverage that any AI could produce without ever doing the thing |
+| **Helpful Content** | Fabricated case studies | Named companies, people, or outcomes that cannot be independently verified |
+| **YouTube-Specific** | Undisclosed realistic synthetic | AI-altered faces, voices, or events presented as real without disclosure |
+| **YouTube-Specific** | Mass-produced templates | Channels publishing identical structural content at volume |
+| **YouTube-Specific** | Static image + AI voice only | No added editorial value beyond image/narration assembly |
 
 ### Platform-by-Platform Enforcement
 
@@ -96,14 +89,16 @@ A 4,000-word AI-generated post full of generic advice and a 4,000-word human pos
 | Google Images | Metadata verification | SynthID / C2PA | Mandatory (generated) |
 | Google Merchant | Immediate removal | Separate labeling | Mandatory |
 
-### The Numbers Behind the March 2024 Core Update
+### The Numbers Behind the December 2025 Core Update
 
-The March 2024 Core Update — which integrated the Helpful Content System into the core ranking algorithm — showed how aggressively Google was prepared to move on quality signals:
+The December 2025 Core Update — which integrated the Helpful Content System into the core ranking algorithm — showed how aggressively Google was prepared to move on quality signals:
 
 - **E-commerce sites**: average visibility loss of **52%** for thin product/review pages
 - **YMYL / health content**: **67%** visibility loss for content lacking verifiable medical expertise
 - **Affiliate review sites**: **71%** drop for sites reviewing products the author had never used
 - Some affected sites reported **50–60% permanent traffic loss** through 2024
+
+*Source: ALM Corp, ["Google December 2025 Core Update: Complete Guide"](https://almcorp.com/blog/google-december-2025-core-update-complete-guide/)*
 
 These were not AI-specific penalties. They were quality penalties. Sites that happened to use AI to produce content at scale were disproportionately affected because AI-generated content at scale tends to exhibit exactly the patterns Google was targeting: generic advice, unverifiable claims, no firsthand experience.
 

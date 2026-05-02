@@ -1,0 +1,68 @@
+{
+  "data_updated": "2026-04-27",
+  "post_slug": "google-ai-content-penalties-2026",
+  "cluster": "CLUSTER_AI_CONTENT_POLICY",
+  "platform_enforcement": [
+    {
+      "platform": "Google Search",
+      "punishment_severity": "Gradual demotion",
+      "key_criteria": "E-E-A-T + quality signals",
+      "disclosure_required": "Recommended"
+    },
+    {
+      "platform": "YouTube",
+      "punishment_severity": "6-tier (immediate)",
+      "key_criteria": "Originality + disclosure",
+      "disclosure_required": "Mandatory (realistic synthetic)"
+    },
+    {
+      "platform": "Google Images",
+      "punishment_severity": "Metadata verification",
+      "key_criteria": "SynthID / C2PA",
+      "disclosure_required": "Mandatory (AI-generated)"
+    },
+    {
+      "platform": "Google Merchant",
+      "punishment_severity": "Immediate removal",
+      "key_criteria": "Separate labeling policy",
+      "disclosure_required": "Mandatory"
+    }
+  ],
+  "violation_categories": {
+    "spam_policy_violations": [
+      "scaled_content_abuse",
+      "site_reputation_abuse",
+      "expired_domain_abuse"
+    ],
+    "helpful_content_demotions": [
+      "out_of_expertise_topics",
+      "thin_product_pages",
+      "no_firsthand_experience",
+      "fabricated_case_studies"
+    ],
+    "youtube_specific": [
+      "undisclosed_realistic_synthetic",
+      "mass_produced_templates",
+      "static_image_with_ai_voice_only"
+    ]
+  },
+  "december_2025_core_update_impact": {
+    "ecommerce_visibility_loss_pct": 52,
+    "ymyl_health_visibility_loss_pct": 67,
+    "affiliate_review_visibility_loss_pct": 71,
+    "permanent_traffic_loss_range": "50-60%",
+    "source": "ALM Corp, Google December 2025 Core Update: Complete Guide"
+  },
+  "youtube_enforcement_timeline": [
+    { "date": "2023-11", "action": "AI disclosure policy announced" },
+    { "date": "2024-03", "action": "Altered or Synthetic Content creator toggle launched" },
+    { "date": "2025-05-21", "action": "Mandatory enforcement begins — no grace period" },
+    { "date": "2025-07-15", "action": "YPP monetization strengthened — AI slop crackdown" }
+  ],
+  "eeat_signals": [
+    { "signal": "Experience", "description": "Did someone actually do this firsthand?" },
+    { "signal": "Expertise", "description": "Does the author have deep subject knowledge?" },
+    { "signal": "Authoritativeness", "description": "Is the source credible and cited by others?" },
+    { "signal": "Trustworthiness", "description": "Are claims verifiable and accurate?" }
+  ]
+}
