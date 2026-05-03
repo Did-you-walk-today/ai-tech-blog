@@ -1,7 +1,13 @@
 {
+  "schema_version": "1.0",
+  "slug": "youtube-ai-monetization-2026",
+  "title": "YouTube AI Monetization 2026: What Is Inauthentic Content",
+  "description": "YouTube doesn't ban AI videos—it bans 'inauthentic' ones. The real rules of the July 2025 policy update, with channel survival patterns and disclosure criteria.",
   "data_updated": "2026-04-27",
-  "post_slug": "youtube-ai-monetization-2026",
+  "source_post": "https://www.jsonhouse.com/posts/youtube-ai-monetization-2026/",
+  "category": "AI Safety & Ethics",
   "cluster": "CLUSTER_AI_CONTENT_POLICY",
+  "format": "C",
   "policy_timeline": [
     { "date": "2023-11", "action": "AI content disclosure policy announced", "source": "YouTube Blog" },
     { "date": "2024-03", "action": "Altered or Synthetic Content toggle launched in YouTube Studio", "source": "YouTube Help" },
