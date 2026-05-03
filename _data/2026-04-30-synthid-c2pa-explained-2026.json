@@ -1,6 +1,13 @@
 {
+  "schema_version": "1.0",
   "slug": "synthid-c2pa-explained-2026",
+  "title": "SynthID and C2PA: How AI Image Verification Works in 2026",
+  "description": "SynthID watermarks pixels. C2PA signs metadata. They're not competitors—they're complementary layers. Here's how AI image verification actually works in 2026.",
   "data_updated": "2026-04-27",
+  "source_post": "https://www.jsonhouse.com/posts/synthid-c2pa-explained-2026/",
+  "category": "AI Safety & Ethics",
+  "cluster": "CLUSTER_AI_CONTENT_POLICY",
+  "format": "C",
   "synthid": {
     "developer": "Google DeepMind (with Google Research, Jigsaw)",
     "first_announced": "2023-05",
