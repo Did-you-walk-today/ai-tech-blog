@@ -3,7 +3,7 @@ title: "What Google AI Content Policy Actually Penalizes in 2026"
 description: "Google doesn't ban AI content—it penalizes ranking manipulation. The real rules for Search, YouTube, and AI images in 2026, with platform-by-platform criteria."
 date: 2026-04-27 12:00:00 +0900
 last_modified_at: 2026-04-27 12:00:00 +0900
-categories: [AI Safety, Content Policy]
+categories: [ai-safety-ethics]
 tags: [google-seo, ai-content, youtube-policy, e-e-a-t, content-moderation, "2026"]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY

@@ -3,7 +3,7 @@ title: "YouTube AI Monetization 2026: What Is Inauthentic Content"
 description: "YouTube doesn't ban AI videos—it bans 'inauthentic' ones. The real rules of the July 2025 policy update, with channel survival patterns and disclosure criteria."
 date: 2026-04-28 12:00:00 +0900
 last_modified_at: 2026-04-28 12:00:00 +0900
-categories: [AI Safety, Content Policy, YouTube]
+categories: [ai-safety-ethics]
 tags: [youtube-monetization, ai-content, inauthentic-content, ypp, content-policy, "2026"]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY

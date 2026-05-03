@@ -3,7 +3,7 @@ title: "SynthID and C2PA: How AI Image Verification Works in 2026"
 description: "SynthID watermarks pixels. C2PA signs metadata. They're not competitors—they're complementary layers. Here's how AI image verification actually works in 2026."
 date: 2026-04-30 12:00:00 +0900
 last_modified_at: 2026-04-30 12:00:00 +0900
-categories: [AI Trust, Content Authentication, Technical]
+categories: [ai-data, ai-safety-ethics]
 tags: [synthid, c2pa, content-credentials, ai-images, watermarking, 2026]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY

@@ -3,7 +3,7 @@ title: "Pass Google E-E-A-T 2026: AI-Assisted Content Survival Guide"
 description: "E-E-A-T isn't a ranking factor—it's a framework. Here's how AI-assisted content actually passes Google's quality bar in 2026, with 18 concrete signals."
 date: 2026-04-29 12:00:00 +0900
 last_modified_at: 2026-04-29 12:00:00 +0900
-categories: [SEO, AI Workflows, Content Quality]
+categories: [ai-safety-ethics]
 tags: [eeat, google-quality-raters, ai-content, content-strategy, "2026"]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY
