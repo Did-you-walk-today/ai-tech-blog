@@ -6,6 +6,8 @@ This blog publishes structured, data-driven posts about AI models, developer too
 
 ## Data
 - [All posts JSON](/api/posts.json): Full structured post index with metadata
+- [Dataset index](/data/index.json): Index of all per-post structured datasets (auto-generated)
+- Per-post datasets: /data/{YYYY-MM-DD-slug}.json — comparison tables, timelines, key statistics
 
 ## Categories
 - AI Models & Intelligence: /category/ai-models/ — LLM comparisons, benchmarks, releases
@@ -35,4 +37,6 @@ This blog publishes structured, data-driven posts about AI models, developer too
 - FORMAT_G: Weekly AI digest (automated)
 
 ## API Access
-Posts are indexable via /api/posts.json — each entry includes title, url, date, data_updated, category, tags, schema_type.
+- /api/posts.json — post index (title, url, date, categories, tags, description)
+- /data/index.json — dataset manifest (slug, url, data_updated for each post dataset)
+- /data/{YYYY-MM-DD-slug}.json — full structured data per post (comparison tables, statistics, timelines)

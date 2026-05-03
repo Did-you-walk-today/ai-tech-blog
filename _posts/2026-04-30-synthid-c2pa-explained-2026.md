@@ -4,7 +4,7 @@ description: "SynthID watermarks pixels. C2PA signs metadata. They're not compet
 date: 2026-04-30 12:00:00 +0900
 last_modified_at: 2026-04-30 12:00:00 +0900
 categories: [ai-data, ai-safety-ethics]
-tags: [synthid, c2pa, content-credentials, ai-images, watermarking, 2026]
+tags: [synthid, c2pa, content-credentials, ai-images, watermarking, "2026"]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY
 image:
