@@ -11,6 +11,10 @@ module Jekyll
   # Files matched: YYYY-MM-DD-* (post data files only)
   # Files skipped: authors.yml, contact.yml, share.yml, etc.
   class DataPublisher < Generator
+    # safe: false is required because this is a custom plugin.
+    # This works because the site is built via GitHub Actions
+    # (pages-deploy.yml), NOT GitHub Pages native build.
+    # Switching to GitHub Pages native would disable this plugin entirely.
     safe false
     priority :normal
 
@@ -24,7 +28,12 @@ module Jekyll
         next unless data.is_a?(Hash)
 
         page = PageWithoutAFile.new(site, site.source, 'data', "#{key}.json")
-        page.content = JSON.generate(data)
+        begin
+          page.content = JSON.generate(data)
+        rescue JSON::GeneratorError => e
+          Jekyll.logger.warn "DataPublisher:", "Skipping #{key}: #{e.message}"
+          next
+        end
         page.data['layout'] = false
         site.pages << page
 

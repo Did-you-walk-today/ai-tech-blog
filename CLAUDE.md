@@ -167,6 +167,25 @@ Reject → PR comment with reason → Phase 3 regenerate
 Extract the post's structured data (timelines, comparison tables, case studies) into JSON.
 Commit both files together. Never publish a post without its data file.
 
+## Public Data Architecture
+
+### Naming Convention (CRITICAL)
+
+The plugin auto-publishes any `_data/` file matching `YYYY-MM-DD-*.json`.
+
+**RULE**: Date prefix means PUBLIC.
+
+- Post-specific data (PUBLIC): `_data/YYYY-MM-DD-{slug}.json`
+- Site config data (PRIVATE): `_data/{name}.yml` or `_data/{name}.json`
+  (NO date prefix — examples: `authors.yml`, `navigation.yml`)
+
+NEVER prefix non-post data with a date. A file like
+`_data/2026-05-03-authors.json` would be exposed publicly.
+
+DO NOT create a top-level `data/` directory in the project root.
+The plugin generates this at build time. Manual creation causes
+permalink conflicts.
+
 ## Quality Score Formula
 
 Weighted score (required >= 7.0 to publish):
