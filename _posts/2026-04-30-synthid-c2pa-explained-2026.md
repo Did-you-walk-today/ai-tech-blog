@@ -173,7 +173,7 @@ Platforms are following. TikTok, LinkedIn, and YouTube have begun displaying Con
 
 **Step 3: Add visible AI disclosure.** Even with intact metadata, most visitors will not check C2PA credentials directly. Including "AI-generated" in image alt text or figure captions serves both human readers and automated content classification systems that evaluate disclosure as a trustworthiness signal.
 
-**Step 4: Treat IPTC metadata as mandatory for Google Merchant Center.** Google's Merchant Center policies since 2025 require `DigitalSourceType` IPTC metadata for AI-generated product images. Missing metadata risks product listing restrictions. For a full compliance checklist including Merchant Center requirements, the [AI Safety for Developers guide](/posts/ai-safety-for-developers-2026-practical-checklist/) covers the complete rundown.
+**Step 4: Treat IPTC metadata as mandatory for Google Merchant Center.** Google's Merchant Center policies since 2025 require `DigitalSourceType` IPTC metadata for AI-generated product images. Missing metadata risks product listing restrictions. For a full compliance checklist including Merchant Center requirements, refer to Google's [Merchant Center Help](https://support.google.com/merchants) directly.
 
 **Verification workflow:**
 

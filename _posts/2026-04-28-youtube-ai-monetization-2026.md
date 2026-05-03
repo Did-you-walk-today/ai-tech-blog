@@ -135,7 +135,7 @@ There is also a direct connection to the AEO (Answer Engine Optimization) layer 
 
 For creators, the opportunity is real. AI-generated content farms that dominated certain categories in 2024 are now being systematically removed. The creators who were producing lower volumes of higher-quality, more distinctive content are benefiting from reduced competition in recommendation algorithms and search. The short-term pain of enforcement is a long-term structural advantage for authentic creators.
 
-For a broader analysis of how these authenticity standards apply across Google Search and other platforms, see [What Google AI Content Policy Actually Penalizes in 2026](/posts/google-ai-content-penalties-2026/). For the technical implementation side—how developers can build AI systems that pass platform authenticity gates—[AI Safety for Developers 2026: A Practical Checklist](/posts/ai-safety-for-developers-2026-practical-checklist/) covers the structural requirements.
+For a broader analysis of how these authenticity standards apply across Google Search and other platforms, see [What Google AI Content Policy Actually Penalizes in 2026](/posts/google-ai-content-penalties-2026/).
 
 ---
 

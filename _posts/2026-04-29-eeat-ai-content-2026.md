@@ -198,7 +198,7 @@ When you update a piece substantively, add a footer note: "Updated 2026-04-29: R
 Undisclosed affiliate links are one of the fastest paths to low Trust evaluation. The [Google Spam Policies](https://developers.google.com/search/docs/essentials/spam-policies) specifically address deceptive practices around paid endorsements. Label affiliate links at the page level—not buried in a footer policy.
 
 **6. Maintain functional contact and policy pages.**
-A contact form that works, a privacy policy that reflects actual data practices, and a terms page signal that there is a real accountable entity behind the site. For [AI safety for developers](/posts/ai-safety-for-developers-2026-practical-checklist/), these are baseline requirements—not optional.
+A contact form that works, a privacy policy that reflects actual data practices, and a terms page signal that there is a real accountable entity behind the site. These are baseline requirements—not optional.
 
 ---
 
