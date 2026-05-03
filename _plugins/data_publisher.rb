@@ -40,6 +40,11 @@ module Jekyll
         index_entries[key] = {
           'url'          => "/data/#{key}.json",
           'slug'         => data['slug'],
+          'title'        => data['title'],
+          'description'  => data['description'],
+          'category'     => data['category'],
+          'cluster'      => data['cluster'],
+          'format'       => data['format'],
           'data_updated' => data['data_updated']
         }
       end
