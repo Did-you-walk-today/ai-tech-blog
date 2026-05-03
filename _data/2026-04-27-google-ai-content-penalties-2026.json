@@ -1,7 +1,13 @@
 {
+  "schema_version": "1.0",
+  "slug": "google-ai-content-penalties-2026",
+  "title": "What Google AI Content Policy Actually Penalizes in 2026",
+  "description": "Google doesn't ban AI content—it penalizes ranking manipulation. The real rules for Search, YouTube, and AI images in 2026, with platform-by-platform criteria.",
   "data_updated": "2026-04-27",
-  "post_slug": "google-ai-content-penalties-2026",
+  "source_post": "https://www.jsonhouse.com/posts/google-ai-content-penalties-2026/",
+  "category": "AI Safety & Ethics",
   "cluster": "CLUSTER_AI_CONTENT_POLICY",
+  "format": "C",
   "platform_enforcement": [
     {
       "platform": "Google Search",
