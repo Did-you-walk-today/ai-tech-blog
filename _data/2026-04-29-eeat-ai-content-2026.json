@@ -1,7 +1,13 @@
 {
+  "schema_version": "1.0",
+  "slug": "eeat-ai-content-2026",
+  "title": "Pass Google E-E-A-T 2026: AI-Assisted Content Survival Guide",
+  "description": "E-E-A-T isn't a ranking factor—it's a framework. Here's how AI-assisted content actually passes Google's quality bar in 2026, with 18 concrete signals.",
   "data_updated": "2026-04-27",
-  "post_slug": "eeat-ai-content-2026",
+  "source_post": "https://www.jsonhouse.com/posts/eeat-ai-content-2026/",
+  "category": "AI Safety & Ethics",
   "cluster": "CLUSTER_AI_CONTENT_POLICY",
+  "format": "C",
   "eeat_pillars": [
     {
       "pillar": "Experience",
