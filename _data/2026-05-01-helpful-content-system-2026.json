@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "slug": "helpful-content-system-2026",
+  "title": "Google's Helpful Content System 2026: How It Really Decides",
+  "description": "HCS became part of Google's core algorithm in March 2024 — always-on, multi-signal, asymmetric. Here's how it actually evaluates and demotes content in 2026.",
+  "data_updated": "2026-04-27",
+  "source_post": "https://www.jsonhouse.com/posts/helpful-content-system-2026/",
+  "category": "AI Data & Statistics",
+  "cluster": "CLUSTER_AI_CONTENT_POLICY",
+  "format": "C",
+  "timeline": [
+    { "date": "2022-08", "event": "Helpful Content Update launched — site-wide classifier introduced", "source": "Google Search Central" },
+    { "date": "2022-12", "event": "Experience added to Quality Rater Guidelines (E-A-T → E-E-A-T)", "source": "Google Search Central" },
+    { "date": "2023-09", "event": "September 2023 HCU — largest rollout; some sites lost 80%+ traffic", "source": "Google Search Central / GSQi" },
+    { "date": "2023-09", "event": "'Written by people' replaced with 'for people' in guidelines", "source": "Google Search Central" },
+    { "date": "2024-03-05", "event": "March 2024 Core Update — HCS deprecated as standalone, integrated into core", "source": "Google Search Central" },
+    { "date": "2024-03 to 04", "event": "45-day rollout (longest core update on record) — multiple systems updated simultaneously", "source": "Google Search Central" },
+    { "date": "2024", "event": "4 core updates + 3 spam updates across full year", "source": "Google Search Central" },
+    { "date": "2025-2026", "event": "HCS signals included in routine core updates; no separate HCU announcements", "source": "Google Search Central" }
+  ],
+  "comparison_data": {
+    "title": "HCS Before vs After March 2024 Core Integration",
+    "dimensions": ["Operating frequency", "Evaluation mechanism", "Scope", "Update announcements", "Signal interaction", "Human review"],
+    "entries": [
+      {
+        "aspect": "Operating frequency",
+        "before": "Periodic updates",
+        "after": "Always-on"
+      },
+      {
+        "aspect": "Evaluation mechanism",
+        "before": "Single classifier",
+        "after": "Multiple signals combined"
+      },
+      {
+        "aspect": "Scope",
+        "before": "Primarily site-level",
+        "after": "Site-level + page-level"
+      },
+      {
+        "aspect": "Update announcements",
+        "before": "Specific HCU dates",
+        "after": "Bundled in core update announcements"
+      },
+      {
+        "aspect": "Signal interaction",
+        "before": "Limited",
+        "after": "Heavy counterbalance across systems"
+      },
+      {
+        "aspect": "Human review",
+        "before": "No",
+        "after": "No — fully algorithmic"
+      }
+    ]
+  },
+  "classifier_characteristics": {
+    "human_review": false,
+    "always_on": true,
+    "evaluates_old_content": true,
+    "evaluates_new_content": true,
+    "negative_signal_persistence": "persists until clear, long-term improvements verified",
+    "evaluation_levels": [
+      "page_level — individual content quality",
+      "site_level — overall site quality signal",
+      "system_interaction — counterbalance across multiple core systems"
+    ],
+    "distinct_from_manual_actions": true
+  },
+  "recovery_pattern": {
+    "automatic": false,
+    "requires": "clear, long-term improvements — sustained, not one-time",
+    "typical_timeline": "2–6 months for substantial improvements",
+    "alignment": "often coincides with next major core update",
+    "guarantee": "none",
+    "tracked_data": "Industry analysts (Glenn Gabe/GSQi, Lily Ray/Amsive) found most Sept 2023 HCU victims showed no meaningful recovery post March 2024"
+  },
+  "key_facts": [
+    {
+      "fact": "Google deprecated HCS as a standalone system on March 5, 2024, integrating it into the core ranking algorithm",
+      "source": "Google Search Central, March 2024 Core Update announcement",
+      "category": "policy"
+    },
+    {
+      "fact": "The March 2024 Core Update had a 45-day rollout — the longest core update on record",
+      "source": "Google Search Central",
+      "category": "data"
+    },
+    {
+      "fact": "The March 2024 update resulted in 40% reduction in low-quality, unoriginal content in search results",
+      "source": "Google Search Central official announcement",
+      "category": "data"
+    },
+    {
+      "fact": "Cumulative reduction in low-quality content reached approximately 45% by 2025",
+      "source": "Google Search Central official announcement",
+      "category": "data"
+    },
+    {
+      "fact": "Amsive tracked approximately 400 sites impacted by September 2023 HCU; most showed no meaningful recovery after March 2024",
+      "source": "Amsive / Lily Ray analysis",
+      "category": "data"
+    },
+    {
+      "fact": "Some sites experienced cumulative losses of 97% across September 2023 HCU and March 2024 Core Update combined",
+      "source": "GSQi / Glenn Gabe analysis",
+      "category": "data"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Will there be another standalone Helpful Content Update?",
+      "a": "No. HCS was deprecated as a standalone system in March 2024. It is now always-on core logic. There will be no separately announced HCUs."
+    },
+    {
+      "q": "Does AI-generated content automatically get demoted by HCS?",
+      "a": "No. Demotion is caused by absent firsthand experience, missing original information, and lack of expert human review — not by AI use itself."
+    },
+    {
+      "q": "What is Information Gain and why does it matter?",
+      "a": "An industry-adopted (not Google-official) concept describing unique value relative to competing pages. Content that only aggregates existing information offers near-zero information gain and faces structural ranking headwinds in 2026."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Google Search Central — Creating helpful, reliable, people-first content",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "publisher": "Google Search Central"
+    },
+    {
+      "title": "March 2024 Core Update and spam policies announcement",
+      "url": "https://developers.google.com/search/blog/2024/03/core-update-spam-policies",
+      "publisher": "Google Search Central"
+    },
+    {
+      "title": "Google Search Quality Rater Guidelines",
+      "url": "https://services.google.com/fh/files/misc/hsw-sqrg.pdf",
+      "publisher": "Google"
+    }
+  ]
+}
