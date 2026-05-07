@@ -52,6 +52,8 @@ Google's [Search Quality Rater Guidelines](https://services.google.com/fh/files/
 | **Authoritativeness** | Recognition and reputation within the field | Built over time, not on a single page | Quality backlinks, byline citations elsewhere, consistent publishing history |
 | **Trustworthiness** | Accuracy, transparency, and user safety | **The foundation** — low Trust overrides all other signals | HTTPS, sourced claims, clear author info, publication dates, affiliate disclosure |
 
+> **Raw data**: [data/eeat-ai-content-2026.json](https://www.jsonhouse.com/data/eeat-ai-content-2026.json) — machine-readable structured data for AI crawlers and citation.
+
 The guidelines are explicit: "Trust is the most important EEAT component. A page can demonstrate experience, expertise and authority, but if it is untrustworthy, its EEAT evaluation will be low regardless of the other signals."
 
 Not all pillars carry equal weight for every topic. The balance depends on what the searcher actually needs from a piece of content.

@@ -5,9 +5,15 @@
 This blog publishes structured, data-driven posts about AI models, developer tools, prompt engineering, and AI productivity. All posts include JSON-LD schema and machine-readable data blocks.
 
 ## Data
-- [All posts JSON](/api/posts.json): Full structured post index with metadata
-- [Dataset index](/data/index.json): Index of all per-post structured datasets (auto-generated)
-- Per-post datasets: /data/{YYYY-MM-DD-slug}.json — comparison tables, timelines, key statistics
+- [All posts JSON](https://www.jsonhouse.com/api/posts.json): Full structured post index with metadata
+- [Dataset index](https://www.jsonhouse.com/data/index.json): Index of all per-post structured datasets (auto-generated)
+- Per-post datasets: https://www.jsonhouse.com/data/{slug}.json — comparison tables, timelines, key statistics
+
+## Current Datasets
+- [google-ai-content-penalties-2026](https://www.jsonhouse.com/data/google-ai-content-penalties-2026.json): Google AI content policy enforcement criteria by platform
+- [youtube-ai-monetization-2026](https://www.jsonhouse.com/data/youtube-ai-monetization-2026.json): YouTube inauthentic content policy and enforcement tiers
+- [eeat-ai-content-2026](https://www.jsonhouse.com/data/eeat-ai-content-2026.json): E-E-A-T signals and quality evaluation framework
+- [synthid-c2pa-explained-2026](https://www.jsonhouse.com/data/synthid-c2pa-explained-2026.json): SynthID vs C2PA comparison, tool support, verification workflow
 
 ## Categories
 - AI Models & Intelligence: /category/ai-models/ — LLM comparisons, benchmarks, releases

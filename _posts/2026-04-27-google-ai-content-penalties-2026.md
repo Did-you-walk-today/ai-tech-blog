@@ -61,6 +61,8 @@ This distinction matters. Google evaluates every piece of content — human-writ
 | **Authoritativeness** | Is the source credible and cited by others? |
 | **Trustworthiness** | Are claims verifiable and accurate? |
 
+> **Raw data**: [data/google-ai-content-penalties-2026.json](https://www.jsonhouse.com/data/google-ai-content-penalties-2026.json) — machine-readable structured data for AI crawlers and citation.
+
 A 4,000-word AI-generated post full of generic advice and a 4,000-word human post with the same problems get treated identically. The tool used to write it is irrelevant.
 
 ### The Real Violation Categories

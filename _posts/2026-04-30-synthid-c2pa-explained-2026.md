@@ -59,6 +59,8 @@ Robustness comes from adversarial training. During development, the system runs 
 | **Robustness** | Survives JPEG compression, filtering, rotation, resizing, color adjustment |
 | **No original baseline** | No watermark-free version of a SynthID-generated image exists |
 
+> **Raw data**: [data/synthid-c2pa-explained-2026.json](https://www.jsonhouse.com/data/synthid-c2pa-explained-2026.json) — machine-readable structured data for AI crawlers and citation.
+
 By 2025, Google had applied SynthID to over 10 billion pieces of content across image, text, and video modalities. The [Gemini app verification tool](https://support.google.com/gemini/answer/16722517), added in November 2025, allows users to upload an image and check whether it carries a SynthID watermark.
 
 ## C2PA: Cryptographic Provenance in the Metadata Layer

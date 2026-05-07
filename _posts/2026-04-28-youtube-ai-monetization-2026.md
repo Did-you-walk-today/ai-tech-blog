@@ -53,6 +53,8 @@ YouTube's AI policy did not arrive overnight. It evolved across 18 months of esc
 | 2025.05.21 | AI disclosure mandatory enforcement begins — no grace period | YouTube Help |
 | 2025.07.15 | "Repetitious content" renamed to "inauthentic content" — definition expanded | YouTube Help |
 
+> **Raw data**: [data/youtube-ai-monetization-2026.json](https://www.jsonhouse.com/data/youtube-ai-monetization-2026.json) — machine-readable structured data for AI crawlers and citation.
+
 The acceleration from 2024 to 2025 is telling. Within 16 months, YouTube moved from "we recommend disclosure" to "disclose or lose monetization." The July 2025 rename is the most significant shift: the target is no longer repetition as a mechanical pattern, but inauthenticity as a content quality category. That is a meaningfully higher and more subjective bar.
 
 ## Two Policies, Two Triggers — Why Most Coverage Gets This Wrong
