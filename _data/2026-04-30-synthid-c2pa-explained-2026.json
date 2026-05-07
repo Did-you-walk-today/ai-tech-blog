@@ -261,5 +261,73 @@
     "c2pa_faq": "https://c2pa.org/faqs/",
     "cai_opensource": "https://opensource.contentauthenticity.org/",
     "google_search_ai_guidance": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
-  }
+  },
+  "key_facts": [
+    {
+      "fact": "SynthID has been applied to over 10 billion pieces of content by 2025",
+      "source": "SynthID-Image arXiv:2510.09263 (2025-10)",
+      "category": "data"
+    },
+    {
+      "fact": "C2PA specification v2.3 was released in December 2025 under a royalty-free open license",
+      "source": "C2PA Specification v2.3 (spec.c2pa.org)",
+      "category": "definition"
+    },
+    {
+      "fact": "Google auto-attaches both SynthID and C2PA to all Gemini and Vertex AI images since November 2025",
+      "source": "Google blog (November 2025)",
+      "category": "policy"
+    },
+    {
+      "fact": "Synthetic content could account for 90% of online media by 2026",
+      "source": "SynthID-Image arXiv:2510.09263 (2025-10)",
+      "category": "data"
+    },
+    {
+      "fact": "74% of survey respondents distrust photos and videos even from previously trusted media organizations",
+      "source": "SynthID-Image arXiv:2510.09263 (2025-10)",
+      "category": "data"
+    },
+    {
+      "fact": "Leica M11-P (2023) is the world's first camera with built-in C2PA hardware signing at capture time",
+      "source": "C2PA adopters list; Leica product announcement (2023)",
+      "category": "definition"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Will SynthID or C2PA become the standard?",
+      "a": "Neither replaces the other. SynthID is Google's proprietary pixel watermarking system; C2PA is an open industry standard for metadata provenance. Google's dual attachment since November 2025 demonstrates they close different gaps — SynthID survives metadata stripping; C2PA carries rich provenance detail."
+    },
+    {
+      "q": "Can SynthID watermarks be removed?",
+      "a": "Not practically. The watermark key influences pixel generation from the start, so no unwatermarked original exists. Attacks that degrade the watermark also destroy image quality to the point of unusability."
+    },
+    {
+      "q": "Does Gemini's verification tool detect all AI images?",
+      "a": "No. Gemini detects SynthID watermarks only — Google AI-generated content exclusively. For broader coverage, Adobe's Content Credentials Verify checks C2PA manifests from any compliant tool."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "SynthID official page",
+      "url": "https://deepmind.google/models/synthid/",
+      "publisher": "Google DeepMind"
+    },
+    {
+      "title": "SynthID-Image: Image watermarking at internet scale",
+      "url": "https://arxiv.org/abs/2510.09263",
+      "publisher": "Google DeepMind / arXiv"
+    },
+    {
+      "title": "C2PA Specification v2.3",
+      "url": "https://spec.c2pa.org/",
+      "publisher": "C2PA / Joint Development Foundation"
+    },
+    {
+      "title": "Content Authenticity Initiative",
+      "url": "https://opensource.contentauthenticity.org/",
+      "publisher": "CAI / Adobe"
+    }
+  ]
 }

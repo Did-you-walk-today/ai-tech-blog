@@ -86,5 +86,68 @@
     "shorts_views_alternative": 10000000,
     "review_decision_time_hours": 24,
     "source": "support.google.com/youtube/answer/72851"
-  }
+  },
+  "key_facts": [
+    {
+      "fact": "YouTube renamed 'repetitious content' to 'inauthentic content' on July 15, 2025",
+      "source": "YouTube Help (2025-07)",
+      "category": "policy"
+    },
+    {
+      "fact": "AI disclosure became mandatory enforcement with no grace period from May 21, 2025",
+      "source": "YouTube Help (2025-05)",
+      "category": "policy"
+    },
+    {
+      "fact": "YouTube applies monetization enforcement at the channel level, not the individual video level",
+      "source": "YouTube monetization policies (support.google.com/youtube/answer/1311392)",
+      "category": "policy"
+    },
+    {
+      "fact": "A true crime channel with 83,000 subscribers was terminated in 2025 for undisclosed AI murder narratives",
+      "source": "Post case study (True Crime Case Files)",
+      "category": "case_study"
+    },
+    {
+      "fact": "YouTube YPP base requirements: 1,000 subscribers and 4,000 watch hours (or 10M Shorts views) in 12 months",
+      "source": "support.google.com/youtube/answer/72851",
+      "category": "definition"
+    },
+    {
+      "fact": "Human review was added to ad suitability decisions (up to 24 hours) from March 10, 2025",
+      "source": "YouTube Help (2025-03)",
+      "category": "policy"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Does YouTube ban AI-generated videos?",
+      "a": "No. YouTube targets 'inauthentic content' — mass-produced, templated videos with little variation — not AI tools. An AI-assisted video with genuine commentary and transformation can be fully monetized."
+    },
+    {
+      "q": "Can faceless YouTube channels still get monetized in 2026?",
+      "a": "Yes. The deciding factor is not whether you show your face but whether your content provides transformation, original commentary, or a consistent editorial perspective. Static image plus AI voice with no human-added value is the highest-risk format."
+    },
+    {
+      "q": "Can one bad video demonetize my entire channel?",
+      "a": "Yes, if it is part of a detectable pattern. YouTube applies monetization enforcement at the channel level. A recurring inauthentic pattern across uploads can result in full YPP revocation, even if most videos are compliant."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "YouTube monetization policies — inauthentic content",
+      "url": "https://support.google.com/youtube/answer/1311392",
+      "publisher": "YouTube Help"
+    },
+    {
+      "title": "YouTube AI content guidelines",
+      "url": "https://www.youtube.com/howyoutubeworks/ai/",
+      "publisher": "YouTube"
+    },
+    {
+      "title": "YouTube Partner Program eligibility",
+      "url": "https://support.google.com/youtube/answer/72851",
+      "publisher": "YouTube Help"
+    }
+  ]
 }

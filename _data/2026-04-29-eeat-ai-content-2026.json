@@ -82,5 +82,68 @@
     "expertise_techniques": 5,
     "trust_signals": 6,
     "total": 18
-  }
+  },
+  "key_facts": [
+    {
+      "fact": "E-E-A-T is not a direct ranking factor — it is a Quality Rater evaluation framework that shapes how ranking algorithms are trained",
+      "source": "Google Search Quality Rater Guidelines (Sept 11, 2025)",
+      "category": "definition"
+    },
+    {
+      "fact": "'Experience' was added to E-A-T on December 15, 2022 — sixteen days after ChatGPT launched on November 30",
+      "source": "Google E-E-A-T announcement (Dec 2022)",
+      "category": "definition"
+    },
+    {
+      "fact": "Google Quality Rater Guidelines state: 'Trust is the most important EEAT component... if it is untrustworthy, its EEAT evaluation will be low regardless of the other signals'",
+      "source": "Google Search Quality Rater Guidelines",
+      "category": "definition"
+    },
+    {
+      "fact": "The September 2025 YMYL expansion added elections, civic institutions, and government trust to the high-stakes content category",
+      "source": "Google Search Quality Rater Guidelines v2025-09",
+      "category": "policy"
+    },
+    {
+      "fact": "AI-generated content is judged by the same quality benchmarks as human-written material, per Google's official guidance",
+      "source": "Google Search Central Blog (Feb 2023)",
+      "category": "policy"
+    },
+    {
+      "fact": "Google's Quality Rater Guidelines were updated September 11, 2025 and are 182 pages long",
+      "source": "services.google.com/fh/files/misc/hsw-sqrg.pdf",
+      "category": "definition"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Is E-E-A-T a direct ranking factor?",
+      "a": "No. E-E-A-T is a framework used by Google's human Quality Raters to evaluate content quality. There is no E-E-A-T score. The ratings inform algorithm training, but E-E-A-T itself is not a signal fed directly into rankings."
+    },
+    {
+      "q": "Can AI-generated content pass E-E-A-T?",
+      "a": "Yes, if humans add experience signals and take byline responsibility. The failure modes are absent firsthand experience, fabricated specifics, and AI author bylines without human oversight — all correctable through human review."
+    },
+    {
+      "q": "Why is Trust the most important E-E-A-T pillar?",
+      "a": "Trust is the precondition for everything else. Google's guidelines state explicitly that a page demonstrating high Experience, Expertise, and Authoritativeness will still receive a low E-E-A-T evaluation if Trust is compromised. Trust failures override all positive signals."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Google Search Quality Rater Guidelines (Sept 11, 2025)",
+      "url": "https://services.google.com/fh/files/misc/hsw-sqrg.pdf",
+      "publisher": "Google"
+    },
+    {
+      "title": "Google E-E-A-T announcement (Dec 2022)",
+      "url": "https://developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t",
+      "publisher": "Google Search Central"
+    },
+    {
+      "title": "Google AI content guidance (Feb 2023)",
+      "url": "https://developers.google.com/search/blog/2023/02/google-search-and-ai-content",
+      "publisher": "Google Search Central"
+    }
+  ]
 }

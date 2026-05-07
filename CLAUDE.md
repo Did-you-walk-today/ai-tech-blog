@@ -169,22 +169,144 @@ Commit both files together. Never publish a post without its data file.
 
 ## Public Data Architecture
 
-### Naming Convention (CRITICAL)
+### Data File Requirements
+
+Every `_data/YYYY-MM-DD-{slug}.json` file MUST follow this schema.
+The plugin auto-publishes these to `https://www.jsonhouse.com/data/{slug}.json`.
+
+#### Required Fields (every post — all 9)
+
+| Field | Type | Description |
+|---|---|---|
+| `schema_version` | string | Always `"1.0"` for now. Bump on breaking changes. |
+| `slug` | string | Matches the post slug exactly. NO `post_slug` — use `slug`. |
+| `title` | string | Post title (mirrors frontmatter `title`). |
+| `description` | string | Post description (mirrors frontmatter `description`). |
+| `data_updated` | string | YYYY-MM-DD format. When the data was last verified. |
+| `source_post` | string | Full URL to the post (e.g., `https://www.jsonhouse.com/posts/{slug}/`). |
+| `category` | string | Mirrors frontmatter `categories[0]`. |
+| `cluster` | string | Mirrors frontmatter `cluster`. |
+| `format` | string | Mirrors frontmatter `format` (A~G). |
+
+#### Required Content Fields (every post — all 3)
+
+| Field | Type | Description |
+|---|---|---|
+| `key_facts` | array of objects | 5-10 verifiable facts. See structure below. |
+| `faq_summary` | array of objects | 3-5 FAQ items. Subset of post's full FAQ. |
+| `primary_sources` | array of objects | 1차 출처 list. See structure below. |
+
+#### `key_facts` structure (option B — structured)
+
+```json
+"key_facts": [
+  {
+    "fact": "Google does not penalize AI content per se",
+    "source": "Google Search Central, 2023.2",
+    "category": "policy"
+  }
+]
+```
+
+- `fact`: 한 문장. 검증 가능한 사실.
+- `source`: 어디서 나왔는지. 책임 가능한 인용 단위.
+- `category`: `policy` / `data` / `trend` / `definition` / `case_study` 중 하나.
+
+#### `faq_summary` structure
+
+```json
+"faq_summary": [
+  {
+    "q": "Question text",
+    "a": "Concise answer (1-3 sentences)"
+  }
+]
+```
+
+#### `primary_sources` structure
+
+```json
+"primary_sources": [
+  {
+    "title": "Source title",
+    "url": "https://...",
+    "publisher": "Google Search Central"
+  }
+]
+```
+
+#### Variable Fields (use only when applicable)
+
+| Field | When to use | Format |
+|---|---|---|
+| `comparison_data` | Format A (Tool comparison), F (Benchmark) | Object with `dimensions` and `entries` |
+| `timeline` | Policy/history posts | Array of `{date, event, source}` |
+| `numerical_data` | Statistics/benchmark posts | Object with `metrics` array |
+| `code_examples` | Format C (Technical guide) | Array of `{language, snippet, description}` |
+
+#### Field Sourcing Rule (CRITICAL)
+
+When generating or updating data files:
+- **Extract from the published post body — DO NOT invent.**
+- If a field has no corresponding content in the post, omit it (variable fields) or ask the user (required fields).
+- `title`, `description`, `cluster`, `format`, `category` are **manually mirrored** from frontmatter (not auto-synced). When the post's frontmatter changes, update the data file in the same commit.
+
+#### Naming Convention (CRITICAL)
 
 The plugin auto-publishes any `_data/` file matching `YYYY-MM-DD-*.json`.
 
 **RULE**: Date prefix means PUBLIC.
 
 - Post-specific data (PUBLIC): `_data/YYYY-MM-DD-{slug}.json`
-- Site config data (PRIVATE): `_data/{name}.yml` or `_data/{name}.json`
-  (NO date prefix — examples: `authors.yml`, `navigation.yml`)
+- Site config data (PRIVATE): `_data/{name}.yml` or `_data/{name}.json` (NO date prefix — examples: `authors.yml`, `navigation.yml`)
 
-NEVER prefix non-post data with a date. A file like
-`_data/2026-05-03-authors.json` would be exposed publicly.
+NEVER prefix non-post data with a date. A file like `_data/2026-05-03-authors.json` would be exposed publicly.
 
-DO NOT create a top-level `data/` directory in the project root.
-The plugin generates this at build time. Manual creation causes
-permalink conflicts.
+DO NOT create a top-level `data/` directory in the project root. The plugin generates this at build time. Manual creation causes permalink conflicts.
+
+#### Linking Data Files in Post Body
+
+Every post must include a link to its data file. Recommended placement:
+- After the first comparison table or JSON block
+- Format: `> **Raw data**: [data/{slug}.json](https://www.jsonhouse.com/data/{slug}.json) — machine-readable structured data for AI crawlers and citation.`
+
+This signals AI crawlers that machine-readable data is available.
+
+#### Example: Minimal Valid File
+
+```json
+{
+  "schema_version": "1.0",
+  "slug": "synthid-c2pa-explained-2026",
+  "title": "SynthID and C2PA: How AI Image Verification Works in 2026",
+  "description": "SynthID embeds invisible pixel watermarks. C2PA signs metadata. They're complementary layers, not competitors.",
+  "data_updated": "2026-04-27",
+  "source_post": "https://www.jsonhouse.com/posts/synthid-c2pa-explained-2026/",
+  "category": "AI Trust",
+  "cluster": "CLUSTER_AI_CONTENT_POLICY",
+  "format": "C",
+  "key_facts": [
+    {
+      "fact": "SynthID and C2PA operate on different layers — pixel vs metadata",
+      "source": "SynthID-Image paper (arXiv 2510.09263)",
+      "category": "definition"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Will SynthID or C2PA become the standard?",
+      "a": "Neither replaces the other. Google attaches both automatically since November 2025 because they cover different attack surfaces."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "SynthID official page",
+      "url": "https://deepmind.google/models/synthid/",
+      "publisher": "Google DeepMind"
+    }
+  ]
+}
+```
 
 ## Quality Score Formula
 

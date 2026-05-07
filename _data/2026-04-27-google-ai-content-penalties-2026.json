@@ -70,5 +70,68 @@
     { "signal": "Expertise", "description": "Does the author have deep subject knowledge?" },
     { "signal": "Authoritativeness", "description": "Is the source credible and cited by others?" },
     { "signal": "Trustworthiness", "description": "Are claims verifiable and accurate?" }
+  ],
+  "key_facts": [
+    {
+      "fact": "Google does not penalize AI content per se — it penalizes content created primarily to manipulate search rankings",
+      "source": "Google Search Central Blog, February 2023",
+      "category": "policy"
+    },
+    {
+      "fact": "The December 2025 Core Update caused an average 52% visibility loss for e-commerce thin product and review pages",
+      "source": "ALM Corp, Google December 2025 Core Update: Complete Guide",
+      "category": "data"
+    },
+    {
+      "fact": "YMYL health content saw 67% average visibility loss in the December 2025 Core Update",
+      "source": "ALM Corp, Google December 2025 Core Update: Complete Guide",
+      "category": "data"
+    },
+    {
+      "fact": "Affiliate review sites reviewing products they never used saw a 71% visibility drop in December 2025",
+      "source": "ALM Corp, Google December 2025 Core Update: Complete Guide",
+      "category": "data"
+    },
+    {
+      "fact": "YouTube mandatory AI disclosure enforcement began May 21, 2025 with no grace period",
+      "source": "YouTube Help (2025-05)",
+      "category": "policy"
+    },
+    {
+      "fact": "Google Gemini, Vertex AI, and Google Ads auto-attach both SynthID and C2PA metadata to generated images since November 2025",
+      "source": "Google blog (November 2025)",
+      "category": "policy"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Does Google ban AI-generated blog posts?",
+      "a": "No. Google's official policy states that using AI to create content is not a guideline violation. What gets penalized is content created primarily to manipulate search rankings, not AI use itself."
+    },
+    {
+      "q": "Will my YouTube channel be demonetized for using AI voice?",
+      "a": "Not automatically. AI voices are permitted, but a video consisting solely of static images plus AI voice with no added editorial value is classified as 'AI slop' under the July 2025 YPP policy and loses monetization eligibility."
+    },
+    {
+      "q": "What's the difference between AI content and 'AI slop'?",
+      "a": "'AI slop' is a 2025 industry term for mass-produced, low-quality automated content — not all AI content. Google and YouTube target AI slop (template repetition, no human review, fabricated data) while permitting AI-assisted content that demonstrates genuine expertise."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Google Search Central Blog — AI content guidance (Feb 2023)",
+      "url": "https://developers.google.com/search/blog/2023/02/google-search-and-ai-content",
+      "publisher": "Google Search Central"
+    },
+    {
+      "title": "Using generative AI in your content — official Search documentation",
+      "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+      "publisher": "Google Search Central"
+    },
+    {
+      "title": "Google December 2025 Core Update: Complete Guide",
+      "url": "https://almcorp.com/blog/google-december-2025-core-update-complete-guide/",
+      "publisher": "ALM Corp"
+    }
   ]
 }
