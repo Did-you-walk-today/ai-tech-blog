@@ -1,0 +1,85 @@
+---
+permalink: /robots.txt
+# The robots rules
+---
+
+# robots.txt for jsonhouse.com
+# All content is intentionally machine-readable.
+# AI crawlers are explicitly welcome.
+
+User-agent: *
+Disallow: /norobots/
+Allow: /
+
+# --- OpenAI ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# --- Anthropic ---
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# --- Google (Gemini / AI Overviews) ---
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# --- Perplexity ---
+User-agent: PerplexityBot
+Allow: /
+
+# --- Meta ---
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# --- Apple ---
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Cohere ---
+User-agent: cohere-ai
+Allow: /
+
+# --- Common Crawl (AI training datasets) ---
+User-agent: CCBot
+Allow: /
+
+# --- Diffbot ---
+User-agent: Diffbot
+Allow: /
+
+# --- ByteDance ---
+User-agent: Bytespider
+Allow: /
+
+# --- AI2 (Allen Institute) ---
+User-agent: AI2Bot
+Allow: /
+
+# Machine-readable endpoints
+# /api/posts.json  — full post index
+# /data/index.json — dataset discovery
+# /data/{slug}.json — per-post structured data
+# /llms.txt        — LLM-friendly site overview
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}

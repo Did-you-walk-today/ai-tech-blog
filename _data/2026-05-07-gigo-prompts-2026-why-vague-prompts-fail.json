@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "slug": "gigo-prompts-2026-why-vague-prompts-fail",
+  "title": "GIGO Prompts 2026: Why Vague Prompts Fail (Data + Fix)",
+  "description": "Vague prompts fail because LLMs predict probability, not intent. Here's the GIGO mechanism behind AI hallucination — and a 5-element template to fix it.",
+  "data_updated": "2026-05-07",
+  "source_post": "https://www.jsonhouse.com/posts/gigo-prompts-2026-why-vague-prompts-fail/",
+  "category": "Prompt Engineering",
+  "cluster": "CLUSTER_PROMPTS",
+  "format": "C",
+  "comparison_data": {
+    "title": "Hallucination Rates by Task Type and Prompt Quality",
+    "dimensions": ["task_type", "hallucination_rate", "prompt_quality", "source"],
+    "entries": [
+      {
+        "task_type": "Open-ended generation",
+        "hallucination_rate": "40–80%",
+        "prompt_quality": "Low specificity",
+        "source": "2025–2026 survey aggregates (Frontiers in AI)"
+      },
+      {
+        "task_type": "Legal citation generation",
+        "hallucination_rate": "58–88%",
+        "prompt_quality": "Low specificity",
+        "source": "2025–2026 survey aggregates (Frontiers in AI)"
+      },
+      {
+        "task_type": "Medical Q&A without grounding",
+        "hallucination_rate": "43–64%",
+        "prompt_quality": "Low specificity",
+        "source": "2025–2026 survey aggregates (Frontiers in AI)"
+      },
+      {
+        "task_type": "Closed-domain QA",
+        "hallucination_rate": "10–20%",
+        "prompt_quality": "Moderate specificity",
+        "source": "2025–2026 survey aggregates (Frontiers in AI)"
+      },
+      {
+        "task_type": "Summarization with source grounding",
+        "hallucination_rate": "<2%",
+        "prompt_quality": "High specificity",
+        "source": "2025–2026 survey aggregates (Frontiers in AI)"
+      },
+      {
+        "task_type": "Frontier model best-case (Apr 2026)",
+        "hallucination_rate": "3.1%",
+        "prompt_quality": "Structured evaluation",
+        "source": "5-model frontier benchmark, April 2026"
+      },
+      {
+        "task_type": "Frontier model worst-case (Apr 2026)",
+        "hallucination_rate": "19.1%",
+        "prompt_quality": "Structured evaluation",
+        "source": "5-model frontier benchmark, April 2026"
+      }
+    ]
+  },
+  "hallucination_reduction": [
+    {
+      "study": "Nature digital medicine prompt mitigation study (2025)",
+      "reduction_percentage_points": 22,
+      "method": "Prompt-based mitigation techniques",
+      "note": "approximate — stated as ~22pp in source"
+    },
+    {
+      "study": "Medical AI structured prompt study (2025)",
+      "reduction_percentage_points": 33,
+      "method": "Structured prompt templates vs. unstructured"
+    },
+    {
+      "study": "OpenAI prompting guide study (2024)",
+      "metric": "annotator_preference",
+      "preference_percentage": 73,
+      "method": "Human annotator evaluation of structured vs. unstructured outputs"
+    }
+  ],
+  "key_facts": [
+    {
+      "fact": "Structured prompt templates reduced hallucination by 33 percentage points compared to unstructured prompts in a 2025 medical AI study",
+      "source": "Medical AI structured prompt study (2025)",
+      "category": "data"
+    },
+    {
+      "fact": "Prompt-based mitigation techniques reduced hallucination by approximately 22 percentage points according to a 2025 Nature digital medicine study",
+      "source": "Nature digital medicine, prompt mitigation study (2025)",
+      "category": "data"
+    },
+    {
+      "fact": "73% of human annotators preferred outputs from structured prompts over unstructured prompts",
+      "source": "OpenAI prompting guide study (2024)",
+      "category": "data"
+    },
+    {
+      "fact": "Frontier models in April 2026 show hallucination rates ranging from 3.1% (best-case) to 19.1% (worst-case) — a 16-point gap attributable to prompt quality, not model capability",
+      "source": "5-model frontier hallucination benchmark (April 2026)",
+      "category": "data"
+    },
+    {
+      "fact": "Open-ended generation tasks with low-specificity prompts produce hallucination rates of 40–80%",
+      "source": "2025–2026 survey aggregates (Frontiers in AI)",
+      "category": "data"
+    },
+    {
+      "fact": "Summarization tasks with source grounding produce hallucination rates below 2%",
+      "source": "2025–2026 survey aggregates (Frontiers in AI)",
+      "category": "data"
+    },
+    {
+      "fact": "LLMs compute probability of next token given prior tokens — they do not 'understand' intent; vague prompts force the model to default to training data averages",
+      "source": "Transformer architecture fundamentals; Frontiers in AI (2025)",
+      "category": "definition"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Are longer, more specific prompts slower and more expensive?",
+      "a": "Marginally. The cost of 200 extra tokens (~0.02 cents) is orders of magnitude smaller than the cost of one hallucination. Specificity is a cost-reduction strategy."
+    },
+    {
+      "q": "Does GIGO apply equally to Claude, GPT-4, and Gemini?",
+      "a": "Yes. Next-token probability prediction is identical across all transformer-based LLMs. All models benefit from specific prompts."
+    },
+    {
+      "q": "Will better models eventually make prompt specificity unnecessary?",
+      "a": "Unlikely. The GIGO principle is structural — a model cannot recover intent that was never specified. Agentic workflows make specificity more critical over time."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Anthropic prompt engineering documentation",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "OpenAI prompting guide (2024)",
+      "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "Frontiers in AI hallucination survey (2025)",
+      "url": "https://www.frontiersin.org/journals/artificial-intelligence",
+      "publisher": "Frontiers in AI"
+    }
+  ]
+}

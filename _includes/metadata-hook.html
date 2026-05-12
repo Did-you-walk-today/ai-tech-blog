@@ -1,3 +1,8 @@
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4708234819958995"
      crossorigin="anonymous"></script>
+
+{% if page.url contains '/posts/' %}
+  {% assign data_key = page.date | date: '%Y-%m-%d' | append: '-' | append: page.slug %}
+  <link rel="alternate" type="application/json" href="{{ site.url }}/data/{{ data_key }}.json" title="{{ page.title | xml_escape }} — Structured Data">
+{% endif %}
