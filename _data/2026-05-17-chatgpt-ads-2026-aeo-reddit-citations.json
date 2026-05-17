@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "slug": "chatgpt-ads-2026-aeo-reddit-citations",
+  "title": "ChatGPT Ads 2026: AEO Traffic and Reddit Citations",
+  "description": "ChatGPT launched ads on Feb 9, 2026 at $60 CPM. AI traffic converts 4–23x better than organic. Reddit drives 40% of AI citations across all major platforms.",
+  "data_updated": "2026-05-17",
+  "source_post": "https://www.jsonhouse.com/posts/chatgpt-ads-2026-aeo-reddit-citations/",
+  "category": "ai-models-intelligence",
+  "cluster": "CLUSTER_LLM",
+  "format": "D",
+  "key_facts": [
+    {
+      "fact": "ChatGPT launched ads on February 9, 2026 for Free and Go-tier users in the United States at a CPM of $60",
+      "source": "OpenAI announcement + TechCrunch, February 2026",
+      "category": "data"
+    },
+    {
+      "fact": "ChatGPT advertising generated $100 million in revenue in its first six weeks of operation",
+      "source": "2POINT 2026 industry guide, March 2026",
+      "category": "data"
+    },
+    {
+      "fact": "51% of B2B software buyers now start product research with AI chatbots more than Google, up from 29% twelve months prior",
+      "source": "G2 2026 AI Search Insight Report, 1,076 B2B decision-makers, March 2026",
+      "category": "trend"
+    },
+    {
+      "fact": "Reddit accounts for approximately 40% of all AI citations across ChatGPT, Perplexity, Google AI Overviews, Gemini, and Claude",
+      "source": "5W AI Platform Citation Index 2026, 680M citations analyzed, August 2024–April 2026",
+      "category": "data"
+    },
+    {
+      "fact": "AI referral traffic averages ~1% of total website traffic but converts at 4.4–23x the rate of standard organic search",
+      "source": "Conductor 2026 benchmarks; Ahrefs June 2025; Semrush 2026; Seer Interactive; Opollo 312-firm study",
+      "category": "data"
+    },
+    {
+      "fact": "ChatGPT drives 87.4% of all AI referral traffic across tracked platforms",
+      "source": "Conductor 2026 AI Traffic Benchmark",
+      "category": "data"
+    },
+    {
+      "fact": "Overlap between Google top-10 rankings and AI Overview citations fell from 75% in mid-2025 to 17–38% by early 2026",
+      "source": "Leapd, Semrush, Conductor tracking convergence, early 2026",
+      "category": "trend"
+    },
+    {
+      "fact": "ZeroClick inserts advertiser context into the AI reasoning process before answer generation, not after",
+      "source": "ZeroClick company announcement; $55M funding round September 2025; 10,000+ advertisers reported",
+      "category": "definition"
+    },
+    {
+      "fact": "60% of Google searches end without a click; in Google AI Mode the zero-click rate reaches 93%",
+      "source": "Search Engine Land March 2026; Sparktoro zero-click research",
+      "category": "data"
+    },
+    {
+      "fact": "85% of brand mentions in AI search results come from third-party pages, not the brand's own domain",
+      "source": "AirOps brand visibility analysis, 2026",
+      "category": "data"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Are ChatGPT ads available globally?",
+      "a": "As of May 2026, ChatGPT ads are live in the United States only, expanding to Canada, Australia, and New Zealand. No confirmed timeline for Europe or Asia."
+    },
+    {
+      "q": "Does AEO optimization drive measurable traffic?",
+      "a": "AI referral traffic is ~1% of total volume but converts at 4.4–23x standard organic rates. Strongest in B2B, SaaS, research categories. Mixed results in pure ecommerce."
+    },
+    {
+      "q": "Why does AI cite Reddit so much?",
+      "a": "Structural signals: public indexing scale, Google licensing agreement, community discussion volume. Reddit cited in 92.8% of AI search opportunities analyzed by 5W."
+    },
+    {
+      "q": "Can small businesses advertise on ChatGPT?",
+      "a": "Yes since April 2026. Self-serve ad manager launched with no minimum spend. Initial beta required $200,000+ commitments. CPC and CPM bidding both available."
+    },
+    {
+      "q": "Will AI answers become less trustworthy as ads grow?",
+      "a": "No early consumer trust impact per OpenAI's March 2026 internal data, but ZeroClick's reasoning-layer ad model introduces influence that labeling cannot fully disclose."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "OpenAI ChatGPT advertising launch announcement",
+      "url": "https://openai.com/",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "5W AI Platform Citation Index 2026 (680M citations)",
+      "url": "https://www.5wpr.com/",
+      "publisher": "5WPR"
+    },
+    {
+      "title": "G2 2026 AI Search Insight Report (1,076 B2B decision-makers)",
+      "url": "https://www.g2.com/",
+      "publisher": "G2"
+    },
+    {
+      "title": "Tinuiti Q1 2026 AI Citations Report",
+      "url": "https://tinuiti.com/",
+      "publisher": "Tinuiti"
+    },
+    {
+      "title": "Conductor 2026 AI Traffic Benchmark",
+      "url": "https://www.conductor.com/",
+      "publisher": "Conductor"
+    },
+    {
+      "title": "Ahrefs internal AI traffic analysis (June 2025)",
+      "url": "https://ahrefs.com/",
+      "publisher": "Ahrefs"
+    },
+    {
+      "title": "Semrush 2026 cross-industry AI traffic study",
+      "url": "https://www.semrush.com/",
+      "publisher": "Semrush"
+    },
+    {
+      "title": "Opollo 312-firm AI referral study (Jan 2025–Jan 2026)",
+      "url": "https://opollo.com/",
+      "publisher": "Opollo"
+    }
+  ],
+  "comparison_data": {
+    "dimensions": ["Platform", "Reddit citation rate", "Preferred content type"],
+    "entries": [
+      {
+        "Platform": "ChatGPT",
+        "Reddit citation rate": "~5% of all citations",
+        "Preferred content type": "Product pages (20.1% citation rate, vs Perplexity's 0.4%)"
+      },
+      {
+        "Platform": "Perplexity",
+        "Reddit citation rate": "24–46% of all citations",
+        "Preferred content type": "Recent content (<12 months), Reddit, comparison threads"
+      },
+      {
+        "Platform": "Google AI Overviews",
+        "Reddit citation rate": "44% of social citations",
+        "Preferred content type": "Authoritative sources overall; Reddit for social/opinion queries"
+      },
+      {
+        "Platform": "Gemini",
+        "Reddit citation rate": "~0.1% of citations",
+        "Preferred content type": "Traditional journalism, Schema-enhanced structured content"
+      },
+      {
+        "Platform": "Claude",
+        "Reddit citation rate": "Varies by topic",
+        "Preferred content type": "Legacy journalism, academic sources"
+      }
+    ]
+  },
+  "numerical_data": {
+    "metrics": [
+      {
+        "label": "ChatGPT ads launch date",
+        "value": "2026-02-09",
+        "unit": "date",
+        "source": "OpenAI announcement"
+      },
+      {
+        "label": "ChatGPT ad CPM",
+        "value": 60,
+        "unit": "USD",
+        "source": "OpenAI + TechCrunch, Feb 2026"
+      },
+      {
+        "label": "Revenue first 6 weeks",
+        "value": 100000000,
+        "unit": "USD",
+        "source": "2POINT 2026 industry guide"
+      },
+      {
+        "label": "Reddit share of all AI citations",
+        "value": 40,
+        "unit": "percent",
+        "source": "5W AI Platform Citation Index 2026, 680M citations"
+      },
+      {
+        "label": "AI referral traffic as share of total",
+        "value": 1.08,
+        "unit": "percent",
+        "source": "Conductor 2026"
+      },
+      {
+        "label": "Ahrefs AI traffic conversion premium",
+        "value": 23,
+        "unit": "times vs organic",
+        "source": "Ahrefs internal June 2025"
+      },
+      {
+        "label": "Semrush AI conversion premium",
+        "value": 4.4,
+        "unit": "times vs organic",
+        "source": "Semrush 2026 cross-industry"
+      },
+      {
+        "label": "Google zero-click rate (standard)",
+        "value": 60,
+        "unit": "percent",
+        "source": "Search Engine Land March 2026"
+      },
+      {
+        "label": "Google zero-click rate (AI Mode)",
+        "value": 93,
+        "unit": "percent",
+        "source": "Search Engine Land March 2026"
+      },
+      {
+        "label": "ChatGPT share of AI referral traffic",
+        "value": 87.4,
+        "unit": "percent",
+        "source": "Conductor 2026"
+      }
+    ]
+  }
+}
