@@ -1,0 +1,279 @@
+---
+# ═══════════════════════════════════════════════════════════
+# _layouts/post.html — Schema Stacking Layout
+# 위치: jsonhouse 레포 루트의 _layouts/post.html에 저장
+# 역할: front matter의 schema_types를 보고 JSON-LD 자동 분기
+# ═══════════════════════════════════════════════════════════
+layout: default
+---
+
+<article class="post" itemscope itemtype="https://schema.org/Article">
+
+  {% comment %} ═══════════════════════════════════════════════════
+       META & OPEN GRAPH
+       ═══════════════════════════════════════════════════════ {% endcomment %}
+
+  <meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">
+  <meta itemprop="dateModified" content="{{ page.data_updated | default: page.date | date_to_xmlschema }}">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        Published: {{ page.date | date: "%Y-%m-%d" }}
+      </time>
+      {% if page.data_updated %}
+        · <time datetime="{{ page.data_updated | date_to_xmlschema }}">
+          Updated: {{ page.data_updated | date: "%Y-%m-%d" }}
+        </time>
+      {% endif %}
+      · Format: {{ page.format }}
+      {% if page.category %} · Category: {{ page.category }}{% endif %}
+    </p>
+  </header>
+
+  {% comment %} ═══════════════════════════════════════════════════
+       MAIN CONTENT — 본문이 여기에 렌더링
+       ═══════════════════════════════════════════════════════ {% endcomment %}
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% comment %} ═══════════════════════════════════════════════════
+       FOOTER — 신뢰도 시그널 (data_updated 명시 반복)
+       ═══════════════════════════════════════════════════════ {% endcomment %}
+
+  <footer class="post-footer">
+    <p class="data-freshness">
+      <strong>Data verified:</strong> {{ page.data_updated | default: page.date | date: "%Y-%m-%d" }}
+      {% if page.update_frequency %} · <strong>Update frequency:</strong> {{ page.update_frequency }}{% endif %}
+    </p>
+  </footer>
+</article>
+
+{% comment %} ═══════════════════════════════════════════════════════════
+     ─────────────────────────────────────────────────────────────
+     SCHEMA STACKING — JSON-LD 자동 주입
+     ─────────────────────────────────────────────────────────────
+     front matter의 schema_types 배열을 보고 분기.
+     포맷별로 자동으로 적절한 schema 조합을 생성.
+     ═══════════════════════════════════════════════════════════════ {% endcomment %}
+
+{% comment %} ── Schema 1: Article (모든 포스트 공통) ─────────────────── {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.data_updated | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Organization",
+    "name": "jsonhouse.com",
+    "url": "{{ site.url }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "jsonhouse.com",
+    "url": "{{ site.url }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "keywords": {{ page.tags | jsonify }},
+  "articleSection": {{ page.category | jsonify }},
+  "inLanguage": "{{ page.lang | default: 'en' }}"
+}
+</script>
+
+{% comment %} ── Schema 2: Product (FORMAT A — Tool Comparison) ──────── {% endcomment %}
+{% if page.schema_types contains "Product" and page.products_compared %}
+  {% for product in page.products_compared %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ product.name | jsonify }},
+  "brand": {
+    "@type": "Brand",
+    "name": {{ product.brand | jsonify }}
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "{{ product.price | remove: '$' | remove: '/month' | remove: '/mo' }}",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "{{ site.url }}{{ page.url }}"
+  }{% if product.rating %},
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ product.rating }}",
+    "ratingCount": "{{ product.rating_count | default: 1 }}",
+    "bestRating": "5"
+  }{% endif %},
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "{{ product.rating | default: 4.5 }}",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "jsonhouse.com"
+    },
+    "datePublished": "{{ page.data_updated | default: page.date | date_to_xmlschema }}"
+  }
+}
+</script>
+  {% endfor %}
+{% endif %}
+
+{% comment %} ── Schema 3: HowTo (FORMAT C, E) ──────────────────────── {% endcomment %}
+{% if page.schema_types contains "HowTo" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "totalTime": "{{ page.howto.total_time | default: page.workflow.total_time | default: 'PT30M' }}",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": "{{ page.howto.estimated_cost | default: '0' | remove: '$' }}"
+  }{% if page.howto.tools_needed or page.workflow.tested_with %},
+  "tool": [
+    {% assign tools = page.howto.tools_needed | default: page.workflow.tested_with %}
+    {% for tool in tools %}
+    {
+      "@type": "HowToTool",
+      "name": {{ tool | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]{% endif %},
+  "step": [
+    {% if page.howto_steps and page.howto_steps.size > 0 %}
+      {% for s in page.howto_steps %}
+    {
+      "@type": "HowToStep",
+      "position": {{ s.position }},
+      "name": {{ s.name | jsonify }},
+      "text": {{ s.text | jsonify }},
+      "url": {{ s.url | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    {% else %}
+    {
+      "@type": "HowToStep",
+      "name": "See full guide",
+      "url": "{{ site.url }}{{ page.url }}",
+      "text": "Full step-by-step instructions in the article body."
+    }
+    {% endif %}
+  ]
+}
+</script>
+{% endif %}
+
+{% comment %} ── Schema 4: Dataset (FORMAT D, F) ────────────────────── {% endcomment %}
+{% if page.schema_types contains "Dataset" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "{{ page.dataset.name | default: page.benchmark.name | default: page.title }}",
+  "description": "{{ page.dataset.description | default: page.description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.data_updated | default: page.date | date_to_xmlschema }}",
+  "license": "{{ page.dataset.license | default: 'https://creativecommons.org/licenses/by/4.0/' }}",
+  "creator": {
+    "@type": "Organization",
+    "name": "{{ page.dataset.creator | default: 'jsonhouse.com' }}",
+    "url": "{{ site.url }}"
+  },
+  "isAccessibleForFree": true,
+  "keywords": {{ page.tags | jsonify }}{% if page.dataset.distribution_url or page.benchmark.raw_data_url %},
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "{{ page.dataset.distribution_url | default: page.benchmark.raw_data_url }}"
+    }
+  ]{% endif %}{% if page.dataset.variable_measured %},
+  "variableMeasured": {{ page.dataset.variable_measured | jsonify }}{% endif %}{% if page.dataset.spatial_coverage %},
+  "spatialCoverage": {{ page.dataset.spatial_coverage | jsonify }}{% endif %}{% if page.dataset.temporal_coverage %},
+  "temporalCoverage": {{ page.dataset.temporal_coverage | jsonify }}{% endif %}
+}
+</script>
+{% endif %}
+
+{% comment %} ── Schema 5: FAQPage (거의 모든 포맷) ──────────────────────
+     본문의 ## Frequently Asked Questions 섹션을 자동 추출하는 게 가장 깔끔.
+     Jekyll plugin 없이 하려면 작성자가 front matter에 명시하거나,
+     아래처럼 본문 패턴을 정규식 캡처 (Liquid에서는 제한적).
+     Production-ready 방식: _plugins/faq_extractor.rb 추가 권장.
+
+     여기서는 front matter에 faqs 배열이 있으면 사용하는 방식으로 처리.
+     ─────────────────────────────────────────────────────────── {% endcomment %}
+{% if page.schema_types contains "FAQPage" and page.faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in page.faqs %}
+    {
+      "@type": "Question",
+      "name": {{ faq.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ faq.a | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% comment %} ── Schema 6: BreadcrumbList (모든 포스트) ─────────────── {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ page.category | default: 'Posts' }}",
+      "item": "{{ site.url }}/category/{{ page.category | default: 'posts' | downcase }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ page.title | jsonify }},
+      "item": "{{ site.url }}{{ page.url }}"
+    }
+  ]
+}
+</script>
+
+{% comment %} ═══════════════════════════════════════════════════════════
+     OPEN GRAPH & TWITTER CARD — head에서 분리해 여기서도 확인 가능
+     실제로는 _includes/head.html에 두는 게 일반적
+     ═══════════════════════════════════════════════════════════════ {% endcomment %}
