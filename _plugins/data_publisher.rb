@@ -37,6 +37,16 @@ module Jekyll
         page.data['layout'] = false
         site.pages << page
 
+        # Posts, llms.txt, and CLAUDE.md all reference the date-less form
+        # /data/{slug}.json, so publish an alias alongside the dated file.
+        slug = data['slug']
+        if slug.is_a?(String) && !slug.empty? && slug != key
+          alias_page = PageWithoutAFile.new(site, site.source, 'data', "#{slug}.json")
+          alias_page.content = page.content
+          alias_page.data['layout'] = false
+          site.pages << alias_page
+        end
+
         index_entries[key] = {
           'url'          => "/data/#{key}.json",
           'slug'         => data['slug'],
