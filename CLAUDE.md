@@ -9,7 +9,46 @@ This file is automatically loaded by Claude Code. It contains all context needed
 - **Domain**: https://www.jsonhouse.com
 - **Audience**: AI power users, developers, engineers (global)
 - **Core value**: "Structured data you can actually USE"
-- **Stage**: Phase 1 (months 1-3) — launch and first 20+ posts
+- **Stage**: Phase 2 (2026-07 ~) — 발행 재가동(주 2회) + 측정 인프라 구축. Full plan: `_plans/2026-07-09-phase2-roadmap.md`
+
+## Mission & Strategy (READ FIRST — why this blog exists)
+
+Surface goal: passive income ladder (AdSense → Gumroad → 제휴 → API billing).
+**Real goal: build a data asset for the AI-agent era.** The endpoint is becoming
+a data source that AI agents cite and eventually pay for. Every technical
+investment (llms.txt, /api/posts.json, /data/*.json, JSON-LD, bot logs, future
+MCP server) exists to serve Phase 3 (agent API billing / data licensing).
+
+Operating principles derived from this goal:
+
+1. **A post without its data file is a liability, not an asset.** Every post
+   ships as a 3-piece set: English post + `_data/` JSON + Korean review report.
+2. **License is deliberately NOT declared** (awareness-first strategy, decided
+   2026-07-09). Do NOT add `license` fields to data files, JSON-LD, or llms.txt.
+   Do not re-propose licensing unless 기웅 changes this policy.
+3. **Consumption data is irreplaceable.** Bot crawls, AI citations, AI referrals
+   from the past cannot be recovered. Systems that capture them come first.
+   Bot logging spec (separate dedicated session): `_plans/2026-07-09-bot-logging-cloudflare-spec.md`
+4. **Time-series data is the moat.** Weekly pricing snapshots in
+   `_data/pricing_history/` compound into something competitors cannot copy.
+   Never skip a Monday snapshot; never backfill one.
+5. **Judge every proposal by: "Can an AI agent consume this?"**
+
+Publishing cadence (Phase 2): **2 posts per week** — Tuesday (data-type:
+Format D/F/A) and Friday (analysis-type). Do not promise or plan more.
+
+## Operating Skills (use these — don't improvise the workflow)
+
+Project skills in `.claude/skills/` encode the standard workflows:
+
+| Skill | When |
+|---|---|
+| `new-post` | Any post creation request (Phase 1–5, stops at human review) |
+| `publish-post` | After 기웅 approves a draft (Phase 6) |
+| `pricing-snapshot` | Every Monday, or any pricing-data refresh request |
+
+Hard boundary: **Phase 5 (human review) is never skipped.** No post moves to
+`_posts/` or gets committed without explicit approval from 기웅.
 
 ## Language Policy
 

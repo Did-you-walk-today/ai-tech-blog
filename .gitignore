@@ -10,3 +10,6 @@ pipeline_output/*.tmp
 *.log
 node_modules/
 .claude/settings.local.json
+
+# Internal planning docs — strategy/billing plans, keep out of the public repo
+_plans/
