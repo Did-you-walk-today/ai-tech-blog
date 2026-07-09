@@ -18,12 +18,18 @@ description: jsonhouse.com 포스트 제작 전체 워크플로 (Phase 1~5). 주
 - `STYLE_GUIDE.md` — 매 포스트마다 다시 읽는다 (스타일 3종 + 5단계 구조)
 - `SEO_GUIDE.md`, `SOURCES.md`
 - `CLAUDE.md`의 Mission & Strategy / SEO Rules / Hard Reject 섹션
+- **데이터형(Format A/D/F)이면 `PRIMARY_SOURCE_GUIDE.md` 필독** — 주제가
+  1차 출처 판별 테스트를 통과해야 하고, 필수 8요소(Methodology, Limitations,
+  갱신 약속, Changelog 등)를 본문에 포함해야 한다
 
 ## Step 1 — 주제·슬러그 확정
 
 - 3대 클러스터(CLUSTER_LLM / CLUSTER_DEVTOOLS / CLUSTER_PROMPTS) 중 소속 명시.
   비어있는 클러스터의 필러(pillar) 포스트가 항상 우선순위.
 - 요일 슬롯: 화요일 = 데이터형(Format D/F/A), 금요일 = 분석형
+- 데이터형이면 `PRIMARY_SOURCE_GUIDE.md`의 주제 선정 체크리스트를 통과시키고,
+  착수 전 "기획 승인 요청 형식"(경로 ①~④, 판별 테스트 논리, 갱신 약속,
+  경쟁 우위 축)으로 기웅에게 보고한다
 - slug 형식: 소문자-하이픈-연도 (예: `llm-api-pricing-2026`)
 - 중복 확인: `grep -r "{slug}" _posts/ _drafts/`
 - **슬러그는 확정 후 절대 변경 금지** — 과거 슬러그 변경으로 내부 링크 9개가 깨진 이력 있음
