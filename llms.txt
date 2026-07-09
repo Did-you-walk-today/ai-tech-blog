@@ -33,7 +33,7 @@ This blog publishes structured, data-driven posts about AI models, developer too
 - CLUSTER_AEO: Answer Engine Optimization, entity optimization, citation tracking
 
 ## Update Frequency
-- Posts: 3 per week (typically Monday, Wednesday, Friday)
+- Posts: 2 per week (Tuesday: data-type, Friday: analysis-type)
 - Pricing data: weekly (every Monday)
 - Benchmarks: monthly
 
