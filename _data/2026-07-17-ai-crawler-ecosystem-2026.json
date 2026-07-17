@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "slug": "ai-crawler-ecosystem-2026",
+  "title": "AI Crawler Ecosystem 2026: Who Scrapes the Web and Who Pays",
+  "description": "Machines now generate 57.5% of web HTML traffic. Who the AI crawlers are, what they take per visitor sent, and how pay-per-crawl rewrites the web's deal.",
+  "data_updated": "2026-07-17",
+  "source_post": "https://www.jsonhouse.com/posts/ai-crawler-ecosystem-2026/",
+  "category": "industry-analysis",
+  "cluster": "CLUSTER_AEO",
+  "format": "D",
+  "key_facts": [
+    {
+      "fact": "Automated requests reached 57.5% of HTML web traffic versus 42.5% human — the first machine majority in web history",
+      "source": "Cloudflare Radar, 2026-06-03",
+      "category": "data"
+    },
+    {
+      "fact": "AI crawlers accounted for 20.3% of verified bot traffic in May 2026, with AI-search bots adding 6.5%",
+      "source": "Cloudflare Radar, May 2026",
+      "category": "data"
+    },
+    {
+      "fact": "52.3% of AI crawler requests were for model training and only 2.6% were real-time user-initiated fetches in the 28 days to June 22, 2026",
+      "source": "Cloudflare Radar, 2026-06-22",
+      "category": "data"
+    },
+    {
+      "fact": "Anthropic's crawl-to-refer ratio fell from 73,000:1 (2025) to 11,122:1 (May 25–Jun 1, 2026) as Claude added search and citation features, but remains over 2,000x Google's 4.9:1",
+      "source": "Cloudflare via TechCrunch 2026-07-01; SEOmator GEO Data Report 2026-03-17 reading Cloudflare Radar",
+      "category": "trend"
+    },
+    {
+      "fact": "Cloudflare pay-per-crawl (launched 2025-07-01) answers crawlers with HTTP 402 and a crawler-price header; publishers choose allow, charge, or block per crawler",
+      "source": "Cloudflare blog, 2025-07-01",
+      "category": "policy"
+    },
+    {
+      "fact": "From September 15, 2026, Cloudflare default-blocks training and agent bots on ad-monetized pages of new domains; mixed-use crawlers that refuse to separate search from training face blocking",
+      "source": "Cloudflare blog / TechCrunch, 2026-07-01",
+      "category": "policy"
+    },
+    {
+      "fact": "Cloudflare blocked 416 billion AI bot requests in the five months after July 2025, and over 2.5 million sites disallowed AI training",
+      "source": "Cloudflare / Matthew Prince via Search Engine Land, August 2025",
+      "category": "data"
+    },
+    {
+      "fact": "Cloudflare documented Perplexity using undeclared stealth crawlers impersonating Chrome and rotating IPs/ASNs at 3–6 million requests per day, and delisted it as a verified bot",
+      "source": "Cloudflare blog, 2025-08-04",
+      "category": "case_study"
+    },
+    {
+      "fact": "RSL (Really Simple Licensing), launched 2025-09-10 with a 1.0 spec in December 2025, adds machine-readable licensing terms (attribution, pay-per-crawl, pay-per-inference) on top of robots.txt but has no native enforcement",
+      "source": "rslstandard.org; Gigazine 2025-12-11; Digiday",
+      "category": "policy"
+    },
+    {
+      "fact": "ClaudeBot gained 8 percentage points in one month to become the #2 AI-adjacent crawler at 20.0% share in June 2026, while Googlebot fell below 25% for the first time",
+      "source": "websearchapi.ai Monthly AI Crawler Report, June 8 – July 6, 2026 (third-party network measurement)",
+      "category": "trend"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Should I block AI crawlers on my website?",
+      "a": "Block by purpose, not by company: training bots return near-zero traffic, while search and user-action bots are how AI platforms cite and visit you, and AI referrals convert at a premium."
+    },
+    {
+      "q": "Does blocking GPTBot remove my site from ChatGPT search?",
+      "a": "No. GPTBot gathers training data only; ChatGPT search visibility is governed by OAI-SearchBot, and ChatGPT-User fetches are not governed by robots.txt at all."
+    },
+    {
+      "q": "What is a crawl-to-refer ratio?",
+      "a": "Pages crawled per human visitor referred back. Google search ran ~5–14:1 in 2025–2026, while AI companies ran from ~111:1 (Perplexity) to 11,122–73,000:1 (Anthropic)."
+    },
+    {
+      "q": "What is pay-per-crawl?",
+      "a": "Cloudflare's per-request payment system, live since July 1, 2025: sites answer crawlers with HTTP 402 plus a price header, and publishers choose allow, charge, or block per bot."
+    },
+    {
+      "q": "Do AI crawlers actually respect robots.txt?",
+      "a": "Declared bots from major labs document compliance, but robots.txt is voluntary — Cloudflare caught Perplexity using stealth crawlers in August 2025, and user-action fetchers bypass robots.txt by design."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "The crawl before the fall of referrals: understanding AI's impact on content providers",
+      "url": "https://blog.cloudflare.com/ai-search-crawl-refer-ratio-on-radar/",
+      "publisher": "Cloudflare"
+    },
+    {
+      "title": "A deeper look at AI crawlers: breaking down traffic by purpose and industry",
+      "url": "https://blog.cloudflare.com/ai-crawler-traffic-by-purpose-and-industry/",
+      "publisher": "Cloudflare"
+    },
+    {
+      "title": "Introducing pay per crawl: enabling content owners to charge AI crawlers for access",
+      "url": "https://blog.cloudflare.com/introducing-pay-per-crawl/",
+      "publisher": "Cloudflare"
+    },
+    {
+      "title": "Your site, your rules: new AI traffic options for all customers",
+      "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
+      "publisher": "Cloudflare"
+    },
+    {
+      "title": "Perplexity is using stealth, undeclared crawlers to evade website no-crawl directives",
+      "url": "https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/",
+      "publisher": "Cloudflare"
+    },
+    {
+      "title": "OpenAI bots and crawlers documentation",
+      "url": "https://developers.openai.com/docs/bots",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "Does Anthropic crawl data from the web, and how can site owners block the crawler?",
+      "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Perplexity crawlers documentation",
+      "url": "https://docs.perplexity.ai/guides/bots",
+      "publisher": "Perplexity"
+    },
+    {
+      "title": "RSL: Really Simple Licensing",
+      "url": "https://rslstandard.org/",
+      "publisher": "RSL Collective"
+    }
+  ],
+  "comparison_data": {
+    "dimensions": ["crawler", "operator", "declared_purpose", "respects_robots_txt", "traffic_share_june_2026"],
+    "unit": "traffic share = % of AI-adjacent crawler traffic, June 8 – July 6, 2026, websearchapi.ai network measurement",
+    "entries": [
+      {"crawler": "Googlebot", "operator": "Google", "declared_purpose": "search indexing (also feeds AI Overviews)", "respects_robots_txt": "yes", "traffic_share_june_2026": 24.9},
+      {"crawler": "ClaudeBot", "operator": "Anthropic", "declared_purpose": "model training", "respects_robots_txt": "yes (documented)", "traffic_share_june_2026": 20.0},
+      {"crawler": "Meta-ExternalAgent", "operator": "Meta", "declared_purpose": "model training", "respects_robots_txt": "yes (documented)", "traffic_share_june_2026": 10.2},
+      {"crawler": "GPTBot", "operator": "OpenAI", "declared_purpose": "model training", "respects_robots_txt": "yes (documented)", "traffic_share_june_2026": 9.6},
+      {"crawler": "Bytespider", "operator": "ByteDance", "declared_purpose": "model training", "respects_robots_txt": "inconsistent (widely reported ignoring)", "traffic_share_june_2026": 7.3},
+      {"crawler": "Applebot", "operator": "Apple", "declared_purpose": "search + Apple Intelligence", "respects_robots_txt": "yes", "traffic_share_june_2026": 5.8},
+      {"crawler": "Amazonbot", "operator": "Amazon", "declared_purpose": "search + Alexa answers", "respects_robots_txt": "yes", "traffic_share_june_2026": 5.5},
+      {"crawler": "Claude-SearchBot", "operator": "Anthropic", "declared_purpose": "search result quality", "respects_robots_txt": "yes (documented)", "traffic_share_june_2026": 3.3},
+      {"crawler": "OAI-SearchBot", "operator": "OpenAI", "declared_purpose": "ChatGPT search indexing", "respects_robots_txt": "yes (documented)", "traffic_share_june_2026": null},
+      {"crawler": "PerplexityBot", "operator": "Perplexity", "declared_purpose": "search indexing (not training)", "respects_robots_txt": "declared yes; stealth-crawling dispute documented by Cloudflare 2025-08", "traffic_share_june_2026": null},
+      {"crawler": "ChatGPT-User", "operator": "OpenAI", "declared_purpose": "user-initiated page fetches", "respects_robots_txt": "not applied (by design)", "traffic_share_june_2026": null},
+      {"crawler": "Claude-User", "operator": "Anthropic", "declared_purpose": "user-initiated page fetches", "respects_robots_txt": "yes (documented)", "traffic_share_june_2026": null},
+      {"crawler": "Perplexity-User", "operator": "Perplexity", "declared_purpose": "user-initiated page fetches", "respects_robots_txt": "generally ignores (documented)", "traffic_share_june_2026": null},
+      {"crawler": "OAI-AdsBot", "operator": "OpenAI", "declared_purpose": "validates pages submitted as ChatGPT ads", "respects_robots_txt": "ad URLs only", "traffic_share_june_2026": null}
+    ]
+  },
+  "numerical_data": {
+    "metrics": [
+      {"name": "automated share of HTML web traffic", "value": 57.5, "unit": "%", "as_of": "2026-06-03", "source": "Cloudflare Radar"},
+      {"name": "AI crawlers share of verified bot traffic", "value": 20.3, "unit": "%", "as_of": "2026-05", "source": "Cloudflare Radar"},
+      {"name": "AI-search bots share of verified bot traffic", "value": 6.5, "unit": "%", "as_of": "2026-05", "source": "Cloudflare Radar"},
+      {"name": "training share of AI crawler requests", "value": 52.3, "unit": "%", "as_of": "2026-06-22 (28-day window)", "source": "Cloudflare Radar"},
+      {"name": "real-time user fetch share of AI crawler requests", "value": 2.6, "unit": "%", "as_of": "2026-06-22 (28-day window)", "source": "Cloudflare Radar"},
+      {"name": "ClaudeBot crawl-to-refer ratio", "value": 11122, "unit": "crawls per referral", "as_of": "2026-05-25/06-01", "source": "SEOmator reading Cloudflare Radar"},
+      {"name": "GPTBot crawl-to-refer ratio", "value": 1276, "unit": "crawls per referral", "as_of": "2026 Q1 (Jan–Mar)", "source": "SEOmator reading Cloudflare Radar"},
+      {"name": "PerplexityBot crawl-to-refer ratio", "value": 111, "unit": "crawls per referral", "as_of": "2026 Q1", "source": "SEOmator reading Cloudflare Radar"},
+      {"name": "Google search crawl-to-refer ratio", "value": 4.9, "unit": "crawls per referral", "as_of": "2026-03", "source": "SEOmator reading Cloudflare Radar"},
+      {"name": "AI bot requests blocked by Cloudflare in 5 months", "value": 416000000000, "unit": "requests", "as_of": "2025-12 (post 2025-07-01)", "source": "Cloudflare via Search Engine Land"}
+    ]
+  }
+}
