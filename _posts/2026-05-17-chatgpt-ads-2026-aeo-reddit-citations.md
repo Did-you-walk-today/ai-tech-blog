@@ -2,14 +2,14 @@
 title: "ChatGPT Ads 2026: AEO Traffic and Reddit Citations"
 description: "ChatGPT launched ads on Feb 9, 2026 at $60 CPM. AI traffic converts 4–23x better than organic. Reddit drives 40% of AI citations across all major platforms."
 date: 2026-05-17 12:00:00 +0900
-last_modified_at: 2026-05-17 12:00:00 +0900
+last_modified_at: 2026-07-26 03:38:15 +0900
 categories: [ai-models-intelligence]
 tags: [chatgpt-ads, aeo, geo, ai-search, reddit-citations, zero-click, "2026"]
 format: D
 cluster: CLUSTER_LLM
 image:
   path: /assets/img/posts/chatgpt-ads-2026-aeo-reddit-citations-cover.png
-  alt: "Diagram showing ChatGPT ad placement inside a conversation, AEO conversion funnel, and Reddit citation share across AI platforms in 2026"
+  alt: "Ads sit beside AI answers while citations remain the evidence path connecting sources to readers"
 faq:
   - q: "Are ChatGPT ads available globally?"
     a: "As of May 2026, ChatGPT ads are live in the United States for Free and Go ($8/month) tier users. OpenAI is expanding to Canada, Australia, and New Zealand with further markets planned for 2026, but no confirmed dates for Europe or Asia have been announced."
@@ -65,11 +65,9 @@ B2B purchase behavior is already reflecting this shift. In G2's 2026 AI Search I
 
 ## Why This Works — and Why It's Different from Search Ads
 
-The $60 CPM is not the interesting number. The interesting question is why advertisers pay it.
-
 ### The trust transfer problem
 
-Search advertising had a well-understood dynamic: users learned to skip labeled ads. After approximately 15 years of exposure to "Ad" labels at the top of search result pages, banner blindness and sponsored-result avoidance became near-universal behaviors.
+The $60 CPM is not the interesting number. The interesting question is why advertisers pay it. Search advertising had a well-understood dynamic: users learned to skip labeled ads. After approximately 15 years of exposure to "Ad" labels at the top of search result pages, banner blindness and sponsored-result avoidance became near-universal behaviors.
 
 AI conversations operate on a different psychological frame. When a user asks ChatGPT "what's the best project management tool for a 40-person engineering team," the response arrives as an advisor's synthesis — not a ranked list of links. A "Sponsored" label distinguishes the paid slot visually, but it competes with the frame of "my trusted AI just recommended this." That frame is structurally new. Users have not had 15 years to build skepticism around it. This is why CPMs are $60 and not $6: advertisers are paying for the trust transfer, not the ad inventory.
 
@@ -148,7 +146,9 @@ Leapd's research found that including a current year visibly in headings correla
 
 **For developers**: If you build tools, APIs, or documentation that AI agents read, format precision compounds over time. Clear capability definitions in the first two sentences, structured output schema documentation, explicit versioning, and changelog timestamps are the signals AI systems use to evaluate whether your content is current and authoritative. The absence of any of these signals pushes documentation toward the bottom of AI citation candidates.
 
-Related: [How Google's E-E-A-T framework evaluates AI-assisted content in 2026](/posts/eeat-ai-content-2026/) and [Google's Helpful Content System: how it decides what content survives](/posts/helpful-content-system-2026/).
+Related: [How Google's E-E-A-T framework evaluates AI-assisted content in 2026](/posts/eeat-ai-content-2026/).
+
+Also see [Google's Helpful Content System: how it decides what content survives](/posts/helpful-content-system-2026/).
 
 ---
 

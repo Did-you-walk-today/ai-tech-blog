@@ -49,6 +49,7 @@ Project skills in `.claude/skills/` encode the standard workflows:
 | Skill | When |
 |---|---|
 | `new-post` | Any post creation request (Phase 1–5, stops at human review) |
+| `post-images` | Cover/diagram image work — plans images, writes Codex prompt packs, normalizes and verifies returned files |
 | `publish-post` | After 기웅 approves a draft (Phase 6) |
 | `pricing-snapshot` | Every Monday, or any pricing-data refresh request |
 
@@ -129,7 +130,7 @@ Every post MUST have:
 - `categories`, `tags`
 - `format` (A~G)
 - `cluster` (CLUSTER_LLM | CLUSTER_DEVTOOLS | CLUSTER_PROMPTS)
-- `image` (path: `/assets/img/posts/{slug}-cover.png`, alt text required)
+- `image` (path: `/assets/img/posts/{slug}-cover.png`, alt text required — see IMAGE_GUIDE.md)
 - `faq` (array of `{q, a}` — minimum 3 entries, used for FAQPage schema auto-generation)
 - `data_updated` (YYYY-MM-DD)
 - `author`
@@ -366,6 +367,7 @@ See PIPELINE_PROMPT.md for full phase instructions.
 See SEO_GUIDE.md for detailed SEO enforcement rules.
 See SOURCES.md for trusted source list and priority ranking.
 See PRIMARY_SOURCE_GUIDE.md for primary-source post methodology (data-type posts).
+See IMAGE_GUIDE.md for image rules (count per format, specs, fixed style tokens, alt text).
 
 ## Post Writing Principles (MANDATORY)
 
@@ -382,6 +384,15 @@ These apply to every post, regardless of format type. They are writing-level qua
 
 4. **Standards and documents need real context**
    When restructuring external standards (OWASP, RFC, ISO, etc.), add at least one concrete example, real-world incident, or specific implementation context. Do not restate the standard verbatim.
+
+5. **Figures are claims, and claims need evidence in the post**
+   Any diagram, chart, or cover image is an assertion. Every value-bearing element in it — a length, a count, a position, an order — must map to a number or statement that already exists in the post body. If the post says a value is unpublished, the figure may not give it a concrete form. If the post says something splits four ways, the figure may not compress it to one. Record the mapping in the prompt pack's 근거 대응표 (IMAGE_GUIDE.md §6-4, §8). A figure that is spec-perfect and semantically wrong is worse than no figure — it looks authoritative while contradicting the text.
+
+6. **Paragraphs carry one idea**
+   This blog's paragraph median is 53 words. Past 120 words a paragraph becomes an unreadable block on mobile and readers skip it entirely, taking the analysis with it. Long reasoning gets split, not compressed — the depth stays, the block does not.
+
+7. **Match the assertion to the evidence you actually have**
+   State published numbers as published, unpublished ones as unpublished, and inferred ones as inferred. "Not published" is a finding worth reporting, not a hole to paper over with an estimate. This applies to prose, tables, data files, and figures equally.
 
 ## Hook Configuration
 
@@ -436,7 +447,28 @@ often stale; always verify against `https://www.jsonhouse.com/sitemap.xml`.
 | B4 Heading → code | No code block directly under a heading | ERROR |
 | B5 Checklist coverage | Risk landscape items must all appear in checklist | ERROR |
 | B6 FAQ/code mismatch | Open-problem FAQ + definitive code → add caveats | WARN |
-| B7 Thin sections | Each H2/H3 section must have >= 3 lines | WARN |
+| B7 Thin sections | Each section needs >= 40 words of prose. FAQ answers, TL;DR, changelog, and container headings are exempt | WARN |
+| B8 Wall of text | No single paragraph over 120 words (blog median is 53) | WARN |
+
+**Section C — Post Images** (delegated to `image_validation.py`, rules in `IMAGE_GUIDE.md`)
+
+| Rule | Condition | Severity |
+|------|-----------|----------|
+| C1 Cover exists | `image.path` declared AND file present in `assets/img/posts/` | ERROR |
+| C2 Cover alt | Present, 25–125 chars, states a claim (not "Diagram of…") | ERROR / WARN |
+| C3 Cover spec | Exactly 1200×630, <= 200KB | ERROR |
+| C4 Body image refs | Every `![](/assets/…)` path resolves | ERROR |
+| C5 Body image alt | Non-empty | ERROR |
+| C6 Image count | <= 5 total including cover | WARN |
+| C7 Filename convention | `{slug}-cover.png` / `-fig1.webp` / `-chart1.svg` / `-shot1.webp` | WARN |
+| C8 Body image weight | WebP, width <= 1600px, <= 150KB (SVG <= 100KB) | WARN |
+| C9 Figure budget | Body figures per format: A=1, B=0, C=4, D=2, E=3, F=3, G=0 | WARN |
+| C10 Evidence table | Post with body figures needs `_reviews/{date}-{slug}.images.md` containing a 근거 대응표 | WARN |
+
+In `_drafts/` every Section C ERROR is downgraded to WARN — artwork legitimately
+arrives after the draft. In `_posts/` they block publishing.
+
+Repo-wide status: `python3 .claude/hooks/image_validation.py --report`
 
 ### Behavior
 

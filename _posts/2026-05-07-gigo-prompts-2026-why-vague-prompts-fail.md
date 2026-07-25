@@ -2,14 +2,14 @@
 title: "GIGO Prompts 2026: Why Vague Prompts Fail (Data + Fix)"
 description: "Vague prompts fail because LLMs predict probability, not intent. Here's the GIGO mechanism behind AI hallucination — and a 5-element template to fix it."
 date: 2026-05-07 09:00:00 +0900
-last_modified_at: 2026-05-07 09:00:00 +0900
+last_modified_at: 2026-07-26 03:38:15 +0900
 categories: [prompt-engineering]
 tags: [prompt-engineering, gigo, hallucination, vague-prompts, llm, specificity, "2026"]
 format: C
 cluster: CLUSTER_PROMPTS
 image:
   path: /assets/img/posts/gigo-prompts-2026-why-vague-prompts-fail-cover.png
-  alt: "Diagram showing how vague prompts lead to hallucination through probability averaging in LLMs"
+  alt: "Vague inputs distort intent while specific prompts preserve the requested output shape"
 faq:
   - q: "Are longer, more specific prompts slower and more expensive to run?"
     a: "Marginally. A prompt with 200 more tokens costs roughly 0.02 cents extra at current API pricing. The cost of one hallucination — a wrong fact, a failed task, a re-run — is orders of magnitude larger. Specificity is a cost-reduction strategy, not a cost increase."
@@ -102,13 +102,10 @@ Together, PS and MV explain why vague prompts produce inconsistent outputs: they
 ### 1. Tech writing — LLM pricing comparison
 
 The following prompt illustrates the failure mode: an unbounded instruction with no time anchor, no model set, and no use case.
-
 ```
 Compare LLM pricing options.
 ```
-
 The model receives no information to distinguish which models, which timeframe, or which workload. It produces the statistical average of LLM pricing comparisons from its training data — likely outdated, possibly including deprecated models. Now consider the rewritten version with all five specificity elements:
-
 ```
 You are a developer evaluating API costs for a production chatbot
 handling 10M input tokens and 2M output tokens per month.
@@ -120,19 +117,15 @@ monthly cost for the described workload. Format as a markdown table.
 If pricing for any model is unavailable, write "current pricing
 unavailable" rather than estimating.
 ```
-
 Every addition closes a gap the vague version left open: persona (production workload), task (specific models, specific timeframe), format (markdown table), and fail-safe (explicit fallback for missing data).
 
 ### 2. Code debugging
 
 This is the vague version — it leaves every inference to the model:
-
 ```
 Fix this Python code.
 ```
-
 Without language version, framework, error message, or expected behavior, the model guesses what "fix" means and produces a plausible-looking change that may introduce new problems. The specific version:
-
 ```
 You are debugging a Python 3.11 FastAPI application.
 
@@ -145,19 +138,15 @@ and validate the nested object.
 
 Identify the root cause. Explain why the error occurs, then show the fix.
 ```
-
 Language version, framework, exact error, expected behavior, and output structure (explain then fix) give the model enough prior to solve the specific problem rather than the generic category of "broken Python."
 
 ### 3. Everyday product comparison
 
 This everyday prompt triggers the same GIGO failure as the technical examples above:
-
 ```
 Recommend a good wireless mouse.
 ```
-
 The model produces the average wireless mouse recommendation — whatever category and price range appear most frequently in its training data. It has no information about platform, use case, budget, or existing preferences. The specific version:
-
 ```
 I use a MacBook Pro M3 Max for 8+ hours of daily work — primarily
 spreadsheet analysis and occasional Photoshop. Budget: $60–90.
@@ -168,7 +157,6 @@ Compare the Logitech MX Master 3S and the Microsoft Arc Mouse on:
 battery life, ergonomics rating, macOS Sonoma compatibility, and price.
 Format as a comparison table.
 ```
-
 This third example illustrates the core teaching: **when intent is abstract, name a concrete thing**. Specifying "Logitech MX Master 3S" transforms an open-ended recommendation task into a factual retrieval task. The model can locate specific documented characteristics rather than generating averaged attributes of the category. Concrete product names, specific model versions, and named real-world entities are the highest-leverage form of specificity available in any domain.
 
 ---
@@ -176,7 +164,6 @@ This third example illustrates the core teaching: **when intent is abstract, nam
 ## The Fix Template
 
 This 5-element template eliminates most vague-prompt failures. Use it as a checklist for closing ambiguity gaps before sending any high-stakes prompt:
-
 ```
 PERSONA: You are [specific role] working on [specific context/audience].
 
@@ -194,7 +181,6 @@ CONSTRAINTS:
 - If uncertain: respond with "[specific fallback string]"
     rather than estimating.
 ```
-
 The highest-leverage element is EXAMPLE. A single concrete example of what a correct output looks like narrows the probability distribution more effectively than any amount of abstract instruction. If you can only add one thing to a vague prompt, add an example.
 
 ---
@@ -207,7 +193,9 @@ In multi-step pipelines, a vague instruction at step one propagates error into e
 
 The same mechanics apply to structured content production pipelines. In a pipeline with discrete phases for topic discovery, research, drafting, and validation, vague style instructions at the drafting phase produce outputs that drift toward generic content. When the instruction is "write in a professional tone," the model defaults to the statistical center of professional-sounding content: correct grammar, safe hedged claims, no distinctive analytical perspective. Specificity at every phase — including what makes a quality score meaningful and how that score maps to concrete output properties — is what separates consistent pipeline output from variable results.
 
-This is also why [E-E-A-T signals, as Google's quality systems operationalize them](/posts/eeat-ai-content-2026/), emphasize firsthand experience and demonstrable expertise over abstract quality claims. A vague content brief produces the same structural failure as a vague prompt: under-specification forces the model to average. Understanding [how Google's Helpful Content System evaluates content across a site, not just a page](/posts/helpful-content-system-2026/), reveals why compound-signal evaluation penalizes content that fails this standard systematically.
+This is also why [E-E-A-T signals, as Google's quality systems operationalize them](/posts/eeat-ai-content-2026/), emphasize firsthand experience and demonstrable expertise over abstract quality claims. A vague content brief produces the same structural failure as a vague prompt: under-specification forces the model to average.
+
+Understanding [how Google's Helpful Content System evaluates content across a site, not just a page](/posts/helpful-content-system-2026/) reveals why compound-signal evaluation penalizes content that fails this standard systematically.
 
 For individual users, the GIGO principle is about better outputs from individual queries. For developers building production systems, it is an architecture constraint: the specificity of your prompts and context design determines the reliability floor of your entire system.
 

@@ -98,6 +98,7 @@ exclude:
   - CLAUDE.md
   - SEO_GUIDE.md
   - SOURCES.md
+  - IMAGE_GUIDE.md
   - GSC_INDEXING.md
   - "*.docx"
   - node_modules

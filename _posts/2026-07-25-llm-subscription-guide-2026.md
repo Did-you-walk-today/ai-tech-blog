@@ -2,14 +2,14 @@
 title: "Best LLM Subscription 2026: What You Really Pay For"
 description: "No AI vendor tells you how many tokens your subscription buys. Here is what ChatGPT Plus and Pro actually disclose, and how to judge free vs paid yourself."
 date: 2026-07-25 15:00:00 +0900
-last_modified_at: 2026-07-25 15:00:00 +0900
+last_modified_at: 2026-07-26 03:38:15 +0900
 categories: [ai-models-intelligence]
 tags: [chatgpt, claude, gemini, llm-subscription, usage-limits, "2026"]
 format: A
 cluster: CLUSTER_LLM
 image:
   path: /assets/img/posts/llm-subscription-guide-2026-cover.png
-  alt: "Comparison of ChatGPT Plus and Pro subscription tiers in 2026 showing disclosed message limits and undisclosed token quotas"
+  alt: "Subscription plans expose access rules while leaving the underlying token capacity undisclosed"
 faq:
   - q: "How many tokens do you get with an AI subscription?"
     a: "No major vendor publishes a token quota for consumer plans. OpenAI discloses message counts for some models — Plus and Go get up to 160 GPT-5.5 Instant messages every 3 hours, and Plus gets up to 3,000 GPT-5.5 Thinking messages per week — but a message is not a fixed unit of work. Premium tiers are sold as vague multipliers or 'separate usage allowances' instead of hard numbers."
@@ -84,11 +84,17 @@ There is a reason free tiers keep improving despite costing vendors real money: 
 Because the quantities are undisclosed, the only reliable measurement is your own usage. It takes two weeks.
 
 1. **Use the free tier deliberately for two weeks.** Do real work on it, not test prompts.
+
 2. **Log every interruption.** Note what you were doing when a limit, a context ceiling, or a slow queue stopped you.
+
 3. **Watch for silent downgrades, not just hard stops.** If answers suddenly get shallower, you probably hit a threshold and were moved to a smaller model.
+
 4. **Count interruptions per week.** Zero to one: stay free. Two or more mid-task: the subscription is buying back real time.
+
 5. **Identify which wall you hit.** A context-length problem is not solved by a higher message allowance, and vice versa.
+
 6. **Match the characteristic, not the price.** Coding workflow, Google-centric work, and sourced research point to different products at the same $20.
+
 7. **Start at the mainstream tier.** Premium tiers are multiples of a baseline you have not measured yet.
 
 The one case for skipping the test: if your work is clearly agentic and long-running — large refactors, multi-hour research — you will hit the free ceiling on day one, and starting at the mainstream paid tier is reasonable.

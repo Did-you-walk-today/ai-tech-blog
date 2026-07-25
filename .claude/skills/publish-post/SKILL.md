@@ -18,6 +18,9 @@ description: 기웅 승인이 완료된 드래프트를 발행하는 Phase 6 워
 - 내부 링크 대상 슬러그가 `_posts/`에 실존하는가
 - 데이터 파일의 `slug`/`title`/`description`이 frontmatter와 일치하는가
 - frontmatter에 `canonical_url`이 없는가
+- **커버 이미지가 실제로 존재하는가** — `python3 .claude/hooks/image_validation.py --report`
+  에서 대상 슬러그에 ERROR가 없어야 한다. 없으면 `post-images` 스킬로 먼저 처리.
+  파일 없이 발행하면 og:image가 404가 되고, 소셜 카드 캐시에 빈 카드가 박힌다
 
 ## Step 2 — 이동 및 날짜 통일
 

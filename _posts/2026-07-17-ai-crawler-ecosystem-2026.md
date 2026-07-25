@@ -2,14 +2,14 @@
 title: "AI Crawler Ecosystem 2026: Who Scrapes the Web and Who Pays"
 description: "Machines now generate 57.5% of web HTML traffic. Who the AI crawlers are, what they take per visitor sent, and how pay-per-crawl rewrites the web's deal."
 date: 2026-07-17 18:00:00 +0900
-last_modified_at: 2026-07-17 18:00:00 +0900
+last_modified_at: 2026-07-26 03:38:15 +0900
 categories: [industry-analysis]
 tags: [ai-crawlers, gptbot, claudebot, pay-per-crawl, robots-txt, rsl, cloudflare, aeo, "2026"]
 format: D
 cluster: CLUSTER_AEO
 image:
   path: /assets/img/posts/ai-crawler-ecosystem-2026-cover.png
-  alt: "Diagram of the 2026 AI crawler ecosystem showing training, search, and user-action bots between websites and AI platforms, with a pay-per-crawl toll layer"
+  alt: "AI crawlers take content through an access gate while referral traffic returns separately to publishers"
 faq:
   - q: "Should I block AI crawlers on my website?"
     a: "Block by purpose, not by company. Training bots (GPTBot, ClaudeBot, Meta-ExternalAgent) take content with near-zero traffic in return, so blocking them costs you little unless you value inclusion in future models. Search and user-action bots (OAI-SearchBot, Claude-SearchBot, PerplexityBot, ChatGPT-User) are how AI assistants cite and visit your pages — blocking those removes you from AI answers, which now convert far better than average organic traffic."
@@ -93,7 +93,9 @@ The deeper cause is that the web's access-control layer was never designed to ca
 
 Connect this to the two trends we have tracked in earlier posts and the shape of 2026 becomes clearer. First, AI referral traffic — small but premium — is the carrot that complements the crawl-blocking stick. As we documented in our [ChatGPT ads and AEO analysis](/posts/chatgpt-ads-2026-aeo-reddit-citations/), AI-mediated visitors convert at multiples of standard organic traffic; Adobe's Q1 2026 retail data adds that AI referrals grew 393% year over year and convert 42% better than non-AI channels. Publishers are not choosing between AI traffic and no AI traffic; they are learning to price the difference between bots that cite and send humans versus bots that only take.
 
-Second, the payment plumbing being built for crawlers is the same plumbing the agent era needs. HTTP 402 — a status code reserved and dormant since the 1990s — now carries real money between crawler and publisher. The step from "AI company pays to crawl" to "your research agent carries a budget and pays per page it reads" is small, and Cloudflare explicitly framed pay-per-crawl as groundwork for agents with spending authority. Seen through that lens, the crawler wars are the negotiation that sets the initial prices for machine-readable content — the input side of the same token economy whose output side we track in our [LLM API pricing table](/posts/llm-api-pricing-2026/). Even advertising is converging on the crawl layer: OpenAI now operates a dedicated OAI-AdsBot solely to validate pages submitted as ChatGPT ads, a bot category that did not exist eighteen months ago.
+Second, the payment plumbing being built for crawlers is the same plumbing the agent era needs. HTTP 402 — a status code reserved and dormant since the 1990s — now carries real money between crawler and publisher. The step from "AI company pays to crawl" to "your research agent carries a budget and pays per page it reads" is small, and Cloudflare explicitly framed pay-per-crawl as groundwork for agents with spending authority.
+
+Seen through that lens, the crawler wars are the negotiation that sets the initial prices for machine-readable content — the input side of the same token economy whose output side we track in our [LLM API pricing table](/posts/llm-api-pricing-2026/). Even advertising is converging on the crawl layer: OpenAI now operates a dedicated OAI-AdsBot solely to validate pages submitted as ChatGPT ads, a bot category that did not exist eighteen months ago.
 
 The web, in short, is splitting into two regimes: an open commons that AI systems may read freely because nobody priced it, and a licensed tier — publishers behind Cloudflare, RSL terms, direct content deals — where machine access is metered. Where your content sits in that split is now a decision, not a default.
 

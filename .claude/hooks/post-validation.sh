@@ -177,16 +177,62 @@ if has_open_problem_faq and has_definitive_code:
     )
 
 # --- Rule B7: 소제목 대비 섹션 내용 너무 적음 ---
-sections = re.split(r'^#{2,3} .+$', content, flags=re.MULTILINE)
-short_sections = []
-for i, section in enumerate(sections[1:], 1):
-    lines = [l for l in section.strip().split('\n') if l.strip()]
-    if len(lines) < 3:
-        short_sections.append(str(i))
-if short_sections:
+# 줄 수가 아니라 단어 수로 잰다. 마크다운 문단은 몇 문장이든 한 줄이라
+# 줄 수로 재면 잘 쓴 FAQ 답변이 걸리고 337단어짜리 벽글이 통과한다.
+# FAQ 답변(H3)과 구조적 섹션은 짧은 게 정상이므로 제외한다.
+STRUCTURAL = ('faq', 'frequently asked', 'changelog', 'update cadence',
+              'related resources', 'related posts', 'sources', 'references', 'tl;dr')
+
+parts = re.split(r'^(#{2,3} .+)$', content, flags=re.MULTILINE)
+sections = []          # (heading_text, level, body)
+for i in range(1, len(parts), 2):
+    h = parts[i].strip()
+    level = len(h) - len(h.lstrip('#'))
+    sections.append((h.lstrip('# ').strip(), level, parts[i + 1]))
+
+in_faq = False
+thin = []
+dense = []
+for idx, (title, level, sec) in enumerate(sections):
+    low = title.lower()
+    if level == 2:
+        in_faq = ('faq' in low) or ('frequently asked' in low)
+    # FAQ 하위 답변은 한 문단이 정상 — 제외
+    if in_faq and level == 3:
+        continue
+    if any(k in low for k in STRUCTURAL):
+        continue
+    # 하위 소제목만 담는 컨테이너 제목은 본문이 없는 게 정상 — 제외
+    nxt = sections[idx + 1] if idx + 1 < len(sections) else None
+    if nxt and nxt[1] > level and not sec.strip():
+        continue
+
+    prose = re.sub(r'```.*?```', '', sec, flags=re.DOTALL)
+    prose = re.sub(r'^\|.*$', '', prose, flags=re.MULTILINE)   # 표 제외
+    prose = re.sub(r'!\[[^\]]*\]\([^)]*\)', '', prose)         # 이미지 제외
+    words = len(prose.split())
+    paras = [p for p in re.split(r'\n\s*\n', prose.strip()) if p.strip()]
+
+    has_table = bool(re.search(r'^\|', sec, flags=re.MULTILINE))
+    if words < 40 and not has_table:
+        thin.append(f"'{title}' ({words}w)")
+
+    # B8: 벽글 — 개별 문단이 120단어를 넘으면 화면에서 통짜 블록이 된다.
+    # 이 블로그 실측 분포(문단 426개)에서 중앙값 53w, 95분위 112w.
+    for p in paras:
+        n = len(p.split())
+        if n > 120 and not p.lstrip().startswith(('-', '*', '>', '|')):
+            dense.append(f"'{title}' ({n}w 문단)")
+
+if thin:
     warnings.append(
-        f"THIN SECTIONS: Section(s) {', '.join(short_sections)} have fewer than 3 lines — "
-        "add more content or merge with adjacent section"
+        f"THIN SECTIONS: {', '.join(thin)} — under 40 words of prose. "
+        "Expand or merge into the adjacent section"
+    )
+if dense:
+    warnings.append(
+        f"WALL OF TEXT: {', '.join(dense)} — single paragraph over 120 words "
+        "(this blog's median is 53). Split it, or break out a sub-heading"
     )
 
 for e in errors:
@@ -205,6 +251,25 @@ while IFS= read -r line; do
     WARNINGS+=("${line#WARN:}")
   fi
 done <<< "$PY_RESULTS"
+
+# ==========================================================
+# SECTION C: Post Images (C1~C8 — see IMAGE_GUIDE.md)
+# ==========================================================
+# Delegated to image_validation.py, which emits the same ERROR:/WARN: protocol.
+# It downgrades ERROR to WARN for _drafts/ on its own — artwork arrives late.
+
+HOOK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ -f "$HOOK_DIR/image_validation.py" ]]; then
+  IMG_RESULTS=$(python3 "$HOOK_DIR/image_validation.py" "$FILE_PATH" 2>/dev/null || echo "")
+  while IFS= read -r line; do
+    [[ -z "$line" ]] && continue
+    if [[ "$line" == ERROR:* ]]; then
+      ERRORS+=("${line#ERROR:}")
+    elif [[ "$line" == WARN:* ]]; then
+      WARNINGS+=("${line#WARN:}")
+    fi
+  done <<< "$IMG_RESULTS"
+fi
 
 # ==========================================================
 # OUTPUT

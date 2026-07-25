@@ -2,14 +2,14 @@
 title: "Pass Google E-E-A-T 2026: AI-Assisted Content Survival Guide"
 description: "E-E-A-T isn't a ranking factor—it's a framework. Here's how AI-assisted content actually passes Google's quality bar in 2026, with 18 concrete signals."
 date: 2026-04-29 12:00:00 +0900
-last_modified_at: 2026-04-29 12:00:00 +0900
+last_modified_at: 2026-07-26 03:38:15 +0900
 categories: [ai-safety-ethics]
 tags: [eeat, google-quality-raters, ai-content, content-strategy, "2026"]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY
 image:
   path: /assets/img/posts/eeat-ai-content-2026-cover.png
-  alt: "Diagram showing the four E-E-A-T pillars with Trust at the foundation"
+  alt: "Experience, expertise, and authority support trust, the foundation of Google's E-E-A-T framework"
 faq:
   - q: "Is E-E-A-T a direct ranking factor?"
     a: "No. E-E-A-T is a framework used by Google's human Quality Raters to evaluate content quality. There is no E-E-A-T score. The ratings inform algorithm training, but E-E-A-T itself is not a signal fed directly into rankings. The signals it describes—author credibility, source accuracy, site transparency—are what algorithms capture."
@@ -136,7 +136,9 @@ The YMYL expansion in September 2025—adding elections, civic institutions, and
 
 The structural opportunity for independent creators is real but requires a specific strategic choice: go deep on a narrow topic cluster rather than broad across categories. The footprint model rewards consistent expertise over time. A solo developer who has published 30 posts on AI developer tooling, has bylines on two external publications in that space, and has built an author page with a verifiable professional history is in a stronger structural position than a media site that published 300 posts across 50 topics with rotating staff writers.
 
-For the full picture of how these authenticity standards apply to content penalties, paid distribution, and platform-specific enforcement, see [What Google AI Content Policy Actually Penalizes in 2026](/posts/google-ai-content-penalties-2026/). For the YouTube-specific version of these rules, including how "inauthentic content" is enforced at the channel level, see [YouTube AI Monetization 2026: What Is Inauthentic Content](/posts/youtube-ai-monetization-2026/).
+For the full picture of how these authenticity standards apply to content penalties, paid distribution, and platform-specific enforcement, see [What Google AI Content Policy Actually Penalizes in 2026](/posts/google-ai-content-penalties-2026/).
+
+For the YouTube-specific version, including how "inauthentic content" is enforced at the channel level, see [YouTube AI Monetization 2026: What Is Inauthentic Content](/posts/youtube-ai-monetization-2026/).
 
 ---
 

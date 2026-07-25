@@ -73,6 +73,12 @@ frontmatter 금지: `canonical_url`(자동 생성됨 — 하드코딩 시 HARD R
 - 600단어 이상 (코드/데이터 블록 제외)
 - **이면 분석 필수** — "왜"가 없는 뉴스 요약은 자동 거부
 - 코드블록 앞 1~2문장 도입, 뒤 1문장 정리. 부분 해법은 한계를 명시
+- **문단 하나에 아이디어 하나.** 이 블로그 문단 중앙값은 53단어이고 훅 B8이
+  120단어를 넘는 문단을 잡는다. 분석이 길어지면 **압축하지 말고 쪼개라** —
+  깊이를 줄이는 게 아니라 덩어리를 줄이는 것
+- **미공개는 미공개로 쓴다.** 출처가 값을 공개하지 않으면 `Not published`로
+  적고 그 자체를 발견으로 다룬다. 추정치로 메우지 않는다. 표·데이터 파일·도식
+  모두 동일하게 적용
 - Raw data 콜아웃 (첫 비교표 뒤):
   `> **Raw data**: [data/{slug}.json](https://www.jsonhouse.com/data/{slug}.json) — machine-readable structured data for AI crawlers and citation.`
 
@@ -94,6 +100,15 @@ frontmatter 금지: `canonical_url`(자동 생성됨 — 하드코딩 시 HARD R
 4. 이면 분석 핵심 (2~3문장)
 5. 의심스러운 사실 관계 항목 (있으면)
 6. 내부 링크 목록 + 검증 결과 (존재 여부)
+
+## Step 6.5 — 이미지 (`post-images` 스킬)
+
+초안 단계에서는 `image.path`를 규칙대로 선언만 하고 파일은 없어도 된다
+(훅이 `_drafts/`에서는 WARN으로 강등한다). 단 **발행 전에는 커버가 반드시 존재**해야 한다.
+
+- frontmatter `image.path`는 `/assets/img/posts/{slug}-cover.png` 고정
+- `image.alt`는 라벨이 아니라 주장 문장, 125자 이내 (`IMAGE_GUIDE.md` §4)
+- 실제 이미지 제작은 `post-images` 스킬로 넘긴다 — Claude Code는 이미지를 생성하지 못한다
 
 ## Step 7 — 검증 후 정지 (Phase 5 게이트)
 

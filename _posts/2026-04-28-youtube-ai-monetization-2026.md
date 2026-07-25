@@ -2,14 +2,14 @@
 title: "YouTube AI Monetization 2026: What Is Inauthentic Content"
 description: "YouTube doesn't ban AI videos—it bans 'inauthentic' ones. The real rules of the July 2025 policy update, with channel survival patterns and disclosure criteria."
 date: 2026-04-28 12:00:00 +0900
-last_modified_at: 2026-04-28 12:00:00 +0900
+last_modified_at: 2026-07-26 03:38:15 +0900
 categories: [ai-safety-ethics]
 tags: [youtube-monetization, ai-content, inauthentic-content, ypp, content-policy, "2026"]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY
 image:
   path: /assets/img/posts/youtube-ai-monetization-2026-cover.png
-  alt: "Diagram showing YouTube's two separate policies: AI Disclosure vs Inauthentic Content"
+  alt: "Disclosure and originality are separate gates, so disclosed AI video can still fail monetization"
 faq:
   - q: "Does YouTube ban AI-generated videos?"
     a: "No. YouTube targets 'inauthentic content'—mass-produced, templated videos with little variation—not AI tools. An AI-assisted video with genuine commentary and transformation can be fully monetized."
@@ -138,6 +138,8 @@ There is also a direct connection to the AEO (Answer Engine Optimization) layer 
 For creators, the opportunity is real. AI-generated content farms that dominated certain categories in 2024 are now being systematically removed. The creators who were producing lower volumes of higher-quality, more distinctive content are benefiting from reduced competition in recommendation algorithms and search. The short-term pain of enforcement is a long-term structural advantage for authentic creators.
 
 For a broader analysis of how these authenticity standards apply across Google Search and other platforms, see [What Google AI Content Policy Actually Penalizes in 2026](/posts/google-ai-content-penalties-2026/).
+
+The provenance layer behind mandatory disclosure is explained separately in [SynthID and C2PA image verification for 2026](/posts/synthid-c2pa-explained-2026/).
 
 ---
 
