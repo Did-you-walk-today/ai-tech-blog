@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "slug": "ai-overviews-seo-2026",
+  "title": "AI Overviews SEO 2026: Recover Your Lost Traffic",
+  "description": "Google AI Overviews cut organic clicks up to 61% in 2026. See the real CTR data, why citation now beats ranking, and a checklist to win traffic back.",
+  "data_updated": "2026-07-25",
+  "source_post": "https://www.jsonhouse.com/posts/ai-overviews-seo-2026/",
+  "category": "industry-analysis",
+  "cluster": "CLUSTER_AEO",
+  "format": "C",
+  "key_facts": [
+    {
+      "fact": "Users clicked a search result 8% of the time when an AI Overview appeared versus 15% without it — a 46.7% relative click-through drop across 68,000 real queries",
+      "source": "Pew Research Center, July 2025",
+      "category": "data"
+    },
+    {
+      "fact": "AI Overviews reduced the top-ranking result's click-through rate by 58% in February 2026, up from a 34.5% reduction measured in April 2025",
+      "source": "Ahrefs, February 2026",
+      "category": "trend"
+    },
+    {
+      "fact": "Organic click-through rate fell 61% (paid fell 68%) when AI Overviews appeared, across 25.1 million organic impressions from 42 organizations",
+      "source": "Seer Interactive, 2026",
+      "category": "data"
+    },
+    {
+      "fact": "Zero-click searches rose from 56% to 69% between May 2024 and May 2025, aligning with the AI Overviews rollout",
+      "source": "Similarweb, May 2025",
+      "category": "trend"
+    },
+    {
+      "fact": "Only 37.9% of URLs cited in AI Overviews also rank in the organic top 10 in 2026, down from about 76% in July 2025 — citation and ranking have decoupled",
+      "source": "Analysis of 4 million AI Overview URLs, 2026",
+      "category": "data"
+    },
+    {
+      "fact": "AI Overviews cite three or more sources 88% of the time, yet the top 1% of domains (about twelve sites) capture 47% of all citations",
+      "source": "AI Overviews citation studies, 2026",
+      "category": "data"
+    },
+    {
+      "fact": "94% of AI Overview citations come from earned, third-party sources rather than brand-owned or paid placements",
+      "source": "AI Overviews citation studies, 2026",
+      "category": "definition"
+    },
+    {
+      "fact": "26% of sessions containing an AI Overview end the search entirely, versus 16% of sessions without one",
+      "source": "Pew Research Center, July 2025",
+      "category": "data"
+    }
+  ],
+  "comparison_data": {
+    "dimensions": ["study", "metric", "finding", "date"],
+    "entries": [
+      {
+        "study": "Pew Research",
+        "metric": "Clicks with vs. without AI Overview (68,000 queries)",
+        "finding": "15% to 8% CTR (-46.7% relative)",
+        "date": "2025-03"
+      },
+      {
+        "study": "Ahrefs",
+        "metric": "Top-result CTR when AI Overview present",
+        "finding": "-58% (was -34.5% in Apr 2025)",
+        "date": "2026-02"
+      },
+      {
+        "study": "Seer Interactive",
+        "metric": "Organic CTR across 25.1M impressions, 42 orgs",
+        "finding": "-61% organic (-68% paid)",
+        "date": "2026"
+      },
+      {
+        "study": "Similarweb",
+        "metric": "Share of searches ending with no click",
+        "finding": "56% to 69% zero-click",
+        "date": "2025-05"
+      }
+    ]
+  },
+  "faq_summary": [
+    {
+      "q": "Do Google AI Overviews really reduce website traffic?",
+      "a": "Yes. Pew Research found clicks fell from 15% to 8% when an AI Overview appears (a 46.7% relative drop) across 68,000 queries; Ahrefs measured a 58% top-result CTR fall in February 2026 and Seer Interactive a 61% organic CTR decline."
+    },
+    {
+      "q": "If my page is cited in an AI Overview, do I still get clicks?",
+      "a": "Some, but far fewer than a top ranking would send, and citation no longer tracks ranking. Only 37.9% of AI-Overview-cited URLs also rank in the organic top 10 in 2026, down from about 76% in July 2025."
+    },
+    {
+      "q": "How do I get my content cited in Google AI Overviews?",
+      "a": "Structure pages for extraction (direct answers, tables), strengthen E-E-A-T with named expert authors and primary-source citations, and add structured data. AI Overviews cite three or more sources 88% of the time and pull 94% of citations from earned third-party pages."
+    },
+    {
+      "q": "Is losing traffic to AI Overviews a Google penalty?",
+      "a": "No. A penalty suppresses ranking; AI Overviews leave ranking intact but place an answer above your link so fewer users click. Treating it as a penalty leads to rewriting healthy content instead of optimizing to become the cited source."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Google users are less likely to click on links when an AI summary appears in the results",
+      "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+      "publisher": "Pew Research Center"
+    },
+    {
+      "title": "Update: AI Overviews Reduce Clicks by 58%",
+      "url": "https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/",
+      "publisher": "Ahrefs"
+    },
+    {
+      "title": "AI Overviews impact on organic and paid CTR",
+      "url": "https://www.seerinteractive.com/insights",
+      "publisher": "Seer Interactive"
+    },
+    {
+      "title": "Zero-click search behavior report",
+      "url": "https://www.similarweb.com/corp/reports/",
+      "publisher": "Similarweb"
+    }
+  ]
+}
