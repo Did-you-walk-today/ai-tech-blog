@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0",
+  "slug": "best-llm-2026",
+  "title": "Best LLM 2026: Capability and Limits Compared",
+  "description": "Best LLM 2026 compared on the limits that actually block builds: context window, max output tokens, prompt cache minimums, knowledge cutoffs, and retirement dates.",
+  "data_updated": "2026-07-25",
+  "source_post": "https://www.jsonhouse.com/posts/best-llm-2026/",
+  "category": "ai-models-intelligence",
+  "cluster": "CLUSTER_LLM",
+  "format": "A",
+  "key_facts": [
+    {
+      "fact": "Context windows have converged across five providers to a range of 1,000,000-1,050,000 tokens, a spread under 5%",
+      "source": "jsonhouse normalization of six official provider documentation sites, 2026-07-25",
+      "category": "data"
+    },
+    {
+      "fact": "Max output tokens still span a twelve-fold range, from 32,000 (Claude Opus 4.1) to 384,000 (DeepSeek v4)",
+      "source": "jsonhouse normalization of six official provider documentation sites, 2026-07-25",
+      "category": "data"
+    },
+    {
+      "fact": "Prompt cache minimums are non-monotonic within a single vendor: Claude Opus 5 caches from 512 tokens while the older Opus 4.6 requires 4,096, and Gemini 2.5 Flash requires 2,048 while the newer Gemini 3.5 Flash requires 4,096",
+      "source": "jsonhouse normalization of Anthropic prompt caching docs and Google Gemini context caching docs, 2026-07-25",
+      "category": "data"
+    },
+    {
+      "fact": "Anthropic documents that requests to cache fewer than the minimum number of tokens 'will be processed without caching, and no error is returned' — the only signal is both cache_creation_input_tokens and cache_read_input_tokens returning 0",
+      "source": "Anthropic prompt caching documentation, retrieved 2026-07-25",
+      "category": "definition"
+    },
+    {
+      "fact": "DeepSeek v4-pro and v4-flash are text-only; every listed Anthropic, OpenAI, Google, and xAI model accepts image input, and Gemini 3.5 Flash additionally accepts video, audio, and PDF",
+      "source": "DeepSeek, Anthropic, OpenAI, Google, and xAI model documentation, retrieved 2026-07-25",
+      "category": "data"
+    },
+    {
+      "fact": "OpenAI commits to at least 6 months notice before retiring generally available models, 3 months for specialized variants, and as little as 2 weeks for preview models",
+      "source": "OpenAI deprecations page, retrieved 2026-07-25",
+      "category": "policy"
+    },
+    {
+      "fact": "Anthropic commits to at least 60 days retirement notice and is the only provider publishing forward-looking 'not sooner than' retirement floors for models that are not yet deprecated",
+      "source": "Anthropic model deprecations page, retrieved 2026-07-25",
+      "category": "policy"
+    },
+    {
+      "fact": "Anthropic publishes two distinct cutoff dates per model — a 'reliable knowledge cutoff' and a broader 'training data cutoff' — while every other provider publishes a single unlabeled date, making cross-provider cutoff comparison not like-for-like",
+      "source": "Anthropic models overview, retrieved 2026-07-25",
+      "category": "definition"
+    },
+    {
+      "fact": "Anthropic models from Opus 4.7 onward use a tokenizer that emits roughly 30% more tokens for identical text, so token-denominated context windows are not directly comparable across vendors",
+      "source": "Anthropic models overview, retrieved 2026-07-25",
+      "category": "definition"
+    },
+    {
+      "fact": "Claude Opus 4.1 is deprecated with a confirmed retirement date of 2026-08-05; gpt-5-chat-latest shut down 2026-07-23 and gemini-3.1-flash-lite-preview was retired 2026-05-25",
+      "source": "Anthropic, OpenAI, and Google deprecation pages, retrieved 2026-07-25",
+      "category": "trend"
+    }
+  ],
+  "comparison_data": {
+    "dimensions": [
+      "context_window_input_tokens",
+      "max_output_tokens",
+      "image_input",
+      "knowledge_cutoff",
+      "min_cacheable_prefix_tokens"
+    ],
+    "entries": [
+      {
+        "model": "claude-opus-5",
+        "provider": "Anthropic",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-05",
+        "min_cacheable_prefix_tokens": 512,
+        "retirement_floor": "2027-07-24",
+        "price_band": "flagship"
+      },
+      {
+        "model": "claude-fable-5",
+        "provider": "Anthropic",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-01",
+        "min_cacheable_prefix_tokens": 512,
+        "retirement_floor": "2027-06-09",
+        "price_band": "flagship"
+      },
+      {
+        "model": "claude-sonnet-5",
+        "provider": "Anthropic",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-01",
+        "min_cacheable_prefix_tokens": 1024,
+        "retirement_floor": "2027-06-30",
+        "price_band": "mid"
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "provider": "Anthropic",
+        "context_window_input_tokens": 200000,
+        "max_output_tokens": 64000,
+        "image_input": true,
+        "knowledge_cutoff": "2025-02",
+        "min_cacheable_prefix_tokens": 4096,
+        "retirement_floor": "2026-10-15",
+        "price_band": "budget"
+      },
+      {
+        "model": "claude-opus-4-1",
+        "provider": "Anthropic",
+        "context_window_input_tokens": 200000,
+        "max_output_tokens": 32000,
+        "image_input": true,
+        "knowledge_cutoff": "2025-01",
+        "min_cacheable_prefix_tokens": null,
+        "retirement_floor": "2026-08-05",
+        "lifecycle_status": "deprecated",
+        "price_band": "flagship"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "provider": "OpenAI",
+        "context_window_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-02-16",
+        "min_cacheable_prefix_tokens": null,
+        "price_band": "flagship"
+      },
+      {
+        "model": "gpt-5.5",
+        "provider": "OpenAI",
+        "context_window_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2025-12-01",
+        "min_cacheable_prefix_tokens": null,
+        "price_band": "flagship"
+      },
+      {
+        "model": "gpt-5.4",
+        "provider": "OpenAI",
+        "context_window_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2025-08-31",
+        "min_cacheable_prefix_tokens": null,
+        "price_band": "mid"
+      },
+      {
+        "model": "gemini-3.5-flash",
+        "provider": "Google",
+        "context_window_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "image_input": true,
+        "additional_input_modalities": ["video", "audio", "pdf"],
+        "knowledge_cutoff": "2026-05",
+        "min_cacheable_prefix_tokens": 4096,
+        "price_band": "mid"
+      },
+      {
+        "model": "gemini-2.5-flash",
+        "provider": "Google",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": null,
+        "image_input": true,
+        "knowledge_cutoff": null,
+        "min_cacheable_prefix_tokens": 2048,
+        "price_band": "budget"
+      },
+      {
+        "model": "grok-4.3",
+        "provider": "xAI",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": null,
+        "image_input": true,
+        "knowledge_cutoff": null,
+        "min_cacheable_prefix_tokens": null,
+        "price_band": "mid"
+      },
+      {
+        "model": "grok-4.5",
+        "provider": "xAI",
+        "context_window_input_tokens": 500000,
+        "max_output_tokens": null,
+        "image_input": true,
+        "knowledge_cutoff": "2026-02-01",
+        "min_cacheable_prefix_tokens": null,
+        "price_band": "mid"
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "provider": "DeepSeek",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": 384000,
+        "image_input": false,
+        "knowledge_cutoff": null,
+        "min_cacheable_prefix_tokens": null,
+        "price_band": "budget"
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "provider": "DeepSeek",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": 384000,
+        "image_input": false,
+        "knowledge_cutoff": null,
+        "min_cacheable_prefix_tokens": null,
+        "price_band": "budget"
+      }
+    ],
+    "notes": "null means the provider does not publish the figure in first-party documentation as of 2026-07-25. Anthropic max_output_tokens reflects the synchronous Messages API; Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5, and Sonnet 4.6 reach 300000 on the Message Batches API behind a beta header. Anthropic knowledge_cutoff uses the published 'reliable knowledge cutoff', not the broader 'training data cutoff'. Anthropic models from Opus 4.7 onward use a tokenizer emitting ~30% more tokens for identical text, so context_window_input_tokens is not directly comparable across providers. min_cacheable_prefix_tokens applies to each provider's first-party API only; Amazon Bedrock, Google Cloud, and Microsoft Foundry set their own minimums and failure behavior."
+  },
+  "lifecycle_policy": [
+    {
+      "provider": "Anthropic",
+      "minimum_notice": "at least 60 days",
+      "publishes_dates_for_active_models": true,
+      "nearest_confirmed_retirement": "claude-opus-4-1 on 2026-08-05"
+    },
+    {
+      "provider": "OpenAI",
+      "minimum_notice": "at least 6 months (GA), 3 months (specialized variants), ~2 weeks (preview)",
+      "publishes_dates_for_active_models": false,
+      "nearest_confirmed_retirement": "o3-mini and gpt-4-0613 on 2026-10-23"
+    },
+    {
+      "provider": "Google",
+      "minimum_notice": "not stated",
+      "publishes_dates_for_active_models": false,
+      "nearest_confirmed_retirement": "imagen-4.0 family on 2026-08-17"
+    },
+    {
+      "provider": "xAI",
+      "minimum_notice": "not published",
+      "publishes_dates_for_active_models": false,
+      "nearest_confirmed_retirement": null
+    },
+    {
+      "provider": "DeepSeek",
+      "minimum_notice": "not published",
+      "publishes_dates_for_active_models": false,
+      "nearest_confirmed_retirement": null
+    },
+    {
+      "provider": "Mistral",
+      "minimum_notice": "not verified — deprecation page unreachable on 2026-07-25",
+      "publishes_dates_for_active_models": null,
+      "nearest_confirmed_retirement": null
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "What is the best LLM in 2026?",
+      "a": "There is no single answer, because the models no longer differ mainly in capability — they differ in operating limits. If you generate long documents, DeepSeek v4 leads on max output at 384K tokens. If you need vision plus a 1M context, Claude Opus 5, GPT-5.6-sol, and Gemini 3.5 Flash all qualify and DeepSeek does not."
+    },
+    {
+      "q": "Which LLM has the largest context window in 2026?",
+      "a": "They have converged. OpenAI publishes 1,050,000 tokens, Gemini 3.5 Flash 1,048,576, and Anthropic, xAI (Grok 4.3), and DeepSeek all publish 1,000,000 — a spread under 5%. Max output tokens, which ranges from 32K to 384K, is now the real differentiator."
+    },
+    {
+      "q": "Why does prompt caching sometimes not work even when enabled?",
+      "a": "Every provider enforces a minimum cacheable prefix, and prompts below it fail to cache silently — no error, no warning. Thresholds range from 512 tokens (Claude Opus 5) to 4,096 (Claude Opus 4.6, Gemini 3.5 Flash)."
+    },
+    {
+      "q": "How much notice do providers give before retiring a model?",
+      "a": "It varies by an order of magnitude. OpenAI commits to at least 6 months for GA models and as little as 2 weeks for previews. Anthropic commits to at least 60 days but is the only provider publishing forward-looking retirement floors for models that are not yet deprecated. Google publishes no standard duration."
+    },
+    {
+      "q": "Is a knowledge cutoff date comparable across providers?",
+      "a": "Not directly. Anthropic publishes both a 'reliable knowledge cutoff' and a broader 'training data cutoff' and they differ by months on some models. Every other provider publishes a single unlabeled date whose definition is not stated."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Models overview",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Model deprecations",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Prompt caching",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Models",
+      "url": "https://developers.openai.com/api/docs/models",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "Deprecations",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "Gemini 3.5 Flash model page",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash",
+      "publisher": "Google"
+    },
+    {
+      "title": "Context caching",
+      "url": "https://ai.google.dev/gemini-api/docs/caching",
+      "publisher": "Google"
+    },
+    {
+      "title": "Gemini API changelog",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "publisher": "Google"
+    },
+    {
+      "title": "Models",
+      "url": "https://docs.x.ai/docs/models",
+      "publisher": "xAI"
+    },
+    {
+      "title": "Pricing and model specifications",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "publisher": "DeepSeek"
+    },
+    {
+      "title": "Models overview",
+      "url": "https://docs.mistral.ai/getting-started/models/models_overview/",
+      "publisher": "Mistral AI"
+    }
+  ],
+  "update_cadence": "monthly, first Tuesday",
+  "changelog": [
+    {
+      "date": "2026-07-25",
+      "change": "Initial publication. 13 models across 6 providers. Baseline collected 2026-07-25."
+    }
+  ]
+}
