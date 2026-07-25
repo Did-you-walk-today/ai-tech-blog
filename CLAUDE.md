@@ -391,6 +391,21 @@ Post validation runs automatically on every `Write` or `Edit` to `_posts/*.md` a
 - **Script**: `.claude/hooks/post-validation.sh` (SEO + content quality checks)
 - **Rules**: See the Hook Enforcement table below for full rule list
 
+### GSC Indexing List Sync
+
+`GSC_INDEXING.md` holds the manual Google Search Console index-submission list.
+Its post table is regenerated automatically — never edit it by hand.
+
+- **Script**: `.claude/hooks/sync-indexing-list.sh` → `sync_indexing_list.py`
+- **Triggers**: `Write`/`Edit` to `_posts/*.md`, and `Bash` commands touching
+  `_posts/` or running `git mv|commit|push|rm` (covers the publish-post skill's `git mv`)
+- **Preserved on regen**: the 상태 checkbox and 메모 columns, keyed by URL
+- **Manual run**: `python3 .claude/hooks/sync_indexing_list.py "$(git rev-parse --show-toplevel)"`
+
+`sitemap.xml` needs no maintenance — `jekyll-sitemap` regenerates it from `_posts/`
+on every deploy. Local `_site/sitemap.xml` is a gitignored build artifact and is
+often stale; always verify against `https://www.jsonhouse.com/sitemap.xml`.
+
 ## Hook Enforcement (Auto-triggered on every post write)
 
 `.claude/hooks/post-validation.sh` runs automatically after every Write/Edit to `_posts/` or `_drafts/`.

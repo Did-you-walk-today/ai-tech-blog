@@ -8,6 +8,23 @@
             "type": "command",
             "command": "bash .claude/hooks/post-validation.sh",
             "timeout": 10000
+          },
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/sync-indexing-list.sh",
+            "timeout": 15,
+            "statusMessage": "GSC 색인 목록 동기화 중"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/sync-indexing-list.sh",
+            "timeout": 15,
+            "statusMessage": "GSC 색인 목록 동기화 중"
           }
         ]
       }
