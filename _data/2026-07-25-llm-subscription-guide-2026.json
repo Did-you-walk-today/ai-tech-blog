@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "slug": "llm-subscription-guide-2026",
+  "title": "Best LLM Subscription 2026: What You Really Pay For",
+  "description": "No AI vendor tells you how many tokens your subscription buys. Here is what ChatGPT Plus and Pro actually disclose, and how to judge free vs paid yourself.",
+  "data_updated": "2026-07-25",
+  "source_post": "https://www.jsonhouse.com/posts/llm-subscription-guide-2026/",
+  "category": "ai-models-intelligence",
+  "cluster": "CLUSTER_LLM",
+  "format": "A",
+  "key_facts": [
+    {
+      "fact": "No major vendor publishes a token quota for consumer AI subscriptions — plans are sold in messages, multipliers, or unspecified allowances",
+      "source": "Vendor plan documentation reviewed 2026-07-25",
+      "category": "definition"
+    },
+    {
+      "fact": "ChatGPT Plus and Go allow up to 160 GPT-5.5 Instant messages every 3 hours, after which chats switch to GPT-5.5 Instant mini until the limit resets",
+      "source": "OpenAI Help Center, 2026-07-25",
+      "category": "data"
+    },
+    {
+      "fact": "ChatGPT Plus allows up to 3,000 GPT-5.5 Thinking messages per week",
+      "source": "OpenAI Help Center, 2026-07-25",
+      "category": "data"
+    },
+    {
+      "fact": "ChatGPT Pro is priced at $200/month with a $100 tier offering lower usage allowances; OpenAI states only that 'some models have separate usage allowances' rather than publishing numbers",
+      "source": "OpenAI Help Center, 2026-07-25",
+      "category": "data"
+    },
+    {
+      "fact": "ChatGPT offers no annual billing for Go, Plus or Pro — all are monthly only",
+      "source": "OpenAI Help Center, 2026-07-25",
+      "category": "policy"
+    },
+    {
+      "fact": "GPT-5.6 Sol powers the Medium, High and Extra High reasoning options while GPT-5.6 Sol Pro powers the Pro tier; hitting a GPT-5.6 reasoning limit can fall back to GPT-5.4 Thinking mini",
+      "source": "OpenAI Help Center, 2026-07-25",
+      "category": "definition"
+    },
+    {
+      "fact": "GPT-5.2 was retired from ChatGPT on June 12, 2026, with existing conversations migrated to the corresponding GPT-5.5 model",
+      "source": "OpenAI Help Center, 2026-06-12",
+      "category": "trend"
+    },
+    {
+      "fact": "Premium consumer tiers are sold as usage multipliers rather than feature unlocks: Claude Max advertises 5x or 20x Pro usage per session, and Google AI Ultra advertises 5x or 20x AI Pro limits",
+      "source": "Anthropic and Google plan pages, 2026-07-25",
+      "category": "trend"
+    },
+    {
+      "fact": "Claude meters usage in rolling 5-hour session windows rather than monthly quotas",
+      "source": "Anthropic plan documentation, 2026-07-25",
+      "category": "definition"
+    }
+  ],
+  "comparison_data": {
+    "dimensions": [
+      "price",
+      "billing",
+      "headline_model",
+      "disclosed_limits",
+      "token_quota",
+      "on_hitting_limit",
+      "extras"
+    ],
+    "entries": [
+      {
+        "plan": "ChatGPT Plus (mainstream)",
+        "price": "$20/month",
+        "billing": "Monthly only — no annual option",
+        "headline_model": "GPT-5.6 Sol reasoning levels; GPT-5.5 Instant and Thinking",
+        "disclosed_limits": "160 GPT-5.5 Instant messages / 3 hours; up to 3,000 GPT-5.5 Thinking messages / week",
+        "token_quota": "Not published",
+        "on_hitting_limit": "Switches to GPT-5.5 Instant mini until reset",
+        "extras": "Codex coding agent, legacy model selection"
+      },
+      {
+        "plan": "ChatGPT Pro (top tier)",
+        "price": "$200/month (a $100 tier also exists with lower allowances)",
+        "billing": "Monthly only — no annual option",
+        "headline_model": "GPT-5.6 Sol Pro",
+        "disclosed_limits": "Not published as numbers — 'some models have separate usage allowances'",
+        "token_quota": "Not published",
+        "on_hitting_limit": "Not specified",
+        "extras": "Maximum memory and context, early feature previews"
+      }
+    ]
+  },
+  "faq_summary": [
+    {
+      "q": "How many tokens do you get with an AI subscription?",
+      "a": "No major vendor publishes a token quota for consumer plans. OpenAI discloses message counts for some models — 160 GPT-5.5 Instant messages every 3 hours on Plus and Go, and up to 3,000 GPT-5.5 Thinking messages per week on Plus — but a message is not a fixed unit of work."
+    },
+    {
+      "q": "Is a paid LLM subscription still worth it in 2026?",
+      "a": "It depends on how often you hit the free ceiling, not on how smart the model is. Free tiers now run capable models, so the gap moved from capability to headroom. If you hit limits mid-task more than once a week, that friction is what you are paying to remove."
+    },
+    {
+      "q": "What happens when you hit the ChatGPT usage limit?",
+      "a": "You are not blocked — you are silently downgraded. After 160 GPT-5.5 Instant messages in 3 hours, Plus and Go chats switch to GPT-5.5 Instant mini until reset, and hitting a GPT-5.6 reasoning limit can drop you to GPT-5.4 Thinking mini."
+    },
+    {
+      "q": "Should I pay for more than one AI subscription?",
+      "a": "For most people, no. The frontier models are close enough that a second subscription rarely adds capability — it adds a second set of limits. The exception is when two products have genuinely different characteristics you both need."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "GPT-5.6 in ChatGPT",
+      "url": "https://help.openai.com/en/articles/20001354-gpt-56-in-chatgpt",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "About ChatGPT Pro tiers",
+      "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "ChatGPT Plans — Free, Go, Plus, Pro, Business, and Enterprise",
+      "url": "https://openai.com/chatgpt/pricing/",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "Plans & Pricing",
+      "url": "https://claude.com/pricing",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Google AI Pro & Ultra subscriptions",
+      "url": "https://gemini.google/subscriptions/",
+      "publisher": "Google"
+    }
+  ]
+}
