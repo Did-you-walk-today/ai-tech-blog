@@ -13,3 +13,6 @@ node_modules/
 
 # Internal planning docs — strategy/billing plans, keep out of the public repo
 _plans/
+
+# Bot-logger Cloudflare Worker — collection infra, keep out of the public repo
+bot-logger/
