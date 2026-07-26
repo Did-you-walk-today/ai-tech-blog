@@ -2,14 +2,14 @@
 title: "AI Crawler Ecosystem 2026: Who Scrapes the Web and Who Pays"
 description: "Machines now generate 57.5% of web HTML traffic. Who the AI crawlers are, what they take per visitor sent, and how pay-per-crawl rewrites the web's deal."
 date: 2026-07-17 18:00:00 +0900
-last_modified_at: 2026-07-26 03:38:15 +0900
+last_modified_at: 2026-07-26 23:14:30 +0900
 categories: [industry-analysis]
 tags: [ai-crawlers, gptbot, claudebot, pay-per-crawl, robots-txt, rsl, cloudflare, aeo, "2026"]
 format: D
 cluster: CLUSTER_AEO
 image:
-  path: /assets/img/posts/ai-crawler-ecosystem-2026-cover.png
-  alt: "AI crawlers take content through an access gate while referral traffic returns separately to publishers"
+  path: /assets/img/posts/ai-crawler-ecosystem-2026-cover.jpg
+  alt: "A single oval banded agate standing on rough dark stone under cool cyan and warm amber side lighting"
 faq:
   - q: "Should I block AI crawlers on my website?"
     a: "Block by purpose, not by company. Training bots (GPTBot, ClaudeBot, Meta-ExternalAgent) take content with near-zero traffic in return, so blocking them costs you little unless you value inclusion in future models. Search and user-action bots (OAI-SearchBot, Claude-SearchBot, PerplexityBot, ChatGPT-User) are how AI assistants cite and visit your pages — blocking those removes you from AI answers, which now convert far better than average organic traffic."

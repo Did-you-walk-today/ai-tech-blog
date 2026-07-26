@@ -2,14 +2,14 @@
 title: "LLM API Pricing 2026: Full Comparison Table (Weekly)"
 description: "LLM API pricing 2026: 39 models from OpenAI, Anthropic, Google, xAI, DeepSeek, and Mistral in one table. Input/output cost per 1M tokens, updated weekly."
 date: 2026-07-17 12:00:00 +0900
-last_modified_at: 2026-07-26 03:38:15 +0900
+last_modified_at: 2026-07-26 23:14:30 +0900
 categories: [ai-data-statistics]
 tags: [llm-pricing, api-cost, claude, gpt-5, gemini, grok, deepseek, mistral, "2026"]
 format: D
 cluster: CLUSTER_LLM
 image:
-  path: /assets/img/posts/llm-api-pricing-2026-cover.png
-  alt: "LLM task cost combines input, output, and cache pricing rather than one headline rate"
+  path: /assets/img/posts/llm-api-pricing-2026-cover.jpg
+  alt: "A single triangular glass prism on a dark matte surface with cyan and amber light tracing its edges"
 faq:
   - q: "What is the cheapest LLM API in 2026?"
     a: "Among general-purpose models with published pricing, DeepSeek v4-flash is the cheapest at $0.14 input / $0.28 output per 1M tokens with a 1M-token context window. Among the big three US providers, Gemini 2.5 Flash-Lite is lowest at $0.10 / $0.40. Cache-heavy workloads change the ranking further: DeepSeek's cache-hit input price is $0.0028 per 1M tokens, a 98% discount."

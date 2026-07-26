@@ -2,14 +2,14 @@
 title: "ChatGPT Ads 2026: AEO Traffic and Reddit Citations"
 description: "ChatGPT launched ads on Feb 9, 2026 at $60 CPM. AI traffic converts 4–23x better than organic. Reddit drives 40% of AI citations across all major platforms."
 date: 2026-05-17 12:00:00 +0900
-last_modified_at: 2026-07-26 03:38:15 +0900
+last_modified_at: 2026-07-26 23:14:30 +0900
 categories: [ai-models-intelligence]
 tags: [chatgpt-ads, aeo, geo, ai-search, reddit-citations, zero-click, "2026"]
 format: D
 cluster: CLUSTER_LLM
 image:
-  path: /assets/img/posts/chatgpt-ads-2026-aeo-reddit-citations-cover.png
-  alt: "Ads sit beside AI answers while citations remain the evidence path connecting sources to readers"
+  path: /assets/img/posts/chatgpt-ads-2026-aeo-reddit-citations-cover.jpg
+  alt: "A thick cast glass block standing on dark stone with cyan light across one edge and amber light across the other"
 faq:
   - q: "Are ChatGPT ads available globally?"
     a: "As of May 2026, ChatGPT ads are live in the United States for Free and Go ($8/month) tier users. OpenAI is expanding to Canada, Australia, and New Zealand with further markets planned for 2026, but no confirmed dates for Europe or Asia have been announced."
