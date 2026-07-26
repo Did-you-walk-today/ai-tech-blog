@@ -2,14 +2,14 @@
 title: "Pass Google E-E-A-T 2026: AI-Assisted Content Survival Guide"
 description: "E-E-A-T isn't a ranking factor—it's a framework. Here's how AI-assisted content actually passes Google's quality bar in 2026, with 18 concrete signals."
 date: 2026-04-29 12:00:00 +0900
-last_modified_at: 2026-07-26 03:38:15 +0900
+last_modified_at: 2026-07-26 17:23:25 +0900
 categories: [ai-safety-ethics]
 tags: [eeat, google-quality-raters, ai-content, content-strategy, "2026"]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY
 image:
-  path: /assets/img/posts/eeat-ai-content-2026-cover.png
-  alt: "Experience, expertise, and authority support trust, the foundation of Google's E-E-A-T framework"
+  path: /assets/img/posts/eeat-ai-content-2026-cover.jpg
+  alt: "A thick dark slate slab with chipped layered edges leaning on stone under cyan light and a warm amber rim"
 faq:
   - q: "Is E-E-A-T a direct ranking factor?"
     a: "No. E-E-A-T is a framework used by Google's human Quality Raters to evaluate content quality. There is no E-E-A-T score. The ratings inform algorithm training, but E-E-A-T itself is not a signal fed directly into rankings. The signals it describes—author credibility, source accuracy, site transparency—are what algorithms capture."
