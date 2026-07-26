@@ -2,14 +2,14 @@
 title: "SynthID and C2PA: How AI Image Verification Works in 2026"
 description: "SynthID watermarks pixels. C2PA signs metadata. They're not competitors—they're complementary layers. Here's how AI image verification actually works in 2026."
 date: 2026-04-30 12:00:00 +0900
-last_modified_at: 2026-07-26 03:38:15 +0900
+last_modified_at: 2026-07-26 22:53:04 +0900
 categories: [ai-data, ai-safety-ethics]
 tags: [synthid, c2pa, content-credentials, ai-images, watermarking, "2026"]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY
 image:
-  path: /assets/img/posts/synthid-c2pa-explained-2026-cover.png
-  alt: "SynthID embeds provenance in pixels while C2PA attaches a separate signed metadata layer"
+  path: /assets/img/posts/synthid-c2pa-explained-2026-cover.jpg
+  alt: "A transparent quartz crystal specimen resting on dark stone under cyan and amber side lighting"
 faq:
   - q: "Will SynthID or C2PA become the standard?"
     a: "Neither replaces the other—they solve different problems at different layers. SynthID is Google's proprietary pixel watermarking system; C2PA is an open industry standard for metadata provenance. Google's dual attachment since November 2025 demonstrates the underlying structure: each alone has a fundamental gap — SynthID carries no provenance detail; C2PA disappears when metadata is stripped. Together, they close both gaps."

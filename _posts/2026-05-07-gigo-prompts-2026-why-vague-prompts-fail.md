@@ -2,14 +2,14 @@
 title: "GIGO Prompts 2026: Why Vague Prompts Fail (Data + Fix)"
 description: "Vague prompts fail because LLMs predict probability, not intent. Here's the GIGO mechanism behind AI hallucination — and a 5-element template to fix it."
 date: 2026-05-07 09:00:00 +0900
-last_modified_at: 2026-07-26 03:38:15 +0900
+last_modified_at: 2026-07-26 22:53:04 +0900
 categories: [prompt-engineering]
 tags: [prompt-engineering, gigo, hallucination, vague-prompts, llm, specificity, "2026"]
 format: C
 cluster: CLUSTER_PROMPTS
 image:
-  path: /assets/img/posts/gigo-prompts-2026-why-vague-prompts-fail-cover.png
-  alt: "Vague inputs distort intent while specific prompts preserve the requested output shape"
+  path: /assets/img/posts/gigo-prompts-2026-why-vague-prompts-fail-cover.jpg
+  alt: "A vintage printing ink brayer resting on dark textured paper under cyan and amber directional light"
 faq:
   - q: "Are longer, more specific prompts slower and more expensive to run?"
     a: "Marginally. A prompt with 200 more tokens costs roughly 0.02 cents extra at current API pricing. The cost of one hallucination — a wrong fact, a failed task, a re-run — is orders of magnitude larger. Specificity is a cost-reduction strategy, not a cost increase."

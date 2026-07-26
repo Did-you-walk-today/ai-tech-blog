@@ -2,14 +2,14 @@
 title: "Google's Helpful Content System 2026: How It Really Decides"
 description: "HCS became part of Google's core algorithm in March 2024 — always-on, multi-signal, asymmetric. Here's how it actually evaluates and demotes content in 2026."
 date: 2026-05-01 12:00:00 +0900
-last_modified_at: 2026-07-26 03:38:15 +0900
+last_modified_at: 2026-07-26 22:53:04 +0900
 categories: [ai-data, ai-safety-ethics]
 tags: [helpful-content, google-algorithm, core-update, hcu, information-gain, "2026"]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY
 image:
-  path: /assets/img/posts/helpful-content-system-2026-cover.png
-  alt: "Google's Helpful Content System combines interacting signals continuously instead of exposing one score"
+  path: /assets/img/posts/helpful-content-system-2026-cover.jpg
+  alt: "An angular pyrite crystal specimen on rough dark stone with cool cyan light and a warm amber rim"
 faq:
   - q: "Will there be another standalone Helpful Content Update?"
     a: "No. Google deprecated the Helpful Content System as a standalone system on March 5, 2024. It is now an always-active part of core ranking logic. Future core updates will include HCS signals, but there will be no separately announced Helpful Content Updates as there were in 2022 and 2023."
