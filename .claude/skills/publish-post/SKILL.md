@@ -46,6 +46,22 @@ description: 기웅 승인이 완료된 드래프트를 발행하는 Phase 6 워
   - `/data/index.json` count 증가
 - 실패 시: 원인 분석 후 해결 방법 2~3가지 제시 (전역 규칙)
 
+## Step 4.5 — IndexNow 제출
+
+라이브 검증이 **모두 통과한 뒤에만** 실행한다. 아직 200이 아닌 URL을 밀어넣으면
+크롤러가 404를 먹고 재크롤이 오히려 늦어진다.
+
+```bash
+python3 .claude/hooks/indexnow_submit.py https://www.jsonhouse.com/posts/{slug}/
+```
+
+- 대상은 Bing / Yandex / Seznam / Naver. **Google은 IndexNow 미참여** —
+  구글 색인 요청은 `GSC_INDEXING.md`의 수동 제출 목록 그대로 유지한다.
+- HTTP 200 또는 202가 정상. 202는 키 검증 대기 상태이며 재시도할 필요 없다.
+- 403이 나오면 루트 키 파일이 배포되지 않은 것이다. 스크립트가 제출 전에
+  키 파일을 먼저 확인하므로, 이 경우 API에는 아무것도 보내지 않고 멈춘다.
+- 전체 사이트를 다시 밀어야 할 때만 `--sitemap`. 매 발행마다 쓰지 않는다.
+
 ## Step 5 — 보고
 
 한국어 작업 보고서 (작업 내용 / 변경된 파일 / 결과 / 다음 단계) + 발행 URL 포함.
