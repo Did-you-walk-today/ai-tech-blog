@@ -1,0 +1,487 @@
+{
+  "snapshot_date": "2026-07-28",
+  "notes": "Prices in USD per 1M tokens, standard (non-batch) API tier. Tiered-price models record the base (lowest) tier with the higher tier in the model's note field. Retired models excluded; deprecated-but-available models included. Collected Tuesday because the 2026-07-20 and 2026-07-27 Monday snapshots were missed; those weeks are permanently absent and are not backfilled. Tracked scope is held stable at the set established on 2026-07-16 so week-over-week deltas stay meaningful: provider pricing pages also list older or non-text models (OpenAI gpt-5.2 and earlier, Mistral Mixtral/NeMo/Ministral/Voxtral, Google image and embedding models) that were outside scope then and remain outside it now. A model appearing here for the first time is new relative to the previous snapshot; that is not by itself evidence it launched during the gap.",
+  "models": [
+    {
+      "provider": "anthropic",
+      "model": "claude-mythos-5",
+      "input_per_1m": 10.0,
+      "output_per_1m": 50.0,
+      "cache_read_per_1m": 1.0,
+      "context_window": 1000000,
+      "note": "New since 2026-07-16. Limited availability",
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-fable-5",
+      "input_per_1m": 10.0,
+      "output_per_1m": 50.0,
+      "cache_read_per_1m": 1.0,
+      "context_window": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-5",
+      "input_per_1m": 5.0,
+      "output_per_1m": 25.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": 1000000,
+      "note": "New since 2026-07-16. Fast mode available at $10 in / $50 out",
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-4-8",
+      "input_per_1m": 5.0,
+      "output_per_1m": 25.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": 1000000,
+      "note": "Fast mode available at $10 in / $50 out",
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-4-7",
+      "input_per_1m": 5.0,
+      "output_per_1m": 25.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-4-6",
+      "input_per_1m": 5.0,
+      "output_per_1m": 25.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-4-5",
+      "input_per_1m": 5.0,
+      "output_per_1m": 25.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": 200000,
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5",
+      "input_per_1m": 2.0,
+      "output_per_1m": 10.0,
+      "cache_read_per_1m": 0.2,
+      "context_window": 1000000,
+      "note": "Introductory pricing through 2026-08-31; becomes $3 in / $15 out (cache $0.30) on 2026-09-01",
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6",
+      "input_per_1m": 3.0,
+      "output_per_1m": 15.0,
+      "cache_read_per_1m": 0.3,
+      "context_window": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5",
+      "input_per_1m": 3.0,
+      "output_per_1m": 15.0,
+      "cache_read_per_1m": 0.3,
+      "context_window": 200000,
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "input_per_1m": 1.0,
+      "output_per_1m": 5.0,
+      "cache_read_per_1m": 0.1,
+      "context_window": 200000,
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-4-1",
+      "input_per_1m": 15.0,
+      "output_per_1m": 75.0,
+      "cache_read_per_1m": 1.5,
+      "context_window": 200000,
+      "note": "Deprecated but still available",
+      "source_url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "input_per_1m": 5.0,
+      "output_per_1m": 30.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": null,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "input_per_1m": 2.5,
+      "output_per_1m": 15.0,
+      "cache_read_per_1m": 0.25,
+      "context_window": null,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.6-luna",
+      "input_per_1m": 1.0,
+      "output_per_1m": 6.0,
+      "cache_read_per_1m": 0.1,
+      "context_window": null,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.5",
+      "input_per_1m": 5.0,
+      "output_per_1m": 30.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": null,
+      "note": "Pricing table marks this tier '<272K'; the page does not state a context window separately, so none is recorded",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.5-pro",
+      "input_per_1m": 30.0,
+      "output_per_1m": 180.0,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "input_per_1m": 2.5,
+      "output_per_1m": 15.0,
+      "cache_read_per_1m": 0.25,
+      "context_window": null,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.4-mini",
+      "input_per_1m": 0.75,
+      "output_per_1m": 4.5,
+      "cache_read_per_1m": 0.075,
+      "context_window": null,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.4-nano",
+      "input_per_1m": 0.2,
+      "output_per_1m": 1.25,
+      "cache_read_per_1m": 0.02,
+      "context_window": null,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.4-pro",
+      "input_per_1m": 30.0,
+      "output_per_1m": 180.0,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.6-flash",
+      "input_per_1m": 1.5,
+      "output_per_1m": 7.5,
+      "cache_read_per_1m": 0.15,
+      "context_window": null,
+      "note": "New since 2026-07-16. Cache storage $1.00 per 1M tokens per hour",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.5-flash",
+      "input_per_1m": 1.5,
+      "output_per_1m": 9.0,
+      "cache_read_per_1m": 0.15,
+      "context_window": null,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.5-flash-lite",
+      "input_per_1m": 0.3,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "note": "New since 2026-07-16. Context caching not offered for this model",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.1-pro-preview",
+      "input_per_1m": 2.0,
+      "output_per_1m": 12.0,
+      "cache_read_per_1m": 0.2,
+      "context_window": null,
+      "note": "Base tier <=200k prompt; >200k tier is $4 in / $18 out (cache $0.40). Preview model",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.1-flash-lite",
+      "input_per_1m": 0.25,
+      "output_per_1m": 1.5,
+      "cache_read_per_1m": 0.025,
+      "context_window": null,
+      "note": "Text/image/video rate; audio input is $0.50 in / $0.05 cache",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3-flash-preview",
+      "input_per_1m": 0.5,
+      "output_per_1m": 3.0,
+      "cache_read_per_1m": 0.05,
+      "context_window": null,
+      "note": "New since 2026-07-16. Text/image/video rate; audio input is $1.00 in / $0.10 cache. Preview model",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-2.5-pro",
+      "input_per_1m": 1.25,
+      "output_per_1m": 10.0,
+      "cache_read_per_1m": 0.125,
+      "context_window": null,
+      "note": "Base tier <=200k prompt; >200k tier is $2.50 in / $15 out (cache $0.25)",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-2.5-flash",
+      "input_per_1m": 0.3,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": 0.03,
+      "context_window": 1000000,
+      "note": "Text/image/video rate; audio input is $1.00 in / $0.10 cache",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-2.5-flash-lite",
+      "input_per_1m": 0.1,
+      "output_per_1m": 0.4,
+      "cache_read_per_1m": 0.01,
+      "context_window": null,
+      "note": "Text/image/video rate; audio input is $0.30 in / $0.03 cache",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash",
+      "input_per_1m": 0.14,
+      "output_per_1m": 0.28,
+      "cache_read_per_1m": 0.0028,
+      "context_window": 1000000,
+      "note": "Legacy IDs deepseek-chat / deepseek-reasoner were mapped here until 2026-07-24; that date has passed and the page no longer lists them",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
+      "input_per_1m": 0.435,
+      "output_per_1m": 0.87,
+      "cache_read_per_1m": 0.003625,
+      "context_window": 1000000,
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.5",
+      "input_per_1m": 2.0,
+      "output_per_1m": 6.0,
+      "cache_read_per_1m": 0.3,
+      "context_window": 500000,
+      "note": "Cache read fell from $0.50 on 2026-07-16. Base tier <200k prompt; >=200k tier is $4 in / $12 out. The page lists a single cached-input price with no tier split",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.3",
+      "input_per_1m": 1.25,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": 0.2,
+      "context_window": 1000000,
+      "note": "Base tier <200k prompt; >=200k tier is $2.50 in / $5 out",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.20-0309-reasoning",
+      "input_per_1m": 1.25,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": 0.2,
+      "context_window": 1000000,
+      "note": "New since 2026-07-16. Base tier <200k prompt; >=200k tier is $2.50 in / $5 out",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.20-0309-non-reasoning",
+      "input_per_1m": 1.25,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": 0.2,
+      "context_window": 1000000,
+      "note": "New since 2026-07-16. Base tier <200k prompt; >=200k tier is $2.50 in / $5 out",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.20-multi-agent-0309",
+      "input_per_1m": 1.25,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": 0.2,
+      "context_window": 1000000,
+      "note": "New since 2026-07-16. Base tier <200k prompt; >=200k tier is $2.50 in / $5 out",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-build-0.1",
+      "input_per_1m": 1.0,
+      "output_per_1m": 2.0,
+      "cache_read_per_1m": 0.2,
+      "context_window": 256000,
+      "note": "Base tier <200k prompt; >=200k tier is $2 in / $4 out",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "mistral-medium-3.5",
+      "input_per_1m": 1.5,
+      "output_per_1m": 7.5,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "mistral-large-3",
+      "input_per_1m": 0.5,
+      "output_per_1m": 1.5,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "mistral-small-4",
+      "input_per_1m": 0.15,
+      "output_per_1m": 0.6,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "magistral-medium",
+      "input_per_1m": 2.0,
+      "output_per_1m": 5.0,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "magistral-small",
+      "input_per_1m": 0.5,
+      "output_per_1m": 1.5,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "devstral-2",
+      "input_per_1m": 0.4,
+      "output_per_1m": 2.0,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "devstral-small-2",
+      "input_per_1m": 0.1,
+      "output_per_1m": 0.3,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "codestral",
+      "input_per_1m": 0.3,
+      "output_per_1m": 0.9,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-07-28T09:22:04Z"
+    }
+  ]
+}
