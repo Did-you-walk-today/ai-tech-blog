@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "Safety"
+title: "AI Safety"
 icon: fas fa-shield-alt
 order: 6
 ---
 
-<h2>AI Safety &amp; Ethics</h2>
 <p>Security checklists, responsible AI practices, and OWASP LLM guidelines.</p>
 
 <ul class="post-list">

@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "Productivity"
+title: "AI Productivity"
 icon: fas fa-bolt
 order: 4
 ---
 
-<h2>AI Productivity &amp; Workflows</h2>
 <p>Automation templates, workflow setups, and AI-powered productivity patterns.</p>
 
 <ul class="post-list">

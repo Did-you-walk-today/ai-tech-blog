@@ -5,11 +5,10 @@ icon: fas fa-robot
 order: 1
 ---
 
-<h2>AI Models &amp; Intelligence</h2>
 <p>Benchmark reports, model comparisons, and LLM pricing guides.</p>
 
 <ul class="post-list">
-{% assign cat_posts = site.posts | where_exp: "post", "post.categories contains 'ai-models'" %}
+{% assign cat_posts = site.posts | where_exp: "post", "post.categories contains 'ai-models-intelligence'" %}
 {% for post in cat_posts %}
   <li>
     <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a>

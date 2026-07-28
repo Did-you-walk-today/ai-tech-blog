@@ -5,7 +5,6 @@ icon: fas fa-tools
 order: 2
 ---
 
-<h2>AI Developer Tools</h2>
 <p>Hands-on guides and comparisons for AI coding tools, MCP, and developer workflows.</p>
 
 <ul class="post-list">

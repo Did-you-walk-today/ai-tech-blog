@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "Prompts"
+title: "Prompt Engineering"
 icon: fas fa-comment-dots
 order: 3
 ---
 
-<h2>Prompt Engineering</h2>
 <p>Prompt libraries, system prompt templates, and engineering techniques.</p>
 
 <ul class="post-list">

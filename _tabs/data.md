@@ -1,15 +1,14 @@
 ---
 layout: page
-title: "Data"
+title: "AI Data"
 icon: fas fa-chart-bar
 order: 5
 ---
 
-<h2>AI Data &amp; Statistics</h2>
 <p>Structured datasets, pricing databases, and statistical resources for AI.</p>
 
 <ul class="post-list">
-{% assign cat_posts = site.posts | where_exp: "post", "post.categories contains 'ai-data'" %}
+{% assign cat_posts = site.posts | where_exp: "post", "post.categories contains 'ai-data' or post.categories contains 'ai-data-statistics'" %}
 {% for post in cat_posts %}
   <li>
     <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a>
