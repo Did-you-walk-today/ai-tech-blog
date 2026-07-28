@@ -2,14 +2,14 @@
 title: "AI Overviews SEO 2026: Recover Your Lost Traffic"
 description: "Google AI Overviews cut organic clicks up to 61% in 2026. See the real CTR data, why citation now beats ranking, and a checklist to win traffic back."
 date: 2026-07-25 09:00:00 +0900
-last_modified_at: 2026-07-26 03:38:15 +0900
+last_modified_at: 2026-07-28 17:30:42 +0900
 categories: [industry-analysis]
 tags: [ai-overviews, aeo, geo, zero-click, seo, e-e-a-t, "2026"]
 format: C
 cluster: CLUSTER_AEO
 image:
-  path: /assets/img/posts/ai-overviews-seo-2026-cover.png
-  alt: "AI Overviews interrupt the ranking-to-click path while citations create a separate route to publishers"
+  path: /assets/img/posts/ai-overviews-seo-2026-cover.jpg
+  alt: "A single black obsidian fragment on dark stone, its glassy fracture edged by cyan and amber light"
 faq:
   - q: "Do Google AI Overviews really reduce website traffic?"
     a: "Yes, and it is now measured with real user data, not estimates. A Pew Research study of 68,000 queries found users clicked a result 8% of the time when an AI Overview appeared versus 15% when it did not — a 46.7% relative drop. Ahrefs measured a 58% CTR fall for the top result in February 2026, and Seer Interactive found a 61% organic CTR decline across 25.1 million impressions."

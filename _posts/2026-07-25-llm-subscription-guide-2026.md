@@ -2,14 +2,14 @@
 title: "Best LLM Subscription 2026: What You Really Pay For"
 description: "No AI vendor tells you how many tokens your subscription buys. Here is what ChatGPT Plus and Pro actually disclose, and how to judge free vs paid yourself."
 date: 2026-07-25 15:00:00 +0900
-last_modified_at: 2026-07-26 03:38:15 +0900
+last_modified_at: 2026-07-28 17:30:42 +0900
 categories: [ai-models-intelligence]
 tags: [chatgpt, claude, gemini, llm-subscription, usage-limits, "2026"]
 format: A
 cluster: CLUSTER_LLM
 image:
-  path: /assets/img/posts/llm-subscription-guide-2026-cover.png
-  alt: "Subscription plans expose access rules while leaving the underlying token capacity undisclosed"
+  path: /assets/img/posts/llm-subscription-guide-2026-cover.jpg
+  alt: "A single thick optical glass rod on dark stone, with cyan light on its cut face and amber light along the rim"
 faq:
   - q: "How many tokens do you get with an AI subscription?"
     a: "No major vendor publishes a token quota for consumer plans. OpenAI discloses message counts for some models — Plus and Go get up to 160 GPT-5.5 Instant messages every 3 hours, and Plus gets up to 3,000 GPT-5.5 Thinking messages per week — but a message is not a fixed unit of work. Premium tiers are sold as vague multipliers or 'separate usage allowances' instead of hard numbers."
