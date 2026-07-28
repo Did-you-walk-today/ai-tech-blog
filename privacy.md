@@ -2,7 +2,7 @@
 layout: page
 title: Privacy Policy
 permalink: /privacy/
-description: "Privacy Policy for Json House (jsonhouse.com) — how we handle your data, cookies, and third-party advertising."
+description: "Privacy Policy for Json House (jsonhouse.com): what data we collect, how cookies and Google AdSense advertising work, and how to control your information."
 ---
 
 *Last updated: March 31, 2026*

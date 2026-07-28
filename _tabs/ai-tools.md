@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "AI Tools"
+description: "AI developer tool coverage from Json House: coding assistants, MCP servers, and IDE integrations, analysed with structured data you can consume directly."
 icon: fas fa-tools
 order: 2
 ---

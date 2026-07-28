@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "AI Safety"
+description: "AI safety and ethics coverage: OWASP LLM risk guidance, Google content policy analysis, and AI image verification, each backed by primary sources and data."
 icon: fas fa-shield-alt
 order: 6
 ---
