@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-"""AiTechBlog — normalize Codex-generated images to spec (IMAGE_GUIDE.md §3).
+"""AiTechBlog — normalize generated images to spec (IMAGE_GUIDE.md §4, §12).
 
-Image models return whatever size they feel like. This forces the output into
-the shape the OG spec and the validation hook expect.
+gpt-image cannot emit 1200x630 directly (630 is not a multiple of 16), so
+covers are generated at 2048x1152 and cropped down here.
 
-    python3 optimize_image.py IN.png --cover            # -> 1200x630 PNG, <=200KB
-    python3 optimize_image.py IN.png --figure           # -> .webp, <=1600px, <=150KB
-    python3 optimize_image.py IN.png --figure -o OUT.webp
+    python3 optimize_image.py RAW.png --cover -o OUT.jpg   # -> 1200x630 JPEG, <=200KB
+    python3 optimize_image.py IN.png --figure              # -> .webp, <=1600px, <=150KB
 
---cover center-crops to 1.91:1 before resizing, so keep the subject centered.
-Requires Pillow.
+--cover center-crops to 1.91:1 before resizing, so keep the subject centered
+and the top/bottom 8% free of critical detail.
+
+Cover output defaults to JPEG: cover art carries texture, lighting and depth,
+which PNG cannot fit into 200KB without visible banding. Pass an explicit
+`-o ...png` only for flat-vector legacy covers. Requires Pillow.
 """
 
 from __future__ import annotations
@@ -42,21 +45,33 @@ def do_cover(img, out_path: str) -> None:
     img = center_crop_to_ratio(img, COVER_W / COVER_H)
     img = img.resize((COVER_W, COVER_H), Image.LANCZOS)
 
+    if out_path.lower().endswith((".jpg", ".jpeg")):
+        for quality in (88, 84, 80, 74, 68):
+            img.save(out_path, "JPEG", quality=quality, optimize=True, progressive=True)
+            if os.path.getsize(out_path) <= COVER_MAX_BYTES:
+                return
+        print(
+            f"  warning: {os.path.getsize(out_path) // 1024}KB at quality 68 — "
+            "the source is unusually busy for cover art (IMAGE_GUIDE.md §6 asks for "
+            "one subject and large unbroken background)",
+            file=sys.stderr,
+        )
+        return
+
+    # Legacy flat-vector covers only. Quantizing survives 3-4 colour line art
+    # with no visible loss; it bands badly on anything with texture or gradient.
     img.save(out_path, "PNG", optimize=True)
     if os.path.getsize(out_path) <= COVER_MAX_BYTES:
         return
-
-    # PNG still too heavy — quantize the palette. Flat vector art (our house
-    # style) survives this with no visible loss; photos would not.
     for colors in (256, 128, 64, 32):
-        img.convert("RGB").quantize(colors=colors, method=Image.MEDIANCUT).save(
+        img.quantize(colors=colors, method=Image.MEDIANCUT).save(
             out_path, "PNG", optimize=True
         )
         if os.path.getsize(out_path) <= COVER_MAX_BYTES:
             return
     print(
         f"  warning: still {os.path.getsize(out_path) // 1024}KB after quantizing — "
-        "the source is probably photographic, which violates the flat-vector style",
+        "photographic cover art belongs in JPEG; pass -o {slug}-cover.jpg",
         file=sys.stderr,
     )
 

@@ -16,3 +16,9 @@ _plans/
 
 # Bot-logger Cloudflare Worker — collection infra, keep out of the public repo
 bot-logger/
+
+# Hook module bytecode — created when the validators are imported for testing
+.claude/hooks/__pycache__/
+
+# quota-ledger (D-5) — 로컬 관측 원본, 작업 패턴이 드러나므로 커밋 금지
+.ledger/

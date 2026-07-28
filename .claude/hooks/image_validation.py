@@ -13,10 +13,16 @@ Two modes:
      Prints a per-slug status table for every file in _posts/ and _drafts/.
 
 Rules (see IMAGE_GUIDE.md):
-  C1 cover file exists            C5 body image alt non-empty
-  C2 cover alt present & useful   C6 total image count <= 5
-  C3 cover 1200x630, <= 200KB     C7 filename convention
-  C4 body image refs resolve      C8 body image size limits
+  C1 cover file exists            C7  filename convention
+  C2 cover alt present & useful   C8  body image size limits
+  C3 cover 1200x630, <= 200KB     C9  per-format figure budget
+  C4 body image refs resolve      C10 evidence table for body figures
+  C5 body image alt non-empty     C11 cover is not a code render
+  C6 total image count <= 5
+
+The class A / class B split (IMAGE_GUIDE.md §1) is what most of these encode:
+a cover asserts nothing and comes from gpt-image, a body figure asserts values
+and comes from code. C2 and C11 are where that split is enforceable here.
 
 Severity depends on location: _drafts/ downgrades every ERROR to WARN,
 because a draft legitimately has no artwork yet. _posts/ is the real gate.
@@ -38,15 +44,27 @@ MAX_IMAGES_PER_POST = 5
 ALT_MIN_CHARS = 25
 ALT_MAX_CHARS = 125
 
-# Body figures allowed per post format, excluding the cover (IMAGE_GUIDE.md §2).
-# A and D are table-driven formats — extra figures dilute what the crawler reads.
-FIGURE_BUDGET = {"A": 1, "B": 0, "C": 4, "D": 2, "E": 3, "F": 3, "G": 0}
+# A Python/SVG render lands at 3-4 distinct colours; the leanest real gpt-image
+# output measured here still holds ~3,500 after the crop-and-JPEG pass. The gap
+# is three orders of magnitude, so the line sits low on purpose — this must never
+# fire on genuine art (IMAGE_GUIDE.md §10).
+CODE_RENDER_MAX_COLORS = 1000
 
-# alt text that describes the medium instead of the claim
+# Body images allowed per post format, excluding the cover. Derived from the
+# 권장 총계 column of IMAGE_GUIDE.md §3 minus the one mandatory cover.
+# A and D are table-driven formats — extra figures dilute what the crawler reads.
+FIGURE_BUDGET = {"A": 1, "B": 0, "C": 3, "D": 1, "E": 3, "F": 2, "G": 0}
+
+# alt text that describes the medium instead of what is there
 LABEL_ALT_RE = re.compile(
     r"^\s*(an?\s+)?(image|photo|picture|chart|graph|diagram|figure|screenshot|illustration|graphic)\b",
     re.IGNORECASE,
 )
+
+# A cover asserts nothing (IMAGE_GUIDE.md §1), so a number in its alt text is a
+# claim the picture cannot be carrying. Only standalone numerals count —
+# digits glued to letters are names (C2PA, GPT-4), not measurements.
+ALT_NUMERIC_RE = re.compile(r"(?<![A-Za-z0-9])\d+(?:[.,]\d+)?%?(?![A-Za-z0-9])")
 
 BODY_IMG_RE = re.compile(r"!\[(?P<alt>[^\]]*)\]\((?P<path>[^)\s]+)(?:\s+\"[^\"]*\")?\)")
 FILENAME_RE = re.compile(
@@ -81,14 +99,63 @@ def _webp_size(data: bytes):
     return None
 
 
+def _jpeg_size(fh):
+    """Walk the marker chain to the frame header. Covers are JPEG now (§4)."""
+    fh.seek(0)
+    if fh.read(2) != b"\xff\xd8":
+        return None
+    while True:
+        byte = fh.read(1)
+        if not byte:
+            return None
+        if byte != b"\xff":
+            continue
+        marker = fh.read(1)
+        while marker == b"\xff":  # fill bytes
+            marker = fh.read(1)
+        if not marker:
+            return None
+        code = marker[0]
+        if code == 0x01 or 0xD0 <= code <= 0xD9:  # standalone, no payload
+            continue
+        raw = fh.read(2)
+        if len(raw) < 2:
+            return None
+        length = int.from_bytes(raw, "big")
+        # SOF0..SOF15, minus the huffman/arithmetic/DNL markers that share the range
+        if 0xC0 <= code <= 0xCF and code not in (0xC4, 0xC8, 0xCC):
+            payload = fh.read(5)
+            if len(payload) < 5:
+                return None
+            return (
+                int.from_bytes(payload[3:5], "big"),
+                int.from_bytes(payload[1:3], "big"),
+            )
+        fh.seek(length - 2, 1)
+
+
 def image_size(path: str):
     """(width, height) or None when the format is unreadable (e.g. SVG)."""
     try:
         with open(path, "rb") as fh:
             head = fh.read(64)
+            return _png_size(head) or _webp_size(head) or _jpeg_size(fh)
     except OSError:
         return None
-    return _png_size(head) or _webp_size(head)
+
+
+def colour_count(path: str, cap: int = CODE_RENDER_MAX_COLORS + 1):
+    """Distinct RGB colours, saturating at `cap`. None when Pillow is absent."""
+    try:
+        from PIL import Image
+    except ImportError:
+        return None
+    try:
+        with Image.open(path) as im:
+            colours = im.convert("RGB").getcolors(maxcolors=cap)
+    except Exception:
+        return None
+    return cap if colours is None else len(colours)
 
 
 # ------------------------------------------------------------- post parsing
@@ -164,7 +231,10 @@ def check_post(post_path: str, repo_root: str):
     if not cover_path:
         err("MISSING COVER: front matter has no image.path — og:image will be empty")
     else:
-        expected = f"/assets/img/posts/{slug}-cover.png"
+        # Covers are JPEG only (§4). A cover is photographic, and PNG cannot hold
+        # 1200x630 of that under 200KB without palette quantisation — which then
+        # trips C11 below. So a .png cover fails one rule or the other either way.
+        expected = f"/assets/img/posts/{slug}-cover.jpg"
         if cover_path != expected:
             warn(f"COVER PATH MISMATCH: '{cover_path}' — convention is '{expected}'")
         abs_cover = asset_path(repo_root, cover_path)
@@ -185,21 +255,38 @@ def check_post(post_path: str, repo_root: str):
                     f"{COVER_MAX_BYTES // 1024}KB) — run optimize_image.py --cover"
                 )
 
+            # --- C11: was the image model actually called? -----------------
+            colours = colour_count(abs_cover)
+            if colours is not None and colours <= CODE_RENDER_MAX_COLORS:
+                msg = (
+                    f"COVER IS A CODE RENDER: only {colours} distinct colours — "
+                    "Codex drew this with Python/SVG instead of calling "
+                    "$imagegen (IMAGE_GUIDE.md §10)"
+                )
+                err(msg)
+
     # --- C2: cover alt quality --------------------------------------------
+    # A cover is class A: the alt describes the scene, it does not make a claim.
     if cover_path and not cover_alt:
         err("COVER ALT MISSING: image.alt is required")
     elif cover_alt:
         if len(cover_alt) < ALT_MIN_CHARS:
             warn(
-                f"COVER ALT TOO SHORT: {len(cover_alt)} chars — state the claim, "
-                "not a label (IMAGE_GUIDE.md §4)"
+                f"COVER ALT TOO SHORT: {len(cover_alt)} chars — describe the scene, "
+                "not a label (IMAGE_GUIDE.md §5)"
             )
         elif len(cover_alt) > ALT_MAX_CHARS:
             warn(f"COVER ALT TOO LONG: {len(cover_alt)} chars (max {ALT_MAX_CHARS})")
         if LABEL_ALT_RE.match(cover_alt):
             warn(
                 "COVER ALT IS A LABEL: starts with the medium "
-                f"(\"{cover_alt[:40]}...\") — describe what it claims"
+                f"(\"{cover_alt[:40]}...\") — describe what is in the frame"
+            )
+        if ALT_NUMERIC_RE.search(cover_alt):
+            warn(
+                f"COVER ALT ASSERTS DATA: \"{cover_alt[:50]}\" contains a figure — "
+                "the cover depicts no data, so its alt cannot state any "
+                "(IMAGE_GUIDE.md §5, §11)"
             )
 
     # --- C4/C5/C7/C8: body images -----------------------------------------
@@ -227,7 +314,7 @@ def check_post(post_path: str, repo_root: str):
         if not fm:
             warn(
                 f"FILENAME OFF-CONVENTION: {name} — expected "
-                f"{{slug}}-fig1.webp / -chart1.svg / -shot1.webp"
+                f"{{slug}}-fig1.svg / -chart1.svg / -shot1.webp"
             )
         elif fm.group("slug") != slug:
             warn(f"FILENAME SLUG MISMATCH: {name} — post slug is '{slug}'")
@@ -241,8 +328,16 @@ def check_post(post_path: str, repo_root: str):
         if size and size[0] > FIGURE_MAX_WIDTH:
             warn(f"BODY IMAGE TOO WIDE: {name} is {size[0]}px (max {FIGURE_MAX_WIDTH}px)")
 
-        if name.endswith((".png", ".jpg", ".jpeg")) and "-chart" not in name:
-            warn(f"BODY IMAGE NOT WEBP: {name} — convert to .webp (IMAGE_GUIDE.md §3)")
+        # Class B figures are code output: SVG first, PNG as the fallback when a
+        # raster is unavoidable. Screenshots are photographs of a UI — WebP.
+        if "-shot" in name and not name.endswith(".webp"):
+            warn(f"SCREENSHOT NOT WEBP: {name} — convert to .webp (IMAGE_GUIDE.md §4)")
+        elif name.endswith((".jpg", ".jpeg", ".webp")):
+            warn(
+                f"FIGURE IS LOSSY: {name} — explanatory figures are code output; "
+                "emit SVG (or PNG if a raster is unavoidable), never JPEG/WebP "
+                "(IMAGE_GUIDE.md §4)"
+            )
 
     # --- C6: total count ---------------------------------------------------
     total = len(body_images) + (1 if cover_path else 0)
@@ -252,7 +347,7 @@ def check_post(post_path: str, repo_root: str):
             "each one costs LCP and dilutes text density"
         )
 
-    # --- C9: per-format body-figure budget (IMAGE_GUIDE.md §2) -------------
+    # --- C9: per-format body-figure budget (IMAGE_GUIDE.md §3) -------------
     fmt_m = re.search(r"^format:\s*([A-G])\s*$", front, flags=re.MULTILINE)
     if fmt_m:
         fmt = fmt_m.group(1)
@@ -261,7 +356,7 @@ def check_post(post_path: str, repo_root: str):
             warn(
                 f"FIGURE BUDGET EXCEEDED: Format {fmt} allows {budget} body image(s), "
                 f"found {len(body_images)} — the comparison tables carry this format, "
-                "extra figures dilute text density (IMAGE_GUIDE.md §2)"
+                "extra figures dilute text density (IMAGE_GUIDE.md §3)"
             )
 
     # --- C10: prompt pack with the claim/evidence table --------------------
@@ -284,8 +379,8 @@ def check_post(post_path: str, repo_root: str):
             if "본문 근거" not in pack_text:
                 warn(
                     f"PROMPT PACK HAS NO EVIDENCE TABLE: _reviews/{base}.images.md is "
-                    "missing the 근거 대응표 (IMAGE_GUIDE.md §8) — every value-bearing "
-                    "shape must map to a number in the post"
+                    "missing the 근거 대응표 (post-images Step 2B) — every "
+                    "value-bearing shape must map to a number in the post"
                 )
 
     return out

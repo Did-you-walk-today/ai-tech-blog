@@ -106,7 +106,9 @@ frontmatter 금지: `canonical_url`(자동 생성됨 — 하드코딩 시 HARD R
 초안 단계에서는 `image.path`를 규칙대로 선언만 하고 파일은 없어도 된다
 (훅이 `_drafts/`에서는 WARN으로 강등한다). 단 **발행 전에는 커버가 반드시 존재**해야 한다.
 
-- frontmatter `image.path`는 `/assets/img/posts/{slug}-cover.png` 고정
+- frontmatter `image.path`는 `/assets/img/posts/{slug}-cover.jpg` 고정
+  (커버는 질감·조명을 가진 화상이라 PNG로는 1200×630을 200KB에 못 담는다.
+  `.png`는 전환이 끝난 옛 규칙이다 — `IMAGE_GUIDE.md` §4)
 - `image.alt`는 라벨이 아니라 주장 문장, 125자 이내 (`IMAGE_GUIDE.md` §4)
 - 실제 이미지 제작은 `post-images` 스킬로 넘긴다 — Claude Code는 이미지를 생성하지 못한다
 
