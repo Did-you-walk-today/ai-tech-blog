@@ -18,6 +18,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Without this guard the run dies several steps later inside `claude`
+      # with "Not logged in · Please run /login", which reads like a Claude
+      # Code bug rather than a missing repository secret. It failed that way
+      # silently from 2026-07-28 to 2026-08-01 before anyone noticed.
+      - name: Verify ANTHROPIC_API_KEY is configured
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "${ANTHROPIC_API_KEY}" ]; then
+            echo "::error title=Missing secret::ANTHROPIC_API_KEY is empty or not set."
+            echo ""
+            echo "The Daily Content Pipeline needs an Anthropic API key to run Claude Code."
+            echo "Set it at: Settings -> Secrets and variables -> Actions -> New repository secret"
+            echo "  Name:  ANTHROPIC_API_KEY"
+            echo "  Value: your key from https://console.anthropic.com/settings/keys"
+            echo ""
+            echo "Nothing was written and no PR was opened. Re-run this workflow after adding the secret."
+            exit 1
+          fi
+          echo "ANTHROPIC_API_KEY is present (${#ANTHROPIC_API_KEY} chars)."
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
