@@ -2,18 +2,13 @@
   "schema_version": "1.0",
   "slug": "best-ai-coding-tools-2026",
   "title": "Best AI Coding Tools 2026: Pricing & Benchmark Reality",
-  "description": "The best AI coding tools in 2026 compared on real usage-based pricing — Claude Code, Cursor, Copilot, Windsurf. Why SWE-bench rankings mislead, and how to choose.",
-  "data_updated": "2026-07-25",
+  "description": "The best AI coding tools in 2026 on real usage-based pricing — Claude Code, Cursor, Copilot, Devin Desktop. Why SWE-bench rankings mislead, and how to choose.",
+  "data_updated": "2026-08-01",
   "source_post": "https://www.jsonhouse.com/posts/best-ai-coding-tools-2026/",
   "category": "ai-developer-tools",
   "cluster": "CLUSTER_DEVTOOLS",
   "format": "A",
   "key_facts": [
-    {
-      "fact": "SWE-bench Verified measures models, not coding tools; Cursor, Copilot, and Windsurf all route to interchangeable backend models, so a tool cannot have a single benchmark score",
-      "source": "SWE-bench methodology; vendor model-selection docs, 2026-07",
-      "category": "definition"
-    },
     {
       "fact": "OpenAI publicly stopped reporting SWE-bench Verified, stating at least 59.4% of audited problems have flawed test cases that reject functionally correct solutions",
       "source": "OpenAI, 'Why we no longer evaluate SWE-bench Verified' (openai.com)",
@@ -30,18 +25,28 @@
       "category": "data"
     },
     {
-      "fact": "Every major AI coding tool moved to usage-based billing in 2026 — Cursor to usage credits, GitHub Copilot to metered premium requests, Windsurf to daily/weekly prompt quotas",
-      "source": "Vendor pricing pages, collected 2026-07-25",
+      "fact": "Claude Code Max tiers are sold as usage multiples of the Pro plan (5x at $100/mo and 20x at $200/mo) rather than fixed token quotas",
+      "source": "Anthropic pricing page, collected 2026-07-25",
+      "category": "data"
+    },
+    {
+      "fact": "Cognition renamed Windsurf to Devin Desktop on 2026-06-02, shipping it as an over-the-air update; plans, pricing, settings and extensions carried over unchanged",
+      "source": "Cognition, \"Windsurf is now Devin Desktop\" (devin.ai blog, 2026-06)",
       "category": "trend"
     },
     {
-      "fact": "Windsurf raised its Pro plan from $15 to $20 per month on 2026-03-19 and replaced credits with daily/weekly prompt allowances, grandfathering existing users at $15",
-      "source": "Windsurf pricing page, collected 2026-07-25",
-      "category": "case_study"
+      "fact": "Cascade, Windsurf's built-in agent, reached end-of-life on 2026-07-01 and was replaced by Devin Local",
+      "source": "Cognition, \"Windsurf is now Devin Desktop\" (devin.ai blog, 2026-06)",
+      "category": "trend"
     },
     {
-      "fact": "Claude Code Max tiers are sold as usage multiples of the Pro plan (5x at $100/mo and 20x at $200/mo) rather than fixed token quotas",
-      "source": "Anthropic pricing page, collected 2026-07-25",
+      "fact": "GitHub Copilot meters agentic usage in GitHub AI Credits, allocated $15 on Pro, $70 on Pro+ and $200 on Max, replacing the earlier premium-request count",
+      "source": "GitHub Docs, \"Plans for GitHub Copilot\" (retrieved 2026-08-01)",
+      "category": "data"
+    },
+    {
+      "fact": "GitHub Copilot added a Max tier at $100/month; Business remains $19/seat and Enterprise $39/seat",
+      "source": "GitHub Docs, \"Plans for GitHub Copilot\" (retrieved 2026-08-01)",
       "category": "data"
     }
   ],
@@ -76,27 +81,27 @@
       {
         "tool": "GitHub Copilot",
         "vendor": "GitHub (Microsoft)",
-        "free_tier": "Free",
+        "free_tier": "Free (2,000 completions/mo)",
         "individual_paid_usd_mo": 10,
-        "higher_individual": "Pro+ $39/mo",
-        "team_business": "Business $19/user, Enterprise $39/user",
-        "billing_model": "Metered premium requests + unmetered completions"
+        "higher_individual": "Pro+ $39/mo, Max $100/mo",
+        "team_business": "Business $19/seat, Enterprise $39/seat",
+        "billing_model": "GitHub AI Credits ($15 Pro, $70 Pro+, $200 Max) + unmetered completions"
       },
       {
-        "tool": "Windsurf",
+        "tool": "Devin Desktop (formerly Windsurf)",
         "vendor": "Cognition",
         "free_tier": "Free",
         "individual_paid_usd_mo": 20,
-        "higher_individual": "—",
-        "team_business": "Teams $40/user",
-        "billing_model": "Daily/weekly prompt quotas (moved off credits 2026-03-19)"
+        "higher_individual": "Max $200/mo",
+        "team_business": "Teams $80/mo base + $40/seat",
+        "billing_model": "Prompt quotas (moved off credits 2026-03-19)"
       }
     ]
   },
   "faq_summary": [
     {
       "q": "What is the best AI coding tool in 2026?",
-      "a": "There is no single winner, because the tools now let you swap the model underneath. Claude Code leads for terminal-native agentic work, Cursor for IDE-native editing, GitHub Copilot for multi-IDE enterprise standardization, and Windsurf for a low-friction agent IDE. Pick by workflow, billing model, and backend model — not by a benchmark score."
+      "a": "There is no single winner, because the tools now let you swap the model underneath. Claude Code leads for terminal-native agentic work, Cursor for IDE-native editing, GitHub Copilot for multi-IDE enterprise standardization, and Devin Desktop for a low-friction agent IDE. Pick by workflow, billing model, and backend model — not by a benchmark score."
     },
     {
       "q": "Do SWE-bench scores tell me which coding tool is best?",
@@ -108,7 +113,7 @@
     },
     {
       "q": "Why did AI coding tools switch to usage-based pricing?",
-      "a": "Agentic tasks cost far more to serve than autocomplete — a single run can consume hundreds of thousands of tokens across many model calls, so flat monthly seats stopped covering the cost. Cursor moved to usage credits, Copilot to metered premium requests, and Windsurf to daily/weekly quotas."
+      "a": "Agentic tasks cost far more to serve than autocomplete — a single run can consume hundreds of thousands of tokens across many model calls, so flat monthly seats stopped covering the cost. Cursor moved to usage credits, Copilot from metered premium requests to a monthly GitHub AI Credits balance, and Cognition's editor to prompt quotas."
     }
   ],
   "primary_sources": [
@@ -138,9 +143,19 @@
       "publisher": "GitHub"
     },
     {
-      "title": "Windsurf Pricing",
-      "url": "https://windsurf.com/pricing",
+      "title": "Devin Pricing (formerly Windsurf Pricing)",
+      "url": "https://devin.ai/pricing",
       "publisher": "Cognition"
+    },
+    {
+      "title": "Windsurf is now Devin Desktop",
+      "url": "https://devin.ai/blog/windsurf-is-now-devin-desktop/",
+      "publisher": "Cognition"
+    },
+    {
+      "title": "Plans for GitHub Copilot",
+      "url": "https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot",
+      "publisher": "GitHub"
     }
   ]
 }
