@@ -5,7 +5,7 @@ description: "The best AI coding tools in 2026 compared on real usage-based pric
 date: 2026-08-01 09:00:00 +0000
 last_modified_at: 2026-08-01 09:00:00 +0000
 categories: [ai-developer-tools]
-tags: [claude-code, cursor, github-copilot, windsurf, ai-coding, 2026]
+tags: [claude-code, cursor, github-copilot, windsurf, ai-coding, "2026"]
 format: A
 cluster: CLUSTER_DEVTOOLS
 category_id: CAT2
