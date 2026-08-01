@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "slug": "llm-cache-pricing-2026",
+  "title": "LLM Cache Pricing 2026: The Real Cost of Cached Input",
+  "description": "LLM cache pricing 2026 normalized across six providers: effective input cost at real hit rates, hidden write fees, and which vendors publish nothing at all.",
+  "data_updated": "2026-07-28",
+  "source_post": "https://www.jsonhouse.com/posts/llm-cache-pricing-2026/",
+  "category": "ai-data-statistics",
+  "cluster": "CLUSTER_LLM",
+  "format": "D",
+  "key_facts": [
+    {
+      "fact": "The cached-read discount converged on exactly 90% of base input at Anthropic, OpenAI, and Google; xAI discounts 84-85% and DeepSeek 98-99.2%",
+      "source": "jsonhouse normalization of six official pricing pages, 2026-07-28",
+      "category": "data"
+    },
+    {
+      "fact": "Effective input price is base x (1 - h) + cache_read x h, where h is the share of input tokens served from cache",
+      "source": "jsonhouse original methodology, 2026-07-28",
+      "category": "definition"
+    },
+    {
+      "fact": "The cheapest model by effective input cost changes at an 84.7% cache hit rate: Gemini 2.5 Flash-Lite below it, DeepSeek v4-flash above it, both costing $0.0237 per 1M at the crossover",
+      "source": "jsonhouse original calculation, 2026-07-28",
+      "category": "data"
+    },
+    {
+      "fact": "Three unrelated model pairs cross over within an 83.3%-84.7% band, the point where a 90% discount can no longer defend a lower sticker price against a 98% one",
+      "source": "jsonhouse original calculation, 2026-07-28",
+      "category": "trend"
+    },
+    {
+      "fact": "OpenAI introduced a 1.25x cache-write charge with the GPT-5.6 family; models before it had no write fee",
+      "source": "OpenAI prompt caching guide, retrieved 2026-07-28",
+      "category": "policy"
+    },
+    {
+      "fact": "Anthropic charges 1.25x base input for a 5-minute cache write and 2x for a 1-hour write, and has no storage fee",
+      "source": "Anthropic pricing page, retrieved 2026-07-28",
+      "category": "policy"
+    },
+    {
+      "fact": "Google charges no cache write fee but bills storage at $1.00 per 1M cached tokens per hour, rising to $4.50 on Gemini 2.5 Pro and 3.1 Pro Preview",
+      "source": "Google Gemini API pricing, retrieved 2026-07-28",
+      "category": "policy"
+    },
+    {
+      "fact": "Four of the six providers publish no cache TTL, and Mistral publishes no per-model cache price at all, stating only a headline -90% for cached input",
+      "source": "jsonhouse normalization of six official documentation sets, 2026-07-28",
+      "category": "data"
+    },
+    {
+      "fact": "Caching beats not caching from the second call at a 1.25x write multiplier and the third call at 2x, so write fees are immaterial for repeated workloads",
+      "source": "jsonhouse original calculation, 2026-07-28",
+      "category": "data"
+    },
+    {
+      "fact": "A 50,000-token prompt sent on 1,000 Claude Sonnet 5 calls costs $100.00 uncached and $10.12 with the 5-minute cache including its 1.25x write, an 89.9% saving",
+      "source": "jsonhouse original calculation, 2026-07-28",
+      "category": "case_study"
+    },
+    {
+      "fact": "Anthropic's minimum cacheable prompt length ranges from 512 tokens on Opus 5 and Fable 5 to 4,096 on Opus 4.5, Opus 4.6, and Haiku 4.5, and requests below the threshold are processed without caching and without an error",
+      "source": "Anthropic prompt caching documentation, retrieved 2026-07-28",
+      "category": "policy"
+    },
+    {
+      "fact": "OpenAI's documentation does not state whether a cache write is billed on a prompt that is never reused; it says an eligible prefix 'may' be cached, and offers prompt_cache_options.mode set to explicit as an opt-out",
+      "source": "OpenAI prompt caching guide, retrieved 2026-07-28",
+      "category": "policy"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "How much does prompt caching actually save in 2026?",
+      "a": "The discount is 90% at Anthropic, OpenAI, and Google, 84-85% at xAI, and 98-99% at DeepSeek. It applies only to the cached share of a prompt, so the realized saving is roughly hit rate times discount — a 50% hit rate against a 90% discount is a 45% cut."
+    },
+    {
+      "q": "Do you pay to write to the cache?",
+      "a": "Anthropic always charges: 1.25x base input for a 5-minute write, 2x for an hour. OpenAI added the same 1.25x charge with GPT-5.6 and charged nothing before it. Google charges storage per hour instead. xAI, DeepSeek, and Mistral publish no write price."
+    },
+    {
+      "q": "Which LLM API is cheapest for a cache-heavy agent?",
+      "a": "It depends on hit rate. Below roughly 83% Gemini 2.5 Flash-Lite is cheapest per effective input token; above it DeepSeek v4-flash leads, reaching $0.0097 per 1M at a 95% hit rate."
+    },
+    {
+      "q": "Is prompt caching automatic or do I have to enable it?",
+      "a": "OpenAI, Google, DeepSeek, and xAI cache automatically; Anthropic requires an explicit cache_control field. Because GPT-5.6 caches automatically above 1,024 tokens and bills writes at 1.25x, a prompt you never reuse may bill above base rate unless you opt out."
+    },
+    {
+      "q": "Why can't I compare cache prices straight from provider pricing pages?",
+      "a": "No two publish the same fields. Anthropic gives multipliers, DeepSeek an absolute cache-hit price, xAI one cached-input column, Google a per-hour storage rate, and Mistral only a headline -90%. Four of six publish no TTL."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Claude API pricing",
+      "url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Claude prompt caching",
+      "url": "https://platform.claude.com/docs/en/docs/build-with-claude/prompt-caching",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "OpenAI API pricing",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "OpenAI prompt caching guide",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "Gemini API pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "publisher": "Google"
+    },
+    {
+      "title": "Gemini API context caching",
+      "url": "https://ai.google.dev/gemini-api/docs/caching",
+      "publisher": "Google"
+    },
+    {
+      "title": "xAI models and pricing",
+      "url": "https://docs.x.ai/docs/models",
+      "publisher": "xAI"
+    },
+    {
+      "title": "xAI prompt caching usage and pricing",
+      "url": "https://docs.x.ai/developers/advanced-api-usage/prompt-caching/usage-and-pricing",
+      "publisher": "xAI"
+    },
+    {
+      "title": "DeepSeek API pricing",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "publisher": "DeepSeek"
+    },
+    {
+      "title": "DeepSeek context caching",
+      "url": "https://api-docs.deepseek.com/guides/kv_cache",
+      "publisher": "DeepSeek"
+    },
+    {
+      "title": "Mistral API pricing",
+      "url": "https://mistral.ai/pricing/api",
+      "publisher": "Mistral AI"
+    }
+  ],
+  "comparison_data": {
+    "dimensions": ["provider", "base_input_per_1m_usd", "cache_read_per_1m_usd", "discount_pct", "effective_h50", "effective_h80", "effective_h95"],
+    "unit": "USD per 1M input tokens, standard non-batch base tier, collected 2026-07-28. effective_hN = base x (1 - N) + cache_read x N",
+    "entries": [
+      { "model": "Claude Opus 5", "provider": "Anthropic", "base_input_per_1m_usd": 5.0, "cache_read_per_1m_usd": 0.5, "discount_pct": 90.0, "effective_h50": 2.75, "effective_h80": 1.4, "effective_h95": 0.725 },
+      { "model": "GPT-5.6-sol", "provider": "OpenAI", "base_input_per_1m_usd": 5.0, "cache_read_per_1m_usd": 0.5, "discount_pct": 90.0, "effective_h50": 2.75, "effective_h80": 1.4, "effective_h95": 0.725 },
+      { "model": "GPT-5.6-terra", "provider": "OpenAI", "base_input_per_1m_usd": 2.5, "cache_read_per_1m_usd": 0.25, "discount_pct": 90.0, "effective_h50": 1.375, "effective_h80": 0.7, "effective_h95": 0.3625 },
+      { "model": "Claude Sonnet 5", "provider": "Anthropic", "base_input_per_1m_usd": 2.0, "cache_read_per_1m_usd": 0.2, "discount_pct": 90.0, "effective_h50": 1.1, "effective_h80": 0.56, "effective_h95": 0.29 },
+      { "model": "Grok 4.5", "provider": "xAI", "base_input_per_1m_usd": 2.0, "cache_read_per_1m_usd": 0.3, "discount_pct": 85.0, "effective_h50": 1.15, "effective_h80": 0.64, "effective_h95": 0.385 },
+      { "model": "Gemini 3.6 Flash", "provider": "Google", "base_input_per_1m_usd": 1.5, "cache_read_per_1m_usd": 0.15, "discount_pct": 90.0, "effective_h50": 0.825, "effective_h80": 0.42, "effective_h95": 0.2175 },
+      { "model": "Mistral Medium 3.5", "provider": "Mistral", "base_input_per_1m_usd": 1.5, "cache_read_per_1m_usd": null, "discount_pct": null, "effective_h50": null, "effective_h80": null, "effective_h95": null },
+      { "model": "Grok 4.3", "provider": "xAI", "base_input_per_1m_usd": 1.25, "cache_read_per_1m_usd": 0.2, "discount_pct": 84.0, "effective_h50": 0.725, "effective_h80": 0.41, "effective_h95": 0.2525 },
+      { "model": "Claude Haiku 4.5", "provider": "Anthropic", "base_input_per_1m_usd": 1.0, "cache_read_per_1m_usd": 0.1, "discount_pct": 90.0, "effective_h50": 0.55, "effective_h80": 0.28, "effective_h95": 0.145 },
+      { "model": "GPT-5.6-luna", "provider": "OpenAI", "base_input_per_1m_usd": 1.0, "cache_read_per_1m_usd": 0.1, "discount_pct": 90.0, "effective_h50": 0.55, "effective_h80": 0.28, "effective_h95": 0.145 },
+      { "model": "DeepSeek v4-pro", "provider": "DeepSeek", "base_input_per_1m_usd": 0.435, "cache_read_per_1m_usd": 0.003625, "discount_pct": 99.2, "effective_h50": 0.2193, "effective_h80": 0.0899, "effective_h95": 0.0252 },
+      { "model": "Gemini 2.5 Flash", "provider": "Google", "base_input_per_1m_usd": 0.3, "cache_read_per_1m_usd": 0.03, "discount_pct": 90.0, "effective_h50": 0.165, "effective_h80": 0.084, "effective_h95": 0.0435 },
+      { "model": "DeepSeek v4-flash", "provider": "DeepSeek", "base_input_per_1m_usd": 0.14, "cache_read_per_1m_usd": 0.0028, "discount_pct": 98.0, "effective_h50": 0.0714, "effective_h80": 0.0302, "effective_h95": 0.0097 },
+      { "model": "Gemini 2.5 Flash-Lite", "provider": "Google", "base_input_per_1m_usd": 0.1, "cache_read_per_1m_usd": 0.01, "discount_pct": 90.0, "effective_h50": 0.055, "effective_h80": 0.028, "effective_h95": 0.0145 }
+    ]
+  },
+  "numerical_data": {
+    "metrics": [
+      { "name": "crossover_hit_rate_gemini_flash_lite_vs_deepseek_v4_flash", "value": 84.7, "unit": "percent", "note": "Both cost $0.0237 per 1M effective input tokens at this hit rate" },
+      { "name": "crossover_hit_rate_gemini_flash_vs_deepseek_v4_pro", "value": 83.7, "unit": "percent", "note": "Both cost $0.0741 per 1M effective input tokens at this hit rate" },
+      { "name": "crossover_hit_rate_grok_43_vs_gemini_36_flash", "value": 83.3, "unit": "percent", "note": "Both cost $0.3750 per 1M effective input tokens at this hit rate" },
+      { "name": "break_even_calls_write_multiplier_1_25x", "value": 2, "unit": "calls", "note": "Anthropic 5-minute cache and OpenAI GPT-5.6 and later" },
+      { "name": "break_even_calls_write_multiplier_2x", "value": 3, "unit": "calls", "note": "Anthropic 1-hour cache" },
+      { "name": "providers_publishing_no_cache_ttl", "value": 4, "unit": "of 6", "note": "Google, xAI, DeepSeek, and Mistral" }
+    ]
+  }
+}
