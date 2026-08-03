@@ -1,7 +1,21 @@
 name: Daily Content Pipeline
+
+# The daily schedule is OFF by design (기웅 결정 2026-08-03).
+#
+# This workflow drives Phases 1-4 by shelling out to `claude` with an
+# ANTHROPIC_API_KEY, so every scheduled run is metered API usage. Posts are
+# actually written interactively with the `new-post` skill on a Claude
+# subscription, which that metering duplicates at a cost the output does not
+# justify. The last successful run was 2026-03-26; every run since failed, and
+# from 2026-07-28 the ANTHROPIC_API_KEY guard below made those failures loud.
+#
+# Manual dispatch is kept so the pipeline can still be exercised deliberately.
+# Re-enabling the cron means opting back into daily API billing AND into three
+# drafts a day against a publishing cadence of two posts a week (Tue/Fri) --
+# decide the cadence question before uncommenting.
 on:
-  schedule:
-    - cron: '0 9 * * *'
+  # schedule:
+  #   - cron: '0 9 * * *'
   workflow_dispatch:
     inputs:
       phase:
