@@ -2,7 +2,7 @@
 title: "LLM Cache Pricing 2026: The Real Cost of Cached Input"
 description: "LLM cache pricing 2026 normalized across six providers: effective input cost at real hit rates, hidden write fees, and which vendors publish nothing at all."
 date: 2026-08-01 10:00:00 +0000
-last_modified_at: 2026-08-01 10:00:00 +0000
+last_modified_at: 2026-08-03 02:35:00 +0000
 categories: [ai-data-statistics]
 tags: [prompt-caching, llm-pricing, api-cost, claude, gpt-5, gemini, deepseek, "2026"]
 format: D
@@ -22,13 +22,13 @@ faq:
     a: "OpenAI, Google, DeepSeek, and xAI cache automatically. Anthropic requires an explicit cache_control field. The distinction now carries a price: because OpenAI's GPT-5.6 family caches automatically and bills writes at 1.25x, a long prompt you never reuse can be billed above the base rate unless you set prompt_cache_options.mode to explicit."
   - q: "Why can't I compare cache prices straight from provider pricing pages?"
     a: "Because no two publish the same fields. Anthropic states multipliers, DeepSeek an absolute cache-hit price, xAI a single cached-input column, Google a per-hour storage rate, and Mistral only a headline -90% with no per-model figure. Four of the six publish no cache TTL. Normalizing them to one unit is the reason this table exists."
-data_updated: 2026-07-28
+data_updated: 2026-08-03
 author: jsonhouse
 ---
 
 Prompt caching is sold as a 90% discount, and at the sticker level that is now true almost everywhere: Anthropic, OpenAI, and Google all price a cache read at exactly one tenth of base input. The number that decides your invoice is different. It is the **effective input price** — what you pay per million input tokens once your actual cache hit rate, the write surcharge, and the storage fee are all folded in.
 
-On that measure the cheapest model in 2026 is not the one with the lowest sticker price, and the ranking flips at a hit rate most production agents already exceed. This page normalizes cache pricing for 14 models across six providers to a single unit, using prices collected on 2026-07-28.
+On that measure the cheapest model in 2026 is not the one with the lowest sticker price, and the ranking flips at a hit rate most production agents already exceed. This page normalizes cache pricing for 14 models across six providers to a single unit, using prices collected on 2026-08-03.
 
 ## TL;DR
 
@@ -40,7 +40,7 @@ On that measure the cheapest model in 2026 is not the one with the lowest sticke
 
 ## Methodology
 
-Base input and cache-read prices were collected on **2026-07-28** from the six providers' official pricing pages, the same sources and normalization used in our [weekly LLM API pricing table](/posts/llm-api-pricing-2026/): Anthropic (platform.claude.com), OpenAI (developers.openai.com), Google (ai.google.dev), xAI (docs.x.ai), DeepSeek (api-docs.deepseek.com), Mistral (mistral.ai). Caching mechanics — write cost, storage fee, TTL, trigger, minimum cacheable length — were read from each provider's prompt-caching documentation on the same date.
+Base input and cache-read prices were collected on **2026-08-03** from the six providers' official pricing pages, the same sources and normalization used in our [weekly LLM API pricing table](/posts/llm-api-pricing-2026/): Anthropic (platform.claude.com), OpenAI (developers.openai.com), Google (ai.google.dev), xAI (docs.x.ai), DeepSeek (api-docs.deepseek.com), Mistral (mistral.ai). Caching mechanics — write cost, storage fee, TTL, trigger, minimum cacheable length — were read from each provider's prompt-caching documentation on the same date.
 
 Effective input price is computed as `base x (1 - h) + cache_read x h`, where `h` is the cache hit rate: the share of input tokens served from cache. It deliberately excludes write and storage costs, which are handled separately below, because those are one-time or time-based rather than per-token and would otherwise make the columns non-comparable.
 
@@ -54,16 +54,16 @@ All figures are USD per 1M tokens at the standard, non-batch, base long-context 
 |---|---|---|---|---|---|---|
 | Claude Opus 5 | Anthropic | $5.0000 | $2.7500 | $1.4000 | $0.7250 | 90% |
 | GPT-5.6-sol | OpenAI | $5.0000 | $2.7500 | $1.4000 | $0.7250 | 90% |
-| GPT-5.6-terra | OpenAI | $2.5000 | $1.3750 | $0.7000 | $0.3625 | 90% |
 | Claude Sonnet 5 | Anthropic | $2.0000 | $1.1000 | $0.5600 | $0.2900 | 90% |
+| GPT-5.6-terra | OpenAI | $2.0000 | $1.1000 | $0.5600 | $0.2900 | 90% |
 | Grok 4.5 | xAI | $2.0000 | $1.1500 | $0.6400 | $0.3850 | 85% |
 | Gemini 3.6 Flash | Google | $1.5000 | $0.8250 | $0.4200 | $0.2175 | 90% |
 | Mistral Medium 3.5 | Mistral | $1.5000 | not published | not published | not published | −90% stated |
 | Grok 4.3 | xAI | $1.2500 | $0.7250 | $0.4100 | $0.2525 | 84% |
 | Claude Haiku 4.5 | Anthropic | $1.0000 | $0.5500 | $0.2800 | $0.1450 | 90% |
-| GPT-5.6-luna | OpenAI | $1.0000 | $0.5500 | $0.2800 | $0.1450 | 90% |
 | DeepSeek v4-pro | DeepSeek | $0.4350 | $0.2193 | $0.0899 | $0.0252 | 99.2% |
 | Gemini 2.5 Flash | Google | $0.3000 | $0.1650 | $0.0840 | $0.0435 | 90% |
+| GPT-5.6-luna | OpenAI | $0.2000 | $0.1100 | $0.0560 | $0.0290 | 90% |
 | DeepSeek v4-flash | DeepSeek | $0.1400 | $0.0714 | $0.0302 | $0.0097 | 98% |
 | Gemini 2.5 Flash-Lite | Google | $0.1000 | $0.0550 | $0.0280 | $0.0145 | 90% |
 
@@ -100,15 +100,19 @@ Those two facts interact in a way the documentation does not resolve. OpenAI's g
 
 Cache hit rate does not merely scale costs down uniformly. It reorders them, because providers discount by different amounts from different starting points.
 
-Three model pairs cross over, and all three cross in the same narrow band:
+Five pairs in this table cross over somewhere between a 0% and 100% hit rate, and three of the five cross inside the same narrow band:
 
 | Cheaper below the crossover | Cheaper above it | Crossover hit rate | Effective price at crossover |
 |---|---|---|---|
-| Gemini 2.5 Flash-Lite | DeepSeek v4-flash | 84.7% | $0.0237 / 1M |
-| Gemini 2.5 Flash | DeepSeek v4-pro | 83.7% | $0.0741 / 1M |
 | Grok 4.3 | Gemini 3.6 Flash | 83.3% | $0.3750 / 1M |
+| Gemini 2.5 Flash | DeepSeek v4-pro | 83.7% | $0.0741 / 1M |
+| Gemini 2.5 Flash-Lite | DeepSeek v4-flash | 84.7% | $0.0237 / 1M |
+| GPT-5.6-luna | DeepSeek v4-pro | 93.5% | $0.0317 / 1M |
+| Gemini 2.5 Flash-Lite | DeepSeek v4-pro | 98.1% | $0.0117 / 1M |
 
-That an 83–85% hit rate is the hinge for three unrelated pairs is not a coincidence. It is where a 90% discount stops being able to defend a lower sticker price against a 98% one. Below that band, sticker price dominates and the familiar ranking from a plain [pricing table](/posts/llm-api-pricing-2026/) holds. Above it, the cache column decides, and any comparison that ignores caching is ranking the wrong quantity.
+The last two sit well above the band and are the exception that proves the rule: both are DeepSeek v4-pro, whose 99.2% discount is steep enough to overcome a sticker price 2.2x and 4.4x its rivals', but only at hit rates most workloads never reach. GPT-5.6-luna's arrival on that list is this week's news — before its 80% price cut it was too expensive to cross v4-pro at any hit rate at all.
+
+That an 83–85% hit rate is nonetheless the hinge for three unrelated pairs is not a coincidence. It is where a 90% discount stops being able to defend a lower sticker price against a 98% one. Below that band, sticker price dominates and the familiar ranking from a plain [pricing table](/posts/llm-api-pricing-2026/) holds. Above it, the cache column decides, and any comparison that ignores caching is ranking the wrong quantity.
 
 Most stateless pipelines sit well below the band. Most long-running agents sit above it.
 
@@ -161,6 +165,7 @@ This page is refreshed **weekly** from the same snapshot series that backs our p
 
 | Date | Change |
 |---|---|
+| 2026-08-03 | OpenAI cut GPT-5.6-luna to $0.20 base / $0.02 cache read (−80%) and GPT-5.6-terra to $2.00 / $0.20 (−20%). Both keep a 90% discount, so every effective column scaled without changing the discount picture. One crossover changed hands: Grok 4.5 x GPT-5.6-terra (90.9%) is gone and GPT-5.6-luna x DeepSeek v4-pro (93.5%) is new. The three crossovers inside the 83–85% band are untouched. Also corrected the crossover section, which described three pairs as the total when three was the count inside the band. |
 | 2026-07-28 | Initial edition. 14 models, six providers. Records xAI's Grok 4.5 cache read moving $0.50 to $0.30 and OpenAI's 1.25x write charge on the GPT-5.6 family. |
 
 ## FAQ: LLM Cache Pricing 2026
