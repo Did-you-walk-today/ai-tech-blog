@@ -41,8 +41,15 @@ OWN_HOSTS = ("jsonhouse.com",)
 
 FENCE_RE = re.compile(r"```.*?```", re.S)
 FRONTMATTER_RE = re.compile(r"\A---\n.*?\n---\n", re.S)
+# An image is not a citation. Strip ![alt](url) before looking for links,
+# otherwise a post carrying one remote image and no sources passes D1.
+IMAGE_RE = re.compile(r"!\[[^\]]*\]\([^)]*\)")
 MD_LINK_RE = re.compile(r"\[[^\]]*\]\((https?://[^)\s]+)")
 AUTOLINK_RE = re.compile(r"<(https?://[^>\s]+)>")
+# [ref]: https://... — reference-style definitions render as real links.
+REF_DEF_RE = re.compile(r"^\s*\[[^\]]+\]:\s*(https?://\S+)", re.M)
+# Raw HTML anchors are valid in kramdown and render as real links.
+HTML_HREF_RE = re.compile(r"""<a\s[^>]*href=["'](https?://[^"']+)["']""", re.I)
 
 
 def repo_root() -> Path:
@@ -61,11 +68,16 @@ def split_post(path: Path):
 def inline_citations(body: str):
     """External primary-source links in the body, own domain excluded.
 
-    Only markdown links and autolinks count. A bare domain written as prose
-    ('platform.claude.com') is not a citation — a crawler cannot follow it.
-    That distinction is the entire point of rule D1.
+    Counts every form that renders as a followable link: markdown links,
+    autolinks, reference-style definitions, and raw HTML anchors. A bare domain
+    written as prose ('platform.claude.com') is not a citation — a crawler
+    cannot follow it. That distinction is the entire point of rule D1.
+
+    Images are excluded: a remote illustration is not evidence for a claim.
     """
-    urls = MD_LINK_RE.findall(body) + AUTOLINK_RE.findall(body)
+    body = IMAGE_RE.sub("", body)
+    urls = (MD_LINK_RE.findall(body) + AUTOLINK_RE.findall(body)
+            + REF_DEF_RE.findall(body) + HTML_HREF_RE.findall(body))
     return [u for u in urls if not any(h in u for h in OWN_HOSTS)]
 
 
