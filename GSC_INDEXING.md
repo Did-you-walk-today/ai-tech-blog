@@ -17,27 +17,29 @@ Google Search Console(속성: `https://www.jsonhouse.com`) 에 수동 색인 요
 <!-- AUTO:POSTS-TABLE-START -->
 | # | 상태 | URL | 발행일 | 제목 | 메모 |
 |---|---|---|---|---|---|
-| 1 | [ ] | https://www.jsonhouse.com/posts/china-ai-coding-plans-2026/ | 2026-08-05 | China AI Coding Plans 2026: Quotas You Can't Compare |  |
-| 2 | [ ] | https://www.jsonhouse.com/posts/llm-cache-pricing-2026/ | 2026-08-01 | LLM Cache Pricing 2026: The Real Cost of Cached Input |  |
-| 3 | [ ] | https://www.jsonhouse.com/posts/best-ai-coding-tools-2026/ | 2026-08-01 | Best AI Coding Tools 2026: Pricing & Benchmark Reality |  |
-| 4 | [ ] | https://www.jsonhouse.com/posts/best-llm-2026/ | 2026-07-25 | Best LLM 2026: Capability and Limits Compared |  |
-| 5 | [ ] | https://www.jsonhouse.com/posts/llm-subscription-guide-2026/ | 2026-07-25 | Best LLM Subscription 2026: What You Really Pay For |  |
-| 6 | [ ] | https://www.jsonhouse.com/posts/ai-overviews-seo-2026/ | 2026-07-25 | AI Overviews SEO 2026: Recover Your Lost Traffic |  |
-| 7 | [ ] | https://www.jsonhouse.com/posts/ai-crawler-ecosystem-2026/ | 2026-07-17 | AI Crawler Ecosystem 2026: Who Scrapes the Web and Who Pays |  |
-| 8 | [ ] | https://www.jsonhouse.com/posts/llm-api-pricing-2026/ | 2026-07-17 | LLM API Pricing 2026: Full Comparison Table (Weekly) |  |
-| 9 | [ ] | https://www.jsonhouse.com/posts/chatgpt-ads-2026-aeo-reddit-citations/ | 2026-05-17 | ChatGPT Ads 2026: AEO Traffic and Reddit Citations |  |
-| 10 | [ ] | https://www.jsonhouse.com/posts/gigo-prompts-2026-why-vague-prompts-fail/ | 2026-05-07 | GIGO Prompts 2026: Why Vague Prompts Fail (Data + Fix) |  |
-| 11 | [ ] | https://www.jsonhouse.com/posts/helpful-content-system-2026/ | 2026-05-01 | Google's Helpful Content System 2026: How It Really Decides |  |
-| 12 | [ ] | https://www.jsonhouse.com/posts/synthid-c2pa-explained-2026/ | 2026-04-30 | SynthID and C2PA: How AI Image Verification Works in 2026 |  |
-| 13 | [ ] | https://www.jsonhouse.com/posts/eeat-ai-content-2026/ | 2026-04-29 | Pass Google E-E-A-T 2026: AI-Assisted Content Survival Guide |  |
-| 14 | [ ] | https://www.jsonhouse.com/posts/youtube-ai-monetization-2026/ | 2026-04-28 | YouTube AI Monetization 2026: What Is Inauthentic Content |  |
-| 15 | [ ] | https://www.jsonhouse.com/posts/google-ai-content-penalties-2026/ | 2026-04-27 | What Google AI Content Policy Actually Penalizes in 2026 |  |
+| 1 | [ ] | https://www.jsonhouse.com/posts/ai-content-quality-gates-2026/ | 2026-08-06 | AI Content Quality Gates 2026: 33 Rules That Caught Us |  |
+| 2 | [ ] | https://www.jsonhouse.com/posts/china-ai-coding-plans-2026/ | 2026-08-05 | China AI Coding Plans 2026: Quotas You Can't Compare |  |
+| 3 | [ ] | https://www.jsonhouse.com/posts/llm-cache-pricing-2026/ | 2026-08-01 | LLM Cache Pricing 2026: The Real Cost of Cached Input |  |
+| 4 | [ ] | https://www.jsonhouse.com/posts/best-ai-coding-tools-2026/ | 2026-08-01 | Best AI Coding Tools 2026: Pricing & Benchmark Reality |  |
+| 5 | [ ] | https://www.jsonhouse.com/posts/best-llm-2026/ | 2026-07-25 | Best LLM 2026: Capability and Limits Compared |  |
+| 6 | [ ] | https://www.jsonhouse.com/posts/llm-subscription-guide-2026/ | 2026-07-25 | Best LLM Subscription 2026: What You Really Pay For |  |
+| 7 | [ ] | https://www.jsonhouse.com/posts/ai-overviews-seo-2026/ | 2026-07-25 | AI Overviews SEO 2026: Recover Your Lost Traffic |  |
+| 8 | [ ] | https://www.jsonhouse.com/posts/ai-crawler-ecosystem-2026/ | 2026-07-17 | AI Crawler Ecosystem 2026: Who Scrapes the Web and Who Pays |  |
+| 9 | [ ] | https://www.jsonhouse.com/posts/llm-api-pricing-2026/ | 2026-07-17 | LLM API Pricing 2026: Full Comparison Table (Weekly) |  |
+| 10 | [ ] | https://www.jsonhouse.com/posts/chatgpt-ads-2026-aeo-reddit-citations/ | 2026-05-17 | ChatGPT Ads 2026: AEO Traffic and Reddit Citations |  |
+| 11 | [ ] | https://www.jsonhouse.com/posts/gigo-prompts-2026-why-vague-prompts-fail/ | 2026-05-07 | GIGO Prompts 2026: Why Vague Prompts Fail (Data + Fix) |  |
+| 12 | [ ] | https://www.jsonhouse.com/posts/helpful-content-system-2026/ | 2026-05-01 | Google's Helpful Content System 2026: How It Really Decides |  |
+| 13 | [ ] | https://www.jsonhouse.com/posts/synthid-c2pa-explained-2026/ | 2026-04-30 | SynthID and C2PA: How AI Image Verification Works in 2026 |  |
+| 14 | [ ] | https://www.jsonhouse.com/posts/eeat-ai-content-2026/ | 2026-04-29 | Pass Google E-E-A-T 2026: AI-Assisted Content Survival Guide |  |
+| 15 | [ ] | https://www.jsonhouse.com/posts/youtube-ai-monetization-2026/ | 2026-04-28 | YouTube AI Monetization 2026: What Is Inauthentic Content |  |
+| 16 | [ ] | https://www.jsonhouse.com/posts/google-ai-content-penalties-2026/ | 2026-04-27 | What Google AI Content Policy Actually Penalizes in 2026 |  |
 <!-- AUTO:POSTS-TABLE-END -->
 
 ### 복사용 (포스트만)
 
 <!-- AUTO:POSTS-URLS-START -->
 ```
+https://www.jsonhouse.com/posts/ai-content-quality-gates-2026/
 https://www.jsonhouse.com/posts/china-ai-coding-plans-2026/
 https://www.jsonhouse.com/posts/llm-cache-pricing-2026/
 https://www.jsonhouse.com/posts/best-ai-coding-tools-2026/
