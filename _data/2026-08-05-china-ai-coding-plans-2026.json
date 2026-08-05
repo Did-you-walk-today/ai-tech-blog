@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "slug": "china-ai-coding-plans-2026",
+  "title": "China AI Coding Plans 2026: Quotas You Can't Compare",
+  "description": "China AI coding plans 2026: GLM, Qwen, MiniMax, Kimi, and DeepSeek quotas from official docs. Four vendors publish numbers; only one publishes the conversion.",
+  "data_updated": "2026-08-05",
+  "source_post": "https://www.jsonhouse.com/posts/china-ai-coding-plans-2026/",
+  "category": "ai-data-statistics",
+  "cluster": "CLUSTER_LLM",
+  "format": "D",
+  "key_facts": [
+    {
+      "fact": "Alibaba Model Studio's Pro coding plan allows 6,000 requests per 5 hours, 45,000 per week and 90,000 per month, resetting every Monday at 00:00 UTC+8; a query consumes 5-10 model calls for simple tasks and 10-30 or more for complex ones, with no token content stated per call",
+      "source": "Alibaba Cloud Model Studio documentation, retrieved 2026-08-05",
+      "category": "data"
+    },
+    {
+      "fact": "MiniMax meters its coding plan in agent capacity (3-4 on Plus, 4-5 on Max, 6-7 on Ultra) rather than any consumed quantity",
+      "source": "MiniMax platform token-plan documentation, retrieved 2026-07-28",
+      "category": "data"
+    },
+    {
+      "fact": "Weekly reset anchors split two-to-one: Alibaba resets Monday 00:00 UTC+8 on a fixed calendar, while Zhipu and Moonshot both roll 7 days from the subscription date",
+      "source": "jsonhouse original normalization, 2026-08-05",
+      "category": "data"
+    },
+    {
+      "fact": "DeepSeek sells no coding subscription — pay-per-token API only, with concurrency limits of 2,500 concurrent requests on v4-flash and 500 on v4-pro instead of usage quotas",
+      "source": "DeepSeek API pricing documentation, retrieved 2026-07-28",
+      "category": "policy"
+    },
+    {
+      "fact": "Four of the five Chinese AI coding subscription vendors publish a usage quota, in four different units — credits, requests, agent capacity, and a request range shared with a chat app; DeepSeek sells no subscription",
+      "source": "Vendor documentation, retrieved 2026-08-05",
+      "category": "data"
+    },
+    {
+      "fact": "Zhipu is the only vendor of the five that publishes a conversion from its quota unit to tokens: a credit formula plus per-model input, cached-input and output multipliers",
+      "source": "Z.ai developer documentation (docs.z.ai/devpack/overview), retrieved 2026-08-01",
+      "category": "data"
+    },
+    {
+      "fact": "Zhipu GLM Coding Plan credit limits are 2,000/12,000/28,000 per 5 hours and 10,000/60,000/140,000 per week for Lite/Pro/Max",
+      "source": "Z.ai developer documentation, retrieved 2026-08-01",
+      "category": "data"
+    },
+    {
+      "fact": "On GLM-5.2 an output token costs 3.5x an input token and 14x a cached input token under Zhipu's published multipliers (24 vs 6.9 vs 1.7)",
+      "source": "Z.ai developer documentation, retrieved 2026-08-01",
+      "category": "data"
+    },
+    {
+      "fact": "Aggregator sites describe Zhipu's Pro tier as roughly 5x Lite and Max as about 20x, while the vendor's published credit figures give 6x and 14x",
+      "source": "Comparison of third-party summaries against Z.ai developer documentation, 2026-08-01",
+      "category": "case_study"
+    },
+    {
+      "fact": "Moonshot documents Kimi Code's quota on its product site rather than its API platform: a rolling 5-hour window of roughly 300-1,200 requests with up to 30 concurrent, refreshing 7 days from the subscription date, drawn from the same membership balance as the Kimi web app",
+      "source": "Kimi Code documentation (kimi.com/code/docs), retrieved 2026-08-05",
+      "category": "data"
+    }
+  ],
+  "comparison_data": {
+    "dimensions": [
+      "tiers",
+      "quota_unit",
+      "limit_5h",
+      "limit_weekly",
+      "weekly_reset_anchor",
+      "monthly_price_usd",
+      "verification"
+    ],
+    "entries": [
+      {
+        "vendor": "Zhipu GLM (z.ai)",
+        "tiers": "Lite / Pro / Max",
+        "quota_unit": "credits (token-derived)",
+        "limit_5h": "2,000 / 12,000 / 28,000",
+        "limit_weekly": "10,000 / 60,000 / 140,000",
+        "weekly_reset_anchor": "7 days from subscription",
+        "monthly_price_usd": "from 18 (entry tier; per-tier prices not itemized)",
+        "verification": "official_docs"
+      },
+      {
+        "vendor": "Alibaba Qwen (Model Studio)",
+        "tiers": "Pro",
+        "quota_unit": "requests",
+        "limit_5h": "6,000",
+        "limit_weekly": "45,000 (also 90,000/month)",
+        "weekly_reset_anchor": "Monday 00:00 (UTC+8)",
+        "monthly_price_usd": "50",
+        "verification": "official_docs"
+      },
+      {
+        "vendor": "MiniMax",
+        "tiers": "Plus / Max / Ultra",
+        "quota_unit": "agent capacity",
+        "limit_5h": "3-4 / 4-5 / 6-7 agents",
+        "limit_weekly": "5-hour rolling + weekly windows; values not published",
+        "weekly_reset_anchor": "Not published",
+        "monthly_price_usd": "20 / 50 / 120",
+        "verification": "official_docs"
+      },
+      {
+        "vendor": "Moonshot Kimi",
+        "tiers": "Moderato / Allegretto and above",
+        "quota_unit": "requests, shared with the Kimi web app",
+        "limit_5h": "~300-1,200 requests, 30 concurrent",
+        "limit_weekly": "refreshes weekly; values not published",
+        "weekly_reset_anchor": "7 days from subscription",
+        "monthly_price_usd": "not verified (tier names documented, prices not on a readable page)",
+        "verification": "official_docs"
+      },
+      {
+        "vendor": "DeepSeek",
+        "tiers": "No subscription plan",
+        "quota_unit": "none",
+        "limit_5h": "not applicable",
+        "limit_weekly": "not applicable",
+        "weekly_reset_anchor": "not applicable",
+        "monthly_price_usd": "not applicable (pay-per-token only)",
+        "verification": "official_docs"
+      }
+    ],
+    "zhipu_credit_formula": {
+      "formula": "credits = (input_tokens * input_multiplier + cached_input_tokens * cached_multiplier + output_tokens * output_multiplier) / 10000",
+      "mcp_tools": "calls * output_multiplier (Web Search, Web Reader, Zread each 1.2)",
+      "multipliers": [
+        {
+          "model": "GLM-5.2",
+          "input": 6.9,
+          "cached_input": 1.7,
+          "output": 24
+        },
+        {
+          "model": "GLM-5-Turbo",
+          "input": 5.7,
+          "cached_input": 1.5,
+          "output": 21
+        },
+        {
+          "model": "GLM-4.7",
+          "input": 4.6,
+          "cached_input": 1.2,
+          "output": 16
+        },
+        {
+          "model": "GLM-4.6V",
+          "input": 1.2,
+          "cached_input": 0.3,
+          "output": 2.7
+        }
+      ]
+    }
+  },
+  "faq_summary": [
+    {
+      "q": "Which Chinese AI coding plan is cheapest in 2026?",
+      "a": "MiniMax Plus at $20 per month is the lowest verified price, and Zhipu advertises an entry tier from $18. Neither number answers the real question, because MiniMax sells agent capacity and Zhipu sells token-derived credits. Price per month is comparable; price per unit of work is not."
+    },
+    {
+      "q": "Do Chinese AI vendors publish their usage quotas?",
+      "a": "Four of the five do, unlike Anthropic which returns null for its dollar limits. But no two of them publish the same kind of number, and only Zhipu publishes the conversion to tokens. Publishing a quota and publishing a comparable quota are different things."
+    },
+    {
+      "q": "When do Chinese coding plan weekly quotas reset?",
+      "a": "It depends on the vendor. Alibaba resets every Monday at 00:00 (UTC+8), a fixed calendar anchor. Zhipu and Moonshot both roll 7 days from the subscription date instead, so the reset lands at whatever hour you signed up."
+    },
+    {
+      "q": "Does Kimi Code publish its usage limits?",
+      "a": "Partly, and on Moonshot's product site rather than its API platform. Kimi Code documents a rolling 5-hour window of roughly 300-1,200 requests with up to 30 concurrent and a weekly refresh 7 days from the subscription date, but never the weekly number itself or what a request contains."
+    },
+    {
+      "q": "Does DeepSeek have a coding subscription plan?",
+      "a": "No. DeepSeek sells pay-per-token API access only, with concurrency limits (2,500 concurrent requests on v4-flash, 500 on v4-pro) instead of usage quotas. There is no quota and therefore no reset."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Z.AI Developer Documentation — Coding Plan overview",
+      "url": "https://docs.z.ai/devpack/overview",
+      "publisher": "Z.ai (Zhipu AI)"
+    },
+    {
+      "title": "Model Studio Coding Plan",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "publisher": "Alibaba Cloud"
+    },
+    {
+      "title": "Token Plan Overview",
+      "url": "https://platform.minimax.io/docs/token-plan/intro",
+      "publisher": "MiniMax"
+    },
+    {
+      "title": "Kimi Code Documentation — overview and usage limits",
+      "url": "https://www.kimi.com/code/docs/en/",
+      "publisher": "Moonshot AI"
+    },
+    {
+      "title": "Kimi Code Membership Benefits — quota refresh and Extra Usage",
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/membership.html",
+      "publisher": "Moonshot AI"
+    },
+    {
+      "title": "Kimi API pricing documentation (pay-per-token platform, no subscription quota)",
+      "url": "https://platform.kimi.ai/docs/pricing",
+      "publisher": "Moonshot AI"
+    },
+    {
+      "title": "DeepSeek API Pricing",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "publisher": "DeepSeek"
+    }
+  ]
+}
