@@ -2,7 +2,7 @@
 title: "ChatGPT Ads 2026: AEO Traffic and Reddit Citations"
 description: "ChatGPT launched ads on Feb 9, 2026 at $60 CPM. AI traffic converts 4–23x better than organic. Reddit drives 40% of AI citations across all major platforms."
 date: 2026-05-17 12:00:00 +0900
-last_modified_at: 2026-07-26 23:14:30 +0900
+last_modified_at: 2026-08-06 02:30:00 +0900
 categories: [ai-models-intelligence]
 tags: [chatgpt-ads, aeo, geo, ai-search, reddit-citations, zero-click, "2026"]
 format: D
@@ -25,9 +25,9 @@ data_updated: 2026-05-17
 author: jsonhouse
 ---
 
-On February 9, 2026, OpenAI began inserting ads into ChatGPT conversations for Free and Go-tier users. The first six weeks generated $100 million in revenue at a CPM of $60 — three to five times the rate of standard display advertising. This is not an incremental update to the online ad market. It is the first large-scale integration of paid promotion into conversational AI at consumer scale, and it is happening across every major platform simultaneously.
+On February 9, 2026, [OpenAI](https://openai.com/) began inserting ads into ChatGPT conversations for Free and Go-tier users. The first six weeks generated $100 million in revenue at a CPM of $60 — three to five times the rate of standard display advertising. This is not an incremental update to the online ad market. It is the first large-scale integration of paid promotion into conversational AI at consumer scale, and it is happening across every major platform simultaneously.
 
-Three things are shifting at once: how advertising reaches users (inside trusted AI answers, not alongside labeled search results), what content actually drives business outcomes (AI referral traffic converts at 4.4–23× the rate of standard organic, despite accounting for under 2% of total volume), and which content gets cited by AI engines in the first place (Reddit accounts for approximately 40% of all AI citations across major platforms, per a 680-million-citation analysis by 5W).
+Three things are shifting at once: how advertising reaches users (inside trusted AI answers, not alongside labeled search results), what content actually drives business outcomes (AI referral traffic converts at 4.4–23× the rate of standard organic, despite accounting for under 2% of total volume), and which content gets cited by AI engines in the first place (Reddit accounts for approximately 40% of all AI citations across major platforms, per a 680-million-citation analysis by [5W](https://www.5wpr.com/)).
 
 ## TL;DR
 

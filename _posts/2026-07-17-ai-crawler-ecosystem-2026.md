@@ -2,7 +2,7 @@
 title: "AI Crawler Ecosystem 2026: Who Scrapes the Web and Who Pays"
 description: "Machines now generate 57.5% of web HTML traffic. Who the AI crawlers are, what they take per visitor sent, and how pay-per-crawl rewrites the web's deal."
 date: 2026-07-17 18:00:00 +0900
-last_modified_at: 2026-07-26 23:14:30 +0900
+last_modified_at: 2026-08-06 02:30:00 +0900
 categories: [industry-analysis]
 tags: [ai-crawlers, gptbot, claudebot, pay-per-crawl, robots-txt, rsl, cloudflare, aeo, "2026"]
 format: D
@@ -25,7 +25,7 @@ data_updated: 2026-07-17
 author: jsonhouse
 ---
 
-Sometime in the first half of 2026, the web quietly crossed a line: machines became the majority. Cloudflare Radar data shared on June 3, 2026 shows automated requests now make up 57.5% of HTML traffic against 42.5% from humans — the first machine majority in the web's history. The single fastest-growing force behind that shift is AI crawlers, which reached 20.3% of verified bot traffic in May 2026, plus another 6.5% from AI-search bots. This post maps the ecosystem behind those numbers: which bots crawl for training, search, and user actions; how many pages each company takes per visitor it sends back; and why the answer to that imbalance — payment layers like pay-per-crawl and RSL — is quietly rebuilding the web's business model. Every figure is sourced and dated; data checked July 17, 2026.
+Sometime in the first half of 2026, the web quietly crossed a line: machines became the majority. [Cloudflare Radar data](https://blog.cloudflare.com/ai-search-crawl-refer-ratio-on-radar/) shared on June 3, 2026 shows automated requests now make up 57.5% of HTML traffic against 42.5% from humans — the first machine majority in the web's history. The single fastest-growing force behind that shift is AI crawlers, which reached 20.3% of verified bot traffic in May 2026, plus another 6.5% from AI-search bots. This post maps the ecosystem behind those numbers: which bots crawl for training, search, and user actions; how many pages each company takes per visitor it sends back; and why the answer to that imbalance — payment layers like [pay-per-crawl](https://blog.cloudflare.com/introducing-pay-per-crawl/) and [RSL](https://rslstandard.org/) — is quietly rebuilding the web's business model. Every figure is sourced and dated; data checked July 17, 2026.
 
 ## TL;DR
 

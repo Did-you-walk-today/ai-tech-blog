@@ -2,7 +2,7 @@
 title: "LLM API Pricing 2026: Full Comparison Table (Weekly)"
 description: "LLM API pricing 2026: 40 models from OpenAI, Anthropic, Google, xAI, DeepSeek, and Mistral in one table. Input/output cost per 1M tokens, updated weekly."
 date: 2026-07-17 12:00:00 +0900
-last_modified_at: 2026-08-03 11:35:00 +0900
+last_modified_at: 2026-08-06 02:30:00 +0900
 categories: [ai-data-statistics]
 tags: [llm-pricing, api-cost, claude, gpt-5, gemini, grok, deepseek, mistral, "2026"]
 format: D
@@ -37,7 +37,7 @@ As of August 3, 2026, LLM API prices span two orders of magnitude — from $0.10
 
 ## Methodology
 
-All prices were collected on **2026-08-03** from official provider pricing pages only: Anthropic (platform.claude.com), OpenAI (developers.openai.com), Google (ai.google.dev), xAI (docs.x.ai), DeepSeek (api-docs.deepseek.com), and Mistral (mistral.ai). No aggregator data was used — aggregators serve as cross-checks, never as sources.
+All prices were collected on **2026-08-03** from official provider pricing pages only: [Anthropic](https://platform.claude.com/docs/en/docs/about-claude/pricing), [OpenAI](https://developers.openai.com/api/docs/pricing), [Google](https://ai.google.dev/gemini-api/docs/pricing), [xAI](https://docs.x.ai/docs/models), [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing), and [Mistral](https://mistral.ai/pricing/api). No aggregator data was used — aggregators serve as cross-checks, never as sources.
 
 Every figure is normalized to **USD per 1M tokens at the standard, non-batch, global-routing tier**. For models with tiered long-context pricing (Google, xAI), the table records the base tier and footnotes the higher tier. Retired models are excluded; deprecated-but-available models are noted in the table footnotes.
 

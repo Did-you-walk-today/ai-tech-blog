@@ -3,7 +3,7 @@ layout: post
 title: "Best AI Coding Tools 2026: Pricing & Benchmark Reality"
 description: "The best AI coding tools in 2026 on real usage-based pricing — Claude Code, Cursor, Copilot, Devin Desktop. Why SWE-bench rankings mislead, and how to choose."
 date: 2026-08-01 09:00:00 +0000
-last_modified_at: 2026-08-01 14:00:00 +0000
+last_modified_at: 2026-08-06 02:30:00 +0900
 categories: [ai-developer-tools]
 tags: [claude-code, cursor, github-copilot, devin-desktop, windsurf, ai-coding, "2026"]
 format: A
@@ -113,7 +113,7 @@ Because these tools increasingly cite and consume structured data, our analysis 
 
 ## Methodology, Limitations & Update Cadence
 
-**Methodology.** Tool pricing and plan structure were first collected on 2026-07-25 and re-verified on 2026-08-01 directly from each vendor's official pricing page and documentation (Anthropic, Cursor/Anysphere, GitHub, Cognition). Underlying model API prices are drawn from our own weekly pricing snapshot dated 2026-07-16 (Tier-1 vendor documentation). Model benchmark figures come only from vendor announcements, each cited with its source and date. We deliberately exclude third-party SWE-bench aggregator sites, which mix models and tools and rarely date their numbers.
+**Methodology.** Tool pricing and plan structure were first collected on 2026-07-25 and re-verified on 2026-08-01 directly from each vendor's official pricing page and documentation — [Anthropic](https://www.anthropic.com/news/claude-opus-4-8), [Cursor/Anysphere](https://cursor.com/pricing), [GitHub](https://github.com/features/copilot/plans), and [Cognition](https://devin.ai/pricing). Underlying model API prices are drawn from our own weekly pricing snapshot dated 2026-07-16 (Tier-1 vendor documentation). Model benchmark figures come only from vendor announcements, each cited with its source and date. We deliberately exclude third-party SWE-bench aggregator sites, which mix models and tools and rarely date their numbers.
 
 **Limitations.** (1) Usage-based billing means no table can state your real monthly cost — it depends on your agent usage. Treat the paid price as a floor. (2) Benchmark figures are *model* results, quoted to show a tool's ceiling, not a tool score. (3) Vendor plans and prices change frequently in this market; verify the current price on the vendor page before purchasing. (4) We compare the four highest-adoption tools; niche and self-hosted options (Continue, Tabnine, and others) are out of scope for this edition. (5) Anthropic's public pricing page lists Max as "from $100" without breaking out the 20× tier; the $200 figure is retained from our 2026-07-25 collection and the 5×/20× tier names are confirmed in Anthropic's support documentation, but the 20× price is not published on the pricing page itself.
 

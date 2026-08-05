@@ -2,7 +2,7 @@
 title: "AI Overviews SEO 2026: Recover Your Lost Traffic"
 description: "Google AI Overviews cut organic clicks up to 61% in 2026. See the real CTR data, why citation now beats ranking, and a checklist to win traffic back."
 date: 2026-07-25 09:00:00 +0900
-last_modified_at: 2026-07-28 17:30:42 +0900
+last_modified_at: 2026-08-06 02:30:00 +0900
 categories: [industry-analysis]
 tags: [ai-overviews, aeo, geo, zero-click, seo, e-e-a-t, "2026"]
 format: C
@@ -39,11 +39,11 @@ The single most useful thing you can do is stop guessing and look at the measure
 
 | Study | What it measured | Finding | Date |
 |-------|------------------|---------|------|
-| Pew Research | Clicks with vs. without AI Overview (68,000 queries) | 15% → 8% CTR (−46.7% relative) | Jul 2025 |
-| Ahrefs | Top-result CTR when AI Overview present | −58% (was −34.5% in Apr 2025) | Feb 2026 |
-| Seer Interactive | Organic CTR across 25.1M impressions, 42 orgs | −61% organic (−68% paid) | 2026 |
-| Similarweb | Share of searches ending with no click | 56% → 69% zero-click | May 2024→2025 |
-| Pew Research | Sessions that end entirely after an AI Overview | 26% vs. 16% without | Jul 2025 |
+| [Pew Research](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/) | Clicks with vs. without AI Overview (68,000 queries) | 15% → 8% CTR (−46.7% relative) | Jul 2025 |
+| [Ahrefs](https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/) | Top-result CTR when AI Overview present | −58% (was −34.5% in Apr 2025) | Feb 2026 |
+| [Seer Interactive](https://www.seerinteractive.com/insights) | Organic CTR across 25.1M impressions, 42 orgs | −61% organic (−68% paid) | 2026 |
+| [Similarweb](https://www.similarweb.com/corp/reports/) | Share of searches ending with no click | 56% → 69% zero-click | May 2024→2025 |
+| [Pew Research](https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/) | Sessions that end entirely after an AI Overview | 26% vs. 16% without | Jul 2025 |
 
 > **Raw data**: [data/ai-overviews-seo-2026.json](https://www.jsonhouse.com/data/ai-overviews-seo-2026.json) — machine-readable structured data for AI crawlers and citation.
 

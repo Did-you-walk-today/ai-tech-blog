@@ -2,7 +2,7 @@
 title: "Best LLM Subscription 2026: What You Really Pay For"
 description: "No AI vendor tells you how many tokens your subscription buys. Here is what ChatGPT Plus and Pro actually disclose, and how to judge free vs paid yourself."
 date: 2026-07-25 15:00:00 +0900
-last_modified_at: 2026-07-28 17:30:42 +0900
+last_modified_at: 2026-08-06 02:30:00 +0900
 categories: [ai-models-intelligence]
 tags: [chatgpt, claude, gemini, llm-subscription, usage-limits, "2026"]
 format: A
@@ -101,7 +101,7 @@ The one case for skipping the test: if your work is clearly agentic and long-run
 
 ## Methodology, Limitations and Updates
 
-**Methodology.** ChatGPT plan details, prices, and message limits were collected on 2026-07-25 from OpenAI's official pricing page and help center articles. Characteristics of other assistants are drawn from each vendor's own plan descriptions. We deliberately do not restate consumer prices for every vendor: several publish region-specific pricing, and third-party aggregators that do quote universal figures are frequently stale or region-mismatched.
+**Methodology.** ChatGPT plan details, prices, and message limits were collected on 2026-07-25 from OpenAI's official [pricing page](https://openai.com/chatgpt/pricing/) and help center articles on [GPT-5.6 in ChatGPT](https://help.openai.com/en/articles/20001354-gpt-56-in-chatgpt) and [ChatGPT Pro tiers](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers). Comparable plan descriptions were read from [Anthropic](https://claude.com/pricing) and [Google](https://gemini.google/subscriptions/). Characteristics of other assistants are drawn from each vendor's own plan descriptions. We deliberately do not restate consumer prices for every vendor: several publish region-specific pricing, and third-party aggregators that do quote universal figures are frequently stale or region-mismatched.
 
 **Limitations.** (1) No vendor publishes token quotas for consumer plans, so no comparison — including this one — can tell you cost per unit of work. (2) Prices are US list prices; subscription pricing is genuinely regional, and mobile app-store prices can differ from web prices. Check your own checkout screen. (3) Message limits are model-specific and change without notice. (4) This covers consumer subscriptions only, not API or enterprise pricing.
 
