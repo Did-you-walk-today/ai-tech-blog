@@ -58,7 +58,7 @@ defaults:
       toc: true
       comments: false
       permalink: /posts/:title/
-      author: ai_tech_blog
+      author: jsonhouse
   - scope:
       path: _drafts
     values:

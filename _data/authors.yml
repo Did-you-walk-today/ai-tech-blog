@@ -1,3 +1,5 @@
-ai_tech_blog:
+# Key must match the `author:` value used in post front matter.
+# All posts use `jsonhouse`; a mismatch renders an empty byline.
+jsonhouse:
   name: "Json House"
   url: https://www.jsonhouse.com
