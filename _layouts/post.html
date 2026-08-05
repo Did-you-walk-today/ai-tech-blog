@@ -158,17 +158,23 @@ script_includes:
         d-flex justify-content-between align-items-center mt-5 pb-2
       "
     >
-      <div class="license-wrapper">
-        {% if site.data.locales[lang].copyright.license.template %}
-          {% capture _replacement %}
-        <a href="{{ site.data.locales[lang].copyright.license.link }}">
-          {{ site.data.locales[lang].copyright.license.name }}
-        </a>
-        {% endcapture %}
+      {%- comment -%}
+        NO LICENSE IS DECLARED — deliberate (CLAUDE.md, decided 2026-07-09,
+        awareness-first strategy). Chirpy renders "This post is licensed under
+        CC BY 4.0 by the author." here by default, which contradicted
+        _includes/footer.html on the same page ("All rights reserved.
+        Unauthorized reproduction or redistribution is strictly prohibited.").
+        Two mutually exclusive reuse terms on one page is worse than either
+        alone: deliberate ambiguity means saying nothing, not saying two
+        opposite things. Removed 2026-08-05.
 
-          {{ site.data.locales[lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
-        {% endif %}
-      </div>
+        Fixed here rather than in _data/locales/en.yml because Jekyll deep-merges
+        theme data — an emptied `license:` key there leaves the theme's values
+        intact, and that file is kept as a verbatim copy of the theme's for
+        upgrade diffing. This layout is the site's own, so it is the honest
+        place to decide what the site declares.
+      {%- endcomment -%}
+      <div class="license-wrapper"></div>
 
       {% include post-sharing.html lang=lang %}
     </div>
