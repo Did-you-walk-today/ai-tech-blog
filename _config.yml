@@ -38,7 +38,7 @@ social:
   name: "Json House"
   links: []
 
-social_preview_image: /assets/img/og-default.png
+social_preview_image: /assets/img/og-default.jpg
 
 paginate: 10
 paginate_path: "/page:num/"
