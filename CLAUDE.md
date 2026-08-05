@@ -96,7 +96,14 @@ Style selection by category:
 
 Wrong style application is a HARD REJECT condition.
 
-## SEO Rules (MANDATORY — every post)
+## SEO / AEO / GEO Rules (MANDATORY — every post)
+
+Three layers, one checklist. SEO optimizes for ranking, AEO for extraction,
+GEO for **citation** — being named as the source when a generative engine
+writes an answer. Rules 10–14 are the GEO layer; full detail in
+SEO_GUIDE.md §11–§13.
+
+**SEO / AEO**
 
 1. Title: max 60 chars, include "2026", primary keyword in first 5 words
 2. Meta description: 150–160 chars, directly answer search intent
@@ -107,6 +114,22 @@ Wrong style application is a HARD REJECT condition.
 7. Internal links: 2–3 within same topic cluster (verified to exist)
 8. Word count: min 600 words (excluding code/data blocks)
 9. data_updated field: always present
+
+**GEO**
+
+10. Inline citation: min 1 outbound markdown link to a primary source, placed
+    where the claim is made. **Bare domains in prose do not count** — a crawler
+    cannot follow `platform.claude.com` written as text
+11. Source depth: paired data file carries min 3 `primary_sources`, each with
+    `title` and `url` (these become the Dataset schema's `citation` array)
+12. Dataset link: body links its own `/data/{slug}.json`
+13. Data file: all 12 required fields present; `data_updated` identical in
+    front matter and data file
+14. `key_facts`: 5–10 entries — the units a model can lift and attribute
+
+Site-level GEO infrastructure (Dataset/Organization/DataCatalog JSON-LD,
+entity `sameAs`, logo assets) is one-off build work specified in
+`_plans/2026-08-05-geo-implementation-spec.md`, not a per-post rule.
 
 ## Hard Reject Conditions (auto-regenerate)
 
@@ -122,6 +145,9 @@ Wrong style application is a HARD REJECT condition.
 - Wrong style applied (e.g., 메르 structure used for CAT1 deep technical post)
 - Broken internal links (linking to non-existent slug)
 - canonical_url field hardcoded in frontmatter (must be auto-generated)
+- No inline outbound citation (D1) — zero primary-source links in the body
+- Fewer than 3 `primary_sources` in the paired data file (D2)
+- Body does not link its own `/data/{slug}.json` (D4)
 
 ## Frontmatter Required Fields
 
@@ -473,10 +499,22 @@ often stale; always verify against `https://www.jsonhouse.com/sitemap.xml`.
 | C10 Evidence table | Post with body figures needs `_reviews/{date}-{slug}.images.md` containing a 근거 대응표 | WARN |
 | C11 Cover is generated art | Cover with <= 1,000 distinct colours is a code render, not a `$imagegen` output | ERROR |
 
-In `_drafts/` every Section C ERROR is downgraded to WARN — artwork legitimately
-arrives after the draft. In `_posts/` they block publishing.
+**Section D — GEO / Citation Evidence** (delegated to `geo_validation.py`, rules in `SEO_GUIDE.md` §11–§13)
+
+| Rule | Condition | Severity |
+|------|-----------|----------|
+| D1 Inline citation | >= 1 outbound markdown link to a primary source in the body (bare domains in prose do not count) | ERROR |
+| D2 Source depth | Paired data file has >= 3 `primary_sources`, each with `title` + `url` | ERROR |
+| D3 Fact granularity | `key_facts` holds 5–10 entries | WARN |
+| D4 Dataset link | Body links its own `/data/{slug}.json` | ERROR |
+| D5 Data file schema | Data file exists, parses, has all 12 required fields, `data_updated` matches front matter | ERROR |
+
+In `_drafts/` every Section C and Section D ERROR is downgraded to WARN — artwork
+legitimately arrives after the draft, and a draft predates its data file and
+source links. In `_posts/` they block publishing.
 
 Repo-wide status: `python3 .claude/hooks/image_validation.py --report`
+GEO status: `python3 .claude/hooks/geo_validation.py --report`
 
 ### Behavior
 

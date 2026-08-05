@@ -272,6 +272,25 @@ if [[ -f "$HOOK_DIR/image_validation.py" ]]; then
 fi
 
 # ==========================================================
+# SECTION D: GEO / Citation Evidence (D1~D5 — see SEO_GUIDE.md §11-§13)
+# ==========================================================
+# Delegated to geo_validation.py, which emits the same ERROR:/WARN: protocol.
+# It downgrades ERROR to WARN for _drafts/ on its own — a draft legitimately
+# predates its data file and its source links.
+
+if [[ -f "$HOOK_DIR/geo_validation.py" ]]; then
+  GEO_RESULTS=$(python3 "$HOOK_DIR/geo_validation.py" "$FILE_PATH" 2>/dev/null || echo "")
+  while IFS= read -r line; do
+    [[ -z "$line" ]] && continue
+    if [[ "$line" == ERROR:* ]]; then
+      ERRORS+=("${line#ERROR:}")
+    elif [[ "$line" == WARN:* ]]; then
+      WARNINGS+=("${line#WARN:}")
+    fi
+  done <<< "$GEO_RESULTS"
+fi
+
+# ==========================================================
 # OUTPUT
 # ==========================================================
 
