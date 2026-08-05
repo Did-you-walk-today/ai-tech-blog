@@ -25,18 +25,13 @@
       "category": "data"
     },
     {
-      "fact": "Three unrelated model pairs cross over within an 83.3%-84.7% band, the point where a 90% discount can no longer defend a lower sticker price against a 98% one",
-      "source": "jsonhouse original calculation, 2026-07-28",
-      "category": "trend"
-    },
-    {
       "fact": "OpenAI introduced a 1.25x cache-write charge with the GPT-5.6 family; models before it had no write fee",
       "source": "OpenAI prompt caching guide, retrieved 2026-07-28",
       "category": "policy"
     },
     {
-      "fact": "Anthropic charges 1.25x base input for a 5-minute cache write and 2x for a 1-hour write, and has no storage fee",
-      "source": "Anthropic pricing page, retrieved 2026-07-28",
+      "fact": "Anthropic charges 1.25x base input for a 5-minute cache write and 2x for a 1-hour write, has no storage fee, and sets a minimum cacheable prompt length of 512 tokens on Opus 5 and Fable 5 rising to 4,096 on Opus 4.5, Opus 4.6, and Haiku 4.5 — below which requests are processed uncached and without an error",
+      "source": "Anthropic pricing page and prompt caching documentation, retrieved 2026-07-28",
       "category": "policy"
     },
     {
@@ -50,19 +45,9 @@
       "category": "data"
     },
     {
-      "fact": "Caching beats not caching from the second call at a 1.25x write multiplier and the third call at 2x, so write fees are immaterial for repeated workloads",
-      "source": "jsonhouse original calculation, 2026-07-28",
-      "category": "data"
-    },
-    {
       "fact": "A 50,000-token prompt sent on 1,000 Claude Sonnet 5 calls costs $100.00 uncached and $10.12 with the 5-minute cache including its 1.25x write, an 89.9% saving",
       "source": "jsonhouse original calculation, 2026-07-28",
       "category": "case_study"
-    },
-    {
-      "fact": "Anthropic's minimum cacheable prompt length ranges from 512 tokens on Opus 5 and Fable 5 to 4,096 on Opus 4.5, Opus 4.6, and Haiku 4.5, and requests below the threshold are processed without caching and without an error",
-      "source": "Anthropic prompt caching documentation, retrieved 2026-07-28",
-      "category": "policy"
     },
     {
       "fact": "OpenAI's documentation does not state whether a cache write is billed on a prompt that is never reused; it says an eligible prefix 'may' be cached, and offers prompt_cache_options.mode set to explicit as an opt-out",
