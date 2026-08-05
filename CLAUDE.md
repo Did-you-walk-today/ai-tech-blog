@@ -298,9 +298,15 @@ When generating or updating data files:
 
 #### Naming Convention (CRITICAL)
 
-The plugin auto-publishes any `_data/` file matching `YYYY-MM-DD-*.json`.
+The plugin publishes a `_data/` file matching `YYYY-MM-DD-*.json` **only when a
+post of the same basename exists in `_posts/`**. A data file written at Phase 3
+stays private until its post clears Phase 5 and lands in `_posts/`; both go live
+in the same deploy. Drafts are excluded even under `jekyll build --drafts`.
 
-**RULE**: Date prefix means PUBLIC.
+The build logs each withheld file (`DataPublisher: Withholding …`) — seeing that
+line for a draft is expected, not an error.
+
+**RULE**: Date prefix means PUBLIC *once the post is published*.
 
 - Post-specific data (PUBLIC): `_data/YYYY-MM-DD-{slug}.json`
 - Site config data (PRIVATE): `_data/{name}.yml` or `_data/{name}.json` (NO date prefix — examples: `authors.yml`, `navigation.yml`)
