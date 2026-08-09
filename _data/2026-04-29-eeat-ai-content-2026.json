@@ -8,6 +8,14 @@
   "category": "ai-safety-ethics",
   "cluster": "CLUSTER_AI_CONTENT_POLICY",
   "format": "C",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/eeat-ai-content-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/eeat-ai-content-2026.json",
+    "citation": "Json House, \"Pass Google E-E-A-T 2026: AI-Assisted Content Survival Guide\", jsonhouse.com (2026-04-27)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "eeat_pillars": [
     {
       "pillar": "Experience",

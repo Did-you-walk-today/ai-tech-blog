@@ -8,6 +8,14 @@
   "category": "ai-models-intelligence",
   "cluster": "CLUSTER_LLM",
   "format": "A",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/llm-subscription-guide-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/llm-subscription-guide-2026.json",
+    "citation": "Json House, \"Best LLM Subscription 2026: What You Really Pay For\", jsonhouse.com (2026-07-25)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "key_facts": [
     {
       "fact": "No major vendor publishes a token quota for consumer AI subscriptions — plans are sold in messages, multipliers, or unspecified allowances",

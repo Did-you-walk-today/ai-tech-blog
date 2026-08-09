@@ -8,6 +8,14 @@
   "category": "industry-analysis",
   "cluster": "CLUSTER_AEO",
   "format": "C",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/ai-overviews-seo-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/ai-overviews-seo-2026.json",
+    "citation": "Json House, \"AI Overviews SEO 2026: Recover Your Lost Traffic\", jsonhouse.com (2026-07-25)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "key_facts": [
     {
       "fact": "Users clicked a search result 8% of the time when an AI Overview appeared versus 15% without it — a 46.7% relative click-through drop across 68,000 real queries",

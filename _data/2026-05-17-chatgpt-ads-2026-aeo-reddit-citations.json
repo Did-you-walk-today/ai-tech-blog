@@ -8,6 +8,14 @@
   "category": "industry-analysis",
   "cluster": "CLUSTER_AEO",
   "format": "D",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/chatgpt-ads-2026-aeo-reddit-citations/",
+    "dataset_url": "https://www.jsonhouse.com/data/chatgpt-ads-2026-aeo-reddit-citations.json",
+    "citation": "Json House, \"ChatGPT Ads 2026: AEO Traffic and Reddit Citations\", jsonhouse.com (2026-08-06)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "key_facts": [
     {
       "fact": "ChatGPT launched ads on February 9, 2026 for Free and Go-tier users in the United States at a $60 CPM behind a $200,000 minimum buy",

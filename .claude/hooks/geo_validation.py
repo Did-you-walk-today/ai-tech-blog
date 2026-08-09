@@ -31,6 +31,16 @@ REQUIRED_DATA_FIELDS = [
     "schema_version", "slug", "title", "description", "data_updated",
     "source_post", "category", "cluster", "format",
     "key_facts", "faq_summary", "primary_sources",
+    "attribution",
+]
+
+# DATA_POLICY.md §3. A consumer reads the dataset, never the terms page, so the
+# conditions have to travel inside the payload. `citation` is checked for being
+# copy-ready rather than assembled — a string a machine has to build from parts
+# is a string nothing will bother to build.
+REQUIRED_ATTRIBUTION_FIELDS = [
+    "source", "source_url", "dataset_url", "citation",
+    "attribution_required", "terms_url",
 ]
 
 MIN_PRIMARY_SOURCES = 3
@@ -123,7 +133,30 @@ def check(post_path: Path, root: Path):
     if missing:
         yield ("ERROR",
                f"D5 DATA FIELDS MISSING: _data/{name}.json lacks {', '.join(missing)}. "
-               f"All 12 required fields must be present. See CLAUDE.md.")
+               f"All {len(REQUIRED_DATA_FIELDS)} required fields must be present. "
+               f"See CLAUDE.md.")
+
+    # --- D6: attribution block (DATA_POLICY.md §3) ---
+    attribution = data.get("attribution")
+    if isinstance(attribution, dict):
+        absent = [f for f in REQUIRED_ATTRIBUTION_FIELDS if not attribution.get(f)]
+        if absent:
+            yield ("ERROR",
+                   f"D6 ATTRIBUTION INCOMPLETE: attribution lacks "
+                   f"{', '.join(absent)}. A consumer reads the dataset, not the "
+                   f"terms page — the conditions have to travel with the payload.")
+        if attribution.get("attribution_required") is not True:
+            yield ("ERROR",
+                   "D6 ATTRIBUTION NOT REQUIRED: attribution_required must be "
+                   "boolean true. It is a machine-readable condition, not a note.")
+        # Declaring a licence forecloses Phase 3 and reverses the 2026-07-09
+        # decision. DATA_POLICY.md §2 — attribution is not a licence grant.
+        if "license" in data or "license" in attribution:
+            yield ("ERROR",
+                   "D6 LICENCE DECLARED: `license` is forbidden in data files. "
+                   "See DATA_POLICY.md §2 — attribution is a separate thing.")
+    elif attribution is not None:
+        yield ("ERROR", "D6 ATTRIBUTION MALFORMED: attribution must be an object.")
 
     # --- D2: primary_sources depth ---
     sources = data.get("primary_sources") or []

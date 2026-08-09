@@ -8,6 +8,14 @@
   "category": "prompt-engineering",
   "cluster": "CLUSTER_PROMPTS",
   "format": "C",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/gigo-prompts-2026-why-vague-prompts-fail/",
+    "dataset_url": "https://www.jsonhouse.com/data/gigo-prompts-2026-why-vague-prompts-fail.json",
+    "citation": "Json House, \"GIGO Prompts 2026: Why Vague Prompts Fail (Data + Fix)\", jsonhouse.com (2026-05-07)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "comparison_data": {
     "title": "Hallucination Rates by Task Type and Prompt Quality",
     "dimensions": ["task_type", "hallucination_rate", "prompt_quality", "source"],

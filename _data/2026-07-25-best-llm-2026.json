@@ -8,6 +8,14 @@
   "category": "ai-models-intelligence",
   "cluster": "CLUSTER_LLM",
   "format": "A",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/best-llm-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/best-llm-2026.json",
+    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-07-25)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "key_facts": [
     {
       "fact": "Context windows have converged across five providers to a range of 1,000,000-1,050,000 tokens, a spread under 5%",

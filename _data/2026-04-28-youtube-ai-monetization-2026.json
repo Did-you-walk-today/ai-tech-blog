@@ -8,6 +8,14 @@
   "category": "ai-safety-ethics",
   "cluster": "CLUSTER_AI_CONTENT_POLICY",
   "format": "C",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/youtube-ai-monetization-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/youtube-ai-monetization-2026.json",
+    "citation": "Json House, \"YouTube AI Monetization 2026: What Is Inauthentic Content\", jsonhouse.com (2026-04-27)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "policy_timeline": [
     { "date": "2023-11", "action": "AI content disclosure policy announced", "source": "YouTube Blog" },
     { "date": "2024-03", "action": "Altered or Synthetic Content toggle launched in YouTube Studio", "source": "YouTube Help" },

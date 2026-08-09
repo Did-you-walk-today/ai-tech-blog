@@ -8,6 +8,14 @@
   "category": "ai-data-statistics",
   "cluster": "CLUSTER_LLM",
   "format": "D",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/llm-api-pricing-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/llm-api-pricing-2026.json",
+    "citation": "Json House, \"LLM API Pricing 2026: Full Comparison Table (Weekly)\", jsonhouse.com (2026-08-03)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "key_facts": [
     {
       "fact": "DeepSeek v4-flash is the cheapest maintained general-purpose LLM API at $0.14 input / $0.28 output per 1M tokens with a 1M-token context window",

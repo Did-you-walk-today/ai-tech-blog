@@ -123,9 +123,12 @@ SEO_GUIDE.md §11–§13.
 11. Source depth: paired data file carries min 3 `primary_sources`, each with
     `title` and `url` (these become the Dataset schema's `citation` array)
 12. Dataset link: body links its own `/data/{slug}.json`
-13. Data file: all 12 required fields present; `data_updated` identical in
+13. Data file: all 13 required fields present; `data_updated` identical in
     front matter and data file
 14. `key_facts`: 5–10 entries — the units a model can lift and attribute
+15. `attribution` block present and complete — the terms have to travel inside
+    the payload, because a consumer reads the dataset and never the terms page.
+    See DATA_POLICY.md §3. `license` remains forbidden; the two are not the same
 
 Site-level GEO infrastructure (Dataset/Organization/DataCatalog JSON-LD,
 entity `sameAs`, logo assets) is one-off build work specified in
@@ -281,13 +284,31 @@ The plugin auto-publishes these to `https://www.jsonhouse.com/data/{slug}.json`.
 | `cluster` | string | Mirrors frontmatter `cluster`. |
 | `format` | string | Mirrors frontmatter `format` (A~G). |
 
-#### Required Content Fields (every post — all 3)
+#### Required Content Fields (every post — all 4)
 
 | Field | Type | Description |
 |---|---|---|
 | `key_facts` | array of objects | 5-10 verifiable facts. See structure below. |
 | `faq_summary` | array of objects | 3-5 FAQ items. Subset of post's full FAQ. |
 | `primary_sources` | array of objects | 1차 출처 list. See structure below. |
+| `attribution` | object | Use terms carried in the payload. See structure below and DATA_POLICY.md §3. |
+
+#### `attribution` structure
+
+```json
+"attribution": {
+  "source": "Json House",
+  "source_url": "https://www.jsonhouse.com/posts/{slug}/",
+  "dataset_url": "https://www.jsonhouse.com/data/{slug}.json",
+  "citation": "Json House, \"{title}\", jsonhouse.com ({data_updated})",
+  "attribution_required": true,
+  "terms_url": "https://www.jsonhouse.com/data-policy/"
+}
+```
+
+All six keys are required. `citation` must be copy-ready — a string a machine has
+to assemble from parts is a string nothing will bother to assemble. Never add a
+`license` field: DATA_POLICY.md §2 explains why declaring one forecloses Phase 3.
 
 #### `key_facts` structure (option B — structured)
 
@@ -422,6 +443,9 @@ See SEO_GUIDE.md for detailed SEO enforcement rules.
 See SOURCES.md for trusted source list and priority ranking.
 See PRIMARY_SOURCE_GUIDE.md for primary-source post methodology (data-type posts).
 See IMAGE_GUIDE.md for image rules (count per format, specs, fixed style tokens, alt text).
+See DATA_POLICY.md for what we require of data consumers (attribution) and what we
+owe them (cadence, revision, stated measurement limits). It does NOT declare a
+license — `license` fields remain forbidden; `attribution` is a separate thing.
 
 ## Post Writing Principles (MANDATORY)
 
@@ -571,7 +595,8 @@ not gates on a deploy.
 | D2 Source depth | Paired data file has >= 3 `primary_sources`, each with `title` + `url` | ERROR |
 | D3 Fact granularity | `key_facts` holds 5–10 entries | WARN |
 | D4 Dataset link | Body links its own `/data/{slug}.json` | ERROR |
-| D5 Data file schema | Data file exists, parses, has all 12 required fields, `data_updated` matches front matter | ERROR |
+| D5 Data file schema | Data file exists, parses, has all 13 required fields, `data_updated` matches front matter | ERROR |
+| D6 Attribution block | `attribution` complete (6 keys), `attribution_required: true`, no `license` field | ERROR |
 
 In `_drafts/` every Section C and Section D ERROR is downgraded to WARN — artwork
 legitimately arrives after the draft, and a draft predates its data file and

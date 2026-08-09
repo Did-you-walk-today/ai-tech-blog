@@ -8,6 +8,14 @@
   "category": "ai-data-statistics",
   "cluster": "CLUSTER_LLM",
   "format": "D",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/china-ai-coding-plans-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/china-ai-coding-plans-2026.json",
+    "citation": "Json House, \"China AI Coding Plans 2026: Quotas You Can't Compare\", jsonhouse.com (2026-08-05)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "key_facts": [
     {
       "fact": "Alibaba Model Studio's Pro coding plan allows 6,000 requests per 5 hours, 45,000 per week and 90,000 per month, resetting every Monday at 00:00 UTC+8; a query consumes 5-10 model calls for simple tasks and 10-30 or more for complex ones, with no token content stated per call",

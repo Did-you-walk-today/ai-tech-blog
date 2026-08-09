@@ -8,6 +8,14 @@
   "category": "ai-productivity-workflows",
   "cluster": "CLUSTER_DEVTOOLS",
   "format": "E",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/ai-content-quality-gates-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/ai-content-quality-gates-2026.json",
+    "citation": "Json House, \"AI Content Quality Gates 2026: 33 Rules That Caught Us\", jsonhouse.com (2026-08-05)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "key_facts": [
     {
       "fact": "An AI-content quality gate can be organised into four executable layers: front matter and SEO, prose quality, images, and citation evidence — 33 rules in this implementation, split 9/8/11/5",

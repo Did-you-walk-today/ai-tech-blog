@@ -8,6 +8,14 @@
   "category": "industry-analysis",
   "cluster": "CLUSTER_AEO",
   "format": "D",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/ai-crawler-ecosystem-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/ai-crawler-ecosystem-2026.json",
+    "citation": "Json House, \"AI Crawler Ecosystem 2026: Who Scrapes the Web and Who Pays\", jsonhouse.com (2026-07-17)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "key_facts": [
     {
       "fact": "Automated requests reached 57.5% of HTML web traffic versus 42.5% human — the first machine majority in web history",

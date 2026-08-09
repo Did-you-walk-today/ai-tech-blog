@@ -8,6 +8,14 @@
   "category": "ai-data-statistics",
   "cluster": "CLUSTER_LLM",
   "format": "D",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/llm-cache-pricing-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/llm-cache-pricing-2026.json",
+    "citation": "Json House, \"LLM Cache Pricing 2026: The Real Cost of Cached Input\", jsonhouse.com (2026-08-03)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "key_facts": [
     {
       "fact": "The cached-read discount converged on exactly 90% of base input at Anthropic, OpenAI, and Google; xAI discounts 84-85% and DeepSeek 98-99.2%",

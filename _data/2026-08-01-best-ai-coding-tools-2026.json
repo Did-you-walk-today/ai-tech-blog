@@ -8,6 +8,14 @@
   "category": "ai-developer-tools",
   "cluster": "CLUSTER_DEVTOOLS",
   "format": "A",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/best-ai-coding-tools-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/best-ai-coding-tools-2026.json",
+    "citation": "Json House, \"Best AI Coding Tools 2026: Pricing & Benchmark Reality\", jsonhouse.com (2026-08-01)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
   "key_facts": [
     {
       "fact": "OpenAI publicly stopped reporting SWE-bench Verified, stating at least 59.4% of audited problems have flawed test cases that reject functionally correct solutions",
