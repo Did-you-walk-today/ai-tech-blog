@@ -3,7 +3,7 @@ layout: page
 title: "Editorial Methodology"
 description: "How Json House sources, verifies, and publishes structured AI data: Tier-1 sourcing, dated snapshots, a primary-source standard, and machine-readable outputs."
 icon: fas fa-flask
-order: 9
+order: 10
 toc: true
 ---
 

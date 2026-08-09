@@ -1,5 +1,5 @@
 ---
 layout: categories
 icon: far fa-folder-open
-order: 7
+order: 8
 ---

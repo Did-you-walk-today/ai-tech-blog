@@ -51,7 +51,8 @@ tabs:
   "prompt engineering": "Prompt Engineering Guides & Templates"
   "ai productivity": "AI Productivity & Workflow Automation"
   "ai data": "AI Data & Statistics: Structured Datasets"
-  "ai safety": "AI Safety & Ethics: LLM Risk Guides"
+  "industry analysis": "AI Industry Analysis: Crawlers, Ads & Citations"
+  "ai safety": "AI Safety & Ethics: Platform Content Policy"
   "editorial methodology": "Editorial Methodology & Data Sourcing"
 
   # Nav / breadcrumb text — keyed by url slug
@@ -60,6 +61,7 @@ tabs:
   "prompts": "Prompts"
   "productivity": "Productivity"
   "data": "Data"
+  "industry": "Industry"
   "safety": "Safety"
   "methodology": "Methodology"
   # --- End local additions --------------------------------------------------

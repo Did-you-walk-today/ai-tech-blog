@@ -155,7 +155,7 @@ Every post MUST have:
 - `title`, `description`, `date`, `last_modified_at`
 - `categories`, `tags`
 - `format` (A~G)
-- `cluster` (CLUSTER_LLM | CLUSTER_DEVTOOLS | CLUSTER_PROMPTS)
+- `cluster` (must be an `id` declared in `_data/taxonomy.yml` — see Topic Clusters)
 - `image` (path: `/assets/img/posts/{slug}-cover.jpg`, alt text required — see IMAGE_GUIDE.md)
 - `faq` (array of `{q, a}` — minimum 3 entries, used for FAQPage schema auto-generation)
 - `data_updated` (YYYY-MM-DD)
@@ -198,11 +198,33 @@ Do NOT include:
 | CAT6 | AI Safety & Ethics | Medium |
 | CAT7 | Industry Analysis & Weekly Digest | Medium |
 
-## Topic Clusters (build these first)
+## Topic Clusters
 
-1. **CLUSTER_LLM**: Pillar "Best LLM 2026" + comparisons, pricing DB, coding benchmark
-2. **CLUSTER_DEVTOOLS**: Pillar "Best AI Coding Tools 2026" + Claude Code, Cursor vs Copilot, MCP
-3. **CLUSTER_PROMPTS**: Pillar "Ultimate AI Prompt Library 2026" + by job role, system prompts
+**`_data/taxonomy.yml` is the single source of truth** for cluster and category
+names. Do not introduce either anywhere else — a post using an undeclared name is
+an ERROR, and `taxonomy_validation.py` blocks it. Adding a cluster or category
+means editing `taxonomy.yml` first.
+
+Priority build order (all declared in `taxonomy.yml`):
+
+1. **CLUSTER_LLM**: Pillar `best-llm-2026` + comparisons, pricing DB, coding benchmark
+2. **CLUSTER_DEVTOOLS**: Pillar `best-ai-coding-tools-2026` + Claude Code, Cursor vs Copilot, MCP
+3. **CLUSTER_PROMPTS**: Pillar "Ultimate AI Prompt Library 2026" — **not yet published**
+4. **CLUSTER_AEO**: Answer-engine optimization, citation supply, crawler economics — no pillar yet
+5. **CLUSTER_AI_CONTENT_POLICY**: `status: deprecated`. Off-mission for a developer
+   audience; the five published posts stay, but do not plan new posts into it.
+
+The cluster's pillar is declared in two places that must agree: `pillar:` in
+`taxonomy.yml` and `pillar: true` in that post's front matter. Disagreement is an
+ERROR — that is what keeps a renamed or unpublished pillar from going unnoticed.
+
+### Category hubs
+
+Each category maps to one hub tab in `taxonomy.yml`. Hub tabs render through the
+shared `_includes/hub-post-list.html`; never hand-write the listing Liquid again.
+Validated automatically: a category with live posts whose hub is `published: false`
+is an ERROR (this shipped once — a tab stayed hidden after its first post landed),
+and a visible hub whose category has no live posts is a WARN.
 
 ## Phase 5: Human Review (기웅) — Korean report required
 
@@ -449,6 +471,48 @@ Its post table is regenerated automatically — never edit it by hand.
 `sitemap.xml` needs no maintenance — `jekyll-sitemap` regenerates it from `_posts/`
 on every deploy. Local `_site/sitemap.xml` is a gitignored build artifact and is
 often stale; always verify against `https://www.jsonhouse.com/sitemap.xml`.
+
+### Internal Link Graph
+
+`LINK_GRAPH.md` is the index of how posts link to each other — per-post inbound and
+outbound counts, the findings list, and section 3 showing **where every backlink is
+placed and under what anchor text**. Use section 3 before changing a slug or
+withdrawing a post: it lists exactly which files to edit.
+
+The document is regenerated, never hand-written. A hand-maintained link index
+drifts the moment someone edits a link and forgets the index, so the graph is
+derived from post bodies instead.
+
+- **Script**: `.claude/hooks/sync-link-graph.sh` → `link_graph.py`
+- **Triggers**: same gating as the GSC sync — `Write`/`Edit` to `_posts/*.md`, and
+  `Bash` commands touching `_posts/` or running `git mv|commit|push|rm`
+- **Preserved on regen**: the 메모 column in section 1, keyed by slug
+- **Manual run**: `python3 .claude/hooks/link_graph.py "$(git rev-parse --show-toplevel)"`
+- **Check only**: `python3 .claude/hooks/link_graph.py --report` (exit 1 on ERROR)
+
+Findings and severity:
+
+| Finding | Meaning | Severity |
+|---|---|---|
+| `DANGLING` | link targets a slug not in `_posts/` | ERROR — hook exits 2, blocks publishing |
+| `ORPHAN` | no inbound internal link | WARN |
+| `DEADEND` | no outbound internal links | WARN |
+| `THIN` | fewer than 2 outbound links (rule A9) | WARN |
+| `NOINDEX<-` | a live post links to a `noindex: true` page | WARN |
+| `SELFLINK` | post links to itself | WARN |
+
+`noindex` posts are exempt from `ORPHAN` — losing inbound links is the intended
+outcome for a withdrawn page.
+
+The same hook also runs `taxonomy_validation.py`; either an ERROR there or a
+`DANGLING` link exits 2 and blocks publishing.
+
+**Build-time backstop**: `_plugins/link_checker.rb` fails the Jekyll build on a
+dangling internal link. The hook only fires on Claude Code edits — links also
+arrive from other sessions sharing this working tree and from the GitHub web
+editor, and this catches those before deploy. It checks dangling links only;
+orphans and thin link counts are judgment calls that belong in `LINK_GRAPH.md`,
+not gates on a deploy.
 
 ## Hook Enforcement (Auto-triggered on every post write)
 

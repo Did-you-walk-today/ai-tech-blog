@@ -1,0 +1,26 @@
+{% comment %}
+  Hub tab post list. One implementation for all category hubs — before this,
+  seven tabs each carried their own copy of this block, which is how one hub ended
+  up promising content that did not exist and another category ended up with no hub.
+
+  Usage:  {% include hub-post-list.html category="ai-models-intelligence" %}
+
+  The category must exist in _data/taxonomy.yml; taxonomy_validation.py enforces
+  that and that each category's hub tab is the one named there. Posts marked
+  `noindex: true` are withdrawn from hubs — a hub should not route readers to a
+  page that has been pulled from the index.
+{% endcomment %}
+
+<ul class="post-list">
+{% assign cat_posts = site.posts
+   | where_exp: "post", "post.categories contains include.category"
+   | where_exp: "post", "post.noindex != true" %}
+{% for post in cat_posts %}
+  <li>
+    <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a>
+    <span style="color:#888; font-size:0.85em;"> — {{ post.date | date: "%b %d, %Y" }}</span>
+    {% if post.description %}<br><span style="font-size:0.9em; color:#555;">{{ post.description }}</span>{% endif %}
+  </li>
+{% endfor %}
+{% if cat_posts.size == 0 %}<li>No posts yet.</li>{% endif %}
+</ul>

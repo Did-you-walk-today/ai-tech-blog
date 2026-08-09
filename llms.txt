@@ -26,8 +26,11 @@ Generated from published posts, so this list never advertises an empty archive.
 
 ## Curated Hubs
 - https://www.jsonhouse.com/ai-models/ — LLM comparisons, benchmarks, subscription cost
+- https://www.jsonhouse.com/ai-tools/ — AI developer tools and coding assistants
 - https://www.jsonhouse.com/data/ — pricing snapshots and statistical resources
 - https://www.jsonhouse.com/prompts/ — prompt engineering guides and libraries
+- https://www.jsonhouse.com/productivity/ — AI workflows and content operations
+- https://www.jsonhouse.com/industry/ — crawler economics, AI advertising, citation supply
 - https://www.jsonhouse.com/safety/ — AI safety, content policy, verification
 - https://www.jsonhouse.com/methodology/ — sourcing, verification, and update policy
 

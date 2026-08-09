@@ -1,0 +1,72 @@
+# Taxonomy — single source of truth for clusters and categories.
+#
+# Before this file existed, cluster and category names lived only as free text in
+# every post's front matter plus a hardcoded string in each hub tab's Liquid. That
+# let three kinds of drift through unnoticed: a cluster nobody declared
+# (CLUSTER_AEO), two categories for one idea (ai-data vs ai-data-statistics), and a
+# category with no hub tab at all (industry-analysis).
+#
+# `taxonomy_validation.py` checks posts and hub tabs against this file. Adding a
+# cluster or category means adding it here first — anything else is rejected.
+#
+# NOTE: this file has no date prefix on purpose. Per CLAUDE.md, only
+# `_data/YYYY-MM-DD-*.json` is published; site config data stays private.
+
+clusters:
+  - id: CLUSTER_LLM
+    label: "Best LLM comparisons, pricing, coding benchmarks"
+    pillar: best-llm-2026
+    status: active
+
+  - id: CLUSTER_DEVTOOLS
+    label: "AI coding tools, Claude Code, Cursor vs Copilot, MCP"
+    pillar: best-ai-coding-tools-2026
+    status: active
+
+  - id: CLUSTER_PROMPTS
+    label: "Prompt libraries by job role, system prompts"
+    # Pillar "Ultimate AI Prompt Library 2026" (Format B) is not published yet.
+    # null is a declared gap, not an oversight — the validator reports it as such.
+    pillar: null
+    status: active
+
+  - id: CLUSTER_AEO
+    label: "Answer Engine Optimization, citation supply, crawler economics"
+    pillar: null
+    status: active
+
+  - id: CLUSTER_AI_CONTENT_POLICY
+    label: "Platform AI content policy, E-E-A-T, provenance"
+    pillar: null
+    # Off-mission for an audience of developers and AI power users. Kept for the
+    # posts already published; do not plan new posts into it.
+    status: deprecated
+
+categories:
+  - id: ai-models-intelligence
+    label: "AI Models & Intelligence"
+    hub: ai-models
+
+  - id: ai-developer-tools
+    label: "AI Developer Tools"
+    hub: ai-tools
+
+  - id: prompt-engineering
+    label: "Prompt Engineering"
+    hub: prompts
+
+  - id: ai-productivity-workflows
+    label: "AI Productivity & Workflows"
+    hub: productivity
+
+  - id: ai-data-statistics
+    label: "AI Data & Statistics"
+    hub: data
+
+  - id: industry-analysis
+    label: "Industry Analysis"
+    hub: industry
+
+  - id: ai-safety-ethics
+    label: "AI Safety & Ethics"
+    hub: safety
