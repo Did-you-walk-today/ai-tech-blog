@@ -125,6 +125,8 @@ What it publishes instead of quotas are concurrency limits: 2,500 concurrent req
 
 This matters for anyone building a "Chinese AI coding plan" shortlist, because the name most likely to be on it does not belong on it. It also isolates the variable cleanly. DeepSeek's per-token pricing is perfectly comparable against OpenAI's and Anthropic's — we track exactly that in [LLM API Pricing 2026](/posts/llm-api-pricing-2026/).
 
+The Western coding tools these plans are pitched against have the opposite problem: their quotas are legible but their pricing is usage-based and hard to forecast. We compare that side in [Best AI Coding Tools 2026](/posts/best-ai-coding-tools-2026/).
+
 The same vendor, in the same market, is comparable when selling tokens and would be incomparable if it sold seats. Comparability is a property of the pricing form, not of the country.
 
 ## Methodology

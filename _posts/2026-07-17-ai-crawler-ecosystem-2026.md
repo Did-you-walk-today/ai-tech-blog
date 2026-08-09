@@ -135,4 +135,5 @@ The major labs' declared bots document compliance, and Cloudflare's testing conf
 
 - [LLM API Pricing 2026: Full Comparison Table](/posts/llm-api-pricing-2026/) — the output side of the machine-content economy: what AI companies charge for tokens
 - [ChatGPT Ads 2026: AEO Traffic and Reddit Citations](/posts/chatgpt-ads-2026-aeo-reddit-citations/) — why AI-referred visitors are worth pricing crawler access around
+- [AI Content Quality Gates 2026](/posts/ai-content-quality-gates-2026/) — the checks that decide whether a crawler that does reach you finds anything citable
 - [Google AI Content Penalties 2026](/posts/google-ai-content-penalties-2026/) — the policy layer governing what AI-era content ranks in the first place

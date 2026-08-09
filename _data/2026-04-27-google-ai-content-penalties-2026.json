@@ -5,7 +5,7 @@
   "description": "Google doesn't ban AI content—it penalizes ranking manipulation. The real rules for Search, YouTube, and AI images in 2026, with platform-by-platform criteria.",
   "data_updated": "2026-04-27",
   "source_post": "https://www.jsonhouse.com/posts/google-ai-content-penalties-2026/",
-  "category": "AI Safety & Ethics",
+  "category": "ai-safety-ethics",
   "cluster": "CLUSTER_AI_CONTENT_POLICY",
   "format": "C",
   "platform_enforcement": [

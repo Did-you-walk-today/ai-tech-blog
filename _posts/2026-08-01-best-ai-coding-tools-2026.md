@@ -8,6 +8,7 @@ categories: [ai-developer-tools]
 tags: [claude-code, cursor, github-copilot, devin-desktop, windsurf, ai-coding, "2026"]
 format: A
 cluster: CLUSTER_DEVTOOLS
+pillar: true
 category_id: CAT2
 author: jsonhouse
 data_updated: 2026-08-01

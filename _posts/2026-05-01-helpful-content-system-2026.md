@@ -3,7 +3,7 @@ title: "Google's Helpful Content System 2026: How It Really Decides"
 description: "HCS became part of Google's core algorithm in March 2024 — always-on, multi-signal, asymmetric. Here's how it actually evaluates and demotes content in 2026."
 date: 2026-05-01 12:00:00 +0900
 last_modified_at: 2026-07-26 22:53:04 +0900
-categories: [ai-data, ai-safety-ethics]
+categories: [ai-safety-ethics]
 tags: [helpful-content, google-algorithm, core-update, hcu, information-gain, "2026"]
 format: C
 cluster: CLUSTER_AI_CONTENT_POLICY

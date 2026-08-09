@@ -5,7 +5,7 @@
   "description": "Vague prompts fail because LLMs predict probability, not intent. Here's the GIGO mechanism behind AI hallucination — and a 5-element template to fix it.",
   "data_updated": "2026-05-07",
   "source_post": "https://www.jsonhouse.com/posts/gigo-prompts-2026-why-vague-prompts-fail/",
-  "category": "Prompt Engineering",
+  "category": "prompt-engineering",
   "cluster": "CLUSTER_PROMPTS",
   "format": "C",
   "comparison_data": {
