@@ -70,3 +70,11 @@ categories:
   - id: ai-safety-ethics
     label: "AI Safety & Ethics"
     hub: safety
+
+  # First-party measurement of AI agents reading this site. Separate from
+  # ai-data-statistics because the datasets here are produced by our own edge
+  # logs rather than compiled from vendor documentation — we are the primary
+  # source, and the methodology is part of what the posts have to publish.
+  - id: ai-crawler-observatory
+    label: "AI Crawler Observatory"
+    hub: crawlers

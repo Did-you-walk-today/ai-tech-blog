@@ -54,6 +54,7 @@ tabs:
   "industry analysis": "AI Industry Analysis: Crawlers, Ads & Citations"
   "ai safety": "AI Safety & Ethics: Platform Content Policy"
   "editorial methodology": "Editorial Methodology & Data Sourcing"
+  "ai crawler observatory": "AI Crawler Observatory: Who Reads This Site"
 
   # Nav / breadcrumb text — keyed by url slug
   "ai-models": "AI Models"
@@ -64,6 +65,7 @@ tabs:
   "industry": "Industry"
   "safety": "Safety"
   "methodology": "Methodology"
+  "crawlers": "Crawlers"
   # --- End local additions --------------------------------------------------
 
 # the text displayed in the search bar & search results
