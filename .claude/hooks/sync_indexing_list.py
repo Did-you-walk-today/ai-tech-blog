@@ -40,6 +40,10 @@ def collect_posts(repo_root):
             continue
         file_date, slug = m.group(1), m.group(2)
         text = path.read_text(encoding="utf-8", errors="replace")
+        # A noindex page must never reach the GSC submission list — asking Google
+        # to index a URL that serves `robots: noindex` is a contradictory signal.
+        if read_frontmatter_field(text, "noindex").lower() == "true":
+            continue
         title = read_frontmatter_field(text, "title") or slug
         # front matter date wins over filename when present
         fm_date = read_frontmatter_field(text, "date")

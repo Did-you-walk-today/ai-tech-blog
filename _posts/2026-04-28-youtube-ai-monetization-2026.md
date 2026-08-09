@@ -25,7 +25,16 @@ faq:
     a: "The July 2025 inauthentic content update does not change the separate reused content policy. Reaction and compilation channels must still add meaningful commentary or transformation—this requirement pre-dates the AI policy debate entirely."
 data_updated: 2026-04-27
 author: jsonhouse
+noindex: true
+sitemap: false
 ---
+
+> **Editorial note (2026-08-06)**: This post restructures YouTube's own published
+> policy for an audience of creators, which sits outside what this site is for —
+> structured data for people and agents building on LLMs. YouTube's Help Center is
+> the authoritative source and always will be, so we withdrew this page from search
+> indexing rather than compete with it. It remains online, and its policy citations
+> below still resolve.
 
 "YouTube bans AI content" is one of the most repeated—and most wrong—claims circulating in the creator economy right now. What YouTube actually targets is something more precise, and the difference determines whether your channel survives 2026.
 

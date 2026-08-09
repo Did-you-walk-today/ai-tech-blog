@@ -2,6 +2,17 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4708234819958995"
      crossorigin="anonymous"></script>
 
+{% comment %}
+  Deprecated-topic pages: keep them readable and keep their outbound link equity,
+  but withdraw them from the index so they stop shaping how search and answer
+  engines classify this site's topic. Set `noindex: true` in front matter.
+  Pair it with `sitemap: false` so jekyll-sitemap drops the URL too.
+  Reversible: delete the two front matter lines.
+{% endcomment %}
+{% if page.noindex %}
+  <meta name="robots" content="noindex, follow">
+{% endif %}
+
 {% if page.url contains '/posts/' %}
   {% assign data_key = page.date | date: '%Y-%m-%d' | append: '-' | append: page.slug %}
   <link rel="alternate" type="application/json" href="{{ site.url }}/data/{{ data_key }}.json" title="{{ page.title | xml_escape }} — Structured Data">

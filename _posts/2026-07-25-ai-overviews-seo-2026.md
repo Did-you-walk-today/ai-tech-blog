@@ -21,7 +21,16 @@ faq:
     a: "No — block by purpose, not reflexively. Blocking search and answer bots (OAI-SearchBot, Claude-SearchBot, PerplexityBot) removes you from AI answers entirely, and that referral traffic converts better than average organic. Blocking only training crawlers is the defensible middle ground."
 data_updated: 2026-07-25
 author: jsonhouse
+noindex: true
+sitemap: false
 ---
+
+> **Editorial note (2026-08-06)**: This post aggregates third-party studies rather
+> than reporting data we collected, so a reader or model is better served citing
+> Pew, Ahrefs, Seer, and Similarweb directly — the links below go straight to them.
+> It is kept online for readers who arrive here, but withdrawn from search indexing.
+> Our own measurements of AI crawler behaviour live in
+> [AI Crawler Ecosystem 2026](/posts/ai-crawler-ecosystem-2026/).
 
 Google AI Overviews are cutting organic clicks by roughly 40–61% depending on the study, and the losses are now confirmed by real user-behavior data rather than keyword-tool estimates. If your search traffic fell off a cliff in the last year, this is the most likely cause — not a penalty. The fix is not to fight the AI Overview but to become the source it cites, because citation and ranking have split into two different games in 2026. This post lays out exactly how much traffic AI Overviews take, why the old "rank #1 and win" logic broke, what pages still get cited, and a concrete checklist to recover the traffic you can still capture. Every figure is sourced and dated; data checked July 25, 2026.
 
