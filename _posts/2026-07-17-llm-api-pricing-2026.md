@@ -2,7 +2,7 @@
 title: "LLM API Pricing 2026: Full Comparison Table (Weekly)"
 description: "LLM API pricing 2026: 40 models from OpenAI, Anthropic, Google, xAI, DeepSeek, and Mistral in one table. Input/output cost per 1M tokens, updated weekly."
 date: 2026-07-17 12:00:00 +0900
-last_modified_at: 2026-08-06 02:30:00 +0900
+last_modified_at: 2026-08-11 06:50:00 +0900
 categories: [ai-data-statistics]
 tags: [llm-pricing, api-cost, claude, gpt-5, gemini, grok, deepseek, mistral, "2026"]
 format: D
@@ -21,11 +21,11 @@ faq:
     a: "The table records base-tier prices. Google and xAI charge tiered rates — prompts above 200K tokens cost roughly double per token (noted per row). Anthropic explicitly bills its 1M-token context window at standard rates on supported models, and OpenAI lists flat per-model rates without a long-context tier on its pricing page."
   - q: "How often is this pricing table updated?"
     a: "Weekly, from the six official pricing pages, with every change recorded in the changelog at the bottom of this post. A missed week is marked as a gap rather than back-filled, because a reconstructed price was never observed. The series began on July 16, 2026 and accumulates as a price-change history that official pages, which only show current prices, do not provide."
-data_updated: 2026-08-03
+data_updated: 2026-08-10
 author: jsonhouse
 ---
 
-As of August 3, 2026, LLM API prices span two orders of magnitude — from $0.10 per million input tokens (Gemini 2.5 Flash-Lite) to $30.00 (GPT-5.5-pro and GPT-5.4-pro). The cheapest general-purpose API is **DeepSeek v4-flash** at $0.14 input / $0.28 output per 1M tokens with a 1M-token context window. The best flagship value is **Claude Opus 5** at $5.00 / $25.00, undercutting GPT-5.6-sol's output price by 17%. The largest move this week was OpenAI's: **GPT-5.6-luna fell 80% to $0.20 / $1.20** and GPT-5.6-terra fell 20% to $2.00 / $12.00. The most time-sensitive number on this page: **Claude Sonnet 5 costs $2.00 / $10.00 only until August 31, 2026**, after which it rises 50% to $3.00 / $15.00. Every price below was collected on August 3, 2026 directly from the six providers' official pricing pages and normalized to USD per 1M tokens at the standard (non-batch) tier.
+As of August 10, 2026, LLM API prices span two orders of magnitude — from $0.10 per million input tokens (Gemini 2.5 Flash-Lite) to $30.00 (GPT-5.5-pro and GPT-5.4-pro). The cheapest general-purpose API is **DeepSeek v4-flash** at $0.14 input / $0.28 output per 1M tokens with a 1M-token context window. The best flagship value is **Claude Opus 5** at $5.00 / $25.00, undercutting GPT-5.6-sol's output price by 17%. **Nothing moved this week** — every tracked price is identical to last week's, the first flat week since this series began on July 16. The most time-sensitive number on this page: **Claude Sonnet 5 costs $2.00 / $10.00 only until August 31, 2026**, after which it rises 50% to $3.00 / $15.00. Every price below was collected on August 10, 2026 directly from the six providers' official pricing pages and normalized to USD per 1M tokens at the standard (non-batch) tier.
 
 ## TL;DR
 
@@ -37,7 +37,7 @@ As of August 3, 2026, LLM API prices span two orders of magnitude — from $0.10
 
 ## Methodology
 
-All prices were collected on **2026-08-03** from official provider pricing pages only: [Anthropic](https://platform.claude.com/docs/en/docs/about-claude/pricing), [OpenAI](https://developers.openai.com/api/docs/pricing), [Google](https://ai.google.dev/gemini-api/docs/pricing), [xAI](https://docs.x.ai/docs/models), [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing), and [Mistral](https://mistral.ai/pricing/api). No aggregator data was used — aggregators serve as cross-checks, never as sources.
+All prices were collected on **2026-08-10** from official provider pricing pages only: [Anthropic](https://platform.claude.com/docs/en/docs/about-claude/pricing), [OpenAI](https://developers.openai.com/api/docs/pricing), [Google](https://ai.google.dev/gemini-api/docs/pricing), [xAI](https://docs.x.ai/docs/models), [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing), and [Mistral](https://mistral.ai/pricing/api). No aggregator data was used — aggregators serve as cross-checks, never as sources.
 
 Every figure is normalized to **USD per 1M tokens at the standard, non-batch, global-routing tier**. For models with tiered long-context pricing (Google, xAI), the table records the base tier and footnotes the higher tier. Retired models are excluded; deprecated-but-available models are noted in the table footnotes.
 
@@ -161,6 +161,7 @@ This table is refreshed **weekly** from the six official pricing pages, and ever
 
 | Date | Change |
 |---|---|
+| 2026-08-10 | No change. Every row in the tables above holds last week's price, and no model entered or left the six providers' pricing pages — the first flat week since the series began. Two things visible on the pages but not yet in the table: Anthropic's Sonnet 5 introductory rate still expires 2026-08-31, and DeepSeek's pricing page states that a significant increase is expected, without naming a date or a figure. Neither is recorded as a price until it takes effect. |
 | 2026-08-03 | OpenAI cut two GPT-5.6 models: luna from $1.00 / $6.00 to $0.20 / $1.20 (−80%, cache read $0.10 → $0.02) and terra from $2.50 / $15.00 to $2.00 / $12.00 (−20%, cache read $0.25 → $0.20). Both were cross-verified against OpenAI's models page before recording. No models added or removed; every other row across the six providers was unchanged. Gemini 3.5 Flash-Lite's $0.03 cache read was recorded for the first time — a gap in the prior collection, not a price change. |
 | 2026-07-28 | Added Claude Opus 5 and Gemini 3.6 Flash. Grok 4.5 cache read cut from $0.50 to $0.30 (−40%), the only base-table price change. DeepSeek's legacy IDs retired on schedule. No snapshot was taken on 2026-07-20 or 2026-07-27; those two weeks are absent from the series and were not reconstructed. |
 | 2026-07-16 | Initial 2026 edition: baseline of 39 models across 6 providers. Supersedes the March 2026 draft dataset. |
