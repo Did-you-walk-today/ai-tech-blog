@@ -1,0 +1,772 @@
+{
+  "schema_version": "1.0",
+  "slug": "ai-crawler-traffic-2026",
+  "title": "AI Crawler Traffic 2026: 747 Crawls per Human Visit",
+  "description": "Twenty days of first-party Cloudflare logs: AI crawlers made 5,227 requests to this site and sent back 7 human visitors. Full dataset, method, and limits.",
+  "data_updated": "2026-08-13",
+  "source_post": "https://www.jsonhouse.com/posts/ai-crawler-traffic-2026/",
+  "category": "ai-crawler-observatory",
+  "cluster": "CLUSTER_AEO",
+  "format": "F",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/ai-crawler-traffic-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/ai-crawler-traffic-2026.json",
+    "citation": "Json House, \"AI Crawler Traffic 2026: 747 Crawls per Human Visit\", jsonhouse.com (2026-08-13)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
+  "key_facts": [
+    {
+      "fact": "AI crawlers made 5,227 requests to jsonhouse.com over 20 days while AI answer surfaces referred 7 human visitors, a ratio of 746.7 crawls per visit",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "ByteDance's Bytespider was the single largest crawler at 1,815 requests, 34.7% of all crawls, present on every one of the 20 days",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "459 requests (8.8% of all logged hits) wearing AI crawler names asked for credential paths such as .env and .git, which no documented AI crawler requests; this is a floor, not an estimate",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "On 2026-08-01 thirteen different vendors' bot names first appeared within a 30-millisecond window (11:25:09.531 to 11:25:09.561 UTC), evidence of one source cycling a user-agent list rather than thirteen independent crawlers",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "case_study"
+    },
+    {
+      "fact": "Answer-time fetches by ChatGPT-User, Claude-User, Perplexity-User and DuckAssistBot totalled 1,041 across 14 posts — 149 answer-time fetches for every referred human visit",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "The single most fetched page, the weekly LLM API pricing table, drew 503 answer-time fetches and was fetched on all 20 days of the window",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "Machine-readable endpoints returned 591 successful reads against 4,561 ordinary HTML page requests; /llms.txt itself was read 46 times by 5 distinct agents",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "Cloudflare's verified-bot classification, instrumented from 2026-08-09, is the only reliable discriminator between a real crawler and a forger; ASN is not, because vendor agents and arbitrary VMs share general-purpose cloud networks",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "definition"
+    },
+    {
+      "fact": "GoogleOther made 115 requests across 115 distinct paths on a single day with a 100% error rate — one request per path, all failing, the signature of path enumeration rather than crawling",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "How much traffic do AI crawlers actually send back to a website?",
+      "a": "On this site, almost none: 5,227 crawler requests against 7 referred human visits over 20 days. Referrals are undercounted because some clients strip the Referer header, so 7 is a floor."
+    },
+    {
+      "q": "Does anything actually read llms.txt?",
+      "a": "Yes, but rarely — 46 reads by 5 agents in 20 days, against 4,561 HTML page requests. Enough to say the file is not dead, not enough to call it a distribution channel."
+    },
+    {
+      "q": "Can you tell if an AI crawler is faking its user agent?",
+      "a": "Partly. The user-agent string is self-reported and trivially forged. Cloudflare's verified-bot classification checks the connection rather than the string. A behavioral floor also exists: 8.8% of requests asked for credential paths no real crawler requests."
+    },
+    {
+      "q": "Is a crawl the same thing as being cited by an AI?",
+      "a": "No. An indexing crawl means a page was collected. An answer-time fetch by ChatGPT-User, Claude-User or Perplexity-User means a page was pulled while an answer was being written — the closest observable proxy for citation. We logged 1,041 of those across 14 posts."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "jsonhouse.com edge request log (Cloudflare Worker + D1), 2026-07-25 to 2026-08-13",
+      "url": "https://www.jsonhouse.com/data/ai-crawler-traffic-2026.json",
+      "publisher": "Json House"
+    },
+    {
+      "title": "Verified bots — how Cloudflare validates bot identity at the connection level",
+      "url": "https://developers.cloudflare.com/bots/concepts/bot/verified-bots/",
+      "publisher": "Cloudflare"
+    },
+    {
+      "title": "OpenAI bots: GPTBot, OAI-SearchBot and ChatGPT-User, with published IP ranges",
+      "url": "https://platform.openai.com/docs/bots",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "Does Anthropic crawl data from the web, and how can site owners block the crawler?",
+      "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "The llms.txt specification",
+      "url": "https://llmstxt.org/",
+      "publisher": "llmstxt.org"
+    }
+  ],
+  "numerical_data": {
+    "metrics": [
+      {
+        "metric": "bot_crawl_requests",
+        "value": 5227,
+        "unit": "requests",
+        "window_days": 20
+      },
+      {
+        "metric": "ai_referred_human_visits",
+        "value": 7,
+        "unit": "visits",
+        "window_days": 20
+      },
+      {
+        "metric": "crawl_to_referral_ratio",
+        "value": 746.7,
+        "unit": "crawls per visit"
+      },
+      {
+        "metric": "answer_time_fetches",
+        "value": 1041,
+        "unit": "fetches"
+      },
+      {
+        "metric": "machine_endpoint_reads",
+        "value": 591,
+        "unit": "reads"
+      },
+      {
+        "metric": "html_page_requests",
+        "value": 4561,
+        "unit": "requests"
+      },
+      {
+        "metric": "scanner_pattern_share",
+        "value": 8.8,
+        "unit": "percent of all hits",
+        "note": "floor, not estimate"
+      }
+    ]
+  },
+  "measurement": {
+    "collection": {
+      "start": "2026-07-25T08:24:41.682Z",
+      "end": "2026-08-13T11:05:12.320Z",
+      "total_hits": 5234,
+      "distinct_agents": 19,
+      "distinct_paths": 691,
+      "bot_crawl": 5227,
+      "ai_referral": 7,
+      "crawl_to_referral_ratio": 746.7
+    },
+    "agents": [
+      {
+        "agent": "Bytespider",
+        "hits": 1815,
+        "distinct_paths": 115,
+        "error_hits": 37,
+        "scanner_pattern_hits": 6,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-08-13"
+      },
+      {
+        "agent": "ChatGPT-User",
+        "hits": 1185,
+        "distinct_paths": 139,
+        "error_hits": 125,
+        "scanner_pattern_hits": 83,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-08-13"
+      },
+      {
+        "agent": "unknown-data-consumer",
+        "hits": 552,
+        "distinct_paths": 49,
+        "error_hits": 31,
+        "scanner_pattern_hits": 20,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-08-13"
+      },
+      {
+        "agent": "ClaudeBot",
+        "hits": 439,
+        "distinct_paths": 151,
+        "error_hits": 63,
+        "scanner_pattern_hits": 42,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-08-09"
+      },
+      {
+        "agent": "Amazonbot",
+        "hits": 252,
+        "distinct_paths": 238,
+        "error_hits": 152,
+        "scanner_pattern_hits": 94,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-08-13"
+      },
+      {
+        "agent": "OAI-SearchBot",
+        "hits": 227,
+        "distinct_paths": 76,
+        "error_hits": 43,
+        "scanner_pattern_hits": 29,
+        "first_seen": "2026-07-25",
+        "last_seen": "2026-08-13"
+      },
+      {
+        "agent": "Meta-ExternalAgent",
+        "hits": 192,
+        "distinct_paths": 94,
+        "error_hits": 32,
+        "scanner_pattern_hits": 2,
+        "first_seen": "2026-07-26",
+        "last_seen": "2026-08-10"
+      },
+      {
+        "agent": "GPTBot",
+        "hits": 171,
+        "distinct_paths": 132,
+        "error_hits": 57,
+        "scanner_pattern_hits": 42,
+        "first_seen": "2026-07-26",
+        "last_seen": "2026-08-13"
+      },
+      {
+        "agent": "PerplexityBot",
+        "hits": 165,
+        "distinct_paths": 94,
+        "error_hits": 59,
+        "scanner_pattern_hits": 35,
+        "first_seen": "2026-07-26",
+        "last_seen": "2026-08-13"
+      },
+      {
+        "agent": "GoogleOther",
+        "hits": 115,
+        "distinct_paths": 115,
+        "error_hits": 115,
+        "scanner_pattern_hits": 57,
+        "first_seen": "2026-08-08",
+        "last_seen": "2026-08-08"
+      },
+      {
+        "agent": "Google-Extended",
+        "hits": 38,
+        "distinct_paths": 37,
+        "error_hits": 38,
+        "scanner_pattern_hits": 27,
+        "first_seen": "2026-08-01",
+        "last_seen": "2026-08-08"
+      },
+      {
+        "agent": "Claude-User",
+        "hits": 30,
+        "distinct_paths": 4,
+        "error_hits": 0,
+        "scanner_pattern_hits": 0,
+        "first_seen": "2026-07-26",
+        "last_seen": "2026-08-11"
+      },
+      {
+        "agent": "CCBot",
+        "hits": 25,
+        "distinct_paths": 23,
+        "error_hits": 12,
+        "scanner_pattern_hits": 9,
+        "first_seen": "2026-08-01",
+        "last_seen": "2026-08-09"
+      },
+      {
+        "agent": "Cohere",
+        "hits": 6,
+        "distinct_paths": 6,
+        "error_hits": 5,
+        "scanner_pattern_hits": 3,
+        "first_seen": "2026-08-01",
+        "last_seen": "2026-08-01"
+      },
+      {
+        "agent": "Perplexity-User",
+        "hits": 6,
+        "distinct_paths": 6,
+        "error_hits": 6,
+        "scanner_pattern_hits": 6,
+        "first_seen": "2026-08-01",
+        "last_seen": "2026-08-01"
+      },
+      {
+        "agent": "anthropic-ai",
+        "hits": 6,
+        "distinct_paths": 6,
+        "error_hits": 6,
+        "scanner_pattern_hits": 4,
+        "first_seen": "2026-08-01",
+        "last_seen": "2026-08-01"
+      },
+      {
+        "agent": "DuckAssistBot",
+        "hits": 3,
+        "distinct_paths": 2,
+        "error_hits": 0,
+        "scanner_pattern_hits": 0,
+        "first_seen": "2026-08-07",
+        "last_seen": "2026-08-09"
+      }
+    ],
+    "answer_time_fetches": [
+      {
+        "path": "/posts/llm-api-pricing-2026/",
+        "fetches": 503,
+        "days_seen": 20
+      },
+      {
+        "path": "/posts/youtube-ai-monetization-2026/",
+        "fetches": 212,
+        "days_seen": 20
+      },
+      {
+        "path": "/posts/helpful-content-system-2026/",
+        "fetches": 120,
+        "days_seen": 19
+      },
+      {
+        "path": "/posts/google-ai-content-penalties-2026/",
+        "fetches": 61,
+        "days_seen": 19
+      },
+      {
+        "path": "/posts/synthid-c2pa-explained-2026/",
+        "fetches": 58,
+        "days_seen": 17
+      },
+      {
+        "path": "/posts/ai-crawler-ecosystem-2026/",
+        "fetches": 45,
+        "days_seen": 18
+      },
+      {
+        "path": "/posts/llm-cache-pricing-2026/",
+        "fetches": 12,
+        "days_seen": 5
+      },
+      {
+        "path": "/posts/chatgpt-ads-2026-aeo-reddit-citations/",
+        "fetches": 7,
+        "days_seen": 4
+      },
+      {
+        "path": "/posts/llm-subscription-guide-2026/",
+        "fetches": 6,
+        "days_seen": 4
+      },
+      {
+        "path": "/posts/best-llm-2026/",
+        "fetches": 6,
+        "days_seen": 4
+      },
+      {
+        "path": "/posts/eeat-ai-content-2026/",
+        "fetches": 4,
+        "days_seen": 4
+      },
+      {
+        "path": "/posts/best-ai-coding-tools-2026/",
+        "fetches": 3,
+        "days_seen": 2
+      },
+      {
+        "path": "/posts/ai-overviews-seo-2026/",
+        "fetches": 3,
+        "days_seen": 3
+      },
+      {
+        "path": "/posts/china-ai-coding-plans-2026/",
+        "fetches": 1,
+        "days_seen": 1
+      }
+    ],
+    "machine_endpoint_reads": [
+      {
+        "path": "/data/",
+        "fetches": 47,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/llms.txt",
+        "fetches": 46,
+        "distinct_agents": 5
+      },
+      {
+        "path": "/data/index.json",
+        "fetches": 41,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/api/posts.json",
+        "fetches": 33,
+        "distinct_agents": 2
+      },
+      {
+        "path": "/data/best-llm-2026.json",
+        "fetches": 28,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/data/llm-api-pricing-2026.json",
+        "fetches": 27,
+        "distinct_agents": 2
+      },
+      {
+        "path": "/data/llm-subscription-guide-2026.json",
+        "fetches": 27,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/data/youtube-ai-monetization-2026.json",
+        "fetches": 27,
+        "distinct_agents": 1
+      },
+      {
+        "path": "/data/gigo-prompts-2026-why-vague-prompts-fail.json",
+        "fetches": 26,
+        "distinct_agents": 1
+      },
+      {
+        "path": "/data/google-ai-content-penalties-2026.json",
+        "fetches": 26,
+        "distinct_agents": 2
+      },
+      {
+        "path": "/data/synthid-c2pa-explained-2026.json",
+        "fetches": 26,
+        "distinct_agents": 1
+      },
+      {
+        "path": "/data/ai-crawler-ecosystem-2026.json",
+        "fetches": 25,
+        "distinct_agents": 1
+      },
+      {
+        "path": "/data/eeat-ai-content-2026.json",
+        "fetches": 25,
+        "distinct_agents": 2
+      },
+      {
+        "path": "/data/helpful-content-system-2026.json",
+        "fetches": 25,
+        "distinct_agents": 1
+      },
+      {
+        "path": "/data/chatgpt-ads-2026-aeo-reddit-citations.json",
+        "fetches": 23,
+        "distinct_agents": 1
+      },
+      {
+        "path": "/data/ai-overviews-seo-2026.json",
+        "fetches": 22,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/data/best-ai-coding-tools-2026.json",
+        "fetches": 21,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/data/llm-cache-pricing-2026.json",
+        "fetches": 19,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/data/china-ai-coding-plans-2026.json",
+        "fetches": 13,
+        "distinct_agents": 3
+      },
+      {
+        "path": "/data/ai-content-quality-gates-2026.json",
+        "fetches": 12,
+        "distinct_agents": 3
+      },
+      {
+        "path": "/data/2026-08-01-llm-cache-pricing-2026.json",
+        "fetches": 7,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/data/2026-07-25-best-llm-2026.json",
+        "fetches": 5,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/data/2026-07-25-llm-subscription-guide-2026.json",
+        "fetches": 5,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/data/2026-08-01-best-ai-coding-tools-2026.json",
+        "fetches": 5,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/data/2026-08-05-china-ai-coding-plans-2026.json",
+        "fetches": 5,
+        "distinct_agents": 3
+      },
+      {
+        "path": "/data/2026-07-25-ai-overviews-seo-2026.json",
+        "fetches": 4,
+        "distinct_agents": 4
+      },
+      {
+        "path": "/data/2026-04-28-youtube-ai-monetization-2026.json",
+        "fetches": 3,
+        "distinct_agents": 2
+      },
+      {
+        "path": "/data/2026-04-30-synthid-c2pa-explained-2026.json",
+        "fetches": 3,
+        "distinct_agents": 1
+      },
+      {
+        "path": "/data/2026-07-17-llm-api-pricing-2026.json",
+        "fetches": 3,
+        "distinct_agents": 2
+      },
+      {
+        "path": "/data/2026-08-06-ai-content-quality-gates-2026.json",
+        "fetches": 3,
+        "distinct_agents": 3
+      },
+      {
+        "path": "/data/2026-04-29-eeat-ai-content-2026.json",
+        "fetches": 2,
+        "distinct_agents": 1
+      },
+      {
+        "path": "/data/2026-05-17-chatgpt-ads-2026-aeo-reddit-citations.json",
+        "fetches": 2,
+        "distinct_agents": 1
+      },
+      {
+        "path": "/data/2026-07-17-ai-crawler-ecosystem-2026.json",
+        "fetches": 2,
+        "distinct_agents": 2
+      },
+      {
+        "path": "/data/2026-04-27-google-ai-content-penalties-2026.json",
+        "fetches": 1,
+        "distinct_agents": 1
+      },
+      {
+        "path": "/data/2026-05-01-helpful-content-system-2026.json",
+        "fetches": 1,
+        "distinct_agents": 1
+      },
+      {
+        "path": "/data/2026-05-07-gigo-prompts-2026-why-vague-prompts-fail.json",
+        "fetches": 1,
+        "distinct_agents": 1
+      }
+    ],
+    "ai_referrals": [
+      {
+        "source": "chatgpt.com",
+        "landing_path": "/posts/llm-api-pricing-2026/",
+        "visits": 6
+      },
+      {
+        "source": "www.perplexity.ai",
+        "landing_path": "/posts/eeat-ai-content-2026/",
+        "visits": 1
+      }
+    ],
+    "forged_identity": {
+      "scanner_pattern_hits": 459,
+      "share_of_all_hits_pct": 8.8,
+      "is_floor_not_estimate": true,
+      "burst_2026_08_01": [
+        {
+          "agent": "GPTBot",
+          "first_ts": "2026-08-01T11:25:09.531Z"
+        },
+        {
+          "agent": "Bytespider",
+          "first_ts": "2026-08-01T11:25:09.532Z"
+        },
+        {
+          "agent": "ClaudeBot",
+          "first_ts": "2026-08-01T11:25:09.534Z"
+        },
+        {
+          "agent": "Meta-ExternalAgent",
+          "first_ts": "2026-08-01T11:25:09.534Z"
+        },
+        {
+          "agent": "OAI-SearchBot",
+          "first_ts": "2026-08-01T11:25:09.543Z"
+        },
+        {
+          "agent": "anthropic-ai",
+          "first_ts": "2026-08-01T11:25:09.545Z"
+        },
+        {
+          "agent": "Cohere",
+          "first_ts": "2026-08-01T11:25:09.549Z"
+        },
+        {
+          "agent": "Google-Extended",
+          "first_ts": "2026-08-01T11:25:09.550Z"
+        },
+        {
+          "agent": "ChatGPT-User",
+          "first_ts": "2026-08-01T11:25:09.551Z"
+        },
+        {
+          "agent": "PerplexityBot",
+          "first_ts": "2026-08-01T11:25:09.552Z"
+        },
+        {
+          "agent": "Perplexity-User",
+          "first_ts": "2026-08-01T11:25:09.553Z"
+        },
+        {
+          "agent": "CCBot",
+          "first_ts": "2026-08-01T11:25:09.554Z"
+        },
+        {
+          "agent": "unknown-data-consumer",
+          "first_ts": "2026-08-01T11:25:09.561Z"
+        }
+      ]
+    },
+    "bot_verification": [
+      {
+        "agent": "Bytespider",
+        "verification": "Search Engine Crawler",
+        "hits": 299
+      },
+      {
+        "agent": "ChatGPT-User",
+        "verification": "AI Assistant",
+        "hits": 215
+      },
+      {
+        "agent": "unknown-data-consumer",
+        "verification": "unverified",
+        "hits": 60
+      },
+      {
+        "agent": "Bytespider",
+        "verification": "unverified",
+        "hits": 56
+      },
+      {
+        "agent": "GPTBot",
+        "verification": "AI Crawler",
+        "hits": 55
+      },
+      {
+        "agent": "OAI-SearchBot",
+        "verification": "Search Engine Crawler",
+        "hits": 35
+      },
+      {
+        "agent": "PerplexityBot",
+        "verification": "unverified",
+        "hits": 30
+      },
+      {
+        "agent": "Amazonbot",
+        "verification": "AI Crawler",
+        "hits": 19
+      },
+      {
+        "agent": "unknown-data-consumer",
+        "verification": "Search Engine Optimization",
+        "hits": 9
+      },
+      {
+        "agent": "Claude-User",
+        "verification": "AI Assistant",
+        "hits": 6
+      },
+      {
+        "agent": "unknown-data-consumer",
+        "verification": "Search Engine Crawler",
+        "hits": 4
+      },
+      {
+        "agent": "Meta-ExternalAgent",
+        "verification": "AI Crawler",
+        "hits": 2
+      },
+      {
+        "agent": "unknown-data-consumer",
+        "verification": "AI Search",
+        "hits": 2
+      },
+      {
+        "agent": "ChatGPT-User",
+        "verification": "unverified",
+        "hits": 1
+      },
+      {
+        "agent": "DuckAssistBot",
+        "verification": "AI Assistant",
+        "hits": 1
+      },
+      {
+        "agent": "chatgpt.com",
+        "verification": "unverified",
+        "hits": 1
+      }
+    ],
+    "instrumentation": {
+      "ua_only_until": "2026-08-09",
+      "network_identity_from": "2026-08-09",
+      "fields_added": [
+        "asn",
+        "as_org",
+        "verified_bot",
+        "bytes",
+        "accept",
+        "http_protocol",
+        "tls_version"
+      ],
+      "primary_discriminator": "verified_bot",
+      "self_test_windows_excluded": [
+        [
+          "2026-07-25T08:22:29",
+          "2026-07-25T08:22:31"
+        ],
+        [
+          "2026-08-09T08:38:21",
+          "2026-08-09T08:38:23"
+        ],
+        [
+          "2026-08-09T10:21:20",
+          "2026-08-09T10:21:21"
+        ],
+        [
+          "2026-08-09T11:38:36",
+          "2026-08-09T11:39:01"
+        ]
+      ]
+    }
+  },
+  "limitations": [
+    "One site over 20 days. A complete census of one origin, not a sample of the web.",
+    "AI referrals are undercounted: clients strip the Referer header, so 7 is a floor and the true ratio is below 746.7:1 by an unknown factor.",
+    "Answer-time fetches are a proxy for citation, not a measure of it. A fetch does not prove the page was used in an answer or that the answer named the source.",
+    "Network identity fields (asn, as_org, verified_bot, bytes) begin 2026-08-09. Earlier rows are absent from those breakdowns rather than filled with inferred values.",
+    "The 8.8% forgery share is a floor derived from one behavioral pattern. A forger requesting an ordinary post URL is indistinguishable from a real crawler in these fields.",
+    "'Unverified' in the verification table means Cloudflare did not confirm the connection. It is not proof of forgery: a vendor absent from the verified-bot list produces the same result."
+  ],
+  "update_cadence": {
+    "frequency": "monthly",
+    "next_update_window_end": "2026-09-13",
+    "method": "same aggregation script, window extended as the log accumulates; each update adds a changelog entry rather than overwriting silently"
+  }
+}

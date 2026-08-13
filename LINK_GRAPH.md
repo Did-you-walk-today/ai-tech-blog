@@ -2,7 +2,7 @@
 
 포스트끼리 어떻게 엮여 있는지를 보여주는 색인. **이 문서는 자동 생성됩니다.**
 
-- **최종 갱신**: 2026-08-10 (자동)
+- **최종 갱신**: 2026-08-13 (자동)
 - **소스**: `_posts/*.md` 본문의 `](/posts/<slug>/)` 링크
 - **생성**: `python3 .claude/hooks/link_graph.py "$(git rev-parse --show-toplevel)"`
 - **점검만**: `python3 .claude/hooks/link_graph.py --report`
@@ -22,22 +22,23 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 <!-- AUTO:GRAPH-TABLE-START -->
 | # | 슬러그 | 클러스터 | 인 | 아웃 | 상태 | 메모 |
 |---|---|---|---|---|---|---|
-| 1 | ai-content-quality-gates-2026 | DEVTOOLS | 1 | 3 | ok |  |
-| 2 | china-ai-coding-plans-2026 | LLM | 1 | 4 | ok |  |
-| 3 | llm-cache-pricing-2026 | LLM | 2 | 7 | ok |  |
-| 4 | best-ai-coding-tools-2026 | DEVTOOLS | 1 | 2 | ok |  |
-| 5 | best-llm-2026 | LLM | 3 | 6 | ok |  |
-| 6 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
-| 7 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
-| 8 | ai-crawler-ecosystem-2026 | AEO | 5 | 6 | ok |  |
-| 9 | llm-api-pricing-2026 | LLM | 11 | 5 | ok |  |
-| 10 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 5 | 2 | ok |  |
-| 11 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
-| 12 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
-| 13 | synthid-c2pa-explained-2026 | AI_CONTENT_POLICY | 1 | 2 | ok |  |
-| 14 | eeat-ai-content-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
-| 15 | youtube-ai-monetization-2026 | AI_CONTENT_POLICY | 2 | 2 | noindex |  |
-| 16 | google-ai-content-penalties-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
+| 1 | ai-crawler-traffic-2026 | AEO | 0 | 3 | **고아** |  |
+| 2 | ai-content-quality-gates-2026 | DEVTOOLS | 1 | 3 | ok |  |
+| 3 | china-ai-coding-plans-2026 | LLM | 1 | 4 | ok |  |
+| 4 | llm-cache-pricing-2026 | LLM | 2 | 7 | ok |  |
+| 5 | best-ai-coding-tools-2026 | DEVTOOLS | 1 | 2 | ok |  |
+| 6 | best-llm-2026 | LLM | 3 | 6 | ok |  |
+| 7 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
+| 8 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
+| 9 | ai-crawler-ecosystem-2026 | AEO | 6 | 6 | ok |  |
+| 10 | llm-api-pricing-2026 | LLM | 12 | 5 | ok |  |
+| 11 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
+| 12 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
+| 13 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
+| 14 | synthid-c2pa-explained-2026 | AI_CONTENT_POLICY | 1 | 2 | ok |  |
+| 15 | eeat-ai-content-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
+| 16 | youtube-ai-monetization-2026 | AI_CONTENT_POLICY | 2 | 2 | noindex |  |
+| 17 | google-ai-content-penalties-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
 <!-- AUTO:GRAPH-TABLE-END -->
 
 ---
@@ -50,6 +51,7 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 | WARN | NOINDEX<- | ai-content-quality-gates-2026 | links to noindex page /posts/ai-overviews-seo-2026/ ('how citation and ranking have split into different games') |
 | WARN | NOINDEX<- | eeat-ai-content-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI Monetization 2026: What Is Inauthentic Content') |
 | WARN | NOINDEX<- | google-ai-content-penalties-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI monetization and inauthentic-content rules') |
+| WARN | ORPHAN | ai-crawler-traffic-2026 | no inbound internal link |
 <!-- AUTO:GRAPH-FINDINGS-END -->
 
 유형 설명 — `DANGLING`: 없는 슬러그로 링크(ERROR, 발행 차단) · `ORPHAN`: 인바운드 0 ·
@@ -64,6 +66,12 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 내릴 때 어디를 고쳐야 하는지 여기서 확인합니다.
 
 <!-- AUTO:GRAPH-EDGES-START -->
+
+### ai-crawler-traffic-2026
+
+AI Crawler Traffic 2026: 747 Crawls per Human Visit
+
+_인바운드 없음 — 이 글로 들어오는 내부 링크가 하나도 없습니다._
 
 ### ai-content-quality-gates-2026
 
@@ -134,6 +142,7 @@ AI Crawler Ecosystem 2026: Who Scrapes the Web and Who Pays
 | 걸린 글 | 앵커 텍스트 |
 |---|---|
 | ai-content-quality-gates-2026 | how much crawlers take relative to what they send back |
+| ai-crawler-traffic-2026 | AI crawler ecosystem |
 | ai-overviews-seo-2026 | AI Crawler Ecosystem 2026 |
 | ai-overviews-seo-2026 | how the AI crawler ecosystem works in 2026 |
 | best-ai-coding-tools-2026 | AI crawler ecosystem in 2026 |
@@ -147,6 +156,7 @@ LLM API Pricing 2026: Full Comparison Table (Weekly)
 |---|---|
 | ai-crawler-ecosystem-2026 | LLM API Pricing 2026: Full Comparison Table |
 | ai-crawler-ecosystem-2026 | LLM API pricing table |
+| ai-crawler-traffic-2026 | LLM API pricing table |
 | best-ai-coding-tools-2026 | LLM API pricing comparison for 2026 |
 | best-llm-2026 | LLM API Pricing 2026 |
 | best-llm-2026 | LLM API Pricing 2026: Full Comparison Table (Weekly) |
@@ -165,6 +175,7 @@ ChatGPT Ads 2026: AEO Traffic and Reddit Citations
 |---|---|
 | ai-crawler-ecosystem-2026 | ChatGPT Ads 2026: AEO Traffic and Reddit Citations |
 | ai-crawler-ecosystem-2026 | ChatGPT ads and AEO analysis |
+| ai-crawler-traffic-2026 | where AI answer engines source their citations |
 | llm-api-pricing-2026 | ChatGPT Ads 2026: AEO Traffic and Reddit Citations |
 | llm-api-pricing-2026 | ChatGPT ads and AEO economics |
 | llm-subscription-guide-2026 | ChatGPT ads and AI citation behavior in 2026 |
