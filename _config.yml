@@ -105,3 +105,8 @@ exclude:
   - vendor
   - pipeline_output
   - chirpy_migration_prompt.md
+  # Collection infra. .gitignore keeps it out of the repo, so the deploy build
+  # never sees it — but a local build does, and it put three node_modules URLs
+  # into sitemap.xml. One .gitignore edit away from publishing the Worker source,
+  # wrangler.toml and the D1 schema, so exclude it here as well.
+  - bot-logger
