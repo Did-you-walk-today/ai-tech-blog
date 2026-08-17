@@ -3,7 +3,7 @@
   "slug": "llm-cache-pricing-2026",
   "title": "LLM Cache Pricing 2026: The Real Cost of Cached Input",
   "description": "LLM cache pricing 2026 normalized across six providers: effective input cost at real hit rates, hidden write fees, and which vendors publish nothing at all.",
-  "data_updated": "2026-08-03",
+  "data_updated": "2026-08-17",
   "source_post": "https://www.jsonhouse.com/posts/llm-cache-pricing-2026/",
   "category": "ai-data-statistics",
   "cluster": "CLUSTER_LLM",
@@ -18,8 +18,8 @@
   },
   "key_facts": [
     {
-      "fact": "The cached-read discount converged on exactly 90% of base input at Anthropic, OpenAI, and Google; xAI discounts 84-85% and DeepSeek 98-99.2%",
-      "source": "jsonhouse normalization of six official pricing pages, 2026-07-28",
+      "fact": "The cached-read discount converged on exactly 90% of base input at Anthropic, OpenAI, and Google; xAI discounts 75-85% and DeepSeek 96.7-96.8%, down from 98-99% before its 2026-08-17 price rise",
+      "source": "Official pricing pages of six providers, retrieved 2026-08-17",
       "category": "data"
     },
     {
@@ -28,8 +28,8 @@
       "category": "definition"
     },
     {
-      "fact": "The cheapest model by effective input cost changes at an 84.7% cache hit rate: Gemini 2.5 Flash-Lite below it, DeepSeek v4-flash above it, both costing $0.0237 per 1M at the crossover",
-      "source": "jsonhouse original calculation, 2026-07-28",
+      "fact": "DeepSeek's 2026-08-17 price rise moved the Gemini 2.5 Flash-Lite / DeepSeek v4-flash crossover from an 84.7% to a 97.6% cache hit rate, so Flash-Lite is now cheapest per effective input token across essentially every workload",
+      "source": "jsonhouse calculation from official pricing pages, 2026-08-17",
       "category": "data"
     },
     {
@@ -61,6 +61,11 @@
       "fact": "OpenAI's documentation does not state whether a cache write is billed on a prompt that is never reused; it says an eligible prefix 'may' be cached, and offers prompt_cache_options.mode set to explicit as an opt-out",
       "source": "OpenAI prompt caching guide, retrieved 2026-07-28",
       "category": "policy"
+    },
+    {
+      "fact": "Three of the five crossovers that existed on 2026-08-03 no longer occur below a 100% hit rate: Grok 4.3 x Gemini 3.6 Flash ended when Google halved the Flash rate, and both DeepSeek v4-pro pairs were pushed past 100% by DeepSeek's price rise",
+      "source": "jsonhouse calculation from official pricing pages, 2026-08-17",
+      "category": "data"
     }
   ],
   "faq_summary": [
@@ -74,7 +79,7 @@
     },
     {
       "q": "Which LLM API is cheapest for a cache-heavy agent?",
-      "a": "It depends on hit rate. Below roughly 83% Gemini 2.5 Flash-Lite is cheapest per effective input token; above it DeepSeek v4-flash leads, reaching $0.0097 per 1M at a 95% hit rate."
+      "a": "Gemini 2.5 Flash-Lite, at essentially any hit rate you will run. It is cheapest from 0% through 97.6%, where DeepSeek v4-flash overtakes it at $0.0122 per 1M. That crossover was 84.7% before DeepSeek's 2026-08-17 rise."
     },
     {
       "q": "Is prompt caching automatic or do I have to enable it?",
@@ -143,35 +148,230 @@
     }
   ],
   "comparison_data": {
-    "dimensions": ["provider", "base_input_per_1m_usd", "cache_read_per_1m_usd", "discount_pct", "effective_h50", "effective_h80", "effective_h95"],
-    "unit": "USD per 1M input tokens, standard non-batch base tier, collected 2026-08-03. effective_hN = base x (1 - N) + cache_read x N",
+    "dimensions": [
+      "provider",
+      "base_input_per_1m_usd",
+      "cache_read_per_1m_usd",
+      "discount_pct",
+      "effective_h50",
+      "effective_h80",
+      "effective_h95"
+    ],
+    "unit": "USD per 1M input tokens, standard non-batch base tier, collected 2026-08-17. effective_hN = base x (1 - N) + cache_read x N. Gemini 3.6/3.7 Flash are promotional through 2026-12-31; DeepSeek rows are off-peak and double during peak UTC windows.",
     "entries": [
-      { "model": "Claude Opus 5", "provider": "Anthropic", "base_input_per_1m_usd": 5.0, "cache_read_per_1m_usd": 0.5, "discount_pct": 90.0, "effective_h50": 2.75, "effective_h80": 1.4, "effective_h95": 0.725 },
-      { "model": "GPT-5.6-sol", "provider": "OpenAI", "base_input_per_1m_usd": 5.0, "cache_read_per_1m_usd": 0.5, "discount_pct": 90.0, "effective_h50": 2.75, "effective_h80": 1.4, "effective_h95": 0.725 },
-      { "model": "GPT-5.6-terra", "provider": "OpenAI", "base_input_per_1m_usd": 2.0, "cache_read_per_1m_usd": 0.2, "discount_pct": 90.0, "effective_h50": 1.1, "effective_h80": 0.56, "effective_h95": 0.29 },
-      { "model": "Claude Sonnet 5", "provider": "Anthropic", "base_input_per_1m_usd": 2.0, "cache_read_per_1m_usd": 0.2, "discount_pct": 90.0, "effective_h50": 1.1, "effective_h80": 0.56, "effective_h95": 0.29 },
-      { "model": "Grok 4.5", "provider": "xAI", "base_input_per_1m_usd": 2.0, "cache_read_per_1m_usd": 0.3, "discount_pct": 85.0, "effective_h50": 1.15, "effective_h80": 0.64, "effective_h95": 0.385 },
-      { "model": "Gemini 3.6 Flash", "provider": "Google", "base_input_per_1m_usd": 1.5, "cache_read_per_1m_usd": 0.15, "discount_pct": 90.0, "effective_h50": 0.825, "effective_h80": 0.42, "effective_h95": 0.2175 },
-      { "model": "Mistral Medium 3.5", "provider": "Mistral", "base_input_per_1m_usd": 1.5, "cache_read_per_1m_usd": null, "discount_pct": null, "effective_h50": null, "effective_h80": null, "effective_h95": null },
-      { "model": "Grok 4.3", "provider": "xAI", "base_input_per_1m_usd": 1.25, "cache_read_per_1m_usd": 0.2, "discount_pct": 84.0, "effective_h50": 0.725, "effective_h80": 0.41, "effective_h95": 0.2525 },
-      { "model": "Claude Haiku 4.5", "provider": "Anthropic", "base_input_per_1m_usd": 1.0, "cache_read_per_1m_usd": 0.1, "discount_pct": 90.0, "effective_h50": 0.55, "effective_h80": 0.28, "effective_h95": 0.145 },
-      { "model": "GPT-5.6-luna", "provider": "OpenAI", "base_input_per_1m_usd": 0.2, "cache_read_per_1m_usd": 0.02, "discount_pct": 90.0, "effective_h50": 0.11, "effective_h80": 0.056, "effective_h95": 0.029 },
-      { "model": "DeepSeek v4-pro", "provider": "DeepSeek", "base_input_per_1m_usd": 0.435, "cache_read_per_1m_usd": 0.003625, "discount_pct": 99.2, "effective_h50": 0.2193, "effective_h80": 0.0899, "effective_h95": 0.0252 },
-      { "model": "Gemini 2.5 Flash", "provider": "Google", "base_input_per_1m_usd": 0.3, "cache_read_per_1m_usd": 0.03, "discount_pct": 90.0, "effective_h50": 0.165, "effective_h80": 0.084, "effective_h95": 0.0435 },
-      { "model": "DeepSeek v4-flash", "provider": "DeepSeek", "base_input_per_1m_usd": 0.14, "cache_read_per_1m_usd": 0.0028, "discount_pct": 98.0, "effective_h50": 0.0714, "effective_h80": 0.0302, "effective_h95": 0.0097 },
-      { "model": "Gemini 2.5 Flash-Lite", "provider": "Google", "base_input_per_1m_usd": 0.1, "cache_read_per_1m_usd": 0.01, "discount_pct": 90.0, "effective_h50": 0.055, "effective_h80": 0.028, "effective_h95": 0.0145 }
+      {
+        "model": "Claude Opus 5",
+        "provider": "Anthropic",
+        "base_input_per_1m_usd": 5.0,
+        "cache_read_per_1m_usd": 0.5,
+        "discount_pct": 90.0,
+        "effective_h50": 2.75,
+        "effective_h80": 1.4,
+        "effective_h95": 0.725
+      },
+      {
+        "model": "GPT-5.6-sol",
+        "provider": "OpenAI",
+        "base_input_per_1m_usd": 5.0,
+        "cache_read_per_1m_usd": 0.5,
+        "discount_pct": 90.0,
+        "effective_h50": 2.75,
+        "effective_h80": 1.4,
+        "effective_h95": 0.725
+      },
+      {
+        "model": "Claude Sonnet 5",
+        "provider": "Anthropic",
+        "base_input_per_1m_usd": 2.0,
+        "cache_read_per_1m_usd": 0.2,
+        "discount_pct": 90.0,
+        "effective_h50": 1.1,
+        "effective_h80": 0.56,
+        "effective_h95": 0.29
+      },
+      {
+        "model": "GPT-5.6-terra",
+        "provider": "OpenAI",
+        "base_input_per_1m_usd": 2.0,
+        "cache_read_per_1m_usd": 0.2,
+        "discount_pct": 90.0,
+        "effective_h50": 1.1,
+        "effective_h80": 0.56,
+        "effective_h95": 0.29
+      },
+      {
+        "model": "Grok 4.6",
+        "provider": "xAI",
+        "base_input_per_1m_usd": 2.0,
+        "cache_read_per_1m_usd": 0.5,
+        "discount_pct": 75.0,
+        "effective_h50": 1.25,
+        "effective_h80": 0.8,
+        "effective_h95": 0.575
+      },
+      {
+        "model": "Grok 4.5",
+        "provider": "xAI",
+        "base_input_per_1m_usd": 2.0,
+        "cache_read_per_1m_usd": 0.3,
+        "discount_pct": 85.0,
+        "effective_h50": 1.15,
+        "effective_h80": 0.64,
+        "effective_h95": 0.385
+      },
+      {
+        "model": "Mistral Medium 3.5",
+        "provider": "Mistral",
+        "base_input_per_1m_usd": 1.5,
+        "cache_read_per_1m_usd": null,
+        "discount_pct": null,
+        "effective_h50": null,
+        "effective_h80": null,
+        "effective_h95": null,
+        "note": "Mistral states -90% but publishes no per-model cache price"
+      },
+      {
+        "model": "Grok 4.3",
+        "provider": "xAI",
+        "base_input_per_1m_usd": 1.25,
+        "cache_read_per_1m_usd": 0.2,
+        "discount_pct": 84.0,
+        "effective_h50": 0.725,
+        "effective_h80": 0.41,
+        "effective_h95": 0.2525
+      },
+      {
+        "model": "Claude Haiku 4.5",
+        "provider": "Anthropic",
+        "base_input_per_1m_usd": 1.0,
+        "cache_read_per_1m_usd": 0.1,
+        "discount_pct": 90.0,
+        "effective_h50": 0.55,
+        "effective_h80": 0.28,
+        "effective_h95": 0.145
+      },
+      {
+        "model": "Gemini 3.7 Flash",
+        "provider": "Google",
+        "base_input_per_1m_usd": 0.75,
+        "cache_read_per_1m_usd": 0.075,
+        "discount_pct": 90.0,
+        "effective_h50": 0.4125,
+        "effective_h80": 0.21,
+        "effective_h95": 0.1088
+      },
+      {
+        "model": "Gemini 3.6 Flash",
+        "provider": "Google",
+        "base_input_per_1m_usd": 0.75,
+        "cache_read_per_1m_usd": 0.075,
+        "discount_pct": 90.0,
+        "effective_h50": 0.4125,
+        "effective_h80": 0.21,
+        "effective_h95": 0.1088
+      },
+      {
+        "model": "DeepSeek v4-pro",
+        "provider": "DeepSeek",
+        "base_input_per_1m_usd": 0.66,
+        "cache_read_per_1m_usd": 0.022,
+        "discount_pct": 96.7,
+        "effective_h50": 0.341,
+        "effective_h80": 0.1496,
+        "effective_h95": 0.0539
+      },
+      {
+        "model": "Gemini 2.5 Flash",
+        "provider": "Google",
+        "base_input_per_1m_usd": 0.3,
+        "cache_read_per_1m_usd": 0.03,
+        "discount_pct": 90.0,
+        "effective_h50": 0.165,
+        "effective_h80": 0.084,
+        "effective_h95": 0.0435
+      },
+      {
+        "model": "DeepSeek v4-flash",
+        "provider": "DeepSeek",
+        "base_input_per_1m_usd": 0.22,
+        "cache_read_per_1m_usd": 0.007,
+        "discount_pct": 96.8,
+        "effective_h50": 0.1135,
+        "effective_h80": 0.0496,
+        "effective_h95": 0.0177
+      },
+      {
+        "model": "GPT-5.6-luna",
+        "provider": "OpenAI",
+        "base_input_per_1m_usd": 0.2,
+        "cache_read_per_1m_usd": 0.02,
+        "discount_pct": 90.0,
+        "effective_h50": 0.11,
+        "effective_h80": 0.056,
+        "effective_h95": 0.029
+      },
+      {
+        "model": "Gemini 2.5 Flash-Lite",
+        "provider": "Google",
+        "base_input_per_1m_usd": 0.1,
+        "cache_read_per_1m_usd": 0.01,
+        "discount_pct": 90.0,
+        "effective_h50": 0.055,
+        "effective_h80": 0.028,
+        "effective_h95": 0.0145
+      }
     ]
   },
   "numerical_data": {
     "metrics": [
-      { "name": "crossover_hit_rate_gemini_flash_lite_vs_deepseek_v4_flash", "value": 84.7, "unit": "percent", "note": "Both cost $0.0237 per 1M effective input tokens at this hit rate" },
-      { "name": "crossover_hit_rate_gemini_flash_vs_deepseek_v4_pro", "value": 83.7, "unit": "percent", "note": "Both cost $0.0741 per 1M effective input tokens at this hit rate" },
-      { "name": "crossover_hit_rate_grok_43_vs_gemini_36_flash", "value": 83.3, "unit": "percent", "note": "Both cost $0.3750 per 1M effective input tokens at this hit rate" },
-      { "name": "crossover_hit_rate_gpt_56_luna_vs_deepseek_v4_pro", "value": 93.5, "unit": "percent", "note": "Both cost $0.0317 per 1M effective input tokens at this hit rate. New on 2026-08-03: before GPT-5.6-luna's 80% price cut the pair did not cross at any hit rate" },
-      { "name": "crossover_hit_rate_gemini_flash_lite_vs_deepseek_v4_pro", "value": 98.1, "unit": "percent", "note": "Both cost $0.0117 per 1M effective input tokens at this hit rate" },
-      { "name": "break_even_calls_write_multiplier_1_25x", "value": 2, "unit": "calls", "note": "Anthropic 5-minute cache and OpenAI GPT-5.6 and later" },
-      { "name": "break_even_calls_write_multiplier_2x", "value": 3, "unit": "calls", "note": "Anthropic 1-hour cache" },
-      { "name": "providers_publishing_no_cache_ttl", "value": 4, "unit": "of 6", "note": "Google, xAI, DeepSeek, and Mistral" }
+      {
+        "name": "crossover_hit_rate_gemini_flash_lite_vs_deepseek_v4_flash",
+        "value": 84.7,
+        "unit": "percent",
+        "note": "Both cost $0.0237 per 1M effective input tokens at this hit rate"
+      },
+      {
+        "name": "crossover_hit_rate_gemini_flash_vs_deepseek_v4_pro",
+        "value": 83.7,
+        "unit": "percent",
+        "note": "Both cost $0.0741 per 1M effective input tokens at this hit rate"
+      },
+      {
+        "name": "crossover_hit_rate_grok_43_vs_gemini_36_flash",
+        "value": 83.3,
+        "unit": "percent",
+        "note": "Both cost $0.3750 per 1M effective input tokens at this hit rate"
+      },
+      {
+        "name": "crossover_hit_rate_gpt_56_luna_vs_deepseek_v4_pro",
+        "value": 93.5,
+        "unit": "percent",
+        "note": "Both cost $0.0317 per 1M effective input tokens at this hit rate. New on 2026-08-03: before GPT-5.6-luna's 80% price cut the pair did not cross at any hit rate"
+      },
+      {
+        "name": "crossover_hit_rate_gemini_flash_lite_vs_deepseek_v4_pro",
+        "value": 98.1,
+        "unit": "percent",
+        "note": "Both cost $0.0117 per 1M effective input tokens at this hit rate"
+      },
+      {
+        "name": "break_even_calls_write_multiplier_1_25x",
+        "value": 2,
+        "unit": "calls",
+        "note": "Anthropic 5-minute cache and OpenAI GPT-5.6 and later"
+      },
+      {
+        "name": "break_even_calls_write_multiplier_2x",
+        "value": 3,
+        "unit": "calls",
+        "note": "Anthropic 1-hour cache"
+      },
+      {
+        "name": "providers_publishing_no_cache_ttl",
+        "value": 4,
+        "unit": "of 6",
+        "note": "Google, xAI, DeepSeek, and Mistral"
+      }
     ]
   }
 }
