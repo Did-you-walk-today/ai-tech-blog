@@ -49,7 +49,7 @@ Project skills in `.claude/skills/` encode the standard workflows:
 | Skill | When |
 |---|---|
 | `new-post` | Any post creation request (Phase 1–5, stops at human review) |
-| `post-images` | Cover/diagram image work — plans images, writes Codex prompt packs, normalizes and verifies returned files |
+| `post-images` | Cover/diagram image work. Claude Code cannot generate images — it plans them, hands 기웅 the full cover prompt to run, then normalizes and verifies the returned file |
 | `publish-post` | After 기웅 approves a draft (Phase 6) |
 | `pricing-snapshot` | Every Monday, or any pricing-data refresh request |
 | `mcp-snapshot` | Every Monday — full MCP registry sweep. Deleted entries and star counts at a date are unrecoverable once the week passes |
@@ -586,7 +586,7 @@ not gates on a deploy.
 | C8 Body image weight | Figures SVG/PNG, screenshots WebP, width <= 1600px, <= 150KB (SVG <= 100KB) | WARN |
 | C9 Figure budget | Body images per format: A=1, B=0, C=3, D=1, E=3, F=2, G=0 | WARN |
 | C10 Evidence table | Post with body figures needs `_reviews/{date}-{slug}.images.md` containing a 근거 대응표 | WARN |
-| C11 Cover is generated art | Cover with <= 1,000 distinct colours is a code render, not a `$imagegen` output | ERROR |
+| C11 Cover is generated art | Cover with <= 1,000 distinct colours is a code render, not an image-model output | ERROR |
 
 **Section D — GEO / Citation Evidence** (delegated to `geo_validation.py`, rules in `SEO_GUIDE.md` §11–§13)
 

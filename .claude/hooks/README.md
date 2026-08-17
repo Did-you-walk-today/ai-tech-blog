@@ -39,7 +39,7 @@ B7은 원래 "섹션당 3줄 미만"이었는데, 마크다운 문단은 몇 문
 
 ## optimize_image.py
 
-Codex 산출 이미지를 규격에 맞게 정규화. **Pillow 필요** (훅이 아니라 수동 도구).
+기웅이 생성해 반입한 이미지를 규격에 맞게 정규화. **Pillow 필요** (훅이 아니라 수동 도구).
 
 ```bash
 python3 .claude/hooks/optimize_image.py IN.png --cover    # 1200x630 PNG, ≤200KB
