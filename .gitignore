@@ -22,3 +22,8 @@ bot-logger/
 
 # quota-ledger (D-5) — 로컬 관측 원본, 작업 패턴이 드러나므로 커밋 금지
 .ledger/
+
+# MCP 레지스트리 전수 스윕 원본 (주당 21MB) — 레포에 넣기엔 무겁다.
+# 커밋되는 것은 가공본(YYYY-MM-DD.json)과 명부(roster/*.tsv.gz)뿐이고,
+# 원본은 R2 레이크가 생길 때까지 로컬에만 보관한다.
+_data/mcp_registry_history/raw/

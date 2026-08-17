@@ -52,6 +52,7 @@ Project skills in `.claude/skills/` encode the standard workflows:
 | `post-images` | Cover/diagram image work — plans images, writes Codex prompt packs, normalizes and verifies returned files |
 | `publish-post` | After 기웅 approves a draft (Phase 6) |
 | `pricing-snapshot` | Every Monday, or any pricing-data refresh request |
+| `mcp-snapshot` | Every Monday — full MCP registry sweep. Deleted entries and star counts at a date are unrecoverable once the week passes |
 
 Hard boundary: **Phase 5 (human review) is never skipped.** No post moves to
 `_posts/` or gets committed without explicit approval from 기웅.
