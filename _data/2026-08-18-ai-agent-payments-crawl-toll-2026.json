@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "slug": "ai-agent-payments-crawl-toll-2026",
+  "title": "AI Agent Payments 2026: What a Crawl Toll Really Earns",
+  "description": "Cloudflare gave AI agents wallets. We priced our own measured crawler traffic against it: 5,227 crawls in 20 days, and what a per-request toll would actually pay.",
+  "data_updated": "2026-08-17",
+  "source_post": "https://www.jsonhouse.com/posts/ai-agent-payments-crawl-toll-2026/",
+  "category": "ai-crawler-observatory",
+  "cluster": "CLUSTER_AEO",
+  "format": "F",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/ai-agent-payments-crawl-toll-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/ai-agent-payments-crawl-toll-2026.json",
+    "citation": "Json House, \"AI Agent Payments 2026: What a Crawl Toll Really Earns\", jsonhouse.com (2026-08-17)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
+  "key_facts": [
+    {
+      "fact": "One origin logged 5,227 AI crawler requests over 20 days (2026-07-25 to 2026-08-13), or 261.35 per day, against 7 human visitors referred by an AI answer surface",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "Priced at $0.001 per request the measured traffic is worth $7.84 per month and $95.39 per year, and at $0.010 per request $78.41 per month and $953.93 per year; at the 746.7:1 crawl-to-referral ratio the $0.001 toll is worth about 75x more than display advertising on the same event ($0.75 against roughly $0.01 at a $10 RPM), yet still totals only $7.84 per month",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "459 requests, 8.8% of all traffic, asked for paths such as .env and .git that no legitimate crawler requests — a forgery floor that would never pay a toll, reducing the monthly range to $7.15-$71.51",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "148 of 795 requests (18.6%) in the 2026-08-09 to 2026-08-13 verification window carried no identity Cloudflare would confirm, so a wallet keyed to a verifiable identity cannot bill them",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "On 2026-08-01 thirteen distinct bot identities first appeared on one server within 30 milliseconds of each other (11:25:09.531 to 11:25:09.561), direct evidence that user-agent identity is forgeable",
+      "source": "jsonhouse original measurement, 2026-08-01",
+      "category": "case_study"
+    },
+    {
+      "fact": "591 of 5,227 requests (11.3%) went to machine endpoints — /data/*.json, /api/posts.json, /llms.txt — the resources Cloudflare's Monetization Gateway classifies as datasets",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "Cloudflare Wallets and cloudflare.pay were announced 2026-08-04 with only handle reservation live; onramping, offramping, and Virtual Wallet issuance are described as arriving in the coming months, while the supported chains, the stablecoin list, the custody model, Cloudflare's own fee, and any per-crawl price all remain unpublished",
+      "source": "Cloudflare blog and press release, retrieved 2026-08-17",
+      "category": "policy"
+    },
+    {
+      "fact": "1,041 of 5,227 crawler requests (19.9%) were answer-time fetches rather than training crawls, and a single page absorbed 503 of them across all 20 days — roughly 175 charges per weekly revision under per-request pricing, because x402 carries no revisit or content-hash exemption",
+      "source": "jsonhouse original measurement, 2026-08-13",
+      "category": "data"
+    },
+    {
+      "fact": "Cloudflare shipped agent-commerce integrations with Visa and Mastercard in October 2025 over conventional card rails, built on the same Web Bot Auth signatures the wallet handle uses; Visa, Mastercard, and Stripe are also x402 Foundation founding members",
+      "source": "Cloudflare blog, Securing agentic commerce, published 2025-10-24, retrieved 2026-08-17",
+      "category": "policy"
+    },
+    {
+      "fact": "x402 charges zero protocol fees and is chain-agnostic; the x402 site reported 75.41 million transactions and $24.24 million of volume over the 30 days to 2026-07-14, from 94,060 buyers but only 22,000 sellers",
+      "source": "x402.org, retrieved 2026-08-17",
+      "category": "data"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "How much would a small site earn from charging AI crawlers?",
+      "a": "On this site, measured: about 7,840 crawler requests a month. At $0.001 per request that is $7.84 a month; at $0.01, $78.41. Deduct at least 8.8% for forged traffic. The figure scales with crawl volume, not audience size."
+    },
+    {
+      "q": "What did Cloudflare actually launch on August 4, 2026?",
+      "a": "Handle reservation at cloudflare.pay only. Wallet funding and Virtual Wallet issuance are described as coming in the following months, and the chains, stablecoins, custody model, and Cloudflare's fee are unpublished as of 2026-08-17."
+    },
+    {
+      "q": "Does an agent wallet solve the bot identity problem?",
+      "a": "It presumes it solved. The handle is a readable name for a Web Bot Auth keypair, so it only reaches callers that already carry a verifiable identity. In our window 18.6% carried none and 8.8% of all traffic showed active forgery."
+    },
+    {
+      "q": "Is x402 the standard for agent payments?",
+      "a": "It is the one Cloudflare built on, developed with Coinbase and governed by the x402 Foundation. Zero protocol fees, chain-agnostic. Over the 30 days to 2026-07-14 it reported 94,060 buyers against only 22,000 sellers."
+    },
+    {
+      "q": "Should a small publisher turn on pay-per-crawl now?",
+      "a": "Not yet. The revenue at this volume does not justify blocking crawlers that feed answer engines, and the sell side is thin. Instrument now instead — crawl data cannot be reconstructed after the fact."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Announcing Cloudflare Wallets: The programmable wallet for the agentic Internet",
+      "url": "https://blog.cloudflare.com/wallets/",
+      "publisher": "Cloudflare"
+    },
+    {
+      "title": "Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402",
+      "url": "https://blog.cloudflare.com/monetization-gateway/",
+      "publisher": "Cloudflare"
+    },
+    {
+      "title": "Cloudflare gives AI agents an identity and a wallet",
+      "url": "https://www.cloudflare.com/press/press-releases/2026/cloudflare-gives-ai-agents-an-identity-and-a-wallet/",
+      "publisher": "Cloudflare"
+    },
+    {
+      "title": "x402: an open, neutral standard for internet-native payments",
+      "url": "https://www.x402.org/",
+      "publisher": "x402 Foundation"
+    },
+    {
+      "title": "Securing agentic commerce: helping AI Agents transact with Visa and Mastercard",
+      "url": "https://blog.cloudflare.com/secure-agentic-commerce/",
+      "publisher": "Cloudflare"
+    },
+    {
+      "title": "Verified bots",
+      "url": "https://developers.cloudflare.com/bots/concepts/bot/verified-bots/",
+      "publisher": "Cloudflare"
+    }
+  ],
+  "numerical_data": {
+    "metrics": [
+      { "metric": "bot_crawl_requests", "value": 5227, "unit": "requests", "window_days": 20 },
+      { "metric": "crawl_requests_per_day", "value": 261.35, "unit": "requests per day" },
+      { "metric": "projected_monthly_requests", "value": 7840.5, "unit": "requests", "note": "linear scaling of the measured daily rate; no seasonality adjustment" },
+      { "metric": "ai_referred_human_visits", "value": 7, "unit": "visits", "window_days": 20 },
+      { "metric": "crawl_to_referral_ratio", "value": 746.7, "unit": "crawls per visit", "note": "upper bound; referrals are undercounted because clients strip the Referer header" },
+      { "metric": "answer_time_fetches", "value": 1041, "unit": "requests", "window_days": 20, "note": "19.9% of all crawler requests; a proxy for citation, not a measure of it" },
+      { "metric": "top_page_answer_time_fetches", "value": 503, "unit": "requests", "window_days": 20, "note": "llm-api-pricing-2026, seen on all 20 days; the page is revised weekly" },
+      { "metric": "machine_endpoint_reads", "value": 591, "unit": "requests", "window_days": 20, "note": "11.3% of all crawler requests" },
+      { "metric": "forged_identity_floor_share", "value": 8.8, "unit": "percent of all hits", "note": "floor, not estimate" },
+      { "metric": "unverified_share", "value": 18.6, "unit": "percent of verification-window hits", "note": "148 of 795 requests, 2026-08-09 to 2026-08-13" },
+      { "metric": "burst_distinct_identities", "value": 13, "unit": "user agents", "note": "first seen within 30 milliseconds on 2026-08-01T11:25:09Z" }
+    ]
+  },
+  "comparison_data": {
+    "dimensions": ["price_per_request_usd", "monthly_usd", "annual_usd", "monthly_net_of_forgery_usd"],
+    "entries": [
+      { "price_per_request_usd": 0.001, "monthly_usd": 7.84, "annual_usd": 95.39, "monthly_net_of_forgery_usd": 7.15 },
+      { "price_per_request_usd": 0.005, "monthly_usd": 39.2, "annual_usd": 476.96, "monthly_net_of_forgery_usd": 35.75 },
+      { "price_per_request_usd": 0.01, "monthly_usd": 78.41, "annual_usd": 953.93, "monthly_net_of_forgery_usd": 71.51 }
+    ]
+  },
+  "measurement": {
+    "collection": {
+      "start": "2026-07-25T08:24:41.682Z",
+      "end": "2026-08-13T11:05:12.320Z",
+      "window_days": 20,
+      "method": "Cloudflare Worker in front of the origin, logging one row per AI-crawler user agent, per AI-referral Referer, and per request to /data/, /api/, or /llms.txt. Human pageviews are not recorded; raw client IPs are never stored.",
+      "self_test_windows_excluded": 4
+    },
+    "verification_subwindow": {
+      "start": "2026-08-09",
+      "end": "2026-08-13",
+      "requests": 795,
+      "unverified_requests": 148,
+      "discriminator": "Cloudflare verified_bot classification",
+      "note": "'Unverified' means Cloudflare did not confirm the connection. It is not proof of forgery: a vendor absent from the verified-bot list produces the same result."
+    },
+    "pricing_assumptions": {
+      "basis": "modeled, not quoted",
+      "ladder_usd_per_request": [0.001, 0.005, 0.01],
+      "rationale": "Cloudflare publishes example prices spanning a $0.001 base fee plus $0.01 per MB, and a few cents per web search billed per call, but sets no per-crawl rate — the publisher does."
+    }
+  },
+  "limitations": [
+    "One site over 20 days. A complete census of one origin, not a sample of the web; our crawl volume is not evidence about anyone else's.",
+    "The verification figures rest on a four-day sub-window of 795 requests, because network identity fields were only instrumented from 2026-08-09. The 18.6% unverified share is the least stable figure here.",
+    "Per-request prices are modeled by this publication, not quoted from Cloudflare, which sets no per-crawl rate.",
+    "Monthly and annual figures scale the measured daily rate linearly; 20 days is too short to observe seasonality, so none is applied.",
+    "The 8.8% forgery share is a floor derived from one behavioral pattern, and AI referrals are undercounted because clients strip the Referer header, so 746.7:1 is an upper bound.",
+    "No payment was transacted. Wallet funding is not available yet, so nothing here is an observation of a completed x402 settlement.",
+    "Verification data comes from Cloudflare's own verified_bot field, so Cloudflare's infrastructure is being measured with Cloudflare's instrument, with no independent cross-check available."
+  ],
+  "update_cadence": {
+    "frequency": "monthly",
+    "next_update_window_end": "2026-09-13",
+    "method": "same aggregation script on the same Worker log, window extended as it accumulates; each update adds a changelog entry rather than overwriting silently. The tracked headline is the verified share over time, not the snapshot."
+  }
+}
