@@ -1,15 +1,15 @@
 ---
 title: "AI Agent Payments 2026: What a Crawl Toll Really Earns"
 description: "Cloudflare gave AI agents wallets. We priced our own measured crawler traffic against it: 5,227 crawls in 20 days, and what a per-request toll would actually pay."
-date: 2026-08-18 12:00:00 +0900
-last_modified_at: 2026-08-18 12:00:00 +0900
+date: 2026-08-18 01:55:00 +0900
+last_modified_at: 2026-08-18 01:55:00 +0900
 categories: [ai-crawler-observatory]
 tags: [ai-agents, agent-payments, x402, crawler-economics, cloudflare, aeo, monetization, "2026"]
 format: F
 cluster: CLUSTER_AEO
 image:
   path: /assets/img/posts/ai-agent-payments-crawl-toll-2026-cover.jpg
-  alt: "A brass turnstile alone on a dark floor, one lane lit by cold blue light and the rest left in shadow"
+  alt: "A single cylindrical rock core resting at an angle on dark stone, cyan light raking its cut face and amber along one edge"
 faq:
   - q: "How much would a small site earn from charging AI crawlers?"
     a: "On this site, measured rather than estimated: 5,227 crawler requests over 20 days, or about 7,840 a month. At a tenth of a cent per request that is $7.84 a month; at one cent, $78.41. Deduct at least 8.8% for traffic that forges its identity and would never pay. The figure scales with crawl volume, not with audience size, which is why it is worth measuring your own rather than borrowing ours."
