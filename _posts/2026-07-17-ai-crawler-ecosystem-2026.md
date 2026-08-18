@@ -2,7 +2,7 @@
 title: "AI Crawler Ecosystem 2026: Who Scrapes the Web and Who Pays"
 description: "Machines now generate 57.5% of web HTML traffic. Who the AI crawlers are, what they take per visitor sent, and how pay-per-crawl rewrites the web's deal."
 date: 2026-07-17 18:00:00 +0900
-last_modified_at: 2026-08-06 02:30:00 +0900
+last_modified_at: 2026-08-18 21:00:00 +0900
 categories: [industry-analysis]
 tags: [ai-crawlers, gptbot, claudebot, pay-per-crawl, robots-txt, rsl, cloudflare, aeo, "2026"]
 format: D
@@ -25,11 +25,13 @@ data_updated: 2026-07-17
 author: jsonhouse
 ---
 
-Sometime in the first half of 2026, the web quietly crossed a line: machines became the majority. [Cloudflare Radar data](https://blog.cloudflare.com/ai-search-crawl-refer-ratio-on-radar/) shared on June 3, 2026 shows automated requests now make up 57.5% of HTML traffic against 42.5% from humans — the first machine majority in the web's history. The single fastest-growing force behind that shift is AI crawlers, which reached 20.3% of verified bot traffic in May 2026, plus another 6.5% from AI-search bots. This post maps the ecosystem behind those numbers: which bots crawl for training, search, and user actions; how many pages each company takes per visitor it sends back; and why the answer to that imbalance — payment layers like [pay-per-crawl](https://blog.cloudflare.com/introducing-pay-per-crawl/) and [RSL](https://rslstandard.org/) — is quietly rebuilding the web's business model. Every figure is sourced and dated; data checked July 17, 2026.
+Sometime in the first half of 2026, the web quietly crossed a line: machines became the majority. On June 3, 2026, Cloudflare CEO Matthew Prince [posted the crossover](https://x.com/eastdakota/status/2062212701414187452) from the company's Radar dashboard: automated requests now make up 57.5% of HTML traffic against 42.5% from humans — the first machine majority in the web's history. The single fastest-growing force behind that shift is AI crawlers, which reached 20.3% of [verified bot traffic](https://radar.cloudflare.com/bots) in May 2026, plus another 6.5% from AI-search bots.
+
+This post maps the ecosystem behind those numbers: which bots crawl for training, search, and user actions; how many pages each company takes per visitor it sends back; and why the answer to that imbalance — payment layers like [pay-per-crawl](https://blog.cloudflare.com/introducing-pay-per-crawl/) and [RSL](https://rslstandard.org/) — is quietly rebuilding the web's business model. Every figure is sourced and dated, and where a number comes from a vendor's own dashboard rather than a published methodology, the text says so. Data checked July 17, 2026; sources re-verified August 18, 2026.
 
 ## TL;DR
 
-- **Machines are the majority**: 57.5% of HTML requests are automated (Cloudflare Radar, June 2026); AI crawlers alone are ~27% of verified bot traffic including AI search
+- **Machines are the majority**: 57.5% of HTML requests are automated (Cloudflare Radar, announced by Cloudflare's CEO on June 3, 2026); AI crawlers alone are ~27% of verified bot traffic including AI search
 - **Training dominates**: 52.3% of AI crawler requests are for model training; real-time fetches for actual users are just 2.6% (28 days to June 22, 2026)
 - **The bargain is broken**: Google search crawls ~5–14 pages per visitor referred; ClaudeBot ran 11,122:1–23,951:1 and GPTBot ~1,276:1 in 2026 measurements
 - **The toll booth is live**: Cloudflare's pay-per-crawl (HTTP 402) launched July 2025; from September 15, 2026, training and agent bots are blocked by default on ad-monetized pages of new domains

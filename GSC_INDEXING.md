@@ -2,7 +2,7 @@
 
 Google Search Console(속성: `https://www.jsonhouse.com`) 에 수동 색인 요청(URL 검사 → 색인 생성 요청)할 URL 모음.
 
-- **최종 갱신**: 2026-08-17 (자동)
+- **최종 갱신**: 2026-08-18 (자동)
 - **소스**: `_posts/` + `_tabs/` + 루트 정적 페이지
 - **주의**: GSC 수동 색인 요청은 하루 약 10건 제한. 아래 우선순위 순서대로 진행.
 - **1번 표와 복사용 블록은 자동 생성**됩니다 (`.claude/hooks/sync-indexing-list.sh`).

@@ -19,12 +19,12 @@
   "key_facts": [
     {
       "fact": "Automated requests reached 57.5% of HTML web traffic versus 42.5% human — the first machine majority in web history",
-      "source": "Cloudflare Radar, 2026-06-03",
+      "source": "Cloudflare Radar, announced by Matthew Prince (Cloudflare CEO), 2026-06-03",
       "category": "data"
     },
     {
       "fact": "AI crawlers accounted for 20.3% of verified bot traffic in May 2026, with AI-search bots adding 6.5%",
-      "source": "Cloudflare Radar, May 2026",
+      "source": "Cloudflare Radar bots dashboard, May 2026",
       "category": "data"
     },
     {
@@ -91,6 +91,16 @@
     }
   ],
   "primary_sources": [
+    {
+      "title": "Matthew Prince (Cloudflare CEO): bots have passed human traffic online for the first time",
+      "url": "https://x.com/eastdakota/status/2062212701414187452",
+      "publisher": "Cloudflare"
+    },
+    {
+      "title": "Bot Traffic Worldwide — Cloudflare Radar",
+      "url": "https://radar.cloudflare.com/bots",
+      "publisher": "Cloudflare Radar"
+    },
     {
       "title": "The crawl before the fall of referrals: understanding AI's impact on content providers",
       "url": "https://blog.cloudflare.com/ai-search-crawl-refer-ratio-on-radar/",
@@ -159,7 +169,7 @@
   },
   "numerical_data": {
     "metrics": [
-      {"name": "automated share of HTML web traffic", "value": 57.5, "unit": "%", "as_of": "2026-06-03", "source": "Cloudflare Radar"},
+      {"name": "automated share of HTML web traffic", "value": 57.5, "unit": "%", "as_of": "2026-06-03", "source": "Cloudflare Radar (announced by Cloudflare CEO)"},
       {"name": "AI crawlers share of verified bot traffic", "value": 20.3, "unit": "%", "as_of": "2026-05", "source": "Cloudflare Radar"},
       {"name": "AI-search bots share of verified bot traffic", "value": 6.5, "unit": "%", "as_of": "2026-05", "source": "Cloudflare Radar"},
       {"name": "training share of AI crawler requests", "value": 52.3, "unit": "%", "as_of": "2026-06-22 (28-day window)", "source": "Cloudflare Radar"},
