@@ -221,7 +221,9 @@ for idx, (title, level, sec) in enumerate(sections):
     # 이 블로그 실측 분포(문단 426개)에서 중앙값 53w, 95분위 112w.
     for p in paras:
         n = len(p.split())
-        if n > 120 and not p.lstrip().startswith(('-', '*', '>', '|')):
+        # 접두사는 공백까지 봐야 한다 — '*'만 보면 **볼드**로 시작하는 문단이
+        # 불릿으로 오인돼 검사를 통째로 빠져나간다 (2026-08-18: 6개 포스트에서 검출)
+        if n > 120 and not p.lstrip().startswith(('- ', '* ', '+ ', '> ', '|')):
             dense.append(f"'{title}' ({n}w 문단)")
 
 if thin:
