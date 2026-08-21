@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "slug": "6g-agi-convergence-2026",
+  "title": "6G and AGI 2026: Why One Company Sells Both",
+  "description": "6G and AGI converge because capital forces it: telecom capex falls 2% in 2026 while five AI firms spend over $600B. One company already owns both layers.",
+  "data_updated": "2026-08-21",
+  "source_post": "https://www.jsonhouse.com/posts/6g-agi-convergence-2026/",
+  "category": "industry-analysis",
+  "cluster": "CLUSTER_AI_INFRA",
+  "format": "A",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/6g-agi-convergence-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/6g-agi-convergence-2026.json",
+    "citation": "Json House, \"6G and AGI 2026: Why One Company Sells Both\", jsonhouse.com (2026-08-21)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
+  "key_facts": [
+    {
+      "fact": "Recommendation ITU-R M.2160 lists 'AI and Communication' as one of six IMT-2030 usage scenarios, alongside ubiquitous connectivity and integrated sensing — all three new relative to the 5G framework",
+      "source": "Recommendation ITU-R M.2160, published December 2023",
+      "category": "definition"
+    },
+    {
+      "fact": "The ITU-R draft on minimum technical performance requirements for IMT-2030 holds 20 requirements, 7 of them new to 6G; the numeric values are restricted to ITU-R members, with formal approval expected December 2026",
+      "source": "ITU, 'IMT-2030: Technical requirements for the 6G future', March 2026",
+      "category": "policy"
+    },
+    {
+      "fact": "3GPP Release 21 schedules the 6G work item first functional freeze for March 2027, a second freeze June 2028, Stage-3 final freeze December 2028, and ASN.1/OpenAPI code freeze March 2029; no commercial launch date is published",
+      "source": "3GPP, Release 21 timeline, approved June 2026",
+      "category": "policy"
+    },
+    {
+      "fact": "AI entered the air interface before 6G: 3GPP Release 18 ran the first AI/ML study for the NR air interface, Release 19 made AI-based beam management, positioning and CSI prediction normative, and Release 20 extends to two-sided models",
+      "source": "3GPP Releases 18-20 scope",
+      "category": "trend"
+    },
+    {
+      "fact": "GSA records 386 commercial 5G launches worldwide and 95 operators that have launched a 5G standalone service, both as of 20 April 2026; 6G core builds on standalone",
+      "source": "GSA public industry counters, as of 2026-04-20",
+      "category": "data"
+    },
+    {
+      "fact": "Worldwide telecom capex is forecast to decline 2% in 2026 and grow at a 1% CAGR through 2030, while combined 2026 capex for the five largest hyperscalers is forecast above $600 billion, up 36%, roughly 75% of it AI infrastructure",
+      "source": "Dell'Oro Group forecast (2026-04-02) and consensus hyperscaler guidance",
+      "category": "data"
+    },
+    {
+      "fact": "Of 55 service providers surveyed, 43 saw uplink traffic growing faster than downlink and 17 saw uplink growing more than 1.5 times faster; global mobile data traffic reached 210 exabytes per month in Q1 2026, up 22% year on year",
+      "source": "Ericsson Mobility Report, June 2026",
+      "category": "data"
+    },
+    {
+      "fact": "On ARC-AGI-3, released 2026-03-25, human testers solve 100% of environments while frontier models averaged 0.51% — Gemini 3.1 Pro 0.37%, GPT-5.4 0.26%, Claude Opus 4.6 0.25%",
+      "source": "ARC Prize Foundation, ARC-AGI-3 launch, 2026-03-25",
+      "category": "data"
+    },
+    {
+      "fact": "METR's May 2026 report put the strongest assessed agents near 16-20 hours at 50% task-completion reliability but only 3-4 hours at 80%; measured doubling time for task length is 89 days from 2024 onward",
+      "source": "METR, Time Horizon 1.1 (2026-01-29) and Frontier Risk Report (May 2026)",
+      "category": "data"
+    },
+    {
+      "fact": "SpaceX completed an all-stock merger with xAI on 2026-02-02 at a combined $1.25 trillion valuation, three days after filing with the FCC for an orbital data center constellation of up to one million satellites projecting 100 GW of AI compute",
+      "source": "CNBC deal documents; SpaceX FCC filing 2026-01-30",
+      "category": "case_study"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Why are 6G and AGI always discussed together?",
+      "a": "Because the 6G specification contains an AI clause and the AI industry contains the money. ITU-R M.2160 lists 'AI and Communication' as one of six 6G usage scenarios, while telecom capex falls 2% in 2026 and the five largest AI infrastructure buyers spend over $600 billion."
+    },
+    {
+      "q": "How is 6G actually different from 5G?",
+      "a": "Three of the six 6G usage scenarios did not exist in the 5G framework: ubiquitous connectivity, AI and communication, and integrated sensing. Satellite access moves inside the standard and machine learning sits in the radio itself. The starting point is unchanged: 6G core builds on 5G standalone, which GSA counts 95 operators running against 386 commercial 5G launches."
+    },
+    {
+      "q": "When will 6G actually launch?",
+      "a": "No standards body has published a commercial date. Specification milestones are public: first functional freeze March 2027, second June 2028, Stage-3 December 2028, code freeze March 2029. Industry expectation is 2029-2030 for first service."
+    },
+    {
+      "q": "What is the difference between AGI and today's LLMs?",
+      "a": "ARC-AGI-3 asks an agent to enter an environment with no instructions, rules, or stated goal and work out what winning means. Humans solve 100%; every frontier model scored under 1%. Today's models excel at tasks resembling their training and are weak at learning a new world from scratch."
+    },
+    {
+      "q": "Can legacy telecom operators compete with a satellite AI company?",
+      "a": "They hold licensed spectrum with national regulatory standing and metro-density sites that put compute within a few kilometres of the user. Latency is physics, and no orbit beats a base station down the street for real-time inference. The AI-RAN Alliance, past 140 members by July 2026, is the coordinated bet on that argument."
+    }
+  ],
+  "timeline": [
+    { "date": "2023-12", "event": "Recommendation ITU-R M.2160 published, defining six IMT-2030 usage scenarios including AI and Communication", "source": "ITU-R" },
+    { "date": "2025-Q3", "event": "3GPP Release 20 6G technical study phase begins, roughly 21 months", "source": "3GPP" },
+    { "date": "2025-12", "event": "3GPP Release 19 frozen, adding regenerative NTN payloads that place a full base station on the satellite", "source": "3GPP" },
+    { "date": "2026-01-30", "event": "SpaceX files with the FCC for an orbital data center constellation of up to one million satellites", "source": "SpaceNews / FCC" },
+    { "date": "2026-02-02", "event": "SpaceX completes all-stock merger with xAI at a combined $1.25 trillion valuation", "source": "CNBC" },
+    { "date": "2026-03-25", "event": "ARC-AGI-3 released; frontier models average 0.51% against a 100% human baseline", "source": "ARC Prize Foundation" },
+    { "date": "2026-04-20", "event": "GSA counters record 386 commercial 5G launches worldwide and 95 operators running 5G standalone", "source": "GSA public industry counters" },
+    { "date": "2026-06-12", "event": "SpaceX completes the largest IPO on record, raising $75 billion", "source": "CNBC" },
+    { "date": "2027-03", "event": "Scheduled: 6G work item first functional freeze in 3GPP Release 21", "source": "3GPP" },
+    { "date": "2028-12", "event": "Scheduled: Stage-3 final freeze for 6G protocol specifications", "source": "3GPP" },
+    { "date": "2029-03", "event": "Scheduled: ASN.1 and OpenAPI code freeze, the point at which 6G becomes implementable", "source": "3GPP" }
+  ],
+  "comparison_data": {
+    "dimensions": ["licensed_spectrum", "access_network", "launch_capability", "frontier_model", "compute_at_scale", "customer_billing_relationship"],
+    "entries": [
+      {
+        "name": "SpaceX + xAI",
+        "licensed_spectrum": "Partner-dependent",
+        "access_network": "Satellite, global coverage; direct-to-cell live in 22 countries",
+        "launch_capability": "Owned",
+        "frontier_model": "Owned (xAI)",
+        "compute_at_scale": "Terrestrial plus proposed orbital constellation",
+        "customer_billing_relationship": "Growing, via carrier partners"
+      },
+      {
+        "name": "Legacy mobile operator",
+        "licensed_spectrum": "Owned, nationally protected",
+        "access_network": "Terrestrial, metro-dense",
+        "launch_capability": "None",
+        "frontier_model": "None",
+        "compute_at_scale": "Limited",
+        "customer_billing_relationship": "Owned, decades deep"
+      },
+      {
+        "name": "Frontier AI lab",
+        "licensed_spectrum": "None",
+        "access_network": "None",
+        "launch_capability": "None",
+        "frontier_model": "Owned",
+        "compute_at_scale": "Owned",
+        "customer_billing_relationship": "Growing"
+      }
+    ]
+  },
+  "numerical_data": {
+    "metrics": [
+      { "name": "commercial 5G launches", "value": 386, "unit": "launches", "as_of": "2026-04-20", "source": "GSA public industry counters" },
+      { "name": "5G standalone networks launched", "value": 95, "unit": "operators", "as_of": "2026-04-20", "source": "GSA public industry counters" },
+      { "name": "5G standalone share of commercial 5G launches", "value": 24.6, "unit": "percent", "as_of": "2026-04-20", "source": "Derived from GSA counters; operators over launches, so approximate" },
+      { "name": "Global mobile data traffic", "value": 210, "unit": "exabytes per month", "as_of": "2026-Q1", "source": "Ericsson Mobility Report June 2026" },
+      { "name": "Operators with uplink growth exceeding downlink", "value": "43 of 55", "unit": "service providers", "as_of": "2026-06", "source": "Ericsson Mobility Report June 2026" },
+      { "name": "Worldwide telecom capex change", "value": -2, "unit": "percent year on year", "as_of": "2026", "source": "Dell'Oro Group forecast 2026-04-02" },
+      { "name": "Five-hyperscaler combined capex", "value": 600, "unit": "billion USD, lower bound, forecast", "as_of": "2026", "source": "Consensus of company guidance" },
+      { "name": "ARC-AGI-3 frontier model average", "value": 0.51, "unit": "percent", "as_of": "2026-03", "source": "ARC Prize Foundation" },
+      { "name": "ARC-AGI-3 human baseline", "value": 100, "unit": "percent", "as_of": "2026-03", "source": "ARC Prize Foundation" },
+      { "name": "METR 80% reliability time horizon", "value": "3-4", "unit": "hours", "as_of": "2026-05", "source": "METR Frontier Risk Report" },
+      { "name": "METR task-length doubling time from 2024 onward", "value": 89, "unit": "days", "as_of": "2026-01", "source": "METR Time Horizon 1.1" },
+      { "name": "SpaceX-xAI combined merger valuation", "value": 1250, "unit": "billion USD", "as_of": "2026-02-02", "source": "CNBC deal documents" }
+    ]
+  },
+  "primary_sources": [
+    {
+      "title": "Recommendation ITU-R M.2160 — Framework and overall objectives of the future development of IMT for 2030 and beyond",
+      "url": "https://www.itu.int/rec/R-REC-M.2160/en",
+      "publisher": "International Telecommunication Union"
+    },
+    {
+      "title": "Timeline for Release 21",
+      "url": "https://www.3gpp.org/news-events/3gpp-news/rel21-timeline",
+      "publisher": "3GPP"
+    },
+    {
+      "title": "Non-Terrestrial Networks (NTN) overview",
+      "url": "https://www.3gpp.org/technologies/ntn-overview",
+      "publisher": "3GPP"
+    },
+    {
+      "title": "5G Standalone — key industry data",
+      "url": "https://gsacom.com/key-data/5g-standalone/",
+      "publisher": "Global mobile Suppliers Association"
+    },
+    {
+      "title": "Ericsson Mobility Report, June 2026",
+      "url": "https://www.ericsson.com/en/reports-and-papers/mobility-report/reports/june-2026",
+      "publisher": "Ericsson"
+    },
+    {
+      "title": "Worldwide Telecom Capex to Decline in 2026",
+      "url": "https://www.delloro.com/news/worldwide-telecom-capex-to-decline-in-2026/",
+      "publisher": "Dell'Oro Group"
+    },
+    {
+      "title": "Announcing ARC-AGI-3",
+      "url": "https://arcprize.org/blog/arc-agi-3-launch",
+      "publisher": "ARC Prize Foundation"
+    },
+    {
+      "title": "Time Horizon 1.1",
+      "url": "https://metr.org/blog/2026-1-29-time-horizon-1-1/",
+      "publisher": "METR"
+    },
+    {
+      "title": "SpaceX files plans for million-satellite orbital data center constellation",
+      "url": "https://spacenews.com/spacex-files-plans-for-million-satellite-orbital-data-center-constellation/",
+      "publisher": "SpaceNews"
+    },
+    {
+      "title": "AI-RAN Alliance",
+      "url": "https://ai-ran.org/",
+      "publisher": "AI-RAN Alliance"
+    }
+  ]
+}

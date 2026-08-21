@@ -35,6 +35,14 @@ clusters:
     pillar: null
     status: active
 
+  - id: CLUSTER_AI_INFRA
+    label: "AI infrastructure economics: compute, networks, spectrum, capex"
+    # Where the money and the physics for AI sit — telecom capex against
+    # hyperscaler capex, 6G and satellite access, orbital compute, AI-RAN.
+    # Split out from CLUSTER_LLM because none of it is about model choice.
+    pillar: null
+    status: active
+
   - id: CLUSTER_AI_CONTENT_POLICY
     label: "Platform AI content policy, E-E-A-T, provenance"
     pillar: null

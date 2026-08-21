@@ -22,25 +22,26 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 <!-- AUTO:GRAPH-TABLE-START -->
 | # | 슬러그 | 클러스터 | 인 | 아웃 | 상태 | 메모 |
 |---|---|---|---|---|---|---|
-| 1 | llm-price-war-balance-sheet-2026 | LLM | 0 | 3 | **고아** |  |
-| 2 | ai-agent-payments-crawl-toll-2026 | AEO | 0 | 5 | **고아** |  |
-| 3 | ai-crawler-traffic-2026 | AEO | 3 | 3 | ok |  |
-| 4 | ai-content-quality-gates-2026 | DEVTOOLS | 1 | 3 | ok |  |
-| 5 | china-ai-coding-plans-2026 | LLM | 1 | 4 | ok |  |
-| 6 | llm-cache-pricing-2026 | LLM | 3 | 7 | ok |  |
-| 7 | best-ai-coding-tools-2026 | DEVTOOLS | 1 | 2 | ok |  |
-| 8 | best-llm-2026 | LLM | 3 | 6 | ok |  |
-| 9 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
-| 10 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
-| 11 | ai-crawler-ecosystem-2026 | AEO | 8 | 6 | ok |  |
-| 12 | llm-api-pricing-2026 | LLM | 14 | 5 | ok |  |
-| 13 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
-| 14 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
-| 15 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
-| 16 | synthid-c2pa-explained-2026 | AI_CONTENT_POLICY | 1 | 2 | ok |  |
-| 17 | eeat-ai-content-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
-| 18 | youtube-ai-monetization-2026 | AI_CONTENT_POLICY | 2 | 2 | noindex |  |
-| 19 | google-ai-content-penalties-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
+| 1 | 6g-agi-convergence-2026 | AI_INFRA | 0 | 4 | **고아** |  |
+| 2 | llm-price-war-balance-sheet-2026 | LLM | 0 | 3 | **고아** |  |
+| 3 | ai-agent-payments-crawl-toll-2026 | AEO | 1 | 5 | ok |  |
+| 4 | ai-crawler-traffic-2026 | AEO | 4 | 3 | ok |  |
+| 5 | ai-content-quality-gates-2026 | DEVTOOLS | 1 | 3 | ok |  |
+| 6 | china-ai-coding-plans-2026 | LLM | 1 | 4 | ok |  |
+| 7 | llm-cache-pricing-2026 | LLM | 3 | 7 | ok |  |
+| 8 | best-ai-coding-tools-2026 | DEVTOOLS | 1 | 2 | ok |  |
+| 9 | best-llm-2026 | LLM | 4 | 6 | ok |  |
+| 10 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
+| 11 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
+| 12 | ai-crawler-ecosystem-2026 | AEO | 8 | 6 | ok |  |
+| 13 | llm-api-pricing-2026 | LLM | 15 | 5 | ok |  |
+| 14 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
+| 15 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
+| 16 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
+| 17 | synthid-c2pa-explained-2026 | AI_CONTENT_POLICY | 1 | 2 | ok |  |
+| 18 | eeat-ai-content-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
+| 19 | youtube-ai-monetization-2026 | AI_CONTENT_POLICY | 2 | 2 | noindex |  |
+| 20 | google-ai-content-penalties-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
 <!-- AUTO:GRAPH-TABLE-END -->
 
 ---
@@ -53,7 +54,7 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 | WARN | NOINDEX<- | ai-content-quality-gates-2026 | links to noindex page /posts/ai-overviews-seo-2026/ ('how citation and ranking have split into different games') |
 | WARN | NOINDEX<- | eeat-ai-content-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI Monetization 2026: What Is Inauthentic Content') |
 | WARN | NOINDEX<- | google-ai-content-penalties-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI monetization and inauthentic-content rules') |
-| WARN | ORPHAN | ai-agent-payments-crawl-toll-2026 | no inbound internal link |
+| WARN | ORPHAN | 6g-agi-convergence-2026 | no inbound internal link |
 | WARN | ORPHAN | llm-price-war-balance-sheet-2026 | no inbound internal link |
 <!-- AUTO:GRAPH-FINDINGS-END -->
 
@@ -70,6 +71,12 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 
 <!-- AUTO:GRAPH-EDGES-START -->
 
+### 6g-agi-convergence-2026
+
+6G and AGI 2026: Why One Company Sells Both
+
+_인바운드 없음 — 이 글로 들어오는 내부 링크가 하나도 없습니다._
+
 ### llm-price-war-balance-sheet-2026
 
 LLM Price War 2026: Who Is Paying for Your Discount
@@ -80,7 +87,9 @@ _인바운드 없음 — 이 글로 들어오는 내부 링크가 하나도 없�
 
 AI Agent Payments 2026: What a Crawl Toll Really Earns
 
-_인바운드 없음 — 이 글로 들어오는 내부 링크가 하나도 없습니다._
+| 걸린 글 | 앵커 텍스트 |
+|---|---|
+| 6g-agi-convergence-2026 | what AI agents pay to read the web |
 
 ### ai-crawler-traffic-2026
 
@@ -88,6 +97,7 @@ AI Crawler Traffic 2026: 747 Crawls per Human Visit
 
 | 걸린 글 | 앵커 텍스트 |
 |---|---|
+| 6g-agi-convergence-2026 | AI crawler traffic on this site |
 | ai-agent-payments-crawl-toll-2026 | AI Crawler Observatory traffic report |
 | ai-agent-payments-crawl-toll-2026 | AI Crawler Traffic 2026: 5,227 Crawls, 7 Visitors |
 | llm-price-war-balance-sheet-2026 | crawler measurements |
@@ -132,6 +142,7 @@ Best LLM 2026: Capability and Limits Compared
 
 | 걸린 글 | 앵커 텍스트 |
 |---|---|
+| 6g-agi-convergence-2026 | best LLM comparison |
 | china-ai-coding-plans-2026 | Best LLM 2026 |
 | llm-cache-pricing-2026 | Best LLM 2026: Capability and Limits Compared |
 | llm-cache-pricing-2026 | capability limits rather than raw benchmark scores |
@@ -176,6 +187,7 @@ LLM API Pricing 2026: Full Comparison Table (Weekly)
 
 | 걸린 글 | 앵커 텍스트 |
 |---|---|
+| 6g-agi-convergence-2026 | LLM API pricing |
 | ai-agent-payments-crawl-toll-2026 | LLM API Pricing 2026 |
 | ai-crawler-ecosystem-2026 | LLM API Pricing 2026: Full Comparison Table |
 | ai-crawler-ecosystem-2026 | LLM API pricing table |
