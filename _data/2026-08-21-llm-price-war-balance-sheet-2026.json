@@ -1,0 +1,265 @@
+{
+  "schema_version": "1.0",
+  "slug": "llm-price-war-balance-sheet-2026",
+  "title": "LLM Price War 2026: Who Is Paying for Your Discount",
+  "description": "CoreWeave raised compute prices 25% in July, citing component costs. Token prices fell anyway. Five snapshots, 48 models, and the gap capital is paying for.",
+  "data_updated": "2026-08-17",
+  "source_post": "https://www.jsonhouse.com/posts/llm-price-war-balance-sheet-2026/",
+  "category": "industry-analysis",
+  "cluster": "CLUSTER_LLM",
+  "format": "F",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/llm-price-war-balance-sheet-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/llm-price-war-balance-sheet-2026.json",
+    "citation": "Json House, \"LLM Price War 2026: Who Is Paying for Your Discount\", jsonhouse.com (2026-08-17)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
+  "key_facts": [
+    {
+      "fact": "Across 48 unique LLM models tracked in five snapshots between 2026-07-16 and 2026-08-17, 43 did not change price at all",
+      "source": "jsonhouse original measurement, 2026-08-17",
+      "category": "data"
+    },
+    {
+      "fact": "All three non-DeepSeek price moves in the window were cuts: gemini-3.6-flash -50%, gpt-5.6-luna -80%, gpt-5.6-terra -20%",
+      "source": "jsonhouse original measurement, 2026-08-17",
+      "category": "data"
+    },
+    {
+      "fact": "CoreWeave raised AI compute prices 25% across its SKUs in July 2026, attributing the move to the demand environment and component cost increases, and its near-term capacity remained effectively sold out",
+      "source": "CoreWeave Q2 2026 earnings call, 2026-08-18",
+      "category": "case_study"
+    },
+    {
+      "fact": "CoreWeave contracts signed in Q2 2026 carry contribution margins five to ten percentage points higher than recent quarters, indicating the 25% increase exceeded the underlying cost increase",
+      "source": "CoreWeave Q2 2026 earnings call, 2026-08-18",
+      "category": "case_study"
+    },
+    {
+      "fact": "PC DRAM contract prices rose 105-110% quarter-over-quarter in Q1 2026, the steepest single-quarter increase on record, with roughly 70% of DRAM output redirected to AI server customers and 2026 HBM capacity sold out",
+      "source": "Memory market reporting, 2026",
+      "category": "data"
+    },
+    {
+      "fact": "A high-density AI rack draws 10-20 kW against 3-5 kW for a standard rack, making power rather than floor space the binding constraint on data center siting",
+      "source": "Colocation market reporting, 2026",
+      "category": "definition"
+    },
+    {
+      "fact": "PJM capacity prices rose 833% between the 2024-25 and 2025-26 delivery years, and data centers account for roughly 40% of US electricity demand growth",
+      "source": "Grid market reporting, 2026",
+      "category": "data"
+    },
+    {
+      "fact": "Anthropic committed on 2026-02-11 to pay 100% of the grid upgrades needed to interconnect its data centers and to cover demand-driven electricity price effects for ratepayers",
+      "source": "Anthropic, 2026-02-11",
+      "category": "policy"
+    },
+    {
+      "fact": "Google halved gemini-3.6-flash to $0.75/$3.75, but the rate is introductory and doubles to $1.50/$7.50 on 2027-01-01 — the only scheduled future price change any tracked vendor publishes",
+      "source": "Google Gemini API pricing page, retrieved 2026-08-17",
+      "category": "policy"
+    },
+    {
+      "fact": "OpenAI was reported to hold no debt as of 2026-03-31 with under $750 million in lease obligations, against roughly $600 billion in forward compute commitments; S&P cut Oracle toward junk citing OpenAI exposure",
+      "source": "Reported financials and S&P Global Ratings, 2026",
+      "category": "trend"
+    }
+  ],
+  "comparison_data": {
+    "dimensions": [
+      "model",
+      "input_start_usd_per_1m",
+      "input_end_usd_per_1m",
+      "output_start_usd_per_1m",
+      "output_end_usd_per_1m",
+      "output_change_pct",
+      "direction"
+    ],
+    "window": {
+      "start": "2026-07-16",
+      "end": "2026-08-17",
+      "snapshots": 5,
+      "days": 32,
+      "unique_models_tracked": 48
+    },
+    "entries": [
+      {
+        "model": "deepseek-v4-flash",
+        "input_start_usd_per_1m": 0.14,
+        "input_end_usd_per_1m": 0.22,
+        "output_start_usd_per_1m": 0.28,
+        "output_end_usd_per_1m": 0.66,
+        "output_change_pct": 135.7,
+        "direction": "increase",
+        "note": "Off-peak rate; peak rates are higher and moved with them"
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "input_start_usd_per_1m": 0.435,
+        "input_end_usd_per_1m": 0.66,
+        "output_start_usd_per_1m": 0.87,
+        "output_end_usd_per_1m": 1.98,
+        "output_change_pct": 127.6,
+        "direction": "increase",
+        "note": "Off-peak rate"
+      },
+      {
+        "model": "gemini-3.6-flash",
+        "input_start_usd_per_1m": 1.5,
+        "input_end_usd_per_1m": 0.75,
+        "output_start_usd_per_1m": 7.5,
+        "output_end_usd_per_1m": 3.75,
+        "output_change_pct": -50.0,
+        "direction": "cut",
+        "note": "Introductory rate expiring 2026-12-31; doubles to $1.50/$7.50 on 2027-01-01"
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "input_start_usd_per_1m": 1.0,
+        "input_end_usd_per_1m": 0.2,
+        "output_start_usd_per_1m": 6.0,
+        "output_end_usd_per_1m": 1.2,
+        "output_change_pct": -80.0,
+        "direction": "cut"
+      },
+      {
+        "model": "gpt-5.6-terra",
+        "input_start_usd_per_1m": 2.5,
+        "input_end_usd_per_1m": 2.0,
+        "output_start_usd_per_1m": 15.0,
+        "output_end_usd_per_1m": 12.0,
+        "output_change_pct": -20.0,
+        "direction": "cut"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-07-16",
+      "event": "First snapshot in the series",
+      "source": "jsonhouse pricing_history"
+    },
+    {
+      "date": "2026-02-11",
+      "event": "Anthropic commits to cover electricity price increases caused by its data centers",
+      "source": "Anthropic"
+    },
+    {
+      "date": "2026-08-03",
+      "event": "OpenAI cuts gpt-5.6-luna 80% and gpt-5.6-terra 20%",
+      "source": "jsonhouse pricing_history"
+    },
+    {
+      "date": "2026-07",
+      "event": "CoreWeave raises AI compute prices 25% across SKUs, citing demand and component costs",
+      "source": "CoreWeave Q2 2026 earnings call"
+    },
+    {
+      "date": "2026-08-10",
+      "event": "Nvidia announces MOUs with six financial institutions to mobilize over $500 billion of third-party AI compute capital",
+      "source": "NVIDIA newsroom"
+    },
+    {
+      "date": "2026-08-17",
+      "event": "Google halves gemini-3.6-flash; Anthropic's cancelled Sonnet 5 increase confirmed; DeepSeek raises both models",
+      "source": "jsonhouse pricing_history"
+    },
+    {
+      "date": "2026-08-17",
+      "event": "Nvidia agrees to guarantee up to $105 billion of OpenAI's Ohio data center leases",
+      "source": "CNBC"
+    },
+    {
+      "date": "2026-10-01",
+      "event": "Scheduled: reported start of Google's GPU rental agreement with SpaceX, running to June 2029",
+      "source": "Public reporting"
+    },
+    {
+      "date": "2027-01-01",
+      "event": "Scheduled: Google gemini-3.6-flash and 3.7-flash introductory rates expire and double",
+      "source": "Google Gemini API pricing page"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Why are AI data center prices going up in 2026?",
+      "a": "Three costs moved at once: DRAM contract prices rose 105-110% in a single quarter with HBM sold out, AI racks draw 10-20 kW against 3-5 kW for a standard rack, and PJM capacity prices rose 833% in one delivery year."
+    },
+    {
+      "q": "Will rising data center costs push LLM API prices up?",
+      "a": "Not yet. US colocation vacancy fell to 1.2% in Q1 2026 and rates are rising, but over our five-snapshot window the labs that rent compute most heavily either cut prices or cancelled a planned increase."
+    },
+    {
+      "q": "Do AI companies that own their data centers have a pricing advantage?",
+      "a": "Less than the framing suggests. Google owns a large TPU fleet and still reportedly rents ~110,000 GPUs from SpaceX; Anthropic rented essentially all of xAI's Colossus 1. Owning does not insulate you when marginal capacity is rented."
+    },
+    {
+      "q": "Why don't LLM API prices change more often?",
+      "a": "The published price is not where competition happens. 43 of 48 tracked models did not change in 32 days. Discounting runs through subscription plans, promotional tiers and enterprise contracts that never appear on a pricing page."
+    },
+    {
+      "q": "Is Google's Gemini Flash price cut permanent?",
+      "a": "No. The rate is introductory, expires 2026-12-31, and doubles to $1.50/$7.50 on 2027-01-01. It is a published forward price, not a price cut."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "NVIDIA Partners With Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to Establish AI Compute Infrastructure Financing Platforms",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+      "publisher": "NVIDIA"
+    },
+    {
+      "title": "Nvidia backing $105 billion in financing for OpenAI data center in Ohio",
+      "url": "https://www.cnbc.com/2026/08/17/nvidia-financing-open-ai-data-center-ohio.html",
+      "publisher": "CNBC"
+    },
+    {
+      "title": "New Credit Facility Enhances Financial Flexibility",
+      "url": "https://openai.com/index/new-credit-facility-enhances-financial-flexibility/",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "Moody's says 'unprecedented' AI spending threatens credit quality of Amazon, Meta, Alphabet and others",
+      "url": "https://www.cnbc.com/2026/07/24/moodys-ai-spending-credit-quality-amazon-meta-alphabet.html",
+      "publisher": "CNBC"
+    },
+    {
+      "title": "Gemini Developer API pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "publisher": "Google"
+    },
+    {
+      "title": "Claude API pricing",
+      "url": "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Global Data Center Trends 2026",
+      "url": "https://www.cbre.com/insights/reports/global-data-center-trends-2026",
+      "publisher": "CBRE"
+    },
+    {
+      "title": "Power, Not Space: The Colocation Battleground in 2026",
+      "url": "https://www.datacenterknowledge.com/colocation/power-not-space-the-colocation-battleground-in-2026",
+      "publisher": "Data Center Knowledge"
+    },
+    {
+      "title": "Covering electricity price increases from our data centers",
+      "url": "https://www.anthropic.com/news/covering-electricity-price-increases",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "CoreWeave (CRWV) Q2 2026 Earnings Call Transcript",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/08/18/coreweave-crwv-q2-2026-earnings-call-transcript/",
+      "publisher": "The Motley Fool"
+    },
+    {
+      "title": "Electricity prices will keep rising on AI data center demand: Goldman",
+      "url": "https://www.cnbc.com/2026/02/12/electricity-price-data-center-ai-inflation-goldman.html",
+      "publisher": "CNBC"
+    }
+  ]
+}
