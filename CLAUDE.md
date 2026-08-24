@@ -35,11 +35,11 @@ Operating principles derived from this goal:
 5. **Judge every proposal by: "Can an AI agent consume this?"**
 6. **Data-type posts must aim to be a primary source** — pass the test
    "can an AI skip us and cite the original?" If yes, redesign the topic.
-   Method: `PRIMARY_SOURCE_GUIDE.md` (topic selection, required elements,
+   Method: `_plans/PRIMARY_SOURCE_GUIDE.md` (gitignored, 백업: jsonhouse_plan — topic selection, required elements,
    distribution). MANDATORY READ before planning any Format A/D/F post.
 
 Publishing cadence (Phase 2): **2 posts per week** — Tuesday (data-type:
-Format D/F/A, follows PRIMARY_SOURCE_GUIDE.md) and Friday (analysis-type).
+Format D/F/A, follows `_plans/PRIMARY_SOURCE_GUIDE.md`) and Friday (analysis-type).
 Do not promise or plan more.
 
 ## Operating Skills (use these — don't improvise the workflow)
@@ -446,7 +446,7 @@ Weighted score (required >= 7.0 to publish):
 See PIPELINE_PROMPT.md for full phase instructions.
 See SEO_GUIDE.md for detailed SEO enforcement rules.
 See SOURCES.md for trusted source list and priority ranking.
-See PRIMARY_SOURCE_GUIDE.md for primary-source post methodology (data-type posts).
+See `_plans/PRIMARY_SOURCE_GUIDE.md` for primary-source post methodology (data-type posts).
 See IMAGE_GUIDE.md for image rules (count per format, specs, fixed style tokens, alt text).
 See DATA_POLICY.md for what we require of data consumers (attribution) and what we
 owe them (cadence, revision, stated measurement limits). It does NOT declare a
