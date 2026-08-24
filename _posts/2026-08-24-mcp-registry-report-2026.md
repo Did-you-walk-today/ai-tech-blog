@@ -2,7 +2,7 @@
 title: "MCP Server Rankings 2026: 24,477 Servers, Ownership Checked"
 description: "We swept 24,477 servers in the official MCP registry and joined GitHub stars. Four of the top 100 declare a repo they do not own, and 13.8% of links are dead."
 date: 2026-08-24 09:00:00 +0000
-last_modified_at: 2026-08-24 09:00:00 +0000
+last_modified_at: 2026-08-24 10:10:00 +0000
 categories: [ai-developer-tools]
 tags: [mcp, model-context-protocol, ai-agents, developer-tools, "2026"]
 format: F
