@@ -1,0 +1,3603 @@
+{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-08-24",
+  "collected_at": "2026-08-24T07:50:39Z",
+  "source": {
+    "registry": "https://registry.modelcontextprotocol.io/v0/servers?version=latest",
+    "github": "GitHub GraphQL API (stargazerCount)"
+  },
+  "totals": {
+    "servers_latest": 24477,
+    "active": 24220,
+    "deprecated": 257,
+    "with_repository": 19049,
+    "with_packages": 11876,
+    "with_remotes": 13453,
+    "repos_resolved": 16419,
+    "archived_repos": 208,
+    "repo_unreachable": 2630,
+    "with_download_data": 7491
+  },
+  "ownership": {
+    "verified": 14934,
+    "mismatch": 504,
+    "unverifiable": 3611,
+    "no_repo": 5428,
+    "note": "The registry does not verify that an entry's repository.url belongs to the publisher. 'mismatch' means the io.github.* namespace and the repository owner differ — which covers both misattribution and legitimate transfers to an org. 'unverifiable' means the namespace is a domain, so this check cannot rule either way."
+  },
+  "package_registries": {
+    "npm": 7825,
+    "pypi": 3377,
+    "mcpb": 876,
+    "oci": 756,
+    "nuget": 102,
+    "cargo": 33
+  },
+  "registrations_by_month": {
+    "2025-09": 350,
+    "2025-10": 232,
+    "2025-11": 145,
+    "2025-12": 217,
+    "2026-01": 305,
+    "2026-02": 929,
+    "2026-03": 1611,
+    "2026-04": 1970,
+    "2026-05": 2534,
+    "2026-06": 3502,
+    "2026-07": 5166,
+    "2026-08": 7516
+  },
+  "namespace_concentration": {
+    "distinct_namespaces": 14998,
+    "top1_share_pct": 5.36,
+    "top10_share_pct": 16.06,
+    "top_namespaces": [
+      {
+        "namespace": "io.github.pipeworx-io",
+        "servers": 1312
+      },
+      {
+        "namespace": "io.github.mcp-dir",
+        "servers": 1095
+      },
+      {
+        "namespace": "io.github.Evozim",
+        "servers": 375
+      },
+      {
+        "namespace": "io.github.CSOAI-ORG",
+        "servers": 330
+      },
+      {
+        "namespace": "ai.smithery",
+        "servers": 213
+      },
+      {
+        "namespace": "io.github.codespar",
+        "servers": 127
+      },
+      {
+        "namespace": "app.wishpool",
+        "servers": 125
+      },
+      {
+        "namespace": "io.github.cyanheads",
+        "servers": 125
+      },
+      {
+        "namespace": "io.github.Wxt-ai",
+        "servers": 122
+      },
+      {
+        "namespace": "eu.ansvar",
+        "servers": 106
+      },
+      {
+        "namespace": "io.github.Br0ski777",
+        "servers": 101
+      },
+      {
+        "namespace": "io.usefulapi",
+        "servers": 99
+      },
+      {
+        "namespace": "com.mcparmory",
+        "servers": 76
+      },
+      {
+        "namespace": "io.github.nirholas",
+        "servers": 72
+      },
+      {
+        "namespace": "io.github.Servosity",
+        "servers": 63
+      },
+      {
+        "namespace": "io.tooloracle",
+        "servers": 61
+      },
+      {
+        "namespace": "io.github.srotzin",
+        "servers": 60
+      },
+      {
+        "namespace": "io.github.chrischall",
+        "servers": 59
+      },
+      {
+        "namespace": "io.github.wyre-technology",
+        "servers": 57
+      },
+      {
+        "namespace": "io.github.lazymac2x",
+        "servers": 55
+      }
+    ]
+  },
+  "churn": {
+    "compared_to": "2026-08-17",
+    "appeared": 2388,
+    "disappeared": 28,
+    "newly_deprecated": 8,
+    "disappeared_names": [
+      "ai.crestsystems/counterparty-intelligence",
+      "ai.epanya/epanya",
+      "ai.kaiv/commerce-demo",
+      "ai.offerhopper.mcp/shopping-optimizer",
+      "com.flightpowers/google-flights-mcp",
+      "com.haulbound/haulbound",
+      "com.it.dpf/mcp-server",
+      "com.samedaydesk/ai-readiness",
+      "dev.hatchloop/data-enrichment",
+      "dev.hatchloop/pdf-generator",
+      "dev.hatchloop/url-shortener",
+      "io.github.GJB65/compliance-intelligence",
+      "io.github.HypnoLabs-io/motley-mcp",
+      "io.github.LincChad/novence-mcp",
+      "io.github.SEKeener/airtreks-mcp",
+      "io.github.Tunolabs/xyzdb",
+      "io.github.adebayojuwon200-pixel/eodly",
+      "io.github.applefanaimail-blip/bridgenode-mcp",
+      "io.github.jchen225/gloria-mcp",
+      "io.github.riverliu8/pptogo-mcp",
+      "io.github.sam-moreton/openqr",
+      "io.github.samuelbushi/uizze",
+      "io.github.tk26/minoa",
+      "io.misar.mail/misarmail",
+      "net.01mind/orpheus",
+      "systems.entia/entity-verification",
+      "uk.minia2a/mcp",
+      "uk.minia2a/minia2a"
+    ],
+    "newly_deprecated_names": [
+      "ai.tunnelmind/sigil",
+      "build.naru/contract-compass",
+      "com.picaos/mcp",
+      "global.rootz.private/companies",
+      "io.github.Cubiczan/codesentinel",
+      "io.github.Fino-wind/vaultbeat",
+      "io.github.mrgulshanyadav/misarblog-mcp",
+      "io.github.mrgulshanyadav/misarmail-mcp"
+    ]
+  },
+  "ranking_by_stars": [
+    {
+      "rank": 1,
+      "name": "com.browser-use/browser-use",
+      "repo": "browser-use/browser-use",
+      "stars": 110288,
+      "forks": 12122,
+      "pushed_at": "2026-08-22T23:25:03",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 2,
+      "name": "app.worldmonitor/mcp",
+      "repo": "koala73/worldmonitor",
+      "stars": 83966,
+      "forks": 12539,
+      "pushed_at": "2026-08-24T02:37:09",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 3,
+      "name": "io.github.netdata/mcp-server",
+      "repo": "netdata/netdata",
+      "stars": 80269,
+      "forks": 6595,
+      "pushed_at": "2026-08-24T01:46:06",
+      "ownership": "verified"
+    },
+    {
+      "rank": 4,
+      "name": "io.github.IncorporatedPartners/labelhead-artist-momentum",
+      "repo": "paperclipai/paperclip",
+      "stars": 79252,
+      "forks": 14531,
+      "pushed_at": "2026-08-24T04:25:01",
+      "ownership": "mismatch"
+    },
+    {
+      "rank": 5,
+      "name": "io.github.D4Vinci/Scrapling",
+      "repo": "D4Vinci/Scrapling",
+      "stars": 76144,
+      "forks": 7614,
+      "pushed_at": "2026-08-23T19:49:06",
+      "ownership": "verified"
+    },
+    {
+      "rank": 6,
+      "name": "io.github.ruvnet/claude-flow",
+      "repo": "ruvnet/claude-flow",
+      "stars": 69132,
+      "forks": 8276,
+      "pushed_at": "2026-08-22T16:40:30",
+      "ownership": "verified"
+    },
+    {
+      "rank": 7,
+      "name": "io.github.upstash/context7",
+      "repo": "upstash/context7",
+      "stars": 61126,
+      "forks": 2943,
+      "pushed_at": "2026-08-21T08:01:35",
+      "ownership": "verified"
+    },
+    {
+      "rank": 8,
+      "name": "io.github.tldraw/tldraw",
+      "repo": "tldraw/tldraw",
+      "stars": 49927,
+      "forks": 3481,
+      "pushed_at": "2026-08-23T18:06:09",
+      "ownership": "verified"
+    },
+    {
+      "rank": 9,
+      "name": "io.github.ChromeDevTools/chrome-devtools-mcp",
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "stars": 49617,
+      "forks": 3477,
+      "pushed_at": "2026-08-24T04:28:58",
+      "ownership": "verified"
+    },
+    {
+      "rank": 10,
+      "name": "io.github.metabase/mcp",
+      "repo": "metabase/metabase",
+      "stars": 48897,
+      "forks": 6767,
+      "pushed_at": "2026-08-24T03:58:36",
+      "ownership": "verified"
+    },
+    {
+      "rank": 11,
+      "name": "com.puter/mcp-server",
+      "repo": "HeyPuter/puter",
+      "stars": 43204,
+      "forks": 4032,
+      "pushed_at": "2026-08-24T04:28:58",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 12,
+      "name": "io.github.amruthpillai/reactive-resume",
+      "repo": "amruthpillai/reactive-resume",
+      "stars": 41605,
+      "forks": 4654,
+      "pushed_at": "2026-08-20T08:56:18",
+      "ownership": "verified"
+    },
+    {
+      "rank": 13,
+      "name": "io.github.DeusData/codebase-memory-mcp",
+      "repo": "DeusData/codebase-memory-mcp",
+      "stars": 40204,
+      "forks": 3246,
+      "pushed_at": "2026-08-23T23:18:13",
+      "ownership": "verified"
+    },
+    {
+      "rank": 14,
+      "name": "io.github.PostHog/mcp",
+      "repo": "PostHog/posthog",
+      "stars": 38791,
+      "forks": 3266,
+      "pushed_at": "2026-08-24T04:36:17",
+      "ownership": "verified"
+    },
+    {
+      "rank": 15,
+      "name": "io.github.bytedance/mcp-server-browser",
+      "repo": "bytedance/UI-TARS-desktop",
+      "stars": 38699,
+      "forks": 3907,
+      "pushed_at": "2026-08-05T02:48:59",
+      "ownership": "verified"
+    },
+    {
+      "rank": 16,
+      "name": "io.github.microsoft/playwright-mcp",
+      "repo": "microsoft/playwright-mcp",
+      "stars": 36408,
+      "forks": 3051,
+      "pushed_at": "2026-08-21T22:46:04",
+      "ownership": "verified"
+    },
+    {
+      "rank": 17,
+      "name": "io.github.github/github-mcp-server",
+      "repo": "github/github-mcp-server",
+      "stars": 32458,
+      "forks": 4841,
+      "pushed_at": "2026-08-21T19:33:51",
+      "ownership": "verified"
+    },
+    {
+      "rank": 18,
+      "name": "io.github.oraios/serena",
+      "repo": "oraios/serena",
+      "stars": 28423,
+      "forks": 1914,
+      "pushed_at": "2026-08-20T06:51:15",
+      "ownership": "verified"
+    },
+    {
+      "rank": 19,
+      "name": "ai.com.mcp/skills-search",
+      "repo": "agentskills/agentskills",
+      "stars": 24633,
+      "forks": 1817,
+      "pushed_at": "2026-08-09T20:36:04",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 20,
+      "name": "dev.ohmyposh/validator",
+      "repo": "JanDeDobbeleer/oh-my-posh",
+      "stars": 23335,
+      "forks": 2776,
+      "pushed_at": "2026-08-21T00:03:11",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 21,
+      "name": "io.github.Skyvern-AI/skyvern",
+      "repo": "Skyvern-AI/skyvern",
+      "stars": 22838,
+      "forks": 2144,
+      "pushed_at": "2026-08-24T03:48:58",
+      "ownership": "verified"
+    },
+    {
+      "rank": 22,
+      "name": "io.github.screenpipe/screenpipe-mcp",
+      "repo": "screenpipe/screenpipe",
+      "stars": 21191,
+      "forks": 2126,
+      "pushed_at": "2026-08-24T04:43:10",
+      "ownership": "verified"
+    },
+    {
+      "rank": 23,
+      "name": "io.github.modelscope/funasr-mcp",
+      "repo": "modelscope/FunASR",
+      "stars": 19985,
+      "forks": 2001,
+      "pushed_at": "2026-08-21T04:17:05",
+      "ownership": "verified"
+    },
+    {
+      "rank": 24,
+      "name": "io.github.compiler-explorer/compiler-explorer",
+      "repo": "compiler-explorer/compiler-explorer",
+      "stars": 18997,
+      "forks": 2098,
+      "pushed_at": "2026-08-23T17:31:10",
+      "ownership": "verified"
+    },
+    {
+      "rank": 25,
+      "name": "io.github.keploy/mcp",
+      "repo": "keploy/keploy",
+      "stars": 18414,
+      "forks": 2337,
+      "pushed_at": "2026-08-23T07:44:44",
+      "ownership": "verified"
+    },
+    {
+      "rank": 26,
+      "name": "io.github.t8y2/dbx",
+      "repo": "t8y2/dbx",
+      "stars": 16346,
+      "forks": 1609,
+      "pushed_at": "2026-08-24T04:38:12",
+      "ownership": "verified"
+    },
+    {
+      "rank": 27,
+      "name": "io.github.googleapis/genai-toolbox",
+      "repo": "googleapis/genai-toolbox",
+      "stars": 16244,
+      "forks": 1695,
+      "pushed_at": "2026-08-21T22:54:07",
+      "ownership": "verified"
+    },
+    {
+      "rank": 28,
+      "name": "io.github.googleapis/mcp-toolbox",
+      "repo": "googleapis/mcp-toolbox",
+      "stars": 16244,
+      "forks": 1695,
+      "pushed_at": "2026-08-21T22:54:07",
+      "ownership": "verified"
+    },
+    {
+      "rank": 29,
+      "name": "io.github.GLips/Figma-Context-MCP",
+      "repo": "GLips/Figma-Context-MCP",
+      "stars": 15706,
+      "forks": 1248,
+      "pushed_at": "2026-08-07T04:58:42",
+      "ownership": "verified"
+    },
+    {
+      "rank": 30,
+      "name": "io.github.open-metadata/openmetadata-mcp",
+      "repo": "open-metadata/OpenMetadata",
+      "stars": 14953,
+      "forks": 2330,
+      "pushed_at": "2026-08-24T04:38:59",
+      "ownership": "verified"
+    },
+    {
+      "rank": 31,
+      "name": "io.github.coder/coder",
+      "repo": "coder/coder",
+      "stars": 14234,
+      "forks": 1447,
+      "pushed_at": "2026-08-24T04:22:33",
+      "ownership": "verified"
+    },
+    {
+      "rank": 32,
+      "name": "io.github.kubeshark/mcp",
+      "repo": "kubeshark/kubeshark",
+      "stars": 12057,
+      "forks": 546,
+      "pushed_at": "2026-08-18T20:56:27",
+      "ownership": "verified"
+    },
+    {
+      "rank": 33,
+      "name": "io.github.wonderwhy-er/desktop-commander",
+      "repo": "wonderwhy-er/DesktopCommanderMCP",
+      "stars": 9386,
+      "forks": 1141,
+      "pushed_at": "2026-08-21T12:12:40",
+      "ownership": "verified"
+    },
+    {
+      "rank": 34,
+      "name": "io.github.droidrun/mobilerun",
+      "repo": "droidrun/mobilerun",
+      "stars": 9108,
+      "forks": 980,
+      "pushed_at": "2026-08-14T12:11:28",
+      "ownership": "verified"
+    },
+    {
+      "rank": 35,
+      "name": "io.github.MervinPraison/praisonai",
+      "repo": "MervinPraison/PraisonAI",
+      "stars": 8950,
+      "forks": 1416,
+      "pushed_at": "2026-08-24T02:10:42",
+      "ownership": "verified"
+    },
+    {
+      "rank": 36,
+      "name": "io.github.usekaneo/kaneo",
+      "repo": "usekaneo/kaneo",
+      "stars": 8495,
+      "forks": 707,
+      "pushed_at": "2026-08-23T14:21:23",
+      "ownership": "verified"
+    },
+    {
+      "rank": 37,
+      "name": "io.github.jessiemongeon1/sui-kapa",
+      "repo": "MystenLabs/sui",
+      "stars": 7737,
+      "forks": 11664,
+      "pushed_at": "2026-08-23T15:26:09",
+      "ownership": "mismatch"
+    },
+    {
+      "rank": 38,
+      "name": "io.github.firecrawl/firecrawl-mcp-server",
+      "repo": "firecrawl/firecrawl-mcp-server",
+      "stars": 7307,
+      "forks": 861,
+      "pushed_at": "2026-08-21T15:54:03",
+      "ownership": "verified"
+    },
+    {
+      "rank": 39,
+      "name": "ai.com.mcp/registry",
+      "repo": "modelcontextprotocol/registry",
+      "stars": 7186,
+      "forks": 959,
+      "pushed_at": "2026-08-22T22:35:31",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 40,
+      "name": "io.github.CursorTouch/Windows-MCP",
+      "repo": "CursorTouch/Windows-MCP",
+      "stars": 6808,
+      "forks": 828,
+      "pushed_at": "2026-08-22T10:39:03",
+      "ownership": "verified"
+    },
+    {
+      "rank": 41,
+      "name": "io.github.plastic-labs/honcho",
+      "repo": "plastic-labs/honcho",
+      "stars": 6799,
+      "forks": 843,
+      "pushed_at": "2026-08-21T15:35:28",
+      "ownership": "verified"
+    },
+    {
+      "rank": 42,
+      "name": "io.github.airweave-ai/search",
+      "repo": "airweave-ai/airweave",
+      "stars": 6562,
+      "forks": 817,
+      "pushed_at": "2026-06-05T09:52:19",
+      "ownership": "verified"
+    },
+    {
+      "rank": 43,
+      "name": "com.xcodebuildmcp/XcodeBuildMCP",
+      "repo": "getsentry/XcodeBuildMCP",
+      "stars": 6274,
+      "forks": 314,
+      "pushed_at": "2026-08-12T20:00:35",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 44,
+      "name": "io.github.cameroncooke/XcodeBuildMCP",
+      "repo": "cameroncooke/XcodeBuildMCP",
+      "stars": 6274,
+      "forks": 314,
+      "pushed_at": "2026-08-12T20:00:35",
+      "ownership": "verified"
+    },
+    {
+      "rank": 45,
+      "name": "io.github.nirholas/claude-code-explorer-mcp",
+      "repo": "nirholas/claude-code",
+      "stars": 6247,
+      "forks": 13,
+      "pushed_at": "2026-08-17T03:03:38",
+      "ownership": "verified"
+    },
+    {
+      "rank": 46,
+      "name": "dev.repowise/repowise",
+      "repo": "repowise-dev/repowise",
+      "stars": 6189,
+      "forks": 658,
+      "pushed_at": "2026-08-24T04:35:36",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 47,
+      "name": "io.github.mobile-next/mobile-mcp",
+      "repo": "mobile-next/mobile-mcp",
+      "stars": 5985,
+      "forks": 514,
+      "pushed_at": "2026-08-18T08:23:07",
+      "ownership": "verified"
+    },
+    {
+      "rank": 48,
+      "name": "ai.klavis/strata",
+      "repo": "Klavis-AI/klavis",
+      "stars": 5794,
+      "forks": 560,
+      "pushed_at": "2026-06-01T21:21:04",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 49,
+      "name": "io.github.Q00/ouroboros",
+      "repo": "Q00/ouroboros",
+      "stars": 5635,
+      "forks": 564,
+      "pushed_at": "2026-08-24T01:10:44",
+      "ownership": "verified"
+    },
+    {
+      "rank": 50,
+      "name": "io.draw/mcp",
+      "repo": "jgraph/drawio-mcp",
+      "stars": 5257,
+      "forks": 323,
+      "pushed_at": "2026-08-03T20:10:27",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 51,
+      "name": "io.github.JerBouma/financetoolkit",
+      "repo": "JerBouma/FinanceToolkit",
+      "stars": 5251,
+      "forks": 611,
+      "pushed_at": "2026-08-18T12:47:53",
+      "ownership": "verified"
+    },
+    {
+      "rank": 52,
+      "name": "com.jitsu/mcp",
+      "repo": "jitsucom/jitsu",
+      "stars": 5040,
+      "forks": 396,
+      "pushed_at": "2026-08-21T15:45:07",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 53,
+      "name": "com.mock-server/mockserver",
+      "repo": "mock-server/mockserver-monorepo",
+      "stars": 4949,
+      "forks": 1115,
+      "pushed_at": "2026-08-22T05:43:14",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 54,
+      "name": "ai.exa/exa",
+      "repo": "exa-labs/exa-mcp-server",
+      "stars": 4917,
+      "forks": 377,
+      "pushed_at": "2026-08-21T04:44:51",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 55,
+      "name": "io.github.54yyyu/zotero-mcp",
+      "repo": "54yyyu/zotero-mcp",
+      "stars": 4766,
+      "forks": 380,
+      "pushed_at": "2026-08-24T01:08:15",
+      "ownership": "verified"
+    },
+    {
+      "rank": 56,
+      "name": "com.apify/apify-mcp-server",
+      "repo": "apify/apify-mcp-server",
+      "stars": 4720,
+      "forks": 235,
+      "pushed_at": "2026-08-23T21:36:37",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 57,
+      "name": "io.github.KnockOutEZ/wigolo",
+      "repo": "KnockOutEZ/wigolo",
+      "stars": 4639,
+      "forks": 343,
+      "pushed_at": "2026-08-24T04:22:17",
+      "ownership": "verified"
+    },
+    {
+      "rank": 58,
+      "name": "io.github.homeassistant-ai/ha-mcp",
+      "repo": "homeassistant-ai/ha-mcp",
+      "stars": 4488,
+      "forks": 194,
+      "pushed_at": "2026-08-23T22:12:11",
+      "ownership": "verified"
+    },
+    {
+      "rank": 59,
+      "name": "io.github.firebase/firebase-mcp",
+      "repo": "firebase/firebase-tools",
+      "stars": 4458,
+      "forks": 1241,
+      "pushed_at": "2026-08-21T22:53:47",
+      "ownership": "verified"
+    },
+    {
+      "rank": 60,
+      "name": "io.github.antvis/mcp-server-chart",
+      "repo": "antvis/mcp-server-chart",
+      "stars": 4334,
+      "forks": 415,
+      "pushed_at": "2026-08-19T11:23:08",
+      "ownership": "verified"
+    },
+    {
+      "rank": 61,
+      "name": "io.github.callstack/agent-device",
+      "repo": "callstack/agent-device",
+      "stars": 4201,
+      "forks": 261,
+      "pushed_at": "2026-08-23T17:39:32",
+      "ownership": "verified"
+    },
+    {
+      "rank": 62,
+      "name": "io.github.callstackincubator/agent-device",
+      "repo": "callstackincubator/agent-device",
+      "stars": 4201,
+      "forks": 261,
+      "pushed_at": "2026-08-23T17:39:32",
+      "ownership": "verified"
+    },
+    {
+      "rank": 63,
+      "name": "io.github.atilaahmettaner/tradingview-mcp",
+      "repo": "atilaahmettaner/tradingview-mcp",
+      "stars": 4199,
+      "forks": 901,
+      "pushed_at": "2026-08-07T16:03:29",
+      "ownership": "verified"
+    },
+    {
+      "rank": 64,
+      "name": "io.github.txn2/kubefwd",
+      "repo": "txn2/kubefwd",
+      "stars": 4161,
+      "forks": 234,
+      "pushed_at": "2026-08-21T18:39:34",
+      "ownership": "verified"
+    },
+    {
+      "rank": 65,
+      "name": "com.cloudflare.mcp/mcp",
+      "repo": "cloudflare/mcp-server-cloudflare",
+      "stars": 4105,
+      "forks": 492,
+      "pushed_at": "2026-08-22T19:37:34",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 66,
+      "name": "io.github.tolgee/tolgee",
+      "repo": "tolgee/tolgee-platform",
+      "stars": 4080,
+      "forks": 366,
+      "pushed_at": "2026-08-23T14:30:47",
+      "ownership": "verified"
+    },
+    {
+      "rank": 67,
+      "name": "io.github.IvanMurzak/Unity-MCP",
+      "repo": "IvanMurzak/Unity-MCP",
+      "stars": 3971,
+      "forks": 361,
+      "pushed_at": "2026-08-24T02:38:25",
+      "ownership": "verified"
+    },
+    {
+      "rank": 68,
+      "name": "io.github.basicmachines-co/basic-memory",
+      "repo": "basicmachines-co/basic-memory",
+      "stars": 3733,
+      "forks": 261,
+      "pushed_at": "2026-08-24T04:07:29",
+      "ownership": "verified"
+    },
+    {
+      "rank": 69,
+      "name": "com.microsoft/azure",
+      "repo": "microsoft/mcp",
+      "stars": 3598,
+      "forks": 593,
+      "pushed_at": "2026-08-21T23:48:15",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 70,
+      "name": "io.github.revolist/revogrid-mcp",
+      "repo": "revolist/revogrid",
+      "stars": 3437,
+      "forks": 209,
+      "pushed_at": "2026-08-21T16:56:44",
+      "ownership": "verified"
+    },
+    {
+      "rank": 71,
+      "name": "ai.smithery/browserbasehq-mcp-browserbase",
+      "repo": "browserbase/mcp-server-browserbase",
+      "stars": 3409,
+      "forks": 368,
+      "pushed_at": "2026-07-20T21:48:14",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 72,
+      "name": "io.github.nowork-studio/adsagent",
+      "repo": "nowork-studio/toprank",
+      "stars": 3395,
+      "forks": 422,
+      "pushed_at": "2026-08-22T06:29:05",
+      "ownership": "verified"
+    },
+    {
+      "rank": 73,
+      "name": "io.github.nowork-studio/notfair",
+      "repo": "nowork-studio/notfair-plugin",
+      "stars": 3395,
+      "forks": 422,
+      "pushed_at": "2026-08-22T06:29:05",
+      "ownership": "verified"
+    },
+    {
+      "rank": 74,
+      "name": "io.github.bytebase/dbhub",
+      "repo": "bytebase/dbhub",
+      "stars": 3393,
+      "forks": 290,
+      "pushed_at": "2026-08-21T05:20:06",
+      "ownership": "verified"
+    },
+    {
+      "rank": 75,
+      "name": "io.github.mutonby/openshorts",
+      "repo": "mutonby/openshorts",
+      "stars": 3390,
+      "forks": 903,
+      "pushed_at": "2026-08-23T22:38:13",
+      "ownership": "verified"
+    },
+    {
+      "rank": 76,
+      "name": "io.github.grafana/mcp-grafana",
+      "repo": "grafana/mcp-grafana",
+      "stars": 3381,
+      "forks": 428,
+      "pushed_at": "2026-08-23T20:16:37",
+      "ownership": "verified"
+    },
+    {
+      "rank": 77,
+      "name": "io.github.Ataraxy-Labs/sem",
+      "repo": "Ataraxy-Labs/sem",
+      "stars": 3309,
+      "forks": 101,
+      "pushed_at": "2026-08-24T03:33:47",
+      "ownership": "verified"
+    },
+    {
+      "rank": 78,
+      "name": "io.github.giancarloerra/socraticode",
+      "repo": "giancarloerra/socraticode",
+      "stars": 3274,
+      "forks": 409,
+      "pushed_at": "2026-08-14T17:39:58",
+      "ownership": "verified"
+    },
+    {
+      "rank": 79,
+      "name": "io.github.divu2025/codemaster",
+      "repo": "codeaashu/claude-code",
+      "stars": 3257,
+      "forks": 3661,
+      "pushed_at": "2026-04-22T07:08:37",
+      "ownership": "mismatch"
+    },
+    {
+      "rank": 80,
+      "name": "io.github.butterbase-ai/mcp",
+      "repo": "butterbase-ai/butterbase-oss",
+      "stars": 3216,
+      "forks": 159,
+      "pushed_at": "2026-08-24T03:55:19",
+      "ownership": "verified"
+    },
+    {
+      "rank": 81,
+      "name": "io.github.blazickjp/arxiv-mcp-server",
+      "repo": "blazickjp/arxiv-mcp-server",
+      "stars": 3068,
+      "forks": 251,
+      "pushed_at": "2026-08-24T00:00:41",
+      "ownership": "verified"
+    },
+    {
+      "rank": 82,
+      "name": "io.github.skyhook-io/radar",
+      "repo": "skyhook-io/radar",
+      "stars": 3056,
+      "forks": 179,
+      "pushed_at": "2026-08-23T21:05:06",
+      "ownership": "verified"
+    },
+    {
+      "rank": 83,
+      "name": "io.github.signerlabs/shipswift",
+      "repo": "signerlabs/ShipSwift",
+      "stars": 2965,
+      "forks": 176,
+      "pushed_at": "2026-08-09T16:23:04",
+      "ownership": "verified"
+    },
+    {
+      "rank": 84,
+      "name": "com.supabase/mcp",
+      "repo": "supabase/mcp",
+      "stars": 2871,
+      "forks": 395,
+      "pushed_at": "2026-08-22T06:10:31",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 85,
+      "name": "io.github.nteract/semiotic",
+      "repo": "nteract/semiotic",
+      "stars": 2691,
+      "forks": 136,
+      "pushed_at": "2026-08-24T02:35:35",
+      "ownership": "verified"
+    },
+    {
+      "rank": 86,
+      "name": "com.medplum/mcp",
+      "repo": "medplum/medplum",
+      "stars": 2624,
+      "forks": 904,
+      "pushed_at": "2026-08-22T00:58:07",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 87,
+      "name": "io.github.brightdata/brightdata-mcp",
+      "repo": "brightdata/brightdata-mcp",
+      "stars": 2611,
+      "forks": 324,
+      "pushed_at": "2026-08-12T07:39:54",
+      "ownership": "verified"
+    },
+    {
+      "rank": 88,
+      "name": "io.github.jgravelle/jcodemunch-mcp",
+      "repo": "jgravelle/jcodemunch-mcp",
+      "stars": 2609,
+      "forks": 356,
+      "pushed_at": "2026-08-24T01:56:29",
+      "ownership": "verified"
+    },
+    {
+      "rank": 89,
+      "name": "io.github.dgunning/edgartools",
+      "repo": "dgunning/edgartools",
+      "stars": 2608,
+      "forks": 468,
+      "pushed_at": "2026-08-24T01:33:30",
+      "ownership": "verified"
+    },
+    {
+      "rank": 90,
+      "name": "io.github.tavily-ai/tavily-mcp",
+      "repo": "tavily-ai/tavily-mcp",
+      "stars": 2349,
+      "forks": 287,
+      "pushed_at": "2026-08-20T14:11:49",
+      "ownership": "verified"
+    },
+    {
+      "rank": 91,
+      "name": "io.github.llmsresearch/paperbanana",
+      "repo": "llmsresearch/paperbanana",
+      "stars": 2272,
+      "forks": 333,
+      "pushed_at": "2026-08-17T18:00:05",
+      "ownership": "verified"
+    },
+    {
+      "rank": 92,
+      "name": "io.github.software-mansion/argent",
+      "repo": "software-mansion/argent",
+      "stars": 2152,
+      "forks": 73,
+      "pushed_at": "2026-08-23T21:00:31",
+      "ownership": "verified"
+    },
+    {
+      "rank": 93,
+      "name": "io.github.HUANGCHIHHUNGLeo/claude-real-video",
+      "repo": "HUANGCHIHHUNGLeo/claude-real-video",
+      "stars": 2057,
+      "forks": 176,
+      "pushed_at": "2026-08-22T11:12:23",
+      "ownership": "verified"
+    },
+    {
+      "rank": 94,
+      "name": "io.github.containers/kubernetes-mcp-server",
+      "repo": "containers/kubernetes-mcp-server",
+      "stars": 2010,
+      "forks": 425,
+      "pushed_at": "2026-08-24T01:05:00",
+      "ownership": "verified"
+    },
+    {
+      "rank": 95,
+      "name": "io.github.PremierInc/azure-devops",
+      "repo": "microsoft/azure-devops-mcp",
+      "stars": 1974,
+      "forks": 636,
+      "pushed_at": "2026-08-21T14:24:44",
+      "ownership": "mismatch"
+    },
+    {
+      "rank": 96,
+      "name": "io.github.vmoranv/jshookmcp",
+      "repo": "vmoranv/jshookmcp",
+      "stars": 1943,
+      "forks": 453,
+      "pushed_at": "2026-08-04T12:24:15",
+      "ownership": "verified"
+    },
+    {
+      "rank": 97,
+      "name": "com.figma.mcp/mcp",
+      "repo": "figma/mcp-server-guide",
+      "stars": 1915,
+      "forks": 176,
+      "pushed_at": "2026-08-20T20:45:04",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 98,
+      "name": "io.github.zereight/gitlab-mcp",
+      "repo": "zereight/gitlab-mcp",
+      "stars": 1915,
+      "forks": 340,
+      "pushed_at": "2026-08-24T04:28:12",
+      "ownership": "verified"
+    },
+    {
+      "rank": 99,
+      "name": "com.microsoft/microsoft-learn-mcp",
+      "repo": "MicrosoftDocs/mcp",
+      "stars": 1853,
+      "forks": 233,
+      "pushed_at": "2026-08-12T20:00:41",
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 100,
+      "name": "io.github.timescale/pg-aiguide",
+      "repo": "timescale/pg-aiguide",
+      "stars": 1818,
+      "forks": 105,
+      "pushed_at": "2026-06-26T19:47:09",
+      "ownership": "verified"
+    }
+  ],
+  "ranking_ownership_summary": {
+    "unverifiable": 21,
+    "verified": 75,
+    "mismatch": 4
+  },
+  "ranking_by_star_delta": [
+    {
+      "rank": 1,
+      "name": "io.github.D4Vinci/Scrapling",
+      "repo": "D4Vinci/Scrapling",
+      "stars": 76144,
+      "star_delta": 1490,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T19:49:06",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 2,
+      "name": "app.worldmonitor/mcp",
+      "repo": "koala73/worldmonitor",
+      "stars": 83966,
+      "star_delta": 1467,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-24T02:37:09",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 3,
+      "name": "io.github.t8y2/dbx",
+      "repo": "t8y2/dbx",
+      "stars": 16346,
+      "star_delta": 1132,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:38:12",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 4,
+      "name": "io.github.ruvnet/claude-flow",
+      "repo": "ruvnet/claude-flow",
+      "stars": 69132,
+      "star_delta": 1100,
+      "ownership": "verified",
+      "pushed_at": "2026-08-22T16:40:30",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 5,
+      "name": "io.github.PostHog/mcp",
+      "repo": "PostHog/posthog",
+      "stars": 38791,
+      "star_delta": 1078,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:36:17",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 6,
+      "name": "io.github.DeusData/codebase-memory-mcp",
+      "repo": "DeusData/codebase-memory-mcp",
+      "stars": 40204,
+      "star_delta": 1021,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T23:18:13",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 7,
+      "name": "io.github.amruthpillai/reactive-resume",
+      "repo": "amruthpillai/reactive-resume",
+      "stars": 41605,
+      "star_delta": 902,
+      "ownership": "verified",
+      "pushed_at": "2026-08-20T08:56:18",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 8,
+      "name": "com.browser-use/browser-use",
+      "repo": "browser-use/browser-use",
+      "stars": 110288,
+      "star_delta": 812,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-22T23:25:03",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 9,
+      "name": "com.apify/apify-mcp-server",
+      "repo": "apify/apify-mcp-server",
+      "stars": 4720,
+      "star_delta": 804,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-23T21:36:37",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 10,
+      "name": "io.github.IncorporatedPartners/labelhead-artist-momentum",
+      "repo": "paperclipai/paperclip",
+      "stars": 79252,
+      "star_delta": 654,
+      "ownership": "mismatch",
+      "pushed_at": "2026-08-24T04:25:01",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 11,
+      "name": "io.github.ChromeDevTools/chrome-devtools-mcp",
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "stars": 49617,
+      "star_delta": 338,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:28:58",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 12,
+      "name": "io.github.oraios/serena",
+      "repo": "oraios/serena",
+      "stars": 28423,
+      "star_delta": 302,
+      "ownership": "verified",
+      "pushed_at": "2026-08-20T06:51:15",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 13,
+      "name": "ai.com.mcp/skills-search",
+      "repo": "agentskills/agentskills",
+      "stars": 24633,
+      "star_delta": 277,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-09T20:36:04",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 14,
+      "name": "io.github.upstash/context7",
+      "repo": "upstash/context7",
+      "stars": 61126,
+      "star_delta": 267,
+      "ownership": "verified",
+      "pushed_at": "2026-08-21T08:01:35",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 15,
+      "name": "io.github.mutonby/openshorts",
+      "repo": "mutonby/openshorts",
+      "stars": 3390,
+      "star_delta": 244,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T22:38:13",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 16,
+      "name": "dev.repowise/repowise",
+      "repo": "repowise-dev/repowise",
+      "stars": 6189,
+      "star_delta": 242,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-24T04:35:36",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 17,
+      "name": "io.github.microsoft/playwright-mcp",
+      "repo": "microsoft/playwright-mcp",
+      "stars": 36408,
+      "star_delta": 216,
+      "ownership": "verified",
+      "pushed_at": "2026-08-21T22:46:04",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 18,
+      "name": "io.github.screenpipe/screenpipe-mcp",
+      "repo": "screenpipe/screenpipe",
+      "stars": 21191,
+      "star_delta": 213,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:43:10",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 19,
+      "name": "io.github.atilaahmettaner/tradingview-mcp",
+      "repo": "atilaahmettaner/tradingview-mcp",
+      "stars": 4199,
+      "star_delta": 208,
+      "ownership": "verified",
+      "pushed_at": "2026-08-07T16:03:29",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 20,
+      "name": "io.github.RareSense/Nova3D",
+      "repo": "RareSense/Nova3D",
+      "stars": 678,
+      "star_delta": 175,
+      "ownership": "verified",
+      "pushed_at": "2026-08-12T14:06:27",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 21,
+      "name": "io.github.usekaneo/kaneo",
+      "repo": "usekaneo/kaneo",
+      "stars": 8495,
+      "star_delta": 166,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T14:21:23",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 22,
+      "name": "io.github.github/github-mcp-server",
+      "repo": "github/github-mcp-server",
+      "stars": 32458,
+      "star_delta": 162,
+      "ownership": "verified",
+      "pushed_at": "2026-08-21T19:33:51",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 23,
+      "name": "io.github.Q00/ouroboros",
+      "repo": "Q00/ouroboros",
+      "stars": 5635,
+      "star_delta": 150,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T01:10:44",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 24,
+      "name": "sh.superlog/superlog",
+      "repo": "superloglabs/superlog",
+      "stars": 1389,
+      "star_delta": 135,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-23T06:09:59",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 25,
+      "name": "com.puter/mcp-server",
+      "repo": "HeyPuter/puter",
+      "stars": 43204,
+      "star_delta": 127,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-24T04:28:58",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 26,
+      "name": "io.github.plastic-labs/honcho",
+      "repo": "plastic-labs/honcho",
+      "stars": 6799,
+      "star_delta": 121,
+      "ownership": "verified",
+      "pushed_at": "2026-08-21T15:35:28",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 27,
+      "name": "io.github.us/crw",
+      "repo": "us/crw",
+      "stars": 706,
+      "star_delta": 121,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T23:15:48",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 28,
+      "name": "io.github.tldraw/tldraw",
+      "repo": "tldraw/tldraw",
+      "stars": 49927,
+      "star_delta": 116,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T18:06:09",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 29,
+      "name": "io.github.butterbase-ai/mcp",
+      "repo": "butterbase-ai/butterbase-oss",
+      "stars": 3216,
+      "star_delta": 114,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T03:55:19",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 30,
+      "name": "io.github.modelscope/funasr-mcp",
+      "repo": "modelscope/FunASR",
+      "stars": 19985,
+      "star_delta": 109,
+      "ownership": "verified",
+      "pushed_at": "2026-08-21T04:17:05",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 31,
+      "name": "io.github.metabase/mcp",
+      "repo": "metabase/metabase",
+      "stars": 48897,
+      "star_delta": 102,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T03:58:36",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 32,
+      "name": "io.github.callstack/agent-device",
+      "repo": "callstack/agent-device",
+      "stars": 4201,
+      "star_delta": 93,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T17:39:32",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 33,
+      "name": "io.github.callstackincubator/agent-device",
+      "repo": "callstackincubator/agent-device",
+      "stars": 4201,
+      "star_delta": 93,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T17:39:32",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 34,
+      "name": "io.github.homeassistant-ai/ha-mcp",
+      "repo": "homeassistant-ai/ha-mcp",
+      "stars": 4488,
+      "star_delta": 90,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T22:12:11",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 35,
+      "name": "io.github.bytedance/mcp-server-browser",
+      "repo": "bytedance/UI-TARS-desktop",
+      "stars": 38699,
+      "star_delta": 88,
+      "ownership": "verified",
+      "pushed_at": "2026-08-05T02:48:59",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 36,
+      "name": "io.github.RyanAlberts/agent-harnesses",
+      "repo": "RyanAlberts/best-of-Agent-Harnesses",
+      "stars": 679,
+      "star_delta": 84,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T14:22:36",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 37,
+      "name": "io.github.54yyyu/zotero-mcp",
+      "repo": "54yyyu/zotero-mcp",
+      "stars": 4766,
+      "star_delta": 82,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T01:08:15",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 38,
+      "name": "io.github.skyhook-io/radar",
+      "repo": "skyhook-io/radar",
+      "stars": 3056,
+      "star_delta": 80,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T21:05:06",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 39,
+      "name": "com.boostedchat/travel",
+      "repo": "Boosted-Chat/BoostedTravel",
+      "stars": 1814,
+      "star_delta": 75,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-23T09:51:08",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 40,
+      "name": "io.github.Skyvern-AI/skyvern",
+      "repo": "Skyvern-AI/skyvern",
+      "stars": 22838,
+      "star_delta": 74,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T03:48:58",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 41,
+      "name": "io.github.KnockOutEZ/wigolo",
+      "repo": "KnockOutEZ/wigolo",
+      "stars": 4639,
+      "star_delta": 69,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:22:17",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 42,
+      "name": "io.github.aa0101181514/tw-legal-rag",
+      "repo": "aa0101181514/tw-legal-rag",
+      "stars": 298,
+      "star_delta": 67,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T07:06:48",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 43,
+      "name": "io.github.coder/coder",
+      "repo": "coder/coder",
+      "stars": 14234,
+      "star_delta": 64,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:22:33",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 44,
+      "name": "io.github.artokun/comfyui-mcp",
+      "repo": "artokun/comfyui-mcp",
+      "stars": 658,
+      "star_delta": 63,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:40:03",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 45,
+      "name": "io.github.netdata/mcp-server",
+      "repo": "netdata/netdata",
+      "stars": 80269,
+      "star_delta": 61,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T01:46:06",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 46,
+      "name": "io.github.basicmachines-co/basic-memory",
+      "repo": "basicmachines-co/basic-memory",
+      "stars": 3733,
+      "star_delta": 60,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:07:29",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 47,
+      "name": "io.github.googleapis/genai-toolbox",
+      "repo": "googleapis/genai-toolbox",
+      "stars": 16244,
+      "star_delta": 60,
+      "ownership": "verified",
+      "pushed_at": "2026-08-21T22:54:07",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 48,
+      "name": "io.github.googleapis/mcp-toolbox",
+      "repo": "googleapis/mcp-toolbox",
+      "stars": 16244,
+      "star_delta": 60,
+      "ownership": "verified",
+      "pushed_at": "2026-08-21T22:54:07",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 49,
+      "name": "io.github.open-metadata/openmetadata-mcp",
+      "repo": "open-metadata/OpenMetadata",
+      "stars": 14953,
+      "star_delta": 59,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:38:59",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 50,
+      "name": "com.x402-list/x402-list-mcp",
+      "repo": "mcccsm/x402-list-mcp",
+      "stars": 58,
+      "star_delta": 58,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-07-28T13:35:53",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 51,
+      "name": "io.github.chernistry/bernstein",
+      "repo": "chernistry/bernstein",
+      "stars": 970,
+      "star_delta": 58,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T02:33:59",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 52,
+      "name": "io.github.sipyourdrink-ltd/bernstein",
+      "repo": "sipyourdrink-ltd/bernstein",
+      "stars": 970,
+      "star_delta": 58,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T02:33:59",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 53,
+      "name": "io.github.flop-labs/technocore-chat",
+      "repo": "flop-labs/technocore-chat",
+      "stars": 55,
+      "star_delta": 55,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T04:09:23",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 54,
+      "name": "io.github.firecrawl/firecrawl-mcp-server",
+      "repo": "firecrawl/firecrawl-mcp-server",
+      "stars": 7307,
+      "star_delta": 54,
+      "ownership": "verified",
+      "pushed_at": "2026-08-21T15:54:03",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 55,
+      "name": "io.draw/mcp",
+      "repo": "jgraph/drawio-mcp",
+      "stars": 5257,
+      "star_delta": 52,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-03T20:10:27",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 56,
+      "name": "io.github.IvanMurzak/Unity-MCP",
+      "repo": "IvanMurzak/Unity-MCP",
+      "stars": 3971,
+      "star_delta": 52,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T02:38:25",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 57,
+      "name": "io.github.ohad6k/ditto",
+      "repo": "ohad6k/ditto",
+      "stars": 274,
+      "star_delta": 52,
+      "ownership": "verified",
+      "pushed_at": "2026-08-18T18:14:30",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 58,
+      "name": "io.github.ohad6k/emulo",
+      "repo": "ohad6k/emulo",
+      "stars": 274,
+      "star_delta": 52,
+      "ownership": "verified",
+      "pushed_at": "2026-08-18T18:14:30",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 59,
+      "name": "io.github.dongdongbh/mindwtr",
+      "repo": "dongdongbh/Mindwtr",
+      "stars": 1737,
+      "star_delta": 51,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:11:23",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 60,
+      "name": "io.github.mobile-next/mobile-mcp",
+      "repo": "mobile-next/mobile-mcp",
+      "stars": 5985,
+      "star_delta": 51,
+      "ownership": "verified",
+      "pushed_at": "2026-08-18T08:23:07",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 61,
+      "name": "io.github.software-mansion/argent",
+      "repo": "software-mansion/argent",
+      "stars": 2152,
+      "star_delta": 51,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T21:00:31",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 62,
+      "name": "io.github.wonderwhy-er/desktop-commander",
+      "repo": "wonderwhy-er/DesktopCommanderMCP",
+      "stars": 9386,
+      "star_delta": 51,
+      "ownership": "verified",
+      "pushed_at": "2026-08-21T12:12:40",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 63,
+      "name": "io.github.RekklesNA/proxmox-mcp-plus",
+      "repo": "RekklesNA/ProxmoxMCP-Plus",
+      "stars": 496,
+      "star_delta": 50,
+      "ownership": "verified",
+      "pushed_at": "2026-08-11T13:40:28",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 64,
+      "name": "io.github.Hylouis233/bibverify",
+      "repo": "Hylouis233/bibverify",
+      "stars": 75,
+      "star_delta": 49,
+      "ownership": "verified",
+      "pushed_at": "2026-08-22T13:54:38",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 65,
+      "name": "io.github.sirkirby/unifi-access-mcp",
+      "repo": "sirkirby/unifi-mcp",
+      "stars": 740,
+      "star_delta": 48,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T00:10:16",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 66,
+      "name": "mu.micro/mu",
+      "repo": "micro/mu",
+      "stars": 380,
+      "star_delta": 48,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-24T04:45:24",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 67,
+      "name": "io.github.CursorTouch/Windows-MCP",
+      "repo": "CursorTouch/Windows-MCP",
+      "stars": 6808,
+      "star_delta": 47,
+      "ownership": "verified",
+      "pushed_at": "2026-08-22T10:39:03",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 68,
+      "name": "io.github.MervinPraison/praisonai",
+      "repo": "MervinPraison/PraisonAI",
+      "stars": 8950,
+      "star_delta": 47,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T02:10:42",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 69,
+      "name": "dev.ohmyposh/validator",
+      "repo": "JanDeDobbeleer/oh-my-posh",
+      "stars": 23335,
+      "star_delta": 46,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-21T00:03:11",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 70,
+      "name": "io.github.bergside/typeui",
+      "repo": "bergside/typeui",
+      "stars": 1812,
+      "star_delta": 45,
+      "ownership": "verified",
+      "pushed_at": "2026-07-04T10:11:58",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 71,
+      "name": "io.github.vshulcz/deja-vu",
+      "repo": "vshulcz/deja-vu",
+      "stars": 685,
+      "star_delta": 45,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:41:46",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 72,
+      "name": "io.github.OpenOSINT/openosint",
+      "repo": "OpenOSINT/OpenOSINT",
+      "stars": 1457,
+      "star_delta": 44,
+      "ownership": "verified",
+      "pushed_at": "2026-08-20T07:19:52",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 73,
+      "name": "io.github.Battam1111/omniseek",
+      "repo": "Battam1111/omniseek",
+      "stars": 47,
+      "star_delta": 43,
+      "ownership": "verified",
+      "pushed_at": "2026-08-22T13:45:59",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 74,
+      "name": "ai.exa/exa",
+      "repo": "exa-labs/exa-mcp-server",
+      "stars": 4917,
+      "star_delta": 41,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-21T04:44:51",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 75,
+      "name": "io.github.iwe-org/iwe",
+      "repo": "iwe-org/iwe",
+      "stars": 1571,
+      "star_delta": 41,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T02:06:07",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 76,
+      "name": "io.github.jgravelle/jcodemunch-mcp",
+      "repo": "jgravelle/jcodemunch-mcp",
+      "stars": 2609,
+      "star_delta": 41,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T01:56:29",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 77,
+      "name": "com.decionis/mcp",
+      "repo": "decionis/agent-safe-pipeline",
+      "stars": 533,
+      "star_delta": 39,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-24T04:35:19",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 78,
+      "name": "io.github.droidrun/mobilerun",
+      "repo": "droidrun/mobilerun",
+      "stars": 9108,
+      "star_delta": 39,
+      "ownership": "verified",
+      "pushed_at": "2026-08-14T12:11:28",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 79,
+      "name": "io.github.vmoranv/jshookmcp",
+      "repo": "vmoranv/jshookmcp",
+      "stars": 1943,
+      "star_delta": 38,
+      "ownership": "verified",
+      "pushed_at": "2026-08-04T12:24:15",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 80,
+      "name": "io.github.GLips/Figma-Context-MCP",
+      "repo": "GLips/Figma-Context-MCP",
+      "stars": 15706,
+      "star_delta": 37,
+      "ownership": "verified",
+      "pushed_at": "2026-08-07T04:58:42",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 81,
+      "name": "io.github.containers/kubernetes-mcp-server",
+      "repo": "containers/kubernetes-mcp-server",
+      "stars": 2010,
+      "star_delta": 37,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T01:05:00",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 82,
+      "name": "io.github.MarcellM01/tinysearch",
+      "repo": "MarcellM01/TinySearch",
+      "stars": 214,
+      "star_delta": 33,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T18:13:51",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 83,
+      "name": "io.github.TinySuiteHQ/tinysearch",
+      "repo": "TinySuiteHQ/TinySearch",
+      "stars": 214,
+      "star_delta": 33,
+      "ownership": "verified",
+      "pushed_at": "2026-08-23T18:13:51",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 84,
+      "name": "io.github.kentcdodds/kody",
+      "repo": "kentcdodds/kody",
+      "stars": 490,
+      "star_delta": 33,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:41:35",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 85,
+      "name": "io.github.lennney/mcp-slim-guard",
+      "repo": "lennney/mcp-slim-guard",
+      "stars": 124,
+      "star_delta": 33,
+      "ownership": "verified",
+      "pushed_at": "2026-08-14T03:22:42",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 86,
+      "name": "io.github.riponcm/projectmem",
+      "repo": "riponcm/projectmem",
+      "stars": 748,
+      "star_delta": 33,
+      "ownership": "verified",
+      "pushed_at": "2026-08-06T01:49:30",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 87,
+      "name": "io.github.sbroenne/mcp-server-excel",
+      "repo": "sbroenne/mcp-server-excel",
+      "stars": 563,
+      "star_delta": 31,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T03:16:10",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 88,
+      "name": "io.github.alisaitteke/photoshop-mcp",
+      "repo": "alisaitteke/photoshop-mcp",
+      "stars": 340,
+      "star_delta": 30,
+      "ownership": "verified",
+      "pushed_at": "2026-08-10T23:26:47",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 89,
+      "name": "io.github.morluto/rea",
+      "repo": "morluto/rea",
+      "stars": 370,
+      "star_delta": 30,
+      "ownership": "verified",
+      "pushed_at": "2026-08-14T06:38:37",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 90,
+      "name": "io.github.llmsresearch/paperbanana",
+      "repo": "llmsresearch/paperbanana",
+      "stars": 2272,
+      "star_delta": 29,
+      "ownership": "verified",
+      "pushed_at": "2026-08-17T18:00:05",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 91,
+      "name": "io.github.nowork-studio/adsagent",
+      "repo": "nowork-studio/toprank",
+      "stars": 3395,
+      "star_delta": 29,
+      "ownership": "verified",
+      "pushed_at": "2026-08-22T06:29:05",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 92,
+      "name": "io.github.nowork-studio/notfair",
+      "repo": "nowork-studio/notfair-plugin",
+      "stars": 3395,
+      "star_delta": 29,
+      "ownership": "verified",
+      "pushed_at": "2026-08-22T06:29:05",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 93,
+      "name": "io.github.signerlabs/shipswift",
+      "repo": "signerlabs/ShipSwift",
+      "stars": 2965,
+      "star_delta": 29,
+      "ownership": "verified",
+      "pushed_at": "2026-08-09T16:23:04",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 94,
+      "name": "ai.com.mcp/registry",
+      "repo": "modelcontextprotocol/registry",
+      "stars": 7186,
+      "star_delta": 27,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-22T22:35:31",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 95,
+      "name": "com.xcodebuildmcp/XcodeBuildMCP",
+      "repo": "getsentry/XcodeBuildMCP",
+      "stars": 6274,
+      "star_delta": 27,
+      "ownership": "unverifiable",
+      "pushed_at": "2026-08-12T20:00:35",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 96,
+      "name": "io.github.AVIDS2/memorix",
+      "repo": "AVIDS2/memorix",
+      "stars": 681,
+      "star_delta": 27,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:04:13",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 97,
+      "name": "io.github.HUANGCHIHHUNGLeo/claude-real-video",
+      "repo": "HUANGCHIHHUNGLeo/claude-real-video",
+      "stars": 2057,
+      "star_delta": 27,
+      "ownership": "verified",
+      "pushed_at": "2026-08-22T11:12:23",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 98,
+      "name": "io.github.Ikalus1988/misakanet",
+      "repo": "Ikalus1988/MisakaNet",
+      "stars": 424,
+      "star_delta": 27,
+      "ownership": "verified",
+      "pushed_at": "2026-08-24T04:10:31",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 99,
+      "name": "io.github.bytebase/dbhub",
+      "repo": "bytebase/dbhub",
+      "stars": 3393,
+      "star_delta": 27,
+      "ownership": "verified",
+      "pushed_at": "2026-08-21T05:20:06",
+      "since": "2026-08-17"
+    },
+    {
+      "rank": 100,
+      "name": "io.github.cameroncooke/XcodeBuildMCP",
+      "repo": "cameroncooke/XcodeBuildMCP",
+      "stars": 6274,
+      "star_delta": 27,
+      "ownership": "verified",
+      "pushed_at": "2026-08-12T20:00:35",
+      "since": "2026-08-17"
+    }
+  ],
+  "ranking_by_downloads": [
+    {
+      "rank": 1,
+      "name": "io.github.microsoft/playwright-mcp",
+      "repo": "microsoft/playwright-mcp",
+      "downloads_weekly": 5618931,
+      "stars": 36408,
+      "ownership": "verified"
+    },
+    {
+      "rank": 2,
+      "name": "io.github.firebase/firebase-mcp",
+      "repo": "firebase/firebase-tools",
+      "downloads_weekly": 2770128,
+      "stars": 4458,
+      "ownership": "verified"
+    },
+    {
+      "rank": 3,
+      "name": "io.github.ChromeDevTools/chrome-devtools-mcp",
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "downloads_weekly": 2337427,
+      "stars": 49617,
+      "ownership": "verified"
+    },
+    {
+      "rank": 4,
+      "name": "io.github.storybookjs/addon-mcp",
+      "repo": "storybookjs/mcp",
+      "downloads_weekly": 1975221,
+      "stars": 267,
+      "ownership": "verified"
+    },
+    {
+      "rank": 5,
+      "name": "io.github.upstash/context7",
+      "repo": "upstash/context7",
+      "downloads_weekly": 843261,
+      "stars": 61126,
+      "ownership": "verified"
+    },
+    {
+      "rank": 6,
+      "name": "io.snyk/mcp",
+      "repo": "snyk/studio-mcp",
+      "downloads_weekly": 740081,
+      "stars": 54,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 7,
+      "name": "io.github.team-telnyx/telnyx",
+      "repo": "team-telnyx/telnyx-node",
+      "downloads_weekly": 264680,
+      "stars": 197,
+      "ownership": "verified"
+    },
+    {
+      "rank": 8,
+      "name": "io.github.hostinger/hostinger-api-mcp",
+      "repo": "hostinger/api-mcp-server",
+      "downloads_weekly": 170991,
+      "stars": 144,
+      "ownership": "verified"
+    },
+    {
+      "rank": 9,
+      "name": "io.github.artokun/comfyui-mcp",
+      "repo": "artokun/comfyui-mcp",
+      "downloads_weekly": 158858,
+      "stars": 658,
+      "ownership": "verified"
+    },
+    {
+      "rank": 10,
+      "name": "com.xcodebuildmcp/XcodeBuildMCP",
+      "repo": "getsentry/XcodeBuildMCP",
+      "downloads_weekly": 157219,
+      "stars": 6274,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 11,
+      "name": "com.supabase/mcp",
+      "repo": "supabase/mcp",
+      "downloads_weekly": 151659,
+      "stars": 2871,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 12,
+      "name": "io.github.zereight/gitlab-mcp",
+      "repo": "zereight/gitlab-mcp",
+      "downloads_weekly": 145226,
+      "stars": 1915,
+      "ownership": "verified"
+    },
+    {
+      "rank": 13,
+      "name": "com.microsoft/azure",
+      "repo": "microsoft/mcp",
+      "downloads_weekly": 142523,
+      "stars": 3598,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 14,
+      "name": "io.github.callstack/agent-device",
+      "repo": "callstack/agent-device",
+      "downloads_weekly": 128003,
+      "stars": 4201,
+      "ownership": "verified"
+    },
+    {
+      "rank": 15,
+      "name": "io.github.getsentry/sentry-mcp",
+      "repo": "getsentry/sentry-mcp",
+      "downloads_weekly": 113370,
+      "stars": 827,
+      "ownership": "verified"
+    },
+    {
+      "rank": 16,
+      "name": "io.github.SAP/fiori-mcp-server",
+      "repo": "SAP/open-ux-tools",
+      "downloads_weekly": 101983,
+      "stars": 155,
+      "ownership": "verified"
+    },
+    {
+      "rank": 17,
+      "name": "io.github.UI5/mcp-server",
+      "repo": "UI5/mcp-server",
+      "downloads_weekly": 97661,
+      "stars": 98,
+      "ownership": "verified"
+    },
+    {
+      "rank": 18,
+      "name": "io.github.vercel/next-devtools-mcp",
+      "repo": "vercel/next-devtools-mcp",
+      "downloads_weekly": 89379,
+      "stars": 811,
+      "ownership": "verified"
+    },
+    {
+      "rank": 19,
+      "name": "io.github.mongodb-js/mongodb-mcp-server",
+      "repo": "mongodb-js/mongodb-mcp-server",
+      "downloads_weekly": 87278,
+      "stars": 1106,
+      "ownership": "verified"
+    },
+    {
+      "rank": 20,
+      "name": "io.github.GLips/Figma-Context-MCP",
+      "repo": "GLips/Figma-Context-MCP",
+      "downloads_weekly": 84666,
+      "stars": 15706,
+      "ownership": "verified"
+    },
+    {
+      "rank": 21,
+      "name": "io.github.nrwl/nx-console",
+      "repo": "nrwl/nx-console",
+      "downloads_weekly": 75782,
+      "stars": 1410,
+      "ownership": "verified"
+    },
+    {
+      "rank": 22,
+      "name": "io.github.software-mansion/argent",
+      "repo": "software-mansion/argent",
+      "downloads_weekly": 66194,
+      "stars": 2152,
+      "ownership": "verified"
+    },
+    {
+      "rank": 23,
+      "name": "io.github.cap-js/mcp-server",
+      "repo": "cap-js/mcp-server",
+      "downloads_weekly": 61736,
+      "stars": 109,
+      "ownership": "verified"
+    },
+    {
+      "rank": 24,
+      "name": "io.github.firecrawl/firecrawl-mcp-server",
+      "repo": "firecrawl/firecrawl-mcp-server",
+      "downloads_weekly": 50599,
+      "stars": 7307,
+      "ownership": "verified"
+    },
+    {
+      "rank": 25,
+      "name": "io.github.Softeria/ms-365-mcp-server",
+      "repo": "Softeria/ms-365-mcp-server",
+      "downloads_weekly": 48224,
+      "stars": 928,
+      "ownership": "verified"
+    },
+    {
+      "rank": 26,
+      "name": "io.github.wonderwhy-er/desktop-commander",
+      "repo": "wonderwhy-er/DesktopCommanderMCP",
+      "downloads_weekly": 38696,
+      "stars": 9386,
+      "ownership": "verified"
+    },
+    {
+      "rank": 27,
+      "name": "ai.perplexity/mcp-server",
+      "repo": "",
+      "downloads_weekly": 37005,
+      "stars": null,
+      "ownership": "no_repo"
+    },
+    {
+      "rank": 28,
+      "name": "io.github.bytebase/dbhub",
+      "repo": "bytebase/dbhub",
+      "downloads_weekly": 28056,
+      "stars": 3393,
+      "ownership": "verified"
+    },
+    {
+      "rank": 29,
+      "name": "dev.svelte/mcp",
+      "repo": "sveltejs/ai-tools",
+      "downloads_weekly": 27668,
+      "stars": 309,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 30,
+      "name": "io.github.tavily-ai/tavily-mcp",
+      "repo": "tavily-ai/tavily-mcp",
+      "downloads_weekly": 25534,
+      "stars": 2349,
+      "ownership": "verified"
+    },
+    {
+      "rank": 31,
+      "name": "io.github.taazkareem/clickup",
+      "repo": "taazkareem/clickup-mcp-server",
+      "downloads_weekly": 25474,
+      "stars": 50,
+      "ownership": "verified"
+    },
+    {
+      "rank": 32,
+      "name": "io.github.ruvnet/claude-flow",
+      "repo": "ruvnet/claude-flow",
+      "downloads_weekly": 22009,
+      "stars": 69132,
+      "ownership": "verified"
+    },
+    {
+      "rank": 33,
+      "name": "io.github.dynatrace-oss/Dynatrace-mcp",
+      "repo": "dynatrace-oss/Dynatrace-mcp",
+      "downloads_weekly": 20578,
+      "stars": 134,
+      "ownership": "verified"
+    },
+    {
+      "rank": 34,
+      "name": "io.github.ihor-sokoliuk/mcp-searxng",
+      "repo": "ihor-sokoliuk/mcp-searxng",
+      "downloads_weekly": 20068,
+      "stars": 1153,
+      "ownership": "verified"
+    },
+    {
+      "rank": 35,
+      "name": "io.github.TencentCloudBase/cloudbase-mcp",
+      "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+      "downloads_weekly": 18288,
+      "stars": 1074,
+      "ownership": "verified"
+    },
+    {
+      "rank": 36,
+      "name": "io.github.mobile-next/mobile-mcp",
+      "repo": "mobile-next/mobile-mcp",
+      "downloads_weekly": 16728,
+      "stars": 5985,
+      "ownership": "verified"
+    },
+    {
+      "rank": 37,
+      "name": "com.smartbear/smartbear-mcp",
+      "repo": "SmartBear/smartbear-mcp",
+      "downloads_weekly": 16232,
+      "stars": 43,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 38,
+      "name": "io.github.nubo-db/dynoxide",
+      "repo": "nubo-db/dynoxide",
+      "downloads_weekly": 16159,
+      "stars": 83,
+      "ownership": "verified"
+    },
+    {
+      "rank": 39,
+      "name": "io.github.cyanheads/obsidian-mcp-server",
+      "repo": "cyanheads/obsidian-mcp-server",
+      "downloads_weekly": 14586,
+      "stars": 668,
+      "ownership": "verified"
+    },
+    {
+      "rank": 40,
+      "name": "com.postman/postman-mcp-server",
+      "repo": "postmanlabs/postman-mcp-server",
+      "downloads_weekly": 12888,
+      "stars": 302,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 41,
+      "name": "io.github.piotr-agier/google-drive-mcp",
+      "repo": "piotr-agier/google-drive-mcp",
+      "downloads_weekly": 12035,
+      "stars": 205,
+      "ownership": "verified"
+    },
+    {
+      "rank": 42,
+      "name": "io.github.nteract/semiotic",
+      "repo": "nteract/semiotic",
+      "downloads_weekly": 11158,
+      "stars": 2691,
+      "ownership": "verified"
+    },
+    {
+      "rank": 43,
+      "name": "io.github.DeusData/codebase-memory-mcp",
+      "repo": "DeusData/codebase-memory-mcp",
+      "downloads_weekly": 11076,
+      "stars": 40204,
+      "ownership": "verified"
+    },
+    {
+      "rank": 44,
+      "name": "io.github.SAP/mdk-mcp-server",
+      "repo": "sap/mdk-mcp-server",
+      "downloads_weekly": 10746,
+      "stars": 36,
+      "ownership": "verified"
+    },
+    {
+      "rank": 45,
+      "name": "io.github.YawLabs/ctxlint",
+      "repo": "",
+      "downloads_weekly": 10501,
+      "stars": null,
+      "ownership": "no_repo"
+    },
+    {
+      "rank": 46,
+      "name": "io.github.bytedance/mcp-server-browser",
+      "repo": "bytedance/UI-TARS-desktop",
+      "downloads_weekly": 9711,
+      "stars": 38699,
+      "ownership": "verified"
+    },
+    {
+      "rank": 47,
+      "name": "com.microsoft/powerbi-modeling-mcp",
+      "repo": "microsoft/powerbi-modeling-mcp",
+      "downloads_weekly": 9119,
+      "stars": 1092,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 48,
+      "name": "io.github.browserstack/mcp-server",
+      "repo": "browserstack/mcp-server",
+      "downloads_weekly": 9024,
+      "stars": 150,
+      "ownership": "verified"
+    },
+    {
+      "rank": 49,
+      "name": "io.qase/mcp-server",
+      "repo": "qase-tms/qase-mcp-server",
+      "downloads_weekly": 9006,
+      "stars": 31,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 50,
+      "name": "io.github.t8y2/dbx",
+      "repo": "t8y2/dbx",
+      "downloads_weekly": 8962,
+      "stars": 16346,
+      "ownership": "verified"
+    },
+    {
+      "rank": 51,
+      "name": "io.github.containers/kubernetes-mcp-server",
+      "repo": "containers/kubernetes-mcp-server",
+      "downloads_weekly": 8134,
+      "stars": 2010,
+      "ownership": "verified"
+    },
+    {
+      "rank": 52,
+      "name": "io.github.appium/appium-mcp",
+      "repo": "",
+      "downloads_weekly": 8028,
+      "stars": null,
+      "ownership": "no_repo"
+    },
+    {
+      "rank": 53,
+      "name": "io.github.cyanheads/git-mcp-server",
+      "repo": "cyanheads/git-mcp-server",
+      "downloads_weekly": 7908,
+      "stars": 235,
+      "ownership": "verified"
+    },
+    {
+      "rank": 54,
+      "name": "io.github.cyanheads/clinicaltrialsgov-mcp-server",
+      "repo": "cyanheads/clinicaltrialsgov-mcp-server",
+      "downloads_weekly": 7774,
+      "stars": 90,
+      "ownership": "verified"
+    },
+    {
+      "rank": 55,
+      "name": "io.github.AgentPhone-AI/agentphone",
+      "repo": "AgentPhone-AI/agentphone-mcp",
+      "downloads_weekly": 7537,
+      "stars": 116,
+      "ownership": "verified"
+    },
+    {
+      "rank": 56,
+      "name": "io.github.arikusi/deepseek",
+      "repo": "arikusi/deepseek-mcp-server",
+      "downloads_weekly": 7140,
+      "stars": 17,
+      "ownership": "verified"
+    },
+    {
+      "rank": 57,
+      "name": "io.github.brightdata/brightdata-mcp",
+      "repo": "brightdata/brightdata-mcp",
+      "downloads_weekly": 6991,
+      "stars": 2611,
+      "ownership": "verified"
+    },
+    {
+      "rank": 58,
+      "name": "io.github.Ataraxy-Labs/sem",
+      "repo": "Ataraxy-Labs/sem",
+      "downloads_weekly": 6705,
+      "stars": 3309,
+      "ownership": "verified"
+    },
+    {
+      "rank": 59,
+      "name": "io.github.cyanheads/pubmed-mcp-server",
+      "repo": "cyanheads/pubmed-mcp-server",
+      "downloads_weekly": 6676,
+      "stars": 137,
+      "ownership": "verified"
+    },
+    {
+      "rank": 60,
+      "name": "io.github.railwayapp/mcp-server",
+      "repo": "railwayapp/railway-mcp-server",
+      "downloads_weekly": 6384,
+      "stars": 192,
+      "ownership": "verified"
+    },
+    {
+      "rank": 61,
+      "name": "ai.starreel/starreel",
+      "repo": "",
+      "downloads_weekly": 6285,
+      "stars": null,
+      "ownership": "no_repo"
+    },
+    {
+      "rank": 62,
+      "name": "io.github.b1ff/atlassian-dc-mcp-jira",
+      "repo": "b1ff/atlassian-dc-mcp",
+      "downloads_weekly": 6143,
+      "stars": 90,
+      "ownership": "verified"
+    },
+    {
+      "rank": 63,
+      "name": "io.github.growthbook/growthbook-mcp",
+      "repo": "growthbook/growthbook-mcp",
+      "downloads_weekly": 6135,
+      "stars": 23,
+      "ownership": "verified"
+    },
+    {
+      "rank": 64,
+      "name": "io.github.esaio/esa",
+      "repo": "esaio/esa-mcp-server",
+      "downloads_weekly": 6003,
+      "stars": 62,
+      "ownership": "verified"
+    },
+    {
+      "rank": 65,
+      "name": "io.github.chrisdoc/hevy-mcp",
+      "repo": "chrisdoc/hevy-mcp",
+      "downloads_weekly": 5897,
+      "stars": 426,
+      "ownership": "verified"
+    },
+    {
+      "rank": 66,
+      "name": "io.github.brilliantdirectories/brilliant-directories-mcp",
+      "repo": "brilliantdirectories/brilliant-directories-mcp",
+      "downloads_weekly": 5735,
+      "stars": 18,
+      "ownership": "verified"
+    },
+    {
+      "rank": 67,
+      "name": "io.github.screenpipe/screenpipe-mcp",
+      "repo": "screenpipe/screenpipe",
+      "downloads_weekly": 5478,
+      "stars": 21191,
+      "ownership": "verified"
+    },
+    {
+      "rank": 68,
+      "name": "io.github.MatanYemini/bitbucket-mcp",
+      "repo": "",
+      "downloads_weekly": 5425,
+      "stars": null,
+      "ownership": "no_repo"
+    },
+    {
+      "rank": 69,
+      "name": "io.github.codefuturist/email-mcp",
+      "repo": "codefuturist/email-mcp",
+      "downloads_weekly": 5278,
+      "stars": 100,
+      "ownership": "verified"
+    },
+    {
+      "rank": 70,
+      "name": "io.github.letoribo/mcp-graphql-enhanced",
+      "repo": "letoribo/mcp-graphql-enhanced",
+      "downloads_weekly": 5244,
+      "stars": 2,
+      "ownership": "verified"
+    },
+    {
+      "rank": 71,
+      "name": "io.github.dogrucanemek-alt/conarium",
+      "repo": "dogrucanemek-alt/conarium",
+      "downloads_weekly": 5218,
+      "stars": 2,
+      "ownership": "verified"
+    },
+    {
+      "rank": 72,
+      "name": "io.github.putervision/webcrypt",
+      "repo": "putervision/webcrypt",
+      "downloads_weekly": 5211,
+      "stars": 27,
+      "ownership": "verified"
+    },
+    {
+      "rank": 73,
+      "name": "dev.emailmd/emailmd",
+      "repo": "anypost/emailmd",
+      "downloads_weekly": 5190,
+      "stars": 1302,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 74,
+      "name": "io.github.serkan-ozal/browser-devtools-mcp",
+      "repo": "serkan-ozal/browser-devtools-mcp",
+      "downloads_weekly": 5186,
+      "stars": null,
+      "ownership": "verified"
+    },
+    {
+      "rank": 75,
+      "name": "com.gitkraken/gk-cli",
+      "repo": "gitkraken/gk-cli",
+      "downloads_weekly": 5177,
+      "stars": 447,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 76,
+      "name": "io.github.florentine-ai/mcp",
+      "repo": "florentine-ai/mcp",
+      "downloads_weekly": 5148,
+      "stars": 6,
+      "ownership": "verified"
+    },
+    {
+      "rank": 77,
+      "name": "io.github.Regsorm/code-index",
+      "repo": "Regsorm/code-index-mcp",
+      "downloads_weekly": 5117,
+      "stars": 102,
+      "ownership": "verified"
+    },
+    {
+      "rank": 78,
+      "name": "io.github.spacecowboyian/brains",
+      "repo": "spacecowboyian/brains",
+      "downloads_weekly": 5085,
+      "stars": null,
+      "ownership": "verified"
+    },
+    {
+      "rank": 79,
+      "name": "io.github.putervision/state-memory-mcp",
+      "repo": "putervision/state-memory-mcp",
+      "downloads_weekly": 5082,
+      "stars": 69,
+      "ownership": "verified"
+    },
+    {
+      "rank": 80,
+      "name": "io.github.putervision/vision-memory-mcp",
+      "repo": "putervision/vision-memory-mcp",
+      "downloads_weekly": 5079,
+      "stars": 58,
+      "ownership": "verified"
+    },
+    {
+      "rank": 81,
+      "name": "dev.jasonpearson/auto-mobile",
+      "repo": "kaeawc/auto-mobile",
+      "downloads_weekly": 5022,
+      "stars": 45,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 82,
+      "name": "io.github.freema/mcp-gsheets",
+      "repo": "freema/mcp-gsheets",
+      "downloads_weekly": 4700,
+      "stars": 95,
+      "ownership": "verified"
+    },
+    {
+      "rank": 83,
+      "name": "io.github.ruvnet/ruv-swarm",
+      "repo": "ruvnet/ruv-FANN",
+      "downloads_weekly": 4663,
+      "stars": 377,
+      "ownership": "verified"
+    },
+    {
+      "rank": 84,
+      "name": "io.github.TocharianOU/kibana",
+      "repo": "TocharianOU/mcp-server-kibana",
+      "downloads_weekly": 4496,
+      "stars": 79,
+      "ownership": "verified"
+    },
+    {
+      "rank": 85,
+      "name": "com.auth0/mcp",
+      "repo": "auth0/auth0-mcp-server",
+      "downloads_weekly": 4379,
+      "stars": 113,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 86,
+      "name": "io.github.SunrisesIllNeverSee/sigrank-mcp",
+      "repo": "SunrisesIllNeverSee/sigrank-mcp",
+      "downloads_weekly": 4208,
+      "stars": 0,
+      "ownership": "verified"
+    },
+    {
+      "rank": 87,
+      "name": "io.github.majiayu000/remem",
+      "repo": "majiayu000/remem",
+      "downloads_weekly": 4167,
+      "stars": 27,
+      "ownership": "verified"
+    },
+    {
+      "rank": 88,
+      "name": "io.github.webdriverio/mcp",
+      "repo": "webdriverio/mcp",
+      "downloads_weekly": 4119,
+      "stars": 36,
+      "ownership": "verified"
+    },
+    {
+      "rank": 89,
+      "name": "io.github.stabgan/openrouter-multimodal",
+      "repo": "stabgan/openrouter-mcp-multimodal",
+      "downloads_weekly": 4081,
+      "stars": 80,
+      "ownership": "verified"
+    },
+    {
+      "rank": 90,
+      "name": "io.github.bekirdag/pigeonpost",
+      "repo": "bekirdag/pigeonpost",
+      "downloads_weekly": 3975,
+      "stars": 0,
+      "ownership": "verified"
+    },
+    {
+      "rank": 91,
+      "name": "io.github.shinpr/mcp-local-rag",
+      "repo": "shinpr/mcp-local-rag",
+      "downloads_weekly": 3968,
+      "stars": 371,
+      "ownership": "verified"
+    },
+    {
+      "rank": 92,
+      "name": "com.tokportal/mcp",
+      "repo": "tokportal/tokportal-mcp",
+      "downloads_weekly": 3847,
+      "stars": 0,
+      "ownership": "unverifiable"
+    },
+    {
+      "rank": 93,
+      "name": "io.github.shinpr/sub-agents-mcp",
+      "repo": "shinpr/sub-agents-mcp",
+      "downloads_weekly": 3780,
+      "stars": 96,
+      "ownership": "verified"
+    },
+    {
+      "rank": 94,
+      "name": "io.github.antonbabenko/deliberation",
+      "repo": "",
+      "downloads_weekly": 3739,
+      "stars": null,
+      "ownership": "no_repo"
+    },
+    {
+      "rank": 95,
+      "name": "io.github.plur-ai/plur",
+      "repo": "plur-ai/plur",
+      "downloads_weekly": 3713,
+      "stars": 241,
+      "ownership": "verified"
+    },
+    {
+      "rank": 96,
+      "name": "io.github.webmyc/respira-wordpress",
+      "repo": "",
+      "downloads_weekly": 3710,
+      "stars": null,
+      "ownership": "no_repo"
+    },
+    {
+      "rank": 97,
+      "name": "io.github.mohitagw15856/pm-claude-skills",
+      "repo": "mohitagw15856/pm-claude-skills",
+      "downloads_weekly": 3676,
+      "stars": 1305,
+      "ownership": "verified"
+    },
+    {
+      "rank": 98,
+      "name": "io.github.asklokesh/loki-mode",
+      "repo": "asklokesh/loki-mode",
+      "downloads_weekly": 3663,
+      "stars": 1047,
+      "ownership": "verified"
+    },
+    {
+      "rank": 99,
+      "name": "io.github.yifancong/rsdoctor",
+      "repo": "web-infra-dev/rsdoctor",
+      "downloads_weekly": 3661,
+      "stars": 1140,
+      "ownership": "mismatch"
+    },
+    {
+      "rank": 100,
+      "name": "io.github.antvis/mcp-server-chart",
+      "repo": "antvis/mcp-server-chart",
+      "downloads_weekly": 3619,
+      "stars": 4334,
+      "ownership": "verified"
+    }
+  ],
+  "download_coverage": {
+    "npm_identifiers_declared": 7348,
+    "servers_with_downloads": 7491,
+    "servers_declaring_npm": 7579,
+    "pypi": "not measured — pypistats.org rate-limits below a usable rate",
+    "window": "last 7 days, npm registry"
+  },
+  "newest_registrations": [
+    {
+      "rank": 1,
+      "name": "io.nestr/mcp",
+      "repo": "nestr-dev/nestr-mcp",
+      "stars": 5,
+      "published_at": "2026-08-24T04:35:58"
+    },
+    {
+      "rank": 2,
+      "name": "io.github.francofuji/cemis-directorio",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T04:34:09"
+    },
+    {
+      "rank": 3,
+      "name": "io.github.47-ronn/remote-agents",
+      "repo": "47-ronn/tunshell_mcp_agents",
+      "stars": 1,
+      "published_at": "2026-08-24T04:28:41"
+    },
+    {
+      "rank": 4,
+      "name": "com.52choujiang/tiktok-insights",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T04:23:54"
+    },
+    {
+      "rank": 5,
+      "name": "com.52choujiang/youtube-insights",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T04:23:53"
+    },
+    {
+      "rank": 6,
+      "name": "com.52choujiang/x-insights",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T04:23:52"
+    },
+    {
+      "rank": 7,
+      "name": "com.52choujiang/zhihu-insights",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T04:23:51"
+    },
+    {
+      "rank": 8,
+      "name": "com.52choujiang/bilibili-insights",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T04:23:38"
+    },
+    {
+      "rank": 9,
+      "name": "io.github.hanjialeGit/mcp-server",
+      "repo": "ApocData/ApocData-mcp-server",
+      "stars": 1,
+      "published_at": "2026-08-24T04:14:16"
+    },
+    {
+      "rank": 10,
+      "name": "io.github.dacode-dev/agent-context-api",
+      "repo": "dacode-dev/agent-context-api",
+      "stars": 0,
+      "published_at": "2026-08-24T04:10:18"
+    },
+    {
+      "rank": 11,
+      "name": "io.github.yh919/servd-agent-ordering",
+      "repo": "yh919/servd",
+      "stars": null,
+      "published_at": "2026-08-24T04:07:29"
+    },
+    {
+      "rank": 12,
+      "name": "io.github.yaotsakpo/ledgerfc",
+      "repo": "yaotsakpo/ledgerfc-mcp",
+      "stars": 1,
+      "published_at": "2026-08-24T04:03:32"
+    },
+    {
+      "rank": 13,
+      "name": "io.github.equinoxaifinance-rgb/civicdataforge",
+      "repo": "equinoxaifinance-rgb/civicdataforge-mcp",
+      "stars": 0,
+      "published_at": "2026-08-24T04:03:02"
+    },
+    {
+      "rank": 14,
+      "name": "io.github.sheetrender/sheetrender-mcp",
+      "repo": "sheetrender/sheetrender-mcp",
+      "stars": 1,
+      "published_at": "2026-08-24T04:01:03"
+    },
+    {
+      "rank": 15,
+      "name": "io.github.XZXZZX-Ai/bilibili-mcp",
+      "repo": "XZXZZX-Ai/bilibili-mcp",
+      "stars": 14,
+      "published_at": "2026-08-24T03:59:26"
+    },
+    {
+      "rank": 16,
+      "name": "io.github.OpenHCSDev/openhcs",
+      "repo": "OpenHCSDev/OpenHCS",
+      "stars": 4,
+      "published_at": "2026-08-24T03:54:45"
+    },
+    {
+      "rank": 17,
+      "name": "io.github.Furowu/brokre",
+      "repo": "Furowu/brokre",
+      "stars": 3,
+      "published_at": "2026-08-24T03:49:58"
+    },
+    {
+      "rank": 18,
+      "name": "com.envloped/mcp",
+      "repo": "envloped/cli",
+      "stars": 0,
+      "published_at": "2026-08-24T03:49:24"
+    },
+    {
+      "rank": 19,
+      "name": "io.github.kyungseopk1m/semver-checks",
+      "repo": "kyungseopk1m/semver-checks",
+      "stars": 0,
+      "published_at": "2026-08-24T03:48:15"
+    },
+    {
+      "rank": 20,
+      "name": "com.clauderegistry/plugin-catalog",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T03:45:40"
+    },
+    {
+      "rank": 21,
+      "name": "net.crawlora/crawlora-mcp",
+      "repo": "Crawlora-org/crawlora-mcp",
+      "stars": 1,
+      "published_at": "2026-08-24T03:45:24"
+    },
+    {
+      "rank": 22,
+      "name": "io.github.Starksood/fireweed-mcp",
+      "repo": "Starksood/fireweed-mcp",
+      "stars": 0,
+      "published_at": "2026-08-24T03:43:18"
+    },
+    {
+      "rank": 23,
+      "name": "com.sigistry/plugin-catalog",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T03:42:53"
+    },
+    {
+      "rank": 24,
+      "name": "co.promptguard/security",
+      "repo": "acebot712/promptguard",
+      "stars": null,
+      "published_at": "2026-08-24T03:40:51"
+    },
+    {
+      "rank": 25,
+      "name": "ai.postfleet/postfleet",
+      "repo": "Thestral12/postfleet-mcp",
+      "stars": 0,
+      "published_at": "2026-08-24T03:40:44"
+    },
+    {
+      "rank": 26,
+      "name": "io.github.Octonove/crbro-memory",
+      "repo": "Octonove/crbro-memory",
+      "stars": 0,
+      "published_at": "2026-08-24T03:38:17"
+    },
+    {
+      "rank": 27,
+      "name": "io.github.jblaz6335/ai-data-marketplace",
+      "repo": "jblaz6335/mcp-server-aidatamarketplace",
+      "stars": 0,
+      "published_at": "2026-08-24T03:36:35"
+    },
+    {
+      "rank": 28,
+      "name": "io.github.ynishi/mini-app-mcp",
+      "repo": "ynishi/mini-app-mcp",
+      "stars": 0,
+      "published_at": "2026-08-24T03:36:19"
+    },
+    {
+      "rank": 29,
+      "name": "io.github.MirrorEdgeAI/waves",
+      "repo": "MirrorEdgeAI/waves-claude",
+      "stars": 0,
+      "published_at": "2026-08-24T03:33:01"
+    },
+    {
+      "rank": 30,
+      "name": "app.newsmind/mcp",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T03:32:35"
+    },
+    {
+      "rank": 31,
+      "name": "io.github.luno-cms/mcp",
+      "repo": "luno-cms/mcp",
+      "stars": 0,
+      "published_at": "2026-08-24T03:31:49"
+    },
+    {
+      "rank": 32,
+      "name": "io.github.vuluu2k/webcake-landing-mcp",
+      "repo": "vuluu2k/webcake-landing-mcp",
+      "stars": 5,
+      "published_at": "2026-08-24T03:30:41"
+    },
+    {
+      "rank": 33,
+      "name": "io.github.Eason0in/charles-local-mcp",
+      "repo": "Eason0in/charles-local-mcp",
+      "stars": 0,
+      "published_at": "2026-08-24T03:28:52"
+    },
+    {
+      "rank": 34,
+      "name": "pics.wick.compute/market",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T03:28:16"
+    },
+    {
+      "rank": 35,
+      "name": "io.github.scarletkc/perenna",
+      "repo": "scarletkc/Perenna",
+      "stars": 18,
+      "published_at": "2026-08-24T03:27:54"
+    },
+    {
+      "rank": 36,
+      "name": "com.lunarwerx/lunarwerx",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T03:26:15"
+    },
+    {
+      "rank": 37,
+      "name": "io.github.artokun/comfyui-mcp",
+      "repo": "artokun/comfyui-mcp",
+      "stars": 658,
+      "published_at": "2026-08-24T03:22:41"
+    },
+    {
+      "rank": 38,
+      "name": "co.getrefine/refine",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T03:12:26"
+    },
+    {
+      "rank": 39,
+      "name": "com.mcpscores/url-intel",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T03:11:01"
+    },
+    {
+      "rank": 40,
+      "name": "com.logospell/logospell",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T03:07:53"
+    },
+    {
+      "rank": 41,
+      "name": "com.mcpscores/food-facts",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T03:07:16"
+    },
+    {
+      "rank": 42,
+      "name": "io.github.cyanheads/pokeapi-mcp-server",
+      "repo": "cyanheads/pokeapi-mcp-server",
+      "stars": 1,
+      "published_at": "2026-08-24T03:04:37"
+    },
+    {
+      "rank": 43,
+      "name": "com.astranl/mcp",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T03:02:35"
+    },
+    {
+      "rank": 44,
+      "name": "com.mcpscores/feed-reader",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T03:00:54"
+    },
+    {
+      "rank": 45,
+      "name": "io.github.cyanheads/onebusaway-mcp-server",
+      "repo": "cyanheads/onebusaway-mcp-server",
+      "stars": 1,
+      "published_at": "2026-08-24T03:00:08"
+    },
+    {
+      "rank": 46,
+      "name": "com.mcpscores/web-extract",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T02:56:16"
+    },
+    {
+      "rank": 47,
+      "name": "com.mcpscores/onchain-toolkit",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T02:52:17"
+    },
+    {
+      "rank": 48,
+      "name": "io.github.mclaut/ariadne",
+      "repo": "mclaut/ariadne",
+      "stars": 3,
+      "published_at": "2026-08-24T02:51:21"
+    },
+    {
+      "rank": 49,
+      "name": "io.github.cyanheads/fema-mcp-server",
+      "repo": "cyanheads/fema-mcp-server",
+      "stars": 1,
+      "published_at": "2026-08-24T02:49:40"
+    },
+    {
+      "rank": 50,
+      "name": "io.github.cyanheads/bls-labor-mcp-server",
+      "repo": "cyanheads/bls-labor-mcp-server",
+      "stars": 1,
+      "published_at": "2026-08-24T02:45:25"
+    },
+    {
+      "rank": 51,
+      "name": "io.github.wmujahid428-web/trust-layer",
+      "repo": "wmujahid428-web/muj428-a2a-revenue-engine",
+      "stars": null,
+      "published_at": "2026-08-24T02:43:49"
+    },
+    {
+      "rank": 52,
+      "name": "io.github.frndchagas/coolify-mcp",
+      "repo": "frndchagas/coolify-mcp",
+      "stars": 3,
+      "published_at": "2026-08-24T02:42:19"
+    },
+    {
+      "rank": 53,
+      "name": "com.mcpscores/dev-package-intel",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T02:37:03"
+    },
+    {
+      "rank": 54,
+      "name": "io.github.microsoft/awesome-copilot",
+      "repo": "microsoft/mcp-dotnet-samples",
+      "stars": 196,
+      "published_at": "2026-08-24T02:33:13"
+    },
+    {
+      "rank": 55,
+      "name": "io.github.flukeatzerocool/holonovel",
+      "repo": "flukeatzerocool/holonovel",
+      "stars": 0,
+      "published_at": "2026-08-24T02:30:33"
+    },
+    {
+      "rank": 56,
+      "name": "io.github.flukeatzerocool/infobroker",
+      "repo": "flukeatzerocool/infobroker",
+      "stars": 0,
+      "published_at": "2026-08-24T02:29:58"
+    },
+    {
+      "rank": 57,
+      "name": "io.github.shigechika/entraadm-mcp",
+      "repo": "shigechika/entraadm-mcp",
+      "stars": 0,
+      "published_at": "2026-08-24T02:22:58"
+    },
+    {
+      "rank": 58,
+      "name": "io.github.jgravelle/jcodemunch-mcp",
+      "repo": "jgravelle/jcodemunch-mcp",
+      "stars": 2609,
+      "published_at": "2026-08-24T02:19:01"
+    },
+    {
+      "rank": 59,
+      "name": "io.github.MurariAmbati/aurora-agent",
+      "repo": "AURORA-NEURO/aurora-agent",
+      "stars": 1,
+      "published_at": "2026-08-24T02:16:40"
+    },
+    {
+      "rank": 60,
+      "name": "io.github.iwe-org/iwe",
+      "repo": "iwe-org/iwe",
+      "stars": 1571,
+      "published_at": "2026-08-24T02:14:43"
+    },
+    {
+      "rank": 61,
+      "name": "io.github.smith-horn/skillsmith",
+      "repo": "smith-horn/skillsmith",
+      "stars": 76,
+      "published_at": "2026-08-24T02:13:38"
+    },
+    {
+      "rank": 62,
+      "name": "io.github.patchloom/patchloom",
+      "repo": "patchloom/patchloom",
+      "stars": 14,
+      "published_at": "2026-08-24T02:11:32"
+    },
+    {
+      "rank": 63,
+      "name": "com.guruhotel/mcp",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T02:10:25"
+    },
+    {
+      "rank": 64,
+      "name": "io.github.AceDataCloud/mcp-wan",
+      "repo": "AceDataCloud/WanMCP",
+      "stars": 1,
+      "published_at": "2026-08-24T02:10:25"
+    },
+    {
+      "rank": 65,
+      "name": "io.github.chrischall/gemini-mcp",
+      "repo": "chrischall/gemini-mcp",
+      "stars": 0,
+      "published_at": "2026-08-24T02:08:18"
+    },
+    {
+      "rank": 66,
+      "name": "io.github.frndchagas/expo-android",
+      "repo": "frndchagas/expo-android",
+      "stars": 4,
+      "published_at": "2026-08-24T02:03:22"
+    },
+    {
+      "rank": 67,
+      "name": "io.github.dfieser/hea-bench",
+      "repo": "dfieser/hea-bench",
+      "stars": 0,
+      "published_at": "2026-08-24T01:59:29"
+    },
+    {
+      "rank": 68,
+      "name": "com.sapiensinteticos/sapiens",
+      "repo": "inhabitants/sapiens-mcp",
+      "stars": 1,
+      "published_at": "2026-08-24T01:39:24"
+    },
+    {
+      "rank": 69,
+      "name": "io.github.goreleaser/mcp",
+      "repo": "goreleaser/mcp",
+      "stars": 22,
+      "published_at": "2026-08-24T01:38:48"
+    },
+    {
+      "rank": 70,
+      "name": "io.github.brian8a1/atisbo-docs",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T01:33:46"
+    },
+    {
+      "rank": 71,
+      "name": "io.github.brian8a1/atisbo",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T01:33:44"
+    },
+    {
+      "rank": 72,
+      "name": "com.tidemarkresearch/tidemark",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T01:29:29"
+    },
+    {
+      "rank": 73,
+      "name": "io.github.hashgraph-online/hol-guard",
+      "repo": "hashgraph-online/hol-guard",
+      "stars": 466,
+      "published_at": "2026-08-24T01:29:29"
+    },
+    {
+      "rank": 74,
+      "name": "io.github.hcarrillo001/retrieval-mcp",
+      "repo": "hcarrillo001/retrieval-mcp",
+      "stars": 0,
+      "published_at": "2026-08-24T01:28:29"
+    },
+    {
+      "rank": 75,
+      "name": "io.github.GabrielAllit1/salt19-agent-utility-grid",
+      "repo": "GabrielAllit1/salt19",
+      "stars": null,
+      "published_at": "2026-08-24T01:23:10"
+    },
+    {
+      "rank": 76,
+      "name": "io.github.Eason0in/testlink-mcp",
+      "repo": "Eason0in/testlink-mcp",
+      "stars": 0,
+      "published_at": "2026-08-24T01:22:55"
+    },
+    {
+      "rank": 77,
+      "name": "io.github.simulacra/verifyfirst",
+      "repo": "simulacra/verifyfirst",
+      "stars": 0,
+      "published_at": "2026-08-24T01:20:30"
+    },
+    {
+      "rank": 78,
+      "name": "com.gradusmusic/notation",
+      "repo": "delmas41/gradusnotation",
+      "stars": 2,
+      "published_at": "2026-08-24T01:20:17"
+    },
+    {
+      "rank": 79,
+      "name": "io.github.jojo-labs/smart-web",
+      "repo": "jojo-labs/smart-web",
+      "stars": null,
+      "published_at": "2026-08-24T01:17:40"
+    },
+    {
+      "rank": 80,
+      "name": "io.github.AytuncYildizli/yapitalism",
+      "repo": "AytuncYildizli/yapitalism",
+      "stars": 6,
+      "published_at": "2026-08-24T01:16:24"
+    },
+    {
+      "rank": 81,
+      "name": "io.github.54yyyu/zotero-mcp",
+      "repo": "54yyyu/zotero-mcp",
+      "stars": 4766,
+      "published_at": "2026-08-24T01:14:57"
+    },
+    {
+      "rank": 82,
+      "name": "io.filingpulse/filingpulse",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T01:05:54"
+    },
+    {
+      "rank": 83,
+      "name": "io.github.jgravelle/jdocmunch-mcp",
+      "repo": "jgravelle/jdocmunch-mcp",
+      "stars": 203,
+      "published_at": "2026-08-24T01:01:58"
+    },
+    {
+      "rank": 84,
+      "name": "io.github.jgravelle/jdatamunch-mcp",
+      "repo": "jgravelle/jdatamunch-mcp",
+      "stars": 81,
+      "published_at": "2026-08-24T01:00:34"
+    },
+    {
+      "rank": 85,
+      "name": "io.github.hermoso-ai/hermoso",
+      "repo": "hermoso-ai/hermoso",
+      "stars": 0,
+      "published_at": "2026-08-24T00:57:55"
+    },
+    {
+      "rank": 86,
+      "name": "io.github.sipyourdrink-ltd/bernstein",
+      "repo": "sipyourdrink-ltd/bernstein",
+      "stars": 970,
+      "published_at": "2026-08-24T00:54:58"
+    },
+    {
+      "rank": 87,
+      "name": "com.pangolinfo/amazon-mcp",
+      "repo": "pangolinfo/pangolinfo-mcp",
+      "stars": 6,
+      "published_at": "2026-08-24T00:54:55"
+    },
+    {
+      "rank": 88,
+      "name": "io.github.laf-rge/quickbooks-mcp",
+      "repo": "laf-rge/quickbooks-mcp",
+      "stars": 11,
+      "published_at": "2026-08-24T00:53:37"
+    },
+    {
+      "rank": 89,
+      "name": "io.github.YawLabs/mcp",
+      "repo": "",
+      "stars": null,
+      "published_at": "2026-08-24T00:50:08"
+    },
+    {
+      "rank": 90,
+      "name": "io.github.emergent-wisdom/understanding-graph",
+      "repo": "emergent-wisdom/understanding-graph",
+      "stars": 1,
+      "published_at": "2026-08-24T00:48:03"
+    },
+    {
+      "rank": 91,
+      "name": "io.github.jorgell23-sys/markdown-document-search",
+      "repo": "jorgell23-sys/mdcx",
+      "stars": 1,
+      "published_at": "2026-08-24T00:37:59"
+    },
+    {
+      "rank": 92,
+      "name": "io.github.neat-technologies/neat",
+      "repo": "NEAT-Technologies/Neat",
+      "stars": 17,
+      "published_at": "2026-08-24T00:36:03"
+    },
+    {
+      "rank": 93,
+      "name": "io.github.mnemoverse/mcp-memory-server",
+      "repo": "mnemoverse/mcp-memory-server",
+      "stars": 20,
+      "published_at": "2026-08-24T00:30:47"
+    },
+    {
+      "rank": 94,
+      "name": "dev.draugr/draugr",
+      "repo": "draugr-dev/draugr",
+      "stars": 3,
+      "published_at": "2026-08-24T00:16:37"
+    },
+    {
+      "rank": 95,
+      "name": "ai.kinlab/kin",
+      "repo": "firelock-ai/kin",
+      "stars": 46,
+      "published_at": "2026-08-24T00:16:34"
+    },
+    {
+      "rank": 96,
+      "name": "io.github.appwrite/mcp",
+      "repo": "appwrite/mcp",
+      "stars": 71,
+      "published_at": "2026-08-24T00:15:46"
+    },
+    {
+      "rank": 97,
+      "name": "io.github.kitepon/aiterm-mcp",
+      "repo": "kitepon/aiterm-mcp",
+      "stars": 3,
+      "published_at": "2026-08-24T00:13:58"
+    },
+    {
+      "rank": 98,
+      "name": "io.github.GuillaumeLessard/qector-desktop",
+      "repo": "GuillaumeLessard/qector-claude-plugin",
+      "stars": 1,
+      "published_at": "2026-08-24T00:12:59"
+    },
+    {
+      "rank": 99,
+      "name": "io.github.BourbonDog/amicus",
+      "repo": "BourbonDog/amicus",
+      "stars": 2,
+      "published_at": "2026-08-24T00:01:58"
+    },
+    {
+      "rank": 100,
+      "name": "io.github.blazickjp/arxiv-mcp-server",
+      "repo": "blazickjp/arxiv-mcp-server",
+      "stars": 3068,
+      "published_at": "2026-08-24T00:01:20"
+    }
+  ]
+}
