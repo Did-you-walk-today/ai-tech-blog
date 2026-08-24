@@ -3,7 +3,7 @@
   "slug": "llm-cache-pricing-2026",
   "title": "LLM Cache Pricing 2026: The Real Cost of Cached Input",
   "description": "LLM cache pricing 2026 normalized across six providers: effective input cost at real hit rates, hidden write fees, and which vendors publish nothing at all.",
-  "data_updated": "2026-08-17",
+  "data_updated": "2026-08-24",
   "source_post": "https://www.jsonhouse.com/posts/llm-cache-pricing-2026/",
   "category": "ai-data-statistics",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/llm-cache-pricing-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/llm-cache-pricing-2026.json",
-    "citation": "Json House, \"LLM Cache Pricing 2026: The Real Cost of Cached Input\", jsonhouse.com (2026-08-03)",
+    "citation": "Json House, \"LLM Cache Pricing 2026: The Real Cost of Cached Input\", jsonhouse.com (2026-08-24)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -157,7 +157,7 @@
       "effective_h80",
       "effective_h95"
     ],
-    "unit": "USD per 1M input tokens, standard non-batch base tier, collected 2026-08-17. effective_hN = base x (1 - N) + cache_read x N. Gemini 3.6/3.7 Flash are promotional through 2026-12-31; DeepSeek rows are off-peak and double during peak UTC windows.",
+    "unit": "USD per 1M input tokens, standard non-batch base tier, collected 2026-08-24. effective_hN = base x (1 - N) + cache_read x N. Gemini 3.6/3.7 Flash are promotional through 2026-12-31; DeepSeek rows are off-peak and double during peak UTC windows.",
     "entries": [
       {
         "model": "Claude Opus 5",
@@ -172,12 +172,12 @@
       {
         "model": "GPT-5.6-sol",
         "provider": "OpenAI",
-        "base_input_per_1m_usd": 5.0,
-        "cache_read_per_1m_usd": 0.5,
+        "base_input_per_1m_usd": 4.0,
+        "cache_read_per_1m_usd": 0.4,
         "discount_pct": 90.0,
-        "effective_h50": 2.75,
-        "effective_h80": 1.4,
-        "effective_h95": 0.725
+        "effective_h50": 2.2,
+        "effective_h80": 1.12,
+        "effective_h95": 0.58
       },
       {
         "model": "Claude Sonnet 5",

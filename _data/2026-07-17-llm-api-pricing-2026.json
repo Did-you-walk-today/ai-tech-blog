@@ -3,7 +3,7 @@
   "slug": "llm-api-pricing-2026",
   "title": "LLM API Pricing 2026: Full Comparison Table (Weekly)",
   "description": "LLM API pricing 2026: 43 models from OpenAI, Anthropic, Google, xAI, DeepSeek, and Mistral in one table. Input/output cost per 1M tokens, updated weekly.",
-  "data_updated": "2026-08-17",
+  "data_updated": "2026-08-24",
   "source_post": "https://www.jsonhouse.com/posts/llm-api-pricing-2026/",
   "category": "ai-data-statistics",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/llm-api-pricing-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/llm-api-pricing-2026.json",
-    "citation": "Json House, \"LLM API Pricing 2026: Full Comparison Table (Weekly)\", jsonhouse.com (2026-08-10)",
+    "citation": "Json House, \"LLM API Pricing 2026: Full Comparison Table (Weekly)\", jsonhouse.com (2026-08-24)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -43,8 +43,8 @@
       "category": "data"
     },
     {
-      "fact": "Long-context pricing structures diverged: Google and xAI bill roughly 2x per token above 200K-token prompts, while Anthropic bills its full 1M-token context window at standard rates",
-      "source": "Google, xAI, Anthropic pricing pages, retrieved 2026-07-16",
+      "fact": "Long-context pricing structures diverged and OpenAI switched sides on 2026-08-24: Google and xAI bill roughly 2x per token above 200K-token prompts, GPT-5.6-sol now bills $8.00/$30.00 on long context against a $4.00/$20.00 base, and Anthropic alone still bills its full 1M-token context window at standard rates",
+      "source": "Google, xAI, OpenAI, Anthropic pricing pages, retrieved 2026-08-24",
       "category": "trend"
     },
     {
@@ -58,8 +58,8 @@
       "category": "data"
     },
     {
-      "fact": "OpenAI cut GPT-5.6-luna 80% to $0.20 input / $1.20 output per 1M tokens and GPT-5.6-terra 20% to $2.00 / $12.00, leaving luna at the same $0.20 input and $0.02 cache-read price as the older GPT-5.4-nano",
-      "source": "OpenAI API pricing page, retrieved 2026-08-03",
+      "fact": "OpenAI cut GPT-5.6-sol 20% on input and 33% on output to $4.00 / $20.00 on 2026-08-24, a promotional rate stated as available at least through 2026-11-21; earlier cuts on 2026-08-03 took GPT-5.6-luna down 80% to $0.20 / $1.20 and GPT-5.6-terra down 20% to $2.00 / $12.00, neither of which moved this week",
+      "source": "OpenAI API pricing page, retrieved 2026-08-24",
       "category": "data"
     },
     {
@@ -124,12 +124,12 @@
   ],
   "comparison_data": {
     "dimensions": ["provider", "tier", "input_per_1m_usd", "output_per_1m_usd", "cache_read_per_1m_usd", "context_window", "note"],
-    "unit": "USD per 1M tokens, standard non-batch tier, collected 2026-08-10",
+    "unit": "USD per 1M tokens, standard non-batch tier, collected 2026-08-24",
     "entries": [
       { "model": "Claude Fable 5", "provider": "Anthropic", "tier": "flagship", "input_per_1m_usd": 10.0, "output_per_1m_usd": 50.0, "cache_read_per_1m_usd": 1.0, "context_window": 1000000, "note": null },
       { "model": "GPT-5.5-pro", "provider": "OpenAI", "tier": "flagship", "input_per_1m_usd": 30.0, "output_per_1m_usd": 180.0, "cache_read_per_1m_usd": null, "context_window": null, "note": null },
       { "model": "GPT-5.4-pro", "provider": "OpenAI", "tier": "flagship", "input_per_1m_usd": 30.0, "output_per_1m_usd": 180.0, "cache_read_per_1m_usd": null, "context_window": null, "note": null },
-      { "model": "GPT-5.6-sol", "provider": "OpenAI", "tier": "flagship", "input_per_1m_usd": 5.0, "output_per_1m_usd": 30.0, "cache_read_per_1m_usd": 0.5, "context_window": null, "note": null },
+      { "model": "GPT-5.6-sol", "provider": "OpenAI", "tier": "flagship", "input_per_1m_usd": 4.0, "output_per_1m_usd": 20.0, "cache_read_per_1m_usd": 0.4, "context_window": null, "note": "Cut from $5.00/$30.00 on 2026-08-24 (cache read $0.50 to $0.40); promotional, stated available at least through 2026-11-21. Long-context tier $8.00/$30.00, cache read $0.80 — OpenAI's first tiered row" },
       { "model": "GPT-5.5", "provider": "OpenAI", "tier": "flagship", "input_per_1m_usd": 5.0, "output_per_1m_usd": 30.0, "cache_read_per_1m_usd": 0.5, "context_window": null, "note": null },
       { "model": "Claude Opus 5", "provider": "Anthropic", "tier": "flagship", "input_per_1m_usd": 5.0, "output_per_1m_usd": 25.0, "cache_read_per_1m_usd": 0.5, "context_window": 1000000, "note": "Claude Opus 4.5 through 4.8 share this price" },
       { "model": "Claude Opus 4.8", "provider": "Anthropic", "tier": "flagship", "input_per_1m_usd": 5.0, "output_per_1m_usd": 25.0, "cache_read_per_1m_usd": 0.5, "context_window": 1000000, "note": "Opus 4.5, 4.6, and 4.7 share this pricing" },
