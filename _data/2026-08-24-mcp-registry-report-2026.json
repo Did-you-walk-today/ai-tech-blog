@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "slug": "mcp-registry-report-2026",
-  "title": "MCP Server Rankings 2026: 22,117 Servers, Ownership Checked",
-  "description": "We swept 22,117 servers in the official MCP registry and joined GitHub stars. Four of the top 100 declare a repo they do not own, and 14.7% of links are dead.",
-  "data_updated": "2026-08-17",
+  "title": "MCP Server Rankings 2026: 24,477 Servers, Ownership Checked",
+  "description": "We swept 24,477 servers in the official MCP registry and joined GitHub stars. Four of the top 100 declare a repo they do not own, and 13.8% of links are dead.",
+  "data_updated": "2026-08-24",
   "source_post": "https://www.jsonhouse.com/posts/mcp-registry-report-2026/",
   "category": "ai-developer-tools",
   "cluster": "CLUSTER_DEVTOOLS",
@@ -12,66 +12,66 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/mcp-registry-report-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/mcp-registry-report-2026.json",
-    "citation": "Json House, \"MCP Server Rankings 2026: 22,117 Servers, Ownership Checked\", jsonhouse.com (2026-08-17)",
+    "citation": "Json House, \"MCP Server Rankings 2026: 24,477 Servers, Ownership Checked\", jsonhouse.com (2026-08-24)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
   "key_facts": [
     {
-      "fact": "The official MCP registry held 22,117 servers with a latest version on 2026-08-17: 21,867 active and 250 deprecated",
-      "source": "jsonhouse original measurement, 2026-08-17",
+      "fact": "The official MCP registry held 24,477 servers with a latest version on 2026-08-24: 24,220 active and 257 deprecated, a net gain of 2,360 over the 2026-08-17 sweep (2,388 appeared, 28 disappeared)",
+      "source": "jsonhouse original measurement, 2026-08-24",
       "category": "data"
     },
     {
-      "fact": "Of the top 100 servers by GitHub stars, 74 have a namespace matching the repository owner, 4 do not, and 22 use domain namespaces that cannot be checked mechanically",
-      "source": "jsonhouse original measurement, 2026-08-17",
+      "fact": "Of the top 100 servers by GitHub stars, 75 have a namespace matching the repository owner, 4 do not, and 21 use domain namespaces that cannot be checked mechanically",
+      "source": "jsonhouse original measurement, 2026-08-24",
       "category": "data"
     },
     {
-      "fact": "The rank-4 entry io.github.IncorporatedPartners/labelhead-artist-momentum, a hip-hop analytics server, declares the unrelated repository paperclipai/paperclip and inherits its 78,598 stars",
-      "source": "jsonhouse original measurement, 2026-08-17",
+      "fact": "The rank-4 entry io.github.IncorporatedPartners/labelhead-artist-momentum, a hip-hop analytics server, declares the unrelated repository paperclipai/paperclip and inherits its 79,252 stars, 654 of which it gained in the week to 2026-08-24",
+      "source": "jsonhouse original measurement, 2026-08-24",
       "category": "case_study"
     },
     {
-      "fact": "65 of the top 100 servers by stars declare a repository that is not dedicated to the MCP server (repository name lacks 'mcp'); their median star count is 6,250 versus 4,081 for the 35 dedicated repositories",
-      "source": "jsonhouse original measurement, 2026-08-17",
+      "fact": "65 of the top 100 servers by stars declare a repository that is not dedicated to the MCP server (repository name lacks 'mcp'); their median star count is 6,562 versus 4,334 for the 35 dedicated repositories",
+      "source": "jsonhouse original measurement, 2026-08-24",
       "category": "data"
     },
     {
-      "fact": "2,575 of 17,540 declared repositories (14.7%) returned no public response when queried",
-      "source": "jsonhouse original measurement, 2026-08-17",
+      "fact": "The registry publishes no first-registration timestamp: its publishedAt field tracks the latest version, so 583 servers present in both the 2026-08-17 and 2026-08-24 sweeps moved to a different month without being new, and counts for past months decay as servers republish",
+      "source": "jsonhouse original measurement, roster comparison 2026-08-17 to 2026-08-24",
+      "category": "definition"
+    },
+    {
+      "fact": "2,630 of 19,049 declared repositories (13.8%) returned no public response when queried",
+      "source": "jsonhouse original measurement, 2026-08-24",
       "category": "data"
     },
     {
-      "fact": "4,577 servers (20.7% of the registry) declare no repository at all and cannot appear in any star-based ranking",
-      "source": "jsonhouse original measurement, 2026-08-17",
+      "fact": "5,428 servers (22.2% of the registry) declare no repository at all and cannot appear in any star-based ranking",
+      "source": "jsonhouse original measurement, 2026-08-24",
       "category": "data"
     },
     {
-      "fact": "A single namespace, io.github.pipeworx-io, holds 1,312 servers — 5.93% of the registry; the top ten hold 12.44%",
-      "source": "jsonhouse original measurement, 2026-08-17",
-      "category": "data"
-    },
-    {
-      "fact": "Monthly registrations rose from 351 in September 2025 to 5,411 in July 2026, a 15x increase over ten months",
-      "source": "jsonhouse original measurement, 2026-08-17",
+      "fact": "A single namespace, io.github.pipeworx-io, holds 1,312 servers — 5.36% of the registry; the top ten hold 16.06%, up from 12.44% a week earlier after io.github.mcp-dir grew from 236 servers to 1,095",
+      "source": "jsonhouse original measurement, 2026-08-24",
       "category": "trend"
     },
     {
       "fact": "The MCP registry verifies namespace ownership via GitHub OAuth or a DNS TXT record but does not verify the repository URL; the publishing token requires no repository scopes because the registry never reads publisher code",
-      "source": "MCP Registry authentication documentation, retrieved 2026-08-17",
+      "source": "MCP Registry authentication documentation, retrieved 2026-08-24",
       "category": "policy"
     },
     {
       "fact": "The registry's moderation policy states that it does not guarantee moderation, that consumers should assume minimal-to-no moderation, and that consumers should treat scraped data accordingly",
-      "source": "MCP Registry moderation policy, retrieved 2026-08-17",
+      "source": "MCP Registry moderation policy, retrieved 2026-08-24",
       "category": "policy"
     }
   ],
   "faq_summary": [
     {
       "q": "How many MCP servers exist in the official registry?",
-      "a": "22,117 servers had a latest version on 2026-08-17 — 21,867 active and 250 deprecated. Counts near 9,000 from earlier in 2026 are stale."
+      "a": "24,477 servers had a latest version on 2026-08-24, of which 24,220 were active and 257 deprecated. The registry gained 2,388 servers in the seven days since the previous sweep, against 28 that disappeared."
     },
     {
       "q": "Does the MCP registry verify that a server owns the repository it links to?",
@@ -79,15 +79,15 @@
     },
     {
       "q": "Does a namespace-repository mismatch mean the server is fraudulent?",
-      "a": "No. Mismatch only means the namespace owner and the repository owner are different strings, and an ownership transfer produces that difference honestly. It is a prompt to check the specific entry, not a verdict."
+      "a": "No. Mismatch only means the namespace owner and the repository owner are different strings, and ownership transfers produce that difference honestly. It is a prompt to look at the specific entry, not a verdict — though the four in the top 100 are hard to read charitably."
     },
     {
       "q": "Why do MCP server rankings disagree with each other?",
-      "a": "Most rank on stars read from the repository field without checking ownership, and 20.7% of the registry declares no repository at all and drops out of such rankings entirely."
+      "a": "Most rank by GitHub stars taken from the repository field without checking whether that repository belongs to the publisher, and 22.2% of the registry declares no repository at all and drops out of every such ranking."
     },
     {
       "q": "How often is this ranking updated?",
-      "a": "Every Monday. The full registry is swept, GitHub stars are re-joined, and the table and changelog are updated in place at the same URL."
+      "a": "Every Monday. The full registry is swept, GitHub stars are re-joined, and the table plus the changelog are updated in place at the same URL. Week-over-week star deltas appear from the 2026-08-24 edition onward."
     }
   ],
   "primary_sources": [
@@ -118,77 +118,89 @@
     }
   ],
   "methodology": {
-    "sweep_date": "2026-08-17",
+    "sweep_date": "2026-08-24",
     "registry_endpoint": "https://registry.modelcontextprotocol.io/v0/servers?version=latest",
-    "entries_retrieved": 22117,
+    "entries_retrieved": 24477,
     "star_source": "GitHub GraphQL stargazerCount, same date",
-    "repositories_resolved": 14965,
-    "repositories_declared": 17540,
+    "repositories_resolved": 16419,
+    "repositories_declared": 19049,
     "update_cadence": "weekly, every Monday",
     "excluded": "servers with status deleted; version history other than latest",
     "ownership_rule": "for io.github.X/* namespaces, compare X to the repository owner; domain namespaces are reported as unverifiable rather than inferred",
-    "dedicated_repo_rule": "a repository is counted as dedicated to the MCP server when its name contains 'mcp'; a coarse reproducible proxy, not a semantic classification"
+    "dedicated_repo_rule": "a repository is counted as dedicated to the MCP server when its name contains 'mcp'; a coarse reproducible proxy, not a semantic classification",
+    "star_delta_source": "difference against the jsonhouse sweep of 2026-08-17",
+    "registration_date_caveat": "The registry exposes no first-published timestamp; publishedAt reflects the latest version, so registration history is not retrievable from this API."
   },
   "numerical_data": {
     "metrics": [
       {
         "name": "servers_latest",
-        "value": 22117,
+        "value": 24477,
         "unit": "servers"
       },
       {
         "name": "active",
-        "value": 21867,
+        "value": 24220,
         "unit": "servers"
       },
       {
         "name": "deprecated",
-        "value": 250,
+        "value": 257,
+        "unit": "servers"
+      },
+      {
+        "name": "appeared_since_prior_sweep",
+        "value": 2388,
+        "unit": "servers"
+      },
+      {
+        "name": "disappeared_since_prior_sweep",
+        "value": 28,
         "unit": "servers"
       },
       {
         "name": "declared_repository",
-        "value": 17540,
+        "value": 19049,
         "unit": "servers"
       },
       {
         "name": "repository_unreachable",
-        "value": 2575,
+        "value": 2630,
         "unit": "servers"
       },
       {
         "name": "no_repository",
-        "value": 4577,
+        "value": 5428,
         "unit": "servers"
       },
       {
         "name": "ownership_verified",
-        "value": 13636,
+        "value": 14934,
         "unit": "servers"
       },
       {
         "name": "ownership_mismatch",
-        "value": 483,
+        "value": 504,
         "unit": "servers"
       },
       {
         "name": "ownership_unverifiable",
-        "value": 3421,
+        "value": 3611,
         "unit": "servers"
       },
       {
         "name": "distinct_namespaces",
-        "value": 14126,
+        "value": 14998,
         "unit": "namespaces"
       },
       {
         "name": "top1_namespace_share",
-        "value": 5.93,
+        "value": 5.36,
         "unit": "percent"
       },
       {
         "name": "top10_namespace_share",
-        "value": 12.44,
+        "value": 16.06,
         "unit": "percent"
       },
       {
@@ -203,13 +215,18 @@
       },
       {
         "name": "top100_median_stars_dedicated",
-        "value": 4081,
+        "value": 4334,
         "unit": "stars"
       },
       {
         "name": "top100_median_stars_product",
-        "value": 6250,
+        "value": 6562,
         "unit": "stars"
+      },
+      {
+        "name": "servers_changing_month_by_republication",
+        "value": 583,
+        "unit": "servers"
       }
     ]
   },
@@ -219,6 +236,7 @@
       "name",
       "repository",
       "stars",
+      "star_delta_7d",
       "ownership",
       "dedicated_repo"
     ],
@@ -227,7 +245,8 @@
         "rank": 1,
         "name": "com.browser-use/browser-use",
         "repository": "browser-use/browser-use",
-        "stars": 109476,
+        "stars": 110288,
+        "star_delta_7d": 812,
         "ownership": "unverifiable",
         "dedicated_repo": false
       },
@@ -235,7 +254,8 @@
         "rank": 2,
         "name": "app.worldmonitor/mcp",
         "repository": "koala73/worldmonitor",
-        "stars": 82499,
+        "stars": 83966,
+        "star_delta_7d": 1467,
         "ownership": "unverifiable",
         "dedicated_repo": false
       },
@@ -243,7 +263,8 @@
         "rank": 3,
         "name": "io.github.netdata/mcp-server",
         "repository": "netdata/netdata",
-        "stars": 80208,
+        "stars": 80269,
+        "star_delta_7d": 61,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -251,7 +272,8 @@
         "rank": 4,
         "name": "io.github.IncorporatedPartners/labelhead-artist-momentum",
         "repository": "paperclipai/paperclip",
-        "stars": 78598,
+        "stars": 79252,
+        "star_delta_7d": 654,
         "ownership": "mismatch",
         "dedicated_repo": false
       },
@@ -259,7 +281,8 @@
         "rank": 5,
         "name": "io.github.D4Vinci/Scrapling",
         "repository": "D4Vinci/Scrapling",
-        "stars": 74654,
+        "stars": 76144,
+        "star_delta_7d": 1490,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -267,7 +290,8 @@
         "rank": 6,
         "name": "io.github.ruvnet/claude-flow",
         "repository": "ruvnet/claude-flow",
-        "stars": 68032,
+        "stars": 69132,
+        "star_delta_7d": 1100,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -275,7 +299,8 @@
         "rank": 7,
         "name": "io.github.upstash/context7",
         "repository": "upstash/context7",
-        "stars": 60859,
+        "stars": 61126,
+        "star_delta_7d": 267,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -283,7 +308,8 @@
         "rank": 8,
         "name": "io.github.tldraw/tldraw",
         "repository": "tldraw/tldraw",
-        "stars": 49811,
+        "stars": 49927,
+        "star_delta_7d": 116,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -291,7 +317,8 @@
         "rank": 9,
         "name": "io.github.ChromeDevTools/chrome-devtools-mcp",
         "repository": "ChromeDevTools/chrome-devtools-mcp",
-        "stars": 49279,
+        "stars": 49617,
+        "star_delta_7d": 338,
         "ownership": "verified",
         "dedicated_repo": true
       },
@@ -299,7 +326,8 @@
         "rank": 10,
         "name": "io.github.metabase/mcp",
         "repository": "metabase/metabase",
-        "stars": 48795,
+        "stars": 48897,
+        "star_delta_7d": 102,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -307,7 +335,8 @@
         "rank": 11,
         "name": "com.puter/mcp-server",
         "repository": "HeyPuter/puter",
-        "stars": 43077,
+        "stars": 43204,
+        "star_delta_7d": 127,
         "ownership": "unverifiable",
         "dedicated_repo": false
       },
@@ -315,7 +344,8 @@
         "rank": 12,
         "name": "io.github.amruthpillai/reactive-resume",
         "repository": "amruthpillai/reactive-resume",
-        "stars": 40703,
+        "stars": 41605,
+        "star_delta_7d": 902,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -323,23 +353,26 @@
         "rank": 13,
         "name": "io.github.DeusData/codebase-memory-mcp",
         "repository": "DeusData/codebase-memory-mcp",
-        "stars": 39183,
+        "stars": 40204,
+        "star_delta_7d": 1021,
         "ownership": "verified",
         "dedicated_repo": true
       },
       {
         "rank": 14,
-        "name": "io.github.bytedance/mcp-server-browser",
-        "repository": "bytedance/UI-TARS-desktop",
-        "stars": 38611,
+        "name": "io.github.PostHog/mcp",
+        "repository": "PostHog/posthog",
+        "stars": 38791,
+        "star_delta_7d": 1078,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 15,
-        "name": "io.github.PostHog/mcp",
-        "repository": "PostHog/posthog",
-        "stars": 37713,
+        "name": "io.github.bytedance/mcp-server-browser",
+        "repository": "bytedance/UI-TARS-desktop",
+        "stars": 38699,
+        "star_delta_7d": 88,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -347,7 +380,8 @@
         "rank": 16,
         "name": "io.github.microsoft/playwright-mcp",
         "repository": "microsoft/playwright-mcp",
-        "stars": 36192,
+        "stars": 36408,
+        "star_delta_7d": 216,
         "ownership": "verified",
         "dedicated_repo": true
       },
@@ -355,7 +389,8 @@
         "rank": 17,
         "name": "io.github.github/github-mcp-server",
         "repository": "github/github-mcp-server",
-        "stars": 32296,
+        "stars": 32458,
+        "star_delta_7d": 162,
         "ownership": "verified",
         "dedicated_repo": true
       },
@@ -363,7 +398,8 @@
         "rank": 18,
         "name": "io.github.oraios/serena",
         "repository": "oraios/serena",
-        "stars": 28121,
+        "stars": 28423,
+        "star_delta_7d": 302,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -371,7 +407,8 @@
         "rank": 19,
         "name": "ai.com.mcp/skills-search",
         "repository": "agentskills/agentskills",
-        "stars": 24356,
+        "stars": 24633,
+        "star_delta_7d": 277,
         "ownership": "unverifiable",
         "dedicated_repo": false
       },
@@ -379,7 +416,8 @@
         "rank": 20,
         "name": "dev.ohmyposh/validator",
         "repository": "JanDeDobbeleer/oh-my-posh",
-        "stars": 23289,
+        "stars": 23335,
+        "star_delta_7d": 46,
         "ownership": "unverifiable",
         "dedicated_repo": false
       },
@@ -387,7 +425,8 @@
         "rank": 21,
         "name": "io.github.Skyvern-AI/skyvern",
         "repository": "Skyvern-AI/skyvern",
-        "stars": 22764,
+        "stars": 22838,
+        "star_delta_7d": 74,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -395,7 +434,8 @@
         "rank": 22,
         "name": "io.github.screenpipe/screenpipe-mcp",
         "repository": "screenpipe/screenpipe",
-        "stars": 20978,
+        "stars": 21191,
+        "star_delta_7d": 213,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -403,159 +443,179 @@
         "rank": 23,
         "name": "io.github.modelscope/funasr-mcp",
         "repository": "modelscope/FunASR",
-        "stars": 19876,
+        "stars": 19985,
+        "star_delta_7d": 109,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 24,
-        "name": "io.github.keploy/mcp",
-        "repository": "keploy/keploy",
-        "stars": 18404,
+        "name": "io.github.compiler-explorer/compiler-explorer",
+        "repository": "compiler-explorer/compiler-explorer",
+        "stars": 18997,
+        "star_delta_7d": null,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 25,
-        "name": "io.github.googleapis/genai-toolbox",
-        "repository": "googleapis/genai-toolbox",
-        "stars": 16184,
+        "name": "io.github.keploy/mcp",
+        "repository": "keploy/keploy",
+        "stars": 18414,
+        "star_delta_7d": 10,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 26,
-        "name": "io.github.googleapis/mcp-toolbox",
-        "repository": "googleapis/mcp-toolbox",
-        "stars": 16184,
+        "name": "io.github.t8y2/dbx",
+        "repository": "t8y2/dbx",
+        "stars": 16346,
+        "star_delta_7d": 1132,
         "ownership": "verified",
-        "dedicated_repo": true
+        "dedicated_repo": false
       },
       {
         "rank": 27,
-        "name": "io.github.GLips/Figma-Context-MCP",
-        "repository": "GLips/Figma-Context-MCP",
-        "stars": 15669,
+        "name": "io.github.googleapis/genai-toolbox",
+        "repository": "googleapis/genai-toolbox",
+        "stars": 16244,
+        "star_delta_7d": 60,
+        "ownership": "verified",
+        "dedicated_repo": false
+      },
+      {
+        "rank": 28,
+        "name": "io.github.googleapis/mcp-toolbox",
+        "repository": "googleapis/mcp-toolbox",
+        "stars": 16244,
+        "star_delta_7d": 60,
         "ownership": "verified",
         "dedicated_repo": true
       },
       {
-        "rank": 28,
-        "name": "io.github.t8y2/dbx",
-        "repository": "t8y2/dbx",
-        "stars": 15214,
-        "ownership": "verified",
-        "dedicated_repo": false
-      },
-      {
         "rank": 29,
-        "name": "io.github.open-metadata/openmetadata-mcp",
-        "repository": "open-metadata/OpenMetadata",
-        "stars": 14894,
+        "name": "io.github.GLips/Figma-Context-MCP",
+        "repository": "GLips/Figma-Context-MCP",
+        "stars": 15706,
+        "star_delta_7d": 37,
         "ownership": "verified",
-        "dedicated_repo": false
+        "dedicated_repo": true
       },
       {
         "rank": 30,
-        "name": "io.github.coder/coder",
-        "repository": "coder/coder",
-        "stars": 14170,
+        "name": "io.github.open-metadata/openmetadata-mcp",
+        "repository": "open-metadata/OpenMetadata",
+        "stars": 14953,
+        "star_delta_7d": 59,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 31,
-        "name": "io.github.kubeshark/mcp",
-        "repository": "kubeshark/kubeshark",
-        "stars": 12045,
+        "name": "io.github.coder/coder",
+        "repository": "coder/coder",
+        "stars": 14234,
+        "star_delta_7d": 64,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 32,
-        "name": "io.github.wonderwhy-er/desktop-commander",
-        "repository": "wonderwhy-er/DesktopCommanderMCP",
-        "stars": 9335,
-        "ownership": "verified",
-        "dedicated_repo": true
-      },
-      {
-        "rank": 33,
-        "name": "io.github.droidrun/mobilerun",
-        "repository": "droidrun/mobilerun",
-        "stars": 9069,
+        "name": "io.github.kubeshark/mcp",
+        "repository": "kubeshark/kubeshark",
+        "stars": 12057,
+        "star_delta_7d": 12,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
+        "rank": 33,
+        "name": "io.github.wonderwhy-er/desktop-commander",
+        "repository": "wonderwhy-er/DesktopCommanderMCP",
+        "stars": 9386,
+        "star_delta_7d": 51,
+        "ownership": "verified",
+        "dedicated_repo": true
+      },
+      {
         "rank": 34,
-        "name": "io.github.MervinPraison/praisonai",
-        "repository": "MervinPraison/PraisonAI",
-        "stars": 8903,
+        "name": "io.github.droidrun/mobilerun",
+        "repository": "droidrun/mobilerun",
+        "stars": 9108,
+        "star_delta_7d": 39,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 35,
-        "name": "io.github.usekaneo/kaneo",
-        "repository": "usekaneo/kaneo",
-        "stars": 8329,
+        "name": "io.github.MervinPraison/praisonai",
+        "repository": "MervinPraison/PraisonAI",
+        "stars": 8950,
+        "star_delta_7d": 47,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 36,
-        "name": "io.github.jessiemongeon1/sui-kapa",
-        "repository": "MystenLabs/sui",
-        "stars": 7737,
-        "ownership": "mismatch",
+        "name": "io.github.usekaneo/kaneo",
+        "repository": "usekaneo/kaneo",
+        "stars": 8495,
+        "star_delta_7d": 166,
+        "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 37,
+        "name": "io.github.jessiemongeon1/sui-kapa",
+        "repository": "MystenLabs/sui",
+        "stars": 7737,
+        "star_delta_7d": 0,
+        "ownership": "mismatch",
+        "dedicated_repo": false
+      },
+      {
+        "rank": 38,
         "name": "io.github.firecrawl/firecrawl-mcp-server",
         "repository": "firecrawl/firecrawl-mcp-server",
-        "stars": 7253,
+        "stars": 7307,
+        "star_delta_7d": 54,
         "ownership": "verified",
         "dedicated_repo": true
       },
       {
-        "rank": 38,
+        "rank": 39,
         "name": "ai.com.mcp/registry",
         "repository": "modelcontextprotocol/registry",
-        "stars": 7159,
+        "stars": 7186,
+        "star_delta_7d": 27,
         "ownership": "unverifiable",
         "dedicated_repo": false
       },
       {
-        "rank": 39,
+        "rank": 40,
         "name": "io.github.CursorTouch/Windows-MCP",
         "repository": "CursorTouch/Windows-MCP",
-        "stars": 6761,
+        "stars": 6808,
+        "star_delta_7d": 47,
         "ownership": "verified",
         "dedicated_repo": true
       },
       {
-        "rank": 40,
+        "rank": 41,
         "name": "io.github.plastic-labs/honcho",
         "repository": "plastic-labs/honcho",
-        "stars": 6678,
-        "ownership": "verified",
-        "dedicated_repo": false
-      },
-      {
-        "rank": 41,
-        "name": "io.github.airweave-ai/search",
-        "repository": "airweave-ai/airweave",
-        "stars": 6557,
+        "stars": 6799,
+        "star_delta_7d": 121,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 42,
-        "name": "io.github.nirholas/claude-code-explorer-mcp",
-        "repository": "nirholas/claude-code",
-        "stars": 6250,
+        "name": "io.github.airweave-ai/search",
+        "repository": "airweave-ai/airweave",
+        "stars": 6562,
+        "star_delta_7d": 5,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -563,7 +623,8 @@
         "rank": 43,
         "name": "com.xcodebuildmcp/XcodeBuildMCP",
         "repository": "getsentry/XcodeBuildMCP",
-        "stars": 6247,
+        "stars": 6274,
+        "star_delta_7d": 27,
         "ownership": "unverifiable",
         "dedicated_repo": true
       },
@@ -571,47 +632,53 @@
         "rank": 44,
         "name": "io.github.cameroncooke/XcodeBuildMCP",
         "repository": "cameroncooke/XcodeBuildMCP",
-        "stars": 6247,
+        "stars": 6274,
+        "star_delta_7d": 27,
         "ownership": "verified",
         "dedicated_repo": true
       },
       {
         "rank": 45,
-        "name": "dev.repowise/repowise",
-        "repository": "repowise-dev/repowise",
-        "stars": 5947,
-        "ownership": "unverifiable",
+        "name": "io.github.nirholas/claude-code-explorer-mcp",
+        "repository": "nirholas/claude-code",
+        "stars": 6247,
+        "star_delta_7d": -3,
+        "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 46,
-        "name": "io.github.mobile-next/mobile-mcp",
-        "repository": "mobile-next/mobile-mcp",
-        "stars": 5934,
-        "ownership": "verified",
-        "dedicated_repo": true
-      },
-      {
-        "rank": 47,
-        "name": "ai.klavis/strata",
-        "repository": "Klavis-AI/klavis",
-        "stars": 5791,
+        "name": "dev.repowise/repowise",
+        "repository": "repowise-dev/repowise",
+        "stars": 6189,
+        "star_delta_7d": 242,
         "ownership": "unverifiable",
         "dedicated_repo": false
       },
       {
-        "rank": 48,
-        "name": "io.github.Q00/ouroboros",
-        "repository": "Q00/ouroboros",
-        "stars": 5485,
+        "rank": 47,
+        "name": "io.github.mobile-next/mobile-mcp",
+        "repository": "mobile-next/mobile-mcp",
+        "stars": 5985,
+        "star_delta_7d": 51,
         "ownership": "verified",
+        "dedicated_repo": true
+      },
+      {
+        "rank": 48,
+        "name": "ai.klavis/strata",
+        "repository": "Klavis-AI/klavis",
+        "stars": 5794,
+        "star_delta_7d": 3,
+        "ownership": "unverifiable",
         "dedicated_repo": false
       },
       {
         "rank": 49,
-        "name": "io.github.JerBouma/financetoolkit",
-        "repository": "JerBouma/FinanceToolkit",
-        "stars": 5231,
+        "name": "io.github.Q00/ouroboros",
+        "repository": "Q00/ouroboros",
+        "stars": 5635,
+        "star_delta_7d": 150,
         "ownership": "verified",
         "dedicated_repo": false
       },
@@ -619,425 +686,462 @@
         "rank": 50,
         "name": "io.draw/mcp",
         "repository": "jgraph/drawio-mcp",
-        "stars": 5205,
+        "stars": 5257,
+        "star_delta_7d": 52,
         "ownership": "unverifiable",
         "dedicated_repo": true
       },
       {
         "rank": 51,
-        "name": "com.jitsu/mcp",
-        "repository": "jitsucom/jitsu",
-        "stars": 5032,
-        "ownership": "unverifiable",
+        "name": "io.github.JerBouma/financetoolkit",
+        "repository": "JerBouma/FinanceToolkit",
+        "stars": 5251,
+        "star_delta_7d": 20,
+        "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 52,
-        "name": "com.mock-server/mockserver",
-        "repository": "mock-server/mockserver-monorepo",
-        "stars": 4943,
+        "name": "com.jitsu/mcp",
+        "repository": "jitsucom/jitsu",
+        "stars": 5040,
+        "star_delta_7d": 8,
         "ownership": "unverifiable",
         "dedicated_repo": false
       },
       {
         "rank": 53,
+        "name": "com.mock-server/mockserver",
+        "repository": "mock-server/mockserver-monorepo",
+        "stars": 4949,
+        "star_delta_7d": 6,
+        "ownership": "unverifiable",
+        "dedicated_repo": false
+      },
+      {
+        "rank": 54,
         "name": "ai.exa/exa",
         "repository": "exa-labs/exa-mcp-server",
-        "stars": 4876,
+        "stars": 4917,
+        "star_delta_7d": 41,
         "ownership": "unverifiable",
         "dedicated_repo": true
       },
       {
-        "rank": 54,
+        "rank": 55,
         "name": "io.github.54yyyu/zotero-mcp",
         "repository": "54yyyu/zotero-mcp",
-        "stars": 4684,
+        "stars": 4766,
+        "star_delta_7d": 82,
         "ownership": "verified",
         "dedicated_repo": true
-      },
-      {
-        "rank": 55,
-        "name": "io.github.KnockOutEZ/wigolo",
-        "repository": "KnockOutEZ/wigolo",
-        "stars": 4570,
-        "ownership": "verified",
-        "dedicated_repo": false
       },
       {
         "rank": 56,
-        "name": "io.github.firebase/firebase-mcp",
-        "repository": "firebase/firebase-tools",
-        "stars": 4455,
+        "name": "com.apify/apify-mcp-server",
+        "repository": "apify/apify-mcp-server",
+        "stars": 4720,
+        "star_delta_7d": 804,
+        "ownership": "unverifiable",
+        "dedicated_repo": true
+      },
+      {
+        "rank": 57,
+        "name": "io.github.KnockOutEZ/wigolo",
+        "repository": "KnockOutEZ/wigolo",
+        "stars": 4639,
+        "star_delta_7d": 69,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
-        "rank": 57,
+        "rank": 58,
         "name": "io.github.homeassistant-ai/ha-mcp",
         "repository": "homeassistant-ai/ha-mcp",
-        "stars": 4398,
-        "ownership": "verified",
-        "dedicated_repo": true
-      },
-      {
-        "rank": 58,
-        "name": "io.github.antvis/mcp-server-chart",
-        "repository": "antvis/mcp-server-chart",
-        "stars": 4318,
+        "stars": 4488,
+        "star_delta_7d": 90,
         "ownership": "verified",
         "dedicated_repo": true
       },
       {
         "rank": 59,
-        "name": "io.github.txn2/kubefwd",
-        "repository": "txn2/kubefwd",
-        "stars": 4160,
+        "name": "io.github.firebase/firebase-mcp",
+        "repository": "firebase/firebase-tools",
+        "stars": 4458,
+        "star_delta_7d": 3,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 60,
-        "name": "io.github.callstack/agent-device",
-        "repository": "callstack/agent-device",
-        "stars": 4108,
+        "name": "io.github.antvis/mcp-server-chart",
+        "repository": "antvis/mcp-server-chart",
+        "stars": 4334,
+        "star_delta_7d": 16,
         "ownership": "verified",
-        "dedicated_repo": false
+        "dedicated_repo": true
       },
       {
         "rank": 61,
-        "name": "io.github.callstackincubator/agent-device",
-        "repository": "callstackincubator/agent-device",
-        "stars": 4108,
+        "name": "io.github.callstack/agent-device",
+        "repository": "callstack/agent-device",
+        "stars": 4201,
+        "star_delta_7d": 93,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 62,
-        "name": "com.cloudflare.mcp/mcp",
-        "repository": "cloudflare/mcp-server-cloudflare",
-        "stars": 4081,
-        "ownership": "unverifiable",
-        "dedicated_repo": true
-      },
-      {
-        "rank": 63,
-        "name": "io.github.tolgee/tolgee",
-        "repository": "tolgee/tolgee-platform",
-        "stars": 4072,
+        "name": "io.github.callstackincubator/agent-device",
+        "repository": "callstackincubator/agent-device",
+        "stars": 4201,
+        "star_delta_7d": 93,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
-        "rank": 64,
+        "rank": 63,
         "name": "io.github.atilaahmettaner/tradingview-mcp",
         "repository": "atilaahmettaner/tradingview-mcp",
-        "stars": 3991,
+        "stars": 4199,
+        "star_delta_7d": 208,
         "ownership": "verified",
         "dedicated_repo": true
       },
       {
-        "rank": 65,
-        "name": "io.github.IvanMurzak/Unity-MCP",
-        "repository": "IvanMurzak/Unity-MCP",
-        "stars": 3919,
+        "rank": 64,
+        "name": "io.github.txn2/kubefwd",
+        "repository": "txn2/kubefwd",
+        "stars": 4161,
+        "star_delta_7d": 1,
         "ownership": "verified",
+        "dedicated_repo": false
+      },
+      {
+        "rank": 65,
+        "name": "com.cloudflare.mcp/mcp",
+        "repository": "cloudflare/mcp-server-cloudflare",
+        "stars": 4105,
+        "star_delta_7d": 24,
+        "ownership": "unverifiable",
         "dedicated_repo": true
       },
       {
         "rank": 66,
-        "name": "com.apify/apify-mcp-server",
-        "repository": "apify/apify-mcp-server",
-        "stars": 3916,
-        "ownership": "unverifiable",
-        "dedicated_repo": true
+        "name": "io.github.tolgee/tolgee",
+        "repository": "tolgee/tolgee-platform",
+        "stars": 4080,
+        "star_delta_7d": 8,
+        "ownership": "verified",
+        "dedicated_repo": false
       },
       {
         "rank": 67,
-        "name": "io.github.basicmachines-co/basic-memory",
-        "repository": "basicmachines-co/basic-memory",
-        "stars": 3673,
+        "name": "io.github.IvanMurzak/Unity-MCP",
+        "repository": "IvanMurzak/Unity-MCP",
+        "stars": 3971,
+        "star_delta_7d": 52,
         "ownership": "verified",
-        "dedicated_repo": false
+        "dedicated_repo": true
       },
       {
         "rank": 68,
-        "name": "com.microsoft/azure",
-        "repository": "microsoft/mcp",
-        "stars": 3575,
-        "ownership": "unverifiable",
-        "dedicated_repo": true
+        "name": "io.github.basicmachines-co/basic-memory",
+        "repository": "basicmachines-co/basic-memory",
+        "stars": 3733,
+        "star_delta_7d": 60,
+        "ownership": "verified",
+        "dedicated_repo": false
       },
       {
         "rank": 69,
-        "name": "io.github.revolist/revogrid-mcp",
-        "repository": "revolist/revogrid",
-        "stars": 3435,
-        "ownership": "verified",
-        "dedicated_repo": false
-      },
-      {
-        "rank": 70,
-        "name": "ai.smithery/browserbasehq-mcp-browserbase",
-        "repository": "browserbase/mcp-server-browserbase",
-        "stars": 3411,
+        "name": "com.microsoft/azure",
+        "repository": "microsoft/mcp",
+        "stars": 3598,
+        "star_delta_7d": 23,
         "ownership": "unverifiable",
         "dedicated_repo": true
       },
       {
-        "rank": 71,
-        "name": "io.github.bytebase/dbhub",
-        "repository": "bytebase/dbhub",
-        "stars": 3366,
+        "rank": 70,
+        "name": "io.github.revolist/revogrid-mcp",
+        "repository": "revolist/revogrid",
+        "stars": 3437,
+        "star_delta_7d": 2,
         "ownership": "verified",
         "dedicated_repo": false
+      },
+      {
+        "rank": 71,
+        "name": "ai.smithery/browserbasehq-mcp-browserbase",
+        "repository": "browserbase/mcp-server-browserbase",
+        "stars": 3409,
+        "star_delta_7d": -2,
+        "ownership": "unverifiable",
+        "dedicated_repo": true
       },
       {
         "rank": 72,
         "name": "io.github.nowork-studio/adsagent",
         "repository": "nowork-studio/toprank",
-        "stars": 3366,
+        "stars": 3395,
+        "star_delta_7d": 29,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 73,
-        "name": "io.github.grafana/mcp-grafana",
-        "repository": "grafana/mcp-grafana",
-        "stars": 3361,
+        "name": "io.github.nowork-studio/notfair",
+        "repository": "nowork-studio/notfair-plugin",
+        "stars": 3395,
+        "star_delta_7d": null,
         "ownership": "verified",
-        "dedicated_repo": true
+        "dedicated_repo": false
       },
       {
         "rank": 74,
-        "name": "io.github.Ataraxy-Labs/sem",
-        "repository": "Ataraxy-Labs/sem",
-        "stars": 3303,
+        "name": "io.github.bytebase/dbhub",
+        "repository": "bytebase/dbhub",
+        "stars": 3393,
+        "star_delta_7d": 27,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 75,
-        "name": "io.github.giancarloerra/socraticode",
-        "repository": "giancarloerra/socraticode",
-        "stars": 3256,
+        "name": "io.github.mutonby/openshorts",
+        "repository": "mutonby/openshorts",
+        "stars": 3390,
+        "star_delta_7d": 244,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 76,
-        "name": "io.github.divu2025/codemaster",
-        "repository": "codeaashu/claude-code",
-        "stars": 3237,
-        "ownership": "mismatch",
-        "dedicated_repo": false
+        "name": "io.github.grafana/mcp-grafana",
+        "repository": "grafana/mcp-grafana",
+        "stars": 3381,
+        "star_delta_7d": 20,
+        "ownership": "verified",
+        "dedicated_repo": true
       },
       {
         "rank": 77,
-        "name": "io.github.mutonby/openshorts",
-        "repository": "mutonby/openshorts",
-        "stars": 3146,
+        "name": "io.github.Ataraxy-Labs/sem",
+        "repository": "Ataraxy-Labs/sem",
+        "stars": 3309,
+        "star_delta_7d": 6,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 78,
-        "name": "io.github.butterbase-ai/mcp",
-        "repository": "butterbase-ai/butterbase-oss",
-        "stars": 3102,
+        "name": "io.github.giancarloerra/socraticode",
+        "repository": "giancarloerra/socraticode",
+        "stars": 3274,
+        "star_delta_7d": 18,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 79,
-        "name": "io.github.blazickjp/arxiv-mcp-server",
-        "repository": "blazickjp/arxiv-mcp-server",
-        "stars": 3061,
-        "ownership": "verified",
-        "dedicated_repo": true
+        "name": "io.github.divu2025/codemaster",
+        "repository": "codeaashu/claude-code",
+        "stars": 3257,
+        "star_delta_7d": 20,
+        "ownership": "mismatch",
+        "dedicated_repo": false
       },
       {
         "rank": 80,
-        "name": "io.github.skyhook-io/radar",
-        "repository": "skyhook-io/radar",
-        "stars": 2976,
+        "name": "io.github.butterbase-ai/mcp",
+        "repository": "butterbase-ai/butterbase-oss",
+        "stars": 3216,
+        "star_delta_7d": 114,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 81,
-        "name": "io.github.signerlabs/shipswift",
-        "repository": "signerlabs/ShipSwift",
-        "stars": 2936,
+        "name": "io.github.blazickjp/arxiv-mcp-server",
+        "repository": "blazickjp/arxiv-mcp-server",
+        "stars": 3068,
+        "star_delta_7d": 7,
+        "ownership": "verified",
+        "dedicated_repo": true
+      },
+      {
+        "rank": 82,
+        "name": "io.github.skyhook-io/radar",
+        "repository": "skyhook-io/radar",
+        "stars": 3056,
+        "star_delta_7d": 80,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
-        "rank": 82,
-        "name": "com.supabase/mcp",
-        "repository": "supabase/mcp",
-        "stars": 2866,
-        "ownership": "unverifiable",
-        "dedicated_repo": true
-      },
-      {
         "rank": 83,
-        "name": "io.github.nteract/semiotic",
-        "repository": "nteract/semiotic",
-        "stars": 2691,
+        "name": "io.github.signerlabs/shipswift",
+        "repository": "signerlabs/ShipSwift",
+        "stars": 2965,
+        "star_delta_7d": 29,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 84,
+        "name": "com.supabase/mcp",
+        "repository": "supabase/mcp",
+        "stars": 2871,
+        "star_delta_7d": 5,
+        "ownership": "unverifiable",
+        "dedicated_repo": true
+      },
+      {
+        "rank": 85,
+        "name": "io.github.nteract/semiotic",
+        "repository": "nteract/semiotic",
+        "stars": 2691,
+        "star_delta_7d": 0,
+        "ownership": "verified",
+        "dedicated_repo": false
+      },
+      {
+        "rank": 86,
         "name": "com.medplum/mcp",
         "repository": "medplum/medplum",
-        "stars": 2609,
+        "stars": 2624,
+        "star_delta_7d": 15,
         "ownership": "unverifiable",
         "dedicated_repo": false
       },
       {
-        "rank": 85,
+        "rank": 87,
         "name": "io.github.brightdata/brightdata-mcp",
         "repository": "brightdata/brightdata-mcp",
-        "stars": 2592,
-        "ownership": "verified",
-        "dedicated_repo": true
-      },
-      {
-        "rank": 86,
-        "name": "io.github.dgunning/edgartools",
-        "repository": "dgunning/edgartools",
-        "stars": 2592,
-        "ownership": "verified",
-        "dedicated_repo": false
-      },
-      {
-        "rank": 87,
-        "name": "io.github.jgravelle/jcodemunch-mcp",
-        "repository": "jgravelle/jcodemunch-mcp",
-        "stars": 2568,
+        "stars": 2611,
+        "star_delta_7d": 19,
         "ownership": "verified",
         "dedicated_repo": true
       },
       {
         "rank": 88,
-        "name": "io.github.tavily-ai/tavily-mcp",
-        "repository": "tavily-ai/tavily-mcp",
-        "stars": 2331,
+        "name": "io.github.jgravelle/jcodemunch-mcp",
+        "repository": "jgravelle/jcodemunch-mcp",
+        "stars": 2609,
+        "star_delta_7d": 41,
         "ownership": "verified",
         "dedicated_repo": true
       },
       {
         "rank": 89,
-        "name": "io.github.llmsresearch/paperbanana",
-        "repository": "llmsresearch/paperbanana",
-        "stars": 2243,
+        "name": "io.github.dgunning/edgartools",
+        "repository": "dgunning/edgartools",
+        "stars": 2608,
+        "star_delta_7d": 16,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 90,
-        "name": "io.github.software-mansion/argent",
-        "repository": "software-mansion/argent",
-        "stars": 2101,
+        "name": "io.github.tavily-ai/tavily-mcp",
+        "repository": "tavily-ai/tavily-mcp",
+        "stars": 2349,
+        "star_delta_7d": 18,
         "ownership": "verified",
-        "dedicated_repo": false
+        "dedicated_repo": true
       },
       {
         "rank": 91,
-        "name": "io.github.HUANGCHIHHUNGLeo/claude-real-video",
-        "repository": "HUANGCHIHHUNGLeo/claude-real-video",
-        "stars": 2030,
+        "name": "io.github.llmsresearch/paperbanana",
+        "repository": "llmsresearch/paperbanana",
+        "stars": 2272,
+        "star_delta_7d": 29,
         "ownership": "verified",
         "dedicated_repo": false
       },
       {
         "rank": 92,
-        "name": "io.github.containers/kubernetes-mcp-server",
-        "repository": "containers/kubernetes-mcp-server",
-        "stars": 1973,
+        "name": "io.github.software-mansion/argent",
+        "repository": "software-mansion/argent",
+        "stars": 2152,
+        "star_delta_7d": 51,
         "ownership": "verified",
-        "dedicated_repo": true
+        "dedicated_repo": false
       },
       {
         "rank": 93,
-        "name": "io.github.PremierInc/azure-devops",
-        "repository": "microsoft/azure-devops-mcp",
-        "stars": 1958,
-        "ownership": "mismatch",
-        "dedicated_repo": true
+        "name": "io.github.HUANGCHIHHUNGLeo/claude-real-video",
+        "repository": "HUANGCHIHHUNGLeo/claude-real-video",
+        "stars": 2057,
+        "star_delta_7d": 27,
+        "ownership": "verified",
+        "dedicated_repo": false
       },
       {
         "rank": 94,
-        "name": "io.github.vmoranv/jshookmcp",
-        "repository": "vmoranv/jshookmcp",
-        "stars": 1905,
+        "name": "io.github.containers/kubernetes-mcp-server",
+        "repository": "containers/kubernetes-mcp-server",
+        "stars": 2010,
+        "star_delta_7d": 37,
         "ownership": "verified",
         "dedicated_repo": true
       },
       {
         "rank": 95,
-        "name": "com.figma.mcp/mcp",
-        "repository": "figma/mcp-server-guide",
-        "stars": 1896,
-        "ownership": "unverifiable",
+        "name": "io.github.PremierInc/azure-devops",
+        "repository": "microsoft/azure-devops-mcp",
+        "stars": 1974,
+        "star_delta_7d": 16,
+        "ownership": "mismatch",
         "dedicated_repo": true
       },
       {
         "rank": 96,
-        "name": "io.github.zereight/gitlab-mcp",
-        "repository": "zereight/gitlab-mcp",
-        "stars": 1891,
+        "name": "io.github.vmoranv/jshookmcp",
+        "repository": "vmoranv/jshookmcp",
+        "stars": 1943,
+        "star_delta_7d": 38,
         "ownership": "verified",
         "dedicated_repo": true
       },
       {
         "rank": 97,
-        "name": "com.microsoft/microsoft-learn-mcp",
-        "repository": "MicrosoftDocs/mcp",
-        "stars": 1839,
+        "name": "com.figma.mcp/mcp",
+        "repository": "figma/mcp-server-guide",
+        "stars": 1915,
+        "star_delta_7d": 19,
         "ownership": "unverifiable",
         "dedicated_repo": true
       },
       {
         "rank": 98,
-        "name": "io.github.timescale/pg-aiguide",
-        "repository": "timescale/pg-aiguide",
-        "stars": 1814,
+        "name": "io.github.zereight/gitlab-mcp",
+        "repository": "zereight/gitlab-mcp",
+        "stars": 1915,
+        "star_delta_7d": 24,
         "ownership": "verified",
-        "dedicated_repo": false
+        "dedicated_repo": true
       },
       {
         "rank": 99,
-        "name": "io.github.bergside/typeui",
-        "repository": "bergside/typeui",
-        "stars": 1767,
-        "ownership": "verified",
-        "dedicated_repo": false
+        "name": "com.microsoft/microsoft-learn-mcp",
+        "repository": "MicrosoftDocs/mcp",
+        "stars": 1853,
+        "star_delta_7d": 14,
+        "ownership": "unverifiable",
+        "dedicated_repo": true
       },
       {
         "rank": 100,
-        "name": "com.stripe/mcp",
-        "repository": "stripe/agent-toolkit",
-        "stars": 1748,
-        "ownership": "unverifiable",
+        "name": "io.github.timescale/pg-aiguide",
+        "repository": "timescale/pg-aiguide",
+        "stars": 1818,
+        "star_delta_7d": 4,
+        "ownership": "verified",
         "dedicated_repo": false
       }
     ]
-  },
-  "registrations_by_month": {
-    "2025-09": 351,
-    "2025-10": 233,
-    "2025-11": 145,
-    "2025-12": 217,
-    "2026-01": 308,
-    "2026-02": 933,
-    "2026-03": 1626,
-    "2026-04": 1988,
-    "2026-05": 2654,
-    "2026-06": 3699,
-    "2026-07": 5411,
-    "2026-08": 4552
   },
   "top_namespaces": [
     {
@@ -1045,12 +1149,16 @@
       "servers": 1312
     },
     {
-      "namespace": "io.github.CSOAI-ORG",
-      "servers": 307
+      "namespace": "io.github.mcp-dir",
+      "servers": 1095
     },
     {
-      "namespace": "io.github.mcp-dir",
-      "servers": 236
+      "namespace": "io.github.Evozim",
+      "servers": 375
+    },
+    {
+      "namespace": "io.github.CSOAI-ORG",
+      "servers": 330
     },
     {
       "namespace": "ai.smithery",
@@ -1069,16 +1177,29 @@
       "servers": 125
     },
     {
+      "namespace": "io.github.Wxt-ai",
+      "servers": 122
+    },
+    {
       "namespace": "eu.ansvar",
       "servers": 106
-    },
-    {
-      "namespace": "io.github.Br0ski777",
-      "servers": 101
-    },
-    {
-      "namespace": "io.github.Evozim",
-      "servers": 99
     }
-  ]
+  ],
+  "latest_version_by_month": {
+    "note": "Distribution of each server's LATEST version publication date, not its registration date. The registry API serves version=latest, so republishing moves a server out of the month it was registered in. Between 2026-08-17 and 2026-08-24, 583 servers present in both sweeps changed months this way. Do not read this as a registration curve; counts for past months decay over time.",
+    "counts": {
+      "2025-09": 350,
+      "2025-10": 232,
+      "2025-11": 145,
+      "2025-12": 217,
+      "2026-01": 305,
+      "2026-02": 929,
+      "2026-03": 1611,
+      "2026-04": 1970,
+      "2026-05": 2534,
+      "2026-06": 3502,
+      "2026-07": 5166,
+      "2026-08": 7516
+    }
+  }
 }
