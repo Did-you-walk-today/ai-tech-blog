@@ -15,7 +15,7 @@ description: jsonhouse.com 포스트 제작 전체 워크플로 (Phase 1~5). 주
 
 ## Step 0 — 필독 문서 (건너뛰기 금지)
 
-- `STYLE_GUIDE.md` — 매 포스트마다 다시 읽는다 (스타일 3종 + 5단계 구조)
+- `_plans/STYLE_GUIDE.md` — 매 포스트마다 다시 읽는다 (스타일 3종 + 5단계 구조)
 - `SEO_GUIDE.md`, `SOURCES.md`
 - `CLAUDE.md`의 Mission & Strategy / SEO Rules / Hard Reject 섹션
 - **데이터형(Format A/D/F)이면 `PRIMARY_SOURCE_GUIDE.md` 필독** — 주제가

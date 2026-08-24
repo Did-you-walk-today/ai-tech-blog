@@ -81,7 +81,7 @@ Hard boundary: **Phase 5 (human review) is never skipped.** No post moves to
 
 ## Style Guide (MANDATORY READ before writing)
 
-Before writing ANY post, you MUST read STYLE_GUIDE.md.
+Before writing ANY post, you MUST read `_plans/STYLE_GUIDE.md` (gitignored — 톤앤매너는 공개 레포에 두지 않는다. 백업: 비공개 레포 jsonhouse_plan).
 
 All posts are in English. The 박종훈/메르/jsonhouse DNA distinction refers
 to STRUCTURE and ANALYSIS METHODOLOGY, not language register.
@@ -616,4 +616,4 @@ GEO status: `python3 .claude/hooks/geo_validation.py --report`
 - **WARN**: Advisory — shown after save, fix before Phase 6 (Publishing)
 - Hook only activates for `_posts/*.md` and `_drafts/*.md` files
 
-See STYLE_GUIDE.md for tone, voice, and post structure rules (박종훈 / 메르 / jsonhouse DNA).
+See `_plans/STYLE_GUIDE.md` for tone, voice, and post structure rules (박종훈 / 메르 / jsonhouse DNA).
