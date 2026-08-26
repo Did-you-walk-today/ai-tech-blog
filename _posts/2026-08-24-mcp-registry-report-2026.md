@@ -2,7 +2,7 @@
 title: "MCP Server Rankings 2026: 24,477 Servers, Ownership Checked"
 description: "We swept 24,477 servers in the official MCP registry and joined GitHub stars. Four of the top 100 declare a repo they do not own, and 13.8% of links are dead."
 date: 2026-08-24 09:00:00 +0000
-last_modified_at: 2026-08-24 10:10:00 +0000
+last_modified_at: 2026-08-26 12:00:00 +0000
 categories: [ai-developer-tools]
 tags: [mcp, model-context-protocol, ai-agents, developer-tools, "2026"]
 format: F
@@ -18,7 +18,7 @@ faq:
   - q: "Does the MCP registry verify that a server owns the repository it links to?"
     a: "No. The registry verifies the namespace through GitHub OAuth or a DNS TXT record, but the repository URL is a self-declared field. Its own documentation states the publishing token needs no repository scopes because the registry never reads your code."
   - q: "Does a namespace-repository mismatch mean the server is fraudulent?"
-    a: "No. Mismatch only means the namespace owner and the repository owner are different strings, and ownership transfers produce that difference honestly. It is a prompt to look at the specific entry, not a verdict — though the four in our top 100 are hard to read charitably."
+    a: "No. Mismatch only means the namespace owner and the repository owner are different strings, and ownership transfers produce that difference honestly. The registry's own requirements do not ask the two to match — the field names where the source lives, not who published the entry. Treat it as a prompt to look at the specific entry, not as a verdict."
   - q: "Why do MCP server rankings disagree with each other?"
     a: "Most rank by GitHub stars taken from the repository field without checking whether that repository belongs to the publisher. Any entry pointing at a large unrelated project inherits its star count and jumps the ranking."
   - q: "How often is this ranking updated?"
@@ -198,7 +198,7 @@ No. It verifies the namespace through GitHub OAuth or a DNS TXT record, but the 
 
 ### Does a namespace-repository mismatch mean the server is fraudulent?
 
-No. Mismatch only means the namespace owner and the repository owner are different strings, and an ownership transfer produces that difference honestly. Treat it as a prompt to look at the specific entry, not as a verdict — though the four in our top 100 are hard to read charitably.
+No. Mismatch only means the namespace owner and the repository owner are different strings, and an ownership transfer produces that difference honestly. The registry's own requirements do not ask the two to match — the field names where the source lives, not who published the entry. Treat it as a prompt to look at the specific entry, not as a verdict.
 
 ### Why do MCP server rankings disagree with each other?
 
@@ -212,4 +212,5 @@ Every Monday. We sweep the full registry, re-join GitHub stars, and update the t
 
 | Date | Change |
 |---|---|
+| 2026-08-26 | Corrected the mismatch FAQ. It closed by saying the four mismatches in the top 100 were hard to read charitably, which the registry's own [official requirements](https://github.com/modelcontextprotocol/registry/blob/main/docs/reference/server-json/official-registry-requirements.md) do not support: they impose namespace authentication and package ownership verification, and say nothing about `repository`. The schema defines that field as the source code repository, not the publisher's own. Two of the four read straightforwardly under that definition — one publisher is a Mysten Labs employee declaring their employer's repository, and another declares a repository that genuinely contains the server source in the `mcp-server` subfolder it names. The clause contradicted this page's own text eight paragraphs earlier. The ranking distortion it described is unchanged and is a measurement problem, not misconduct. |
 | 2026-08-24 | First edition. Full sweep of 24,477 servers, ownership labelling introduced, and week-over-week star deltas against our 2026-08-17 sweep. That earlier sweep was collected but never published: comparing the two showed that the registry's `publishedAt` field tracks latest-version date rather than registration date, which invalidated the registration-growth section this page carried in draft. That section was removed before publication and replaced with the measurement itself. |

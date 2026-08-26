@@ -79,7 +79,7 @@
     },
     {
       "q": "Does a namespace-repository mismatch mean the server is fraudulent?",
-      "a": "No. Mismatch only means the namespace owner and the repository owner are different strings, and ownership transfers produce that difference honestly. It is a prompt to look at the specific entry, not a verdict — though the four in the top 100 are hard to read charitably."
+      "a": "No. Mismatch only means the namespace owner and the repository owner are different strings, and ownership transfers produce that difference honestly. The registry's own requirements do not ask the two to match — the field names where the source lives, not who published the entry. Treat it as a prompt to look at the specific entry, not as a verdict."
     },
     {
       "q": "Why do MCP server rankings disagree with each other?",
