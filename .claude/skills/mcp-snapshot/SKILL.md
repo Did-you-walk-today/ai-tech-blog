@@ -64,6 +64,13 @@ python3 .claude/hooks/mcp_registry_collect.py --repo-root "$(git rev-parse --sho
 갱신 약속을 어기면 [[PRIMARY_SOURCE_GUIDE.md]] §2-5의 update cadence 위반이다.
 못 지킬 주가 예상되면 포스트에 약속한 주기 자체를 먼저 낮춘다.
 
+**소유권 조회 샤드(`/data/mcp/ownership/`)는 손댈 것이 없다.**
+`_plugins/mcp_ownership_publisher.rb`가 빌드마다 **가장 최신 roster**를 읽어
+36개 샤드와 매니페스트를 새로 만든다. roster를 커밋하면 다음 배포에서 자동 반영된다.
+roster 커밋을 빠뜨리면 조회 페이지가 조용히 지난주 날짜를 계속 표시한다 —
+Step 2의 커밋 확인이 이 페이지까지 지킨다.
+기획서: `_plans/2026-08-26-mcp-ownership-lookup-spec.md`
+
 ## Step 4 — 보고
 
 한국어 작업 보고서에 포함: 총 서버 수와 전주 대비 증감, churn 3종

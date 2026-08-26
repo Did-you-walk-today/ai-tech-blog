@@ -91,6 +91,8 @@ Every publisher in this registry is authenticated. That part works. What is not 
 
 The project now sits in the registry twice. Rank 43 is `com.xcodebuildmcp/XcodeBuildMCP` pointing at the new owner, labelled unverifiable because a domain namespace has no mechanical link to any repo account. Rank 44 is `io.github.cameroncooke/XcodeBuildMCP` still pointing at the founder, labelled verified because that string does match. Both read 6,274 stars and the same last-push timestamp — they are one repository reached through GitHub's redirect, occupying two ranks. The label that marks the acquisition is the one meaning "we cannot check," and the stale row is the one the checker approves.
 
+{% include mcp-ownership-banner.html %}
+
 ## Methodology
 
 Every number on this page comes from a full sweep we ran ourselves. Nothing is taken from an aggregator.
