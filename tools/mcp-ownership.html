@@ -138,11 +138,28 @@ description: "Check whether an MCP server's registry namespace matches the owner
     return getJSON(BASE + '/index.json').then(function (m) { manifest = m; return m; });
   }
 
+  function emptyShard(s) {
+    return {
+      snapshot_date: (manifest && manifest.snapshot_date) || 'the latest',
+      shard: s,
+      entries: {}
+    };
+  }
+
+  // Only shards the manifest lists actually exist. No repository in the registry
+  // starts with a non-alphanumeric character, so the "_" shard is never emitted —
+  // asking for it must read as a miss, not as a broken index.
   function loadShard(s) {
     if (shardCache[s]) return Promise.resolve(shardCache[s]);
+    if (manifest && manifest.shards && !(s in manifest.shards)) {
+      return Promise.resolve(emptyShard(s));
+    }
     return getJSON(BASE + '/by-repo/' + s + '.json').then(function (d) {
       shardCache[s] = d;
       return d;
+    }, function (err) {
+      if (/\b404\b/.test(err.message)) return emptyShard(s);
+      throw err;
     });
   }
 
