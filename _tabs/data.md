@@ -16,6 +16,5 @@ order: 5
 <p>
   <a href="/tools/mcp-ownership/">MCP Ownership Check</a> — paste a repository and see
   whether its MCP registry namespace matches the account that owns it, against the latest
-  weekly sweep. Reads the same published JSON that
-  <a href="/posts/mcp-registry-report-2026/">the ranking page</a> is built from.
+  weekly sweep.
 </p>
