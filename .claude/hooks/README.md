@@ -42,9 +42,16 @@ B7은 원래 "섹션당 3줄 미만"이었는데, 마크다운 문단은 몇 문
 기웅이 생성해 반입한 이미지를 규격에 맞게 정규화. **Pillow 필요** (훅이 아니라 수동 도구).
 
 ```bash
-python3 .claude/hooks/optimize_image.py IN.png --cover    # 1200x630 PNG, ≤200KB
+python3 .claude/hooks/optimize_image.py RAW.png --cover -o assets/img/posts/{slug}-cover.jpg
 python3 .claude/hooks/optimize_image.py IN.png --figure   # WebP, ≤1600px, ≤150KB
 ```
+
+**`--cover`에는 `-o`를 반드시 준다.** 생략하면 출력 경로가 입력 파일이 되어
+**원본을 덮어쓴다.** 게다가 입력이 `.png`면 PNG로 저장하려다 200KB에 맞추려고
+32색까지 양자화하며, 사진형 커버는 그 시점에 밴딩으로 망가진다 — 되돌릴 원본은
+이미 없다. 커버는 JPEG여야 한다 (`IMAGE_GUIDE.md` §4). 이 줄이 예전에
+`--cover`만 적어둔 탓에 실제로 반입 원본 하나가 소실됐다 (2026-08-29).
+작업 전에 원본을 레포 밖으로 한 벌 복사해 두는 것을 권한다.
 
 ### ERROR vs WARN
 
@@ -68,3 +75,60 @@ echo '{"tool_name":"Write","tool_input":{"file_path":"'$PWD'/_drafts/2026-07-14-
 
 규칙이 잘못됐다고 판단되면 (예: 연도가 2027로 바뀌는 시점) 훅을 우회하지 말고
 기웅에게 규칙 변경을 제안한다. A2(제목 연도) 규칙은 매년 갱신이 필요하다.
+
+## citation_probe.py
+
+**훅이 아니다.** 자동 실행되지 않으며 cron·GitHub Actions에도 등록돼 있지 않다.
+손으로 부를 때만 도는 수동 계측기다 — 생성 답변(Claude web search, Perplexity)이
+우리를 인용하는지 재고, 결과를 `_data/citation_history/`에 쌓는다.
+
+### 왜 자동이 아닌가
+
+상시 추적은 하지 않기로 했다(2026-08-26 기웅 결정). 종량 과금이 붙는 일이고,
+daily 파이프라인 cron을 끈 이유와 같다. 대신 **언제든 돌릴 수 있는 상태**를
+유지하는 쪽을 택했다. 그 조건이 질문 세트 고정이다 —
+`_plans/citation-probes.yml`(gitignored, 백업 jsonhouse_plan). 질문을 매번 새로
+지으면 3월 결과와 8월 결과가 비교 불가능해지고, "언제든 추적 가능"은 말뿐이 된다.
+
+### 실행
+
+```bash
+# 항상 여기서 시작 — 호출 없이 계획과 견적만
+python3 .claude/hooks/citation_probe.py --dry-run
+
+# 실제 실행 (core 7개 × 2회 × 2엔진 ≈ $2)
+ANTHROPIC_API_KEY=... PERPLEXITY_API_KEY=... \
+  python3 .claude/hooks/citation_probe.py
+
+# 싸게 한 엔진만
+python3 .claude/hooks/citation_probe.py --engines claude --model claude-haiku-4-5
+```
+
+`--dry-run` 없이 부르면 견적을 보여주고 확인을 받는다. 비대화형에서는 `--yes`가
+없으면 실행을 거부한다 — 스크립트가 실수로 크론에 걸렸을 때 조용히 과금되는 것을
+막는 안전장치다.
+
+### 세 가지를 따로 판정한다
+
+| 판정 | 뜻 | 처방 |
+|---|---|---|
+| `retrieved` | 검색 결과에 우리가 있었나 | False → 발견가능성 문제 |
+| `cited` | 인용 목록에 우리가 있나 | retrieved만 True → 콘텐츠 문제 |
+| `uncredited_use` | 본문에 우리 고유 수치가 있는데 인용엔 우리가 없음 | attribution 위반 (DATA_POLICY §3) |
+
+뭉뚱그리면 처방이 안 나온다. "아예 안 걸림"과 "걸렸는데 안 뽑힘"은 정반대 대응을
+요구한다. `retrieved: null`은 '측정 안 됨'이고 `false`(검색 안 됨)와 다르다 —
+Perplexity가 `search_results`를 안 주는 경우가 있어서다.
+
+### 이 데이터로 하면 안 되는 것
+
+**불규칙 표본은 시계열이 아니다.** LLM은 비결정적이라 같은 질문도 실행마다 답이
+갈리고, 실행 간격까지 불규칙하면 추세와 잡음을 가를 수 없다. 이 데이터로
+"인용률이 올랐다"를 발행하지 않는다. 용도는 계측기 생존 확인과 시점 스팟체크뿐이며,
+결과 파일의 `sampling: "ad_hoc"` 필드가 그 사실을 데이터 안에 박아둔다.
+`pricing_history`/`mcp_registry_history`와 달리 **한 번 걸렀다고 손실이 나지 않는다.**
+
+### 결과 파일에 질문 전문이 없는 이유
+
+`_data/citation_history/`는 공개 레포에 들어가고 `_plans/`는 아니다. 결과에
+`probe_id`만 남겨 계측 기준이 새지 않게 한다.

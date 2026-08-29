@@ -22,26 +22,27 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 <!-- AUTO:GRAPH-TABLE-START -->
 | # | 슬러그 | 클러스터 | 인 | 아웃 | 상태 | 메모 |
 |---|---|---|---|---|---|---|
-| 1 | 6g-agi-convergence-2026 | AI_INFRA | 0 | 4 | **고아** |  |
-| 2 | llm-price-war-balance-sheet-2026 | LLM | 0 | 3 | **고아** |  |
-| 3 | ai-agent-payments-crawl-toll-2026 | AEO | 1 | 5 | ok |  |
-| 4 | ai-crawler-traffic-2026 | AEO | 4 | 3 | ok |  |
-| 5 | ai-content-quality-gates-2026 | DEVTOOLS | 1 | 3 | ok |  |
-| 6 | china-ai-coding-plans-2026 | LLM | 1 | 4 | ok |  |
-| 7 | llm-cache-pricing-2026 | LLM | 3 | 7 | ok |  |
-| 8 | best-ai-coding-tools-2026 | DEVTOOLS | 1 | 2 | ok |  |
-| 9 | best-llm-2026 | LLM | 4 | 6 | ok |  |
-| 10 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
-| 11 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
-| 12 | ai-crawler-ecosystem-2026 | AEO | 8 | 6 | ok |  |
-| 13 | llm-api-pricing-2026 | LLM | 15 | 5 | ok |  |
-| 14 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
-| 15 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
-| 16 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
-| 17 | synthid-c2pa-explained-2026 | AI_CONTENT_POLICY | 1 | 2 | ok |  |
-| 18 | eeat-ai-content-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
-| 19 | youtube-ai-monetization-2026 | AI_CONTENT_POLICY | 2 | 2 | noindex |  |
-| 20 | google-ai-content-penalties-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
+| 1 | claude-code-plugins-mcp-2026 | DEVTOOLS | 0 | 3 | **고아** |  |
+| 2 | 6g-agi-convergence-2026 | AI_INFRA | 0 | 4 | **고아** |  |
+| 3 | llm-price-war-balance-sheet-2026 | LLM | 0 | 3 | **고아** |  |
+| 4 | ai-agent-payments-crawl-toll-2026 | AEO | 1 | 5 | ok |  |
+| 5 | ai-crawler-traffic-2026 | AEO | 4 | 3 | ok |  |
+| 6 | ai-content-quality-gates-2026 | DEVTOOLS | 2 | 3 | ok |  |
+| 7 | china-ai-coding-plans-2026 | LLM | 1 | 4 | ok |  |
+| 8 | llm-cache-pricing-2026 | LLM | 4 | 7 | ok |  |
+| 9 | best-ai-coding-tools-2026 | DEVTOOLS | 2 | 2 | ok |  |
+| 10 | best-llm-2026 | LLM | 4 | 6 | ok |  |
+| 11 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
+| 12 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
+| 13 | ai-crawler-ecosystem-2026 | AEO | 8 | 6 | ok |  |
+| 14 | llm-api-pricing-2026 | LLM | 15 | 5 | ok |  |
+| 15 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
+| 16 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
+| 17 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
+| 18 | synthid-c2pa-explained-2026 | AI_CONTENT_POLICY | 1 | 2 | ok |  |
+| 19 | eeat-ai-content-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
+| 20 | youtube-ai-monetization-2026 | AI_CONTENT_POLICY | 2 | 2 | noindex |  |
+| 21 | google-ai-content-penalties-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
 <!-- AUTO:GRAPH-TABLE-END -->
 
 ---
@@ -55,6 +56,7 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 | WARN | NOINDEX<- | eeat-ai-content-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI Monetization 2026: What Is Inauthentic Content') |
 | WARN | NOINDEX<- | google-ai-content-penalties-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI monetization and inauthentic-content rules') |
 | WARN | ORPHAN | 6g-agi-convergence-2026 | no inbound internal link |
+| WARN | ORPHAN | claude-code-plugins-mcp-2026 | no inbound internal link |
 | WARN | ORPHAN | llm-price-war-balance-sheet-2026 | no inbound internal link |
 <!-- AUTO:GRAPH-FINDINGS-END -->
 
@@ -70,6 +72,12 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 내릴 때 어디를 고쳐야 하는지 여기서 확인합니다.
 
 <!-- AUTO:GRAPH-EDGES-START -->
+
+### claude-code-plugins-mcp-2026
+
+Claude Code Plugins and MCP 2026: How They Differ
+
+_인바운드 없음 — 이 글로 들어오는 내부 링크가 하나도 없습니다._
 
 ### 6g-agi-convergence-2026
 
@@ -109,6 +117,7 @@ AI Content Quality Gates 2026: 33 Rules That Caught Us
 | 걸린 글 | 앵커 텍스트 |
 |---|---|
 | ai-crawler-ecosystem-2026 | AI Content Quality Gates 2026 |
+| claude-code-plugins-mcp-2026 | AI content quality gates |
 
 ### china-ai-coding-plans-2026
 
@@ -125,6 +134,7 @@ LLM Cache Pricing 2026: The Real Cost of Cached Input
 | 걸린 글 | 앵커 텍스트 |
 |---|---|
 | best-llm-2026 | LLM Cache Pricing 2026 |
+| claude-code-plugins-mcp-2026 | LLM cache pricing |
 | llm-api-pricing-2026 | LLM Cache Pricing 2026 |
 | llm-price-war-balance-sheet-2026 | cache pricing analysis |
 
@@ -135,6 +145,7 @@ Best AI Coding Tools 2026: Pricing & Benchmark Reality
 | 걸린 글 | 앵커 텍스트 |
 |---|---|
 | china-ai-coding-plans-2026 | Best AI Coding Tools 2026 |
+| claude-code-plugins-mcp-2026 | AI coding tools comparison |
 
 ### best-llm-2026
 

@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0",
+  "slug": "claude-code-plugins-mcp-2026",
+  "title": "Claude Code Plugins and MCP 2026: How They Differ",
+  "description": "A plugin packages capability; MCP connects to it. What separates the two, what each keeps resident in your context window, and why most useful plugins go unfound.",
+  "data_updated": "2026-08-29",
+  "source_post": "https://www.jsonhouse.com/posts/claude-code-plugins-mcp-2026/",
+  "category": "ai-developer-tools",
+  "cluster": "CLUSTER_DEVTOOLS",
+  "format": "A",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/claude-code-plugins-mcp-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/claude-code-plugins-mcp-2026.json",
+    "citation": "Json House, \"Claude Code Plugins and MCP 2026: How They Differ\", jsonhouse.com (2026-08-29)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
+  "key_facts": [
+    {
+      "fact": "MCP is a connection protocol and a Claude Code plugin is a packaging format; a plugin can contain MCP servers through a .mcp.json at the plugin root",
+      "source": "Claude Code plugins reference, retrieved 2026-08-29",
+      "category": "definition"
+    },
+    {
+      "fact": "Plugin MCP servers start automatically when the plugin is enabled and have no separate enable switch — they follow the parent plugin's enabled state",
+      "source": "Claude Code plugins reference, retrieved 2026-08-29",
+      "category": "definition"
+    },
+    {
+      "fact": "Anthropic's official marketplace ships external-integration plugins for github, gitlab, atlassian, asana, linear, notion, figma, vercel, firebase, supabase, slack and sentry that bundle pre-configured MCP servers",
+      "source": "Claude Code discover-plugins documentation, retrieved 2026-08-29",
+      "category": "data"
+    },
+    {
+      "fact": "Claude Code registers the official marketplace automatically on first interactive start, but the community marketplace must be added manually with /plugin marketplace add anthropics/claude-plugins-community",
+      "source": "Claude Code discover-plugins documentation, retrieved 2026-08-29",
+      "category": "policy"
+    },
+    {
+      "fact": "The /plugin details pane shows a Context cost estimate of how many tokens a plugin adds to the context window every turn, but not every plugin supplies the data behind that field",
+      "source": "Claude Code discover-plugins documentation, retrieved 2026-08-29",
+      "category": "data"
+    },
+    {
+      "fact": "Claude Code groups plugins unused for at least two weeks across at least ten sessions under a 'Not used recently' header so users can find plugins still adding startup and context cost",
+      "source": "Claude Code discover-plugins documentation, retrieved 2026-08-29",
+      "category": "trend"
+    },
+    {
+      "fact": "Tool search is the default MCP loading path in Claude Code, with a discovery cache that can report a remote server as 'connects on first use'",
+      "source": "Claude Code MCP documentation, retrieved 2026-08-29",
+      "category": "policy"
+    },
+    {
+      "fact": "Three documented configurations lack tool search: a custom ANTHROPIC_BASE_URL, ENABLE_TOOL_SEARCH=false, and a model earlier than the Claude 4.5 generation on Google Cloud's Agent Platform",
+      "source": "Claude Code MCP documentation, retrieved 2026-08-29",
+      "category": "policy"
+    },
+    {
+      "fact": "Anthropic does not publish a general token cost for MCP tool definitions; the published limits govern tool output — a warning above 10,000 tokens and a 25,000-token default cap",
+      "source": "Claude Code MCP documentation, retrieved 2026-08-29",
+      "category": "data"
+    },
+    {
+      "fact": "A skill's combined description and when_to_use text is truncated at 1,536 characters in the skill listing, and the skill body loads only on use but then stays in context across turns",
+      "source": "Claude Code skills documentation, retrieved 2026-08-29",
+      "category": "data"
+    }
+  ],
+  "comparison_data": {
+    "dimensions": ["layer_comparison", "resident_context"],
+    "entries": [
+      {
+        "dimension": "layer_comparison",
+        "attribute": "What it is",
+        "mcp_server": "Open connection protocol",
+        "plugin": "Packaging and distribution format"
+      },
+      {
+        "dimension": "layer_comparison",
+        "attribute": "Solves",
+        "mcp_server": "Talking to an external system",
+        "plugin": "Shipping, versioning and toggling a set of extensions"
+      },
+      {
+        "dimension": "layer_comparison",
+        "attribute": "Unit of install",
+        "mcp_server": "One server, configured by hand",
+        "plugin": "One command, one manifest"
+      },
+      {
+        "dimension": "layer_comparison",
+        "attribute": "Can contain the other",
+        "mcp_server": "No",
+        "plugin": "Yes — via .mcp.json"
+      },
+      {
+        "dimension": "layer_comparison",
+        "attribute": "Lifecycle",
+        "mcp_server": "Per-server configuration",
+        "plugin": "All bundled components follow the plugin's enabled state"
+      },
+      {
+        "dimension": "layer_comparison",
+        "attribute": "Scope options",
+        "mcp_server": "Per configuration file",
+        "plugin": "User, project, local, or managed"
+      },
+      {
+        "dimension": "resident_context",
+        "component": "MCP server (tool search on, default)",
+        "resident_at_startup": "Tool names via discovery cache",
+        "loaded_on_use": "Full schemas through ToolSearch",
+        "published_cost_figure": "Not published"
+      },
+      {
+        "dimension": "resident_context",
+        "component": "MCP server (tool search off)",
+        "resident_at_startup": "Full tool definitions",
+        "loaded_on_use": "n/a",
+        "published_cost_figure": "Not published"
+      },
+      {
+        "dimension": "resident_context",
+        "component": "Agent Skill",
+        "resident_at_startup": "description + when_to_use, capped at 1,536 characters",
+        "loaded_on_use": "Body, then stays for the session",
+        "published_cost_figure": "1,536-character listing cap"
+      },
+      {
+        "dimension": "resident_context",
+        "component": "Hook",
+        "resident_at_startup": "Nothing",
+        "loaded_on_use": "Nothing — output only",
+        "published_cost_figure": "n/a"
+      },
+      {
+        "dimension": "resident_context",
+        "component": "Subagent",
+        "resident_at_startup": "Its listing entry",
+        "loaded_on_use": "Runs in its own context",
+        "published_cost_figure": "Not published"
+      },
+      {
+        "dimension": "resident_context",
+        "component": "bin/ executable",
+        "resident_at_startup": "Nothing",
+        "loaded_on_use": "Nothing — called through Bash",
+        "published_cost_figure": "n/a"
+      }
+    ]
+  },
+  "faq_summary": [
+    {
+      "q": "What is the difference between a Claude Code plugin and an MCP server?",
+      "a": "They sit at different layers. MCP is an open protocol for connecting to an external system; a plugin is a packaging format that carries skills, subagents, hooks, LSP servers and MCP servers behind one install and one toggle. A plugin can contain MCP servers."
+    },
+    {
+      "q": "Do MCP tool definitions still load into every request in 2026?",
+      "a": "Not by default in Claude Code. Tool search is the default path, with a discovery cache that can report a remote server as connecting on first use. Three documented configurations opt out and keep the older behaviour."
+    },
+    {
+      "q": "How do I find out what Claude Code plugins exist?",
+      "a": "Run /plugin and open the Discover tab, or browse claude.com/plugins. The official marketplace registers itself; the community marketplace must be added manually with /plugin marketplace add anthropics/claude-plugins-community."
+    },
+    {
+      "q": "How much context does a plugin add?",
+      "a": "The /plugin details pane shows a Context cost estimate per turn, alongside Last updated and a Will install component list. Not every plugin supplies that data."
+    },
+    {
+      "q": "When is a skill the better choice than an MCP server?",
+      "a": "When the work is instructions rather than a live connection. A skill's body loads only when used and its listing entry is capped at 1,536 characters."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Create plugins",
+      "url": "https://code.claude.com/docs/en/plugins",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Plugins reference",
+      "url": "https://code.claude.com/docs/en/plugins-reference",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Discover and install prebuilt plugins through marketplaces",
+      "url": "https://code.claude.com/docs/en/discover-plugins",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Extend Claude with skills",
+      "url": "https://code.claude.com/docs/en/skills",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Connect Claude Code to tools via MCP",
+      "url": "https://code.claude.com/docs/en/mcp",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "What is the Model Context Protocol (MCP)?",
+      "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+      "publisher": "Model Context Protocol"
+    }
+  ]
+}
