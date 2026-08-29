@@ -10,11 +10,3 @@ order: 5
 
 {% include hub-post-list.html category="ai-data-statistics" %}
 
-<hr>
-
-<h2>Lookup tools</h2>
-<p>
-  <a href="/tools/mcp-ownership/">MCP Ownership Check</a> — paste a repository and see
-  whether its MCP registry namespace matches the account that owns it, against the latest
-  weekly sweep.
-</p>
