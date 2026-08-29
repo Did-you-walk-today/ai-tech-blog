@@ -164,13 +164,16 @@ module Jekyll
         },
         'record_fields'  => %w[name repo ownership stars],
         'shards'         => shards.keys.sort.to_h { |s| [s, shards[s]['entries'].size] },
-        'source_post'    => 'https://www.jsonhouse.com/posts/mcp-registry-report-2026/',
+        # Points at the lookup tool, not a post. The ranking post this index shipped
+        # alongside was withdrawn on 2026-08-29; a dataset that cites a 404 is worse
+        # than one that cites nothing, because a consumer stores the dead URL.
+        'source_page'    => 'https://www.jsonhouse.com/tools/mcp-ownership/',
         'attribution'    => {
           'source'               => 'Json House',
-          'source_url'           => 'https://www.jsonhouse.com/posts/mcp-registry-report-2026/',
+          'source_url'           => 'https://www.jsonhouse.com/tools/mcp-ownership/',
           'dataset_url'          => "https://www.jsonhouse.com/#{OUT_DIR}/index.json",
-          'citation'             => 'Json House, "MCP Server Rankings 2026", jsonhouse.com ' \
-                                    "(#{date})",
+          'citation'             => 'Json House, "MCP Registry Ownership Index", ' \
+                                    "jsonhouse.com (#{date})",
           'attribution_required' => true,
           'terms_url'            => 'https://www.jsonhouse.com/data-policy/'
         }
