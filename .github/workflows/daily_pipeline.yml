@@ -30,7 +30,7 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # Without this guard the run dies several steps later inside `claude`
       # with "Not logged in · Please run /login", which reads like a Claude
@@ -54,7 +54,7 @@ jobs:
           echo "ANTHROPIC_API_KEY is present (${#ANTHROPIC_API_KEY} chars)."
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: '20'
 
