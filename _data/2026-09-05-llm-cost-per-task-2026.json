@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "slug": "llm-cost-per-task-2026",
+  "title": "LLM Cost per Task 2026: When a Pricier Model Is Cheaper",
+  "description": "GPT-6 Astra costs 2.5x GPT-5.6 Sol per token yet 43% less per BenchCAD task. We invert every published cost claim into the token ratio it implies.",
+  "data_updated": "2026-09-05",
+  "source_post": "https://www.jsonhouse.com/posts/llm-cost-per-task-2026/",
+  "category": "ai-models-intelligence",
+  "cluster": "CLUSTER_LLM",
+  "format": "D",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/llm-cost-per-task-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/llm-cost-per-task-2026.json",
+    "citation": "Json House, \"LLM Cost per Task 2026: When a Pricier Model Is Cheaper\", jsonhouse.com (2026-09-05)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
+  "key_facts": [
+    {
+      "fact": "GPT-6 Astra is priced at exactly 2.50x GPT-5.6 Sol on every published rate line: $10.00 vs $4.00 input, $1.00 vs $0.40 cached input, $50.00 vs $20.00 output, $20.00/$75.00 vs $8.00/$30.00 long context, and fast mode at 2x standard for both",
+      "source": "OpenAI API pricing page, retrieved 2026-09-05",
+      "category": "data"
+    },
+    {
+      "fact": "Because the Astra-to-Sol price ratio is a single constant of 2.50x, the break-even point is a cost-weighted token ratio of 0.40 — Astra must finish a task on under 40% of Sol's cost-weighted tokens to cost less per task",
+      "source": "jsonhouse original derivation, 2026-09-05",
+      "category": "data"
+    },
+    {
+      "fact": "OpenAI reports GPT-6 Astra scoring 95.9% geometric overlap on BenchCAD against 83.3% for GPT-5.6 Sol and 84.3% for Claude Fable 5.1, at estimated API cost approximately 43% lower than Sol and 86% lower than Fable 5.1 in the configurations shown",
+      "source": "OpenAI, \"GPT-6 Astra: A new generation of intelligence\", 2026-09-03",
+      "category": "data"
+    },
+    {
+      "fact": "The 43% BenchCAD cost saving against Sol implies Astra consumed approximately 23% of Sol's cost-weighted tokens, a token efficiency ratio of about 4.4x",
+      "source": "jsonhouse original derivation, 2026-09-05",
+      "category": "data"
+    },
+    {
+      "fact": "Artificial Analysis measured GPT-6 Astra as 75% more expensive per task than GPT-5.6 Sol on its Intelligence Index v4.1.1 at max effort, at $2.57 per Intelligence Index task, for a score of 61.2 against Sol's 60.9",
+      "source": "Artificial Analysis, \"Benchmarking GPT-6 Astra\", 2026-09",
+      "category": "data"
+    },
+    {
+      "fact": "The published cost deltas split by task shape rather than by model: long tool-using benchmarks with machine-verifiable outcomes imply 60-86% token reductions, while single-turn reasoning work implies about 30%",
+      "source": "jsonhouse original derivation, 2026-09-05",
+      "category": "trend"
+    },
+    {
+      "fact": "On SRE-Bench, GPT-6 Astra solved 88.0% of tasks in a single attempt and 99.2% within four attempts, against 55.9% and 68.7% for GPT-5.6 Sol — the weaker model at four attempts still finishes 19.3 points below the stronger model at one",
+      "source": "OpenAI, \"GPT-6 Astra: A new generation of intelligence\", 2026-09-03",
+      "category": "data"
+    },
+    {
+      "fact": "OpenAI states that GPT-5.6 Sol's 5.5% score on the internal ExploitBench (June-August 2026) set is an artifact of the benchmark's 300-turn limit, and that the same model reached 11.5% when hitting fewer limits — a weaker model exhausting a turn budget without finishing, at full billing",
+      "source": "OpenAI, \"GPT-6 Astra: A new generation of intelligence\", footnote 14, 2026-09-03",
+      "category": "case_study"
+    },
+    {
+      "fact": "Dividing cost per attempt by pass rate turns Terminal-Bench 4.0's published 9% cost saving against GPT-5.6 Sol into a 41% saving per successfully resolved task, because Astra resolves 57.9% of tasks against Sol's 37.3%",
+      "source": "jsonhouse original derivation, 2026-09-05",
+      "category": "data"
+    },
+    {
+      "fact": "Cost per successful task cannot be computed for either BenchCAD row, because BenchCAD is scored by geometric overlap — a continuous partial-credit measure rather than a pass rate — so the claim carrying the largest published cost saving is the one least convertible into cost per finished unit of work",
+      "source": "jsonhouse original derivation, 2026-09-05",
+      "category": "definition"
+    }
+  ],
+  "cost_per_success": {
+    "method": "Each model's relative cost per success is its cost ratio divided by its pass rate; the saving is one minus the ratio of the two. Applied only to benchmarks scored pass/fail.",
+    "field_provenance": {
+      "astra_pass_rate": "vendor",
+      "baseline_pass_rate": "vendor",
+      "cost_per_attempt_delta": "vendor",
+      "cost_per_success_delta": "jsonhouse derived, 2026-09-05"
+    },
+    "dimensions": ["benchmark", "baseline", "astra_pass_rate", "baseline_pass_rate", "cost_per_attempt_delta", "cost_per_success_delta"],
+    "entries": [
+      {"benchmark": "Terminal-Bench 4.0", "baseline": "GPT-5.6 Sol", "astra_pass_rate": "57.9%", "baseline_pass_rate": "37.3%", "cost_per_attempt_delta": "-9%", "cost_per_success_delta": "-41%"},
+      {"benchmark": "Terminal-Bench 4.0", "baseline": "Claude Fable 5.1", "astra_pass_rate": "57.9%", "baseline_pass_rate": "55.8%", "cost_per_attempt_delta": "-63%", "cost_per_success_delta": "-64%"},
+      {"benchmark": "Terminal-Bench Science 0.1", "baseline": "Claude Fable 5.1", "astra_pass_rate": "64.6%", "baseline_pass_rate": "52.6%", "cost_per_attempt_delta": "-31%", "cost_per_success_delta": "-44%"},
+      {"benchmark": "Terminal-Bench Science 0.1 (low-cost setting)", "baseline": "GPT-5.6 Sol", "astra_pass_rate": "61.1%", "baseline_pass_rate": "22.4%", "cost_per_attempt_delta": "-27%", "cost_per_success_delta": "-73%"},
+      {"benchmark": "GPQA Diamond (low-cost setting)", "baseline": "GPT-5.6 Sol", "astra_pass_rate": "94.9%", "baseline_pass_rate": "94.6%", "cost_per_attempt_delta": "-37%", "cost_per_success_delta": "-37%"},
+      {"benchmark": "BenchCAD", "baseline": "GPT-5.6 Sol", "astra_pass_rate": "Not a pass rate", "baseline_pass_rate": "Not a pass rate", "cost_per_attempt_delta": "-43%", "cost_per_success_delta": "Not derivable"},
+      {"benchmark": "BenchCAD", "baseline": "Claude Fable 5.1", "astra_pass_rate": "Not a pass rate", "baseline_pass_rate": "Not a pass rate", "cost_per_attempt_delta": "-86%", "cost_per_success_delta": "Not derivable"}
+    ]
+  },
+  "reporting_gaps": {
+    "description": "Metrics an enterprise buyer needs that current model leaderboards do not publish alongside cost.",
+    "items": [
+      {"metric": "Resolution curve by attempt number", "status": "Published for one benchmark only", "example": "SRE-Bench reports single-attempt and four-attempt resolution rates; no cost figure accompanies it"},
+      {"metric": "Turn and retry budget consumed", "status": "Not published", "example": "Footnote 14 reveals turn caps materially changed a reported score, but turn counts are never reported alongside results"},
+      {"metric": "Silent-failure rate", "status": "Published but not joinable", "example": "Internal hallucination benchmark shows 4.2% for Astra against 12.2% for Sol, in a separate table from every cost claim"}
+    ]
+  },
+  "comparison_data": {
+    "field_provenance": {
+      "astra_score": "vendor",
+      "baseline_score": "vendor",
+      "published_cost_delta": "vendor",
+      "price_ratio_k": "vendor rate card",
+      "implied_token_ratio": "jsonhouse derived, 2026-09-05",
+      "implied_token_reduction": "jsonhouse derived, 2026-09-05"
+    },
+    "dimensions": ["benchmark", "astra_score", "baseline", "baseline_score", "published_cost_delta", "price_ratio_k", "implied_token_ratio", "implied_token_reduction", "source"],
+    "entries": [
+      {"benchmark": "BenchCAD", "astra_score": "95.9%", "baseline": "GPT-5.6 Sol", "baseline_score": "83.3%", "published_cost_delta": "-43%", "price_ratio_k": 2.5, "implied_token_ratio": 0.23, "implied_token_reduction": "~77%", "source": "OpenAI"},
+      {"benchmark": "BenchCAD", "astra_score": "95.9%", "baseline": "Claude Fable 5.1", "baseline_score": "84.3%", "published_cost_delta": "-86%", "price_ratio_k": 1.0, "implied_token_ratio": 0.14, "implied_token_reduction": "~86%", "source": "OpenAI"},
+      {"benchmark": "Terminal-Bench 4.0", "astra_score": "57.9%", "baseline": "GPT-5.6 Sol", "baseline_score": "37.3%", "published_cost_delta": "-9%", "price_ratio_k": 2.5, "implied_token_ratio": 0.36, "implied_token_reduction": "~64%", "source": "OpenAI"},
+      {"benchmark": "Terminal-Bench 4.0", "astra_score": "57.9%", "baseline": "Claude Fable 5.1", "baseline_score": "55.8%", "published_cost_delta": "-63%", "price_ratio_k": 1.0, "implied_token_ratio": 0.37, "implied_token_reduction": "~63%", "source": "OpenAI"},
+      {"benchmark": "Terminal-Bench Science 0.1", "astra_score": "64.6%", "baseline": "Claude Fable 5.1", "baseline_score": "52.6%", "published_cost_delta": "-31%", "price_ratio_k": 1.0, "implied_token_ratio": 0.69, "implied_token_reduction": "~31%", "source": "OpenAI"},
+      {"benchmark": "Terminal-Bench Science 0.1 (low-cost setting)", "astra_score": "61.1%", "baseline": "GPT-5.6 Sol", "baseline_score": "22.4%", "published_cost_delta": "-27%", "price_ratio_k": 2.5, "implied_token_ratio": 0.29, "implied_token_reduction": "~71%", "source": "OpenAI"},
+      {"benchmark": "GPQA Diamond (low-cost setting)", "astra_score": "94.9%", "baseline": "GPT-5.6 Sol", "baseline_score": "94.6%", "published_cost_delta": "-37%", "price_ratio_k": 2.5, "implied_token_ratio": 0.25, "implied_token_reduction": "~75%", "source": "OpenAI"},
+      {"benchmark": "Agents' Last Exam", "astra_score": "59.3%", "baseline": "Claude Opus 5", "baseline_score": "55.5%", "published_cost_delta": "Not published", "price_ratio_k": 2.0, "implied_token_ratio": null, "implied_token_reduction": "65% output tokens only", "source": "OpenAI"},
+      {"benchmark": "Artificial Analysis Intelligence Index v4.1.1", "astra_score": "61.2", "baseline": "GPT-5.6 Sol", "baseline_score": "60.9", "published_cost_delta": "+75%", "price_ratio_k": 2.5, "implied_token_ratio": 0.70, "implied_token_reduction": "~30%", "source": "Artificial Analysis"},
+      {"benchmark": "Artificial Analysis Coding Agent Index v1.4", "astra_score": "67.0", "baseline": "GPT-5.6 Sol", "baseline_score": "65.1", "published_cost_delta": "~0%", "price_ratio_k": 2.5, "implied_token_ratio": 0.40, "implied_token_reduction": "~60%", "source": "Artificial Analysis"}
+    ]
+  },
+  "numerical_data": {
+    "metrics": [
+      {"name": "Break-even cost-weighted token ratio vs GPT-5.6 Sol", "value": 0.40, "unit": "ratio", "note": "1 / 2.50"},
+      {"name": "Break-even cost-weighted token ratio vs Claude Opus 5", "value": 0.50, "unit": "ratio", "note": "1 / 2.00"},
+      {"name": "Break-even cost-weighted token ratio vs Claude Fable 5.1", "value": 1.00, "unit": "ratio", "note": "1 / 1.00, base rates only; cache reads break the constant"},
+      {"name": "GPT-6 Astra input price", "value": 10.0, "unit": "USD per 1M tokens"},
+      {"name": "GPT-6 Astra output price", "value": 50.0, "unit": "USD per 1M tokens"},
+      {"name": "GPT-5.6 Sol input price", "value": 4.0, "unit": "USD per 1M tokens", "note": "Promotional, stated available at least through 2026-11-21"},
+      {"name": "GPT-5.6 Sol output price", "value": 20.0, "unit": "USD per 1M tokens", "note": "Promotional, stated available at least through 2026-11-21"},
+      {"name": "Artificial Analysis cost per Intelligence Index task, GPT-6 Astra (max)", "value": 2.57, "unit": "USD"}
+    ]
+  },
+  "faq_summary": [
+    {
+      "q": "Is GPT-6 Astra cheaper than GPT-5.6 Sol?",
+      "a": "Per token, no — Astra is exactly 2.5x Sol on every rate line. Per task it depends on the task: OpenAI reports 43% lower cost on BenchCAD, while Artificial Analysis measured 75% higher cost per task on its Intelligence Index at max effort."
+    },
+    {
+      "q": "How much more token-efficient does a model have to be to justify a 2.5x price?",
+      "a": "It must finish the task on under 40% of the cost-weighted tokens the cheaper model used. That is 1 divided by the price ratio. A 50% token reduction still leaves you paying 25% more."
+    },
+    {
+      "q": "Why does the cost advantage appear on CAD and terminal tasks but not on reasoning benchmarks?",
+      "a": "The savings come from not retrying. Long agentic tasks with verifiable outcomes carry large budgets of failed attempts that a stronger model eliminates. A single-turn question has no retry loop, so the higher per-token price shows up undiluted."
+    },
+    {
+      "q": "Can I verify OpenAI's cost-per-task claims?",
+      "a": "Not directly. OpenAI publishes the percentage but not the token counts, the reasoning-effort setting, or the price basis behind 'in the configurations shown', and the footnote attached to the BenchCAD cost claim renders empty on the announcement page."
+    },
+    {
+      "q": "Does this mean I should route every task to the most expensive model?",
+      "a": "No. The advantage is concentrated in long, tool-heavy, verifiable work. On short reasoning tasks the premium model cost 75% more for a 0.3-point score gain, so the efficient policy is routing by task shape rather than by model rank."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "GPT-6 Astra: A new generation of intelligence",
+      "url": "https://openai.com/index/gpt-6-astra/",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "OpenAI API pricing",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "Claude API pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "BenchCAD: A Comprehensive, Industry-Standard Benchmark for Programmatic CAD",
+      "url": "https://arxiv.org/abs/2605.10865",
+      "publisher": "arXiv"
+    },
+    {
+      "title": "Benchmarking GPT-6 Astra",
+      "url": "https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra",
+      "publisher": "Artificial Analysis"
+    }
+  ]
+}
