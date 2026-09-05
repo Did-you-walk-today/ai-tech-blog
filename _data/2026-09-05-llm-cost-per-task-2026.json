@@ -145,7 +145,7 @@
     },
     {
       "q": "Can I verify OpenAI's cost-per-task claims?",
-      "a": "Not directly. OpenAI publishes the percentage but not the token counts, the reasoning-effort setting, or the price basis behind 'in the configurations shown', and the footnote attached to the BenchCAD cost claim renders empty on the announcement page."
+      "a": "Not directly. OpenAI publishes the percentage but not the token counts, the reasoning-effort setting, or the price basis behind 'in the configurations shown'. Footnote 5, where that configuration would be defined, is empty — checked in a browser and through text extraction on 2026-09-05."
     },
     {
       "q": "Does this mean I should route every task to the most expensive model?",

@@ -2,7 +2,7 @@
 title: "LLM Cost per Task 2026: When a Pricier Model Is Cheaper"
 description: "GPT-6 Astra costs 2.5x GPT-5.6 Sol per token yet 43% less per BenchCAD task. We invert every published cost claim into the token ratio it implies."
 date: 2026-09-05 10:00:00 +0000
-last_modified_at: 2026-09-05 10:00:00 +0000
+last_modified_at: 2026-09-05 14:20:00 +0000
 categories: [ai-models-intelligence]
 tags: [llm-pricing, cost-per-task, gpt-6-astra, benchmarks, token-efficiency, model-routing, "2026"]
 format: D
@@ -22,7 +22,7 @@ faq:
   - q: "Do the vendors publish a task success rate I can buy against?"
     a: "Rarely, and only in one place in this launch. SRE-Bench is reported as a resolution curve — Astra solved 88.0% of tasks in a single attempt and 99.2% within four, against 55.9% and 68.7% for GPT-5.6 Sol — which is the metric procurement actually needs, because a second attempt is a second bill. Everywhere else, cost, pass rate, and turn budget appear in separate tables that cannot be joined."
   - q: "Can I verify OpenAI's cost-per-task claims?"
-    a: "Not directly. OpenAI publishes the percentage but not the token counts, the reasoning-effort setting, or the price basis behind the phrase 'in the configurations shown'. The footnote attached to the BenchCAD claim renders empty on the announcement page. What you can do is invert the claim against the published rate card, which is what the table on this page does."
+    a: "Not directly. OpenAI publishes the percentage but not the token counts, the reasoning-effort setting, or the price basis behind the phrase 'in the configurations shown'. Footnote 5, which is where the BenchCAD cost claim's configuration would be defined, is empty — checked in a browser and through text extraction on 2026-09-05. What you can do is invert the claim against the published rate card, which is what the table on this page does."
   - q: "Does this mean I should route every task to the most expensive model?"
     a: "No — the data says the opposite of a blanket rule. The cost advantage is concentrated in long, tool-heavy, verifiable work. On short reasoning and Q&A the premium model costs 75% more for a 0.3-point score gain. The efficient policy is routing by task shape, not by model rank."
 data_updated: 2026-09-05
@@ -174,7 +174,9 @@ None of this requires a new institution. Terminal-Bench and SRE-Bench already sc
 
 Three gaps are worth naming, because they set the limits on how far these numbers travel.
 
-**The configurations.** OpenAI's cost claims are qualified as "in the configurations shown," and reasoning effort is the single largest lever on token count. The announcement states separately that scores are "the maximum at any effort" — which is not the same statement, and the footnote attached to the BenchCAD cost claim renders empty on the page. Two of the seven rows above are explicitly labelled as lower-cost settings, so the configurations demonstrably vary within the same table.
+**The configurations.** OpenAI's cost claims are qualified as "in the configurations shown," and reasoning effort is the single largest lever on token count. The announcement states separately that scores are "the maximum at any effort" — which is not the same statement. Two of the seven rows above are explicitly labelled as lower-cost settings, so the configurations demonstrably vary within the same table.
+
+Footnote 5 is where that qualification would be resolved, and it is empty. We checked it two ways on 2026-09-05 — in a browser and through text extraction — and it carries no text in either. Footnotes 2, 6, 7 and 15 are empty the same way. The marker is present, the reference is not, so the phrase "in the configurations shown" points at nothing a reader can open.
 
 **The token counts.** No vendor publishes tokens per task for these runs. That is what makes the inverted column a derivation rather than a measurement, and it means a reader cannot check the claim against anything except the rate card.
 
@@ -207,6 +209,7 @@ This table is refreshed **monthly, on the first Monday**, and additionally withi
 
 ## Changelog
 
+- **2026-09-05** — Footnote 5 re-checked in a browser as well as through text extraction; empty in both. Wording tightened to state the verification method.
 - **2026-09-05** — Initial publication. Seven OpenAI cost claims from the 2026-09-03 GPT-6 Astra launch plus two Artificial Analysis index results, inverted against rate cards verified 2026-09-05.
 
 ## FAQ
@@ -233,7 +236,7 @@ Rarely, and only in one place in this launch. SRE-Bench is reported as a resolut
 
 ### Can I verify OpenAI's cost-per-task claims?
 
-Not directly. OpenAI publishes the percentage but not the token counts, the reasoning-effort setting, or the price basis behind the phrase "in the configurations shown". The footnote attached to the BenchCAD claim renders empty on the announcement page. What you can do is invert the claim against the published rate card, which is what the table on this page does.
+Not directly. OpenAI publishes the percentage but not the token counts, the reasoning-effort setting, or the price basis behind the phrase "in the configurations shown". Footnote 5, which is where the BenchCAD cost claim's configuration would be defined, is empty — checked in a browser and through text extraction on 2026-09-05. What you can do is invert the claim against the published rate card, which is what the table on this page does.
 
 ### Does this mean I should route every task to the most expensive model?
 
