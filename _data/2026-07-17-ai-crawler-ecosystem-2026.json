@@ -148,6 +148,7 @@
     }
   ],
   "comparison_data": {
+    "field_provenance": {"crawler": "operator docs", "operator": "operator docs", "declared_purpose": "operator docs", "respects_robots_txt": "operator docs", "traffic_share_june_2026": "websearchapi.ai"},
     "dimensions": ["crawler", "operator", "declared_purpose", "respects_robots_txt", "traffic_share_june_2026"],
     "unit": "traffic share = % of AI-adjacent crawler traffic, June 8 – July 6, 2026, websearchapi.ai network measurement",
     "entries": [

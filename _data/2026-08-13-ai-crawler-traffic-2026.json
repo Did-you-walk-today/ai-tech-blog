@@ -109,6 +109,7 @@
     }
   ],
   "numerical_data": {
+    "field_provenance": {"all_metrics": "measured by jsonhouse, server-side census of this origin"},
     "metrics": [
       {
         "metric": "bot_crawl_requests",

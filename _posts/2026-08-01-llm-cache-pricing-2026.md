@@ -2,7 +2,7 @@
 title: "LLM Cache Pricing 2026: The Real Cost of Cached Input"
 description: "LLM cache pricing 2026 normalized across six providers: effective input cost at real hit rates, hidden write fees, and which vendors publish nothing at all."
 date: 2026-08-01 10:00:00 +0000
-last_modified_at: 2026-09-01 14:10:00 +0900
+last_modified_at: 2026-09-05 14:40:00 +0000
 categories: [ai-data-statistics]
 tags: [prompt-caching, llm-pricing, api-cost, claude, gpt-5, gemini, deepseek, "2026"]
 format: D
@@ -44,13 +44,13 @@ Base input and cache-read prices were collected on **2026-09-01** from the six p
 
 Effective input price is computed as `base x (1 - h) + cache_read x h`, where `h` is the cache hit rate: the share of input tokens served from cache. It deliberately excludes write and storage costs, which are handled separately below, because those are one-time or time-based rather than per-token and would otherwise make the columns non-comparable.
 
-All figures are USD per 1M tokens at the standard, non-batch, base long-context tier. Where a provider publishes nothing, the cell reads "not published" — we do not derive a figure and present it as a price. The one derivation we do make is labelled as such.
+Every cell in the table below except the `h = 0%` column is computed by us from vendor rate cards; `h = 0%` is the vendor's published base input price. All figures are USD per 1M tokens at the standard, non-batch, base long-context tier. Where a provider publishes nothing, the cell reads "not published" — we do not derive a figure and present it as a price. The one derivation we do make is labelled as such.
 
 ## Effective Input Price by Cache Hit Rate
 
 `h = 0%` is the sticker price. `h = 95%` is a realistic figure for an agent that re-sends a stable system prompt and tool definitions on every turn.
 
-| Model | Provider | h = 0% | h = 50% | h = 80% | h = 95% | Discount |
+| Model | Provider | h = 0% (vendor) | h = 50% (jsonhouse derived) | h = 80% (jsonhouse derived) | h = 95% (jsonhouse derived) | Discount (jsonhouse derived) |
 |---|---|---|---|---|---|---|
 | Claude Opus 5 | Anthropic | $5.0000 | $2.7500 | $1.4000 | $0.7250 | 90% |
 | GPT-5.6-sol | OpenAI | $4.0000 | $2.2000 | $1.1200 | $0.5800 | 90% |
@@ -108,7 +108,7 @@ Cache hit rate does not merely scale costs down uniformly. It reorders them, bec
 
 On 2026-08-03 five pairs crossed inside the 0–100% range and three of them crossed in the same 83–85% band. That band was the whole story of this page. **It went on 2026-08-17 and has not come back.** Three pairs now cross, and none of them cross where agents run:
 
-| Cheaper below the crossover | Cheaper above it | Crossover hit rate | Effective price at crossover |
+| Cheaper below the crossover | Cheaper above it | Crossover hit rate (jsonhouse derived) | Effective price at crossover (jsonhouse derived) |
 |---|---|---|---|
 | GPT-5.6-luna | DeepSeek v4-flash | 60.6% | $0.0909 / 1M |
 | Gemini 2.5 Flash-Lite | DeepSeek v4-flash | 97.6% | $0.0122 / 1M |

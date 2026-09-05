@@ -69,6 +69,7 @@
     }
   ],
   "comparison_data": {
+    "field_provenance": {"model": "vendor", "input_start_usd_per_1m": "vendor", "input_end_usd_per_1m": "vendor", "output_start_usd_per_1m": "vendor", "output_end_usd_per_1m": "vendor", "output_change_pct": "jsonhouse derived", "direction": "jsonhouse derived"},
     "dimensions": [
       "model",
       "input_start_usd_per_1m",

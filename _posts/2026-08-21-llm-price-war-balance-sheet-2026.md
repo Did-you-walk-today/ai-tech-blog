@@ -2,7 +2,7 @@
 title: "LLM Price War 2026: Who Is Paying for Your Discount"
 description: "CoreWeave raised compute prices 25% in July, citing component costs. Token prices fell anyway. Five snapshots, 48 models, and the gap capital is paying for."
 date: 2026-08-21 10:00:00 +0000
-last_modified_at: 2026-08-21 10:00:00 +0000
+last_modified_at: 2026-09-05 14:40:00 +0000
 categories: [industry-analysis]
 tags: [llm-pricing, ai-capex, data-centers, nvidia, openai, ai-economics, compute-contracts, "2026"]
 format: F
@@ -46,7 +46,7 @@ Compute got more expensive. Tokens got cheaper. Someone is paying the difference
 
 Every row is a change between two observed snapshots, not a vendor announcement. Prices are USD per 1M tokens, standard non-batch tier.
 
-| Model | Input | Output | Output change | Direction |
+| Model | Input (vendor) | Output (vendor) | Output change (jsonhouse derived) | Direction (jsonhouse derived) |
 |---|---|---|---|---|
 | gpt-5.6-luna | $1.00 → $0.20 | $6.00 → $1.20 | −80% | Cut |
 | gemini-3.6-flash | $1.50 → $0.75 | $7.50 → $3.75 | −50% | Cut, expires 2026-12-31 |

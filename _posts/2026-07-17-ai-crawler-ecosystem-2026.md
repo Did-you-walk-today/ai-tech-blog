@@ -2,7 +2,7 @@
 title: "AI Crawler Ecosystem 2026: Who Scrapes the Web and Who Pays"
 description: "Machines now generate 57.5% of web HTML traffic. Who the AI crawlers are, what they take per visitor sent, and how pay-per-crawl rewrites the web's deal."
 date: 2026-07-17 18:00:00 +0900
-last_modified_at: 2026-08-18 21:00:00 +0900
+last_modified_at: 2026-09-05 14:40:00 +0000
 categories: [industry-analysis]
 tags: [ai-crawlers, gptbot, claudebot, pay-per-crawl, robots-txt, rsl, cloudflare, aeo, "2026"]
 format: D
@@ -41,7 +41,7 @@ This post maps the ecosystem behind those numbers: which bots crawl for training
 
 Before analyzing the economics, it helps to see the ecosystem in one table. AI operators now run separate bots for three declared purposes — training data collection, search indexing, and real-time fetches on a user's behalf — and the distinction matters, because each purpose has different economics and different robots.txt behavior.
 
-| Crawler | Operator | Declared purpose | Respects robots.txt | Traffic share (June 2026)* |
+| Crawler | Operator | Declared purpose (operator docs) | Respects robots.txt (operator docs) | Traffic share, June 2026 (websearchapi.ai)* |
 |---|---|---|---|---|
 | Googlebot | Google | Search indexing (also feeds AI Overviews) | Yes | 24.9% |
 | ClaudeBot | Anthropic | Model training | Yes (documented) | 20.0% |

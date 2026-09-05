@@ -478,6 +478,9 @@ These apply to every post, regardless of format type. They are writing-level qua
 7. **Match the assertion to the evidence you actually have**
    State published numbers as published, unpublished ones as unpublished, and inferred ones as inferred. "Not published" is a finding worth reporting, not a hole to paper over with an estimate. This applies to prose, tables, data files, and figures equally.
 
+8. **A table cell carries its own provenance**
+   Prose is read as an argument; a table is read as a record. Put a number we derived in a cell beside a number a vendor published and we have lent the vendor's authority to our own arithmetic. Our readers increasingly lift a **row**, not a page, so every caveat parked in a Methodology or Limitations section is stripped the moment that row travels. Mark provenance in the **column header** — `(vendor)`, `(jsonhouse derived)`, `(measured by jsonhouse)`, or the source's name — never in a footnote marker: the header travels with the value, an asterisk does not. A table drawn wholly from one source declares it once, in the intro line or the header; a table that mixes sources declares it per column. The paired data file mirrors this with a `field_provenance` object, which is the channel a machine actually reads. This is not a reason to avoid derived tables — routes ② and ④ in `_plans/PRIMARY_SOURCE_GUIDE.md` exist precisely to produce numbers no vendor published, and a post that can only tabulate vendor figures is one an AI should skip in favour of the vendor. The rule makes derived tables citable, not rarer.
+
 ## Hook Configuration
 
 Post validation runs automatically on every `Write` or `Edit` to `_posts/*.md` and `_drafts/*.md`.

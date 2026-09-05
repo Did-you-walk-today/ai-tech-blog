@@ -2,7 +2,7 @@
 title: "AI Agent Payments 2026: What a Crawl Toll Really Earns"
 description: "Cloudflare gave AI agents wallets. We priced our own measured crawler traffic against it: 5,227 crawls in 20 days, and what a per-request toll would actually pay."
 date: 2026-08-18 01:55:00 +0900
-last_modified_at: 2026-08-18 01:55:00 +0900
+last_modified_at: 2026-09-05 14:40:00 +0000
 categories: [ai-crawler-observatory]
 tags: [ai-agents, agent-payments, x402, crawler-economics, cloudflare, aeo, monetization, "2026"]
 format: F
@@ -71,7 +71,7 @@ The monthly and annual figures are the measured 20-day count scaled linearly (26
 
 ## What Our Crawler Traffic Would Earn
 
-| Price per request | Per month | Per year | Net of the 8.8% forgery floor, per month |
+| Price per request (jsonhouse assumption, not a Cloudflare quote) | Per month (jsonhouse projection) | Per year (jsonhouse projection) | Net of the 8.8% forgery floor, per month (jsonhouse projection) |
 |---|---|---|---|
 | $0.001 | $7.84 | $95.39 | $7.15 |
 | $0.005 | $39.20 | $476.96 | $35.75 |

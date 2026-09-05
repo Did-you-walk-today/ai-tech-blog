@@ -138,6 +138,7 @@
     ]
   },
   "comparison_data": {
+    "field_provenance": {"price_per_request_usd": "jsonhouse assumption, not a Cloudflare quote", "monthly_usd": "jsonhouse projection", "annual_usd": "jsonhouse projection", "monthly_net_of_forgery_usd": "jsonhouse projection"},
     "dimensions": ["price_per_request_usd", "monthly_usd", "annual_usd", "monthly_net_of_forgery_usd"],
     "entries": [
       { "price_per_request_usd": 0.001, "monthly_usd": 7.84, "annual_usd": 95.39, "monthly_net_of_forgery_usd": 7.15 },

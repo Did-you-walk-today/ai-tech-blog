@@ -2,7 +2,7 @@
 title: "AI Crawler Traffic 2026: 747 Crawls per Human Visit"
 description: "Twenty days of first-party Cloudflare logs: AI crawlers made 5,227 requests to this site and sent back 7 human visitors. Full dataset, method, and limits."
 date: 2026-08-13 10:00:00 +0000
-last_modified_at: 2026-08-13 10:00:00 +0000
+last_modified_at: 2026-09-05 14:40:00 +0000
 categories: [ai-crawler-observatory]
 tags: [ai-crawlers, bot-traffic, aeo, crawler-economics, cloudflare, llms-txt, "2026"]
 format: F
@@ -39,7 +39,9 @@ This page is the first report from our own edge logs. Every number below was mea
 
 ## The ledger
 
-| Measure | Value |
+Every figure in this section is our own server-side measurement of this origin — no vendor or third-party data enters the table.
+
+| Measure | Value (measured by jsonhouse) |
 |---|---|
 | Collection window | 2026-07-25 to 2026-08-13 (20 days) |
 | AI crawler requests (`bot_crawl`) | 5,227 |
@@ -69,7 +71,7 @@ Referral rows describe real people, so only counts per referring host and per la
 
 Nineteen distinct agents appeared. The error column is the share of requests that returned 4xx or 5xx, and it turns out to be the most informative column in the table.
 
-| Agent | Requests | Distinct paths | Error rate | Days seen |
+| Agent | Requests (measured by jsonhouse) | Distinct paths (measured by jsonhouse) | Error rate (measured by jsonhouse) | Days seen |
 |---|---|---|---|---|
 | Bytespider | 1,815 | 115 | 2.0% | 2026-07-25 to 08-13 |
 | ChatGPT-User | 1,185 | 139 | 10.5% | 2026-07-25 to 08-13 |
@@ -129,7 +131,7 @@ Not the user agent, and not the network the request came from. An ASN check fail
 
 The signal we trust is [Cloudflare's verified-bot classification](https://developers.cloudflare.com/bots/concepts/bot/verified-bots/), which validates the connection rather than the string. We only began recording it on 2026-08-09, so the window below is four days, not twenty.
 
-| Agent | Verified as | Verified | Unverified |
+| Agent | Verified as | Verified (measured by jsonhouse) | Unverified (measured by jsonhouse) |
 |---|---|---|---|
 | Bytespider | Search Engine Crawler | 299 | 56 |
 | ChatGPT-User | AI Assistant | 215 | 1 |
@@ -149,7 +151,7 @@ The public crawler documentation from [OpenAI](https://platform.openai.com/docs/
 
 This site publishes an [llms.txt](https://llmstxt.org/) file, per-post JSON at `/data/{slug}.json`, and an index at `/api/posts.json`. Whether any of it is consumed is the question the whole investment rests on, and until we had edge logs we could not answer it.
 
-| Endpoint | Successful reads | Distinct agents |
+| Endpoint | Successful reads (measured by jsonhouse) | Distinct agents (measured by jsonhouse) |
 |---|---|---|
 | `/data/` index page | 47 | 4 |
 | `/llms.txt` | 46 | 5 |
