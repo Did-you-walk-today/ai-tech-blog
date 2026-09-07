@@ -2,7 +2,7 @@
 
 포스트끼리 어떻게 엮여 있는지를 보여주는 색인. **이 문서는 자동 생성됩니다.**
 
-- **최종 갱신**: 2026-09-05 (자동)
+- **최종 갱신**: 2026-09-07 (자동)
 - **소스**: `_posts/*.md` 본문의 `](/posts/<slug>/)` 링크
 - **생성**: `python3 .claude/hooks/link_graph.py "$(git rev-parse --show-toplevel)"`
 - **점검만**: `python3 .claude/hooks/link_graph.py --report`
@@ -22,7 +22,7 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 <!-- AUTO:GRAPH-TABLE-START -->
 | # | 슬러그 | 클러스터 | 인 | 아웃 | 상태 | 메모 |
 |---|---|---|---|---|---|---|
-| 1 | llm-cost-per-task-2026 | LLM | 0 | 4 | **고아** |  |
+| 1 | llm-cost-per-task-2026 | LLM | 1 | 4 | ok |  |
 | 2 | claude-code-plugins-mcp-2026 | DEVTOOLS | 0 | 3 | **고아** |  |
 | 3 | 6g-agi-convergence-2026 | AI_INFRA | 0 | 4 | **고아** |  |
 | 4 | llm-price-war-balance-sheet-2026 | LLM | 1 | 3 | ok |  |
@@ -36,7 +36,7 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 | 12 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
 | 13 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
 | 14 | ai-crawler-ecosystem-2026 | AEO | 8 | 6 | ok |  |
-| 15 | llm-api-pricing-2026 | LLM | 16 | 5 | ok |  |
+| 15 | llm-api-pricing-2026 | LLM | 16 | 6 | ok |  |
 | 16 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
 | 17 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
 | 18 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
@@ -58,7 +58,6 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 | WARN | NOINDEX<- | google-ai-content-penalties-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI monetization and inauthentic-content rules') |
 | WARN | ORPHAN | 6g-agi-convergence-2026 | no inbound internal link |
 | WARN | ORPHAN | claude-code-plugins-mcp-2026 | no inbound internal link |
-| WARN | ORPHAN | llm-cost-per-task-2026 | no inbound internal link |
 <!-- AUTO:GRAPH-FINDINGS-END -->
 
 유형 설명 — `DANGLING`: 없는 슬러그로 링크(ERROR, 발행 차단) · `ORPHAN`: 인바운드 0 ·
@@ -78,7 +77,9 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 
 LLM Cost per Task 2026: When a Pricier Model Is Cheaper
 
-_인바운드 없음 — 이 글로 들어오는 내부 링크가 하나도 없습니다._
+| 걸린 글 | 앵커 텍스트 |
+|---|---|
+| llm-api-pricing-2026 | cost-per-task benchmarking |
 
 ### claude-code-plugins-mcp-2026
 

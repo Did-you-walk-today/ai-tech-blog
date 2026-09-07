@@ -1,8 +1,8 @@
 ---
 title: "LLM API Pricing 2026: Full Comparison Table (Weekly)"
-description: "LLM API pricing 2026: 43 models from OpenAI, Anthropic, Google, xAI, DeepSeek, and Mistral in one table. Input/output cost per 1M tokens, updated weekly."
+description: "LLM API pricing 2026: 47 models from OpenAI, Anthropic, Google, xAI, DeepSeek, and Mistral in one table. Input/output cost per 1M tokens, updated weekly."
 date: 2026-07-17 12:00:00 +0900
-last_modified_at: 2026-09-01 14:10:00 +0900
+last_modified_at: 2026-09-07 21:30:00 +0900
 categories: [ai-data-statistics]
 tags: [llm-pricing, api-cost, claude, gpt-5, gemini, grok, deepseek, mistral, "2026"]
 format: D
@@ -15,33 +15,37 @@ faq:
     a: "Gemini 2.5 Flash-Lite, at $0.10 input / $0.40 output per 1M tokens. DeepSeek v4-flash held that title until August 17, 2026, when DeepSeek raised it to $0.22 / $0.66 — a 57% input and 136% output increase. DeepSeek still wins decisively on cached input at $0.007 per 1M tokens, a 96.8% discount, so context-reuse workloads should be priced separately from stateless ones."
   - q: "Is Claude Sonnet 5's price going up on September 1, 2026?"
     a: "No. Anthropic cancelled the increase. The $2 input / $10 output rate announced at launch as introductory is now the standard price, and the pricing page states that the scheduled move to $3 / $15 will not occur. If you budgeted against the September number, that reserve can be released."
+  - q: "Why is Claude Fable 5.1's cache read cheaper than Claude Opus 5's?"
+    a: "Anthropic prices a cache hit as a multiplier on base input, and on September 7, 2026 it stopped using one multiplier for the whole line. Claude Fable 5.1 and Claude Mythos 5.1 bill cache hits at 0.025x base input ($0.25 per 1M tokens); every other Claude model, Opus 5 included, stays at 0.1x. The result is that Anthropic's most expensive models now carry its deepest cache discount, at 97.5%."
   - q: "Are per-token prices directly comparable across providers?"
     a: "Not exactly. Anthropic's newer models (Claude Opus 4.7 and later, Sonnet 5, Fable 5) use a tokenizer that produces roughly 30% more tokens for the same text than earlier Claude models. Two models with identical $/1M-token prices can therefore differ meaningfully in cost per document. Compare cost per task, not cost per token, when precision matters."
   - q: "Do these prices include long-context surcharges?"
     a: "The table records base-tier prices. Google and xAI charge tiered rates — prompts above 200K tokens cost roughly double per token (noted per row). Anthropic explicitly bills its 1M-token context window at standard rates on supported models, and OpenAI lists flat per-model rates without a long-context tier on its pricing page."
   - q: "How often is this pricing table updated?"
     a: "Weekly, from the six official pricing pages, with every change recorded in the changelog at the bottom of this post. A missed week is marked as a gap rather than back-filled, because a reconstructed price was never observed. The series began on July 16, 2026 and accumulates as a price-change history that official pages, which only show current prices, do not provide."
-data_updated: 2026-09-01
+data_updated: 2026-09-07
 author: jsonhouse
 ---
 
-As of September 1, 2026, LLM API prices span two orders of magnitude — from $0.10 per million input tokens (Gemini 2.5 Flash-Lite) to $30.00 (GPT-5.5-pro and GPT-5.4-pro). **No price moved this week** — the first collection in this series in which all 43 tracked rows held. The most recent move was on August 24, when **OpenAI cut GPT-5.6-sol to $4.00 / $20.00**, down 20% on input and 33% on output, putting a flagship model below every $5.00 row beside it.
+As of September 7, 2026, LLM API prices span two orders of magnitude — from $0.10 per million input tokens (Gemini 2.5 Flash-Lite) to $30.00 (GPT-5.5-pro and GPT-5.4-pro). **No price moved for a second consecutive week** — all 43 rows carried over from September 1 hold. What changed is the roster: four models arrived, taking the tracked set to 47, and one arrival breaks a rule every Claude model had followed.
 
-The cut comes with a date attached. OpenAI marks the rate promotional and commits to it only through November 21, 2026, so it is a discount with an expiry rather than a new floor. The same model also picked up **OpenAI's first long-context tier** — $8.00 / $30.00 above the base window — which moves the company onto the tiered side of a split that had separated it from Google and xAI.
+**Claude Fable 5.1 and Claude Mythos 5.1** landed at $10.00 / $50.00, matching the Fable 5 and Mythos 5 rates beside them. Their cache reads did not match. Both bill a cache hit at 2.5% of base input — $0.25 per 1M tokens — against the flat 10% every other Claude model charges, and [Anthropic's pricing page](https://platform.claude.com/docs/en/about-claude/pricing) states the 0.025x multiplier explicitly. It is the first split in Anthropic's cache-read multiplier since this series began in July.
 
-Nothing else changed. No other provider touched a price, and no model entered or left the tracked set of 43. Every price below was collected on August 24, 2026 directly from the six providers' official pricing pages and normalized to USD per 1M tokens at the standard (non-batch) tier.
+That 97.5% discount is now the deepest on any row in these tables, ahead of DeepSeek's 96.8%. It also lands on the two most expensive Claude models rather than the cheapest, which is the opposite of where a discount of that size usually sits.
+
+**OpenAI added GPT-6-astra** at $10.00 / $50.00 — the same sticker as Fable 5 — with a $20.00 / $75.00 long-context tier above it. **Google added Gemini 3.8 Flash** at $0.75 / $3.75, carrying the same 2026-12-31 introductory expiry as Gemini 3.7 and 3.6 Flash, which takes the number of rows here scheduled to double on 2027-01-01 from two to three. No model left the set. Every price below was collected on September 7, 2026 directly from the six providers' official pricing pages and normalized to USD per 1M tokens at the standard (non-batch) tier.
 
 ## TL;DR
 
-- **Cheapest overall**: Gemini 2.5 Flash-Lite ($0.10 / $0.40) — it takes the title from DeepSeek v4-flash, which rose 57% on input and 136% on output on August 17
-- **Best flagship value**: GPT-5.6-sol, cut on August 24 to $4.00 / $20.00 — but only until at least November 21. Claude Opus 5 at $5.00 / $25.00 remains the cheapest flagship rate with no expiry attached
-- **A deadline that vanished**: Sonnet 5's $2.00 / $10.00 was scheduled to rise 50% on September 1; Anthropic cancelled it and made the rate permanent
-- **Two promotional clocks now run**: Gemini 3.7 and 3.6 Flash are $0.75 / $3.75 only through 2026-12-31, then double; GPT-5.6-sol's new $4.00 / $20.00 holds through at least 2026-11-21
-- **Cache reads are still the real price war**: cache-hit discounts run 90% (Anthropic, OpenAI, Google) to 96.8% (DeepSeek, down from 98% after its August 17 increase)
+- **Cheapest overall**: Gemini 2.5 Flash-Lite ($0.10 / $0.40), unchanged since it took the title from DeepSeek v4-flash on August 17
+- **Best flagship value**: GPT-5.6-sol at $4.00 / $20.00, but only through at least November 21. Claude Opus 5 at $5.00 / $25.00 remains the cheapest flagship rate with no expiry attached
+- **A new deepest cache discount**: Claude Fable 5.1 and Mythos 5.1 bill cache hits at 2.5% of base input, not the 10% every other Claude model charges — 97.5% off, passing DeepSeek's 96.8%
+- **Three promotional clocks now run**: Gemini 3.8, 3.7 and 3.6 Flash are $0.75 / $3.75 only through 2026-12-31, then double; GPT-5.6-sol's $4.00 / $20.00 holds through at least 2026-11-21
+- **Second straight week with no price move**: all 43 rows carried from September 1 held. The four changes were arrivals — Fable 5.1, Mythos 5.1, GPT-6-astra, Gemini 3.8 Flash — taking the tracked set to 47
 
 ## Methodology
 
-All prices were collected on **2026-09-01** from official provider pricing pages only: [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing), [OpenAI](https://developers.openai.com/api/docs/pricing), [Google](https://ai.google.dev/gemini-api/docs/pricing), [xAI](https://docs.x.ai/docs/models), [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing), and [Mistral](https://mistral.ai/pricing/api). No aggregator data was used — aggregators serve as cross-checks, never as sources.
+All prices were collected on **2026-09-07** from official provider pricing pages only: [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing), [OpenAI](https://developers.openai.com/api/docs/pricing), [Google](https://ai.google.dev/gemini-api/docs/pricing), [xAI](https://docs.x.ai/docs/models), [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing), and [Mistral](https://mistral.ai/pricing/api). No aggregator data was used — aggregators serve as cross-checks, never as sources.
 
 Every figure is normalized to **USD per 1M tokens at the standard, non-batch, global-routing tier**. For models with tiered long-context pricing (Google, xAI), the table records the base tier and footnotes the higher tier. Retired models are excluded; deprecated-but-available models are noted in the table footnotes.
 
@@ -53,7 +57,9 @@ These are the top-capability tiers each provider currently sells. Prices are inp
 
 | Model | Provider | Input $/1M | Output $/1M | Cache read $/1M | Context |
 |---|---|---|---|---|---|
+| Claude Fable 5.1 | Anthropic | $10.00 | $50.00 | $0.25 | 1M |
 | Claude Fable 5 | Anthropic | $10.00 | $50.00 | $1.00 | 1M |
+| GPT-6-astra | OpenAI | $10.00 | $50.00 | $1.00 | n/p |
 | GPT-5.5-pro / GPT-5.4-pro | OpenAI | $30.00 | $180.00 | — | n/p |
 | GPT-5.5 | OpenAI | $5.00 | $30.00 | $0.50 | n/p |
 | Claude Opus 5 | Anthropic | $5.00 | $25.00 | $0.50 | 1M |
@@ -63,7 +69,7 @@ These are the top-capability tiers each provider currently sells. Prices are inp
 | Grok 4.6 | xAI | $2.00 | $6.00 | $0.50 | 500K |
 | Grok 4.5 | xAI | $2.00 | $6.00 | $0.30 | 500K |
 
-> *Most recent move, 2026-08-24: **OpenAI cut GPT-5.6-sol** to $4.00 / $20.00 (cache read $0.40), down 20% on input and 33% on output, moving it below every $5.00 flagship row above it. The page marks the rate promotional and available at least through 2026-11-21, so this row carries an expiry the rows around it do not. The same model also gained OpenAI's first long-context tier: $8.00 / $30.00 with a $0.80 cache read. Google bills Gemini 3.1 Pro Preview at a higher tier above 200K tokens; xAI bills both Grok 4.6 and 4.5 at $4.00 / $12.00 above 200K, with cache reads of $1.00 and $0.60 respectively. Claude Opus 4.5 through 4.8 share Opus 5's $5.00 / $25.00 pricing. "n/p" = not published on the provider's pricing page.
+> *New rows, 2026-09-07: **Claude Fable 5.1** matches Fable 5's $10.00 / $50.00 but prices a cache hit at $0.25 per 1M — 0.025x base input, against the 0.1x every other Claude row carries. **GPT-6-astra** arrives on the same $10.00 / $50.00 sticker, with a long-context tier at $20.00 / $75.00 (cache read $2.00). Claude Mythos 5.1 is priced identically to Fable 5.1 but is application-gated, so like Mythos 5 it is carried in our snapshot without a row here. No price in this table moved this week. GPT-5.6-sol's $4.00 / $20.00 is promotional, stated available at least through 2026-11-21, with a long-context tier at $8.00 / $30.00 (cache read $0.80). Google bills Gemini 3.1 Pro Preview at a higher tier above 200K tokens; xAI bills both Grok 4.6 and 4.5 at $4.00 / $12.00 above 200K, with cache reads of $1.00 and $0.60 respectively. Claude Opus 4.5 through 4.8 share Opus 5's $5.00 / $25.00 pricing. "n/p" = not published on the provider's pricing page.
 
 > **Raw data**: [data/llm-api-pricing-2026.json](https://www.jsonhouse.com/data/llm-api-pricing-2026.json) — machine-readable structured data for AI crawlers and citation.
 
@@ -80,11 +86,12 @@ This tier is where most production workloads run, and where pricing is most cont
 | Gemini 3.5 Flash | Google | $1.50 | $9.00 | $0.15 | n/p |
 | Mistral Medium 3.5 | Mistral | $1.50 | $7.50 | n/p | n/p |
 | Grok 4.3 | xAI | $1.25 | $2.50 | $0.20 | 1M |
+| Gemini 3.8 Flash* | Google | $0.75 | $3.75 | $0.075 | n/p |
 | Gemini 3.7 Flash* | Google | $0.75 | $3.75 | $0.075 | n/p |
 | Gemini 3.6 Flash* | Google | $0.75 | $3.75 | $0.075 | n/p |
 | DeepSeek v4-pro† | DeepSeek | $0.66 | $1.98 | $0.022 | 1M |
 
-> *Both Gemini Flash rows are promotional through 2026-12-31 and double on 2027-01-01, to $1.50 / $7.50 with a $0.15 cache read. Gemini 3.7 Flash launched on 2026-08-13 at half the rate 3.6 Flash launched at, and Google then cut 3.6 Flash to match rather than leaving the older model priced above the newer one. †DeepSeek publishes off-peak and peak rates; the table records off-peak, and peak is exactly double ($1.32 / $3.96, cache read $0.044). Peak hours are 01:00–04:00 and 06:00–10:00 UTC. Claude Sonnet 5's $2.00 / $10.00 is no longer introductory — see the changelog. Grok 4.3 is billed at $2.50 / $5.00 above 200K tokens.
+> *All three Gemini Flash rows are promotional through 2026-12-31 and double on 2027-01-01, to $1.50 / $7.50 with a $0.15 cache read. Gemini 3.8 Flash arrived on 2026-09-07 at exactly the rate its two predecessors already carried, expiry included — Google is now selling three generations of Flash at one price with one shared deadline. Gemini 3.7 Flash launched on 2026-08-13 at half the rate 3.6 Flash launched at, and Google then cut 3.6 Flash to match rather than leaving the older model priced above the newer one. †DeepSeek publishes off-peak and peak rates; the table records off-peak, and peak is exactly double ($1.32 / $3.96, cache read $0.044). Peak hours are 01:00–04:00 and 06:00–10:00 UTC. Claude Sonnet 5's $2.00 / $10.00 is no longer introductory — see the changelog. Grok 4.3 is billed at $2.50 / $5.00 above 200K tokens.
 
 ## Budget Models
 
@@ -121,9 +128,11 @@ This tier shrank sharply in the week to 2026-08-17. Mistral's pricing page no lo
 
 A per-token price table looks objective, but three structural details buried in provider documentation change what these numbers actually mean.
 
-**First, tokens are no longer a stable unit.** Anthropic discloses that Claude Opus 4.7 and later, Sonnet 5, and Fable 5 use a new tokenizer that produces roughly 30% more tokens for the same text. That means Sonnet 5's $2.00 input price is closer to an effective ~$2.60 per old-tokenizer-equivalent input, which erases most of its apparent advantage over GPT-5.4's $2.50 — a gap the sticker prices hide entirely. No other provider publishes tokenizer efficiency data at all, which makes cross-provider per-token comparison an approximation, not an equivalence. This is why cost-per-task benchmarking is replacing cost-per-token math in serious procurement.
+**First, tokens are no longer a stable unit.** Anthropic discloses that Claude Opus 4.7 and later, Sonnet 5, and Fable 5 use a new tokenizer that produces roughly 30% more tokens for the same text. That means Sonnet 5's $2.00 input price is closer to an effective ~$2.60 per old-tokenizer-equivalent input, which erases most of its apparent advantage over GPT-5.4's $2.50 — a gap the sticker prices hide entirely. No other provider publishes tokenizer efficiency data at all, which makes cross-provider per-token comparison an approximation, not an equivalence. This is why [cost-per-task benchmarking](/posts/llm-cost-per-task-2026/) is replacing cost-per-token math in serious procurement.
 
-**Second, the price war moved from base rates to cache reads — but not everywhere, and not permanently.** Anthropic, OpenAI, and Google all price a cache read at 10% of base input, a flat 90% discount. DeepSeek goes further, to 96.8%, though that is down from 98% because its cache-read price rose faster on August 17 than its base rate did.
+**Second, the price war moved from base rates to cache reads — but not everywhere, and not permanently.** Anthropic, OpenAI, and Google have all priced a cache read at 10% of base input, a flat 90% discount. DeepSeek goes further, to 96.8%, though that is down from 98% because its cache-read price rose faster on August 17 than its base rate did.
+
+On September 7 Anthropic broke its own flat rule. Claude Fable 5.1 and Mythos 5.1 bill cache hits at 0.025x base input, a 97.5% discount, while every older Claude model stays at 0.1x. Two things follow. The deepest cache discount in these tables is no longer DeepSeek's, and it now sits on the most expensive models a vendor sells rather than the cheapest — a shape that only makes sense if the buyer being courted is one whose bill is mostly re-sent context and who is not shopping on sticker price.
 
 xAI shows the direction running both ways within one vendor. It cut Grok 4.5's cache read from $0.50 to $0.30 between our July 16 and July 28 snapshots, deepening that discount from 75% to 85% while leaving the $2.00 base input untouched. Then on August 17 it launched Grok 4.6 at the same $2.00 base with a $0.50 cache read — reverting to the 75% discount for the newer model. If cache reads are where the competition is, xAI just made its newest model less competitive on exactly that axis.
 
@@ -162,7 +171,7 @@ This matters beyond procurement because API pricing is becoming the cost structu
 - **Standard tier only.** Batch discounts (typically 50% off at Anthropic, OpenAI, Google, and Mistral) and regional/data-residency surcharges (10% at OpenAI and Anthropic for US-only routing) are not baked into the tables.
 - **Context windows marked "n/p"** are not published on the provider's official pricing page; we do not fill gaps from third-party sources.
 - **Mistral does not publish cache-read pricing**, so its rows cannot be compared on the caching dimension.
-- **Coverage is six providers (43 models tracked).** The tables show the notable rows and footnote price-identical siblings, so the visible row count is lower than the tracked count. Open-source hosted inference (Groq, Together, DeepInfra) and Alibaba/Qwen are excluded from this edition; we would rather ship a fully verified narrow table than a broad one with stale rows.
+- **Coverage is six providers (47 models tracked).** The tables show the notable rows and footnote price-identical siblings, so the visible row count is lower than the tracked count. Open-source hosted inference (Groq, Together, DeepInfra) and Alibaba/Qwen are excluded from this edition; we would rather ship a fully verified narrow table than a broad one with stale rows.
 - **DeepSeek's rows are off-peak rates and are not strictly comparable to the rest of the table.** Every other provider publishes one rate that applies at all hours. DeepSeek publishes two, and a workload that runs during the 01:00–04:00 and 06:00–10:00 UTC peak windows pays exactly double the figures shown. We record the lower tier for consistency with how tiered pricing is handled elsewhere, not because it is the rate most users will pay.
 - **Prices are list prices.** Enterprise volume discounts are negotiated and unobservable.
 
@@ -172,6 +181,7 @@ This table is refreshed **weekly** from the six official pricing pages, and ever
 
 | Date | Change |
 |---|---|
+| 2026-09-07 | **No price change, four arrivals.** All 43 rows carried over from 2026-09-01 hold their prices — a second consecutive collection with no move anywhere across the six providers. Tracked set 43 → 47. Added: **Claude Fable 5.1** and **Claude Mythos 5.1** at $10.00 / $50.00, matching Fable 5 and Mythos 5 on base rates but pricing cache hits at 0.025x base input ($0.25 / 1M) against the 0.1x every other Claude model uses — the first split in Anthropic's cache-read multiplier recorded in this series, and at 97.5% the deepest cache discount in these tables. Added: **GPT-6-astra** at $10.00 / $50.00 (cache read $1.00) with a $20.00 / $75.00 long-context tier, the most expensive OpenAI row outside the $30.00 / $180.00 pro tier. Added: **Gemini 3.8 Flash** at $0.75 / $3.75 (cache read $0.075) on the same 2026-12-31 introductory expiry as Gemini 3.7 and 3.6 Flash, taking the rows scheduled to double on 2027-01-01 from two to three. Nothing was removed. Collected Monday 2026-09-07, six days after the previous file rather than seven, because 2026-09-01 was collected on a Tuesday. Two dated commitments still stand: GPT-5.6-sol through at least 2026-11-21, and the three Gemini Flash rows through 2026-12-31. Still outside the tracked set and unchanged: Mistral's resale of Z.ai GLM 5.2, the Ministral 3 line, and DeepSeek's deepseek-v4-flash-vision-exp. |
 | 2026-09-01 | **No change.** All 43 tracked rows hold the prices recorded on 2026-08-24, across all six providers — the first collection in this series with no price move anywhere. No model entered or left the tracked set. Collected Tuesday 2026-09-01 rather than Monday; the 2026-08-31 slot was missed and is left as a gap rather than backfilled, so this entry covers eight days. Two dated commitments still stand on the pages: GPT-5.6-sol's promotional rate through at least 2026-11-21, and the 2026-12-31 expiry on both Gemini Flash rows. Anthropic's cancelled Sonnet 5 increase reached its 2026-09-01 date with the rate unmoved. Still outside the tracked set and unchanged: Mistral's resale of Z.ai GLM 5.2 and the Ministral 3 line. |
 | 2026-08-24 | **OpenAI cut GPT-5.6-sol** from $5.00 / $30.00 to $4.00 / $20.00 (cache read $0.50 → $0.40) — input −20%, output −33.3%, the largest single-model cut recorded here since the GPT-5.6-luna cut on 2026-08-03. The page marks the rate promotional and available at least through 2026-11-21, so it is recorded as a dated cut rather than a new standard price. The same model gained OpenAI's **first long-context tier** at $8.00 / $30.00 (cache read $0.80); every other OpenAI row stays flat. GPT-5.6-terra and GPT-5.6-luna did not move, and no other provider changed a price. No models added or removed — tracked set holds at 43. Still outside the tracked set and unchanged from last week: Mistral's resale of Z.ai GLM 5.2 ($1.40 / $4.40) and the Ministral 3 line. DeepSeek added deepseek-v4-flash-vision-exp at v4-flash rates, excluded here as a non-text model. |
 | 2026-08-17 | The largest week in the series. **DeepSeek raised prices**, the first increase recorded here from any provider: v4-flash $0.14 / $0.28 → $0.22 / $0.66 (cache read $0.0028 → $0.007) and v4-pro $0.435 / $0.87 → $0.66 / $1.98 (cache read $0.003625 → $0.022), all off-peak. This is the increase the 2026-08-10 entry flagged as expected but unsized. DeepSeek also shipped build V4-Pro-0813. **Google halved Gemini 3.6 Flash** to $0.75 / $3.75 (cache read $0.075) to match new arrival **Gemini 3.7 Flash**, launched 2026-08-13 at the same rate; both are promotional through 2026-12-31 and double on 2027-01-01. **Anthropic cancelled the Claude Sonnet 5 increase** — $2.00 / $10.00 is now the standard price and the 2026-09-01 move to $3.00 / $15.00 will not occur. Added: Gemini 3.7 Flash, Grok 4.6 ($2.00 / $6.00, cache read $0.50). Removed: Claude Opus 4.1, retired from the first-party API on 2026-08-05, and Magistral Medium, Magistral Small, Devstral 2, and Devstral Small 2, all absent from Mistral's pricing page with retirement dates between 2025-10-31 and 2026-07-31. Those five had been carried in earlier snapshots after their retirement dates passed; the earlier files are left as collected rather than corrected. Tracked set: 46 → 43 models. |
@@ -189,6 +199,10 @@ Gemini 2.5 Flash-Lite, at $0.10 input / $0.40 output per 1M tokens. DeepSeek v4-
 ### Is Claude Sonnet 5's price going up on September 1, 2026?
 
 No. Anthropic cancelled the increase. The $2.00 / $10.00 rate announced at launch as introductory is now the standard price, and the pricing page states plainly that the scheduled move to $3.00 / $15.00 will not occur. This page carried the September deadline as its most time-sensitive number for six weeks; it is gone. If you budgeted a 50% cost increase for Sonnet 5 workloads from September, that reserve can be released.
+
+### Why is Claude Fable 5.1's cache read cheaper than Claude Opus 5's?
+
+Anthropic prices a cache hit as a multiplier on base input, and on September 7, 2026 it stopped using one multiplier for the whole line. Claude Fable 5.1 and Claude Mythos 5.1 bill cache hits at 0.025x base input ($0.25 per 1M tokens); every other Claude model, Opus 5 included, stays at 0.1x. The result is that Anthropic's most expensive models now carry its deepest cache discount, at 97.5%.
 
 ### Are per-token prices directly comparable across providers?
 
