@@ -52,7 +52,6 @@ Project skills in `.claude/skills/` encode the standard workflows:
 | `post-images` | Cover/diagram image work. Claude Code cannot generate images — it plans them, hands 기웅 the full cover prompt to run, then normalizes and verifies the returned file |
 | `publish-post` | After 기웅 approves a draft (Phase 6) |
 | `pricing-snapshot` | Every Monday, or any pricing-data refresh request |
-| `mcp-snapshot` | Every Monday — full MCP registry sweep. Deleted entries and star counts at a date are unrecoverable once the week passes |
 
 Hard boundary: **Phase 5 (human review) is never skipped.** No post moves to
 `_posts/` or gets committed without explicit approval from 기웅.
@@ -545,6 +544,21 @@ arrive from other sessions sharing this working tree and from the GitHub web
 editor, and this catches those before deploy. It checks dangling links only;
 orphans and thin link counts are judgment calls that belong in `LINK_GRAPH.md`,
 not gates on a deploy.
+
+### Citation Probe (manual — not a hook)
+
+`.claude/hooks/citation_probe.py` measures whether generative answers cite us.
+It is **never** scheduled: no cron, no Actions. Continuous tracking was declined
+(2026-08-26) because it carries metered API cost; what is maintained instead is
+the ability to run it at any time. That ability rests on the question set staying
+frozen — `_plans/citation-probes.yml` (gitignored, backup `jsonhouse_plan`).
+Rewriting a question silently breaks that probe's comparability across runs;
+retire the id and add a new one instead.
+
+Start with `--dry-run` (plan and cost estimate, no calls). Results land in
+`_data/citation_history/` carrying `sampling: "ad_hoc"` — irregular samples are
+not a time series, so these numbers never support a trend claim in a post.
+Full notes: `.claude/hooks/README.md`.
 
 ## Hook Enforcement (Auto-triggered on every post write)
 
