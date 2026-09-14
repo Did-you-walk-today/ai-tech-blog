@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "slug": "china-ai-catch-up-2026",
+  "title": "China AI 2026: Following the Path America Built",
+  "description": "Anthropic named seven Chinese labs running industrial-scale Claude distillation in 2026. What they took, what they could not, and where China already leads.",
+  "data_updated": "2026-09-14",
+  "source_post": "https://www.jsonhouse.com/posts/china-ai-catch-up-2026/",
+  "category": "industry-analysis",
+  "cluster": "CLUSTER_LLM",
+  "format": "A",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/china-ai-catch-up-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/china-ai-catch-up-2026.json",
+    "citation": "Json House, \"China AI 2026: Following the Path America Built\", jsonhouse.com (2026-09-14)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
+  "key_facts": [
+    {
+      "fact": "Anthropic's September 2026 threat intelligence report, published 2026-09-10 and covering December 2025 through August 2026, named seven China-based labs running illicit distillation campaigns against Claude: Alibaba, Moonshot, DeepSeek, Zhipu, Xiaomi, SenseTime, and MiniMax",
+      "source": "Anthropic, Countering misuse of AI: September 2026, retrieved 2026-09-14",
+      "category": "policy"
+    },
+    {
+      "fact": "Distillation extracts a model's outputs and reasoning traces through API access; the attacker never obtains weights, source code, or training data, and no network intrusion is involved",
+      "source": "Anthropic, Countering misuse of AI: September 2026, retrieved 2026-09-14",
+      "category": "definition"
+    },
+    {
+      "fact": "Alibaba's campaign, which Anthropic calls the largest distillation attack it has ever measured, moved over 151 million exchanges between May and July 2026, peaking near 3 million exchanges per day across more than 3,500 fraudulent accounts, and targeted the chain-of-thought traces of Claude Opus 4.6 and 4.7 to train Qwen 3.5, 3.6 and 3.7",
+      "source": "Anthropic, Countering misuse of AI: September 2026, retrieved 2026-09-14",
+      "category": "data"
+    },
+    {
+      "fact": "Moonshot and DeepSeek both silently relayed their own customers' requests to Claude and saved the exchanges; documented cases include a PLA-affiliated user analyzing Chengdu CCTV data through what they believed was Kimi, and live credentials for a Russian government database exposed through what the user believed was DeepSeek",
+      "source": "Anthropic, Countering misuse of AI: September 2026, retrieved 2026-09-14",
+      "category": "case_study"
+    },
+    {
+      "fact": "Zhipu abandoned its attempt to distill the cyber capabilities of Anthropic's Fable model and switched to Opus 4.6 and another US lab's leading model, in Anthropic's words 'expressly because they assessed the safeguards were weaker'; no distillation attempts were observed against Mythos 5 or Mythos Preview, which are not generally accessible",
+      "source": "Anthropic, Countering misuse of AI: September 2026, retrieved 2026-09-14",
+      "category": "case_study"
+    },
+    {
+      "fact": "Anthropic states that safety training does not transfer through distillation, and that a model distilled from a frontier model can reach dangerous capabilities in biological or cyber domains even when the harvested exchanges contain little about those subjects",
+      "source": "Anthropic, Countering misuse of AI: September 2026, retrieved 2026-09-14",
+      "category": "policy"
+    },
+    {
+      "fact": "The BIS final rule published 2026-01-15 (91 FR 1684) moved China- and Macau-bound advanced computing commodities from a presumption of denial to case-by-case license review, limited to chips below 21,000 total processing performance and 6,500 GB/s DRAM bandwidth such as the Nvidia H200 and AMD MI325X",
+      "source": "Federal Register, 91 FR 1684, Document 2026-00789, effective 2026-01-15",
+      "category": "policy"
+    },
+    {
+      "fact": "Under the same BIS rule an exporter must certify that aggregate processing performance shipped to China and Macau will be no more than 50 percent of the aggregate shipped to US customers for end use in the United States",
+      "source": "Federal Register, 91 FR 1684, Document 2026-00789, effective 2026-01-15",
+      "category": "policy"
+    },
+    {
+      "fact": "TrendForce projects China's humanoid robot output growing up to 94% year over year in 2026, with Unitree and AgiBot together accounting for nearly 80% of total shipments",
+      "source": "TrendForce press release, 2026-04-09",
+      "category": "data"
+    },
+    {
+      "fact": "On the 2026-09-14 pricing snapshot DeepSeek flash costs $0.15 input and $0.60 output per 1M tokens against Claude Opus 5 at $5.00 and $25.00, a 33x gap on input and 42x on output",
+      "source": "Json House pricing snapshot 2026-09-14, from official vendor pricing pages",
+      "category": "data"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Did Chinese labs steal Claude's model weights?",
+      "a": "No. Anthropic's September 2026 report describes distillation, not intrusion. Weights, source code and training data were never accessed; the campaigns harvested outputs and reasoning traces through fraudulently obtained API access."
+    },
+    {
+      "q": "Which Chinese labs did Anthropic name?",
+      "a": "Alibaba (Qwen/Tongyi Lab), Moonshot AI, DeepSeek, Zhipu (Z.ai), Xiaomi, SenseTime, and MiniMax. Alibaba's campaign was the largest Anthropic says it has measured, at over 151 million exchanges between May and July 2026."
+    },
+    {
+      "q": "Is China behind the US in AI in 2026?",
+      "a": "At the frontier, yes — the top public leaderboard cluster is four US labs. But the answer is axis-dependent: DeepSeek prices inference about 33x below Claude Opus 5 on input, and China ships the large majority of the world's humanoid robots."
+    },
+    {
+      "q": "Why does distillation matter more than the price gap?",
+      "a": "Because the capability gain generalizes and the safety training does not come with it. Anthropic reports that a distilled model can reach dangerous capabilities even when the harvested exchanges contain little about those subjects."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Countering misuse of AI: September 2026",
+      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Revision to License Review Policy for Advanced Computing Commodities (91 FR 1684)",
+      "url": "https://www.federalregister.gov/documents/2026/01/15/2026-00789/revision-to-license-review-policy-for-advanced-computing-commodities",
+      "publisher": "Bureau of Industry and Security, US Department of Commerce"
+    },
+    {
+      "title": "China's Humanoid Robot Output to Surge 94% in 2026; Unitree and AgiBot to Capture Nearly 80% Market Share",
+      "url": "https://www.trendforce.com/presscenter/news/20260409-13007.html",
+      "publisher": "TrendForce"
+    },
+    {
+      "title": "LLM API Pricing 2026: Full Comparison Table (Weekly)",
+      "url": "https://www.jsonhouse.com/data/llm-api-pricing-2026.json",
+      "publisher": "Json House"
+    }
+  ],
+  "comparison_data": {
+    "field_provenance": {"lab": "vendor", "gtg_id": "vendor", "observed_window": "vendor", "exchanges_observed": "vendor", "method": "vendor"},
+    "unit": "Distillation campaigns against Claude as reported by Anthropic in its September 2026 threat intelligence report. Exchange counts are Anthropic's observed figures for the stated window, not totals for the campaign. Where Anthropic published no figure the value is null and the post marks the cell 'Not published' rather than estimating.",
+    "dimensions": [
+      "gtg_id",
+      "observed_window",
+      "exchanges_observed",
+      "method"
+    ],
+    "entries": [
+      { "lab": "Alibaba (Qwen / Tongyi Lab)", "gtg_id": "GTG-16005", "observed_window": "2026-05 to 2026-07", "exchanges_observed": 151000000, "method": "Injected a fixed prompt forcing chain-of-thought into inline tags, converted transcripts to supervised fine-tuning data for Qwen 3.5, 3.6 and 3.7; also used Claude for RL environments and architecture research" },
+      { "lab": "Moonshot AI (Kimi)", "gtg_id": "GTG-16002", "observed_window": "2026-05 to 2026-07", "exchanges_observed": 23000000, "method": "Silently served Claude responses to its own customers as Kimi output and saved the exchanges; used cross-session replay of reasoning signatures to recover full traces" },
+      { "lab": "DeepSeek", "gtg_id": "GTG-16001", "observed_window": "14 days in 2026-07", "exchanges_observed": 12100000, "method": "Tagged inbound requests from third-party coding harnesses and relayed selected users to Claude Opus; same cross-session replay technique as Moonshot" },
+      { "lab": "Zhipu (Z.ai)", "gtg_id": "GTG-16006", "observed_window": "17 days in 2026-06 to 2026-07", "exchanges_observed": 3400000, "method": "Replayed captured Claude reasoning traces back through Claude to clean them for GLM training; abandoned targeting Fable after its cyber safeguards degraded the attack" },
+      { "lab": "Xiaomi", "gtg_id": "GTG-16008", "observed_window": "20 days in 2026-03 to 2026-04", "exchanges_observed": 400000, "method": "Replayed its own MiMo user sessions through Claude to generate SFT and RL data across more than 1,500 proxy accounts" },
+      { "lab": "SenseTime", "gtg_id": "GTG-16012 / GTG-16003", "observed_window": null, "exchanges_observed": null, "method": "Purchased harvested user-Claude transcripts from third-party data vendors; used Claude to write the distillation pipeline and monitor training runs" },
+      { "lab": "MiniMax", "gtg_id": "GTG-16012 / GTG-16003", "observed_window": null, "exchanges_observed": null, "method": "Operated a proxy network through an undisclosed shell company offering access only to Anthropic and OpenAI models, not to Chinese models including its own" }
+    ]
+  },
+  "numerical_data": {
+    "metrics": [
+      {
+        "name": "alibaba_peak_exchanges_per_day",
+        "value": 3000000,
+        "unit": "exchanges",
+        "note": "Anthropic's stated peak for GTG-16005, launched from more than 3,500 fraudulent accounts"
+      },
+      {
+        "name": "moonshot_fraudulent_accounts",
+        "value": 5380,
+        "unit": "accounts",
+        "note": "Proxy service network, most appearing to be located in Singapore and Japan"
+      },
+      {
+        "name": "moonshot_relayed_customer_requests_ten_days",
+        "value": 300000,
+        "unit": "requests",
+        "note": "Customer requests relayed to Anthropic over a ten-day period, the vast majority routed to Opus"
+      },
+      {
+        "name": "zhipu_fraudulent_accounts",
+        "value": 273,
+        "unit": "accounts",
+        "note": "Rotated to evade model restrictions while extracting Claude Opus 4.8 reasoning traces"
+      },
+      {
+        "name": "bis_tpp_ceiling",
+        "value": 21000,
+        "unit": "total processing performance",
+        "note": "Upper bound for China- and Macau-eligible advanced computing commodities under 91 FR 1684, alongside a 6,500 GB/s DRAM bandwidth limit"
+      },
+      {
+        "name": "bis_china_volume_share_cap_pct",
+        "value": 50,
+        "unit": "percent",
+        "note": "Aggregate TPP exported to China and Macau may not exceed this share of aggregate TPP shipped to US customers for US end use"
+      },
+      {
+        "name": "china_humanoid_output_growth_2026_pct",
+        "value": 94,
+        "unit": "percent",
+        "note": "TrendForce projection for 2026 year-over-year output growth, published 2026-04-09"
+      },
+      {
+        "name": "unitree_agibot_shipment_share_pct",
+        "value": 80,
+        "unit": "percent",
+        "note": "TrendForce: the two firms together account for nearly 80% of China's humanoid robot shipments"
+      },
+      {
+        "name": "opus5_vs_deepseek_input_price_ratio",
+        "value": 33.3,
+        "unit": "ratio",
+        "note": "jsonhouse derived from the 2026-09-14 pricing snapshot: Claude Opus 5 at $5.00 against DeepSeek flash at $0.15 per 1M input tokens"
+      },
+      {
+        "name": "opus5_vs_deepseek_output_price_ratio",
+        "value": 41.7,
+        "unit": "ratio",
+        "note": "jsonhouse derived from the 2026-09-14 pricing snapshot: Claude Opus 5 at $25.00 against DeepSeek flash at $0.60 per 1M output tokens"
+      }
+    ]
+  }
+}
