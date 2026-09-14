@@ -1,0 +1,501 @@
+{
+  "snapshot_date": "2026-09-14",
+  "notes": "Prices in USD per 1M tokens, standard (non-batch) API tier. Tiered-price models record the base (lowest) tier with the higher tier in the model's note field. Retired models excluded; deprecated-but-available models included. Collected Monday 2026-09-14, 7 days after the previous file. Tracked scope follows the set established on 2026-07-16 so week-over-week deltas stay meaningful. The set stays at 47 rows: nothing arrived and nothing left, but one row was replaced in place. DeepSeek retired deepseek-v4-flash (DeepSeek-V4-Flash-0731) and now serves that model name from DeepSeek-V4.1-Flash under the new canonical id deepseek-flash, billed at the Flash price; the legacy id is still accepted as an alias. The replacement is cheaper on every axis at off-peak rates: cache-miss input $0.22 to $0.15 (-31.8%), output $0.66 to $0.60 (-9.1%), cache-hit input $0.007 to $0.003 (-57.1%). Because the vendor swapped the model behind a retained name, this row is a substitution rather than a like-for-like price cut, and a per-token series that ignores the version change would read it as a discount on a product that no longer exists. The other 46 rows did not move — a third consecutive week with no price change on the carried set, across all six providers. Two vendor statements dated this week bear on scheduled-expiry claims and are recorded here because both cancel a previously announced change: DeepSeek states it will continue serving deepseek-v4-pro after 2026-09-14 with billing unchanged, and Anthropic states that the Claude Sonnet 5 introductory rate of $2/$10, previously scheduled to rise to $3/$15 on 2026-09-01, is now the standard price and that the increase will not occur.",
+  "models": [
+    {
+      "provider": "anthropic",
+      "model": "claude-fable-5-1",
+      "input_per_1m": 10.0,
+      "output_per_1m": 50.0,
+      "cache_read_per_1m": 0.25,
+      "context_window": 1000000,
+      "note": "First observed 2026-09-07. Cache hits and refreshes priced at 0.025x base input ($0.25/MTok); every other Claude model on the page uses the 0.1x multiplier. 5m cache write $12.50, 1h cache write $20.00",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-mythos-5-1",
+      "input_per_1m": 10.0,
+      "output_per_1m": 50.0,
+      "cache_read_per_1m": 0.25,
+      "context_window": 1000000,
+      "note": "First observed 2026-09-07. Limited availability. Cache read at the same 0.025x multiplier as Claude Fable 5.1",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-mythos-5",
+      "input_per_1m": 10.0,
+      "output_per_1m": 50.0,
+      "cache_read_per_1m": 1.0,
+      "context_window": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-fable-5",
+      "input_per_1m": 10.0,
+      "output_per_1m": 50.0,
+      "cache_read_per_1m": 1.0,
+      "context_window": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-5",
+      "input_per_1m": 5.0,
+      "output_per_1m": 25.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-4-8",
+      "input_per_1m": 5.0,
+      "output_per_1m": 25.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-4-7",
+      "input_per_1m": 5.0,
+      "output_per_1m": 25.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-4-6",
+      "input_per_1m": 5.0,
+      "output_per_1m": 25.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-opus-4-5",
+      "input_per_1m": 5.0,
+      "output_per_1m": 25.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": 200000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5",
+      "input_per_1m": 2.0,
+      "output_per_1m": 10.0,
+      "cache_read_per_1m": 0.2,
+      "context_window": 1000000,
+      "note": "Launch introductory rate is now the standard price. The scheduled 2026-09-01 increase to $3/$15 did not occur; the page now states $2/$10 is standard",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6",
+      "input_per_1m": 3.0,
+      "output_per_1m": 15.0,
+      "cache_read_per_1m": 0.3,
+      "context_window": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5",
+      "input_per_1m": 3.0,
+      "output_per_1m": 15.0,
+      "cache_read_per_1m": 0.3,
+      "context_window": 200000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "input_per_1m": 1.0,
+      "output_per_1m": 5.0,
+      "cache_read_per_1m": 0.1,
+      "context_window": 200000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-6-astra",
+      "input_per_1m": 10.0,
+      "output_per_1m": 50.0,
+      "cache_read_per_1m": 1.0,
+      "context_window": null,
+      "note": "First observed 2026-09-07. Long-context tier is $20.00/$75.00, cache read $2.00",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "input_per_1m": 4.0,
+      "output_per_1m": 20.0,
+      "cache_read_per_1m": 0.4,
+      "context_window": null,
+      "note": "Promotional pricing, stated available at least through 2026-11-21. Long-context tier is $8.00/$30.00, cache read $0.80",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "input_per_1m": 2.0,
+      "output_per_1m": 12.0,
+      "cache_read_per_1m": 0.2,
+      "context_window": null,
+      "note": "Long-context tier is $4.00/$18.00, cache read $0.40",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.6-luna",
+      "input_per_1m": 0.2,
+      "output_per_1m": 1.2,
+      "cache_read_per_1m": 0.02,
+      "context_window": null,
+      "note": "Long-context tier is $0.40/$1.80, cache read $0.04",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.5",
+      "input_per_1m": 5.0,
+      "output_per_1m": 30.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": null,
+      "note": "Standard context (<272K); long-context tier is $10.00/$45.00, cache read $1.00",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.5-pro",
+      "input_per_1m": 30.0,
+      "output_per_1m": 180.0,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "note": "Standard context (<272K); long-context tier is $60.00/$270.00. No cache-read rate published",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "input_per_1m": 2.5,
+      "output_per_1m": 15.0,
+      "cache_read_per_1m": 0.25,
+      "context_window": null,
+      "note": "Standard context (<272K); long-context tier is $5.00/$22.50, cache read $0.50",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.4-mini",
+      "input_per_1m": 0.75,
+      "output_per_1m": 4.5,
+      "cache_read_per_1m": 0.075,
+      "context_window": null,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.4-nano",
+      "input_per_1m": 0.2,
+      "output_per_1m": 1.25,
+      "cache_read_per_1m": 0.02,
+      "context_window": null,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.4-pro",
+      "input_per_1m": 30.0,
+      "output_per_1m": 180.0,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "note": "Standard context (<272K); long-context tier is $60.00/$270.00. No cache-read rate published",
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.8-flash",
+      "input_per_1m": 0.75,
+      "output_per_1m": 3.75,
+      "cache_read_per_1m": 0.075,
+      "context_window": null,
+      "note": "First observed 2026-09-07. Introductory rate through 2026-12-31; doubles to $1.50/$7.50 (cache $0.15) on 2027-01-01",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.7-flash",
+      "input_per_1m": 0.75,
+      "output_per_1m": 3.75,
+      "cache_read_per_1m": 0.075,
+      "context_window": null,
+      "note": "Introductory rate through 2026-12-31; doubles to $1.50/$7.50 (cache $0.15) on 2027-01-01",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.6-flash",
+      "input_per_1m": 0.75,
+      "output_per_1m": 3.75,
+      "cache_read_per_1m": 0.075,
+      "context_window": null,
+      "note": "Introductory rate through 2026-12-31; doubles to $1.50/$7.50 (cache $0.15) on 2027-01-01",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.5-flash",
+      "input_per_1m": 1.5,
+      "output_per_1m": 9.0,
+      "cache_read_per_1m": 0.15,
+      "context_window": null,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.5-flash-lite",
+      "input_per_1m": 0.3,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": 0.03,
+      "context_window": null,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.1-pro-preview",
+      "input_per_1m": 2.0,
+      "output_per_1m": 12.0,
+      "cache_read_per_1m": 0.2,
+      "context_window": null,
+      "note": "Standard context (<=200K); above 200K is billed at a higher tier",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3.1-flash-lite",
+      "input_per_1m": 0.25,
+      "output_per_1m": 1.5,
+      "cache_read_per_1m": 0.025,
+      "context_window": null,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-3-flash-preview",
+      "input_per_1m": 0.5,
+      "output_per_1m": 3.0,
+      "cache_read_per_1m": 0.05,
+      "context_window": null,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-2.5-pro",
+      "input_per_1m": 1.25,
+      "output_per_1m": 10.0,
+      "cache_read_per_1m": 0.125,
+      "context_window": null,
+      "note": "Standard context (<=200K); above 200K is billed at a higher tier",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-2.5-flash",
+      "input_per_1m": 0.3,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": 0.03,
+      "context_window": 1000000,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "google",
+      "model": "gemini-2.5-flash-lite",
+      "input_per_1m": 0.1,
+      "output_per_1m": 0.4,
+      "cache_read_per_1m": 0.01,
+      "context_window": null,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "input_per_1m": 0.15,
+      "output_per_1m": 0.6,
+      "cache_read_per_1m": 0.003,
+      "context_window": 1000000,
+      "note": "Off-peak rate (DeepSeek-V4.1-Flash); peak is $0.3/$1.2, cache read $0.006. Peak hours 01:00-04:00 and 06:00-10:00 UTC. Replaces deepseek-v4-flash (DeepSeek-V4-Flash-0731), retired 2026-09-14 or earlier; the legacy id is still accepted and served by this model at this price",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
+      "input_per_1m": 0.66,
+      "output_per_1m": 1.98,
+      "cache_read_per_1m": 0.022,
+      "context_window": 1000000,
+      "note": "Off-peak rate (DeepSeek-V4-Pro-0813); peak is $1.32/$3.96, cache read $0.044. Peak hours 01:00-04:00 and 06:00-10:00 UTC. Vendor states API service continues after 2026-09-14 with billing unchanged",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.6",
+      "input_per_1m": 2.0,
+      "output_per_1m": 6.0,
+      "cache_read_per_1m": 0.5,
+      "context_window": 500000,
+      "note": "Standard context (<200K); >=200K is $4.00/$12.00, cache read $1.00",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.5",
+      "input_per_1m": 2.0,
+      "output_per_1m": 6.0,
+      "cache_read_per_1m": 0.3,
+      "context_window": 500000,
+      "note": "Standard context (<200K); >=200K is $4.00/$12.00, cache read $0.60",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.3",
+      "input_per_1m": 1.25,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": 0.2,
+      "context_window": 1000000,
+      "note": "Standard context (<200K); >=200K is $2.50/$5.00, cache read $0.40",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.20-0309-reasoning",
+      "input_per_1m": 1.25,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": 0.2,
+      "context_window": 1000000,
+      "note": "Standard context (<200K); >=200K is $2.50/$5.00, cache read $0.40",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.20-0309-non-reasoning",
+      "input_per_1m": 1.25,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": 0.2,
+      "context_window": 1000000,
+      "note": "Standard context (<200K); >=200K is $2.50/$5.00, cache read $0.40",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.20-multi-agent-0309",
+      "input_per_1m": 1.25,
+      "output_per_1m": 2.5,
+      "cache_read_per_1m": 0.2,
+      "context_window": 1000000,
+      "note": "Standard context (<200K); >=200K is $2.50/$5.00, cache read $0.40",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-build-0.1",
+      "input_per_1m": 1.0,
+      "output_per_1m": 2.0,
+      "cache_read_per_1m": 0.2,
+      "context_window": 256000,
+      "note": "Standard context (<200K); >=200K is $2.00/$4.00, cache read $0.40",
+      "source_url": "https://docs.x.ai/docs/models",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "mistral-medium-3.5",
+      "input_per_1m": 1.5,
+      "output_per_1m": 7.5,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "mistral-large-3",
+      "input_per_1m": 0.5,
+      "output_per_1m": 1.5,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "mistral-small-4",
+      "input_per_1m": 0.15,
+      "output_per_1m": 0.6,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    },
+    {
+      "provider": "mistral",
+      "model": "codestral",
+      "input_per_1m": 0.3,
+      "output_per_1m": 0.9,
+      "cache_read_per_1m": null,
+      "context_window": null,
+      "source_url": "https://mistral.ai/pricing/api",
+      "retrieved_at": "2026-09-14T15:45:00Z"
+    }
+  ]
+}
