@@ -3,7 +3,7 @@
   "slug": "llm-api-pricing-2026",
   "title": "LLM API Pricing 2026: Full Comparison Table (Weekly)",
   "description": "LLM API pricing 2026: 47 models from OpenAI, Anthropic, Google, xAI, DeepSeek, and Mistral in one table. Input/output cost per 1M tokens, updated weekly.",
-  "data_updated": "2026-09-14",
+  "data_updated": "2026-09-21",
   "source_post": "https://www.jsonhouse.com/posts/llm-api-pricing-2026/",
   "category": "ai-data-statistics",
   "cluster": "CLUSTER_LLM",
@@ -12,14 +12,14 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/llm-api-pricing-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/llm-api-pricing-2026.json",
-    "citation": "Json House, \"LLM API Pricing 2026: Full Comparison Table (Weekly)\", jsonhouse.com (2026-09-14)",
+    "citation": "Json House, \"LLM API Pricing 2026: Full Comparison Table (Weekly)\", jsonhouse.com (2026-09-21)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
   "key_facts": [
     {
       "fact": "DeepSeek retired v4-flash on 2026-09-14 and serves the same model name from deepseek-flash (build DeepSeek-V4.1-Flash) at $0.15/$0.60 per 1M tokens off-peak; against the 2026-08-17 increase to $0.22/$0.66 this reverses the rise on input (+7% versus the pre-increase $0.14) but not on output (+114% versus the pre-increase $0.28), taking DeepSeek output-to-input from 2x to 3x to 4x across the three states",
-      "source": "DeepSeek pricing page, retrieved 2026-09-14",
+      "source": "DeepSeek pricing page, retrieved 2026-09-21",
       "category": "data"
     },
     {
@@ -28,18 +28,18 @@
       "category": "data"
     },
     {
-      "fact": "Four models entered the tracked set on 2026-09-07, taking it from 43 to 47 with no price move on any carried row: Claude Fable 5.1 and Claude Mythos 5.1 at $10/$50, GPT-6-astra at $10/$50 (long-context tier $20/$75), and Gemini 3.8 Flash at $0.75/$3.75 on the same 2026-12-31 introductory expiry as Gemini 3.7 and 3.6 Flash",
-      "source": "Anthropic, OpenAI, and Google pricing pages, retrieved 2026-09-07",
+      "fact": "No price in the 47-model tracked set changed in the four weekly collections from 2026-09-01 to 2026-09-21 — input, output and cache read held at all six providers — and the 2026-09-21 collection is the first of the four in which the set is also identical in composition, with no model entering, leaving or being substituted",
+      "source": "jsonhouse weekly pricing snapshot series, collections of 2026-09-01, 2026-09-07, 2026-09-14 and 2026-09-21",
       "category": "data"
     },
     {
-      "fact": "Anthropic's newer models (Claude Opus 4.7 and later, Sonnet 5, Fable 5) use a tokenizer that produces approximately 30% more tokens for the same text, making per-token prices non-comparable with earlier Claude models and other providers",
-      "source": "Anthropic pricing page, retrieved 2026-07-16",
+      "fact": "Claude 4.7 and later models, plus Claude Mythos Preview, use a tokenizer that produces approximately 30% more tokens for the same text than Sonnet 4.6 and earlier — 8 of the 13 tracked Anthropic rows — so an unchanged per-token price on those rows is not an unchanged cost per unit of text, and per-token comparison across that line or across providers is an approximation",
+      "source": "Anthropic pricing page, retrieved 2026-09-21",
       "category": "definition"
     },
     {
       "fact": "The deepest cache discount in the tracked set changed hands twice in eight days: Anthropic split its cache-read multiplier on 2026-09-07, pricing Claude Fable 5.1 and Mythos 5.1 cache hits at 0.025x base input ($0.25 per 1M, 97.5% off) against 0.1x for every other Claude model, and DeepSeek retook the lead on 2026-09-14 at 98% ($0.003 off a $0.15 base); OpenAI and Google remain at a flat 90%",
-      "source": "Official pricing pages of Anthropic, OpenAI, Google, DeepSeek, retrieved 2026-09-14",
+      "source": "Official pricing pages of Anthropic, OpenAI, Google, DeepSeek, retrieved 2026-09-21",
       "category": "data"
     },
     {

@@ -3,7 +3,7 @@
   "slug": "llm-cache-pricing-2026",
   "title": "LLM Cache Pricing 2026: The Real Cost of Cached Input",
   "description": "LLM cache pricing 2026 normalized across six providers: effective input cost at real hit rates, hidden write fees, and which vendors publish nothing at all.",
-  "data_updated": "2026-09-14",
+  "data_updated": "2026-09-21",
   "source_post": "https://www.jsonhouse.com/posts/llm-cache-pricing-2026/",
   "category": "ai-data-statistics",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/llm-cache-pricing-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/llm-cache-pricing-2026.json",
-    "citation": "Json House, \"LLM Cache Pricing 2026: The Real Cost of Cached Input\", jsonhouse.com (2026-09-14)",
+    "citation": "Json House, \"LLM Cache Pricing 2026: The Real Cost of Cached Input\", jsonhouse.com (2026-09-21)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -158,7 +158,7 @@
       "effective_h80",
       "effective_h95"
     ],
-    "unit": "USD per 1M input tokens, standard non-batch base tier, collected 2026-09-14. effective_hN = base x (1 - N) + cache_read x N. Gemini 3.6/3.7/3.8 Flash are promotional through 2026-12-31; DeepSeek rows are off-peak and double during peak UTC windows. The DeepSeek flash row replaced the retired v4-flash on 2026-09-14 and is a different model, not a reprice.",
+    "unit": "USD per 1M input tokens, standard non-batch base tier, collected 2026-09-21; no base or cache-read price moved between the 2026-09-14 and 2026-09-21 collections, so every effective price and crossover below is unchanged. effective_hN = base x (1 - N) + cache_read x N. Gemini 3.6/3.7/3.8 Flash are promotional through 2026-12-31; DeepSeek rows are off-peak and double during peak UTC windows. The DeepSeek flash row replaced the retired v4-flash on 2026-09-14 and is a different model, not a reprice. Effective prices are per token and a token is not a constant amount of text: Claude 4.7 and later count roughly 30% more tokens for the same input than Sonnet 4.6 and earlier, which leaves the discount ratios intact but understates the newer Claude rows in any cross-row price comparison.",
     "entries": [
       {
         "model": "Claude Fable 5.1",
