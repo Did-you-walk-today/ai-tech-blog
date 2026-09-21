@@ -3,7 +3,7 @@
   "slug": "best-llm-2026",
   "title": "Best LLM 2026: Capability and Limits Compared",
   "description": "Best LLM 2026 compared on the limits that actually block builds: context window, max output tokens, prompt cache minimums, knowledge cutoffs, and retirement dates.",
-  "data_updated": "2026-07-25",
+  "data_updated": "2026-09-21",
   "source_post": "https://www.jsonhouse.com/posts/best-llm-2026/",
   "category": "ai-models-intelligence",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/best-llm-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/best-llm-2026.json",
-    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-07-25)",
+    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-09-21)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -38,8 +38,8 @@
       "category": "definition"
     },
     {
-      "fact": "DeepSeek v4-pro and v4-flash are text-only; every listed Anthropic, OpenAI, Google, and xAI model accepts image input, and Gemini 3.5 Flash additionally accepts video, audio, and PDF",
-      "source": "DeepSeek, Anthropic, OpenAI, Google, and xAI model documentation, retrieved 2026-07-25",
+      "fact": "DeepSeek v4-pro is text-only, but deepseek-flash accepts image input since it replaced the text-only v4-flash on 2026-09-14 — a capability that arrived inside an existing model name rather than as a new model id; every listed Anthropic, OpenAI, Google, and xAI model accepts image input, and Gemini 3.5 Flash additionally accepts video, audio, and PDF",
+      "source": "DeepSeek model documentation re-verified 2026-09-21; Anthropic, OpenAI, Google, and xAI documentation retrieved 2026-07-25",
       "category": "data"
     },
     {
@@ -215,17 +215,17 @@
         "price_band": "budget"
       },
       {
-        "model": "deepseek-v4-flash",
+        "model": "deepseek-flash",
         "provider": "DeepSeek",
         "context_window_input_tokens": 1000000,
         "max_output_tokens": 384000,
-        "image_input": false,
+        "image_input": true,
         "knowledge_cutoff": null,
         "min_cacheable_prefix_tokens": null,
         "price_band": "budget"
       }
     ],
-    "notes": "null means the provider does not publish the figure in first-party documentation as of 2026-07-25. Anthropic max_output_tokens reflects the synchronous Messages API; Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5, and Sonnet 4.6 reach 300000 on the Message Batches API behind a beta header. Anthropic knowledge_cutoff uses the published 'reliable knowledge cutoff', not the broader 'training data cutoff'. Anthropic models from Opus 4.7 onward use a tokenizer emitting ~30% more tokens for identical text, so context_window_input_tokens is not directly comparable across providers. min_cacheable_prefix_tokens applies to each provider's first-party API only; Amazon Bedrock, Google Cloud, and Microsoft Foundry set their own minimums and failure behavior."
+    "notes": "Collected 2026-07-25, except the two DeepSeek rows, which were re-verified 2026-09-21 after DeepSeek retired v4-flash and began serving that name from deepseek-flash; deepseek-flash accepts image input where v4-flash did not. null means the provider does not publish the figure in first-party documentation as of the row's own collection date. Anthropic max_output_tokens reflects the synchronous Messages API; Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5, and Sonnet 4.6 reach 300000 on the Message Batches API behind a beta header. Anthropic knowledge_cutoff uses the published 'reliable knowledge cutoff', not the broader 'training data cutoff'. Anthropic models from Opus 4.7 onward use a tokenizer emitting ~30% more tokens for identical text, so context_window_input_tokens is not directly comparable across providers. min_cacheable_prefix_tokens applies to each provider's first-party API only; Amazon Bedrock, Google Cloud, and Microsoft Foundry set their own minimums and failure behavior."
   },
   "lifecycle_policy": [
     {
