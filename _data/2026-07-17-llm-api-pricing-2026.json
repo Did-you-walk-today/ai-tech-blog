@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "slug": "llm-api-pricing-2026",
   "title": "LLM API Pricing 2026: Full Comparison Table (Weekly)",
-  "description": "LLM API pricing 2026: 47 models from OpenAI, Anthropic, Google, xAI, DeepSeek, and Mistral in one table. Input/output cost per 1M tokens, updated weekly.",
-  "data_updated": "2026-09-21",
+  "description": "LLM API pricing 2026: 51 models from OpenAI, Anthropic, Google, xAI, DeepSeek, and Mistral in one table. Input/output cost per 1M tokens, updated weekly.",
+  "data_updated": "2026-09-28",
   "source_post": "https://www.jsonhouse.com/posts/llm-api-pricing-2026/",
   "category": "ai-data-statistics",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/llm-api-pricing-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/llm-api-pricing-2026.json",
-    "citation": "Json House, \"LLM API Pricing 2026: Full Comparison Table (Weekly)\", jsonhouse.com (2026-09-21)",
+    "citation": "Json House, \"LLM API Pricing 2026: Full Comparison Table (Weekly)\", jsonhouse.com (2026-09-28)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -28,7 +28,7 @@
       "category": "data"
     },
     {
-      "fact": "No price in the 47-model tracked set changed in the four weekly collections from 2026-09-01 to 2026-09-21 — input, output and cache read held at all six providers — and the 2026-09-21 collection is the first of the four in which the set is also identical in composition, with no model entering, leaving or being substituted",
+      "fact": "No price carried into the tracked set changed in the five weekly collections from 2026-09-01 to 2026-09-28 — input, output and cache read held at all six providers — while the set itself grew from 43 to 51 rows over the same five weeks through arrivals alone, with no removals after 2026-09-14",
       "source": "jsonhouse weekly pricing snapshot series, collections of 2026-09-01, 2026-09-07, 2026-09-14 and 2026-09-21",
       "category": "data"
     },
@@ -38,7 +38,7 @@
       "category": "definition"
     },
     {
-      "fact": "The deepest cache discount in the tracked set changed hands twice in eight days: Anthropic split its cache-read multiplier on 2026-09-07, pricing Claude Fable 5.1 and Mythos 5.1 cache hits at 0.025x base input ($0.25 per 1M, 97.5% off) against 0.1x for every other Claude model, and DeepSeek retook the lead on 2026-09-14 at 98% ($0.003 off a $0.15 base); OpenAI and Google remain at a flat 90%",
+      "fact": "Anthropic now runs three cache-read multipliers where it ran one before 2026-09-07: 0.025x base input on Claude Fable 5.1 and Mythos 5.1 ($0.25 per 1M, 97.5% off), 0.05x on Claude Opus 5.5 from 2026-09-28 ($0.20, 95% off), and 0.1x on every other Claude model; the schedule slopes with price, and DeepSeek holds the deepest discount overall at 98% ($0.003 off a $0.15 base) while OpenAI and Google remain at a flat 90%",
       "source": "Official pricing pages of Anthropic, OpenAI, Google, DeepSeek, retrieved 2026-09-21",
       "category": "data"
     },
@@ -53,8 +53,8 @@
       "category": "trend"
     },
     {
-      "fact": "Mistral repositioned its former flagship Mistral Large 3 at $0.50/$1.50 per 1M tokens — one third the price of the newer Mistral Medium 3.5 ($1.50/$7.50)",
-      "source": "Mistral pricing page, retrieved 2026-07-16",
+      "fact": "Three of the four models that entered the tracked set on 2026-09-28 are priced below the generation they succeed — Claude Opus 5.5 at $4.00/$20.00 against Claude Opus 5's $5.00/$25.00, and gpt-6-sol ($2.00/$10.00) and gpt-6-luna ($0.10/$0.50) at exactly half of gpt-5.6-sol and gpt-5.6-luna on both sides — so the frontier price fell in the same week that no carried row moved; the saving reaches only a workload that changes model id",
+      "source": "jsonhouse weekly pricing snapshot series, 2026-09-28 collection against vendor pricing pages",
       "category": "data"
     },
     {
@@ -71,11 +71,11 @@
   "faq_summary": [
     {
       "q": "What is the cheapest LLM API in 2026?",
-      "a": "Gemini 2.5 Flash-Lite at $0.10 input / $0.40 output per 1M tokens. DeepSeek is second at $0.15 / $0.60, tied with Mistral Small 4, after retiring v4-flash on 2026-09-14 and serving the name from deepseek-flash. DeepSeek leads on cached input at $0.003 per 1M tokens, a 98% discount."
+      "a": "Gemini 2.5 Flash-Lite at $0.10 input / $0.40 output per 1M tokens, though it shares that floor from 2026-09-28: gpt-6-luna arrived at $0.10 / $0.50, matching it on input and on the $0.01 cache read and separating only on output. DeepSeek is next at $0.15 / $0.60, tied with Mistral Small 4, after retiring v4-flash on 2026-09-14 and serving the name from deepseek-flash. DeepSeek leads on cached input at $0.003 per 1M tokens, a 98% discount."
     },
     {
       "q": "Why is Claude Fable 5.1's cache read cheaper than Claude Opus 5's?",
-      "a": "Anthropic prices a cache hit as a multiplier on base input and stopped applying one multiplier to the whole line on 2026-09-07. Fable 5.1 and Mythos 5.1 bill cache hits at 0.025x base input ($0.25 per 1M); every other Claude model, Opus 5 included, stays at 0.1x."
+      "a": "Anthropic prices a cache hit as a multiplier on base input and stopped applying one multiplier to the whole line on 2026-09-07. There are now three. Fable 5.1 and Mythos 5.1 bill a cache hit at 0.025x base input ($0.25 per 1M); Claude Opus 5.5, added 2026-09-28, bills at 0.05x ($0.20); every other Claude model, Opus 5 included, stays at 0.1x. The schedule slopes with price."
     },
     {
       "q": "Are per-token prices directly comparable across providers?",
@@ -132,18 +132,21 @@
       "note": "vendor, except dated change descriptions which are jsonhouse observations from the weekly snapshot series"
     },
     "dimensions": ["provider", "tier", "input_per_1m_usd", "output_per_1m_usd", "cache_read_per_1m_usd", "context_window", "note"],
-    "unit": "USD per 1M tokens, standard non-batch tier, collected 2026-09-07",
+    "unit": "USD per 1M tokens, standard non-batch tier, collected 2026-09-28",
     "entries": [
       { "model": "Claude Fable 5.1", "provider": "Anthropic", "tier": "flagship", "input_per_1m_usd": 10.0, "output_per_1m_usd": 50.0, "cache_read_per_1m_usd": 0.25, "context_window": 1000000, "note": "Added 2026-09-07; cache hits billed at 0.025x base input against the 0.1x every other Claude model uses. Claude Mythos 5.1 carries identical pricing but is application-gated" },
       { "model": "Claude Fable 5", "provider": "Anthropic", "tier": "flagship", "input_per_1m_usd": 10.0, "output_per_1m_usd": 50.0, "cache_read_per_1m_usd": 1.0, "context_window": 1000000, "note": null },
       { "model": "GPT-6-astra", "provider": "OpenAI", "tier": "flagship", "input_per_1m_usd": 10.0, "output_per_1m_usd": 50.0, "cache_read_per_1m_usd": 1.0, "context_window": null, "note": "Added 2026-09-07; $20.00/$75.00 above the base context window (cache read $2.00). Most expensive OpenAI row outside the $30/$180 pro tier" },
       { "model": "GPT-5.5-pro", "provider": "OpenAI", "tier": "flagship", "input_per_1m_usd": 30.0, "output_per_1m_usd": 180.0, "cache_read_per_1m_usd": null, "context_window": null, "note": null },
       { "model": "GPT-5.4-pro", "provider": "OpenAI", "tier": "flagship", "input_per_1m_usd": 30.0, "output_per_1m_usd": 180.0, "cache_read_per_1m_usd": null, "context_window": null, "note": null },
+      { "model": "Claude Opus 5.5", "provider": "Anthropic", "tier": "flagship", "input_per_1m_usd": 4.0, "output_per_1m_usd": 20.0, "cache_read_per_1m_usd": 0.2, "context_window": 1000000, "note": "Added 2026-09-28 at $1.00/$5.00 below the Claude Opus 5 it succeeds; cache hits billed at 0.05x base input, a third Anthropic multiplier between Fable 5.1's 0.025x and the 0.1x the rest of the line carries. Fast mode $8.00/$40.00" },
       { "model": "GPT-5.6-sol", "provider": "OpenAI", "tier": "flagship", "input_per_1m_usd": 4.0, "output_per_1m_usd": 20.0, "cache_read_per_1m_usd": 0.4, "context_window": null, "note": "Cut from $5.00/$30.00 on 2026-08-24 (cache read $0.50 to $0.40); promotional, stated available at least through 2026-11-21. Long-context tier $8.00/$30.00, cache read $0.80 — OpenAI's first tiered row" },
       { "model": "GPT-5.5", "provider": "OpenAI", "tier": "flagship", "input_per_1m_usd": 5.0, "output_per_1m_usd": 30.0, "cache_read_per_1m_usd": 0.5, "context_window": null, "note": null },
       { "model": "Claude Opus 5", "provider": "Anthropic", "tier": "flagship", "input_per_1m_usd": 5.0, "output_per_1m_usd": 25.0, "cache_read_per_1m_usd": 0.5, "context_window": 1000000, "note": "Claude Opus 4.5 through 4.8 share this price" },
       { "model": "Claude Opus 4.8", "provider": "Anthropic", "tier": "flagship", "input_per_1m_usd": 5.0, "output_per_1m_usd": 25.0, "cache_read_per_1m_usd": 0.5, "context_window": 1000000, "note": "Opus 4.5, 4.6, and 4.7 share this pricing" },
+      { "model": "GPT-6-sol", "provider": "OpenAI", "tier": "flagship", "input_per_1m_usd": 2.0, "output_per_1m_usd": 10.0, "cache_read_per_1m_usd": 0.2, "context_window": null, "note": "Added 2026-09-28 at exactly half of GPT-5.6-sol on input and output, and on the same published rate as Claude Sonnet 5. Long-context tier $4.00/$15.00, cache read $0.40" },
       { "model": "Gemini 3.1 Pro Preview", "provider": "Google", "tier": "flagship", "input_per_1m_usd": 2.0, "output_per_1m_usd": 12.0, "cache_read_per_1m_usd": 0.2, "context_window": null, "note": "$4.00/$18.00 above 200K-token prompts" },
+      { "model": "Grok 4.7", "provider": "xAI", "tier": "flagship", "input_per_1m_usd": 2.0, "output_per_1m_usd": 6.0, "cache_read_per_1m_usd": 0.5, "context_window": 500000, "note": "Added 2026-09-28 on Grok 4.6's rates to the cent, cache read included; billed $4.00 / $12.00 above 200K tokens (cache read $1.00)" },
       { "model": "Grok 4.6", "provider": "xAI", "tier": "flagship", "input_per_1m_usd": 2.0, "output_per_1m_usd": 6.0, "cache_read_per_1m_usd": 0.5, "context_window": 500000, "note": "Added 2026-08-17; billed $4.00 / $12.00 above 200K tokens (cache read $1.00); matches Grok 4.5 on base rate but costs more on cache read" },
       { "model": "Grok 4.5", "provider": "xAI", "tier": "flagship", "input_per_1m_usd": 2.0, "output_per_1m_usd": 6.0, "cache_read_per_1m_usd": 0.3, "context_window": 500000, "note": "Billed $4.00 / $12.00 above 200K tokens; cache read cut from $0.50 on 2026-07-28" },
       { "model": "Claude Sonnet 5", "provider": "Anthropic", "tier": "mid-range", "input_per_1m_usd": 2.0, "output_per_1m_usd": 10.0, "cache_read_per_1m_usd": 0.2, "context_window": 1000000, "note": "Introductory rate became the standard price on 2026-08-17; the scheduled 2026-09-01 rise to $3.00/$15.00 was cancelled" },
@@ -166,6 +169,7 @@
       { "model": "GPT-5.4-nano", "provider": "OpenAI", "tier": "budget", "input_per_1m_usd": 0.2, "output_per_1m_usd": 1.25, "cache_read_per_1m_usd": 0.02, "context_window": null, "note": null },
       { "model": "Mistral Small 4", "provider": "Mistral", "tier": "budget", "input_per_1m_usd": 0.15, "output_per_1m_usd": 0.6, "cache_read_per_1m_usd": null, "context_window": null, "note": null },
       { "model": "DeepSeek flash", "provider": "DeepSeek", "tier": "budget", "input_per_1m_usd": 0.15, "output_per_1m_usd": 0.6, "cache_read_per_1m_usd": 0.003, "context_window": 1000000, "note": "Off-peak rate; peak is exactly double ($0.30/$1.20, cache read $0.006) during 01:00-04:00 and 06:00-10:00 UTC. Replaces the retired v4-flash (build V4-Flash-0731) on 2026-09-14; build DeepSeek-V4.1-Flash. The legacy id deepseek-v4-flash is still accepted and served by this model at this price, so the change is a substitution, not a price cut" },
+      { "model": "GPT-6-luna", "provider": "OpenAI", "tier": "budget", "input_per_1m_usd": 0.1, "output_per_1m_usd": 0.5, "cache_read_per_1m_usd": 0.01, "context_window": null, "note": "Added 2026-09-28 at half of GPT-5.6-luna on input, output and cache read; ties Gemini 2.5 Flash-Lite on input and cache read, separating only on output. Long-context tier $0.20/$0.75, cache read $0.02" },
       { "model": "Gemini 2.5 Flash-Lite", "provider": "Google", "tier": "budget", "input_per_1m_usd": 0.1, "output_per_1m_usd": 0.4, "cache_read_per_1m_usd": 0.01, "context_window": null, "note": null },
       { "model": "Grok-build-0.1", "provider": "xAI", "tier": "specialist", "input_per_1m_usd": 1.0, "output_per_1m_usd": 2.0, "cache_read_per_1m_usd": 0.2, "context_window": 256000, "note": "Coding model; $2.00/$4.00 above 200K-token prompts" },
       { "model": "Codestral", "provider": "Mistral", "tier": "specialist", "input_per_1m_usd": 0.3, "output_per_1m_usd": 0.9, "cache_read_per_1m_usd": null, "context_window": null, "note": "Coding model" }
