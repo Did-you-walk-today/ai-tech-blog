@@ -3,7 +3,7 @@
   "slug": "best-llm-2026",
   "title": "Best LLM 2026: Capability and Limits Compared",
   "description": "Best LLM 2026 compared on the limits that actually block builds: context window, max output tokens, prompt cache minimums, knowledge cutoffs, and retirement dates.",
-  "data_updated": "2026-09-21",
+  "data_updated": "2026-09-28",
   "source_post": "https://www.jsonhouse.com/posts/best-llm-2026/",
   "category": "ai-models-intelligence",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/best-llm-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/best-llm-2026.json",
-    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-09-21)",
+    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-09-28)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -23,7 +23,7 @@
       "category": "data"
     },
     {
-      "fact": "Max output tokens still span a twelve-fold range, from 32,000 (Claude Opus 4.1) to 384,000 (DeepSeek v4)",
+      "fact": "Max output tokens still span a six-fold range, from 64,000 (Claude Haiku 4.5) to 384,000 (DeepSeek v4); the range was twelve-fold until Claude Opus 4.1 and its 32,000-token ceiling were retired on 2026-08-05",
       "source": "jsonhouse normalization of six official provider documentation sites, 2026-07-25",
       "category": "data"
     },
@@ -38,7 +38,7 @@
       "category": "definition"
     },
     {
-      "fact": "DeepSeek v4-pro is text-only, but deepseek-flash accepts image input since it replaced the text-only v4-flash on 2026-09-14 — a capability that arrived inside an existing model name rather than as a new model id; every listed Anthropic, OpenAI, Google, and xAI model accepts image input, and Gemini 3.5 Flash additionally accepts video, audio, and PDF",
+      "fact": "DeepSeek v4-pro is text-only, but deepseek-flash accepts image input since it replaced the text-only v4-flash on 2026-09-14 — a capability that arrived inside an existing model name rather than as a new model id; every listed Anthropic, OpenAI and Google model accepts image input, and Gemini 3.5 Flash additionally accepts video, audio, and PDF. xAI stopped stating image support per model between our 2026-07-25 and 2026-09-28 collections, so Grok 4.7 carries no value on that dimension",
       "source": "DeepSeek model documentation re-verified 2026-09-21; Anthropic, OpenAI, Google, and xAI documentation retrieved 2026-07-25",
       "category": "data"
     },
@@ -63,7 +63,7 @@
       "category": "definition"
     },
     {
-      "fact": "Claude Opus 4.1 is deprecated with a confirmed retirement date of 2026-08-05; gpt-5-chat-latest shut down 2026-07-23 and gemini-3.1-flash-lite-preview was retired 2026-05-25",
+      "fact": "Claude Opus 4.1 was retired on 2026-08-05, sixty days after being deprecated on 2026-06-05; gpt-5-chat-latest shut down 2026-07-23 and gemini-3.1-flash-lite-preview was retired 2026-05-25. As of 2026-09-28 Anthropic has no model with a scheduled retirement date, and the earliest published floor is claude-sonnet-4-5 at 2026-09-29",
       "source": "Anthropic, OpenAI, and Google deprecation pages, retrieved 2026-07-25",
       "category": "trend"
     }
@@ -77,6 +77,30 @@
       "min_cacheable_prefix_tokens"
     ],
     "entries": [
+      {
+        "model": "claude-fable-5-1",
+        "provider": "Anthropic",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-06",
+        "min_cacheable_prefix_tokens": null,
+        "retirement_floor": "2027-09-01",
+        "note": "Collected 2026-09-28. Reliable knowledge cutoff and training data cutoff are both June 2026. Minimum cacheable prefix not stated on the models overview and not re-collected from the caching documentation",
+        "price_band": "flagship"
+      },
+      {
+        "model": "claude-opus-5-5",
+        "provider": "Anthropic",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-06",
+        "min_cacheable_prefix_tokens": null,
+        "retirement_floor": "2027-09-22",
+        "note": "Collected 2026-09-28. Cache reads billed at 0.05x base input rather than the standard 0.1x. Minimum cacheable prefix not stated on the models overview and not re-collected from the caching documentation",
+        "price_band": "flagship"
+      },
       {
         "model": "claude-opus-5",
         "provider": "Anthropic",
@@ -122,16 +146,37 @@
         "price_band": "budget"
       },
       {
-        "model": "claude-opus-4-1",
-        "provider": "Anthropic",
-        "context_window_input_tokens": 200000,
-        "max_output_tokens": 32000,
+        "model": "gpt-6-astra",
+        "provider": "OpenAI",
+        "context_window_input_tokens": 1050000,
+        "max_output_tokens": 128000,
         "image_input": true,
-        "knowledge_cutoff": "2025-01",
+        "knowledge_cutoff": "2026-04-30",
         "min_cacheable_prefix_tokens": null,
-        "retirement_floor": "2026-08-05",
-        "lifecycle_status": "deprecated",
+        "note": "Collected 2026-09-28",
         "price_band": "flagship"
+      },
+      {
+        "model": "gpt-6-sol",
+        "provider": "OpenAI",
+        "context_window_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-04-20",
+        "min_cacheable_prefix_tokens": null,
+        "note": "Collected 2026-09-28. Priced at $2.00/$10.00, the same published rate as Claude Sonnet 5, so it sits in the mid band despite being a current-generation frontier model",
+        "price_band": "mid"
+      },
+      {
+        "model": "gpt-6-luna",
+        "provider": "OpenAI",
+        "context_window_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-05-18",
+        "min_cacheable_prefix_tokens": null,
+        "note": "Collected 2026-09-28",
+        "price_band": "budget"
       },
       {
         "model": "gpt-5.6-sol",
@@ -192,6 +237,17 @@
         "image_input": true,
         "knowledge_cutoff": null,
         "min_cacheable_prefix_tokens": null,
+        "price_band": "mid"
+      },
+      {
+        "model": "grok-4.7",
+        "provider": "xAI",
+        "context_window_input_tokens": 500000,
+        "max_output_tokens": null,
+        "image_input": null,
+        "knowledge_cutoff": "2026-05",
+        "min_cacheable_prefix_tokens": null,
+        "note": "Collected 2026-09-28. image_input is null, not false: xAI\u0027s models page states this model\u0027s context window and knowledge cutoff but no longer states image support per model, so the July \u0022Yes\u0022 on the older Grok rows was not read across",
         "price_band": "mid"
       },
       {
@@ -268,7 +324,7 @@
   "faq_summary": [
     {
       "q": "What is the best LLM in 2026?",
-      "a": "There is no single answer, because the models no longer differ mainly in capability — they differ in operating limits. If you generate long documents, DeepSeek v4 leads on max output at 384K tokens. If you need vision plus a 1M context, Claude Opus 5, GPT-5.6-sol, and Gemini 3.5 Flash all qualify and DeepSeek does not."
+      "a": "There is no single answer, because the models no longer differ mainly in capability — they differ in operating limits. If you generate long documents, DeepSeek v4 leads on max output at 384K tokens. If you need vision plus a 1M context, Claude Opus 5.5, GPT-6-sol, and Gemini 3.5 Flash all qualify, and so does deepseek-flash since 2026-09-14 — only DeepSeek v4-pro is still text-only."
     },
     {
       "q": "Which LLM has the largest context window in 2026?",
@@ -346,6 +402,14 @@
   ],
   "update_cadence": "monthly, first Tuesday",
   "changelog": [
+    {
+      "date": "2026-09-28",
+      "change": "Out-of-cycle refresh of the Anthropic and OpenAI rows, prompted by the weekly pricing collection. Two errors corrected: Claude Opus 4.1 was retired on 2026-08-05 and has been removed, which moves the max-output floor from its 32,000 tokens to Claude Haiku 4.5's 64,000 and halves the stated spread from twelve-fold to six-fold; and the cost-band section's warning that Claude Sonnet 5 would rise 50% on 2026-08-31 was withdrawn, because Anthropic cancelled that increase on 2026-08-17. Rows added: claude-fable-5-1, claude-opus-5-5, gpt-6-astra, gpt-6-sol, gpt-6-luna, grok-4.7. Two documentation changes recorded rather than resolved: OpenAI withdrew the spec pages for gpt-5.6-sol, gpt-5.5 and gpt-5.4, whose rows keep their 2026-07-25 figures, and xAI stopped stating image support per model, so grok-4.7 carries null rather than the older rows' true. Google's rows were not re-collected and remain the 2026-07-25 figures, so Gemini 3.6, 3.7 and 3.8 Flash are still absent."
+    },
+    {
+      "date": "2026-09-21",
+      "change": "Out-of-cycle correction to the two DeepSeek rows, prompted by the weekly pricing collection. DeepSeek retired v4-flash on 2026-09-14 and serves that name from deepseek-flash, which accepts image input where its predecessor did not. Context window and max output are unchanged on both rows and were re-verified. No other provider's rows were re-collected. The scheduled monthly refreshes of 2026-08-04 and 2026-09-01 were missed and are recorded as gaps."
+    },
     {
       "date": "2026-07-25",
       "change": "Initial publication. 13 models across 6 providers. Baseline collected 2026-07-25."
