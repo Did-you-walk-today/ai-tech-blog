@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "slug": "agentic-ai-timing-2026",
+  "title": "Agentic AI 2026: Why Every Lab Moved at Once",
+  "description": "Agentic AI 2026: in four weeks Google, OpenAI and Anthropic shipped agent models at $2/$10, cut cache prices, moved into AWS, and OpenAI cut Pro allowances.",
+  "data_updated": "2026-10-05",
+  "source_post": "https://www.jsonhouse.com/posts/agentic-ai-timing-2026/",
+  "category": "industry-analysis",
+  "cluster": "CLUSTER_LLM",
+  "format": "A",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/agentic-ai-timing-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/agentic-ai-timing-2026.json",
+    "citation": "Json House, \"Agentic AI 2026: Why Every Lab Moved at Once\", jsonhouse.com (2026-10-05)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
+  "key_facts": [
+    {
+      "fact": "Gemini 4 Argon, announced 2026-09-30, raises the output limit from 64,000 to 1 million tokens and is priced at an introductory $2 input / $10 output per 1M tokens with cached input 95% off, rising to $4 / $20 afterwards; the end date of the introductory rate is not published",
+      "source": "Google, Gemini 4 Argon announcement, retrieved 2026-10-05",
+      "category": "data"
+    },
+    {
+      "fact": "Four tracked models sit at exactly $2 input / $10 output per 1M tokens on 2026-10-05 — Claude Sonnet 5, Claude Sonnet 5.5, GPT-6-sol and GPT-6.1-sol — against one (Claude Sonnet 5) on 2026-07-16",
+      "source": "jsonhouse weekly pricing snapshot series, 2026-07-16 and 2026-10-05",
+      "category": "data"
+    },
+    {
+      "fact": "Until 2026-09-01 the only tracked models pricing a cache read below 0.1x of their own input price were DeepSeek's; by 2026-10-05 four US models had followed (Claude Fable 5.1, Claude Mythos 5.1, Claude Opus 5.5, GPT-6.1-sol)",
+      "source": "jsonhouse weekly pricing snapshot series, 2026-07-16 through 2026-10-05",
+      "category": "trend"
+    },
+    {
+      "fact": "OpenAI's cheapest sol model cost 11.5x DeepSeek v4-pro's off-peak input price on 2026-07-16 and 3.0x on 2026-10-05; the gap closed from both sides, with the sol input price down 60% and DeepSeek v4-pro up 52%",
+      "source": "jsonhouse derived from weekly pricing snapshots of OpenAI and DeepSeek official pricing pages",
+      "category": "data"
+    },
+    {
+      "fact": "Anthropic measured AI agents using about 4x the tokens of chat interactions and multi-agent systems about 15x, and found token usage alone explained 80% of performance variance in its browsing evaluation",
+      "source": "Anthropic Engineering, multi-agent research system, June 2025",
+      "category": "data"
+    },
+    {
+      "fact": "OpenAI reopened ChatGPT Pro 200 on 2026-09-29 at an unchanged $200 per month with a lower usage allowance for new subscriptions; eligible existing subscribers keep the previous allowance only through 2026-10-29. OpenAI's pages do not state the size of the reduction",
+      "source": "OpenAI Help Center, About ChatGPT Pro tiers, retrieved 2026-10-05",
+      "category": "policy"
+    },
+    {
+      "fact": "GPT-6 Astra became generally available on Amazon Bedrock on 2026-09-08 and GPT-6 Sol and Luna on 2026-09-22; Claude Platform became available inside AWS accounts on 2026-05-11",
+      "source": "AWS What's New announcements",
+      "category": "trend"
+    },
+    {
+      "fact": "Meta uses interactions with Meta AI to personalize content and ads from 2025-12-16, excluding topics such as religious views, sexual orientation, political views and health from ad targeting; Meta states more than 1 billion people use Meta AI monthly",
+      "source": "Meta Newsroom, October 1, 2025",
+      "category": "policy"
+    },
+    {
+      "fact": "Anthropic's consumer terms let Claude Free, Pro and Max users choose whether their chats train models, with 5-year retention if allowed and 30 days if not, and do not apply to API or commercial use including via Amazon Bedrock and Google Cloud Vertex AI",
+      "source": "Anthropic, Updates to Consumer Terms and Privacy Policy, August 28, 2025",
+      "category": "policy"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Why is agentic AI taking off in 2026?",
+      "a": "Three things changed in the same four weeks: models built for long-horizon work shipped, the cache-read price agents mostly pay fell below 10% of input at four US models, and US models became purchasable inside AWS accounts."
+    },
+    {
+      "q": "What is Gemini 4 Argon and how much does it cost?",
+      "a": "Google's frontier model announced 2026-09-30 with a 1-million-token output limit. Introductory pricing is $2 / $10 per 1M tokens with cached input 95% off, then $4 / $20; the end date is not published."
+    },
+    {
+      "q": "Did OpenAI raise the price of ChatGPT Pro?",
+      "a": "Not the price. Pro 200 stays at $200 a month, but new subscriptions not eligible for grandfathering get a lower allowance, and eligible subscribers keep the previous one only through 2026-10-29. OpenAI's pages do not state the size of the cut."
+    },
+    {
+      "q": "Why does the cache price matter more than the list price for AI agents?",
+      "a": "Agents re-send instructions, tools and history on every step, using about 4x the tokens of a chat. On that volume the cache-read price decides the bill."
+    },
+    {
+      "q": "Will AI agents use my personal data for ads or training?",
+      "a": "It depends on the tier. Meta uses Meta AI interactions for content and ad personalization; Anthropic lets consumers choose on training and exempts API and commercial use; enterprise agents on Amazon Bedrock are processed inside Bedrock."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Gemini 4 Argon announcement",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "publisher": "Google"
+    },
+    {
+      "title": "About ChatGPT Pro tiers",
+      "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "OpenAI models, Codex, and Managed Agents come to AWS",
+      "url": "https://openai.com/index/openai-on-aws/",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "OpenAI GPT-6 Astra is now generally available on Amazon Bedrock",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/09/openai-gpt-6-astra-on-amazon-bedrock/",
+      "publisher": "AWS"
+    },
+    {
+      "title": "OpenAI GPT-6 Sol and GPT-6 Luna are now generally available on Amazon Bedrock",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/09/openai-gpt-6-sol-luna-on-amazon-bedrock/",
+      "publisher": "AWS"
+    },
+    {
+      "title": "Claude Platform on AWS is now generally available",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/05/claude-platform-aws/",
+      "publisher": "AWS"
+    },
+    {
+      "title": "How we built our multi-agent research system",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Improving Your Recommendations on Our Apps With AI at Meta",
+      "url": "https://about.fb.com/news/2025/10/improving-your-recommendations-apps-ai-meta/",
+      "publisher": "Meta"
+    },
+    {
+      "title": "Updates to Consumer Terms and Privacy Policy",
+      "url": "https://www.anthropic.com/news/updates-to-our-consumer-terms",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Claude API pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "DeepSeek API pricing",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "publisher": "DeepSeek"
+    }
+  ],
+  "timeline": [
+    { "date": "2026-09-07", "event": "Claude Fable 5.1 first observed with cache read at 0.025x input (observed date, not launch date)", "source": "Anthropic pricing page via jsonhouse weekly snapshot" },
+    { "date": "2026-09-08", "event": "GPT-6 Astra generally available on Amazon Bedrock", "source": "AWS What's New" },
+    { "date": "2026-09-14", "event": "deepseek-flash first observed at $0.15 / $0.60 with cache read $0.003 and image input (observed date)", "source": "DeepSeek pricing page via jsonhouse weekly snapshot" },
+    { "date": "2026-09-22", "event": "GPT-6 Sol and Luna generally available on Amazon Bedrock", "source": "AWS What's New" },
+    { "date": "2026-09-28", "event": "Claude Opus 5.5 at $4 / $20 (0.05x cache) and GPT-6-sol at $2 / $10 first observed (observed date)", "source": "Anthropic and OpenAI pricing pages via jsonhouse weekly snapshot" },
+    { "date": "2026-09-29", "event": "OpenAI reopens Pro 200 with a lower allowance for new subscriptions and launches Pro 500", "source": "OpenAI Help Center" },
+    { "date": "2026-09-30", "event": "Google announces Gemini 4 Argon with a 1M-token output limit, $2 / $10 introductory pricing, Fairwind Program rollout", "source": "Google" },
+    { "date": "2026-10-05", "event": "Claude Sonnet 5.5 at $2 / $10 and GPT-6.1-sol at $2 / $10 with cache read $0.10 first observed (observed date)", "source": "Anthropic and OpenAI pricing pages via jsonhouse weekly snapshot" }
+  ],
+  "comparison_data": {
+    "field_provenance": {
+      "input_per_1m_usd": "vendor",
+      "output_per_1m_usd": "vendor",
+      "cache_read_per_1m_usd": "vendor, except Gemini 4 Argon which is jsonhouse derived from Google's stated 95% discount",
+      "cache_discount_pct": "jsonhouse derived",
+      "status": "vendor statement or jsonhouse first-observed date"
+    },
+    "dimensions": ["vendor", "input_per_1m_usd", "output_per_1m_usd", "cache_read_per_1m_usd", "cache_discount_pct", "status"],
+    "unit": "USD per 1M tokens, standard non-batch tier; tracked models collected 2026-10-05, Gemini 4 Argon from Google's 2026-09-30 announcement",
+    "entries": [
+      { "model": "Claude Sonnet 5", "vendor": "Anthropic", "input_per_1m_usd": 2.0, "output_per_1m_usd": 10.0, "cache_read_per_1m_usd": 0.2, "cache_discount_pct": 90.0, "status": "Standard price since 2026-08-17" },
+      { "model": "Claude Sonnet 5.5", "vendor": "Anthropic", "input_per_1m_usd": 2.0, "output_per_1m_usd": 10.0, "cache_read_per_1m_usd": 0.2, "cache_discount_pct": 90.0, "status": "First observed 2026-10-05" },
+      { "model": "GPT-6-sol", "vendor": "OpenAI", "input_per_1m_usd": 2.0, "output_per_1m_usd": 10.0, "cache_read_per_1m_usd": 0.2, "cache_discount_pct": 90.0, "status": "First observed 2026-09-28" },
+      { "model": "GPT-6.1-sol", "vendor": "OpenAI", "input_per_1m_usd": 2.0, "output_per_1m_usd": 10.0, "cache_read_per_1m_usd": 0.1, "cache_discount_pct": 95.0, "status": "First observed 2026-10-05" },
+      { "model": "Gemini 4 Argon", "vendor": "Google", "input_per_1m_usd": 2.0, "output_per_1m_usd": 10.0, "cache_read_per_1m_usd": 0.1, "cache_discount_pct": 95.0, "status": "Introductory price; Fairwind Program only; regular $4 / $20, end date not published; not on Google's public pricing page as of 2026-10-05" }
+    ]
+  },
+  "numerical_data": {
+    "field_provenance": "all metrics jsonhouse derived from vendor-published prices in the weekly snapshot series",
+    "metrics": [
+      { "name": "models_below_0_1x_cache_read", "values": { "2026-07-16": 2, "2026-09-01": 2, "2026-09-07": 4, "2026-09-28": 5, "2026-10-05": 6 }, "unit": "tracked models", "note": "US-vendor models among them: 0, 0, 2, 3, 4" },
+      { "name": "input_ratio_cheapest_openai_sol_to_deepseek_v4_pro", "values": { "2026-07-16": 11.5, "2026-10-05": 3.0 }, "unit": "x", "note": "GPT-5.6-sol $5.00 vs $0.435 on 2026-07-16; GPT-6.1-sol $2.00 vs $0.66 on 2026-10-05; DeepSeek off-peak" },
+      { "name": "output_ratio_cheapest_openai_sol_to_deepseek_v4_pro", "values": { "2026-07-16": 34.5, "2026-10-05": 5.1 }, "unit": "x", "note": "$30.00 vs $0.87; $10.00 vs $1.98" },
+      { "name": "cache_read_ratio_cheapest_openai_sol_to_deepseek_v4_pro", "values": { "2026-07-16": 138, "2026-10-05": 4.5 }, "unit": "x", "note": "$0.50 vs $0.003625; $0.10 vs $0.022" },
+      { "name": "models_at_2_input_10_output", "values": { "2026-07-16": 1, "2026-10-05": 4 }, "unit": "tracked models", "note": "Gemini 4 Argon's introductory rate is also $2 / $10 but is outside the tracked series" }
+    ]
+  }
+}
