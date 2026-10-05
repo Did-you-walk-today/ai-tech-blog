@@ -3,7 +3,7 @@
   "slug": "best-llm-2026",
   "title": "Best LLM 2026: Capability and Limits Compared",
   "description": "Best LLM 2026 compared on the limits that actually block builds: context window, max output tokens, prompt cache minimums, knowledge cutoffs, and retirement dates.",
-  "data_updated": "2026-09-28",
+  "data_updated": "2026-10-05",
   "source_post": "https://www.jsonhouse.com/posts/best-llm-2026/",
   "category": "ai-models-intelligence",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/best-llm-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/best-llm-2026.json",
-    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-09-28)",
+    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-10-05)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -63,8 +63,8 @@
       "category": "definition"
     },
     {
-      "fact": "Claude Opus 4.1 was retired on 2026-08-05, sixty days after being deprecated on 2026-06-05; gpt-5-chat-latest shut down 2026-07-23 and gemini-3.1-flash-lite-preview was retired 2026-05-25. As of 2026-09-28 Anthropic has no model with a scheduled retirement date, and the earliest published floor is claude-sonnet-4-5 at 2026-09-29",
-      "source": "Anthropic, OpenAI, and Google deprecation pages, retrieved 2026-07-25",
+      "fact": "Claude Opus 4.1 was retired on 2026-08-05, sixty days after being deprecated on 2026-06-05; gpt-5-chat-latest shut down 2026-07-23 and gemini-3.1-flash-lite-preview was retired 2026-05-25. Anthropic deprecated claude-sonnet-4-5-20250929 on 2026-09-30, one day after its published 2026-09-29 floor, and scheduled retirement for 2026-11-30 with claude-sonnet-5-5 as the replacement; the next published floor is claude-haiku-4-5-20251001 at 2026-10-15",
+      "source": "Anthropic, OpenAI, and Google deprecation pages, retrieved 2026-07-25; Anthropic model deprecations page, retrieved 2026-10-05",
       "category": "trend"
     }
   ],
@@ -124,6 +124,18 @@
         "price_band": "flagship"
       },
       {
+        "model": "claude-sonnet-5-5",
+        "provider": "Anthropic",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-06",
+        "min_cacheable_prefix_tokens": null,
+        "retirement_floor": "2027-09-28",
+        "note": "Collected 2026-10-05. Named by Anthropic as the replacement for claude-sonnet-4-5-20250929, which retires 2026-11-30. Minimum cacheable prefix not re-read from the caching documentation",
+        "price_band": "mid"
+      },
+      {
         "model": "claude-sonnet-5",
         "provider": "Anthropic",
         "context_window_input_tokens": 1000000,
@@ -155,6 +167,17 @@
         "min_cacheable_prefix_tokens": null,
         "note": "Collected 2026-09-28",
         "price_band": "flagship"
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "provider": "OpenAI",
+        "context_window_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-04-30",
+        "min_cacheable_prefix_tokens": null,
+        "note": "Collected 2026-10-05. Same $2.00/$10.00 list price as gpt-6-sol, so it sits in the mid band",
+        "price_band": "mid"
       },
       {
         "model": "gpt-6-sol",
@@ -281,14 +304,14 @@
         "price_band": "budget"
       }
     ],
-    "notes": "Collected 2026-07-25, except the two DeepSeek rows, which were re-verified 2026-09-21 after DeepSeek retired v4-flash and began serving that name from deepseek-flash; deepseek-flash accepts image input where v4-flash did not. null means the provider does not publish the figure in first-party documentation as of the row's own collection date. Anthropic max_output_tokens reflects the synchronous Messages API; Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5, and Sonnet 4.6 reach 300000 on the Message Batches API behind a beta header. Anthropic knowledge_cutoff uses the published 'reliable knowledge cutoff', not the broader 'training data cutoff'. Anthropic models from Opus 4.7 onward use a tokenizer emitting ~30% more tokens for identical text, so context_window_input_tokens is not directly comparable across providers. min_cacheable_prefix_tokens applies to each provider's first-party API only; Amazon Bedrock, Google Cloud, and Microsoft Foundry set their own minimums and failure behavior."
+    "notes": "Collected 2026-07-25, except the two DeepSeek rows, which were re-verified 2026-09-21 after DeepSeek retired v4-flash and began serving that name from deepseek-flash; deepseek-flash accepts image input where v4-flash did not. null means the provider does not publish the figure in first-party documentation as of the row's own collection date. Anthropic max_output_tokens reflects the synchronous Messages API; Opus 5.5, Opus 5, Sonnet 5.5, Sonnet 5, Opus 4.8, Opus 4.7, Opus 4.6, and Sonnet 4.6 reach 300000 on the Message Batches API behind a beta header. Anthropic knowledge_cutoff uses the published 'reliable knowledge cutoff', not the broader 'training data cutoff'. Anthropic models from Opus 4.7 onward use a tokenizer emitting ~30% more tokens for identical text, so context_window_input_tokens is not directly comparable across providers. min_cacheable_prefix_tokens applies to each provider's first-party API only; Amazon Bedrock, Google Cloud, and Microsoft Foundry set their own minimums and failure behavior."
   },
   "lifecycle_policy": [
     {
       "provider": "Anthropic",
       "minimum_notice": "at least 60 days",
       "publishes_dates_for_active_models": true,
-      "nearest_confirmed_retirement": "claude-opus-4-1 on 2026-08-05"
+      "nearest_confirmed_retirement": "claude-sonnet-4-5-20250929 on 2026-11-30 (deprecated 2026-09-30)"
     },
     {
       "provider": "OpenAI",
@@ -402,6 +425,10 @@
   ],
   "update_cadence": "monthly, first Tuesday",
   "changelog": [
+    {
+      "date": "2026-10-05",
+      "change": "Out-of-cycle addition of claude-sonnet-5-5 and gpt-6.1-sol, prompted by the weekly pricing collection; the scheduled monthly refresh is 2026-10-06. Lifecycle corrected: the nearest Anthropic date still read as claude-sonnet-4-5's 2026-09-29 floor after it had passed; Anthropic deprecated claude-sonnet-4-5-20250929 on 2026-09-30 and scheduled retirement for 2026-11-30, naming claude-sonnet-5-5 as the replacement. No other row was re-collected."
+    },
     {
       "date": "2026-09-28",
       "change": "Out-of-cycle refresh of the Anthropic and OpenAI rows, prompted by the weekly pricing collection. Two errors corrected: Claude Opus 4.1 was retired on 2026-08-05 and has been removed, which moves the max-output floor from its 32,000 tokens to Claude Haiku 4.5's 64,000 and halves the stated spread from twelve-fold to six-fold; and the cost-band section's warning that Claude Sonnet 5 would rise 50% on 2026-08-31 was withdrawn, because Anthropic cancelled that increase on 2026-08-17. Rows added: claude-fable-5-1, claude-opus-5-5, gpt-6-astra, gpt-6-sol, gpt-6-luna, grok-4.7. Two documentation changes recorded rather than resolved: OpenAI withdrew the spec pages for gpt-5.6-sol, gpt-5.5 and gpt-5.4, whose rows keep their 2026-07-25 figures, and xAI stopped stating image support per model, so grok-4.7 carries null rather than the older rows' true. Google's rows were not re-collected and remain the 2026-07-25 figures, so Gemini 3.6, 3.7 and 3.8 Flash are still absent."
