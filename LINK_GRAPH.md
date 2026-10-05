@@ -2,7 +2,7 @@
 
 포스트끼리 어떻게 엮여 있는지를 보여주는 색인. **이 문서는 자동 생성됩니다.**
 
-- **최종 갱신**: 2026-09-28 (자동)
+- **최종 갱신**: 2026-10-05 (자동)
 - **소스**: `_posts/*.md` 본문의 `](/posts/<slug>/)` 링크
 - **생성**: `python3 .claude/hooks/link_graph.py "$(git rev-parse --show-toplevel)"`
 - **점검만**: `python3 .claude/hooks/link_graph.py --report`
@@ -33,11 +33,11 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 | 9 | china-ai-coding-plans-2026 | LLM | 2 | 4 | ok |  |
 | 10 | llm-cache-pricing-2026 | LLM | 5 | 7 | ok |  |
 | 11 | best-ai-coding-tools-2026 | DEVTOOLS | 2 | 2 | ok |  |
-| 12 | best-llm-2026 | LLM | 6 | 6 | ok |  |
+| 12 | best-llm-2026 | LLM | 6 | 7 | ok |  |
 | 13 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
 | 14 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
 | 15 | ai-crawler-ecosystem-2026 | AEO | 8 | 6 | ok |  |
-| 16 | llm-api-pricing-2026 | LLM | 18 | 6 | ok |  |
+| 16 | llm-api-pricing-2026 | LLM | 19 | 6 | ok |  |
 | 17 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
 | 18 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
 | 19 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
@@ -228,6 +228,7 @@ LLM API Pricing 2026: Full Comparison Table (Weekly)
 | best-ai-coding-tools-2026 | LLM API pricing comparison for 2026 |
 | best-llm-2026 | LLM API Pricing 2026 |
 | best-llm-2026 | LLM API Pricing 2026: Full Comparison Table (Weekly) |
+| best-llm-2026 | weekly pricing table |
 | china-ai-catch-up-2026 | LLM API Pricing 2026 |
 | china-ai-catch-up-2026 | weekly pricing table |
 | china-ai-coding-plans-2026 | LLM API Pricing 2026 |
