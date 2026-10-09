@@ -1,0 +1,13 @@
+---
+layout: page
+title: "404: Page not found"
+permalink: /404.html
+# Overrides the theme's assets/404.html (jekyll-theme-chirpy 7.5.0) only to keep the page
+# out of the index and the sitemap; _includes/metadata-hook.html prints the noindex tag.
+noindex: true
+sitemap: false
+---
+
+{% include lang.html %}
+
+<p class="lead">{{ site.data.locales[lang].not_found.statement }}</p>
