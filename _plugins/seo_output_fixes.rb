@@ -25,7 +25,7 @@ module Jekyll
   module SeoOutputFixes
     CARD_H1 = %r{<h1 class="card-title([^"]*)">(.*?)</h1>}m.freeze
     PAGINATED = %r{\A/page(\d+)/\z}.freeze
-    CDN_STYLE = %r{<link rel="stylesheet" href="(https://cdn\.jsdelivr\.net/[^"]+)">}.freeze
+    CDN_STYLE = %r{<link rel="stylesheet" href="(https://(?:cdn\.jsdelivr\.net|fonts\.googleapis\.com)/[^"]+)">}.freeze
 
     module_function
 
@@ -48,10 +48,12 @@ module Jekyll
     end
 
     # Every stylesheet the theme loads from jsdelivr (Font Awesome icons, tocbot, glightbox, the lazy
-    # loading polyfill) blocks the first paint, and none of them styles the first screen's text or
-    # layout. Measured 2026-10-10 (Lighthouse mobile, home): render-blocking requests estimated at
-    # 2.0 s, Font Awesome alone 1.4 s. They now load with media="print" and switch to "all" once
-    # loaded; the noscript copy keeps them for browsers without JavaScript.
+    # loading polyfill) or Google Fonts blocks the first paint, and none of them styles the first
+    # screen's layout: the fonts already swap in (display=swap), so text paints in the fallback font
+    # either way. Measured 2026-10-10 (Lighthouse mobile, home): render-blocking requests estimated at
+    # 2.0 s, Font Awesome 1.4 s and Google Fonts 0.9 s of it; FCP 3.4 s -> 2.2 s on a local build with
+    # both changed. They now load with media="print" and switch to "all" once loaded; the noscript
+    # copy keeps them for browsers without JavaScript.
     def async_cdn_styles(html)
       html.gsub(CDN_STYLE) do
         href = Regexp.last_match(1)
