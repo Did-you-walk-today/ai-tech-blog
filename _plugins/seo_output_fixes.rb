@@ -17,6 +17,7 @@ module Jekyll
   #   and twitter:creator "@Json House" (the author name is not a handle). Both are invalid
   #   handles and are dropped.
   # - First screen image: see eager_first_image below.
+  # - Render-blocking CDN stylesheets: see async_cdn_styles below.
   # - 404: the page is noindex (assets/404.html front matter); its canonical pointed at
   #   /404.html and is removed.
   #
@@ -24,6 +25,7 @@ module Jekyll
   module SeoOutputFixes
     CARD_H1 = %r{<h1 class="card-title([^"]*)">(.*?)</h1>}m.freeze
     PAGINATED = %r{\A/page(\d+)/\z}.freeze
+    CDN_STYLE = %r{<link rel="stylesheet" href="(https://cdn\.jsdelivr\.net/[^"]+)">}.freeze
 
     module_function
 
@@ -40,8 +42,22 @@ module Jekyll
       html = html.sub(%r{<link rel="canonical"[^>]*>\s*}, '') if url == '/404.html'
       html = eager_first_image(html, '<div id="post-list"') if url == '/' || url.match?(PAGINATED)
       html = eager_first_image(html, '<article') if url.start_with?('/posts/')
+      html = async_cdn_styles(html)
 
       item.output = html
+    end
+
+    # Every stylesheet the theme loads from jsdelivr (Font Awesome icons, tocbot, glightbox, the lazy
+    # loading polyfill) blocks the first paint, and none of them styles the first screen's text or
+    # layout. Measured 2026-10-10 (Lighthouse mobile, home): render-blocking requests estimated at
+    # 2.0 s, Font Awesome alone 1.4 s. They now load with media="print" and switch to "all" once
+    # loaded; the noscript copy keeps them for browsers without JavaScript.
+    def async_cdn_styles(html)
+      html.gsub(CDN_STYLE) do
+        href = Regexp.last_match(1)
+        %(<link rel="stylesheet" href="#{href}" media="print" onload="this.media='all'">) +
+          %(<noscript><link rel="stylesheet" href="#{href}"></noscript>)
+      end
     end
 
     # The first image after the marker is the largest thing on the first screen (the first card's
