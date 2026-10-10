@@ -26,6 +26,8 @@ module Jekyll
     CARD_H1 = %r{<h1 class="card-title([^"]*)">(.*?)</h1>}m.freeze
     PAGINATED = %r{\A/page(\d+)/\z}.freeze
     CDN_STYLE = %r{<link rel="stylesheet" href="(https://(?:cdn\.jsdelivr\.net|fonts\.googleapis\.com)/[^"]+)">}.freeze
+    SEARCH_LOADER = %r{<script> document\.addEventListener\('DOMContentLoaded', \(\) => \{ SimpleJekyllSearch\(\{(.*?)\}\); \}\); </script>}m.freeze
+    SEARCH_JSON = "json: '/assets/js/data/search.json',"
 
     module_function
 
@@ -43,8 +45,29 @@ module Jekyll
       html = eager_first_image(html, '<div id="post-list"') if url == '/' || url.match?(PAGINATED)
       html = eager_first_image(html, '<article') if url.start_with?('/posts/')
       html = async_cdn_styles(html)
+      html = lazy_search_index(html)
 
       item.output = html
+    end
+
+    # The theme's search loader fetches the whole search index (/assets/js/data/search.json, 159 KB)
+    # on DOMContentLoaded, on every page, while the first screen is still loading. Measured 2026-10-10
+    # (Lighthouse mobile, home): it was the largest request before the LCP once the first-screen
+    # image had loaded. The index is now fetched when the search box first gets focus and handed to
+    # SimpleJekyllSearch as an object; a query typed before it arrived is searched once it has.
+    # If the theme changes this script the pattern stops matching and the page keeps the theme's.
+    def lazy_search_index(html)
+      html.sub(SEARCH_LOADER) do
+        options = Regexp.last_match(1)
+        next Regexp.last_match(0) unless options.include?(SEARCH_JSON)
+
+        options = options.sub(SEARCH_JSON, 'json: json,')
+        "<script> document.addEventListener('DOMContentLoaded', () => { " \
+          "const input = document.getElementById('search-input'); if (!input) return; " \
+          "input.addEventListener('focus', () => { fetch('/assets/js/data/search.json')" \
+          ".then((response) => response.json()).then((json) => { SimpleJekyllSearch({#{options}}); " \
+          "if (input.value) input.dispatchEvent(new Event('input')); }); }, { once: true }); }); </script>"
+      end
     end
 
     # Every stylesheet the theme loads from jsdelivr (Font Awesome icons, tocbot, glightbox, the lazy
