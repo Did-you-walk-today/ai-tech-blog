@@ -30,7 +30,6 @@ data_updated: 2026-XX-XX
 category: CAT4
 tags: [workflow, automation, template, 2026]
 primary_engine: chatgpt
-schema_types: [Article, HowTo, FAQPage]
 
 # Workflow metadata
 workflow:

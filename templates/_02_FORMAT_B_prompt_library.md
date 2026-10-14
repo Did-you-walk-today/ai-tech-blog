@@ -30,7 +30,6 @@ data_updated: 2026-XX-XX
 category: CAT3
 tags: [prompts, prompt-engineering, tool-name, 2026]
 primary_engine: chatgpt
-schema_types: [Article, HowTo, FAQPage]
 
 # Library metadata
 prompt_count: XX

@@ -15,7 +15,7 @@ YOUR JOB:
 
 DO NOT:
 - Skip "Expected output" on any step
-- Use anything other than "## Step N:" pattern for steps (breaks the extractor)
+- Use anything other than "## Step N:" pattern for steps
 - Hide code in collapsed blocks — it must be directly visible
 ═══════════════════════════════════════════════════════════════
 -->
@@ -30,7 +30,6 @@ data_updated: 2026-XX-XX
 category: CAT2
 tags: [tool-name, tutorial, howto, 2026]
 primary_engine: claude
-schema_types: [Article, HowTo, FAQPage]
 
 # HowTo schema auto-generation
 howto:

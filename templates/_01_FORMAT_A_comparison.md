@@ -30,7 +30,6 @@ data_updated: 2026-XX-XX  # Last verification date for pricing/performance
 category: CAT1  # CAT1 (models) or CAT2 (developer tools)
 tags: [tool-a, tool-b, comparison, 2026]
 primary_engine: perplexity  # perplexity | claude | chatgpt | gemini
-schema_types: [Article, Product, FAQPage]  # _layouts/post.html branches on this
 
 # Compared products (auto-generates JSON-LD Product schema)
 products_compared:
@@ -200,7 +199,6 @@ Results from our [N]-scenario testing ({{ page.verdict.tested_date }}):
 
 <!-- ═══════════════════════════════════════════════════════════
      ⑦ FAQ — auto-extracted into FAQPage schema
-     - _plugins/schema_extractors.rb captures this H3 pattern
      - Minimum 3 questions — reflect People Also Ask research
      ═══════════════════════════════════════════════════════════ -->
 

@@ -31,7 +31,6 @@ data_updated: 2026-XX-XX
 category: CAT1  # or CAT2
 tags: [benchmark, testing, comparison, 2026]
 primary_engine: perplexity
-schema_types: [Article, Dataset, FAQPage]
 
 # Benchmark metadata
 benchmark:

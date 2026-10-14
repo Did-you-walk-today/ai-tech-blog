@@ -31,7 +31,6 @@ update_frequency: "weekly"  # daily | weekly | monthly
 category: CAT5
 tags: [data, database, comparison, 2026]
 primary_engine: perplexity
-schema_types: [Article, Dataset, FAQPage]
 
 # Dataset schema auto-generation (targets Google Dataset Search)
 dataset:

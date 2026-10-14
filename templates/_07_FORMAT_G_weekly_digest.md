@@ -32,7 +32,6 @@ data_updated: 2026-XX-XX
 category: CAT7
 tags: [weekly-digest, ai-news, YYYY, week-NN]
 primary_engine: chatgpt
-schema_types: [Article, FAQPage]
 
 # Digest metadata
 digest:

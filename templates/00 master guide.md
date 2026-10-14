@@ -84,7 +84,7 @@ grep -n "\[" _posts/YYYY-MM-DD-slug.md  # should return no leftover placeholders
 
 ### For human review (기웅, Phase 5)
 
-1. Confirm front matter completeness (especially `data_updated`, `schema_types`)
+1. Confirm front matter completeness (especially `data_updated`)
 2. Spot-check 1-2 statistics for source accuracy
 3. Verify FAQ answers are 2-3 sentences (not paragraphs)
 4. Approve or request specific fixes
@@ -103,8 +103,6 @@ grep -n "\[" _posts/YYYY-MM-DD-slug.md  # should return no leftover placeholders
 | `_05_FORMAT_E_workflow.md` | Workflow / downloadable template |
 | `_06_FORMAT_F_benchmark.md` | Benchmark report template |
 | `_07_FORMAT_G_weekly_digest.md` | Weekly AI digest template |
-| `_08_layout_post_html.liquid` | Auto-injecting JSON-LD layout |
-| `_09_plugin_schema_extractors.rb` | FAQ/HowTo extractor plugin |
 
 ---
 
