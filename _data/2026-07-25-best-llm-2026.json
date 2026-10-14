@@ -3,7 +3,7 @@
   "slug": "best-llm-2026",
   "title": "Best LLM 2026: Capability and Limits Compared",
   "description": "Best LLM 2026 compared on the limits that actually block builds: context window, max output tokens, prompt cache minimums, knowledge cutoffs, and retirement dates.",
-  "data_updated": "2026-10-05",
+  "data_updated": "2026-10-14",
   "source_post": "https://www.jsonhouse.com/posts/best-llm-2026/",
   "category": "ai-models-intelligence",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/best-llm-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/best-llm-2026.json",
-    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-10-05)",
+    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-10-14)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -28,8 +28,8 @@
       "category": "data"
     },
     {
-      "fact": "Prompt cache minimums are non-monotonic within a single vendor: Claude Opus 5 caches from 512 tokens while the older Opus 4.6 requires 4,096, and Gemini 2.5 Flash requires 2,048 while the newer Gemini 3.5 Flash requires 4,096",
-      "source": "jsonhouse normalization of Anthropic prompt caching docs and Google Gemini context caching docs, 2026-07-25",
+      "fact": "Prompt cache minimums are non-monotonic within a single vendor: Claude Opus 5 caches from 512 tokens while the older Opus 4.6 requires 4,096, Claude Haiku 5.5 caches from 512 while Haiku 4.5 requires 4,096, and Gemini 2.5 Flash requires 2,048 while every Gemini 3.x and 4 model, Gemini 4 Argon included, requires 4,096",
+      "source": "jsonhouse normalization of Anthropic prompt caching docs and Google Gemini context caching docs, 2026-07-25, re-read 2026-10-14",
       "category": "data"
     },
     {
@@ -38,7 +38,7 @@
       "category": "definition"
     },
     {
-      "fact": "DeepSeek v4-pro is text-only, but deepseek-flash accepts image input since it replaced the text-only v4-flash on 2026-09-14 — a capability that arrived inside an existing model name rather than as a new model id; every listed Anthropic, OpenAI and Google model accepts image input, and Gemini 3.5 Flash additionally accepts video, audio, and PDF. xAI stopped stating image support per model between our 2026-07-25 and 2026-09-28 collections, so Grok 4.7 carries no value on that dimension",
+      "fact": "DeepSeek v4-pro is text-only, but deepseek-flash accepts image input since it replaced the text-only v4-flash on 2026-09-14 — a capability that arrived inside an existing model name rather than as a new model id; every listed Anthropic, OpenAI and Google model accepts image input, and the Gemini rows (4 Argon, 3.8 Flash, 3.6 Flash) additionally accept video, audio, and PDF. xAI stopped stating image support per model between our 2026-07-25 and 2026-09-28 collections, so Grok 4.7 carries no value on that dimension",
       "source": "DeepSeek model documentation re-verified 2026-09-21; Anthropic, OpenAI, Google, and xAI documentation retrieved 2026-07-25",
       "category": "data"
     },
@@ -84,9 +84,9 @@
         "max_output_tokens": 128000,
         "image_input": true,
         "knowledge_cutoff": "2026-06",
-        "min_cacheable_prefix_tokens": null,
+        "min_cacheable_prefix_tokens": 512,
         "retirement_floor": "2027-09-01",
-        "note": "Collected 2026-09-28. Reliable knowledge cutoff and training data cutoff are both June 2026. Minimum cacheable prefix not stated on the models overview and not re-collected from the caching documentation",
+        "note": "Collected 2026-09-28. Reliable knowledge cutoff and training data cutoff are both June 2026. Minimum cacheable prefix from the prompt caching documentation, read 2026-10-14",
         "price_band": "flagship"
       },
       {
@@ -96,9 +96,9 @@
         "max_output_tokens": 128000,
         "image_input": true,
         "knowledge_cutoff": "2026-06",
-        "min_cacheable_prefix_tokens": null,
+        "min_cacheable_prefix_tokens": 512,
         "retirement_floor": "2027-09-22",
-        "note": "Collected 2026-09-28. Cache reads billed at 0.05x base input rather than the standard 0.1x. Minimum cacheable prefix not stated on the models overview and not re-collected from the caching documentation",
+        "note": "Collected 2026-09-28. Cache reads billed at 0.05x base input rather than the standard 0.1x. Minimum cacheable prefix from the prompt caching documentation, read 2026-10-14",
         "price_band": "flagship"
       },
       {
@@ -130,9 +130,9 @@
         "max_output_tokens": 128000,
         "image_input": true,
         "knowledge_cutoff": "2026-06",
-        "min_cacheable_prefix_tokens": null,
+        "min_cacheable_prefix_tokens": 512,
         "retirement_floor": "2027-09-28",
-        "note": "Collected 2026-10-05. Named by Anthropic as the replacement for claude-sonnet-4-5-20250929, which retires 2026-11-30. Minimum cacheable prefix not re-read from the caching documentation",
+        "note": "Collected 2026-10-05. Named by Anthropic as the replacement for claude-sonnet-4-5-20250929, which retires 2026-11-30. Minimum cacheable prefix from the prompt caching documentation, read 2026-10-14",
         "price_band": "mid"
       },
       {
@@ -147,6 +147,18 @@
         "price_band": "mid"
       },
       {
+        "model": "claude-haiku-5-5",
+        "provider": "Anthropic",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-06",
+        "min_cacheable_prefix_tokens": 512,
+        "retirement_floor": "2027-10-07",
+        "note": "Collected 2026-10-14. Reaches 300000 output tokens on the Message Batches API behind a beta header. Priced by prompt length above 100,000 tokens, the only Claude 4.6-and-later model not billed flat across its context window",
+        "price_band": "budget"
+      },
+      {
         "model": "claude-haiku-4-5",
         "provider": "Anthropic",
         "context_window_input_tokens": 200000,
@@ -155,6 +167,7 @@
         "knowledge_cutoff": "2025-02",
         "min_cacheable_prefix_tokens": 4096,
         "retirement_floor": "2026-10-15",
+        "note": "No deprecation notice as of 2026-10-14, the day before its retirement floor",
         "price_band": "budget"
       },
       {
@@ -232,15 +245,40 @@
         "price_band": "mid"
       },
       {
-        "model": "gemini-3.5-flash",
+        "model": "gemini-4-argon",
         "provider": "Google",
         "context_window_input_tokens": 1048576,
         "max_output_tokens": 65536,
         "image_input": true,
         "additional_input_modalities": ["video", "audio", "pdf"],
-        "knowledge_cutoff": "2026-05",
+        "knowledge_cutoff": null,
         "min_cacheable_prefix_tokens": 4096,
+        "note": "Collected 2026-10-14. Google states 1,048,576 as a unified input-and-output token limit, so a long output reduces the room for input. Max output 65,536 by default, up to 1,048,576 with long decode. Implicit caching only. Introductory price through 2026-11-30 places it in the mid band until then",
         "price_band": "mid"
+      },
+      {
+        "model": "gemini-3.8-flash",
+        "provider": "Google",
+        "context_window_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "image_input": true,
+        "additional_input_modalities": ["video", "audio", "pdf"],
+        "knowledge_cutoff": null,
+        "min_cacheable_prefix_tokens": 4096,
+        "note": "Collected 2026-10-14. Since 2026-10-08 Google routes requests for the deprecated gemini-3.7-flash id to this model",
+        "price_band": "budget"
+      },
+      {
+        "model": "gemini-3.6-flash",
+        "provider": "Google",
+        "context_window_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "image_input": true,
+        "additional_input_modalities": ["video", "audio", "pdf"],
+        "knowledge_cutoff": null,
+        "min_cacheable_prefix_tokens": 4096,
+        "note": "Collected 2026-10-14. Since 2026-10-08 Google routes requests for the deprecated gemini-3.5-flash id, which this dataset carried until 2026-10-14, to this model",
+        "price_band": "budget"
       },
       {
         "model": "gemini-2.5-flash",
@@ -304,7 +342,7 @@
         "price_band": "budget"
       }
     ],
-    "notes": "Collected 2026-07-25, except the two DeepSeek rows, which were re-verified 2026-09-21 after DeepSeek retired v4-flash and began serving that name from deepseek-flash; deepseek-flash accepts image input where v4-flash did not. null means the provider does not publish the figure in first-party documentation as of the row's own collection date. Anthropic max_output_tokens reflects the synchronous Messages API; Opus 5.5, Opus 5, Sonnet 5.5, Sonnet 5, Opus 4.8, Opus 4.7, Opus 4.6, and Sonnet 4.6 reach 300000 on the Message Batches API behind a beta header. Anthropic knowledge_cutoff uses the published 'reliable knowledge cutoff', not the broader 'training data cutoff'. Anthropic models from Opus 4.7 onward use a tokenizer emitting ~30% more tokens for identical text, so context_window_input_tokens is not directly comparable across providers. min_cacheable_prefix_tokens applies to each provider's first-party API only; Amazon Bedrock, Google Cloud, and Microsoft Foundry set their own minimums and failure behavior."
+    "notes": "Collected 2026-07-25 unless an entry's note gives a later date: the two DeepSeek rows were re-verified 2026-09-21 after DeepSeek retired v4-flash and began serving that name from deepseek-flash, which accepts image input where v4-flash did not; the three Google rows and claude-haiku-5-5 were collected 2026-10-14 after Google deprecated gemini-3.5-flash. Google's model pages state no knowledge cutoff for the 2026-10-14 Gemini rows. null means the provider does not publish the figure in first-party documentation as of the row's own collection date. Anthropic max_output_tokens reflects the synchronous Messages API; Opus 5.5, Opus 5, Sonnet 5.5, Sonnet 5, Haiku 5.5, Opus 4.8, Opus 4.7, Opus 4.6, and Sonnet 4.6 reach 300000 on the Message Batches API behind a beta header. Anthropic knowledge_cutoff uses the published 'reliable knowledge cutoff', not the broader 'training data cutoff'. Anthropic models from Opus 4.7 onward use a tokenizer emitting ~30% more tokens for identical text, so context_window_input_tokens is not directly comparable across providers. min_cacheable_prefix_tokens applies to each provider's first-party API only; Amazon Bedrock, Google Cloud, and Microsoft Foundry set their own minimums and failure behavior."
   },
   "lifecycle_policy": [
     {
@@ -323,7 +361,7 @@
       "provider": "Google",
       "minimum_notice": "not stated",
       "publishes_dates_for_active_models": false,
-      "nearest_confirmed_retirement": "imagen-4.0 family on 2026-08-17"
+      "nearest_confirmed_retirement": "veo-3.1 preview models and gemini-omni-flash-preview on 2026-10-22; gemini-3.7-flash and gemini-3.5-flash were deprecated on 2026-10-08 with no shutdown date, their ids routed to newer models"
     },
     {
       "provider": "xAI",
@@ -347,15 +385,15 @@
   "faq_summary": [
     {
       "q": "What is the best LLM in 2026?",
-      "a": "There is no single answer, because the models no longer differ mainly in capability — they differ in operating limits. If you generate long documents, DeepSeek v4 leads on max output at 384K tokens. If you need vision plus a 1M context, Claude Opus 5.5, GPT-6-sol, and Gemini 3.5 Flash all qualify, and so does deepseek-flash since 2026-09-14 — only DeepSeek v4-pro is still text-only."
+      "a": "There is no single answer, because the models no longer differ mainly in capability — they differ in operating limits. If you generate long documents, DeepSeek v4 leads on max output at 384K tokens. If you need vision plus a 1M context, Claude Opus 5.5, Claude Haiku 5.5, GPT-6-sol, Gemini 4 Argon and Gemini 3.8 Flash all qualify, and so does deepseek-flash since 2026-09-14 — only DeepSeek v4-pro is still text-only."
     },
     {
       "q": "Which LLM has the largest context window in 2026?",
-      "a": "They have converged. OpenAI publishes 1,050,000 tokens, Gemini 3.5 Flash 1,048,576, and Anthropic, xAI (Grok 4.3), and DeepSeek all publish 1,000,000 — a spread under 5%. Max output tokens, which ranges from 32K to 384K, is now the real differentiator."
+      "a": "They have converged. OpenAI publishes 1,050,000 tokens, Google's current Gemini models 1,048,576, and Anthropic, xAI (Grok 4.3), and DeepSeek all publish 1,000,000 — a spread under 5%. Max output tokens, which ranges from 32K to 384K, is now the real differentiator."
     },
     {
       "q": "Why does prompt caching sometimes not work even when enabled?",
-      "a": "Every provider enforces a minimum cacheable prefix, and prompts below it fail to cache silently — no error, no warning. Thresholds range from 512 tokens (Claude Opus 5) to 4,096 (Claude Opus 4.6, Gemini 3.5 Flash)."
+      "a": "Every provider enforces a minimum cacheable prefix, and prompts below it fail to cache silently — no error, no warning. Thresholds range from 512 tokens (Claude Opus 5, Claude Haiku 5.5) to 4,096 (Claude Opus 4.6, Claude Haiku 4.5, Gemini 3.8 Flash)."
     },
     {
       "q": "How much notice do providers give before retiring a model?",
@@ -393,8 +431,8 @@
       "publisher": "OpenAI"
     },
     {
-      "title": "Gemini 3.5 Flash model page",
-      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash",
+      "title": "Gemini 4 Argon model page",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
       "publisher": "Google"
     },
     {
@@ -425,6 +463,10 @@
   ],
   "update_cadence": "monthly, first Tuesday",
   "changelog": [
+    {
+      "date": "2026-10-14",
+      "change": "Out-of-cycle refresh of the Google rows plus one Anthropic addition, prompted by the weekly pricing collection. Removed gemini-3.5-flash, deprecated by Google on 2026-10-08 and routed to gemini-3.6-flash. Added gemini-4-argon (1,048,576 unified input-and-output limit, 65,536 output by default and up to 1,048,576 with long decode), gemini-3.8-flash and gemini-3.6-flash, all with text, image, video, audio and PDF input and no published knowledge cutoff, and claude-haiku-5-5 (1,000,000 context, 128,000 output, June 2026 reliable cutoff, 512-token cache minimum, floor 2027-10-07). Cache minimums for claude-fable-5-1, claude-opus-5-5 and claude-sonnet-5-5 filled from the caching documentation. Google's nearest confirmed retirement updated from a passed date. The scheduled monthly refresh of 2026-10-06 was missed and is recorded as a gap; OpenAI, xAI and DeepSeek rows were not re-collected."
+    },
     {
       "date": "2026-10-05",
       "change": "Out-of-cycle addition of claude-sonnet-5-5 and gpt-6.1-sol, prompted by the weekly pricing collection; the scheduled monthly refresh is 2026-10-06. Lifecycle corrected: the nearest Anthropic date still read as claude-sonnet-4-5's 2026-09-29 floor after it had passed; Anthropic deprecated claude-sonnet-4-5-20250929 on 2026-09-30 and scheduled retirement for 2026-11-30, naming claude-sonnet-5-5 as the replacement. No other row was re-collected."
