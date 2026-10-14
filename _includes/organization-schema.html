@@ -1,0 +1,21 @@
+{%- comment -%}
+  The publishing entity, declared once and referenced by @id from every Dataset
+  and the DataCatalog. Rendered on every page via metadata-hook.html.
+
+  `sameAs` is deliberately absent: there is no external profile to anchor to
+  yet, and an empty array is noise, not a signal. Add it when one exists.
+  `logo` is absent for the same reason — no square logo asset exists yet.
+  Never add `license` here or anywhere in schema (CLAUDE.md principle 2).
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "{{ site.url }}/#organization",
+  "name": "Json House",
+  "url": "{{ site.url }}/",
+  "description": {{ site.description | jsonify }},
+  "email": "hello@jsonhouse.com",
+  "publishingPrinciples": "{{ site.url }}/methodology/"
+}
+</script>

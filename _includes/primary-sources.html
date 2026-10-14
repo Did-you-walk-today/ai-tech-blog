@@ -1,0 +1,25 @@
+{%- comment -%}
+  Renders the paired data file's primary_sources as real links under the post
+  body. Single-source rule: sources live only in _data/*.json and this include
+  renders them — post bodies never duplicate the list. Inline citations next to
+  claims (rule D1) are separate and still required; this covers the full list.
+  Outputs nothing without a data file or with an empty source list.
+{%- endcomment -%}
+{%- unless page.path contains '_drafts' -%}
+{%- assign data_key = page.date | date: '%Y-%m-%d' | append: '-' | append: page.slug -%}
+{%- assign ds = site.data[data_key] -%}
+{%- if ds and ds.primary_sources.size > 0 -%}
+<section class="primary-sources mt-5" aria-labelledby="primary-sources-heading">
+  <h2 id="primary-sources-heading" data-toc-skip>Primary Sources</h2>
+  <p class="text-muted small mb-2">
+    Data verified {{ ds.data_updated }}.
+    Machine-readable dataset: <a href="{{ site.url }}/data/{{ ds.slug }}.json">/data/{{ ds.slug }}.json</a>
+  </p>
+  <ul>
+    {%- for s in ds.primary_sources %}
+    <li><a href="{{ s.url }}" rel="noopener">{{ s.title }}</a>{% if s.publisher %} — {{ s.publisher }}{% endif %}</li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif -%}
+{%- endunless -%}

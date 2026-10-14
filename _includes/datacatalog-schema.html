@@ -1,0 +1,33 @@
+{%- comment -%}
+  Site-level DataCatalog: every published post's dataset, linked both ways with
+  each Dataset's `includedInDataCatalog`. Iterates site.posts, so a data file
+  whose post is not live never appears (same gate as data_publisher.rb).
+  No `license` field — CLAUDE.md principle 2.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalog",
+  "@id": "{{ site.url }}/data/#catalog",
+  "name": "Json House AI Datasets",
+  "description": {{ site.description | jsonify }},
+  "url": "{{ site.url }}{{ page.url }}",
+  "creator": { "@id": "{{ site.url }}/#organization" },
+  "publisher": { "@id": "{{ site.url }}/#organization" },
+  "isAccessibleForFree": true,
+  "dataset": [
+    {%- assign first = true -%}
+    {%- for post in site.posts -%}
+      {%- assign data_key = post.date | date: '%Y-%m-%d' | append: '-' | append: post.slug -%}
+      {%- assign ds = site.data[data_key] -%}
+      {%- if ds and ds.slug -%}
+        {%- unless first -%},{%- endunless -%}
+        {%- assign first = false %}
+    { "@type": "Dataset", "@id": "{{ site.url }}/data/{{ ds.slug }}.json#dataset",
+      "name": {{ ds.title | jsonify }}, "description": {{ ds.description | jsonify }},
+      "url": {{ ds.source_post | jsonify }} }
+      {%- endif -%}
+    {%- endfor %}
+  ]
+}
+</script>

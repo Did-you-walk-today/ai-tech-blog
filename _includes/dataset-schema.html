@@ -1,0 +1,51 @@
+{%- comment -%}
+  Declares the post's paired _data/{YYYY-MM-DD-slug}.json as a Dataset.
+  Outputs nothing when the data file is missing, and nothing for drafts — the
+  same gate _plugins/data_publisher.rb applies, so the schema never points at
+  a dataset URL that is not live.
+
+  `citation` carries the data file's primary_sources, so every claim is tied
+  to its origin in the machine layer even before a reader reaches the body.
+
+  `license` is deliberately NOT declared (CLAUDE.md principle 2). Google lists
+  it as recommended, not required; the schema is valid without it. Do not add.
+{%- endcomment -%}
+{%- unless page.path contains '_drafts' -%}
+{%- assign data_key = page.date | date: '%Y-%m-%d' | append: '-' | append: page.slug -%}
+{%- assign ds = site.data[data_key] -%}
+{%- if ds and ds.slug -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "{{ site.url }}/data/{{ ds.slug }}.json#dataset",
+  "name": {{ ds.title | jsonify }},
+  "description": {{ ds.description | jsonify }},
+  "url": {{ ds.source_post | jsonify }},
+  "identifier": {{ ds.slug | jsonify }},
+  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+  "dateModified": {{ ds.data_updated | jsonify }},
+  "isAccessibleForFree": true,
+  "keywords": {{ page.tags | jsonify }},
+  "creator": { "@id": "{{ site.url }}/#organization" },
+  "publisher": { "@id": "{{ site.url }}/#organization" },
+  "includedInDataCatalog": { "@id": "{{ site.url }}/data/#catalog" },
+  "distribution": [
+    { "@type": "DataDownload", "encodingFormat": "application/json",
+      "contentUrl": "{{ site.url }}/data/{{ ds.slug }}.json" },
+    { "@type": "DataDownload", "encodingFormat": "application/json",
+      "contentUrl": "{{ site.url }}/data/{{ data_key }}.json" }
+  ]
+  {%- if ds.primary_sources.size > 0 -%},
+  "citation": [
+    {%- for s in ds.primary_sources %}
+    { "@type": "CreativeWork", "name": {{ s.title | jsonify }}, "url": {{ s.url | jsonify }}
+      {%- if s.publisher -%}, "publisher": { "@type": "Organization", "name": {{ s.publisher | jsonify }} }{%- endif -%} }
+      {%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor %}
+  ]
+  {%- endif %}
+}
+</script>
+{%- endif -%}
+{%- endunless -%}

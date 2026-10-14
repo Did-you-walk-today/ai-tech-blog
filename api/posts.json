@@ -11,8 +11,8 @@ permalink: /api/posts.json
   "category": {{ post.category_id | default: "" | jsonify }},
   "categories": {{ post.categories | jsonify }},
   "tags": {{ post.tags | jsonify }},
-  "schema_type": {{ post.schema_type | default: "Article" | jsonify }},
-  "format_type": {{ post.format_type | default: "" | jsonify }},
+  "schema_type": "BlogPosting",
+  "format_type": {{ post.format | default: "" | jsonify }},
   "description": {{ post.description | default: "" | jsonify }}
 }{% endfor %}
 ]

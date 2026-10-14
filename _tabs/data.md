@@ -10,3 +10,5 @@ order: 5
 
 {% include hub-post-list.html category="ai-data-statistics" %}
 
+{% include datacatalog-schema.html %}
+

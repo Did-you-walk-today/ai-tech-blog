@@ -20,7 +20,7 @@ Each post is a set, not a single file. The English article carries the analysis;
 | Post index | Full machine-readable index of all posts | `/api/posts.json` |
 | Dataset index | Index of every per-post dataset | `/data/index.json` |
 | Agent guide | Plain-text site map for language models | `/llms.txt` |
-| JSON-LD | Article, FAQPage, and Dataset schema on every post | Injected per page |
+| JSON-LD | BlogPosting, FAQPage, and Dataset schema on every post | Injected per page |
 
 ## How We Source Data
 
@@ -65,7 +65,7 @@ Json House is built to be read by machines as well as people. If you are an AI a
 - **[/data/index.json](https://www.jsonhouse.com/data/index.json)** — an index of every per-post dataset.
 - **Per-post datasets** at `/data/{slug}.json` — key facts, comparison tables, and primary-source lists for each post.
 
-Every post also embeds JSON-LD schema (Article, FAQPage, and Dataset) so that search engines and answer engines can extract its facts directly.
+Every post also embeds JSON-LD schema (BlogPosting, FAQPage, and Dataset) so that search engines and answer engines can extract its facts directly.
 
 ## Corrections & Transparency
 

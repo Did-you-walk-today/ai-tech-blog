@@ -13,7 +13,10 @@
   <meta name="robots" content="noindex, follow">
 {% endif %}
 
+{% include organization-schema.html %}
+
 {% if page.url contains '/posts/' %}
+  {% include dataset-schema.html %}
   {% assign data_key = page.date | date: '%Y-%m-%d' | append: '-' | append: page.slug %}
   <link rel="alternate" type="application/json" href="{{ site.url }}/data/{{ data_key }}.json" title="{{ page.title | xml_escape }} — Structured Data">
 {% endif %}

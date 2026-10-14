@@ -2,4 +2,7 @@
 # All posts use `jsonhouse`; a mismatch renders an empty byline.
 jsonhouse:
   name: "Json House"
+  # Json House is the publishing organisation, not a person. jekyll-seo-tag
+  # reads `type` and emits it as the author's @type (defaults to Person).
+  type: Organization
   url: https://www.jsonhouse.com

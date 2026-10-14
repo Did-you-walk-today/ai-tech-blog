@@ -48,6 +48,7 @@ twitter:
 
 author:
   name: "Json House"
+  type: Organization  # jekyll-seo-tag @type for non-post pages; posts read _data/authors.yml
 
 defaults:
   - scope:
