@@ -3,7 +3,7 @@
   "slug": "best-llm-2026",
   "title": "Best LLM 2026: Capability and Limits Compared",
   "description": "Best LLM 2026 compared on the limits that actually block builds: context window, max output tokens, prompt cache minimums, knowledge cutoffs, and retirement dates.",
-  "data_updated": "2026-10-14",
+  "data_updated": "2026-10-19",
   "source_post": "https://www.jsonhouse.com/posts/best-llm-2026/",
   "category": "ai-models-intelligence",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/best-llm-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/best-llm-2026.json",
-    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-10-14)",
+    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-10-19)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -167,7 +167,7 @@
         "knowledge_cutoff": "2025-02",
         "min_cacheable_prefix_tokens": 4096,
         "retirement_floor": "2026-10-15",
-        "note": "No deprecation notice as of 2026-10-14, the day before its retirement floor",
+        "note": "Retirement floor passed on 2026-10-15 with no deprecation notice; still listed as Active on 2026-10-19, so under the 60-day minimum it cannot retire before 2026-12-18 (jsonhouse arithmetic, not an Anthropic date)",
         "price_band": "budget"
       },
       {
@@ -339,7 +339,8 @@
         "image_input": true,
         "knowledge_cutoff": null,
         "min_cacheable_prefix_tokens": null,
-        "price_band": "budget"
+        "price_band": "budget",
+        "note": "Re-verified 2026-10-19 after DeepSeek replaced the model behind this id with DeepSeek-V4.1-Flash-1017 on 2026-10-17 at the same price; context, max output and image input unchanged"
       }
     ],
     "notes": "Collected 2026-07-25 unless an entry's note gives a later date: the two DeepSeek rows were re-verified 2026-09-21 after DeepSeek retired v4-flash and began serving that name from deepseek-flash, which accepts image input where v4-flash did not; the three Google rows and claude-haiku-5-5 were collected 2026-10-14 after Google deprecated gemini-3.5-flash. Google's model pages state no knowledge cutoff for the 2026-10-14 Gemini rows. null means the provider does not publish the figure in first-party documentation as of the row's own collection date. Anthropic max_output_tokens reflects the synchronous Messages API; Opus 5.5, Opus 5, Sonnet 5.5, Sonnet 5, Haiku 5.5, Opus 4.8, Opus 4.7, Opus 4.6, and Sonnet 4.6 reach 300000 on the Message Batches API behind a beta header. Anthropic knowledge_cutoff uses the published 'reliable knowledge cutoff', not the broader 'training data cutoff'. Anthropic models from Opus 4.7 onward use a tokenizer emitting ~30% more tokens for identical text, so context_window_input_tokens is not directly comparable across providers. min_cacheable_prefix_tokens applies to each provider's first-party API only; Amazon Bedrock, Google Cloud, and Microsoft Foundry set their own minimums and failure behavior."
@@ -463,6 +464,10 @@
   ],
   "update_cadence": "monthly, first Tuesday",
   "changelog": [
+    {
+      "date": "2026-10-19",
+      "change": "Out-of-cycle re-verification prompted by the weekly pricing collection. DeepSeek replaced the model behind deepseek-flash with DeepSeek-V4.1-Flash-1017 on 2026-10-17 at the same price; context (1,000,000), max output (384,000) and image input are unchanged on the pricing page read 2026-10-19, so no capability figure changed. claude-haiku-4-5-20251001 passed its 2026-10-15 retirement floor with no deprecation notice and is still Active on 2026-10-19; earliest possible retirement under the 60-day minimum is now 2026-12-18. No other row was re-collected."
+    },
     {
       "date": "2026-10-14",
       "change": "Out-of-cycle refresh of the Google rows plus one Anthropic addition, prompted by the weekly pricing collection. Removed gemini-3.5-flash, deprecated by Google on 2026-10-08 and routed to gemini-3.6-flash. Added gemini-4-argon (1,048,576 unified input-and-output limit, 65,536 output by default and up to 1,048,576 with long decode), gemini-3.8-flash and gemini-3.6-flash, all with text, image, video, audio and PDF input and no published knowledge cutoff, and claude-haiku-5-5 (1,000,000 context, 128,000 output, June 2026 reliable cutoff, 512-token cache minimum, floor 2027-10-07). Cache minimums for claude-fable-5-1, claude-opus-5-5 and claude-sonnet-5-5 filled from the caching documentation. Google's nearest confirmed retirement updated from a passed date. The scheduled monthly refresh of 2026-10-06 was missed and is recorded as a gap; OpenAI, xAI and DeepSeek rows were not re-collected."
