@@ -3,7 +3,7 @@
   "slug": "best-llm-2026",
   "title": "Best LLM 2026: Capability and Limits Compared",
   "description": "Best LLM 2026 compared on the limits that actually block builds: context window, max output tokens, prompt cache minimums, knowledge cutoffs, and retirement dates.",
-  "data_updated": "2026-10-19",
+  "data_updated": "2026-10-26",
   "source_post": "https://www.jsonhouse.com/posts/best-llm-2026/",
   "category": "ai-models-intelligence",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/best-llm-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/best-llm-2026.json",
-    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-10-19)",
+    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-10-26)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -167,7 +167,7 @@
         "knowledge_cutoff": "2025-02",
         "min_cacheable_prefix_tokens": 4096,
         "retirement_floor": "2026-10-15",
-        "note": "Retirement floor passed on 2026-10-15 with no deprecation notice; still listed as Active on 2026-10-19, so under the 60-day minimum it cannot retire before 2026-12-18 (jsonhouse arithmetic, not an Anthropic date)",
+        "note": "Retirement floor passed on 2026-10-15 with no deprecation notice; still listed as Active on 2026-10-26, so under the 60-day minimum it cannot retire before 2026-12-25 (jsonhouse arithmetic, not an Anthropic date)",
         "price_band": "budget"
       },
       {
@@ -356,13 +356,13 @@
       "provider": "OpenAI",
       "minimum_notice": "at least 6 months (GA), 3 months (specialized variants), ~2 weeks (preview)",
       "publishes_dates_for_active_models": false,
-      "nearest_confirmed_retirement": "o3-mini and gpt-4-0613 on 2026-10-23"
+      "nearest_confirmed_retirement": "tts-1, tts-1-hd and gpt-4o-mini-tts on 2027-01-06; nearest text models gpt-4o, gpt-4o-mini, gpt-4.1 and gpt-4.1-mini on 2027-01-14 (notice dated 2026-10-14). o3-mini and gpt-4-0613 were shut down on 2026-10-23"
     },
     {
       "provider": "Google",
       "minimum_notice": "not stated",
       "publishes_dates_for_active_models": false,
-      "nearest_confirmed_retirement": "veo-3.1 preview models and gemini-omni-flash-preview on 2026-10-22; gemini-3.7-flash and gemini-3.5-flash were deprecated on 2026-10-08 with no shutdown date, their ids routed to newer models"
+      "nearest_confirmed_retirement": "gemini-3.1-flash-tts-preview, gemini-3.1-flash-live-preview, gemini-2.5-flash-native-audio-preview-12-2025, gemini-2.5-flash-preview-tts and gemini-2.5-pro-preview-tts on 2026-11-17; veo-3.1 preview models and gemini-omni-flash-preview reached their 2026-10-22 shutdown; gemini-3.7-flash and gemini-3.5-flash were deprecated on 2026-10-08 with no shutdown date, their ids routed to newer models"
     },
     {
       "provider": "xAI",
@@ -464,6 +464,10 @@
   ],
   "update_cadence": "monthly, first Tuesday",
   "changelog": [
+    {
+      "date": "2026-10-26",
+      "change": "Out-of-cycle lifecycle correction prompted by the weekly pricing collection. Two nearest-retirement dates had passed: OpenAI shut down o3-mini, gpt-4-0613 and the rest of its April 22 notice on 2026-10-23, and Google's veo-3.1 previews and gemini-omni-flash-preview reached their 2026-10-22 shutdown. OpenAI's nearest is now tts-1, tts-1-hd and gpt-4o-mini-tts on 2027-01-06 (text models gpt-4o, gpt-4o-mini, gpt-4.1 and gpt-4.1-mini on 2027-01-14); Google's is five audio, TTS and live preview models on 2026-11-17. claude-haiku-4-5-20251001 is still Active with no notice, so its earliest possible retirement moves to 2026-12-25. No capability row was re-collected."
+    },
     {
       "date": "2026-10-19",
       "change": "Out-of-cycle re-verification prompted by the weekly pricing collection. DeepSeek replaced the model behind deepseek-flash with DeepSeek-V4.1-Flash-1017 on 2026-10-17 at the same price; context (1,000,000), max output (384,000) and image input are unchanged on the pricing page read 2026-10-19, so no capability figure changed. claude-haiku-4-5-20251001 passed its 2026-10-15 retirement floor with no deprecation notice and is still Active on 2026-10-19; earliest possible retirement under the 60-day minimum is now 2026-12-18. No other row was re-collected."
