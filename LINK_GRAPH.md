@@ -22,31 +22,32 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 <!-- AUTO:GRAPH-TABLE-START -->
 | # | 슬러그 | 클러스터 | 인 | 아웃 | 상태 | 메모 |
 |---|---|---|---|---|---|---|
-| 1 | solo-developer-window-2026 | DEVTOOLS | 0 | 5 | **고아** |  |
-| 2 | agentic-ai-timing-2026 | LLM | 0 | 4 | **고아** |  |
-| 3 | china-ai-catch-up-2026 | LLM | 1 | 4 | ok |  |
-| 4 | llm-cost-per-task-2026 | LLM | 1 | 4 | ok |  |
-| 5 | claude-code-plugins-mcp-2026 | DEVTOOLS | 1 | 3 | ok |  |
-| 6 | 6g-agi-convergence-2026 | AI_INFRA | 1 | 4 | ok |  |
-| 7 | llm-price-war-balance-sheet-2026 | LLM | 1 | 3 | ok |  |
-| 8 | ai-agent-payments-crawl-toll-2026 | AEO | 1 | 5 | ok |  |
-| 9 | ai-crawler-traffic-2026 | AEO | 4 | 3 | ok |  |
-| 10 | ai-content-quality-gates-2026 | DEVTOOLS | 3 | 3 | ok |  |
-| 11 | china-ai-coding-plans-2026 | LLM | 2 | 4 | ok |  |
-| 12 | llm-cache-pricing-2026 | LLM | 6 | 7 | ok |  |
-| 13 | best-ai-coding-tools-2026 | DEVTOOLS | 2 | 2 | ok |  |
-| 14 | best-llm-2026 | LLM | 6 | 7 | ok |  |
-| 15 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
-| 16 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
-| 17 | ai-crawler-ecosystem-2026 | AEO | 8 | 6 | ok |  |
-| 18 | llm-api-pricing-2026 | LLM | 23 | 6 | ok |  |
-| 19 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
-| 20 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
-| 21 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
-| 22 | synthid-c2pa-explained-2026 | AI_CONTENT_POLICY | 1 | 2 | ok |  |
-| 23 | eeat-ai-content-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
-| 24 | youtube-ai-monetization-2026 | AI_CONTENT_POLICY | 2 | 2 | noindex |  |
-| 25 | google-ai-content-penalties-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
+| 1 | rtx-gpu-unlock-local-llm-2026 | LLM | 0 | 3 | **고아** |  |
+| 2 | solo-developer-window-2026 | DEVTOOLS | 1 | 5 | ok |  |
+| 3 | agentic-ai-timing-2026 | LLM | 0 | 4 | **고아** |  |
+| 4 | china-ai-catch-up-2026 | LLM | 1 | 4 | ok |  |
+| 5 | llm-cost-per-task-2026 | LLM | 1 | 4 | ok |  |
+| 6 | claude-code-plugins-mcp-2026 | DEVTOOLS | 1 | 3 | ok |  |
+| 7 | 6g-agi-convergence-2026 | AI_INFRA | 1 | 4 | ok |  |
+| 8 | llm-price-war-balance-sheet-2026 | LLM | 1 | 3 | ok |  |
+| 9 | ai-agent-payments-crawl-toll-2026 | AEO | 1 | 5 | ok |  |
+| 10 | ai-crawler-traffic-2026 | AEO | 4 | 3 | ok |  |
+| 11 | ai-content-quality-gates-2026 | DEVTOOLS | 3 | 3 | ok |  |
+| 12 | china-ai-coding-plans-2026 | LLM | 2 | 4 | ok |  |
+| 13 | llm-cache-pricing-2026 | LLM | 6 | 7 | ok |  |
+| 14 | best-ai-coding-tools-2026 | DEVTOOLS | 2 | 2 | ok |  |
+| 15 | best-llm-2026 | LLM | 7 | 7 | ok |  |
+| 16 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
+| 17 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
+| 18 | ai-crawler-ecosystem-2026 | AEO | 8 | 6 | ok |  |
+| 19 | llm-api-pricing-2026 | LLM | 24 | 6 | ok |  |
+| 20 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
+| 21 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
+| 22 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
+| 23 | synthid-c2pa-explained-2026 | AI_CONTENT_POLICY | 1 | 2 | ok |  |
+| 24 | eeat-ai-content-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
+| 25 | youtube-ai-monetization-2026 | AI_CONTENT_POLICY | 2 | 2 | noindex |  |
+| 26 | google-ai-content-penalties-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
 <!-- AUTO:GRAPH-TABLE-END -->
 
 ---
@@ -60,7 +61,7 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 | WARN | NOINDEX<- | eeat-ai-content-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI Monetization 2026: What Is Inauthentic Content') |
 | WARN | NOINDEX<- | google-ai-content-penalties-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI monetization and inauthentic-content rules') |
 | WARN | ORPHAN | agentic-ai-timing-2026 | no inbound internal link |
-| WARN | ORPHAN | solo-developer-window-2026 | no inbound internal link |
+| WARN | ORPHAN | rtx-gpu-unlock-local-llm-2026 | no inbound internal link |
 <!-- AUTO:GRAPH-FINDINGS-END -->
 
 유형 설명 — `DANGLING`: 없는 슬러그로 링크(ERROR, 발행 차단) · `ORPHAN`: 인바운드 0 ·
@@ -76,11 +77,19 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 
 <!-- AUTO:GRAPH-EDGES-START -->
 
+### rtx-gpu-unlock-local-llm-2026
+
+RTX GPU Unlock 2026: What It Means for Local LLMs
+
+_인바운드 없음 — 이 글로 들어오는 내부 링크가 하나도 없습니다._
+
 ### solo-developer-window-2026
 
 Solo Developer Window 2026: Ship and Operate Before AGI
 
-_인바운드 없음 — 이 글로 들어오는 내부 링크가 하나도 없습니다._
+| 걸린 글 | 앵커 텍스트 |
+|---|---|
+| rtx-gpu-unlock-local-llm-2026 | supply chain discipline |
 
 ### agentic-ai-timing-2026
 
@@ -200,6 +209,7 @@ Best LLM 2026: Capability and Limits Compared
 | llm-cache-pricing-2026 | Best LLM 2026: Capability and Limits Compared |
 | llm-cache-pricing-2026 | capability limits rather than raw benchmark scores |
 | llm-cost-per-task-2026 | best LLM comparison for 2026 |
+| rtx-gpu-unlock-local-llm-2026 | LLM comparison |
 
 ### llm-subscription-guide-2026
 
@@ -262,6 +272,7 @@ LLM API Pricing 2026: Full Comparison Table (Weekly)
 | llm-cost-per-task-2026 | LLM API pricing database |
 | llm-price-war-balance-sheet-2026 | LLM API Pricing 2026 |
 | llm-subscription-guide-2026 | LLM API pricing, where per-token rates are published openly |
+| rtx-gpu-unlock-local-llm-2026 | per-token API prices |
 | solo-developer-window-2026 | LLM price |
 | solo-developer-window-2026 | LLM pricing table |
 

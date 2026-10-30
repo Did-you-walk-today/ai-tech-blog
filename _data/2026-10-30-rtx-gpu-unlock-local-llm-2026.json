@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "slug": "rtx-gpu-unlock-local-llm-2026",
+  "title": "RTX GPU Unlock 2026: What It Means for Local LLMs",
+  "description": "RTX GPU unlock doubles some tensor math on RTX 20, 30 and 40 cards, yet token generation stays flat. Which local LLM work speeds up, and when a Mac still wins.",
+  "data_updated": "2026-10-30",
+  "source_post": "https://www.jsonhouse.com/posts/rtx-gpu-unlock-local-llm-2026/",
+  "category": "ai-models-intelligence",
+  "cluster": "CLUSTER_LLM",
+  "format": "A",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/rtx-gpu-unlock-local-llm-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/rtx-gpu-unlock-local-llm-2026.json",
+    "citation": "Json House, \"RTX GPU Unlock 2026: What It Means for Local LLMs\", jsonhouse.com (2026-10-30)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
+  "key_facts": [
+    { "fact": "gpu-unlock removes a half-rate cap on FP16, BF16, and TF32 tensor math with FP32 accumulation on RTX 20, 30, and 40 cards; RTX 30 is listed as stable and RTX 20 and 40 as experimental", "source": "gpu-unlock README, read 2026-10-30", "category": "definition" },
+    { "fact": "The project reports +25–55% for LLM prompt processing on FP16, BF16, AWQ, or GPTQ models, and no change for LLM decode and token generation", "source": "gpu-unlock README, user compatibility reports", "category": "data" },
+    { "fact": "The project reports 0–15% for quantized GGUF models in llama.cpp and Ollama, mostly at long context", "source": "gpu-unlock README, user compatibility reports", "category": "data" },
+    { "fact": "The README lists the RTX 3070 at 40 to 72 TFLOPS in BF16 dense matrix multiplication; the unlock does not change its 8GB of memory", "source": "gpu-unlock README; Windows-GPU-UNLOCK compatibility table", "category": "data" },
+    { "fact": "The main gpu-unlock project is Linux only and its author does not plan to maintain Windows; a separate community port is experimental", "source": "gpu-unlock README FAQ; Windows-GPU-UNLOCK README", "category": "policy" },
+    { "fact": "Mac Studio M5 Max with the 40-core GPU offers 614 GB/s and up to 128GB; DGX Spark offers 273 GB/s and up to 128GB, a 2.25x bandwidth difference by Json House arithmetic", "source": "Apple specifications; NVIDIA specifications; ComputingForGeeks", "category": "data" },
+    { "fact": "Press reports put the 128GB DGX Spark at $6,950 and a new 64GB model at $4,999 in October 2026", "source": "The Register, 2026-10-02", "category": "data" },
+    { "fact": "Used RTX 3090 price sources in September and October 2026 ranged from about $1,199 to about $1,450, against a $1,499 launch price", "source": "AI Indigo; OpenClawDC; GPUPoet", "category": "data" }
+  ],
+  "faq_summary": [
+    { "q": "Does gpu-unlock make local LLMs generate tokens faster?", "a": "No. The project lists token generation as no change because it is limited by memory bandwidth. Prompt processing improves by a reported +25–55% on FP16, BF16, AWQ, or GPTQ models." },
+    { "q": "Does gpu-unlock speed up Ollama or llama.cpp?", "a": "Barely. The project reports 0–15% for quantized GGUF models, mostly at long context." },
+    { "q": "Does gpu-unlock work on Windows?", "a": "Not in the main project, which is Linux only. A separate community port has success reports on specific cards and systems, but it is experimental." },
+    { "q": "Is a Mac better than DGX Spark for local LLMs?", "a": "For one person running large models, published numbers favor the Mac Studio M5 Max: 614 GB/s against 273 GB/s at 128GB, at what appears to be a lower price. DGX Spark's strongest reasons to buy are CUDA and batched serving." }
+  ],
+  "primary_sources": [
+    { "title": "gpu-unlock", "url": "https://github.com/Zagitta/gpu-unlock", "publisher": "Zagitta" },
+    { "title": "Windows GPU UNLOCK", "url": "https://github.com/impacifist/Windows-GPU-UNLOCK", "publisher": "impacifist" },
+    { "title": "Mac Studio technical specifications", "url": "https://www.apple.com/mac-studio/specs/", "publisher": "Apple" },
+    { "title": "NVIDIA DGX Spark", "url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/", "publisher": "NVIDIA" },
+    { "title": "Nvidia debuts $4,999 DGX Spark with half the RAM and storage, amid memory crunch", "url": "https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622", "publisher": "The Register" },
+    { "title": "DGX Spark vs Strix Halo vs Mac Studio: Which to Buy", "url": "https://computingforgeeks.com/dgx-spark-vs-strix-halo-vs-mac-studio/", "publisher": "ComputingForGeeks" },
+    { "title": "M5 Max vs RTX 5090 vs DGX Spark", "url": "https://contracollective.com/blog/m5-max-vs-rtx-5090-vs-dgx-spark-local-llm-inference-throughput-cost-2026", "publisher": "Contra Collective" },
+    { "title": "Modders unlock NVIDIA GeForce RTX 20, 30 and 40 series compute limits", "url": "https://www.tweaktown.com/news/114288/modders-unlock-nvidia-geforce-rtx-20-30-and-40-series-compute-limits-nearly-doubling-some-tensor-core-throughput/index.html", "publisher": "TweakTown" }
+  ],
+  "field_provenance": {
+    "workload_gains": "gpu-unlock README, aggregated from user compatibility reports; not measured by Json House",
+    "numerical_data.bf16_tflops": "gpu-unlock README",
+    "comparison_data.entries.memory": "Apple, NVIDIA, or Contra Collective as named on each entry",
+    "comparison_data.entries.bandwidth": "Apple, ComputingForGeeks, or Contra Collective as named on each entry",
+    "comparison_data.entries.price": "named press or compilation source; not vendor configurator data",
+    "numerical_data.generation_compiled": "ComputingForGeeks compilation; runtimes, models, or prompt lengths differ as noted",
+    "situation_guidance": "Json House judgment, not measured"
+  },
+  "workload_gains": [
+    { "workload": "LLM prefill, FP16/BF16 or AWQ/GPTQ", "speedup": "+25–55%" },
+    { "workload": "Time to first token", "speedup": "25–30% lower" },
+    { "workload": "LoRA and full fine-tuning in BF16", "speedup": "+25–50%" },
+    { "workload": "Image generation, FP16/BF16", "speedup": "+30–55%" },
+    { "workload": "Video generation, BF16 compute (Wan 2.2)", "speedup": "+15–20%" },
+    { "workload": "llama.cpp or Ollama with quantized GGUF", "speedup": "0–15%, mostly at long context" },
+    { "workload": "LLM decode and token generation", "speedup": "No change" },
+    { "workload": "INT8, FP8, and INT4 models", "speedup": "No change" },
+    { "workload": "Gaming and FP32 CUDA", "speedup": "No change" }
+  ],
+  "comparison_data": {
+    "dimensions": ["machine", "memory", "bandwidth", "price"],
+    "entries": [
+      { "machine": "Mac Studio M5 Max, 40-core GPU", "memory": "128GB (Apple)", "bandwidth": "614 GB/s (Apple)", "price": "$5,099 (ComputingForGeeks) to $5,399 (Pasquale Pillitteri)" },
+      { "machine": "DGX Spark 128GB", "memory": "128GB (NVIDIA)", "bandwidth": "273 GB/s (ComputingForGeeks)", "price": "$6,950 (The Register; ComputingForGeeks)" },
+      { "machine": "DGX Spark 64GB", "memory": "64GB (NVIDIA)", "bandwidth": "273 GB/s (ComputingForGeeks)", "price": "$4,999 (The Register)" },
+      { "machine": "RTX 5090 workstation", "memory": "32GB VRAM (Contra Collective)", "bandwidth": "About 1.8 TB/s (Contra Collective)", "price": "$3,600, July 2026 (Contra Collective)" }
+    ]
+  },
+  "numerical_data": {
+    "bf16_tflops": [
+      { "card": "RTX 3060 12GB", "before": 27, "after": 51 },
+      { "card": "RTX 3070", "before": 40, "after": 72 },
+      { "card": "RTX 3090", "before": 75, "after": 125 },
+      { "card": "RTX 4090", "before": 165, "after": 329, "note": "Peak rate; large operations gain much less at stock power" }
+    ],
+    "generation_compiled": [
+      { "workload": "gpt-oss-120b, generate", "dgx_spark": "58.7", "m5_max_40_core": "87.9 (MLX)", "caution": "Different runtimes" },
+      { "workload": "Dense 70B class, generate", "dgx_spark": "4.4", "m5_max_40_core": "About 11 (estimate)", "caution": "Mac figure is an estimate" },
+      { "workload": "7B to 8B, generate", "dgx_spark": "38.0 (Llama 3.1 8B)", "m5_max_40_core": "119.9 (Llama 2 7B)", "caution": "Different models" },
+      { "workload": "gpt-oss-120b, prompt processing", "dgx_spark": "2,444 (2,048 tokens)", "m5_max_40_core": "1,325 (4K context)", "caution": "Different prompt lengths" },
+      { "workload": "Long prompt, 16K context", "dgx_spark": "1,956 (llama.cpp)", "m5_max_40_core": "2,710 (MLX)", "caution": "Different runtimes" }
+    ]
+  },
+  "situation_guidance": [
+    { "situation": "RTX 30 card on Linux, running vLLM, fine-tuning, or images", "action": "Try the unlock after reading the code" },
+    { "situation": "RTX card on Linux, using Ollama or GGUF", "action": "Low priority" },
+    { "situation": "RTX card on Windows", "action": "Keep using it and wait, or test Linux on a separate disk" },
+    { "situation": "Need 70B-class models for one person", "action": "Mac Studio over DGX Spark" },
+    { "situation": "Developing for CUDA systems, or serving batches", "action": "DGX Spark or a discrete RTX" }
+  ]
+}
