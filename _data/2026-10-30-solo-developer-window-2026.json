@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "slug": "solo-developer-window-2026",
+  "title": "Solo Developer Window 2026: Ship and Operate Before AGI",
+  "description": "Solo developers have a window: skills cut build costs now, but platforms absorb features fast. Who survived absorption, and what to own before AGI arrives.",
+  "data_updated": "2026-10-30",
+  "source_post": "https://www.jsonhouse.com/posts/solo-developer-window-2026/",
+  "category": "industry-analysis",
+  "cluster": "CLUSTER_DEVTOOLS",
+  "format": "A",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/solo-developer-window-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/solo-developer-window-2026.json",
+    "citation": "Json House, \"Solo Developer Window 2026: Ship and Operate Before AGI\", jsonhouse.com (2026-10-30)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
+  "key_facts": [
+    { "fact": "Stanford's payroll study finds no evidence of widespread, economy-wide job displacement from generative AI, using ADP data through June 2026", "source": "Stanford Digital Economy Lab, revised 2026-08-12", "category": "data" },
+    { "fact": "Employment of workers aged 22–25 in AI-exposed occupations stands 19% below where it would be had it kept pace with less-exposed peers; experienced workers show no comparable gap", "source": "Stanford Digital Economy Lab, revised 2026-08-12", "category": "data" },
+    { "fact": "US software development postings rose almost 15% after late February 2025 while overall postings fell 7%, and remain about 27.5% below their pre-pandemic level", "source": "Indeed Hiring Lab, 2026-07-08", "category": "data" },
+    { "fact": "71% of the increase in US software development postings between May 2025 and May 2026 came from senior roles", "source": "Indeed Hiring Lab, 2026-07-08", "category": "data" },
+    { "fact": "ChatGPT record mode reached Team users on 2025-06-04; Granola then raised $125M at a $1.5B valuation on 2026-03-25 and Otter closed $320M in growth financing on 2026-10-20", "source": "OpenAI release notes; Granola; Otter via Business Wire", "category": "case_study" },
+    { "fact": "TechCrunch links the closures of Relay and Huxe to larger platforms building similar features, but neither company gave that reason in the reports read for this dataset", "source": "TechCrunch, 2026-05-22, 2026-08-17 and 2026-10-24", "category": "case_study" },
+    { "fact": "Snyk's scan of 3,984 agent skills from ClawHub and skills.sh found 13.4% with a critical issue, 36.82% with any issue, and 76 confirmed malicious payloads", "source": "Snyk ToxicSkills, February 2026", "category": "data" },
+    { "fact": "The ARC-AGI-3 launch results had frontier models averaging 0.51% on novel environments against 100% for human testers", "source": "ARC Prize, 2026-03-25", "category": "data" }
+  ],
+  "faq_summary": [
+    { "q": "Will AI replace solo developers?", "a": "Not across the board so far. Stanford finds no widespread displacement, but young workers in AI-exposed occupations sit 19% below their expected path while experienced workers show no comparable gap." },
+    { "q": "Can a feature launch from OpenAI kill a startup?", "a": "It can remove the reason to buy a product, but the record is mixed. TechCrunch links Relay and Huxe to platform overlap without either company giving that reason, and Granola and Otter raised money after ChatGPT added meeting recording." },
+    { "q": "Do agent skills plus unlimited tokens equal AGI?", "a": "No. Skills package human procedures, ARC-AGI-3 launch results put frontier models at 0.51% against 100% for humans, and metered cost remains a real constraint." },
+    { "q": "What should a solo developer build before AGI?", "a": "A running service, not only a shipped feature. Revenue, customer relationships, and data collected over time can outlast a feature that a platform copies." }
+  ],
+  "primary_sources": [
+    { "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence", "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/", "publisher": "Stanford Digital Economy Lab" },
+    { "title": "AI and Job Postings: From Destruction to Creation?", "url": "https://hiringlab.indeed.com/2026/07/08/ai-and-job-postings-from-destruction-to-creation/", "publisher": "Indeed Hiring Lab" },
+    { "title": "Software Developers, Quality Assurance Analysts, and Testers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm", "publisher": "US Bureau of Labor Statistics" },
+    { "title": "ChatGPT release notes", "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes", "publisher": "OpenAI" },
+    { "title": "Granola raises $125M to put your company's context to work", "url": "https://www.granola.ai/blog/series-c", "publisher": "Granola" },
+    { "title": "General Catalyst Backs Otter.ai's Voice AI Ambitions with $320M Growth Investment", "url": "https://www.businesswire.com/news/home/20261020026393/en/General-Catalyst-Backs-Otter.ais-Voice-AI-Ambitions-with-%24320M-Growth-Investment", "publisher": "Otter.ai via Business Wire" },
+    { "title": "Otter.ai Caps Transformational 2025 with $100M ARR Milestone", "url": "https://otter.ai/blog/otter-ai-caps-transformational-2025-with-100m-arr-milestone-industry-first-ai-meeting-agents-and-global-enterprise-expansion", "publisher": "Otter.ai" },
+    { "title": "Snyk Finds Prompt Injection in 36%, 1467 Malicious Payloads in a ToxicSkills Study of Agent Skills Supply Chain Compromise", "url": "https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/", "publisher": "Snyk" },
+    { "title": "AST01 — Malicious Skills", "url": "https://owasp.org/www-project-agentic-skills-top-10/ast01", "publisher": "OWASP" },
+    { "title": "Agent Skills Overview", "url": "https://agentskills.io/", "publisher": "Agent Skills" },
+    { "title": "ARC-AGI-3 launch", "url": "https://arcprize.org/blog/arc-agi-3-launch", "publisher": "ARC Prize" },
+    { "title": "The AI graveyard: a running list of projects and startups that didn't make it", "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/", "publisher": "TechCrunch" }
+  ],
+  "field_provenance": {
+    "timeline": "each row's source field",
+    "comparison_data.entries.outcome": "TechCrunch",
+    "comparison_data.entries.company_stated_reason": "TechCrunch, reporting the company's statement",
+    "comparison_data.entries.platform_link": "TechCrunch's characterization, not a company statement",
+    "numerical_data": "publisher named on each metric",
+    "ownership_after_absorption": "jsonhouse judgment, not measured"
+  },
+  "timeline": [
+    { "date": "2025-06-04", "event": "ChatGPT record mode reaches Team users on macOS", "source": "OpenAI release notes" },
+    { "date": "2025-06-18", "event": "Record mode reaches Pro, Enterprise, and Edu", "source": "OpenAI release notes" },
+    { "date": "2025-07-16", "event": "Record mode reaches Plus", "source": "OpenAI release notes" },
+    { "date": "2025-12-22", "event": "Otter says it crossed $100M ARR", "source": "Otter" },
+    { "date": "2026-03-25", "event": "Granola raises $125M at a $1.5B valuation and launches team Spaces and APIs", "source": "Granola" },
+    { "date": "2026-09-29", "event": "Meetings plugin listed in beta for macOS Pro and Business; Inc.'s October 7 article points to October 6", "source": "OpenAI release notes; Inc." },
+    { "date": "2026-10-20", "event": "Otter closes $320M in growth financing", "source": "Otter via Business Wire" },
+    { "date": "2026-10-29", "event": "Granola adds free voice typing across Mac apps", "source": "TechCrunch" }
+  ],
+  "comparison_data": {
+    "dimensions": ["product", "sold", "outcome", "company_stated_reason", "platform_link"],
+    "entries": [
+      { "product": "Relay", "sold": "AI workflow automation", "outcome": "Closure announced July 2026; paid access set to end 2026-09-14", "company_stated_reason": null, "platform_link": "OpenAI, Google, and others built similar automation" },
+      { "product": "Huxe", "sold": "AI audio generation", "outcome": "Shut down May 2026", "company_stated_reason": null, "platform_link": "Feature became commoditized across larger apps" },
+      { "product": "Yupp", "sold": "Multi-model testing", "outcome": "Shut down March 2026", "company_stated_reason": "Never reached strong product-market fit", "platform_link": null },
+      { "product": "Figgs AI", "sold": "AI character chat", "outcome": "Shut down after operating 2023–2024", "company_stated_reason": "Keeping the service free became too expensive", "platform_link": null },
+      { "product": "Character.ai", "sold": "AI character chat", "outcome": "Filed for bankruptcy October 2026", "company_stated_reason": "Legal, regulatory, and operational headwinds", "platform_link": null },
+      { "product": "Granola", "sold": "AI meeting notes", "outcome": "Operating, $1.5B valuation", "company_stated_reason": null, "platform_link": "Direct overlap with ChatGPT Meetings" },
+      { "product": "Otter", "sold": "AI meeting notes", "outcome": "Operating, $320M financing", "company_stated_reason": null, "platform_link": "Named among rivals in the same space" }
+    ]
+  },
+  "numerical_data": {
+    "metrics": [
+      { "metric": "Employment gap, ages 22–25, AI-exposed occupations", "value": "19% below path of less-exposed peers", "window": "ADP payroll data through June 2026", "publisher": "Stanford Digital Economy Lab" },
+      { "metric": "US software development postings", "value": "up almost 15%; overall postings down 7%", "window": "since late February 2025", "publisher": "Indeed Hiring Lab" },
+      { "metric": "Share of postings increase from senior roles", "value": "71%", "window": "May 2025 to May 2026", "publisher": "Indeed Hiring Lab" },
+      { "metric": "Software postings against pre-pandemic level", "value": "about 27.5% below", "window": "February 2020 to June 2026", "publisher": "Indeed Hiring Lab" },
+      { "metric": "Projected growth, developers, QA analysts, and testers", "value": "10%", "window": "2025 to 2035", "publisher": "US BLS" },
+      { "metric": "Skills with a critical issue", "value": "13.4% of 3,984", "window": "February 2026", "publisher": "Snyk" },
+      { "metric": "Confirmed malicious skills in marketplaces", "value": "157 of 98,380", "window": "USENIX Security 2026, as summarized by OWASP", "publisher": "OWASP" }
+    ]
+  },
+  "ownership_after_absorption": [
+    { "asset": "The feature itself", "if_copied": "Lost" },
+    { "asset": "Revenue already earned", "if_copied": "Kept" },
+    { "asset": "Customer relationships and channel", "if_copied": "Mostly kept" },
+    { "asset": "Data collected over time", "if_copied": "Kept, if it cannot be rebuilt" },
+    { "asset": "Written skills and procedures", "if_copied": "Kept, but copyable" }
+  ]
+}
