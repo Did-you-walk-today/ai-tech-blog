@@ -2,7 +2,7 @@
 title: "LLM Cache Pricing 2026: The Real Cost of Cached Input"
 description: "LLM cache pricing 2026 normalized across six providers: effective input cost at real hit rates, hidden write fees, and which vendors publish nothing at all."
 date: 2026-08-01 10:00:00 +0000
-last_modified_at: 2026-10-19 12:30:00 +0000
+last_modified_at: 2026-11-10 02:30:00 +0000
 categories: [ai-data-statistics]
 tags: [prompt-caching, llm-pricing, api-cost, claude, gpt-5, gemini, deepseek, "2026"]
 format: D
@@ -13,7 +13,7 @@ image:
   alt: "A shallow pool of still water in a carved dark stone basin, one shaft of light bending at the surface"
 faq:
   - q: "How much does prompt caching actually save in 2026?"
-    a: "The cached-read discount converged on 90% at OpenAI, Google, and most of Anthropic's line, and by 2026-10-14 none of the three still holds it flat. Anthropic runs three multipliers — 97.5% on Claude Fable 5.1 and Mythos 5.1, 95% on Claude Opus 5.5 and Sonnet 5.5, 90% on the rest — OpenAI discounts 95% on GPT-6.1-sol and Google 95% on Gemini 4 Argon, with 90% on their other rows. DeepSeek discounts 98% on deepseek-flash, Mistral a flat 90%, and xAI 75–85%. The discount applies only to the cached portion of your prompt, so the saving you actually see is roughly your cache hit rate times the discount. At a 50% hit rate a 90% discount is a 45% saving on input, not 90%."
+    a: "The cached-read discount converged on 90% at OpenAI, Google, and most of Anthropic's line, and by 2026-10-14 none of the three still holds it flat. Anthropic runs three multipliers — 97.5% on Claude Fable 5.1, 5.2 and the matching Mythos models, 95% on Claude Opus 5.5 and Sonnet 5.5, 90% on the rest — OpenAI discounts 95% on GPT-6.1-sol and GPT-6.1-terra and Google 95% on Gemini 4 Argon, with 90% on their other rows. DeepSeek discounts 98% on deepseek-flash, Mistral a flat 90%, and xAI 75–85%. The discount applies only to the cached portion of your prompt, so the saving you actually see is roughly your cache hit rate times the discount. At a 50% hit rate a 90% discount is a 45% saving on input, not 90%."
   - q: "Do you pay to write to the cache?"
     a: "At Anthropic, yes and always: a 5-minute cache write costs 1.25x base input, a 1-hour write 2x. OpenAI introduced the same 1.25x write charge with the GPT-5.6 family; models before it had none. Google charges no write fee but bills cache storage per hour. xAI, DeepSeek, and Mistral publish no write price at all."
   - q: "Which LLM API is cheapest for a cache-heavy agent?"
@@ -26,7 +26,7 @@ faq:
     a: "OpenAI, Google, DeepSeek, and xAI cache automatically. Anthropic requires an explicit cache_control field. The distinction now carries a price: because OpenAI's GPT-5.6 family caches automatically and bills writes at 1.25x, a long prompt you never reuse can be billed above the base rate unless you set prompt_cache_options.mode to explicit."
   - q: "Why can't I compare cache prices straight from provider pricing pages?"
     a: "Because no two publish the same fields. Anthropic states multipliers, DeepSeek an absolute cache-hit price, xAI and Mistral a single cached-input column, and Google a per-hour storage rate on top of a cache-read price. Four of the six publish no cache TTL. Normalizing them to one unit is the reason this table exists."
-data_updated: 2026-10-19
+data_updated: 2026-11-10
 author: jsonhouse
 ---
 
@@ -36,25 +36,28 @@ On that measure the answer reversed on 2026-09-14, four weeks after it had rever
 
 The flagship end flipped on 2026-09-28, when Claude Opus 5.5 paired a $4.00 base with a 0.05x cache read and undercut Grok 4.6's $2.00 base above **87.0%**. The 2026-10-05 change is quieter and arguably more useful. GPT-6.1-sol arrived at GPT-6-sol's $2.00 list price with the cache read halved to $0.10, also 0.05x. It ties the older model at a 0% hit rate and beats it at every rate above that, so the saving is invisible on a price list and certain on an invoice.
 
-The 2026-10-14 collection repeated that move on a row that already existed. Claude Sonnet 5.5's cache read fell from $0.20 to $0.10, so it now sits on GPT-6.1-sol's curve, and so does the new Gemini 4 Argon. Three vendors now sell a $2.00 model with a 95% cache discount. The same collection also filled a gap: Mistral's per-model cache prices, absent from this page since it began, are now recorded, and they produce the **lowest crossover on the page — Grok 4.3 × Mistral Medium 3.5 at 83.3%**.
+The 2026-10-14 collection repeated that move on a row that already existed. Claude Sonnet 5.5's cache read fell from $0.20 to $0.10, so it now sits on GPT-6.1-sol's curve, and so does the new Gemini 4 Argon. Three vendors now sell a $2.00 model with a 95% cache discount. The same collection also filled a gap: Mistral's per-model cache prices were recorded for the first time, and Grok 4.3 × Mistral Medium 3.5 became the lowest crossover on the page at 83.3%.
 
-The 2026-10-19 collection changed no number on this page. Every base and cache-read price held, so all four effective columns, every discount figure and all eighteen crossovers stand as they were. What changed is the model behind the row that leads the 95% column: on 2026-10-17 DeepSeek replaced the build behind `deepseek-flash` with DeepSeek-V4.1-Flash-1017, and [its change log](https://api-docs.deepseek.com/updates) states that pricing is unchanged. The $0.0104 figure is the same; the model earning it is not.
+That crossover is gone as of 2026-11-10, and not because a price moved. [Mistral's pricing page](https://docs.mistral.ai/inference/pricing) moved to a new address whose table no longer lists Medium 3.5, so the row has no observable price. **The lowest crossover is a flagship pair again: Grok 4.6 × Claude Opus 5.5 at 87.0%.** Three rows arrived. Claude Fable 5.2 ($8.00 / $0.20) keeps the 97.5% discount on a lower base. GPT-6.1-terra ($1.00 / $0.05) takes OpenAI's 95% discount down to a $1.00 model. Mistral Large 4 ($0.70 / $0.07) is the Mistral row now.
 
-This page normalizes cache pricing for 24 models across six providers to a single unit, using prices collected on 2026-10-19, a Monday.
+The crossover set goes from eighteen pairs to twenty-one: four involving Medium 3.5 left and seven new ones arrived. The budget hinge, Flash-Lite × DeepSeek flash at 87.7%, did not move.
+
+This page normalizes cache pricing for 26 models across six providers to a single unit, using prices collected on 2026-11-10, a Tuesday. It skipped the 2026-10-26 refresh, and the 2026-11-02 and 2026-11-09 collections were missed, so the changes here are dated only to the period since 2026-10-19.
 
 ## TL;DR
 
-- **The lowest crossover is now 83.3%**: Grok 4.3 × Mistral Medium 3.5. It appears because Mistral's cache price was recorded for the first time on 2026-10-14, not because a price moved. Grok 4.6 × Claude Opus 5.5 (87.0%) and Flash-Lite × DeepSeek flash (87.7%) follow.
-- **No price moved on 2026-10-19; the last change is still Claude Sonnet 5.5's cache read**, halved on an existing row on 2026-10-14. At $2.00 base / $0.10 it now discounts 95% and beats Claude Sonnet 5 at every hit rate above zero — $0.1950 per 1M effective input tokens at `h = 95%` against $0.2900.
-- **Three vendors now share one $2.00 / 95% curve**: Claude Sonnet 5.5, GPT-6.1-sol and the new Gemini 4 Argon. All three pass Grok 4.3 above **88.2%** and Mistral Medium 3.5 above **90.9%**.
+- **The lowest crossover is 87.0% again**: Grok 4.6 × Claude Opus 5.5. The 83.3% pair left with Mistral Medium 3.5, which Mistral's new pricing page no longer lists. Flash-Lite × DeepSeek flash (87.7%) is unchanged.
+- **Claude Fable 5.2 dominates Fable 5.1**: $8.00 / $0.20 against $10.00 / $0.25, the same 97.5% discount on a lower base, so it is cheaper at every hit rate. It passes Claude Opus 5 at **90.9%**, where Fable 5.1 needed 95.2%.
+- **GPT-6.1-terra puts a 95% discount on a $1.00 base**: $0.0975 at `h = 95%`. It beats Claude Haiku 4.5 and Grok 4.3 at every hit rate, and passes the Gemini 3.x Flash rows at **90.9%** and Mistral Large 4 at **93.8%**.
+- **Three vendors share one $2.00 / 95% curve**: Claude Sonnet 5.5, GPT-6.1-sol and Gemini 4 Argon. All three pass Grok 4.3 above **88.2%**.
 - **Sticker price still loses the 95% column.** DeepSeek flash costs $0.0104 at `h = 95%` against the $0.0145 that Flash-Lite, GPT-6-luna and Claude Haiku 5.5 share — though since 2026-10-17 a new DeepSeek build stands behind that figure.
-- **No original 90% vendor is flat any more.** 90% on most rows at Anthropic, OpenAI, Google and Mistral; 75–85% at xAI; 95% on Claude Opus 5.5, Sonnet 5.5, GPT-6.1-sol and Gemini 4 Argon; 97.5% on Fable 5.1 and Mythos 5.1; 96.7% and 98% at DeepSeek.
+- **No original 90% vendor is flat any more.** 90% on most rows at Anthropic, OpenAI, Google and Mistral; 75–85% at xAI; 95% on Claude Opus 5.5, Sonnet 5.5, GPT-6.1-sol, GPT-6.1-terra and Gemini 4 Argon; 97.5% on Fable 5.1, Fable 5.2 and their Mythos twins; 96.7% and 98% at DeepSeek.
 - **Caching still pays after two calls.** Even at a 2x write multiplier, reusing a prefix three times beats not caching. Write fees are a rounding error for agents — and a real penalty for one-shot prompts.
 - **"90% off" is not a 90% saving.** The discount applies only to the cached share of your prompt. At a 50% hit rate it is a 45% cut.
 
 ## Methodology
 
-Base input and cache-read prices were collected on **2026-10-19** from the six providers' official pricing pages, the same sources and normalization used in our [weekly LLM API pricing table](/posts/llm-api-pricing-2026/): [Anthropic](https://platform.claude.com/docs/en/docs/about-claude/pricing), [OpenAI](https://developers.openai.com/api/docs/pricing), [Google](https://ai.google.dev/gemini-api/docs/pricing), [xAI](https://docs.x.ai/docs/models), [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing), [Mistral](https://mistral.ai/pricing/api). Caching mechanics — write cost, storage fee, TTL, trigger, minimum cacheable length — were last re-read from each provider's prompt-caching documentation on 2026-08-03 and are unchanged: [Anthropic](https://platform.claude.com/docs/en/docs/build-with-claude/prompt-caching), [OpenAI](https://developers.openai.com/api/docs/guides/prompt-caching), [Google](https://ai.google.dev/gemini-api/docs/caching), [xAI](https://docs.x.ai/developers/advanced-api-usage/prompt-caching/usage-and-pricing), and [DeepSeek](https://api-docs.deepseek.com/guides/kv_cache).
+Base input and cache-read prices were collected on **2026-11-10** from the six providers' official pricing pages, the same sources and normalization used in our [weekly LLM API pricing table](/posts/llm-api-pricing-2026/): [Anthropic](https://platform.claude.com/docs/en/docs/about-claude/pricing), [OpenAI](https://developers.openai.com/api/docs/pricing), [Google](https://aistudio.google.com/docs/pricing), [xAI](https://docs.x.ai/docs/models), [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing), [Mistral](https://docs.mistral.ai/inference/pricing). Google's and Mistral's former pricing addresses now redirect to the two linked here. Caching mechanics — write cost, storage fee, TTL, trigger, minimum cacheable length — were last re-read from each provider's prompt-caching documentation on 2026-08-03 and are unchanged: [Anthropic](https://platform.claude.com/docs/en/docs/build-with-claude/prompt-caching), [OpenAI](https://developers.openai.com/api/docs/guides/prompt-caching), [Google](https://ai.google.dev/gemini-api/docs/caching), [xAI](https://docs.x.ai/developers/advanced-api-usage/prompt-caching/usage-and-pricing), and [DeepSeek](https://api-docs.deepseek.com/guides/kv_cache).
 
 Effective input price is computed as `base x (1 - h) + cache_read x h`, where `h` is the cache hit rate: the share of input tokens served from cache. It deliberately excludes write and storage costs, which are handled separately below, because those are one-time or time-based rather than per-token and would otherwise make the columns non-comparable.
 
@@ -67,6 +70,7 @@ Every cell in the table below except the `h = 0%` column is computed by us from 
 | Model | Provider | h = 0% (vendor) | h = 50% (jsonhouse derived) | h = 80% (jsonhouse derived) | h = 95% (jsonhouse derived) | Discount (jsonhouse derived) |
 |---|---|---|---|---|---|---|
 | Claude Fable 5.1 | Anthropic | $10.0000 | $5.1250 | $2.2000 | $0.7375 | 97.5% |
+| Claude Fable 5.2 | Anthropic | $8.0000 | $4.1000 | $1.7600 | $0.5900 | 97.5% |
 | Claude Opus 5 | Anthropic | $5.0000 | $2.7500 | $1.4000 | $0.7250 | 90% |
 | Claude Opus 5.5 | Anthropic | $4.0000 | $2.1000 | $0.9600 | $0.3900 | 95% |
 | GPT-5.6-sol | OpenAI | $4.0000 | $2.2000 | $1.1200 | $0.5800 | 90% |
@@ -78,11 +82,12 @@ Every cell in the table below except the `h = 0%` column is computed by us from 
 | Gemini 4 Argon | Google | $2.0000 | $1.0500 | $0.4800 | $0.1950 | 95% |
 | Grok 4.6 | xAI | $2.0000 | $1.2500 | $0.8000 | $0.5750 | 75% |
 | Grok 4.5 | xAI | $2.0000 | $1.1500 | $0.6400 | $0.3850 | 85% |
-| Mistral Medium 3.5 | Mistral | $1.5000 | $0.8250 | $0.4200 | $0.2175 | 90% |
 | Grok 4.3 | xAI | $1.2500 | $0.7250 | $0.4100 | $0.2525 | 84% |
+| GPT-6.1-terra | OpenAI | $1.0000 | $0.5250 | $0.2400 | $0.0975 | 95% |
 | Claude Haiku 4.5 | Anthropic | $1.0000 | $0.5500 | $0.2800 | $0.1450 | 90% |
 | Gemini 3.8 Flash | Google | $0.7500 | $0.4125 | $0.2100 | $0.1088 | 90% |
 | Gemini 3.6 Flash | Google | $0.7500 | $0.4125 | $0.2100 | $0.1088 | 90% |
+| Mistral Large 4 | Mistral | $0.7000 | $0.3850 | $0.1960 | $0.1015 | 90% |
 | DeepSeek v4-pro | DeepSeek | $0.6600 | $0.3410 | $0.1496 | $0.0539 | 96.7% |
 | Gemini 2.5 Flash | Google | $0.3000 | $0.1650 | $0.0840 | $0.0435 | 90% |
 | GPT-5.6-luna | OpenAI | $0.2000 | $0.1100 | $0.0560 | $0.0290 | 90% |
@@ -92,6 +97,8 @@ Every cell in the table below except the `h = 0%` column is computed by us from 
 | Gemini 2.5 Flash-Lite | Google | $0.1000 | $0.0550 | $0.0280 | $0.0145 | 90% |
 
 > **Raw data**: [data/llm-cache-pricing-2026.json](https://www.jsonhouse.com/data/llm-cache-pricing-2026.json) — machine-readable structured data for AI crawlers and citation.
+
+> Changes on 2026-11-10. **Claude Fable 5.2** arrived at $8.00 base / $0.20 cache read, the same 0.025x multiplier as Fable 5.1 on a base 20% lower; Claude Mythos 5.2 carries identical figures and, like the earlier Mythos rows, has no row here. **GPT-6.1-terra** arrived at $1.00 / $0.05, half of GPT-6.1-sol on both figures. **Mistral Large 4** enters at $0.70 / $0.07, recorded as list price because the page shows no strikethrough. **Mistral Medium 3.5** was removed: Mistral's new pricing page no longer lists it, though the model still has a documentation page, so it is unpriced rather than retired. **Gemini 2.5 Flash** keeps its row but is deprecated: from 2026-12-01 Google routes it to Gemini 3.5 Flash-Lite.
 
 > Changes on 2026-10-14. **Claude Sonnet 5.5** now has a row: its cache read fell from $0.20 to $0.10 (0.05x) between 2026-10-05 and 2026-10-14, which moved it off Claude Sonnet 5's curve and onto GPT-6.1-sol's. **Gemini 4 Argon** arrived on that same curve, $2.00 base / $0.10 cache read, Google's first row below 0.1x; it supports implicit caching only, and its rate is introductory through 2026-11-30, doubling to $4.00 / $0.20 on 2026-12-01.
 
@@ -105,7 +112,7 @@ Every cell in the table below except the `h = 0%` column is computed by us from 
 
 > DeepSeek's rows are off-peak; peak hours (01:00–04:00 and 06:00–10:00 UTC, weekdays only — DeepSeek states weekends and Chinese public holidays are off-peak in full) bill exactly double on both the base and the cache read, so the effective columns scale but the discount does not. The DeepSeek flash row is new in identity as well as price: on 2026-09-14 DeepSeek retired v4-flash and now serves that name from DeepSeek-V4.1-Flash, so this row's figures describe a different model than the same row did last week.
 
-> Mistral's pricing page now lists a per-model cached-input price, and this page records it for the first time on 2026-10-14: $0.15 per 1M on Mistral Medium 3.5, exactly 0.1x base input. Until this collection the row was left unfilled rather than derived from Mistral's headline "−90%", and the published figure turns out to match that headline. This series did not capture the column before, so whether it is new on Mistral's page could not be established. Mistral still publishes no write price, storage fee or TTL.
+> Mistral's pricing page lists a per-model cached-input price, first recorded here on 2026-10-14 at $0.15 per 1M on Mistral Medium 3.5, exactly 0.1x base input. Mistral Large 4 carries the same 0.1x ($0.07), so the Mistral row changed model on 2026-11-10 without changing discount. Its price has moved three times since it entered our pricing series on 2026-10-14 at a sale rate of $0.68 / $0.07, none of them with a stated date. Mistral still publishes no write price, storage fee or TTL.
 
 ## What the Sticker Price Hides
 
@@ -134,7 +141,9 @@ On 2026-10-05 OpenAI moved. GPT-6.1-sol bills a cache read at 0.05x, on both its
 
 On 2026-10-14 the last of the three followed, and Anthropic's schedule lost its slope. Google launched Gemini 4 Argon at $2.00 base with a $0.10 cache read, 0.05x, while every other Gemini row stays at 0.1x. In the same collection Anthropic moved Claude Sonnet 5.5, a $2.00 model, to 0.05x — so its deeper multiplier now covers a $4.00 model and a $2.00 one while the $5.00 Opus 5 stays at 0.1x. Read across all three vendors, the 0.05x rows have one thing in common, and it is not price. Each is the newest model in its line.
 
-The vendors past 90% now sit at both ends of the price list and, since October 5, crowd the middle of it: three of the 24 rows here are $2.00 models discounted 95%. A deep cache discount at the bottom of the market is a share play on volume. The same discount at $10.00 base is aimed at a buyer whose bill is mostly re-sent context and who is not shopping on sticker price at all — and as the crossover table below shows, it is steep enough to put a $10.00 model under a $5.00 one.
+On 2026-11-10 both vendors took the deeper multipliers one step further down their own lines. Anthropic's 0.025x moved from a $10.00 model to an $8.00 one with Fable 5.2, and OpenAI's 0.05x from a $2.00 model to a $1.00 one with GPT-6.1-terra. In both cases the newest model in the line got the deep discount, as before.
+
+The vendors past 90% now sit at both ends of the price list and, since October 5, crowd the middle of it: three of the 26 rows here are $2.00 models discounted 95%, and a fourth is a $1.00 one. A deep cache discount at the bottom of the market is a share play on volume. The same discount at $10.00 base is aimed at a buyer whose bill is mostly re-sent context and who is not shopping on sticker price at all — and as the crossover table below shows, it is steep enough to put a $10.00 model under a $5.00 one.
 
 xAI is the counter-movement. Grok 4.5's cache read fell from $0.50 to $0.30 between our 2026-07-16 and 2026-07-28 snapshots, taking it from 75% toward the herd, and then Grok 4.6 launched on 2026-08-17 at the same $2.00 base with a $0.50 cache read — back to 75%. The newer model is strictly worse on the axis the market says it competes on.
 
@@ -148,11 +157,10 @@ Those two facts interact in a way the documentation does not resolve. OpenAI's g
 
 Cache hit rate does not merely scale costs down uniformly. It reorders them, because providers discount by different amounts from different starting points.
 
-On 2026-08-03 five pairs crossed inside the 0–100% range and three of them crossed in the same 83–85% band. DeepSeek's August rise pushed every budget-tier crossover out past 97%, and this page reported that the flip had stopped happening where agents run. **That lasted four weeks.** Eighteen pairs now cross. From 2026-09-28 to 2026-10-05 the lowest was a flagship pair; since 2026-10-14 it is a pair that could not be computed before:
+On 2026-08-03 five pairs crossed inside the 0–100% range and three of them crossed in the same 83–85% band. DeepSeek's August rise pushed every budget-tier crossover out past 97%, and this page reported that the flip had stopped happening where agents run. **That lasted four weeks.** Twenty-one pairs now cross, and the lowest is a flagship pair again, as it was from 2026-09-28 to 2026-10-05:
 
 | Cheaper below the crossover | Cheaper above it | Crossover hit rate (jsonhouse derived) | Effective price at crossover (jsonhouse derived) |
 |---|---|---|---|
-| Grok 4.3 | Mistral Medium 3.5 | 83.3% | $0.3750 / 1M |
 | Grok 4.6 | Claude Opus 5.5 | 87.0% | $0.6957 / 1M |
 | Gemini 2.5 Flash-Lite | DeepSeek flash | 87.7% | $0.0211 / 1M |
 | GPT-6-luna | DeepSeek flash | 87.7% | $0.0211 / 1M |
@@ -160,20 +168,30 @@ On 2026-08-03 five pairs crossed inside the 0–100% range and three of them cro
 | Grok 4.3 | GPT-6.1-sol | 88.2% | $0.3235 / 1M |
 | Grok 4.3 | Claude Sonnet 5.5 | 88.2% | $0.3235 / 1M |
 | Grok 4.3 | Gemini 4 Argon | 88.2% | $0.3235 / 1M |
-| Mistral Medium 3.5 | GPT-6.1-sol | 90.9% | $0.2727 / 1M |
-| Mistral Medium 3.5 | Claude Sonnet 5.5 | 90.9% | $0.2727 / 1M |
-| Mistral Medium 3.5 | Gemini 4 Argon | 90.9% | $0.2727 / 1M |
+| Claude Opus 5 | Claude Fable 5.2 | 90.9% | $0.9091 / 1M |
+| Gemini 3.8 Flash | GPT-6.1-terra | 90.9% | $0.1364 / 1M |
+| Gemini 3.6 Flash | GPT-6.1-terra | 90.9% | $0.1364 / 1M |
+| Mistral Large 4 | GPT-6.1-terra | 93.8% | $0.1094 / 1M |
 | Claude Opus 5 | Claude Fable 5.1 | 95.2% | $0.7143 / 1M |
 | Grok 4.6 | GPT-5.6-sol | 95.2% | $0.5714 / 1M |
+| Grok 4.6 | Claude Fable 5.2 | 95.2% | $0.5714 / 1M |
+| GPT-5.6-sol | Claude Fable 5.2 | 95.2% | $0.5714 / 1M |
 | Grok 4.5 | Claude Opus 5.5 | 95.2% | $0.3810 / 1M |
 | Grok 4.6 | Claude Fable 5.1 | 97.0% | $0.5455 / 1M |
 | GPT-5.6-sol | Claude Fable 5.1 | 97.6% | $0.4878 / 1M |
 | Gemini 2.5 Flash | DeepSeek v4-pro | 97.8% | $0.0359 / 1M |
+| Grok 4.5 | Claude Fable 5.2 | 98.4% | $0.3279 / 1M |
 | Grok 4.5 | Claude Fable 5.1 | 99.4% | $0.3106 / 1M |
 
-**The lowest crossover on this page is new to the page, not necessarily new to the market.** Grok 4.3 × Mistral Medium 3.5 crosses at 83.3%: Grok 4.3 is $0.25 cheaper on base, but Mistral discounts 90% to Grok 4.3's 84%. Neither price moved this collection. The pair enters the table only because Mistral's cache price was recorded for the first time, so it may have been there all along. Read it as a crossover this page could not see before, and do not date it to 2026-10-14.
+**Four crossovers left with a row, not with a price.** Grok 4.3 × Mistral Medium 3.5 at 83.3%, and Medium 3.5's three 90.9% crossovers with the $2.00 / 95% curve, are gone because Mistral's new pricing page no longer lists the model. No figure on either side moved. These pairs may still exist on a Mistral invoice, but this page records only prices it can read off a vendor page.
 
-**The $2.00 / 95% curve now has three vendors on it, and each one adds the same two crossovers.** Claude Sonnet 5.5, GPT-6.1-sol and Gemini 4 Argon share every figure, so each passes Grok 4.3 at 88.2% and Mistral Medium 3.5 at 90.9%. Six of the seven new pairs are that one curve counted three times. Claude Haiku 5.5 adds the seventh by landing on Flash-Lite's figures and inheriting its 87.7% crossover with DeepSeek flash.
+**Claude Fable 5.2 pulls the top-tier crossovers down without dropping the discount.** It keeps Fable 5.1's 97.5% on a base $2.00 lower, so it is cheaper than Fable 5.1 at every hit rate and has no crossover with it. Against Claude Opus 5 it crosses at 90.9%, where Fable 5.1 needed 95.2%. Against GPT-5.6-sol and Grok 4.6 it crosses at 95.2%, and against Grok 4.5 at 98.4%.
+
+**GPT-6.1-terra brings a 95% discount down to the $1.00 tier.** It ties Claude Haiku 4.5 on base at $1.00 and halves its cache read, so it wins at every hit rate. It also beats Grok 4.3 outright, cheaper on both figures. Against the two Gemini 3.x Flash rows ($0.75 / $0.075) it crosses at 90.9%, and against Mistral Large 4 at 93.8%.
+
+**Mistral Large 4 beats both Gemini 3.x Flash rows at every hit rate.** It is $0.05 cheaper on base with the same 90% discount, so its cache read is lower too, and there is no crossover between them. That holds only while Large 4 stays at $0.70; on 2026-10-26 its base was nearly double.
+
+**The $2.00 / 95% curve still has three vendors on it.** Claude Sonnet 5.5, GPT-6.1-sol and Gemini 4 Argon share every figure, so each passes Grok 4.3 at 88.2%, and none has a crossover left with a Mistral row. Claude Haiku 5.5 sits on Flash-Lite's figures and inherits its 87.7% crossover with DeepSeek flash.
 
 **The budget crossover came back 10 points.** Flash-Lite × DeepSeek moved from 97.6% to 87.7%, because DeepSeek cut base and cache read together: the sticker gap against Flash-Lite narrowed from $0.12 to $0.05 while the discount slope stayed steep. That is the same tool working in the direction it is designed for, after four weeks of working against itself. One crossover vanished in the process — GPT-5.6-luna × DeepSeek at 60.6% is gone, because `deepseek-flash` now beats luna on base price and on cache read simultaneously, and a model losing on both axes cannot win at any hit rate.
 
@@ -241,18 +259,20 @@ The same now holds one tier down: Claude Sonnet 5.5 matches Sonnet 5's base and 
 
 **Anything on Claude.** Check the minimum cacheable length for your specific model before budgeting a saving. At 4,096 tokens on Haiku 4.5 and Opus 4.5, a prompt that caches fine on Opus 5 will silently not cache, with no error returned.
 
-**Anything on Mistral.** You can now model the per-token side: Mistral publishes a cached-input price at 0.1x base on each model, and Mistral Medium 3.5 passes Grok 4.3 above 83.3%. What you still cannot model is the rest of the cache — Mistral publishes no write price, storage fee, TTL or trigger.
+**Budget agents on OpenAI.** GPT-6.1-terra at $1.00 / $0.05 costs $0.0975 at `h = 95%`, a third less than Claude Haiku 4.5 at the same $1.00 sticker. Below a 90.9% hit rate the Gemini 3.x Flash rows are cheaper, and below 93.8% Mistral Large 4 is.
+
+**Anything on Mistral.** You can model the per-token side: Mistral publishes a cached-input price at 0.1x base on each model it lists. Mistral Large 4 at $0.70 / $0.07 beats both Gemini 3.x Flash rows at every hit rate. Budget it cautiously: its price has stood at three levels in four weeks with no stated end date. Mistral Medium 3.5 is no longer on the pricing page, so if you still run it, check your invoice rather than this table. What you still cannot model is the rest of the cache — Mistral publishes no write price, storage fee, TTL or trigger.
 
 ## Limitations
 
 - **Effective price excludes write and storage costs.** Those are one-time or hourly, not per-token, and are analyzed separately above rather than folded into a single number that would hide which component moved.
 - **Cache hit rate is an input, not a measurement.** We publish the formula and the price inputs; we have not measured hit rates on real workloads. That is a separate experiment and a future post.
 - **Four of six providers publish no TTL**, so time-based cache expiry cannot be modelled for them. Real hit rates on those providers may be materially lower than configured.
-- **Mistral's cache price enters this page on 2026-10-14.** Before that the row was unfilled, so any Mistral crossover, including the 83.3% one, has no earlier history here. Its write, storage and TTL terms remain unpublished.
+- **Mistral's cache price enters this page on 2026-10-14, and its row changed model on 2026-11-10.** Medium 3.5 left when Mistral's new pricing page stopped listing it, and Large 4 replaced it, so the Mistral row has no continuous history here. Its write, storage and TTL terms remain unpublished.
 - **Prices are list prices** at the standard non-batch tier. Batch discounts and negotiated enterprise rates are excluded.
 - **The effective price is per token, and a token is not a constant amount of text.** Anthropic states that Claude 4.7 and later models count roughly 30% more tokens for the same input than Sonnet 4.6 and earlier, so the Claude rows here are not all denominated in the same unit. The discount percentages are unaffected — they are ratios within a single model — but comparing an effective price across that line understates the newer models.
-- **Coverage is 24 models across six providers**, chosen to span every tier and every disclosure pattern rather than to be exhaustive.
-- **Three Google rows, one Anthropic row and both DeepSeek rows are conditional prices.** Gemini 3.6 and 3.8 Flash are promotional through 2026-12-31 and Gemini 4 Argon through 2026-11-30, each doubling after; Claude Haiku 5.5's figures apply only to prompts up to 100,000 tokens; DeepSeek's figures are off-peak and bill double during weekday peak UTC windows. Both effective columns and crossovers move with them.
+- **Coverage is 26 models across six providers**, chosen to span every tier and every disclosure pattern rather than to be exhaustive.
+- **Several rows are conditional prices.** Gemini 3.6 and 3.8 Flash are promotional through 2026-12-31 and Gemini 4 Argon through 2026-11-30, each doubling after; GPT-5.6-sol's rate is promotional until 2026-11-30; Gemini 2.5 Flash is routed to Gemini 3.5 Flash-Lite from 2026-12-01; Claude Haiku 5.5's figures apply only to prompts up to 100,000 tokens; DeepSeek's figures are off-peak and bill double during weekday peak UTC windows. Both effective columns and crossovers move with them.
 - **The DeepSeek flash row changed model, not just price, on 2026-09-14, and changed model again at an unchanged price on 2026-10-17.** Its figures are comparable to the previous v4-flash row as a line item on an invoice, but not as a measurement of the same product. Week-over-week deltas on that row should be read as a substitution, and a flat week on it does not mean the same model.
 
 ## Update Cadence and Changelog
@@ -261,6 +281,8 @@ This page is refreshed **weekly** from the same snapshot series that backs our p
 
 | Date | Change |
 |---|---|
+| 2026-11-10 | **Three rows arrived, one left, and the crossover set went from eighteen pairs to twenty-one.** Collected Tuesday 2026-11-10; the 2026-11-02 and 2026-11-09 collections were missed and are left as gaps. Added: **Claude Fable 5.2** at $8.00 / $0.20 (97.5%), giving $4.1000 / $1.7600 / $0.5900 at h = 50% / 80% / 95%; **GPT-6.1-terra** at $1.00 / $0.05 (95%), giving $0.5250 / $0.2400 / $0.0975; **Mistral Large 4** at $0.70 / $0.07 (90%), giving $0.3850 / $0.1960 / $0.1015. Removed: **Mistral Medium 3.5**, absent from Mistral's new pricing page (mistral.ai/pricing/api now redirects to docs.mistral.ai/inference/pricing). The table goes from 24 models to 26. Every other base and cache-read price holds. Crossovers, recomputed exhaustively: four left with Medium 3.5, including the **83.3% Grok 4.3 × Mistral Medium 3.5** that was the lowest on the page, so the lowest is again **Grok 4.6 × Claude Opus 5.5 at 87.0%**. Seven are new: Claude Opus 5 × Fable 5.2 at 90.9%; Gemini 3.8 Flash and 3.6 Flash × GPT-6.1-terra at 90.9%; Mistral Large 4 × GPT-6.1-terra at 93.8%; Grok 4.6 × Fable 5.2 and GPT-5.6-sol × Fable 5.2 at 95.2%; Grok 4.5 × Fable 5.2 at 98.4%. No crossover exists between Fable 5.2 and Fable 5.1, GPT-6.1-terra and Claude Haiku 4.5 or Grok 4.3, or Mistral Large 4 and the Gemini 3.x Flash rows, because in each pair one row is cheaper on both figures. Gemini 2.5 Flash is deprecated with routing to Gemini 3.5 Flash-Lite from 2026-12-01; its figures are unchanged. Caching mechanics were not re-read and are unchanged from 2026-08-03. |
+| 2026-10-26 | **Not collected.** This page skipped its weekly refresh. No base or cache-read price on any of its 24 rows moved that week, so no figure in the 2026-10-19 table was wrong while the gap stood. The one price change in the series that week, Mistral Large 4's sale ending, was on a model this page did not carry. The miss is recorded rather than backfilled. |
 | 2026-10-19 | **No change to any figure; one row changed model.** Every base and cache-read price behind this table holds the value collected on 2026-10-14, so all four effective-price columns, every discount figure and the eighteen crossovers are unchanged because every input to the arithmetic is identical. The table stays at 24 models. On 2026-10-17 DeepSeek replaced the build behind `deepseek-flash` with **DeepSeek-V4.1-Flash-1017**, stating that pricing is unchanged, so the DeepSeek flash row keeps its $0.0104 at h = 95% and its 87.7% crossover against Flash-Lite, GPT-6-luna and Claude Haiku 5.5 while describing a different model. Collected Monday 2026-10-19, five days after the Wednesday 2026-10-14 collection. Caching mechanics were not re-read and are unchanged from 2026-08-03. |
 | 2026-10-14 | **An existing row's cache read was halved, Mistral became computable, and the crossover set went from eleven pairs to eighteen.** Collected Wednesday 2026-10-14; the Monday 2026-10-12 slot was missed and is left as a gap. **Claude Sonnet 5.5's cache read fell from $0.20 to $0.10** (0.05x), giving it a row of its own at $1.0500 / $0.4800 / $0.1950 for h = 50% / 80% / 95% — the first base or cache-read change on an existing row here since 2026-08-24. Added: **Gemini 4 Argon** at $2.00 / $0.10, Google's first row below 0.1x, introductory through 2026-11-30; **Claude Haiku 5.5** at $0.10 / $0.01 for prompts up to 100,000 tokens ($0.50 / $0.05 above). Removed: **Gemini 3.7 Flash**, deprecated 2026-10-08 and routed by Google to Gemini 3.8 Flash. **Mistral Medium 3.5** is filled for the first time at $0.15 cache read (90%), from a per-model column this series had not captured before; that is a newly recorded price, not a changed one. The table goes from 22 models to 24. New crossovers, recomputed exhaustively: **Grok 4.3 × Mistral Medium 3.5 at 83.3%**, now the lowest on the page; Grok 4.3 × Claude Sonnet 5.5 and × Gemini 4 Argon at 88.2%; Mistral Medium 3.5 × GPT-6.1-sol, × Claude Sonnet 5.5 and × Gemini 4 Argon at 90.9%; and Claude Haiku 5.5 × DeepSeek flash at 87.7%. Claude Sonnet 5.5 now dominates Claude Sonnet 5 with no crossover, as GPT-6.1-sol dominates GPT-6-sol. Caching mechanics were not re-read and are unchanged from 2026-08-03. |
 | 2026-10-05 | **One row arrived at an unchanged list price, and OpenAI left the flat 90%.** Every base and cache-read price already in this table holds the value collected on 2026-09-28, so no existing effective-price column, discount figure or crossover changed. The table goes from 21 models to 22. Added: **GPT-6.1-sol** at $2.00 base / $0.10 cache read — GPT-6-sol's list price with the cache read halved, a 95% discount on a 0.05x multiplier and the first OpenAI row off 0.1x — with effective prices of $1.0500 at h = 50%, $0.4800 at h = 80% and $0.1950 at h = 95%. **Claude Sonnet 5.5** also arrived, on Claude Sonnet 5's base and cache read to the cent, and is carried in the snapshot without a row here. The crossover set goes from ten pairs to eleven, recomputed exhaustively. New: **Grok 4.3 × GPT-6.1-sol at 88.2%**. GPT-6.1-sol has no crossover with the five other $2.00-base rows (GPT-6-sol, GPT-5.6-terra, Claude Sonnet 5, Grok 4.6, Grok 4.5) because it ties them at 0% and is cheaper at every hit rate above it. DeepSeek's page now states that its peak windows apply on weekdays only, with weekends and Chinese public holidays off-peak in full; recorded for the first time this week, with no effect on the off-peak figures used here. Caching mechanics were not re-read and are unchanged from 2026-08-03. |
@@ -278,7 +300,7 @@ This page is refreshed **weekly** from the same snapshot series that backs our p
 
 ### How much does prompt caching actually save in 2026?
 
-The cached-read discount converged on 90% at OpenAI, Google, and most of Anthropic's line, and that consensus has been coming apart since September. Anthropic now runs three multipliers: 97.5% on Claude Fable 5.1 and Mythos 5.1, 95% on Claude Opus 5.5 and, since October 14, Sonnet 5.5, and 90% on everything else in its line. OpenAI joined on October 5 with 95% on GPT-6.1-sol, and Google on October 14 with 95% on Gemini 4 Argon, both keeping 90% on their other rows. DeepSeek discounts 98% on `deepseek-flash`, Mistral 90% across its line, and xAI 75–85%.
+The cached-read discount converged on 90% at OpenAI, Google, and most of Anthropic's line, and that consensus has been coming apart since September. Anthropic now runs three multipliers: 97.5% on Claude Fable 5.1, Fable 5.2 (since November 10) and their Mythos twins, 95% on Claude Opus 5.5 and, since October 14, Sonnet 5.5, and 90% on everything else in its line. OpenAI joined on October 5 with 95% on GPT-6.1-sol, and extended it to GPT-6.1-terra by November 10, and Google on October 14 with 95% on Gemini 4 Argon, both keeping 90% on their other rows. DeepSeek discounts 98% on `deepseek-flash`, Mistral 90% across its line, and xAI 75–85%.
 
 That discount applies only to the cached share of a prompt, so your realized saving is roughly the hit rate times the discount. A 50% hit rate against a 90% discount is a 45% cut to input cost, not 90%.
 

@@ -3,7 +3,7 @@
   "slug": "llm-cache-pricing-2026",
   "title": "LLM Cache Pricing 2026: The Real Cost of Cached Input",
   "description": "LLM cache pricing 2026 normalized across six providers: effective input cost at real hit rates, hidden write fees, and which vendors publish nothing at all.",
-  "data_updated": "2026-10-19",
+  "data_updated": "2026-11-10",
   "source_post": "https://www.jsonhouse.com/posts/llm-cache-pricing-2026/",
   "category": "ai-data-statistics",
   "cluster": "CLUSTER_LLM",
@@ -12,13 +12,13 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/llm-cache-pricing-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/llm-cache-pricing-2026.json",
-    "citation": "Json House, \"LLM Cache Pricing 2026: The Real Cost of Cached Input\", jsonhouse.com (2026-10-19)",
+    "citation": "Json House, \"LLM Cache Pricing 2026: The Real Cost of Cached Input\", jsonhouse.com (2026-11-10)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
   "key_facts": [
     {
-      "fact": "Anthropic runs three cache-read multipliers as of 2026-09-28 where it ran one before 2026-09-07: 0.025x base input on Claude Fable 5.1 and Mythos 5.1 (97.5% off), 0.05x on Claude Opus 5.5 and, from 2026-10-14, Claude Sonnet 5.5 (95%), and 0.1x on the rest of its line (90%); DeepSeek reached 98% on deepseek-flash on 2026-09-14; OpenAI left a flat 0.1x on 2026-10-05 with GPT-6.1-sol at 0.05x and Google on 2026-10-14 with Gemini 4 Argon at 0.05x, so none of the three original 0.1x vendors is flat across its line; Mistral sits at a flat 90% and xAI at 75-85%",
+      "fact": "Anthropic runs three cache-read multipliers as of 2026-09-28 where it ran one before 2026-09-07: 0.025x base input on Claude Fable 5.1 and Mythos 5.1 and, from 2026-11-10, Fable 5.2 and Mythos 5.2 (97.5% off), 0.05x on Claude Opus 5.5 and, from 2026-10-14, Claude Sonnet 5.5 (95%), and 0.1x on the rest of its line (90%); DeepSeek reached 98% on deepseek-flash on 2026-09-14; OpenAI left a flat 0.1x on 2026-10-05 with GPT-6.1-sol at 0.05x, extended to GPT-6.1-terra by 2026-11-10, and Google on 2026-10-14 with Gemini 4 Argon at 0.05x, so none of the three original 0.1x vendors is flat across its line; Mistral sits at a flat 90% and xAI at 75-85%",
       "source": "Official pricing pages of six providers, retrieved 2026-10-14",
       "category": "data"
     },
@@ -53,7 +53,7 @@
       "category": "policy"
     },
     {
-      "fact": "Four of the six providers publish no cache TTL; Mistral's per-model cached-input price, first recorded by this series on 2026-10-14, is 0.1x base input on every model, but Mistral still publishes no cache write price, storage fee or TTL",
+      "fact": "Four of the six providers publish no cache TTL; Mistral's per-model cached-input price, first recorded by this series on 2026-10-14, is 0.1x base input on every model it lists; Mistral Medium 3.5 left the page by 2026-11-10 and Mistral Large 4 ($0.70 / $0.07) is now the Mistral row, but Mistral still publishes no cache write price, storage fee or TTL",
       "source": "jsonhouse normalization of six official documentation sets, 2026-07-28; Mistral API pricing page, retrieved 2026-10-14",
       "category": "data"
     },
@@ -63,15 +63,15 @@
       "category": "policy"
     },
     {
-      "fact": "Eighteen model pairs cross inside the 0-100% hit-rate range on 2026-10-14, up from eleven on 2026-10-05; the lowest is Grok 4.3 x Mistral Medium 3.5 at 83.3%, which enters only because Mistral's cache price was recorded for the first time, followed by Grok 4.6 x Claude Opus 5.5 at 87.0%; six of the seven new pairs come from one $2.00 base / $0.10 cache-read curve now shared by Claude Sonnet 5.5, GPT-6.1-sol and Gemini 4 Argon",
-      "source": "jsonhouse calculation from official pricing pages, 2026-10-14",
+      "fact": "Twenty-one model pairs cross inside the 0-100% hit-rate range on 2026-11-10, up from eighteen; four pairs involving Mistral Medium 3.5 left when Mistral's pricing page stopped listing it, including the 83.3% Grok 4.3 x Mistral Medium 3.5, so the lowest is again Grok 4.6 x Claude Opus 5.5 at 87.0%; seven new pairs come from Claude Fable 5.2 (90.9% against Claude Opus 5), GPT-6.1-terra (90.9% against the Gemini 3.x Flash rows, 93.8% against Mistral Large 4) and Fable 5.2's flagship crossings",
+      "source": "jsonhouse calculation from official pricing pages, 2026-11-10",
       "category": "data"
     }
   ],
   "faq_summary": [
     {
       "q": "How much does prompt caching actually save in 2026?",
-      "a": "The discount is 90% on most rows at Anthropic, OpenAI, Google and Mistral, 95% on Claude Opus 5.5, Claude Sonnet 5.5, GPT-6.1-sol and Gemini 4 Argon, 97.5% on Claude Fable 5.1 and Mythos 5.1, 98% on DeepSeek flash, and 75-85% at xAI. It applies only to the cached share of a prompt, so the realized saving is roughly hit rate times discount — a 50% hit rate against a 90% discount is a 45% cut."
+      "a": "The discount is 90% on most rows at Anthropic, OpenAI, Google and Mistral, 95% on Claude Opus 5.5, Claude Sonnet 5.5, GPT-6.1-sol, GPT-6.1-terra and Gemini 4 Argon, 97.5% on Claude Fable 5.1, Fable 5.2 and their Mythos twins, 98% on DeepSeek flash, and 75-85% at xAI. It applies only to the cached share of a prompt, so the realized saving is roughly hit rate times discount — a 50% hit rate against a 90% discount is a 45% cut."
     },
     {
       "q": "Do you pay to write to the cache?",
@@ -113,7 +113,7 @@
     },
     {
       "title": "Gemini API pricing",
-      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "url": "https://aistudio.google.com/docs/pricing",
       "publisher": "Google"
     },
     {
@@ -143,7 +143,7 @@
     },
     {
       "title": "Mistral API pricing",
-      "url": "https://mistral.ai/pricing/api",
+      "url": "https://docs.mistral.ai/inference/pricing",
       "publisher": "Mistral AI"
     }
   ],
@@ -158,7 +158,7 @@
       "effective_h80",
       "effective_h95"
     ],
-    "unit": "USD per 1M input tokens, standard non-batch base tier, collected 2026-10-19 (Monday). No base or cache-read price changed against the 2026-10-14 collection, so every figure below is carried unchanged; DeepSeek replaced the model behind deepseek-flash with DeepSeek-V4.1-Flash-1017 on 2026-10-17 at the same price. On 2026-10-14 (Wednesday; the 2026-10-12 slot was missed) one existing row changed: Claude Sonnet 5.5's cache read fell from $0.20 to $0.10 and it now has its own entry. Added Gemini 4 Argon and Claude Haiku 5.5; removed Gemini 3.7 Flash (deprecated, routed to Gemini 3.8 Flash). Mistral Medium 3.5 is filled from a cached-input price recorded for the first time, not a changed one. effective_hN = base x (1 - N) + cache_read x N. Gemini 3.6/3.8 Flash are promotional through 2026-12-31 and Gemini 4 Argon through 2026-11-30; Claude Haiku 5.5 figures apply only to prompts up to 100,000 tokens; DeepSeek rows are off-peak and double during weekday peak UTC windows; weekends and Chinese public holidays are off-peak. The DeepSeek flash row replaced the retired v4-flash on 2026-09-14 and is a different model, not a reprice. Effective prices are per token and a token is not a constant amount of text: Claude 4.7 and later count roughly 30% more tokens for the same input than Sonnet 4.6 and earlier, which leaves the discount ratios intact but understates the newer Claude rows in any cross-row price comparison.",
+    "unit": "USD per 1M input tokens, standard non-batch base tier, collected 2026-11-10 (Tuesday; the 2026-11-02 and 2026-11-09 collections were missed, and this page skipped its 2026-10-26 refresh). Added Claude Fable 5.2, GPT-6.1-terra and Mistral Large 4; removed Mistral Medium 3.5, which Mistral's new pricing page no longer lists. Every other base and cache-read price is unchanged against 2026-10-19. effective_hN = base x (1 - N) + cache_read x N. Gemini 3.6/3.8 Flash are promotional through 2026-12-31 and Gemini 4 Argon through 2026-11-30; GPT-5.6-sol is promotional until 2026-11-30; Gemini 2.5 Flash is routed to Gemini 3.5 Flash-Lite from 2026-12-01; Claude Haiku 5.5 figures apply only to prompts up to 100,000 tokens; DeepSeek rows are off-peak and double during weekday peak UTC windows; weekends and Chinese public holidays are off-peak. Mistral Large 4 has moved price three times since 2026-10-14 with no stated dates. Effective prices are per token and a token is not a constant amount of text: Claude 4.7 and later count roughly 30% more tokens for the same input than Sonnet 4.6 and earlier, which leaves the discount ratios intact but understates the newer Claude rows in any cross-row price comparison.",
     "entries": [
       {
         "model": "Claude Fable 5.1",
@@ -169,6 +169,17 @@
         "effective_h50": 5.125,
         "effective_h80": 2.2,
         "effective_h95": 0.7375
+      },
+      {
+        "model": "Claude Fable 5.2",
+        "provider": "Anthropic",
+        "base_input_per_1m_usd": 8.0,
+        "cache_read_per_1m_usd": 0.2,
+        "discount_pct": 97.5,
+        "effective_h50": 4.1,
+        "effective_h80": 1.76,
+        "effective_h95": 0.59,
+        "note": "Added 2026-11-10; same 0.025x cache-read multiplier as Fable 5.1 on a base 20% lower, so it is cheaper than Fable 5.1 at every hit rate. Claude Mythos 5.2 carries identical figures"
       },
       {
         "model": "Claude Opus 5",
@@ -283,17 +294,6 @@
         "effective_h95": 0.385
       },
       {
-        "model": "Mistral Medium 3.5",
-        "provider": "Mistral",
-        "base_input_per_1m_usd": 1.5,
-        "cache_read_per_1m_usd": 0.15,
-        "discount_pct": 90.0,
-        "effective_h50": 0.825,
-        "effective_h80": 0.42,
-        "effective_h95": 0.2175,
-        "note": "Cached-input price first recorded 2026-10-14; earlier editions left this entry unfilled. Mistral publishes no write price, storage fee or TTL"
-      },
-      {
         "model": "Grok 4.3",
         "provider": "xAI",
         "base_input_per_1m_usd": 1.25,
@@ -302,6 +302,17 @@
         "effective_h50": 0.725,
         "effective_h80": 0.41,
         "effective_h95": 0.2525
+      },
+      {
+        "model": "GPT-6.1-terra",
+        "provider": "OpenAI",
+        "base_input_per_1m_usd": 1.0,
+        "cache_read_per_1m_usd": 0.05,
+        "discount_pct": 95.0,
+        "effective_h50": 0.525,
+        "effective_h80": 0.24,
+        "effective_h95": 0.0975,
+        "note": "Added 2026-11-10 at half of GPT-6.1-sol on both figures (0.05x). Cheaper than Claude Haiku 4.5 and Grok 4.3 at every hit rate"
       },
       {
         "model": "Claude Haiku 4.5",
@@ -334,6 +345,17 @@
         "effective_h95": 0.1088
       },
       {
+        "model": "Mistral Large 4",
+        "provider": "Mistral",
+        "base_input_per_1m_usd": 0.7,
+        "cache_read_per_1m_usd": 0.07,
+        "discount_pct": 90.0,
+        "effective_h50": 0.385,
+        "effective_h80": 0.196,
+        "effective_h95": 0.1015,
+        "note": "Added 2026-11-10, replacing Mistral Medium 3.5 as the Mistral row. Recorded as list price (no strikethrough on the page); the model was $1.36 / $0.14 on 2026-10-26. Cheaper than both Gemini 3.x Flash rows at every hit rate"
+      },
+      {
         "model": "DeepSeek v4-pro",
         "provider": "DeepSeek",
         "base_input_per_1m_usd": 0.66,
@@ -351,7 +373,8 @@
         "discount_pct": 90.0,
         "effective_h50": 0.165,
         "effective_h80": 0.084,
-        "effective_h95": 0.0435
+        "effective_h95": 0.0435,
+        "note": "Deprecated in Google changelog of 2026-11-02: from 2026-12-01 requests route to Gemini 3.5 Flash-Lite"
       },
       {
         "model": "DeepSeek flash",
@@ -455,7 +478,7 @@
         "name": "crossover_hit_rate_grok_46_vs_claude_opus_55",
         "value": 87.0,
         "unit": "percent",
-        "note": "Both cost $0.6957 per 1M effective input tokens at this hit rate. Above it Claude Opus 5.5 at a $4.00 base is cheaper per effective input token than Grok 4.6 at $2.00, because Opus 5.5 discounts a cache read 95% against xAI's 75%. Added 2026-09-28; the lowest crossover on this page and the first flagship pair inside the range long-running agents operate in"
+        "note": "Both cost $0.6957 per 1M effective input tokens at this hit rate. Above it Claude Opus 5.5 at a $4.00 base is cheaper per effective input token than Grok 4.6 at $2.00, because Opus 5.5 discounts a cache read 95% against xAI's 75%. Added 2026-09-28; the lowest crossover on this page again from 2026-11-10 (from 2026-10-14 to 2026-10-19 it was Grok 4.3 x Mistral Medium 3.5 at 83.3%) and the first flagship pair inside the range long-running agents operate in"
       },
       {
         "name": "crossover_hit_rate_gpt_6_luna_vs_deepseek_flash",
@@ -488,12 +511,6 @@
         "note": "GPT-6-sol, GPT-5.6-terra, Claude Sonnet 5, Grok 4.6 and Grok 4.5 share GPT-6.1-sol's $2.00 base and carry a higher cache read, so they tie it at a 0% hit rate and cost more at every rate above it; no crossover exists. Recorded 2026-10-05. Since 2026-10-14 Claude Sonnet 5.5 and Gemini 4 Argon share GPT-6.1-sol's curve exactly and dominate the same five rows"
       },
       {
-        "name": "crossover_hit_rate_grok_43_vs_mistral_medium_35",
-        "value": 83.3,
-        "unit": "percent",
-        "note": "Both cost $0.3750 per 1M effective input tokens at this hit rate. Above it Mistral Medium 3.5 at $1.50 base is cheaper than Grok 4.3 at $1.25, because Mistral discounts a cache read 90% against Grok 4.3's 84%. Added 2026-10-14, the lowest crossover on this page; it enters because Mistral's cache price was recorded for the first time, and neither price moved, so it may predate this date"
-      },
-      {
         "name": "crossover_hit_rate_claude_haiku_55_vs_deepseek_flash",
         "value": 87.7,
         "unit": "percent",
@@ -506,10 +523,46 @@
         "note": "Both pairs cost $0.3235 per 1M effective input tokens at this hit rate, identical to Grok 4.3 x GPT-6.1-sol because all three share a $2.00 base and $0.10 cache read. Added 2026-10-14"
       },
       {
-        "name": "crossover_hit_rate_mistral_medium_35_vs_2usd_95pct_curve",
+        "name": "crossover_hit_rate_claude_opus_5_vs_claude_fable_52",
         "value": 90.9,
         "unit": "percent",
-        "note": "Mistral Medium 3.5 crosses GPT-6.1-sol, Claude Sonnet 5.5 and Gemini 4 Argon at the same point, $0.2727 per 1M effective input tokens: three pairs, one curve. Added 2026-10-14"
+        "note": "Both cost $0.9091 per 1M effective input tokens at this hit rate. Added 2026-11-10; Fable 5.2 crosses Opus 5 at a hit rate 4.3 points lower than Fable 5.1 does"
+      },
+      {
+        "name": "crossover_hit_rate_fable_52_vs_grok_46_and_gpt_56_sol",
+        "value": 95.2,
+        "unit": "percent",
+        "note": "Grok 4.6 x Claude Fable 5.2 and GPT-5.6-sol x Claude Fable 5.2 both cross at $0.5714 per 1M effective input tokens. Added 2026-11-10"
+      },
+      {
+        "name": "crossover_hit_rate_grok_45_vs_claude_fable_52",
+        "value": 98.4,
+        "unit": "percent",
+        "note": "Both cost $0.3279 per 1M effective input tokens at this hit rate. Added 2026-11-10"
+      },
+      {
+        "name": "crossover_hit_rate_gemini_3x_flash_vs_gpt_61_terra",
+        "value": 90.9,
+        "unit": "percent",
+        "note": "Gemini 3.8 Flash and Gemini 3.6 Flash each cross GPT-6.1-terra at $0.1364 per 1M effective input tokens. Added 2026-11-10"
+      },
+      {
+        "name": "crossover_hit_rate_mistral_large_4_vs_gpt_61_terra",
+        "value": 93.8,
+        "unit": "percent",
+        "note": "Both cost $0.1094 per 1M effective input tokens at this hit rate. Added 2026-11-10"
+      },
+      {
+        "name": "removed_crossovers_mistral_medium_35",
+        "value": 4,
+        "unit": "pairs",
+        "note": "Grok 4.3 x Mistral Medium 3.5 (83.3%, the lowest on the page from 2026-10-14) and Mistral Medium 3.5 x the $2.00 / 95% curve (90.9%, three pairs) left on 2026-11-10 because Mistral's new pricing page no longer lists Medium 3.5. No price on either side moved"
+      },
+      {
+        "name": "crossover_pair_count",
+        "value": 21,
+        "unit": "pairs",
+        "note": "Computed exhaustively over all 26 rows on 2026-11-10, up from 18 on 2026-10-14 and 2026-10-19"
       },
       {
         "name": "break_even_calls_write_multiplier_1_25x",
