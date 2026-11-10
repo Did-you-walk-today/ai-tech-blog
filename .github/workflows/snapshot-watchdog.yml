@@ -1,0 +1,48 @@
+name: Pricing Snapshot Watchdog
+
+# The weekly pricing snapshot is taken by a scheduled Claude task on 기웅's PC
+# (Mondays, KST). That task only runs while the desktop app is open, and a
+# missed week can never be backfilled -- the file name is the collection date.
+# This job is the alarm: no LLM, no API key, no cost. It only checks that a
+# snapshot dated on or after this week's Monday has reached the repository,
+# and opens an issue if it has not.
+on:
+  schedule:
+    # Tuesday 01:00 UTC = Tuesday 10:00 KST, a day after the snapshot is due.
+    - cron: '0 1 * * 2'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check this week's snapshot exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          monday=$(date -u -d "-$(( $(date -u +%u) - 1 )) days" +%F)
+          latest=$(ls _data/pricing_history/ | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}\.json$' | sort | tail -1)
+          latest=${latest%.json}
+          echo "Week starts ${monday}; latest snapshot is ${latest:-none}."
+
+          # ISO dates compare correctly as strings.
+          if [[ -n "${latest}" && ! "${latest}" < "${monday}" ]]; then
+            echo "Snapshot for this week is present."
+            exit 0
+          fi
+
+          title="Pricing snapshot missing: week of ${monday}"
+          if [ -z "$(gh issue list --state open --search "\"${title}\" in:title" --json number --jq '.[].number')" ]; then
+            gh issue create --title "${title}" --body "No file dated ${monday} or later exists in \`_data/pricing_history/\` (latest: ${latest:-none}).
+
+          Run the \`pricing-snapshot\` skill today. The file name must be the actual collection date -- do not backfill ${monday}.
+
+          If the week has already ended, leave the gap. A missing week is recorded as missing."
+          fi
+          echo "::error title=Snapshot missing::No pricing snapshot dated ${monday} or later."
+          exit 1
