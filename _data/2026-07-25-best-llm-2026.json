@@ -3,7 +3,7 @@
   "slug": "best-llm-2026",
   "title": "Best LLM 2026: Capability and Limits Compared",
   "description": "Best LLM 2026 compared on the limits that actually block builds: context window, max output tokens, prompt cache minimums, knowledge cutoffs, and retirement dates.",
-  "data_updated": "2026-10-26",
+  "data_updated": "2026-11-10",
   "source_post": "https://www.jsonhouse.com/posts/best-llm-2026/",
   "category": "ai-models-intelligence",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/best-llm-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/best-llm-2026.json",
-    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-10-26)",
+    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-11-10)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -77,6 +77,18 @@
       "min_cacheable_prefix_tokens"
     ],
     "entries": [
+      {
+        "model": "claude-fable-5-2",
+        "provider": "Anthropic",
+        "context_window_input_tokens": 1000000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-06",
+        "min_cacheable_prefix_tokens": 512,
+        "retirement_floor": "2027-11-09",
+        "note": "Collected 2026-11-10. Reliable knowledge cutoff and training data cutoff are both June 2026. Not listed for the 300000-token Message Batches output extension. Claude Mythos 5.2 shares its pricing and cache minimum but has no column on the models overview page",
+        "price_band": "flagship"
+      },
       {
         "model": "claude-fable-5-1",
         "provider": "Anthropic",
@@ -167,7 +179,7 @@
         "knowledge_cutoff": "2025-02",
         "min_cacheable_prefix_tokens": 4096,
         "retirement_floor": "2026-10-15",
-        "note": "Retirement floor passed on 2026-10-15 with no deprecation notice; still listed as Active on 2026-10-26, so under the 60-day minimum it cannot retire before 2026-12-25 (jsonhouse arithmetic, not an Anthropic date)",
+        "note": "Retirement floor passed on 2026-10-15 with no deprecation notice; still listed as Active on 2026-11-10, so under the 60-day minimum it cannot retire before 2027-01-09 (jsonhouse arithmetic, not an Anthropic date)",
         "price_band": "budget"
       },
       {
@@ -288,7 +300,8 @@
         "image_input": true,
         "knowledge_cutoff": null,
         "min_cacheable_prefix_tokens": 2048,
-        "price_band": "budget"
+        "price_band": "budget",
+        "note": "Deprecated in Google changelog of 2026-11-02: from 2026-12-01 requests route to gemini-3.5-flash-lite"
       },
       {
         "model": "grok-4.3",
@@ -308,7 +321,7 @@
         "image_input": null,
         "knowledge_cutoff": "2026-05",
         "min_cacheable_prefix_tokens": null,
-        "note": "Collected 2026-09-28. image_input is null, not false: xAI\u0027s models page states this model\u0027s context window and knowledge cutoff but no longer states image support per model, so the July \u0022Yes\u0022 on the older Grok rows was not read across",
+        "note": "Collected 2026-09-28. image_input is null, not false: xAI's models page states this model's context window and knowledge cutoff but no longer states image support per model, so the July \"Yes\" on the older Grok rows was not read across",
         "price_band": "mid"
       },
       {
@@ -464,6 +477,10 @@
   ],
   "update_cadence": "monthly, first Tuesday",
   "changelog": [
+    {
+      "date": "2026-11-10",
+      "change": "Out-of-cycle addition prompted by the weekly pricing collection; the scheduled 2026-11-03 monthly refresh was missed and is recorded as a gap. Added claude-fable-5-2 (1,000,000 context, 128,000 output, image input, June 2026 reliable knowledge cutoff, 512-token cache minimum, retirement floor 2027-11-09), collected from Anthropic's models overview and prompt caching documentation on 2026-11-10; it is not listed for the 300,000-token batch output extension. claude-haiku-4-5 is still Active with no notice, so its earliest possible retirement moves to 2027-01-09. Google deprecated gemini-2.5-flash and gemini-2.5-pro on 2026-11-02, routing them to gemini-3.5-flash-lite and gemini-3.8-flash from 2026-12-01; the rows stay until then. No other row was re-collected."
+    },
     {
       "date": "2026-10-26",
       "change": "Out-of-cycle lifecycle correction prompted by the weekly pricing collection. Two nearest-retirement dates had passed: OpenAI shut down o3-mini, gpt-4-0613 and the rest of its April 22 notice on 2026-10-23, and Google's veo-3.1 previews and gemini-omni-flash-preview reached their 2026-10-22 shutdown. OpenAI's nearest is now tts-1, tts-1-hd and gpt-4o-mini-tts on 2027-01-06 (text models gpt-4o, gpt-4o-mini, gpt-4.1 and gpt-4.1-mini on 2027-01-14); Google's is five audio, TTS and live preview models on 2026-11-17. claude-haiku-4-5-20251001 is still Active with no notice, so its earliest possible retirement moves to 2026-12-25. No capability row was re-collected."
