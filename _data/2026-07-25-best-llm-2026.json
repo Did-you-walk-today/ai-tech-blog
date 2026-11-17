@@ -3,7 +3,7 @@
   "slug": "best-llm-2026",
   "title": "Best LLM 2026: Capability and Limits Compared",
   "description": "Best LLM 2026 compared on the limits that actually block builds: context window, max output tokens, prompt cache minimums, knowledge cutoffs, and retirement dates.",
-  "data_updated": "2026-11-10",
+  "data_updated": "2026-11-17",
   "source_post": "https://www.jsonhouse.com/posts/best-llm-2026/",
   "category": "ai-models-intelligence",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/best-llm-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/best-llm-2026.json",
-    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-11-10)",
+    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-11-17)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -179,7 +179,7 @@
         "knowledge_cutoff": "2025-02",
         "min_cacheable_prefix_tokens": 4096,
         "retirement_floor": "2026-10-15",
-        "note": "Retirement floor passed on 2026-10-15 with no deprecation notice; still listed as Active on 2026-11-10, so under the 60-day minimum it cannot retire before 2027-01-09 (jsonhouse arithmetic, not an Anthropic date)",
+        "note": "Retirement floor passed on 2026-10-15 with no deprecation notice; still listed as Active on 2026-11-17, so under the 60-day minimum it cannot retire before 2027-01-16 (jsonhouse arithmetic, not an Anthropic date)",
         "price_band": "budget"
       },
       {
@@ -266,6 +266,30 @@
         "knowledge_cutoff": null,
         "min_cacheable_prefix_tokens": 4096,
         "note": "Collected 2026-10-14. Google states 1,048,576 as a unified input-and-output token limit, so a long output reduces the room for input. Max output 65,536 by default, up to 1,048,576 with long decode. Implicit caching only. Introductory price through 2026-11-30 places it in the mid band until then",
+        "price_band": "mid"
+      },
+      {
+        "model": "gemini-4-carbon",
+        "provider": "Google",
+        "context_window_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "image_input": true,
+        "additional_input_modalities": ["video", "audio", "pdf"],
+        "knowledge_cutoff": null,
+        "min_cacheable_prefix_tokens": 4096,
+        "note": "Collected 2026-11-17 (released 2026-11-10). Google states 1,048,576 as a unified input-and-output token limit. Max output 65,536 by default, up to 1,048,576 with long decode. Implicit caching only. Introductory price through 2026-11-30, the same as gemini-4-argon, places it in the mid band until then",
+        "price_band": "mid"
+      },
+      {
+        "model": "gemini-4-hydrogen",
+        "provider": "Google",
+        "context_window_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "image_input": true,
+        "additional_input_modalities": ["video", "audio", "pdf"],
+        "knowledge_cutoff": null,
+        "min_cacheable_prefix_tokens": 4096,
+        "note": "Collected 2026-11-17 (released 2026-11-12). Google states 1,048,576 as a unified input-and-output token limit. Max output 65,536 by default, up to 1,048,576 with long decode. Implicit caching only. Priced $1.50/$7.50 with no introductory schedule shown",
         "price_band": "mid"
       },
       {
@@ -375,7 +399,7 @@
       "provider": "Google",
       "minimum_notice": "not stated",
       "publishes_dates_for_active_models": false,
-      "nearest_confirmed_retirement": "gemini-3.1-flash-tts-preview, gemini-3.1-flash-live-preview, gemini-2.5-flash-native-audio-preview-12-2025, gemini-2.5-flash-preview-tts and gemini-2.5-pro-preview-tts on 2026-11-17; veo-3.1 preview models and gemini-omni-flash-preview reached their 2026-10-22 shutdown; gemini-3.7-flash and gemini-3.5-flash were deprecated on 2026-10-08 with no shutdown date, their ids routed to newer models"
+      "nearest_confirmed_retirement": "gemini-2.5-pro and gemini-2.5-flash on 2026-12-01, routed to gemini-3.8-flash and gemini-3.5-flash-lite rather than switched off; gemini-3.1-flash-tts-preview, gemini-3.1-flash-live-preview, gemini-2.5-flash-native-audio-preview-12-2025, gemini-2.5-flash-preview-tts and gemini-2.5-pro-preview-tts were scheduled to shut down on 2026-11-17; veo-3.1 preview models and gemini-omni-flash-preview reached their 2026-10-22 shutdown; gemini-3.7-flash and gemini-3.5-flash were deprecated on 2026-10-08 with no shutdown date, their ids routed to newer models"
     },
     {
       "provider": "xAI",
@@ -445,6 +469,16 @@
       "publisher": "OpenAI"
     },
     {
+      "title": "Gemini 4 Carbon model page",
+      "url": "https://aistudio.google.com/docs/models/gemini-4-carbon",
+      "publisher": "Google"
+    },
+    {
+      "title": "Gemini 4 Hydrogen model page",
+      "url": "https://aistudio.google.com/docs/models/gemini-4-hydrogen",
+      "publisher": "Google"
+    },
+    {
       "title": "Gemini 4 Argon model page",
       "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
       "publisher": "Google"
@@ -477,6 +511,10 @@
   ],
   "update_cadence": "monthly, first Tuesday",
   "changelog": [
+    {
+      "date": "2026-11-17",
+      "change": "Out-of-cycle addition prompted by the weekly pricing collection. Added gemini-4-carbon (released 2026-11-10) and gemini-4-hydrogen (released 2026-11-12) from Google's model pages: 1,048,576 unified input-and-output limit, 65,536 output by default and up to 1,048,576 with long decode, text, image, video, audio and PDF input, no published knowledge cutoff, 4,096-token implicit-caching minimum, explicit caching not supported; both in the mid band. claude-haiku-4-5-20251001 still Active with no notice on 2026-11-17, so its earliest possible retirement is now 2027-01-16. Google's nearest lifecycle entry is now the 2026-12-01 routing of gemini-2.5-pro and gemini-2.5-flash."
+    },
     {
       "date": "2026-11-10",
       "change": "Out-of-cycle addition prompted by the weekly pricing collection; the scheduled 2026-11-03 monthly refresh was missed and is recorded as a gap. Added claude-fable-5-2 (1,000,000 context, 128,000 output, image input, June 2026 reliable knowledge cutoff, 512-token cache minimum, retirement floor 2027-11-09), collected from Anthropic's models overview and prompt caching documentation on 2026-11-10; it is not listed for the 300,000-token batch output extension. claude-haiku-4-5 is still Active with no notice, so its earliest possible retirement moves to 2027-01-09. Google deprecated gemini-2.5-flash and gemini-2.5-pro on 2026-11-02, routing them to gemini-3.5-flash-lite and gemini-3.8-flash from 2026-12-01; the rows stay until then. No other row was re-collected."

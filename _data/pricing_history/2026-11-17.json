@@ -367,8 +367,8 @@
       "input_per_1m": 2.0,
       "output_per_1m": 10.0,
       "cache_read_per_1m": 0.1,
-      "context_window": null,
-      "note": "First observed 2026-11-17 (release 2026-11-10 per the deprecations page). Introductory rate through 2026-11-30; doubles to $4.00/$20.00 (cache $0.20) on 2026-12-01, the same schedule as gemini-4-argon. Implicit caching only. No >200K tier shown. Context window not recorded",
+      "context_window": 1048576,
+      "note": "First observed 2026-11-17 (release 2026-11-10 per the deprecations page). Introductory rate through 2026-11-30; doubles to $4.00/$20.00 (cache $0.20) on 2026-12-01, the same schedule as gemini-4-argon. Implicit caching only. No >200K tier shown. Context window 1,048,576 (unified input and output) from the model page, read the same day",
       "source_url": "https://aistudio.google.com/docs/pricing",
       "retrieved_at": "2026-11-17T00:47:45Z"
     },
@@ -378,8 +378,8 @@
       "input_per_1m": 1.5,
       "output_per_1m": 7.5,
       "cache_read_per_1m": 0.075,
-      "context_window": null,
-      "note": "First observed 2026-11-17 (release 2026-11-12 per the deprecations page). No introductory schedule shown. The only Gemini 4 model with a free tier. No >200K tier shown. Context window not recorded",
+      "context_window": 1048576,
+      "note": "First observed 2026-11-17 (release 2026-11-12 per the deprecations page). No introductory schedule shown. The only Gemini 4 model with a free tier. No >200K tier shown. Context window 1,048,576 (unified input and output) from the model page, read the same day",
       "source_url": "https://aistudio.google.com/docs/pricing",
       "retrieved_at": "2026-11-17T00:47:45Z"
     },
