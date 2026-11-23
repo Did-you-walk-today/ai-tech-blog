@@ -1,0 +1,432 @@
+{
+  "schema_version": "1.0",
+  "slug": "llm-price-changes-2026",
+  "title": "LLM Price Changes 2026: 18 Weekly Snapshots, One Pattern",
+  "description": "We checked up to 60 LLM APIs weekly for 130 days. Listed model IDs changed price 10 times in 814 checks; since August, every list-price cut came as a new model.",
+  "data_updated": "2026-11-23",
+  "source_post": "https://www.jsonhouse.com/posts/llm-price-changes-2026/",
+  "category": "ai-data-statistics",
+  "cluster": "CLUSTER_LLM",
+  "format": "D",
+  "attribution": {
+    "source": "Json House",
+    "source_url": "https://www.jsonhouse.com/posts/llm-price-changes-2026/",
+    "dataset_url": "https://www.jsonhouse.com/data/llm-price-changes-2026.json",
+    "citation": "Json House, \"LLM Price Changes 2026: 18 Weekly Snapshots, One Pattern\", jsonhouse.com (2026-11-23)",
+    "attribution_required": true,
+    "terms_url": "https://www.jsonhouse.com/data-policy/"
+  },
+  "key_facts": [
+    {
+      "fact": "Across 18 weekly snapshots of six providers' official pricing pages from 2026-07-16 to 2026-11-23 (130 days), models that stayed listed changed price in 10 of 814 week-to-week checks (1.2%): 7 cuts and 3 increases, on 9 models",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23",
+      "category": "data"
+    },
+    {
+      "fact": "24 of the 29 models listed in all 18 snapshots ended on 2026-11-23 at exactly their 2026-07-16 input, output and cache-read price; 4 ended lower (three OpenAI GPT-5.6 models and Grok 4.5's cache read) and 1 higher (DeepSeek v4-pro)",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23",
+      "category": "data"
+    },
+    {
+      "fact": "Between 2026-08-24 and 2026-11-23 no listed model had its input or output price cut except Mistral Large 4 reversing its own increase, while 8 new model IDs launched with an input price 20% to 90% below their predecessor's",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23",
+      "category": "trend"
+    },
+    {
+      "fact": "Of 19 same-line successor models compared with their predecessor in the week they first appeared, 8 had a lower input price, 10 the same and 1 higher; the median input price change at launch was 0%",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23",
+      "category": "data"
+    },
+    {
+      "fact": "10 of the 19 successors launched with a cheaper cache-read price, more than cut their input price; GPT-6.1-sol and Claude Fable 5.1 changed only the cache read",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23",
+      "category": "data"
+    },
+    {
+      "fact": "All three increases on listed models came from DeepSeek (v4-flash and v4-pro, between 2026-08-10 and 2026-08-17) and Mistral (Mistral Large 4, +100% between 2026-10-19 and 2026-10-26, then -48.5% on input by 2026-11-10)",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23",
+      "category": "data"
+    },
+    {
+      "fact": "The tracked set grew from 38 to 60 models through 32 entries and 10 exits; 8 of the entries came on 2026-07-28 when coverage widened, and 5 of the exits on 2026-08-17 were models already retired",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23",
+      "category": "data"
+    },
+    {
+      "fact": "Google's Gemini 4 Argon and Gemini 4 Carbon are scheduled to double from $2.00/$10.00 to $4.00/$20.00 per 1M tokens on 2026-12-01, and Gemini 3.8 Flash and 3.6 Flash from $0.75/$3.75 to $1.50/$7.50 on 2027-01-01",
+      "source": "Gemini API pricing page, retrieved 2026-11-23",
+      "category": "policy"
+    }
+  ],
+  "faq_summary": [
+    {
+      "q": "Do LLM API prices go down over time in 2026?",
+      "a": "Not on the model you already use. 24 of the 29 models tracked from 2026-07-16 to 2026-11-23 ended at exactly their July price; since 2026-08-24 every input or output list-price cut came with a new model ID."
+    },
+    {
+      "q": "How often does an LLM API price change?",
+      "a": "In 10 of 814 week-to-week checks of models that stayed listed, about 1.2%: seven cuts and three increases."
+    },
+    {
+      "q": "Is a new LLM model version cheaper than the one it replaces?",
+      "a": "About half the time on input price: of 19 same-line successors, 8 were cheaper, 10 the same and 1 more expensive. 10 of 19 launched with a cheaper cache read."
+    },
+    {
+      "q": "Did any LLM API provider raise prices in 2026?",
+      "a": "Yes, three times on listed models: DeepSeek v4-flash and v4-pro on 2026-08-17, and Mistral Large 4 on 2026-10-26, which fell back by half by 2026-11-10."
+    },
+    {
+      "q": "Which LLM API prices are scheduled to change next?",
+      "a": "As published on 2026-11-23: GPT-5.6-sol's promotion ends 2026-11-30; Gemini 4 Argon and Carbon double on 2026-12-01; Gemini 3.8 and 3.6 Flash double on 2027-01-01."
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Anthropic API pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "OpenAI API pricing",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "publisher": "OpenAI"
+    },
+    {
+      "title": "Gemini API pricing",
+      "url": "https://aistudio.google.com/docs/pricing",
+      "publisher": "Google"
+    },
+    {
+      "title": "xAI models and pricing",
+      "url": "https://docs.x.ai/docs/models",
+      "publisher": "xAI"
+    },
+    {
+      "title": "DeepSeek API pricing",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "publisher": "DeepSeek"
+    },
+    {
+      "title": "Mistral API pricing",
+      "url": "https://docs.mistral.ai/inference/pricing",
+      "publisher": "Mistral AI"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-28",
+      "event": "Grok 4.5 cache read $0.50 -> $0.30 (-40%), window 2026-07-16 to 2026-07-28",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23"
+    },
+    {
+      "date": "2026-08-03",
+      "event": "GPT-5.6-terra $2.50/$15.00 -> $2.00/$12.00 (-20%), cache $0.25 -> $0.20",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23"
+    },
+    {
+      "date": "2026-08-03",
+      "event": "GPT-5.6-luna $1.00/$6.00 -> $0.20/$1.20 (-80%), cache $0.10 -> $0.02",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23"
+    },
+    {
+      "date": "2026-08-17",
+      "event": "Gemini 3.6 Flash $1.50/$7.50 -> $0.75/$3.75 (-50%), cache $0.15 -> $0.075",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23"
+    },
+    {
+      "date": "2026-08-17",
+      "event": "DeepSeek v4-flash $0.14/$0.28 -> $0.22/$0.66 (+57.1% / +135.7%), cache $0.0028 -> $0.007, off-peak",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23"
+    },
+    {
+      "date": "2026-08-17",
+      "event": "DeepSeek v4-pro $0.435/$0.87 -> $0.66/$1.98 (+51.7% / +127.6%), cache $0.003625 -> $0.022, off-peak",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23"
+    },
+    {
+      "date": "2026-08-24",
+      "event": "GPT-5.6-sol $5.00/$30.00 -> $4.00/$20.00 (-20% / -33.3%), cache $0.50 -> $0.40, promotional",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "Claude Sonnet 5.5 cache read $0.20 -> $0.10 (-50%), window 2026-10-05 to 2026-10-14",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23"
+    },
+    {
+      "date": "2026-10-26",
+      "event": "Mistral Large 4 $0.68/$2.09 -> $1.36/$4.18 (+100%), cache $0.07 -> $0.14, sale ended",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23"
+    },
+    {
+      "date": "2026-11-10",
+      "event": "Mistral Large 4 $1.36/$4.18 -> $0.70/$2.10 (-48.5% / -49.8%), cache $0.14 -> $0.07, window 2026-10-26 to 2026-11-10",
+      "source": "jsonhouse original measurement from weekly snapshots 2026-07-16 to 2026-11-23"
+    }
+  ],
+  "comparison_data": {
+    "field_provenance": {
+      "first_seen": "measured by jsonhouse",
+      "predecessor_input_per_1m_usd": "vendor, as observed",
+      "successor_input_per_1m_usd": "vendor, as observed",
+      "input_change_pct": "jsonhouse derived",
+      "cache_read_change_pct": "jsonhouse derived",
+      "pairing": "jsonhouse classification (same-line successor) unless marked vendor_backed"
+    },
+    "dimensions": [
+      "first_seen",
+      "predecessor",
+      "successor",
+      "predecessor_input_per_1m_usd",
+      "successor_input_per_1m_usd",
+      "input_change_pct",
+      "cache_read_change_pct",
+      "vendor_backed"
+    ],
+    "unit": "USD per 1M input tokens, standard non-batch tier; predecessor price from the snapshot in which the successor first appears (deepseek-v4-flash from 2026-09-07, its last observation)",
+    "entries": [
+      {
+        "first_seen": "2026-07-28",
+        "predecessor": "claude-opus-4-8",
+        "successor": "claude-opus-5",
+        "predecessor_input_per_1m_usd": 5.0,
+        "successor_input_per_1m_usd": 5.0,
+        "input_change_pct": 0.0,
+        "cache_read_change_pct": 0.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-07-28",
+        "predecessor": "gemini-3.5-flash",
+        "successor": "gemini-3.6-flash",
+        "predecessor_input_per_1m_usd": 1.5,
+        "successor_input_per_1m_usd": 1.5,
+        "input_change_pct": 0.0,
+        "cache_read_change_pct": 0.0,
+        "vendor_backed": true
+      },
+      {
+        "first_seen": "2026-08-17",
+        "predecessor": "gemini-3.6-flash",
+        "successor": "gemini-3.7-flash",
+        "predecessor_input_per_1m_usd": 0.75,
+        "successor_input_per_1m_usd": 0.75,
+        "input_change_pct": 0.0,
+        "cache_read_change_pct": 0.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-08-17",
+        "predecessor": "grok-4.5",
+        "successor": "grok-4.6",
+        "predecessor_input_per_1m_usd": 2.0,
+        "successor_input_per_1m_usd": 2.0,
+        "input_change_pct": 0.0,
+        "cache_read_change_pct": 66.7,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-09-07",
+        "predecessor": "claude-fable-5",
+        "successor": "claude-fable-5-1",
+        "predecessor_input_per_1m_usd": 10.0,
+        "successor_input_per_1m_usd": 10.0,
+        "input_change_pct": 0.0,
+        "cache_read_change_pct": -75.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-09-07",
+        "predecessor": "gemini-3.7-flash",
+        "successor": "gemini-3.8-flash",
+        "predecessor_input_per_1m_usd": 0.75,
+        "successor_input_per_1m_usd": 0.75,
+        "input_change_pct": 0.0,
+        "cache_read_change_pct": 0.0,
+        "vendor_backed": true
+      },
+      {
+        "first_seen": "2026-09-14",
+        "predecessor": "deepseek-v4-flash",
+        "successor": "deepseek-flash",
+        "predecessor_input_per_1m_usd": 0.22,
+        "successor_input_per_1m_usd": 0.15,
+        "input_change_pct": -31.8,
+        "cache_read_change_pct": -57.1,
+        "vendor_backed": true
+      },
+      {
+        "first_seen": "2026-09-28",
+        "predecessor": "claude-opus-5",
+        "successor": "claude-opus-5-5",
+        "predecessor_input_per_1m_usd": 5.0,
+        "successor_input_per_1m_usd": 4.0,
+        "input_change_pct": -20.0,
+        "cache_read_change_pct": -60.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-09-28",
+        "predecessor": "gpt-5.6-sol",
+        "successor": "gpt-6-sol",
+        "predecessor_input_per_1m_usd": 4.0,
+        "successor_input_per_1m_usd": 2.0,
+        "input_change_pct": -50.0,
+        "cache_read_change_pct": -50.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-09-28",
+        "predecessor": "gpt-5.6-luna",
+        "successor": "gpt-6-luna",
+        "predecessor_input_per_1m_usd": 0.2,
+        "successor_input_per_1m_usd": 0.1,
+        "input_change_pct": -50.0,
+        "cache_read_change_pct": -50.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-09-28",
+        "predecessor": "grok-4.6",
+        "successor": "grok-4.7",
+        "predecessor_input_per_1m_usd": 2.0,
+        "successor_input_per_1m_usd": 2.0,
+        "input_change_pct": 0.0,
+        "cache_read_change_pct": 0.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-10-05",
+        "predecessor": "claude-sonnet-5",
+        "successor": "claude-sonnet-5-5",
+        "predecessor_input_per_1m_usd": 2.0,
+        "successor_input_per_1m_usd": 2.0,
+        "input_change_pct": 0.0,
+        "cache_read_change_pct": 0.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-10-05",
+        "predecessor": "gpt-6-sol",
+        "successor": "gpt-6.1-sol",
+        "predecessor_input_per_1m_usd": 2.0,
+        "successor_input_per_1m_usd": 2.0,
+        "input_change_pct": 0.0,
+        "cache_read_change_pct": -50.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-10-14",
+        "predecessor": "claude-haiku-4-5",
+        "successor": "claude-haiku-5-5",
+        "predecessor_input_per_1m_usd": 1.0,
+        "successor_input_per_1m_usd": 0.1,
+        "input_change_pct": -90.0,
+        "cache_read_change_pct": -90.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-10-14",
+        "predecessor": "mistral-large-3",
+        "successor": "mistral-large-4",
+        "predecessor_input_per_1m_usd": 0.5,
+        "successor_input_per_1m_usd": 0.68,
+        "input_change_pct": 36.0,
+        "cache_read_change_pct": 40.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-11-10",
+        "predecessor": "claude-fable-5-1",
+        "successor": "claude-fable-5-2",
+        "predecessor_input_per_1m_usd": 10.0,
+        "successor_input_per_1m_usd": 8.0,
+        "input_change_pct": -20.0,
+        "cache_read_change_pct": -20.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-11-10",
+        "predecessor": "gpt-5.6-terra",
+        "successor": "gpt-6.1-terra",
+        "predecessor_input_per_1m_usd": 2.0,
+        "successor_input_per_1m_usd": 1.0,
+        "input_change_pct": -50.0,
+        "cache_read_change_pct": -75.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-11-23",
+        "predecessor": "gpt-6-astra",
+        "successor": "gpt-6.2-astra",
+        "predecessor_input_per_1m_usd": 10.0,
+        "successor_input_per_1m_usd": 8.0,
+        "input_change_pct": -20.0,
+        "cache_read_change_pct": -60.0,
+        "vendor_backed": false
+      },
+      {
+        "first_seen": "2026-11-23",
+        "predecessor": "gpt-6.1-sol",
+        "successor": "gpt-6.2-sol",
+        "predecessor_input_per_1m_usd": 2.0,
+        "successor_input_per_1m_usd": 2.0,
+        "input_change_pct": 0.0,
+        "cache_read_change_pct": 0.0,
+        "vendor_backed": false
+      }
+    ]
+  },
+  "numerical_data": {
+    "metrics": [
+      {
+        "name": "snapshots",
+        "value": 18,
+        "unit": "count",
+        "note": "2026-07-16 to 2026-11-23; longest gaps 12 days (2026-07-16 to 2026-07-28) and 15 days (2026-10-26 to 2026-11-10)"
+      },
+      {
+        "name": "span_days",
+        "value": 130,
+        "unit": "days"
+      },
+      {
+        "name": "row_intervals",
+        "value": 814,
+        "unit": "count",
+        "note": "A model present in two consecutive snapshots"
+      },
+      {
+        "name": "price_events",
+        "value": 10,
+        "unit": "count",
+        "note": "7 cuts, 3 increases; 8 moved input or output, 2 cache read only. First-time cache-read recordings (5) excluded"
+      },
+      {
+        "name": "weekly_change_rate",
+        "value": 1.2,
+        "unit": "percent",
+        "note": "10 / 814"
+      },
+      {
+        "name": "models_listed_throughout",
+        "value": 29,
+        "unit": "count",
+        "note": "24 unchanged on all three figures, 4 lower, 1 higher"
+      },
+      {
+        "name": "successor_pairs",
+        "value": 19,
+        "unit": "count",
+        "note": "Input: 8 lower, 10 same, 1 higher; cache read: 10 lower, 7 same, 2 higher"
+      },
+      {
+        "name": "tracked_set_size",
+        "value": 60,
+        "unit": "models",
+        "note": "From 38 on 2026-07-16; 32 entries, 10 exits"
+      }
+    ]
+  },
+  "update_cadence": "monthly, after the first Monday snapshot of each month"
+}

@@ -2,7 +2,7 @@
 
 포스트끼리 어떻게 엮여 있는지를 보여주는 색인. **이 문서는 자동 생성됩니다.**
 
-- **최종 갱신**: 2026-11-17 (자동)
+- **최종 갱신**: 2026-11-23 (자동)
 - **소스**: `_posts/*.md` 본문의 `](/posts/<slug>/)` 링크
 - **생성**: `python3 .claude/hooks/link_graph.py "$(git rev-parse --show-toplevel)"`
 - **점검만**: `python3 .claude/hooks/link_graph.py --report`
@@ -22,32 +22,33 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 <!-- AUTO:GRAPH-TABLE-START -->
 | # | 슬러그 | 클러스터 | 인 | 아웃 | 상태 | 메모 |
 |---|---|---|---|---|---|---|
-| 1 | rtx-gpu-unlock-local-llm-2026 | LLM | 0 | 3 | **고아** |  |
-| 2 | solo-developer-window-2026 | DEVTOOLS | 1 | 5 | ok |  |
-| 3 | agentic-ai-timing-2026 | LLM | 0 | 4 | **고아** |  |
-| 4 | china-ai-catch-up-2026 | LLM | 1 | 4 | ok |  |
-| 5 | llm-cost-per-task-2026 | LLM | 1 | 4 | ok |  |
-| 6 | claude-code-plugins-mcp-2026 | DEVTOOLS | 1 | 3 | ok |  |
-| 7 | 6g-agi-convergence-2026 | AI_INFRA | 1 | 4 | ok |  |
-| 8 | llm-price-war-balance-sheet-2026 | LLM | 1 | 3 | ok |  |
-| 9 | ai-agent-payments-crawl-toll-2026 | AEO | 1 | 5 | ok |  |
-| 10 | ai-crawler-traffic-2026 | AEO | 4 | 3 | ok |  |
-| 11 | ai-content-quality-gates-2026 | DEVTOOLS | 3 | 3 | ok |  |
-| 12 | china-ai-coding-plans-2026 | LLM | 2 | 4 | ok |  |
-| 13 | llm-cache-pricing-2026 | LLM | 6 | 7 | ok |  |
-| 14 | best-ai-coding-tools-2026 | DEVTOOLS | 2 | 2 | ok |  |
-| 15 | best-llm-2026 | LLM | 7 | 7 | ok |  |
-| 16 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
-| 17 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
-| 18 | ai-crawler-ecosystem-2026 | AEO | 8 | 6 | ok |  |
-| 19 | llm-api-pricing-2026 | LLM | 24 | 6 | ok |  |
-| 20 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
-| 21 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
-| 22 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
-| 23 | synthid-c2pa-explained-2026 | AI_CONTENT_POLICY | 1 | 2 | ok |  |
-| 24 | eeat-ai-content-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
-| 25 | youtube-ai-monetization-2026 | AI_CONTENT_POLICY | 2 | 2 | noindex |  |
-| 26 | google-ai-content-penalties-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
+| 1 | llm-price-changes-2026 | LLM | 0 | 4 | **고아** |  |
+| 2 | rtx-gpu-unlock-local-llm-2026 | LLM | 0 | 3 | **고아** |  |
+| 3 | solo-developer-window-2026 | DEVTOOLS | 1 | 5 | ok |  |
+| 4 | agentic-ai-timing-2026 | LLM | 0 | 4 | **고아** |  |
+| 5 | china-ai-catch-up-2026 | LLM | 1 | 4 | ok |  |
+| 6 | llm-cost-per-task-2026 | LLM | 1 | 4 | ok |  |
+| 7 | claude-code-plugins-mcp-2026 | DEVTOOLS | 1 | 3 | ok |  |
+| 8 | 6g-agi-convergence-2026 | AI_INFRA | 1 | 4 | ok |  |
+| 9 | llm-price-war-balance-sheet-2026 | LLM | 2 | 3 | ok |  |
+| 10 | ai-agent-payments-crawl-toll-2026 | AEO | 1 | 5 | ok |  |
+| 11 | ai-crawler-traffic-2026 | AEO | 4 | 3 | ok |  |
+| 12 | ai-content-quality-gates-2026 | DEVTOOLS | 3 | 3 | ok |  |
+| 13 | china-ai-coding-plans-2026 | LLM | 2 | 4 | ok |  |
+| 14 | llm-cache-pricing-2026 | LLM | 7 | 7 | ok |  |
+| 15 | best-ai-coding-tools-2026 | DEVTOOLS | 2 | 2 | ok |  |
+| 16 | best-llm-2026 | LLM | 8 | 7 | ok |  |
+| 17 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
+| 18 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
+| 19 | ai-crawler-ecosystem-2026 | AEO | 8 | 6 | ok |  |
+| 20 | llm-api-pricing-2026 | LLM | 25 | 6 | ok |  |
+| 21 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
+| 22 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
+| 23 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
+| 24 | synthid-c2pa-explained-2026 | AI_CONTENT_POLICY | 1 | 2 | ok |  |
+| 25 | eeat-ai-content-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
+| 26 | youtube-ai-monetization-2026 | AI_CONTENT_POLICY | 2 | 2 | noindex |  |
+| 27 | google-ai-content-penalties-2026 | AI_CONTENT_POLICY | 6 | 2 | ok |  |
 <!-- AUTO:GRAPH-TABLE-END -->
 
 ---
@@ -61,6 +62,7 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 | WARN | NOINDEX<- | eeat-ai-content-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI Monetization 2026: What Is Inauthentic Content') |
 | WARN | NOINDEX<- | google-ai-content-penalties-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI monetization and inauthentic-content rules') |
 | WARN | ORPHAN | agentic-ai-timing-2026 | no inbound internal link |
+| WARN | ORPHAN | llm-price-changes-2026 | no inbound internal link |
 | WARN | ORPHAN | rtx-gpu-unlock-local-llm-2026 | no inbound internal link |
 <!-- AUTO:GRAPH-FINDINGS-END -->
 
@@ -76,6 +78,12 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 내릴 때 어디를 고쳐야 하는지 여기서 확인합니다.
 
 <!-- AUTO:GRAPH-EDGES-START -->
+
+### llm-price-changes-2026
+
+LLM Price Changes 2026: 18 Weekly Snapshots, One Pattern
+
+_인바운드 없음 — 이 글로 들어오는 내부 링크가 하나도 없습니다._
 
 ### rtx-gpu-unlock-local-llm-2026
 
@@ -136,6 +144,7 @@ LLM Price War 2026: Who Is Paying for Your Discount
 | 걸린 글 | 앵커 텍스트 |
 |---|---|
 | llm-cost-per-task-2026 | 2026 LLM price war balance sheet |
+| llm-price-changes-2026 | LLM Price War 2026 |
 
 ### ai-agent-payments-crawl-toll-2026
 
@@ -186,6 +195,7 @@ LLM Cache Pricing 2026: The Real Cost of Cached Input
 | claude-code-plugins-mcp-2026 | LLM cache pricing |
 | llm-api-pricing-2026 | LLM Cache Pricing 2026 |
 | llm-cost-per-task-2026 | LLM cache pricing breakdown |
+| llm-price-changes-2026 | LLM Cache Pricing 2026 |
 | llm-price-war-balance-sheet-2026 | cache pricing analysis |
 
 ### best-ai-coding-tools-2026
@@ -209,6 +219,7 @@ Best LLM 2026: Capability and Limits Compared
 | llm-cache-pricing-2026 | Best LLM 2026: Capability and Limits Compared |
 | llm-cache-pricing-2026 | capability limits rather than raw benchmark scores |
 | llm-cost-per-task-2026 | best LLM comparison for 2026 |
+| llm-price-changes-2026 | Best LLM 2026 |
 | rtx-gpu-unlock-local-llm-2026 | LLM comparison |
 
 ### llm-subscription-guide-2026
@@ -270,6 +281,7 @@ LLM API Pricing 2026: Full Comparison Table (Weekly)
 | llm-cache-pricing-2026 | splitting between rising flagship prices and deflating everything else |
 | llm-cache-pricing-2026 | weekly LLM API pricing table |
 | llm-cost-per-task-2026 | LLM API pricing database |
+| llm-price-changes-2026 | LLM API pricing table |
 | llm-price-war-balance-sheet-2026 | LLM API Pricing 2026 |
 | llm-subscription-guide-2026 | LLM API pricing, where per-token rates are published openly |
 | rtx-gpu-unlock-local-llm-2026 | per-token API prices |
