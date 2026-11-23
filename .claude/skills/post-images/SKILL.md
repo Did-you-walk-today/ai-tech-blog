@@ -69,7 +69,21 @@ description: 포스트 이미지 제작 워크플로. Claude Code는 이미지�
 커버에는 **근거 대응표가 없다.** 대응시킬 값이 없기 때문이다.
 표를 쓰고 싶어진다면 그 커버는 값을 그리고 있다는 뜻이고, P6 위반이다.
 
-### Step 3A — 기웅에게 생성을 요청한다
+### Step 3A-0 — 자동 생성 (기본, 2026-11-23~)
+
+Antigravity CLI가 로그인돼 있으면 Claude Code가 직접 생성한다 (`IMAGE_GUIDE.md` §10 기본 경로):
+
+```bash
+python .claude/hooks/generate_cover.py {slug} --normalize
+```
+
+스크립트가 프롬프트 읽기 → `agy` 이미지 생성(gemini-4-hydrogen-medium) → 색상 수 검사 →
+raw 복사 → 1200×630 정규화까지 한다. **그다음 Step 4 육안 검수는 반드시 한다.**
+검수를 통과하면 raw 파일을 지우고, 팩에 반입 검증 로그(conversation_id 포함)를 남긴다.
+`agy`가 인증 오류를 내면 기웅에게 터미널에서 `agy`를 한 번 실행해 다시 로그인해 달라고
+요청하고, 급하면 아래 Step 3A(웹앱 경로)로 간다.
+
+### Step 3A — 기웅에게 생성을 요청한다 (대체 경로)
 
 **Claude Code는 이미지를 생성하지 못한다.** 코드로 그린 SVG/PNG는 `IMAGE_GUIDE.md` §11
 하드 리젝이고 훅 C11이 색상 수로 잡아낸다. 그러므로 이 단계는 실행이 아니라 **요청**이다.
