@@ -22,7 +22,7 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 <!-- AUTO:GRAPH-TABLE-START -->
 | # | 슬러그 | 클러스터 | 인 | 아웃 | 상태 | 메모 |
 |---|---|---|---|---|---|---|
-| 1 | llm-price-changes-2026 | LLM | 0 | 4 | **고아** |  |
+| 1 | llm-price-changes-2026 | LLM | 2 | 4 | ok |  |
 | 2 | rtx-gpu-unlock-local-llm-2026 | LLM | 0 | 3 | **고아** |  |
 | 3 | solo-developer-window-2026 | DEVTOOLS | 1 | 5 | ok |  |
 | 4 | agentic-ai-timing-2026 | LLM | 0 | 4 | **고아** |  |
@@ -41,7 +41,7 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 | 17 | llm-subscription-guide-2026 | LLM | 4 | 2 | ok |  |
 | 18 | ai-overviews-seo-2026 | AEO | 1 | 5 | noindex |  |
 | 19 | ai-crawler-ecosystem-2026 | AEO | 8 | 6 | ok |  |
-| 20 | llm-api-pricing-2026 | LLM | 25 | 6 | ok |  |
+| 20 | llm-api-pricing-2026 | LLM | 25 | 8 | ok |  |
 | 21 | chatgpt-ads-2026-aeo-reddit-citations | AEO | 6 | 2 | ok |  |
 | 22 | gigo-prompts-2026-why-vague-prompts-fail | PROMPTS | 2 | 2 | ok |  |
 | 23 | helpful-content-system-2026 | AI_CONTENT_POLICY | 3 | 2 | ok |  |
@@ -62,7 +62,6 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 | WARN | NOINDEX<- | eeat-ai-content-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI Monetization 2026: What Is Inauthentic Content') |
 | WARN | NOINDEX<- | google-ai-content-penalties-2026 | links to noindex page /posts/youtube-ai-monetization-2026/ ('YouTube AI monetization and inauthentic-content rules') |
 | WARN | ORPHAN | agentic-ai-timing-2026 | no inbound internal link |
-| WARN | ORPHAN | llm-price-changes-2026 | no inbound internal link |
 | WARN | ORPHAN | rtx-gpu-unlock-local-llm-2026 | no inbound internal link |
 <!-- AUTO:GRAPH-FINDINGS-END -->
 
@@ -83,7 +82,10 @@ noindex 글은 인바운드를 잃는 것이 정상이라 고아로 세지 않�
 
 LLM Price Changes 2026: 18 Weekly Snapshots, One Pattern
 
-_인바운드 없음 — 이 글로 들어오는 내부 링크가 하나도 없습니다._
+| 걸린 글 | 앵커 텍스트 |
+|---|---|
+| llm-api-pricing-2026 | LLM Price Changes 2026 |
+| llm-api-pricing-2026 | LLM Price Changes 2026: 18 Weekly Snapshots, One Pattern |
 
 ### rtx-gpu-unlock-local-llm-2026
 

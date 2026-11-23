@@ -378,8 +378,8 @@
       "input_per_1m": 3.0,
       "output_per_1m": 15.0,
       "cache_read_per_1m": 0.15,
-      "context_window": null,
-      "note": "First observed 2026-11-23; absent from every earlier snapshot. Implicit caching only. No dated schedule and no >200K tier shown. Batch/Flex $1.50/$7.50, Priority $5.40/$27.00. Context window not confirmed this run; not listed on the deprecations page",
+      "context_window": 1048576,
+      "note": "First observed 2026-11-23; absent from every earlier snapshot. Implicit caching only. No dated schedule and no >200K tier shown. Batch/Flex $1.50/$7.50, Priority $5.40/$27.00. Context window 1,048,576 (unified input and output) from the model page, read the same day; not listed on the deprecations page",
       "source_url": "https://aistudio.google.com/docs/pricing",
       "retrieved_at": "2026-11-23T02:50:07Z"
     },

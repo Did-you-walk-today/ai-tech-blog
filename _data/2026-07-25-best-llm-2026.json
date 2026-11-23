@@ -3,7 +3,7 @@
   "slug": "best-llm-2026",
   "title": "Best LLM 2026: Capability and Limits Compared",
   "description": "Best LLM 2026 compared on the limits that actually block builds: context window, max output tokens, prompt cache minimums, knowledge cutoffs, and retirement dates.",
-  "data_updated": "2026-11-17",
+  "data_updated": "2026-11-23",
   "source_post": "https://www.jsonhouse.com/posts/best-llm-2026/",
   "category": "ai-models-intelligence",
   "cluster": "CLUSTER_LLM",
@@ -12,7 +12,7 @@
     "source": "Json House",
     "source_url": "https://www.jsonhouse.com/posts/best-llm-2026/",
     "dataset_url": "https://www.jsonhouse.com/data/best-llm-2026.json",
-    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-11-17)",
+    "citation": "Json House, \"Best LLM 2026: Capability and Limits Compared\", jsonhouse.com (2026-11-23)",
     "attribution_required": true,
     "terms_url": "https://www.jsonhouse.com/data-policy/"
   },
@@ -179,7 +179,7 @@
         "knowledge_cutoff": "2025-02",
         "min_cacheable_prefix_tokens": 4096,
         "retirement_floor": "2026-10-15",
-        "note": "Retirement floor passed on 2026-10-15 with no deprecation notice; still listed as Active on 2026-11-17, so under the 60-day minimum it cannot retire before 2027-01-16 (jsonhouse arithmetic, not an Anthropic date)",
+        "note": "Retirement floor passed on 2026-10-15 with no deprecation notice; still listed as Active on 2026-11-23, so under the 60-day minimum it cannot retire before 2027-01-22 (jsonhouse arithmetic, not an Anthropic date)",
         "price_band": "budget"
       },
       {
@@ -192,6 +192,28 @@
         "min_cacheable_prefix_tokens": null,
         "note": "Collected 2026-09-28",
         "price_band": "flagship"
+      },
+      {
+        "model": "gpt-6.2-astra",
+        "provider": "OpenAI",
+        "context_window_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-05-18",
+        "min_cacheable_prefix_tokens": null,
+        "note": "Collected 2026-11-23. Maximum input 922,000 tokens. The model page gives no release date",
+        "price_band": "flagship"
+      },
+      {
+        "model": "gpt-6.2-sol",
+        "provider": "OpenAI",
+        "context_window_input_tokens": 1050000,
+        "max_output_tokens": 128000,
+        "image_input": true,
+        "knowledge_cutoff": "2026-06-01",
+        "min_cacheable_prefix_tokens": null,
+        "note": "Collected 2026-11-23. Maximum input 922,000 tokens. The model page gives no release date",
+        "price_band": "mid"
       },
       {
         "model": "gpt-6.1-sol",
@@ -254,6 +276,18 @@
         "image_input": true,
         "knowledge_cutoff": "2025-08-31",
         "min_cacheable_prefix_tokens": null,
+        "price_band": "mid"
+      },
+      {
+        "model": "gemini-4-neon",
+        "provider": "Google",
+        "context_window_input_tokens": 1048576,
+        "max_output_tokens": 65536,
+        "image_input": true,
+        "additional_input_modalities": ["video", "audio", "pdf"],
+        "knowledge_cutoff": null,
+        "min_cacheable_prefix_tokens": 4096,
+        "note": "Collected 2026-11-23 (released 2026-11-18). Google states 1,048,576 as a unified input-and-output token limit. Max output 65,536 by default, up to 1,048,576 with long decode. Implicit caching only. Priced $3.00/$15.00 with no introductory schedule shown",
         "price_band": "mid"
       },
       {
@@ -469,6 +503,16 @@
       "publisher": "OpenAI"
     },
     {
+      "title": "Gemini 4 Neon model page",
+      "url": "https://aistudio.google.com/docs/models/gemini-4-neon",
+      "publisher": "Google"
+    },
+    {
+      "title": "GPT-6.2-astra model page",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+      "publisher": "OpenAI"
+    },
+    {
       "title": "Gemini 4 Carbon model page",
       "url": "https://aistudio.google.com/docs/models/gemini-4-carbon",
       "publisher": "Google"
@@ -511,6 +555,10 @@
   ],
   "update_cadence": "monthly, first Tuesday",
   "changelog": [
+    {
+      "date": "2026-11-23",
+      "change": "Out-of-cycle addition prompted by the weekly pricing collection. Added gpt-6.2-astra and gpt-6.2-sol (1,050,000 context, 922,000 maximum input, 128,000 output, image input, knowledge cutoffs 2026-05-18 and 2026-06-01; no release date on the model pages) and gemini-4-neon (released 2026-11-18; 1,048,576 unified limit, 65,536 output default and up to 1,048,576 with long decode, text, image, video, audio and PDF input, no published knowledge cutoff, 4,096-token implicit-caching minimum). gpt-6.2-astra in the flagship band, the other two in mid. claude-haiku-4-5-20251001 still Active with no notice on 2026-11-23, so its earliest possible retirement is now 2027-01-22."
+    },
     {
       "date": "2026-11-17",
       "change": "Out-of-cycle addition prompted by the weekly pricing collection. Added gemini-4-carbon (released 2026-11-10) and gemini-4-hydrogen (released 2026-11-12) from Google's model pages: 1,048,576 unified input-and-output limit, 65,536 output by default and up to 1,048,576 with long decode, text, image, video, audio and PDF input, no published knowledge cutoff, 4,096-token implicit-caching minimum, explicit caching not supported; both in the mid band. claude-haiku-4-5-20251001 still Active with no notice on 2026-11-17, so its earliest possible retirement is now 2027-01-16. Google's nearest lifecycle entry is now the 2026-12-01 routing of gemini-2.5-pro and gemini-2.5-flash."
