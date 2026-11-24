@@ -26,6 +26,10 @@ description: 매주 월요일 LLM API 가격 스냅샷을 _data/pricing_history/
 - `cache_write_5m_per_1m`, `cache_write_1h_per_1m`, `min_cache_tokens`
 - `long_context_threshold`, `long_context_input_multiplier`, `long_context_output_multiplier`
 - `regional_multiplier`, `offpeak_multiplier`, `tokenizer_inflation_factor`
+- `retirement_date` (YYYY-MM-DD) — 벤더가 공식 발표한 모델 종료일
+- `scheduled_price_change` — 공식 발표된 단가 변경 예정. `{effective_date, new_input_per_1m, new_output_per_1m, source_url}`. `source_url`은 발표 원문(가격 페이지가 아니면 공지·changelog)
+
+종료·인상 예고는 날짜로 조회할 수 있어야 쓸모가 있다. 공식 원문에 날짜가 있을 때만 적고, `note`에만 남기지 않는다. 날짜가 지난 예고는 다음 스냅샷에서 뺀다.
 
 ## Step 2 — 파일 작성
 
