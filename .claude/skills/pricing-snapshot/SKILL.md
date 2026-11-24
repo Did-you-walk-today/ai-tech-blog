@@ -21,8 +21,11 @@ description: 매주 월요일 LLM API 가격 스냅샷을 _data/pricing_history/
 - Google: ai.google.dev/pricing (Gemini)
 - 기타 대상은 `SOURCES.md` 참조 (Mistral, DeepSeek, xAI 등)
 
-모델별 기록 항목: input/output $/1M tokens, 캐시 가격(있으면), 컨텍스트 길이.
-각 항목에 `source_url`, `retrieved_at`(ISO 8601) 필수.
+모델별 필수 기록 항목: `input_per_1m`, `output_per_1m`, `cache_read_per_1m`(있으면), `context_window`, `source_url`, `retrieved_at`(ISO 8601).
+공식 가격 페이지에 명시된 경우 함께 분리해 적는 선택 구조화 항목(복합 요금 계산용, 과거 스냅샷 소급 수정 금지):
+- `cache_write_5m_per_1m`, `cache_write_1h_per_1m`, `min_cache_tokens`
+- `long_context_threshold`, `long_context_input_multiplier`, `long_context_output_multiplier`
+- `regional_multiplier`, `offpeak_multiplier`, `tokenizer_inflation_factor`
 
 ## Step 2 — 파일 작성
 
@@ -38,6 +41,11 @@ description: 매주 월요일 LLM API 가격 스냅샷을 _data/pricing_history/
       "input_per_1m": 2.0,
       "output_per_1m": 10.0,
       "cache_read_per_1m": 0.2,
+      "cache_write_5m_per_1m": 2.5,
+      "cache_write_1h_per_1m": 4.0,
+      "min_cache_tokens": 1024,
+      "regional_multiplier": 1.1,
+      "tokenizer_inflation_factor": 1.3,
       "context_window": 200000,
       "source_url": "https://docs.anthropic.com/...",
       "retrieved_at": "2026-07-13T09:00:00Z"
