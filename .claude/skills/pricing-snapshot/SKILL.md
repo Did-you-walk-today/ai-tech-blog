@@ -65,6 +65,15 @@ description: 매주 월요일 LLM API 가격 스냅샷을 _data/pricing_history/
   관련 포스트 갱신 여부를 확인받는다
 - 변동이 그 미만이면 바로 커밋: `chore: weekly pricing snapshot YYYY-MM-DD`
 
+## Step 3.5 — agents.jsonhouse.com 적재
+
+커밋·푸시가 끝난 **뒤에만** 한다. 가격 계산(`/compare`)과 변경 경보(`/alerts`)가 이 데이터를 쓴다.
+
+- 로컬 `jsonhouse-workers` 레포의 `agents/`에서 `npm run sync:remote`
+- 스크립트는 블로그 레포 **HEAD에 커밋된 스냅샷만** 읽는다. 확인 대기로 커밋하지 않은 주는 자동으로 빠지고, 기웅이 커밋한 뒤 같은 명령을 다시 실행하면 들어간다
+- 여러 번 실행해도 안전하다 (경보는 처음 적재된 것만 남는다)
+- 실패해도 스냅샷 커밋은 되돌리지 않는다. 보고서에 실패와 오류 메시지를 적는다
+
 ## Step 4 — 연쇄 갱신 점검
 
 가격 변동이 있으면 pricing 관련 포스트(예: llm-api-pricing-2026)의 비교표와
