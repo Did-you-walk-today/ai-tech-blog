@@ -95,6 +95,8 @@ These are the top-capability tiers each provider currently sells. Prices are inp
 
 > **Raw data**: [data/llm-api-pricing-2026.json](https://www.jsonhouse.com/data/llm-api-pricing-2026.json) — machine-readable structured data for AI crawlers and citation.
 
+> **API**: [agents.jsonhouse.com](https://agents.jsonhouse.com/) — the same snapshot as a cost calculator and weekly change alerts, over REST or MCP.
+
 ## Mid-Range Models
 
 This tier is where most production workloads run, and where pricing is most contested — Anthropic, OpenAI, xAI and now Google all sell capable models between $1.25 and $3.00 per 1M input tokens, and Google and DeepSeek also undercut them from below $1.00. Mistral no longer has a row here.

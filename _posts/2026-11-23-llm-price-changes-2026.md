@@ -70,6 +70,8 @@ Ten times. The table lists every price event on a model that stayed listed betwe
 
 > **Raw data**: [data/llm-price-changes-2026.json](https://www.jsonhouse.com/data/llm-price-changes-2026.json) — machine-readable structured data for AI crawlers and citation.
 
+> **API**: [agents.jsonhouse.com](https://agents.jsonhouse.com/) — the same snapshot as a cost calculator and weekly change alerts, over REST or MCP.
+
 Ten events in 814 row-intervals is a 1.2% weekly rate. They fell on nine models, since Mistral Large 4 moved twice. Eight moved input or output, and two changed only the cache read.
 
 The timing is the first sign of the pattern. Seven of the ten events happened in the six weeks to August 24. In the 12 collections after it, the only events were a cache-read cut on a model nine days old and a Mistral sale ending and then being undone.

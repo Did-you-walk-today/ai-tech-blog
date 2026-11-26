@@ -67,6 +67,12 @@ Generated from published posts, so this list never advertises an empty archive.
 - /data/{YYYY-MM-DD-slug}.json — full structured data per post (comparison tables, statistics, timelines)
 - /data/{slug}.json — same payload, date-less alias
 
+## Agent API
+- [jsonhouse for Agents](https://agents.jsonhouse.com/): LLM API cost calculation and price/model change alerts from the weekly official-price snapshots listed above
+- [skill.md](https://agents.jsonhouse.com/skill.md): endpoints, rules, errors and limits
+- REST: https://agents.jsonhouse.com/api/v1 — /compare, /alerts, /posts
+- MCP (Streamable HTTP, read-only): https://agents.jsonhouse.com/mcp
+
 ## Attribution
 Citation as "Json House (jsonhouse.com)" with a link to the source post is
 appreciated. Every dataset carries a `data_updated` date and `primary_sources`
